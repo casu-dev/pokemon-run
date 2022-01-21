@@ -1,6 +1,6 @@
 MAP_PICK_POKEMON = [82, 10, 11, 0, "Choose a Pokemon"]
 
-MAP_MOVE_RELEARNER = [22, 10, 13, 0, "Move Relearner"]
+MAP_MOVE_RELEARNER = [81, 10, 11, 0, "Move Relearner"]
 MAP_MART =   [48, 4, 7, 0, "Poké Mart"]
 MAP_CENTER =   [77, 7, 8, 0, "Poké Center"]
 
@@ -8,6 +8,7 @@ MAP_BOSS_LIST = [
   [43, 9, 19, 0, "Stage Boss"]
 ]
 MAP_FIGHT_TRAINER_LIST = [
+  [84, 10, 11, 0, "Fight a Trainer"],
   [42, 10, 13, 0, "Fight a Trainer"]
 ]
 MAP_FIGHT_ELITE_TRAINER_LIST = [
@@ -117,6 +118,17 @@ def pbGetCorrectEvo(pkmn, lvl)
     nxt = pbGenPkmn(nxt, lvl).check_evolution_on_level_up
   end
   return res
+end
+
+def pbGenStarterPkmn(type)
+  pkmn = pbChooseRandomPokemon(
+    whiteList=[:BULBASAUR, :CHARMANDER, :SQUIRTLE, :CHIKORITA, :CYNDAQUIL, :TOTODILE, :TREECKO, :TORCHIC, :MUDKIP, :TURTWIG, :CHIMCHAR, :PIPLUP, :SNIVY, :TEPIG, :OSHAWOTT], 
+    blackList="suggested", 
+    addList=nil,                          
+    base_only=true, 
+    choose_gen=[1,2,3,4,5], 
+    typeWhitelist=[type]
+    )
 end
 
 def pbGiveRandomPoke(saveSlot, lvl = 50)

@@ -39,9 +39,9 @@ def pbChooseRandomPokemon(whiteList=nil, blackList=nil, addList=nil,
       whiteList[i] = GameData::Species.try_get(s)
     end
     if base_only
-      whiteList.each { |s| arr.push(s.id) if !blackList.include?(s.id) && s.id == s.get_baby_species }
+      whiteList.each { |s| arr.push(s.id) if !blackList.include?(s.id) && s.id == s.get_baby_species  && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2))}
     else
-      whiteList.each { |s| arr.push(s.id) if !blackList.include?(s.id) }
+      whiteList.each { |s| arr.push(s.id) if !blackList.include?(s.id) && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2)) }
     end
   else
     if base_only
