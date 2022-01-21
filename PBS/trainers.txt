@@ -178,3 +178,28 @@ Pokemon = NIDOKING,45
 [COOLTRAINER_F,Trainer,8]
 LoseText = "..."
 Pokemon = GOLEM,45
+#-------------------------------
+[YOUNGSTER,Trainer]
+LoseText = "..."
+Pokemon = PIDGEY,10
+Pokemon = EEVEE,10
+#-------------------------------
+[YOUNGSTER,Trainer,1]
+LoseText = "..."
+Pokemon = BIDOOF,10
+Pokemon = LILLIPUP,10
+#-------------------------------
+[YOUNGSTER,Trainer,2]
+LoseText = "..."
+Pokemon = TAILLOW,10
+Pokemon = BUNEARY,10
+#-------------------------------
+[YOUNGSTER,Trainer,3]
+LoseText = "..."
+Pokemon = MEOWTH,10
+Pokemon = STARLY,10
+#-------------------------------
+[YOUNGSTER,Trainer,4]
+LoseText = "..."
+Pokemon = RATTATA,10
+Pokemon = SPEAROW,10
