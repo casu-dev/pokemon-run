@@ -117,17 +117,64 @@ Pokemon = CHARIZARD,63
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
 #-------------------------------
-[JUGGLER,Ben]
-LoseText = "Aww, I lost."
-Pokemon = MEOWTH,20
-Pokemon = FLYGON,20
+[LEADER_Erika,Erika]
+LoseText = "Nice Cock."
+Pokemon = FERROTHORN,50
+    Moves = STEALTHROCK,GYROBALL,POWERWHIP,LEECHSEED
+    AbilityIndex = 0
+    Shiny = yes
+    IV = 20,20,20,20,20,10
+    Item = LEFTOVERS
+Pokemon = LUDICOLO,50
+    Moves = SCALD,RAINDANCE,GIGADRAIN,ICEBEAM
+    AbilityIndex = 0
+    Item = LIFEORB
+    IV = 20,20,20,20,20,20
+Pokemon = VILEPLUME,50
+    Moves = SLUDGEBOMB,STRENGTHSAP,LEECHSEED,SLEEPPOWDER
+    AbilityIndex = 2
+    Item = BLACKSLUDGE
+    IV = 20,20,20,20,20,20
 #-------------------------------
-[JUGGLER,Ben,1]
-LoseText = "Aww, I lost."
-Pokemon = RATTATA,20
-Pokemon = EKANS,20
+[ROCKETBOSS,Elite Trainer]
+LoseText = "A good battle indeed!"
+Pokemon = BLISSEY,55
+    Item = SITRUSBERRY
+Pokemon = SHIFTRY,55
+    Item = SITRUSBERRY
 #-------------------------------
-[JUGGLER,Ben,2]
-LoseText = "Aww, I lost."
-Pokemon = MISDREAVUS,20
-Pokemon = HITMONCHAN,20
+[COOLTRAINER_F,Trainer]
+LoseText = "..."
+Pokemon = HYPNO,45
+#-------------------------------
+[COOLTRAINER_F,Trainer,1]
+LoseText = "..."
+Pokemon = GRANBULL,45
+#-------------------------------
+[COOLTRAINER_F,Trainer,2]
+LoseText = "..."
+Pokemon = BRELOOM,45
+#-------------------------------
+[COOLTRAINER_F,Trainer,3]
+LoseText = "..."
+Pokemon = OMASTAR,45
+#-------------------------------
+[COOLTRAINER_F,Trainer,4]
+LoseText = "..."
+Pokemon = HITMONLEE,45
+#-------------------------------
+[COOLTRAINER_F,Trainer,5]
+LoseText = "..."
+Pokemon = ALTARIA,45
+#-------------------------------
+[COOLTRAINER_F,Trainer,6]
+LoseText = "..."
+Pokemon = SHARPEDO,45
+#-------------------------------
+[COOLTRAINER_F,Trainer,7]
+LoseText = "..."
+Pokemon = NIDOKING,45
+#-------------------------------
+[COOLTRAINER_F,Trainer,8]
+LoseText = "..."
+Pokemon = GOLEM,45
