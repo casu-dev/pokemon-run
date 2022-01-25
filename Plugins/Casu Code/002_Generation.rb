@@ -100,7 +100,7 @@ def pbGetPossDest(exit_no, prev_dest)
     return [MAP_FIGHT_TRAINER_LIST[stages_cleared]]
   end
   
-  if rooms_cleared == Settings::ROOMS_PER_STAGE / 3 || rooms_cleared == 2 * Settings::ROOMS_PER_STAGE / 2
+  if rooms_cleared == Settings::ROOMS_PER_STAGE / 3 || rooms_cleared == 2 * Settings::ROOMS_PER_STAGE / 3
     return [MAP_PICK_POKEMON]
   end
 
