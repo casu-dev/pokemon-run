@@ -23,7 +23,6 @@ def pbGenPokeChoice
   stages_cleared = pbGet(48)
   lvl = POKEMON_GET_LEVEL[stages_cleared]
 
-  print(lvl)
   pkmn = pbChooseRandomPokemon(
   whiteList=nil,
   blackList="suggested",
