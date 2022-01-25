@@ -203,3 +203,25 @@ Pokemon = STARLY,10
 LoseText = "..."
 Pokemon = RATTATA,10
 Pokemon = SPEAROW,10
+#-------------------------------
+[TEAMROCKET_M,Elite Trainer]
+LoseText = "UwU"
+Pokemon = SCRAGGY,16
+    AbilityIndex = 2
+Pokemon = MAKUHITA,16
+    AbilityIndex = 2
+#-------------------------------
+[ELITEFOUR_Bruno,Bruno]
+LoseText = "GG WP"
+Pokemon = MIENFOO,16
+    Moves = FAKEOUT,UTURN,LOWSWEEP,ROCKTOMB
+    AbilityIndex = 1
+    IV = 20,20,20,20,20,20
+Pokemon = MAKUHITA,16
+    Moves = ROCKTOMB,KNOCKOFF,FORCEPALM,BULKUP
+    AbilityIndex = 2
+    IV = 20,20,20,20,20,20
+Pokemon = TIMBURR,16
+    Moves = BULKUP,MACHPUNCH,THUNDERPUNCH,VITALTHROW
+    AbilityIndex = 2
+    IV = 20,20,20,20,20,20
