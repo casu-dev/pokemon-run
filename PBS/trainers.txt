@@ -120,11 +120,11 @@ Pokemon = BLASTOISE,63
 [LEADER_Erika,Erika]
 LoseText = "Nice Cock."
 Pokemon = FERROTHORN,50
+    Shiny = yes
     Moves = STEALTHROCK,GYROBALL,POWERWHIP,LEECHSEED
     AbilityIndex = 0
-    Shiny = yes
-    IV = 20,20,20,20,20,10
     Item = LEFTOVERS
+    IV = 20,20,20,20,20,10
 Pokemon = LUDICOLO,50
     Moves = SCALD,RAINDANCE,GIGADRAIN,ICEBEAM
     AbilityIndex = 0
@@ -136,7 +136,7 @@ Pokemon = VILEPLUME,50
     Item = BLACKSLUDGE
     IV = 20,20,20,20,20,20
 #-------------------------------
-[ROCKETBOSS,Elite Trainer]
+[ROCKETBOSS,Elite Trainerr]
 LoseText = "A good battle indeed!"
 Pokemon = BLISSEY,55
     Item = SITRUSBERRY
@@ -204,8 +204,29 @@ LoseText = "..."
 Pokemon = RATTATA,10
 Pokemon = SPEAROW,10
 #-------------------------------
-[TEAMROCKET_M,Elite Trainer]
-LoseText = "UwU"
+[GENTLEMAN,Elite Trainer]
+LoseText = "A good battle indeed!"
+Pokemon = RUFFLET,13
+    AbilityIndex = 1
+Pokemon = MINCCINO,13
+    AbilityIndex = 1
+#-------------------------------
+[GENTLEMAN,Elite Trainer,1]
+LoseText = "A good battle indeed!"
+Pokemon = MUNCHLAX,13
+    AbilityIndex = 1
+Pokemon = HOOTHOOT,13
+    AbilityIndex = 2
+#-------------------------------
+[GENTLEMAN,Elite Trainer,2]
+LoseText = "A good battle indeed!"
+Pokemon = AIPOM,13
+    AbilityIndex = 1
+Pokemon = BUNNELBY,13
+    AbilityIndex = 2
+#-------------------------------
+[TEAMROCKET_M,Rocket Grunt]
+LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
 Pokemon = SCRAGGY,15
     AbilityIndex = 2
 Pokemon = MAKUHITA,15
@@ -225,3 +246,11 @@ Pokemon = TIMBURR,16
     Moves = BULKUP,MACHPUNCH,THUNDERPUNCH,VITALTHROW
     AbilityIndex = 2
     IV = 20,20,20,20,20,20
+#-------------------------------
+[TEAMROCKET_M,Elite Trainer]
+LoseText = "..."
+Pokemon = VENUSAUR,10
+#-------------------------------
+[ROCKETBOSS,Elite Trainer]
+LoseText = "..."
+Pokemon = BULBASAUR,10

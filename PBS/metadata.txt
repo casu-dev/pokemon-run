@@ -3,7 +3,7 @@
 [000]
 Home = 3,7,5,8
 WildBattleBGM = Battle wild.mid
-TrainerBattleBGM = Battle trainer.mid
+TrainerBattleBGM = Safari.mid
 WildVictoryME = Battle victory wild.ogg
 TrainerVictoryME = Battle victory trainer.ogg
 SurfBGM = Surfing.mid

@@ -18,6 +18,10 @@ MAP_FIGHT_ELITE_TRAINER_LIST = [
   [85, 10, 11, 0, "Fight an Elite Trainer"], # lvl 16
   [76, 10, 13, 0, "Fight an Elite Trainer"] # lvl
 ]
+MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
+  [87, 10, 11, 0, "Fight a Rocket Grump"], # lvl 16
+  [76, 10, 13, 0, "Fight a Rocket Grump"] # lvl
+]
 
 def pbGenPokeChoice
   stages_cleared = pbGet(48)
@@ -92,7 +96,7 @@ def pbGetPossDest(exit_no, prev_dest)
   end
 
   if rooms_cleared == Settings::ROOMS_PER_STAGE / 2
-    return [MAP_FIGHT_ELITE_TRAINER_LIST[stages_cleared]]
+    return [MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST[stages_cleared]]
   end
   
   if exit_no == 0
