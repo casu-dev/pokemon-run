@@ -181,34 +181,34 @@ Pokemon = GOLEM,45
 #-------------------------------
 [YOUNGSTER,Trainer]
 LoseText = "..."
-Pokemon = PIDGEY,10
-Pokemon = EEVEE,10
+Pokemon = PIDGEY,11
+Pokemon = EEVEE,11
 #-------------------------------
 [YOUNGSTER,Trainer,1]
 LoseText = "..."
-Pokemon = BIDOOF,10
-Pokemon = LILLIPUP,10
+Pokemon = BIDOOF,11
+Pokemon = LILLIPUP,11
 #-------------------------------
 [YOUNGSTER,Trainer,2]
 LoseText = "..."
-Pokemon = TAILLOW,10
-Pokemon = BUNEARY,10
+Pokemon = TAILLOW,11
+Pokemon = BUNEARY,11
 #-------------------------------
 [YOUNGSTER,Trainer,3]
 LoseText = "..."
-Pokemon = MEOWTH,10
-Pokemon = STARLY,10
+Pokemon = MEOWTH,11
+Pokemon = STARLY,11
 #-------------------------------
 [YOUNGSTER,Trainer,4]
 LoseText = "..."
-Pokemon = RATTATA,10
-Pokemon = SPEAROW,10
+Pokemon = RATTATA,11
+Pokemon = SPEAROW,11
 #-------------------------------
 [TEAMROCKET_M,Elite Trainer]
 LoseText = "UwU"
-Pokemon = SCRAGGY,16
+Pokemon = SCRAGGY,15
     AbilityIndex = 2
-Pokemon = MAKUHITA,16
+Pokemon = MAKUHITA,15
     AbilityIndex = 2
 #-------------------------------
 [ELITEFOUR_Bruno,Bruno]
