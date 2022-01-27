@@ -217,8 +217,8 @@
 215,GREENSCARF,Green Scarf,Green Scarves,1,100,"An item to be held by a Pokémon. It boosts the Smart aspect of the holder in a Contest.",0,0,0
 216,YELLOWSCARF,Yellow Scarf,Yellow Scarves,1,100,"An item to be held by a Pokémon. It boosts the Tough aspect of the holder in a Contest.",0,0,0
 #-------------------------------
-217,POTION,Potion,Potions,2,300,"A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.",1,1,0
-218,SUPERPOTION,Super Potion,Super Potions,2,700,"A spray-type medicine for wounds. It restores the HP of one Pokémon by 60 points.",1,1,0
+217,POTION,Potion,Potions,2,200,"A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.",1,1,0
+218,SUPERPOTION,Super Potion,Super Potions,2,400,"A spray-type medicine for wounds. It restores the HP of one Pokémon by 60 points.",1,1,0
 219,HYPERPOTION,Hyper Potion,Hyper Potions,2,1200,"A spray-type medicine for wounds. It restores the HP of one Pokémon by 120 points.",1,1,0
 220,MAXPOTION,Max Potion,Max Potions,2,2500,"A spray-type medicine for wounds. It completely restores the HP of a single Pokémon.",1,1,0
 221,FULLRESTORE,Full Restore,Full Restores,2,3000,"A medicine that fully restores the HP and heals any status problems of a single Pokémon.",1,1,0
