@@ -416,11 +416,11 @@ class DiegoWTsStarterSelection
     @pkmnname = @pokemon.name
     @sprites["textbox"].y = @sprites["textbox"].y - 16
     if @pokemon.type2 != @pokemon.type1 && StarterSelSettings::TYPE2COLOR
-      @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the #{type1}/#{type2} Pokémon?</ac>")
+      @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + " #{type1}/#{type2}" + " Pokémon?</ac>")
     elsif StarterSelSettings::TYPE2COLOR
-      @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the #{type1} Pokémon?</ac>")
+      @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + "  #{type1}"  + " Pokémon?</ac>")
     else
-      @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the #{type1} Pokémon?</ac>")
+      @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + " #{type1}"  + " Pokémon?</ac>")
     end
       
     @sprites["ballbase"].x = @x[@select]
