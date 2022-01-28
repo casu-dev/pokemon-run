@@ -6,9 +6,6 @@ module StarterSelSettings
 # To start the scene, call the script "DiegoWTsStarterSelection.new(x,y,z)", where x, y and z are the species ID of your starters.
 # Example of the script call using Bulbasaur, Charmander and Squirtle: 
 # DiegoWTsStarterSelection.new(:BULBASAUR,:CHARMANDER,:SQUIRTLE)
-
-# Level of your starters:
-  STARTERL = 15
  
 # Interface style (1 for HGSS, 2 for BW):
   INSTYLE = 1
