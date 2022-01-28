@@ -1,6 +1,6 @@
 POKEMON_GET_LEVEL = [15, 30, 60, 90]
 
-MAP_PICK_POKEMON = [82, 10, 11, 0, "Choose a Pokemon"]
+MAP_PICK_POKEMON = [88, 10, 11, 0, "Professor Oak"]
 
 MAP_MOVE_RELEARNER = [81, 10, 11, 0, "Move Relearner"]
 MAP_MART =   [48, 4, 7, 0, "Poké Mart"]
