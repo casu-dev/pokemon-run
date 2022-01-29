@@ -80,7 +80,7 @@ $i +=1
 end
 end
 
-def pbClearss
+def pbClearPcItems
 $i=0
 $CountItemSlots=50
 while $i < $CountItemSlots do
