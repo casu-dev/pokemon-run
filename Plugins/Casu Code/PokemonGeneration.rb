@@ -64,3 +64,27 @@ def pbGiveRandomPoke(saveSlot)
   pkmn = pbGenPkmn(pbGet(saveSlot), lvl)
   pbAddPokemon(pkmn)
 end
+
+def pbClearAllBoxes
+$i=0
+$j=0
+$CountBoxes=30
+$CountPkmnEachBox=30
+while $i < $CountBoxes  do
+	while $j < $CountPkmnEachBox  do		
+		$PokemonStorage[$i][$j]= nil
+		$j+=1
+	end
+$j = 0
+$i +=1
+end
+end
+
+def pbClearss
+$i=0
+$CountItemSlots=50
+while $i < $CountItemSlots do
+	$PokemonGlobal.pcItemStorage[$i]= nil
+	$i+=1
+end
+end

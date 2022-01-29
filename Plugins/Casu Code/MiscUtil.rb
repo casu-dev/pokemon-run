@@ -26,3 +26,10 @@ def pbGiveOneExp(pkmn, amount)
     pkmn.calc_stats
   end
 end
+
+def pbDeleteAllPkmn
+  n = $Trainer.party.length
+  (0..n).each do |i|
+    $Trainer.party.delete_at(n - i) if $Trainer.party[n - i]
+  end
+end
