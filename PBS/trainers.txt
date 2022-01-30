@@ -220,8 +220,8 @@ Pokemon = HOOTHOOT,13
 #-------------------------------
 [GENTLEMAN,Elite Trainer,2]
 LoseText = "A good battle indeed!"
-Pokemon = AIPOM,13
-    AbilityIndex = 1
+Pokemon = PORYGON,13
+    AbilityIndex = 0
 Pokemon = BUNNELBY,13
     AbilityIndex = 2
 #-------------------------------
@@ -246,11 +246,36 @@ Pokemon = TIMBURR,16
     Moves = BULKUP,MACHPUNCH,THUNDERPUNCH,VITALTHROW
     AbilityIndex = 2
     IV = 20,20,20,20,20,20
+
+# -----------------------------Floor2------------------------------
+[LASS,Trainer,1]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = LUXIO,30
+Pokemon = DUOSION,30
+Pokemon = GROVYLE,30
 #-------------------------------
-[TEAMROCKET_M,Elite Trainer]
-LoseText = "..."
-Pokemon = VENUSAUR,10
+[LASS,Trainer,1]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = STARAVIA,30
+Pokemon = KIRLIA,30
+Pokemon = GRAVELER,30
 #-------------------------------
-[ROCKETBOSS,Elite Trainer]
-LoseText = "..."
-Pokemon = BULBASAUR,10
+[LASS,Trainer,2]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = CLEFAIRY,30
+Item = EVIOLITE
+Pokemon = MARSHTOMP,30
+Pokemon = LOUDRED,30
+#-------------------------------
+[LASS,Trainer,3]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = KINGLER,30
+Pokemon = NUZLEAF,30
+Pokemon = LAMPENT,30
+#-------------------------------
+[LASS,Trainer,4]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = MAWILE,30
+Pokemon = CORSOLA,30
+Pokemon = PIKACHU,30
+Item = LIGHTBALL

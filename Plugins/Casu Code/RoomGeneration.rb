@@ -20,7 +20,10 @@ MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
   [87, 10, 11, 0, 'Fight a Rocket Grump'], # lvl 16
   [76, 10, 13, 0, 'Fight a Rocket Grump'] # lvl
 ]
-
+MAP_FIGHT_TRAINER2_LIST = [
+  [93, 10, 11, 0, 'Fight a Trainer'],
+  [42, 10, 13, 0, 'Fight a Trainer']
+]
 def pbGenDest
   prev1 = pbGet(29)
   prev2 = pbGet(31)
@@ -61,7 +64,7 @@ def pbGetPossDest(exit_no, prev_dest)
 
   return [MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST[stages_cleared]] if rooms_cleared == Settings::ROOMS_PER_STAGE / 2
 
-  return [MAP_FIGHT_TRAINER_LIST[stages_cleared]] if exit_no == 0
+  return [MAP_FIGHT_TRAINER2_LIST[stages_cleared]] if exit_no == 0
 
   if rooms_cleared == Settings::ROOMS_PER_STAGE / 3 || rooms_cleared == 2 * Settings::ROOMS_PER_STAGE / 3
     return [MAP_PICK_POKEMON]
