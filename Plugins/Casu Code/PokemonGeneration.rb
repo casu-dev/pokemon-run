@@ -79,12 +79,3 @@ $j = 0
 $i +=1
 end
 end
-
-def pbClearPcItems
-$i=0
-$CountItemSlots=50
-while $i < $CountItemSlots do
-	$PokemonGlobal.pcItemStorage[$i]= nil
-	$i+=1
-end
-end
