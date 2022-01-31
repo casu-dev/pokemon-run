@@ -1,8 +1,11 @@
 POKEMON_GET_LEVEL = [15, 30, 60, 90]
 
+def pbGetPkmnTargetLvl
+  POKEMON_GET_LEVEL[pbGet(48)]
+end
+
 def pbGenPokeChoice
   stages_cleared = pbGet(48)
-  lvl = POKEMON_GET_LEVEL[stages_cleared]
 
   pkmn = pbChooseRandomPokemon(
     whiteList = nil,
@@ -12,7 +15,7 @@ def pbGenPokeChoice
     choose_gen = [1, 2, 3, 4, 5]
   )
 
-  pbSet(26, pbGetCorrectEvo(pkmn, lvl))
+  pbSet(26, pbGetCorrectEvo(pkmn, pbGetPkmnTargetLvl))
 
   pkmn = pbChooseRandomPokemon(
     whiteList = nil,
@@ -22,7 +25,7 @@ def pbGenPokeChoice
     choose_gen = [1, 2, 3, 4, 5]
   )
 
-  pbSet(27, pbGetCorrectEvo(pkmn, lvl))
+  pbSet(27, pbGetCorrectEvo(pkmn, pbGetPkmnTargetLvl))
 
   pkmn = pbChooseRandomPokemon(
     whiteList = nil,
@@ -32,7 +35,7 @@ def pbGenPokeChoice
     choose_gen = [1, 2, 3, 4, 5]
   )
 
-  pbSet(28, pbGetCorrectEvo(pkmn, lvl))
+  pbSet(28, pbGetCorrectEvo(pkmn, pbGetPkmnTargetLvl))
 end
 
 def pbGetCorrectEvo(pkmn, lvl)
