@@ -5,25 +5,22 @@ MAP_MART = [48, 4, 7, 0, 'Poké Mart']
 MAP_CENTER = [77, 7, 8, 0, 'Poké Center']
 
 MAP_BOSS_LIST = [
-  [86, 10, 16, 0, 'Stage Boss'],
-  [43, 9, 19, 0, 'Stage Boss']
+  [86, 10, 16, 0, '1st Floor Boss'], # 1st floor
+  [95, 9, 19, 0, '2nd Floor Boss'] # 2nd floor
 ]
 MAP_FIGHT_TRAINER_LIST = [
-  [84, 10, 11, 0, 'Fight a Trainer'],
-  [42, 10, 13, 0, 'Fight a Trainer']
+  [84, 10, 11, 0, 'Fight a Trainer'], # 1st floor
+  [93, 10, 13, 0, 'Fight a Trainer'] # 2nd floor
 ]
 MAP_FIGHT_ELITE_TRAINER_LIST = [
-  [85, 10, 11, 0, 'Fight an Elite Trainer'], # lvl 16
-  [76, 10, 13, 0, 'Fight an Elite Trainer'] # lvl
+  [85, 10, 11, 0, 'Fight an Elite Trainer'], # 1st floor
+  [96, 10, 13, 0, 'Fight an Elite Trainer'] # 2nd floor
 ]
 MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
-  [87, 10, 11, 0, 'Fight a Rocket Grump'], # lvl 16
-  [76, 10, 13, 0, 'Fight a Rocket Grump'] # lvl
+  [87, 10, 11, 0, 'Fight a Rocket Grump'], # 1st floor
+  [94, 10, 13, 0, 'Fight a Rocket Grump'] # 2nd floor
 ]
-MAP_FIGHT_TRAINER2_LIST = [
-  [93, 10, 11, 0, 'Fight a Trainer'],
-  [42, 10, 13, 0, 'Fight a Trainer']
-]
+
 def pbGenDest
   prev1 = pbGet(29)
   prev2 = pbGet(31)
@@ -60,16 +57,21 @@ def pbGetPossDest(exit_no, prev_dest)
   stages_cleared = pbGet(48)
   rooms_cleared = pbGet(49)
 
+  # Show boss if all rooms are cleared on both exits
   return [MAP_BOSS_LIST[stages_cleared]] if rooms_cleared >= Settings::ROOMS_PER_STAGE
 
+  # Show middle trainer on both exits
   return [MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST[stages_cleared]] if rooms_cleared == Settings::ROOMS_PER_STAGE / 2
 
-  return [MAP_FIGHT_TRAINER2_LIST[stages_cleared]] if exit_no == 0
-
+  # Show Oak on both exits
   if rooms_cleared == Settings::ROOMS_PER_STAGE / 3 || rooms_cleared == 2 * Settings::ROOMS_PER_STAGE / 3
     return [MAP_PICK_POKEMON]
   end
 
+  # Left exit is always trainer fight
+  return [MAP_FIGHT_TRAINER_LIST[stages_cleared]] if exit_no == 0
+
+  # Right exit without last room
   [
     MAP_FIGHT_ELITE_TRAINER_LIST[stages_cleared],
     MAP_MART,
