@@ -10,15 +10,15 @@ MAP_BOSS_LIST = [
 ]
 MAP_FIGHT_TRAINER_LIST = [
   [84, 10, 11, 0, 'Fight a Trainer'], # 1st floor
-  [93, 10, 13, 0, 'Fight a Trainer'] # 2nd floor
+  [93, 10, 11, 0, 'Fight a Trainer'] # 2nd floor
 ]
 MAP_FIGHT_ELITE_TRAINER_LIST = [
   [85, 10, 11, 0, 'Fight an Elite Trainer'], # 1st floor
-  [96, 10, 13, 0, 'Fight an Elite Trainer'] # 2nd floor
+  [96, 10, 11, 0, 'Fight an Elite Trainer'] # 2nd floor
 ]
 MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
   [87, 10, 11, 0, 'Fight a Rocket Grump'], # 1st floor
-  [94, 10, 13, 0, 'Fight a Rocket Grump'] # 2nd floor
+  [94, 10, 11, 0, 'Fight a Rocket Grump'] # 2nd floor
 ]
 
 def pbGenDest
