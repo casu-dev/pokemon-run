@@ -5,8 +5,8 @@ MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7 }
 MAP_CENTER = { id: 77, name: 'Poké Center', posx: 7, posy: 8 }
 
 MAP_BOSS_LIST = [
-  { id: 86, name: '1st Floor Boss', posx: 10, posy: 16 }, # 1st floor
-  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 16 } # 2nd floor
+  { id: 86, name: '1st Floor Boss', posx: 10, posy: 13 }, # 1st floor
+  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 13 } # 2nd floor
 ]
 MAP_FIGHT_TRAINER_LIST = [
   { id: 84, name: 'Fight a Trainer', posx: 10, posy: 11 }, # 1st floor
