@@ -1,24 +1,24 @@
-MAP_PICK_POKEMON = [88, 10, 11, 0, 'Professor Oak']
+MAP_PICK_POKEMON = { id: 88, name: 'Professor Oak', posx: 10, posy: 11 }
 
-MAP_MOVE_RELEARNER = [81, 10, 11, 0, 'Move Relearner']
-MAP_MART = [48, 4, 7, 0, 'Poké Mart']
-MAP_CENTER = [77, 7, 8, 0, 'Poké Center']
+MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 10, posy: 11 }
+MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7 }
+MAP_CENTER = { id: 77, name: 'Poké Center', posx: 7, posy: 8 }
 
 MAP_BOSS_LIST = [
-  [86, 10, 16, 0, '1st Floor Boss'], # 1st floor
-  [95, 9, 19, 0, '2nd Floor Boss'] # 2nd floor
+  { id: 86, name: '1st Floor Boss', posx: 10, posy: 16 }, # 1st floor
+  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 16 } # 2nd floor
 ]
 MAP_FIGHT_TRAINER_LIST = [
-  [84, 10, 11, 0, 'Fight a Trainer'], # 1st floor
-  [93, 10, 11, 0, 'Fight a Trainer'] # 2nd floor
+  { id: 84, name: 'Fight a Trainer', posx: 10, posy: 11 }, # 1st floor
+  { id: 93, name: 'Fight a Trainer', posx: 10, posy: 11 } # 2nd floor
 ]
 MAP_FIGHT_ELITE_TRAINER_LIST = [
-  [85, 10, 11, 0, 'Fight an Elite Trainer'], # 1st floor
-  [96, 10, 11, 0, 'Fight an Elite Trainer'] # 2nd floor
+  { id: 85, name: 'Fight an Elite Trainer', posx: 10, posy: 11 }, # 1st floor
+  { id: 96, name: 'Fight an Elite Trainer', posx: 10, posy: 11 } # 2nd floor
 ]
 MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
-  [87, 10, 11, 0, 'Fight a Rocket Grump'], # 1st floor
-  [94, 10, 11, 0, 'Fight a Rocket Grump'] # 2nd floor
+  { id: 87, name: 'Fight a Rocket Grump', posx: 10, posy: 11 }, # 1st floor
+  { id: 94, name: 'Fight a Rocket Grump', posx: 10, posy: 11 } # 2nd floor
 ]
 
 def pbGenDest
@@ -26,14 +26,14 @@ def pbGenDest
   prev2 = pbGet(31)
 
   arr = pbGetPossDest(0, prev1)
-  res = arr[rand(arr.length)]
-  pbSet(29, res)
-  pbSet(30, res[4])
+  room = arr[rand(arr.length)]
+  pbSet(29, room)
+  pbSet(30, room[:name])
 
   arr = pbGetPossDest(1, prev2)
-  res = arr[rand(arr.length)]
-  pbSet(31, res)
-  pbSet(32, res[4])
+  room = arr[rand(arr.length)]
+  pbSet(31, room)
+  pbSet(32, room[:name])
 end
 
 def pbTransferToDest(dest)
@@ -43,10 +43,10 @@ def pbTransferToDest(dest)
     $game_map.autoplay
     $game_map.refresh
 
-    $game_temp.player_new_map_id    = dest[0]
-    $game_temp.player_new_x         = dest[1]
-    $game_temp.player_new_y         = dest[2]
-    $game_temp.player_new_direction = dest[3]
+    $game_temp.player_new_map_id    = dest[:id]
+    $game_temp.player_new_x         = dest[:posx]
+    $game_temp.player_new_y         = dest[:posy]
+    $game_temp.player_new_direction = 0
     $scene.transfer_player
     $game_map.autoplay
     $game_map.refresh
