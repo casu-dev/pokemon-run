@@ -208,22 +208,22 @@ Pokemon = SPEAROW,10
 LoseText = "A good battle indeed!"
 Pokemon = RUFFLET,13
     AbilityIndex = 1
-Pokemon = MINCCINO,13
+Pokemon = MUNNA,13
     AbilityIndex = 1
 #-------------------------------
 [GENTLEMAN,Elite Trainer,1]
 LoseText = "A good battle indeed!"
 Pokemon = MUNCHLAX,13
     AbilityIndex = 1
-Pokemon = HOOTHOOT,13
-    AbilityIndex = 2
+Pokemon = MUNNA,13
+    AbilityIndex = 1
 #-------------------------------
 [GENTLEMAN,Elite Trainer,2]
 LoseText = "A good battle indeed!"
 Pokemon = PORYGON,13
     AbilityIndex = 0
-Pokemon = BUNNELBY,13
-    AbilityIndex = 2
+Pokemon = MUNNA,13
+    AbilityIndex = 1
 #-------------------------------
 [TEAMROCKET_M,Rocket Grunt]
 LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
@@ -246,36 +246,82 @@ Pokemon = TIMBURR,16
     Moves = BULKUP,MACHPUNCH,THUNDERPUNCH,VITALTHROW
     AbilityIndex = 2
     IV = 20,20,20,20,20,20
-
-# -----------------------------Floor2------------------------------
-[LASS,Trainer,1]
+#-------------------------------
+[LASS,Trainer]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = LUXIO,30
-Pokemon = DUOSION,30
-Pokemon = GROVYLE,30
+Pokemon = GLOOM,25
+Pokemon = SEADRA,25
+Pokemon = LAMPENT,25
+    Item = EVIOLITE
 #-------------------------------
 [LASS,Trainer,1]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = STARAVIA,30
-Pokemon = KIRLIA,30
-Pokemon = GRAVELER,30
+Pokemon = STARAVIA,25
+Pokemon = KIRLIA,25
+Pokemon = GRAVELER,25
 #-------------------------------
 [LASS,Trainer,2]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = CLEFAIRY,30
-Item = EVIOLITE
-Pokemon = MARSHTOMP,30
-Pokemon = LOUDRED,30
+Pokemon = LAMPENT,25
+    Item = EVIOLITE
+Pokemon = MARSHTOMP,25
+Pokemon = LOUDRED,25
 #-------------------------------
 [LASS,Trainer,3]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = KINGLER,30
-Pokemon = NUZLEAF,30
-Pokemon = LAMPENT,30
+Pokemon = POLIWHIRL,25
+Pokemon = NUZLEAF,25
+Pokemon = LAMPENT,25
+    Item = EVIOLITE
 #-------------------------------
-[LASS,Trainer,4]
+[LADY,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = MAWILE,30
-Pokemon = CORSOLA,30
-Pokemon = PIKACHU,30
-Item = LIGHTBALL
+Pokemon = MAWILE,28
+Pokemon = CORSOLA,28
+Pokemon = CHIMECHO,28
+#-------------------------------
+[LADY,Elite Trainer,1]
+LoseText = "A good battle indeed!"
+Pokemon = KINGLER,28
+    AbilityIndex = 2
+Pokemon = TORKOAL,28
+    AbilityIndex = 2
+Pokemon = TANGELA,28
+    AbilityIndex = 0
+#-------------------------------
+[LADY,Elite Trainer,2]
+LoseText = "A good battle indeed!"
+Pokemon = WIGGLYTUFF,28
+Pokemon = TROPIUS,28
+    AbilityIndex = 0
+Pokemon = GIRAFARIG,28
+    AbilityIndex = 0
+#-------------------------------
+[TEAMROCKET_F,Rocket Grunt]
+LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+Pokemon = CLEFAIRY,28
+    Item = EVIOLITE
+    IV = 31,16,16,16,16,16
+Pokemon = COFAGRIGUS,28
+    IV = 31,16,16,16,16,16
+Pokemon = SPIRITOMB,28
+    IV = 31,16,16,16,16,16
+#-------------------------------
+[ELITEFOUR_Agatha,Agatha]
+LoseText = "GG WP"
+Pokemon = CLEFAIRY,32
+    Moves = DAZZLINGGLEAM,MINIMIZE,MOONLIGHT,THUNDERWAVE
+    AbilityIndex = 1
+    Item = EVIOLITE
+    IV = 24,24,24,24,24,24
+Pokemon = GOLETT,32
+    Moves = DYNAMICPUNCH,SHADOWPUNCH,MAGNITUDE,ROCKSLIDE
+    AbilityIndex = 2
+    IV = 24,24,24,24,24,24
+Pokemon = GRANBULL,32
+    Moves = FIREFANG,HEADBUTT,SCARYFACE,STOMPINGTANTRUM
+    AbilityIndex = 0
+    IV = 24,24,24,24,24,24
+Pokemon = MISMAGIUS,32
+    Moves = NASTYPLOT,SHADOWBALL,HIDDENPOWERFIGHTING,CONFUSERAY
+    IV = 24,24,24,24,24,24

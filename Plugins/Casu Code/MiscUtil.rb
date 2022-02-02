@@ -63,3 +63,26 @@ def pbLvUpAllPkmn(targetLevel)
         end
     end
 end
+
+def pbBossRewardFloor2
+  speech=nil
+  commands = []
+  commands[cmdBuy = commands.length]  = _INTL("Choice Scarf")
+  commands[cmdSell = commands.length] = _INTL("Choice Specs")
+  commands[cmdQuit = commands.length] = _INTL("Choice Band")
+  cmd = pbMessage(
+     speech ? speech : _INTL("Take one of the Items."),
+     commands)
+  loop do
+    if cmd==cmdBuy
+      pbReceiveItem(:CHOICESCARF)
+    break
+    elsif cmd==cmdSell
+      pbReceiveItem(:CHOICESPECS)
+    break
+    elsif cmd==cmdQuit
+      pbReceiveItem(:CHOICEBAND)
+    break
+    end
+  end
+end
