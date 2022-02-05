@@ -230,7 +230,8 @@ Pokemon = PORYGON,13
 [TEAMROCKET_M,Rocket Grunt]
 LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
 Pokemon = SCRAGGY,15
-    AbilityIndex = 2
+	Moves = LOWKICK, THIEF, HEADBUTT, SANDATTACK
+	AbilityIndex = 2
 Pokemon = MAKUHITA,15
     AbilityIndex = 2
 #-------------------------------
