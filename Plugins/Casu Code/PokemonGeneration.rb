@@ -1,12 +1,33 @@
-POKEMON_GET_LEVEL = [15, 30, 60, 90]
+POKEMON_FLOOR_START_LEVEL = [15, 30, 60, 90]
+POKEMON_GET_LEVEL = [16, 32, 62, 92]
+
+def pbGetStagesCleared
+  pbGet(48)
+end
 
 def pbGetPkmnTargetLvl
-  POKEMON_GET_LEVEL[pbGet(48)]
+  POKEMON_GET_LEVEL[pbGetStagesCleared]
+end
+
+def pbLvUpAllPkmn(targetLevel = nil)
+  if targetLevel.nil?
+    targetLevel = POKEMON_FLOOR_START_LEVEL[pbGetStagesCleared]
+  end
+
+  # Level up party
+  $Trainer.party.each do |pkmn|
+    pbChangeLevel(pkmn, targetLevel, nil) if !pkmn.nil? && (pkmn.level < targetLevel)
+  end
+
+  # Level up box
+  $PokemonStorage.boxes.each do |box|
+    box.each do |pkmn|
+      pbChangeLevel(pkmn, targetLevel, nil) if !pkmn.nil? && (pkmn.level < targetLevel)
+    end
+  end
 end
 
 def pbGenPokeChoice
-  stages_cleared = pbGet(48)
-
   pkmn = pbChooseRandomPokemon(
     whiteList = nil,
     blackList = 'suggested',
@@ -61,8 +82,7 @@ def pbGenStarterPkmn(type)
 end
 
 def pbGiveRandomPoke(saveSlot)
-  stages_cleared = pbGet(48)
-  lvl = lvl = POKEMON_GET_LEVEL[stages_cleared]
+  lvl = lvl = POKEMON_GET_LEVEL[pbGetStagesCleared]
 
   pkmn = pbGenPkmn(pbGet(saveSlot), lvl)
   pbAddPokemon(pkmn)
