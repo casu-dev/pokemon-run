@@ -6,19 +6,23 @@ MAP_CENTER = { id: 77, name: 'Poké Center', posx: 7, posy: 8 }
 
 MAP_BOSS_LIST = [
   { id: 86, name: '1st Floor Boss', posx: 10, posy: 13 }, # 1st floor
-  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 13 } # 2nd floor
+  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 13 }, # 2nd floor
+  { id: 100, name: '3rd Floor Boss', posx: 9, posy: 17 } # 3rd floor
 ]
 MAP_FIGHT_TRAINER_LIST = [
   { id: 84, name: 'Fight a Trainer', posx: 10, posy: 11 }, # 1st floor
-  { id: 93, name: 'Fight a Trainer', posx: 10, posy: 11 } # 2nd floor
+  { id: 93, name: 'Fight a Trainer', posx: 10, posy: 11 }, # 2nd floor
+  { id: 101, name: 'Fight a Trainer', posx: 10, posy: 11 } # 3rd floor
 ]
 MAP_FIGHT_ELITE_TRAINER_LIST = [
   { id: 85, name: 'Fight an Elite Trainer', posx: 10, posy: 11 }, # 1st floor
-  { id: 96, name: 'Fight an Elite Trainer', posx: 10, posy: 11 } # 2nd floor
+  { id: 96, name: 'Fight an Elite Trainer', posx: 10, posy: 11 }, # 2nd floor
+  { id: 102, name: 'Fight an Elite Trainer', posx: 10, posy: 11 } # 3rd floor
 ]
 MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
   { id: 87, name: 'Fight a Rocket Grump', posx: 10, posy: 11 }, # 1st floor
-  { id: 94, name: 'Fight a Rocket Grump', posx: 10, posy: 11 } # 2nd floor
+  { id: 94, name: 'Fight a Rocket Grump', posx: 10, posy: 11 }, # 2nd floor
+  { id: 99, name: 'Fight a Rocket Grump', posx: 10, posy: 11 } # 3rd floor
 ]
 
 def pbGenDest
