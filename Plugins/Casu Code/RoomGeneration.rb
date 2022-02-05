@@ -1,6 +1,6 @@
 MAP_PICK_POKEMON = { id: 88, name: 'Professor Oak', posx: 10, posy: 11 }
 
-MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 10, posy: 11 }
+MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 5, posy: 10 }
 MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7 }
 MAP_CENTER = { id: 77, name: 'Poké Center', posx: 7, posy: 8 }
 
@@ -82,4 +82,8 @@ def pbGetPossDest(exit_no, prev_dest)
     MAP_CENTER,
     MAP_MOVE_RELEARNER
   ].reject { |m| m == prev_dest }
+end
+
+def pbGetFightTrainerDest
+  return MAP_FIGHT_TRAINER_LIST[pbGet(48)]
 end
