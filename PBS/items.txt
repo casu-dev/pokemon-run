@@ -11,15 +11,15 @@
 9,YELLOWSHARD,Yellow Shard,Yellow Shards,1,200,"A small yellow shard. It appears to be from some sort of implement made long ago.",0,0,0
 10,BLUESHARD,Blue Shard,Blue Shards,1,200,"A small blue shard. It appears to be from some sort of implement made long ago.",0,0,0
 11,GREENSHARD,Green Shard,Green Shards,1,200,"A small green shard. It appears to be from some sort of implement made long ago.",0,0,0
-12,FIRESTONE,Fire Stone,Fire Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It is colored orange.",1,0,7
-13,THUNDERSTONE,Thunder Stone,Thunder Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It has a thunderbolt pattern.",1,0,7
-14,WATERSTONE,Water Stone,Water Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue.",1,0,7
-15,LEAFSTONE,Leaf Stone,Leaf Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It has a leaf pattern.",1,0,7
-16,MOONSTONE,Moon Stone,Moon Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It is as black as the night sky.",1,0,7
-17,SUNSTONE,Sun Stone,Sun Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It is as red as the sun.",1,0,7
-18,DUSKSTONE,Dusk Stone,Dusk Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be.",1,0,7
-19,DAWNSTONE,Dawn Stone,Dawn Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.",1,0,7
-20,SHINYSTONE,Shiny Stone,Shiny Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It shines with a dazzling light.",1,0,7
+12,FIRESTONE,Fire Stone,Fire Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It is colored orange.",1,0,7
+13,THUNDERSTONE,Thunder Stone,Thunder Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It has a thunderbolt pattern.",1,0,7
+14,WATERSTONE,Water Stone,Water Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue.",1,0,7
+15,LEAFSTONE,Leaf Stone,Leaf Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It has a leaf pattern.",1,0,7
+16,MOONSTONE,Moon Stone,Moon Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It is as black as the night sky.",1,0,7
+17,SUNSTONE,Sun Stone,Sun Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It is as red as the sun.",1,0,7
+18,DUSKSTONE,Dusk Stone,Dusk Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be.",1,0,7
+19,DAWNSTONE,Dawn Stone,Dawn Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.",1,0,7
+20,SHINYSTONE,Shiny Stone,Shiny Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It shines with a dazzling light.",1,0,7
 21,REDAPRICORN,Red Apricorn,Red Apricorns,1,200,"A red Apricorn. It assails your nostrils.",0,0,9
 22,YELLOWAPRICORN,Yellow Apricorn,Yellow Apricorns,1,200,"A yellow Apricorn. It has an invigorating scent.",0,0,9
 23,BLUEAPRICORN,Blue Apricorn,Blue Apricorns,1,200,"A blue Apricorn. It smells a bit like grass.",0,0,9
@@ -210,15 +210,15 @@
 208,MAGMARIZER,Magmarizer,Magmarizers,1,3000,"A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.",0,0,0
 209,REAPERCLOTH,Reaper Cloth,Reaper Cloths,1,3000,"A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon.",0,0,0
 210,PRISMSCALE,Prism Scale,Prism Scales,1,3000,"A mysterious scale that evolves certain Pokémon. It shines in rainbow colors.",0,0,0
-211,OVALSTONE,Oval Stone,Oval Stones,1,3000,"A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg.",0,0,0
+211,OVALSTONE,Oval Stone,Oval Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg.",0,0,0
 212,REDSCARF,Red Scarf,Red Scarves,1,100,"An item to be held by a Pokémon. It boosts the Cool aspect of the holder in a Contest.",0,0,0
 213,BLUESCARF,Blue Scarf,Blue Scarves,1,100,"An item to be held by a Pokémon. It boosts the Beauty aspect of the holder in a Contest.",0,0,0
 214,PINKSCARF,Pink Scarf,Pink Scarves,1,100,"An item to be held by a Pokémon. It boosts the Cute aspect of the holder in a Contest.",0,0,0
 215,GREENSCARF,Green Scarf,Green Scarves,1,100,"An item to be held by a Pokémon. It boosts the Smart aspect of the holder in a Contest.",0,0,0
 216,YELLOWSCARF,Yellow Scarf,Yellow Scarves,1,100,"An item to be held by a Pokémon. It boosts the Tough aspect of the holder in a Contest.",0,0,0
 #-------------------------------
-217,POTION,Potion,Potions,2,200,"A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.",1,1,0
-218,SUPERPOTION,Super Potion,Super Potions,2,400,"A spray-type medicine for wounds. It restores the HP of one Pokémon by 60 points.",1,1,0
+217,POTION,Potion,Potions,2,300,"A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.",1,1,0
+218,SUPERPOTION,Super Potion,Super Potions,2,700,"A spray-type medicine for wounds. It restores the HP of one Pokémon by 60 points.",1,1,0
 219,HYPERPOTION,Hyper Potion,Hyper Potions,2,1200,"A spray-type medicine for wounds. It restores the HP of one Pokémon by 120 points.",1,1,0
 220,MAXPOTION,Max Potion,Max Potions,2,2500,"A spray-type medicine for wounds. It completely restores the HP of a single Pokémon.",1,1,0
 221,FULLRESTORE,Full Restore,Full Restores,2,3000,"A medicine that fully restores the HP and heals any status problems of a single Pokémon.",1,1,0
@@ -533,7 +533,7 @@
 524,OVALCHARM,Oval Charm,Oval Charms,8,0,"An oval charm said to increase the chance of Eggs being found at the Day Care.",0,0,6
 525,SHINYCHARM,Shiny Charm,Shiny Charms,8,0,"A shiny charm said to increase the chance of finding a Shiny Pokémon.",0,0,6
 #-------------------------------
-526,ICESTONE,Ice Stone,Ice Stones,1,5000,"A peculiar stone that makes certain species of Pokémon evolve. It has a snowflake pattern.",1,0,7
+526,ICESTONE,Ice Stone,Ice Stones,1,750,"A peculiar stone that makes certain species of Pokémon evolve. It has a snowflake pattern.",1,0,7
 527,JAWFOSSIL,Jaw Fossil,Jaw Fossils,1,1000,"A fossil from a prehistoric Pokémon that once lived on the land. It appears to be part of a large jaw.",0,0,8
 528,SAILFOSSIL,Sail Fossil,Sail Fossils,1,1000,"A fossil from a prehistoric Pokémon that once lived on the land. It looks like the impression from a skin sail.",0,0,8
 529,REDNECTAR,Red Nectar,Red Nectars,1,300,"A flower nectar obtained at Ula'ula Meadow. It changes the form of certain species of Pokémon.",1,0,0
