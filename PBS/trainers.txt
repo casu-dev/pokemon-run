@@ -181,7 +181,8 @@ Pokemon = GOLEM,45
 #-------------------------------
 [YOUNGSTER,Trainer]
 LoseText = "..."
-Pokemon = PIDGEY,10
+Pokemon = BUNNELBY,10
+AbilityIndex = 2
 Pokemon = EEVEE,10
 #-------------------------------
 [YOUNGSTER,Trainer,1]
@@ -191,39 +192,40 @@ Pokemon = LILLIPUP,10
 #-------------------------------
 [YOUNGSTER,Trainer,2]
 LoseText = "..."
-Pokemon = TAILLOW,10
+Pokemon = AIPOM,10
 Pokemon = BUNEARY,10
 #-------------------------------
 [YOUNGSTER,Trainer,3]
 LoseText = "..."
 Pokemon = MEOWTH,10
-Pokemon = STARLY,10
+Pokemon = MINCCINO,10
 #-------------------------------
 [YOUNGSTER,Trainer,4]
 LoseText = "..."
 Pokemon = RATTATA,10
-Pokemon = SPEAROW,10
+Pokemon = PATRAT,10
+AbilityIndex = 2
 #-------------------------------
 [GENTLEMAN,Elite Trainer]
 LoseText = "A good battle indeed!"
-Pokemon = RUFFLET,13
-    AbilityIndex = 1
 Pokemon = MUNNA,13
+    AbilityIndex = 1
+Pokemon = RUFFLET,13
     AbilityIndex = 1
 #-------------------------------
 [GENTLEMAN,Elite Trainer,1]
 LoseText = "A good battle indeed!"
-Pokemon = MUNCHLAX,13
-    AbilityIndex = 1
 Pokemon = MUNNA,13
+    AbilityIndex = 1
+Pokemon = MUNCHLAX,13
     AbilityIndex = 1
 #-------------------------------
 [GENTLEMAN,Elite Trainer,2]
 LoseText = "A good battle indeed!"
-Pokemon = PORYGON,13
-    AbilityIndex = 0
 Pokemon = MUNNA,13
     AbilityIndex = 1
+Pokemon = PORYGON,13
+    AbilityIndex = 0
 #-------------------------------
 [TEAMROCKET_M,Rocket Grunt]
 LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
@@ -252,6 +254,7 @@ LoseText = "You didn't have to win so convincingly!"
 Pokemon = GLOOM,25
 Pokemon = SEADRA,25
 Pokemon = LAMPENT,25
+    AbilityIndex = 0
     Item = EVIOLITE
 #-------------------------------
 [LASS,Trainer,1]
@@ -263,7 +266,8 @@ Pokemon = GRAVELER,25
 [LASS,Trainer,2]
 LoseText = "You didn't have to win so convincingly!"
 Pokemon = LAMPENT,25
-    Item = EVIOLITE
+	AbilityIndex = 0
+	Item = EVIOLITE
 Pokemon = MARSHTOMP,25
 Pokemon = LOUDRED,25
 #-------------------------------
@@ -272,7 +276,8 @@ LoseText = "You didn't have to win so convincingly!"
 Pokemon = POLIWHIRL,25
 Pokemon = NUZLEAF,25
 Pokemon = LAMPENT,25
-    Item = EVIOLITE
+	AbilityIndex = 0
+	Item = EVIOLITE
 #-------------------------------
 [LADY,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
