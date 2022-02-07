@@ -431,6 +431,55 @@ Pokemon = SCIZOR,62
 	AbilityIndex = 1
 Item = LEFTOVERS
     IV = 28,28,28,28,28,28
+#------------------------------- Floor4---------------------------------------
+[BIKER,Trainer]
+LoseText = "Grr..."
+Pokemon = MACHAMP, 1
+#-------------------------------
+[GAMBLER,Elite Trainer]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = MANECTRIC,88
+AbilityIndex = 0
+Item = MANECTITE
+Pokemon = REUNICLUS,88
+AbilityIndex = 1
+Pokemon = GLISCOR, 88
+AbilityIndex = 1
+Pokemon = VENUSAUR, 88
+#-------------------------------
+[GAMBLER,Elite Trainer, 1]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = AGGRON,88
+AbilityIndex = 0
+Item = AGGRONITE
+Pokemon = JELLICENT,88
+AbilityIndex = 1
+Pokemon = MAMOSWINE, 88
+AbilityIndex = 2
+Pokemon = CLEFABLE, 88
+AbilityIndex = 2
+#-------------------------------
+[GAMBLER,Elite Trainer, 2]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = ALTARIA,88
+AbilityIndex = 2
+Item = ALTARIANITE
+Pokemon = HIPPOWDON,88
+Pokemon = GENGAR, 88
+Pokemon = SCIZOR, 88
+AbilityIndex = 1
+#-------------------------------
+[LEADER_Giovanni,Rocket Grunt]
+LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+Pokemon = MEDICHAM,90
+    Item = MEDICHAMITE
+    IV = 31,20,20,20,20,20
+Pokemon = SALAMENCE,90
+    IV = 31,20,20,20,20,20
+Pokemon = METAGROSS,90
+    IV = 31,20,20,20,20,20
+Pokemon = GENGAR,90
+    IV = 31,20,20,20,20,20
 #-------------------------------
 [ELITEFOUR_Lance, Lance]
 LoseText = "GG WP"
