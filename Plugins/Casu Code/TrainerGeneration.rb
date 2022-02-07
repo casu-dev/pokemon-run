@@ -16,7 +16,7 @@ TRAINER_OVERRIDE = [
   },
   {
     tType: :BIKER, tName: 'Trainer',
-    lvl1: 80, lvl2: 85, numPkmn: 3,
+    lvl1: 80, lvl2: 85, numPkmn: 4,
     pkmnPool: %i[ALAKAZAM CONKELDURR EXCADRILL FERROTHORN GLISCOR GENGAR JELLICENT MAMOSWINE REUNICLUS SCIZOR STARMIE TENTACRUEL HIPPOWDON HAXORUS INFERNAPE LUCARIO METAGROSS ABOMASNOW]
   },
 ]
@@ -30,7 +30,7 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
 
     # Determin lvl
     lvl = template[:lvl1]
-    lvl = template[:lvl2] if pbGet(49) + 2 > Settings::ROOMS_PER_STAGE / 2
+    lvl = template[:lvl2] if pbGet(49) +2 > Settings::ROOMS_PER_STAGE / 2
 
     # Generate Party
     newParty = []
