@@ -69,3 +69,43 @@ def pbGiveMoney(amount)
   $Trainer.money += amount
   pbMessage(_INTL("You got ${1} for winning!", amount.to_s_formatted))  
 end
+
+def can_evolve?(pkmn)
+# To-do?: Exclude Eggs
+    if pkmn.species_data.get_evolutions[0]
+        return true
+    else
+        return false
+    end
+end
+
+def pbForceEvo?(pkmn)
+# To-do?: Exclude Eggs
+    evo_info = pkmn.species_data.get_evolutions
+    if pkmn.species_data.get_evolutions[0]
+        speech=nil
+        evos = []
+
+        evo_info.each do |i|
+             evos << _INTL(i[0].to_s)
+        end
+        evos << _INTL("Go back")
+
+        cmd = pbMessage(speech ? speech : _INTL("Choose an Evolution."), evos)
+        # pbMessage(cmd.to_s)
+
+        if(cmd != evos.length-1)
+           evo=PokemonEvolutionScene.new
+                   evo.pbStartScreen(pkmn,evo_info[cmd][0])
+                 # evo.pbStartScreen(pkmn,pkmn.species_data.get_evolutions[0][0])
+                   evo.pbEvolution
+                   evo.pbEndScreen
+                   return true
+        else
+            return false
+        end
+    else
+       pbMessage("This Pokémon can't evolve anymore.")
+       return false
+    end
+end

@@ -1,13 +1,6 @@
 POKEMON_FLOOR_START_LEVEL = [15, 30, 60, 90]
 POKEMON_GET_LEVEL = POKEMON_FLOOR_START_LEVEL # [16, 32, 62, 92]
 
-TRAINER_LEVEL = [
-  [10, 12],
-  [25, 27],
-  [55, 57],
-  [85, 87]
-]
-
 def pbGetStagesCleared
   pbGet(48)
 end
@@ -92,19 +85,3 @@ def pbGiveRandomPoke(saveSlot)
   pkmn = pbGenPkmn(pbGet(saveSlot), lvl)
   pbAddPokemon(pkmn)
 end
-
-Events.onTrainerPartyLoad += proc { |_sender, trainer|
-  if trainer
-    target_lvl_list = TRAINER_LEVEL[pbGetStagesCleared]
-    target_lvl = target_lvl_list[0]
-    target_lvl = target_lvl_list[1] if pbGet(49) + 2 > Settings::ROOMS_PER_STAGE / 2
-
-    trainer.each do |t|
-      next unless t.name == 'Trainer'
-
-      t.party.each do |pkmn|
-        pkmn.level = target_lvl
-      end
-    end
-  end
-}

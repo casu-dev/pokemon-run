@@ -178,7 +178,7 @@ Pokemon = NIDOKING,45
 [COOLTRAINER_F,Trainer,8]
 LoseText = "..."
 Pokemon = GOLEM,45
-#-------------------------------
+#-------------------------------FLOOR1--------------------------------------
 [YOUNGSTER,Trainer]
 LoseText = "..."
 Pokemon = BUNNELBY,10
@@ -249,7 +249,7 @@ Pokemon = TIMBURR,16
     Moves = BULKUP,MACHPUNCH,THUNDERPUNCH,VITALTHROW
     AbilityIndex = 2
     IV = 20,20,20,20,20,20
-#-------------------------------
+#-------------------------------FLOOR2--------------------------------------
 [LASS,Trainer]
 LoseText = "You didn't have to win so convincingly!"
 Pokemon = GLOOM,25
@@ -331,3 +331,133 @@ Pokemon = GRANBULL,32
 Pokemon = MISMAGIUS,32
     Moves = NASTYPLOT,SHADOWBALL,HIDDENPOWERFIGHTING,CONFUSERAY
     IV = 24,24,24,24,24,24
+#-------------------------------FLOOR3--------------------------------------
+[COOLTRAINER_F,Trainer]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = MACHAMP, 55
+	AbilityIndex = 1
+Pokemon = ARCANINE,55
+Pokemon = AZUMARILL,55
+#-------------------------------
+[COOLTRAINER_F,Trainer, 1]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = HONCHKROW, 55
+	AbilityIndex = 1
+Pokemon = ABOMASNOW,55
+Pokemon = SLOWBRO,55
+#-------------------------------
+[COOLTRAINER_F,Trainer, 2]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = BRONZONG, 55
+	AbilityIndex = 1
+Pokemon = HITMONTOP,55
+Pokemon = STARMIE,55
+#-------------------------------
+[COOLTRAINER_F,Trainer, 3]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = GALVANTULA, 55
+	AbilityIndex = 1
+Pokemon = TOGEKISS,55
+	AbilityIndex = 1
+Pokemon = RHYDON,55
+	Item = EVIOLITE
+#-------------------------------
+[COOLTRAINER_F,Trainer, 4]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = SCRAFTY, 55
+	AbilityIndex = 2
+Pokemon = ROSERADE,55
+	AbilityIndex = 1
+Pokemon = AZUMARILL,55
+#-------------------------------
+[BEAUTY,Elite Trainer]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = TYRANITAR,58
+Pokemon = JELLICENT,58
+Pokemon = CROBAT, 58
+#-------------------------------
+[BEAUTY,Elite Trainer, 1]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = DRAGONITE,58
+	AbilityIndex = 2
+Pokemon = TENTACRUEL,58
+Pokemon = HIPPOWDON, 58
+#-------------------------------
+[BEAUTY,Elite Trainer, 2]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = GARCHOMP,58
+	AbilityIndex = 2
+Pokemon = SCIZOR,58
+	AbilityIndex = 1
+Pokemon = SLOWBRO, 58
+#-------------------------------
+[ROCKETBOSS,Rocket Grunt]
+LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+Pokemon = MILOTIC,58
+    Item = FLAMEORB
+    IV = 31,20,20,20,20,20
+Pokemon = GYARADOS,58
+    IV = 31,20,20,20,20,20
+	Moves = DRAGONDANCE, WATERFALL, EARTHQUAKE, BOUNCE
+Pokemon = ESCAVALIER,58
+    IV = 31,20,20,20,20,20
+Pokemon = EXCADRILL,58
+    IV = 31,20,20,20,20,20
+#-------------------------------
+[LEADER_Misty, Misty]
+LoseText = "GG WP"
+Pokemon = PELIPPER,62
+    Moves = UTURN,HURRICANE,SCALD,ROOST
+    AbilityIndex = 1
+    Item = DAMPROCK
+    IV = 28,28,28,28,28,28
+Pokemon = KINGDRA,62
+    Moves = HYDROPUMP,DRACOMETEOR,ICEBEAM,OUTRAGE
+    AbilityIndex = 0
+	Item = LIFEORB
+    IV = 28,28,28,28,28,28
+Pokemon = LUDICOLO,62
+    Moves = HYDROPUMP,GIGADRAIN,ICEBEAM,FOCUSBLAST
+	AbilityIndex = 0
+Item = LIFEORB
+    IV = 28,28,28,28,28,28
+Pokemon = FERROTHORN,62
+    Moves = KNOCKOFF,GYROBALL,POWERWHIP,LEECHSEED
+    AbilityIndex = 0
+    Item = LEFTOVERS
+    IV = 28,28,28,28,28,28
+Pokemon = SCIZOR,62
+    Moves = SWORDSDANCE,BULLETPUNCH,BUGBITE,ROOST
+	AbilityIndex = 1
+Item = LEFTOVERS
+    IV = 28,28,28,28,28,28
+#-------------------------------
+[ELITEFOUR_Lance, Lance]
+LoseText = "GG WP"
+Pokemon = TYRANITAR,95
+    Moves = STONEEDGE, CRUNCH, EARTHQUAKE, STEALTHROCK
+    Item = FOCUSSASH
+    IV = 31,31,31,31,31,31
+Pokemon = EXCADRILL,95
+    Moves = SWORDSDANCE,EARTHQUAKE,IRONHEAD,ROCKSLIDE
+    AbilityIndex = 0
+    Item = FOCUSSASH
+    IV = 31,31,31,31,31,31
+Pokemon =  GYARADOS,95
+    Moves = WATERFALL,DRAGONDANCE,EARTHQUAKE,STONEEDGE
+    AbilityIndex = 2
+    Item = LIFEORB
+    IV = 31,31,31,31,31,31
+Pokemon = FERROTHORN,95
+    Moves = POWERWHIP,GYROBALL,KNOCKOFF,LEECHSEED
+    Item = ROCKYHELMET
+    IV = 31,31,31,31,31,0
+Pokemon = TOGEKISS,95
+    Moves = THUNDERWAVE,AIRSLASH,FLAMETHROWER,ROOST
+    AbilityIndex = 1
+    Item = LEFTOVERS
+    IV = 31,31,31,31,31,31
+Pokemon = RAYQUAZA,95
+    Moves = DRAGONASCENT,SWORDSDANCE,EARTHQUAKE,EXTREMESPEED
+    Item = LIFEORB
+    IV = 31,31,31,31,31,31
