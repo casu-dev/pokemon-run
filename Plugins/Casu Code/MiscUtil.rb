@@ -82,7 +82,7 @@ def pbMF_Reward_F4
       pbReceiveItem(:EXPERTBELT)
     break
     elsif cmd==cmdQuit
-      pbReceiveItem(:FOKUSSASH)
+      pbReceiveItem(:FOCUSSASH)
     break
     end
   end
