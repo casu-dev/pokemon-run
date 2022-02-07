@@ -65,6 +65,29 @@ def pbBossRewardFloor2
   end
 end
 
+def pbMF_Reward_F4
+  speech=nil
+  commands = []
+  commands[cmdBuy = commands.length]  = _INTL("Assault Vest")
+  commands[cmdSell = commands.length] = _INTL("Expert Belt")
+  commands[cmdQuit = commands.length] = _INTL("Focus Sash")
+  cmd = pbMessage(
+     speech ? speech : _INTL("Take one of the Items."),
+     commands)
+  loop do
+    if cmd==cmdBuy
+      pbReceiveItem(:ASSAULTVEST)
+    break
+    elsif cmd==cmdSell
+      pbReceiveItem(:EXPERTBELT)
+    break
+    elsif cmd==cmdQuit
+      pbReceiveItem(:FOKUSSASH)
+    break
+    end
+  end
+end
+
 def pbGiveMoney(amount)
   $Trainer.money += amount
   pbMessage(_INTL("You got ${1} for winning!", amount.to_s_formatted))  
