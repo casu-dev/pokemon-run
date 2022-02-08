@@ -391,9 +391,10 @@ Pokemon = SCIZOR,58
 	AbilityIndex = 1
 Pokemon = SLOWBRO, 58
 #-------------------------------
-[ROCKETBOSS,Rocket Grunt]
+[ROCKETBOSS,Giovanni]
 LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
 Pokemon = MILOTIC,58
+	AbilityIndex = 0
     Item = FLAMEORB
     IV = 31,20,20,20,20,20
 Pokemon = GYARADOS,58
@@ -469,7 +470,7 @@ Pokemon = GENGAR, 88
 Pokemon = SCIZOR, 88
 AbilityIndex = 1
 #-------------------------------
-[LEADER_Giovanni,Rocket Grunt]
+[LEADER_Giovanni,Giovanni]
 LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
 Pokemon = MEDICHAM,90
     Item = MEDICHAMITE
