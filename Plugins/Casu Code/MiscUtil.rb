@@ -132,3 +132,12 @@ def pbForceEvo?(pkmn)
        return false
     end
 end
+
+def pbSetMartPrices
+items=['TM10', 'TM28', 'TM11', 'TM30', 'TM17', 'TM32', 'TM18', 'TM33', 'TM21', 'TM34', 'TM25', 'TM35', 'TM39',
+ 'TM43', 'TM46', 'TM48', 'TM56', 'TM63', 'TM64', 'TM65', 'TM75', 'TM77', 'TM79', 'TM80', 'TM81', 'TM87', 'TM86',
+  'TM92', 'TM03', 'TM04', 'TM05']
+items.each do |i|
+setPrice(i,1500,1400)
+end
+end
