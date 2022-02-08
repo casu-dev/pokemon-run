@@ -1,7 +1,12 @@
+#User.methods - Object.methods
+
 def pbDeleteFainted
   n = $Trainer.party.length
   (0..n).each do |i|
-    $Trainer.party.delete_at(n - i) if $Trainer.party[n - i] && !$Trainer.party[n - i].able?
+	if ($Trainer.party[n - i] && !$Trainer.party[n - i].able?)
+		pbReceiveItem($Trainer.party[n - i].item.id) if $Trainer.party[n - i].item
+		$Trainer.party.delete_at(n - i)
+	end
   end
 end
 
@@ -131,6 +136,10 @@ def pbForceEvo?(pkmn)
        pbMessage("This Pokémon can't evolve anymore.")
        return false
     end
+end
+
+def pbRestoreFOCUSSASH
+
 end
 
 def pbSetMartPrices
