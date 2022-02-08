@@ -408,30 +408,28 @@ Pokemon = EXCADRILL,58
 [LEADER_Misty, Misty]
 LoseText = "GG WP"
 Pokemon = PELIPPER,62
+	IV = 0,0,0,0,0,0
     Moves = UTURN,HURRICANE,SCALD,ROOST
     AbilityIndex = 1
     Item = DAMPROCK
-    IV = 28,28,28,28,28,28
 Pokemon = KINGDRA,62
-    Moves = HYDROPUMP,DRACOMETEOR,ICEBEAM,OUTRAGE
+IV = 0,0,0,0,0,0
+    Moves = HYDROPUMP,DRACOMETEOR,ICEBEAM,SCALD
     AbilityIndex = 0
-	Item = LIFEORB
-    IV = 28,28,28,28,28,28
 Pokemon = LUDICOLO,62
+IV = 0,0,0,0,0,0
     Moves = HYDROPUMP,GIGADRAIN,ICEBEAM,FOCUSBLAST
 	AbilityIndex = 0
-Item = LIFEORB
-    IV = 28,28,28,28,28,28
 Pokemon = FERROTHORN,62
+IV = 0,0,0,0,0,0
     Moves = KNOCKOFF,GYROBALL,POWERWHIP,LEECHSEED
     AbilityIndex = 0
     Item = LEFTOVERS
-    IV = 28,28,28,28,28,28
 Pokemon = SCIZOR,62
+IV = 0,0,0,0,0,0
     Moves = SWORDSDANCE,BULLETPUNCH,BUGBITE,ROOST
 	AbilityIndex = 1
 Item = LEFTOVERS
-    IV = 28,28,28,28,28,28
 #------------------------------- Floor4---------------------------------------
 [BIKER,Trainer]
 LoseText = "Grr..."
