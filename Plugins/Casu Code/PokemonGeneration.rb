@@ -79,6 +79,35 @@ def pbGenStarterPkmn(type)
   )
 end
 
+def pbGenMegaPkmn
+pkmn = pbChooseRandomPokemon(
+    whiteList = %i[VENUSAUR CHARIZARD BLASTOISE BEEDRILL PIDGEOT ALAKAZAM SLOWBRO GENGAR KANGASKHAN PINSIR GYARADOS AERODACTYL
+	 AMPHAROS STEELIX SCIZOR HERACROSS TYRANITAR SCEPTILE BLAZIKEN SWAMPERT GARDEVOIR SABLEYE MAWILE AGGRON MEDICHAM MANECTRIC
+	 SHARPEDO CAMERUPT ALTARIA BANETTE ABSOL GLALIE SALAMENCE METAGROSS LOPUNNY GARCHOMP LUCARIO ABOMASNOW GALLADE AUDINO],
+    blackList = 'suggested',
+    addList = nil,
+    base_only = true,
+    choose_gen = [1, 2, 3, 4, 5]
+)
+# pkmn.item=pbGetMegaStones(pkmn)[0].to_s
+end
+
+def pbMegaPkmnSelection(lv)
+pkmn1 = pbGenMegaPkmn
+pkmn2 = pbGenMegaPkmn
+pkmn3 = pbGenMegaPkmn
+
+while (pkmn1 == pkmn2)
+    pkmn2 = pbGenMegaPkmn
+end
+
+while (pkmn1 == pkmn3 || pkmn2 == pkmn3)
+    pkmn3 = pbGenMegaPkmn
+end
+
+DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv)
+end
+
 def pbGiveRandomPoke(saveSlot)
   lvl = lvl = POKEMON_GET_LEVEL[pbGetStagesCleared]
 

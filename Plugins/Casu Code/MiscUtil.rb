@@ -140,7 +140,41 @@ def pbForceEvo?(pkmn)
   end
 end
 
-def pbRestoreFOCUSSASH; end
+def pbOfferUsableMegaStones
+    stones = []
+
+    $PokemonStorage.boxes.each do |box|
+        (0...box.length).each do |i|
+              if box[i]
+                  if pbGetMegaStones(box[i])
+                     pbGetMegaStones(box[i]).each do |stone|
+                        if !(stones.include? _INTL(stone.to_s))
+                            stones << _INTL(stone.to_s)
+                        end
+                     end
+                  end
+              end
+        end
+    end
+
+   n = $Trainer.party.length
+  (0..n).each do |i|
+    if $Trainer.party[n - i]
+        if pbGetMegaStones($Trainer.party[n - i])
+             pbGetMegaStones($Trainer.party[n - i]).each do |stone|
+                if !(stones.include? _INTL(stone.to_s))
+                    stones << _INTL(stone.to_s)
+                end
+             end
+        end
+    end
+  end
+
+  speech = nil
+  cmd = pbMessage(speech || _INTL('Choose a Mega Stone.'), stones)
+  pbReceiveItem(stones[cmd])
+
+end
 
 def pbSetMartPrices
   items = %w[TM10 TM28 TM11 TM30 TM17 TM32 TM18 TM33 TM21 TM34 TM25 TM35 TM39
