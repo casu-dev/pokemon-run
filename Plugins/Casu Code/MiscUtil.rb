@@ -75,7 +75,7 @@ def pbMF_Reward_F4
   speech = nil
   commands = []
   commands[cmdBuy = commands.length]  = _INTL('Assault Vest')
-  commands[cmdSell = commands.length] = _INTL('Expert Belt')
+  commands[cmdSell = commands.length] = _INTL('Life Orb')
   commands[cmdQuit = commands.length] = _INTL('Focus Sash')
   cmd = pbMessage(
     speech || _INTL('Take one of the Items.'),
@@ -86,7 +86,7 @@ def pbMF_Reward_F4
       pbReceiveItem(:ASSAULTVEST)
       break
     elsif cmd == cmdSell
-      pbReceiveItem(:EXPERTBELT)
+      pbReceiveItem(:LIFEORB)
       break
     elsif cmd == cmdQuit
       pbReceiveItem(:FOCUSSASH)
@@ -191,6 +191,11 @@ def pbSetMartPrices
   items_expensive.each do |i|
     setPrice(i, 1500, 0)
   end
+
+  items_insane = %w[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
+    items_insane.each do |i|
+      setPrice(i, 2000, 0)
+    end
 end
 
 def pbGetMegaStones(pkmn)
