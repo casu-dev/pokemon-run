@@ -177,19 +177,19 @@ def pbOfferUsableMegaStones
 end
 
 def pbSetMartPrices
-  items_cheap = %w[TM03 TM04 TM05 TM17 TM18 TM34 TM25 TM48 TR01 TR33 TR48]
+  items_cheap = %w[TM03 TM04 TM05 TM17 TM18 TM25 TM34 TM48 TM65 TR01 TR48]
   items_cheap.each do |i|
-    setPrice(i, 500, 400)
+    setPrice(i, 500, 0)
   end
 
-  items_normal = %w[TM43 TM65 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28 TR39 TR47 TR49 TR62 TR64 TR65 TR70 TR74 TR75 TR90 TR92]
+  items_normal = %w[TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28 TR33 TR39 TR47 TR49 TR62 TR64 TR65 TR70 TR74 TR75 TR90 TR92]
   items_normal.each do |i|
-    setPrice(i, 1000, 900)
+    setPrice(i, 1000, 0)
   end
 
   items_expensive = %w[TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR84]
   items_expensive.each do |i|
-    setPrice(i, 1500, 1400)
+    setPrice(i, 1500, 0)
   end
 end
 
