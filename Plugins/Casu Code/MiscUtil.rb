@@ -207,3 +207,10 @@ def pbGetMegaStones(pkmn)
   end
   return res
 end
+
+def pbForceSave
+Game.save
+pbMessage(_INTL('The game was saved.'))
+ pbMEPlay('GUI save game')
+ pbSEPlay('GUI save choice')
+end
