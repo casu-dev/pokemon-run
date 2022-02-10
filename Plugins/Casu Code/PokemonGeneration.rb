@@ -92,20 +92,26 @@ pkmn = pbChooseRandomPokemon(
 # pkmn.item=pbGetMegaStones(pkmn)[0].to_s
 end
 
-def pbMegaPkmnSelection(lv)
-pkmn1 = pbGenMegaPkmn
-pkmn2 = pbGenMegaPkmn
-pkmn3 = pbGenMegaPkmn
+def pbRandomPkmnSelection(lv, mega = false)
+    if mega
+        pkmn1 = pbGenMegaPkmn
+        pkmn2 = pbGenMegaPkmn
+        pkmn3 = pbGenMegaPkmn
+    else
+        pkmn1 = pbGet(26)
+        pkmn2 = pbGet(27)
+        pkmn3 = pbGet(28)
+    end
 
-while (pkmn1 == pkmn2)
-    pkmn2 = pbGenMegaPkmn
-end
+    while (pkmn1 == pkmn2)
+        pkmn2 = pbGenMegaPkmn
+    end
 
-while (pkmn1 == pkmn3 || pkmn2 == pkmn3)
-    pkmn3 = pbGenMegaPkmn
-end
+    while (pkmn1 == pkmn3 || pkmn2 == pkmn3)
+        pkmn3 = pbGenMegaPkmn
+    end
 
-DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv)
+    DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv)
 end
 
 def pbGiveRandomPoke(saveSlot)
