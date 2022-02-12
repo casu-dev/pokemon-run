@@ -62,7 +62,7 @@ def pbGetCorrectEvo(pkmn, lvl)
   nxt = pkmn
   while nxt
     res = nxt
-    nxt = pbGenPkmn(nxt, lvl).check_evolution_on_level_up
+    nxt = Pokemon.new(nxt, lvl).check_evolution_on_level_up
   end
   res
 end
@@ -117,6 +117,6 @@ end
 def pbGiveRandomPoke(saveSlot)
   lvl = lvl = POKEMON_GET_LEVEL[pbGetStagesCleared]
 
-  pkmn = pbGenPkmn(pbGet(saveSlot), lvl)
+  pkmn = Pokemon.new(pbGet(saveSlot), lvl)
   pbAddPokemon(pkmn)
 end

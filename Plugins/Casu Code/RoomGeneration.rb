@@ -42,6 +42,8 @@ def pbGenDest
   room = arr[rand(arr.length)]
   pbSet(31, room)
   pbSet(32, room[:name])
+
+  echoln "Generated destinations: " + pbGet(30).to_s + " | " + pbGet(32).to_s
 end
 
 def pbTransferToDest(dest)
