@@ -21,7 +21,7 @@ TRAINER_OVERRIDE = [
   },
 ]
 
-Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
+Events.onTrainerPartyLoad += proc { |sender, trainer_list|
   return unless trainer_list
 
   trainer_list.each do |trainer|
@@ -34,11 +34,16 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
 
     # Generate Party
     newParty = []
+    alreadyPicked = []
     while newParty.length < template[:numPkmn]
-      pkmnPool = template[:pkmnPool].reject { |p| newParty.include? p }
-      newParty.push(Pokemon.new(pkmnPool[rand(pkmnPool.length)], lvl))
+      pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }
+      new_species = pkmnPool[rand(pkmnPool.length)]
+
+      alreadyPicked.push(new_species)
+      newParty.push(Pokemon.new(new_species , lvl))
     end
 
     trainer.party = newParty
+    echoln "Generated trainer party: " + newParty.to_s
   end
 }
