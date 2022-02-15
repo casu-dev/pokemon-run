@@ -168,6 +168,7 @@ def pbOfferUsableMegaStones
 
   speech = nil
   cmd = pbMessage(speech || _INTL('Choose a Mega Stone.'), stones)
+  
   pbReceiveItem(stones[cmd])
 end
 
