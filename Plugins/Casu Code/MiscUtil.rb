@@ -141,39 +141,34 @@ def pbForceEvo?(pkmn)
 end
 
 def pbOfferUsableMegaStones
-    stones = []
+  stones = []
 
-    $PokemonStorage.boxes.each do |box|
-        (0...box.length).each do |i|
-              if box[i]
-                  if pbGetMegaStones(box[i])
-                     pbGetMegaStones(box[i]).each do |stone|
-                        if !(stones.include? _INTL(stone.to_s))
-                            stones << _INTL(stone.to_s)
-                        end
-                     end
-                  end
-              end
-        end
+  $PokemonStorage.boxes.each do |box|
+    (0...box.length).each do |i|
+      next unless box[i]
+
+      next unless pbGetMegaStones(box[i])
+
+      pbGetMegaStones(box[i]).each do |stone|
+        stones << _INTL(stone.to_s) unless stones.include? _INTL(stone.to_s)
+      end
     end
+  end
 
-   n = $Trainer.party.length
+  n = $Trainer.party.length
   (0..n).each do |i|
-    if $Trainer.party[n - i]
-        if pbGetMegaStones($Trainer.party[n - i])
-             pbGetMegaStones($Trainer.party[n - i]).each do |stone|
-                if !(stones.include? _INTL(stone.to_s))
-                    stones << _INTL(stone.to_s)
-                end
-             end
-        end
+    next unless $Trainer.party[n - i]
+
+    next unless pbGetMegaStones($Trainer.party[n - i])
+
+    pbGetMegaStones($Trainer.party[n - i]).each do |stone|
+      stones << _INTL(stone.to_s) unless stones.include? _INTL(stone.to_s)
     end
   end
 
   speech = nil
   cmd = pbMessage(speech || _INTL('Choose a Mega Stone.'), stones)
   pbReceiveItem(stones[cmd])
-
 end
 
 def pbSetMartPrices
@@ -182,7 +177,8 @@ def pbSetMartPrices
     setPrice(i, 500, 0)
   end
 
-  items_normal = %w[TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28 TR33 TR39 TR47 TR49 TR62 TR64 TR65 TR70 TR74 TR75 TR90 TR92]
+  items_normal = %w[TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28 TR33 TR39 TR47 TR49 TR62 TR64 TR65 TR70
+                    TR74 TR75 TR90 TR92]
   items_normal.each do |i|
     setPrice(i, 1000, 0)
   end
@@ -193,24 +189,25 @@ def pbSetMartPrices
   end
 
   items_insane = %w[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
-    items_insane.each do |i|
-      setPrice(i, 2000, 0)
-    end
+  items_insane.each do |i|
+    setPrice(i, 2000, 0)
+  end
 end
 
 def pbGetMegaStones(pkmn)
   res = []
-  GameData::Species.each do |data|    
-    if data.mega_stone      
-      res.push(data.mega_stone) if data.species == pkmn.species
-    end
+  GameData::Species.each do |data|
+    res.push(data.mega_stone) if data.mega_stone && (data.species == pkmn.species)
   end
-  return res
+  res
 end
 
-def pbForceSave
-Game.save
-pbMessage(_INTL('The game was saved.'))
- pbMEPlay('GUI save game')
- pbSEPlay('GUI save choice')
+# DO NOT DELETE
+def pbForceSave; end
+
+def pbForceSave2
+  Game.save
+  pbMessage(_INTL('The game was saved.'))
+  pbMEPlay('GUI save game')
+  pbSEPlay('GUI save choice')
 end
