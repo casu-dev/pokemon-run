@@ -9,7 +9,7 @@
 - [ ] Plugin: [Elite Battle: DX](https://luka-sj.com/res/ebdx)
 - [ ] Move Releaner soll Egg-Moves beibringen können?
 - [ ] Dopplungen in Trainerkämpfen vermeiden?
-- [ ] Willst du wirklich ... wählen Ja/Nein?
+- [x] Willst du wirklich ... wählen Ja/Nein?
 - [x] Pc Zugriff auch auf Spawn map?
 - [x] Dopplungen bei Pokemonauswahl verhindern
 - [x] Lv vor/nach Middle Stage Trainer anpassen

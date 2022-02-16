@@ -57,18 +57,37 @@ def pbBossRewardFloor2
     speech || _INTL('Take one of the Items.'),
     commands
   )
-  loop do
-    if cmd == cmdBuy
-      pbReceiveItem(:CHOICESCARF)
-      break
-    elsif cmd == cmdSell
-      pbReceiveItem(:CHOICESPECS)
-      break
-    elsif cmd == cmdQuit
-      pbReceiveItem(:CHOICEBAND)
-      break
-    end
-  end
+
+
+
+  speech = nil
+        commands2 = []
+        commands2[cmdBuy = commands2.length]  = _INTL('No')
+        commands2[cmdSell = commands2.length] = _INTL('Yes')
+        cmd2 = pbMessage(
+          speech || _INTL('Are you sure?'),
+          commands2
+        )
+        loop do
+          if cmd2 == cmdBuy
+            pbBossRewardFloor2
+            break
+          elsif cmd2 == cmdSell
+         loop do
+             if cmd == cmdBuy
+               pbReceiveItem(:CHOICESCARF)
+               break
+             elsif cmd == cmdSell
+               pbReceiveItem(:CHOICESPECS)
+               break
+             elsif cmd == cmdQuit
+               pbReceiveItem(:CHOICEBAND)
+               break
+             end
+         end
+             break
+         end
+        end
 end
 
 def pbMF_Reward_F4
@@ -81,18 +100,35 @@ def pbMF_Reward_F4
     speech || _INTL('Take one of the Items.'),
     commands
   )
-  loop do
-    if cmd == cmdBuy
-      pbReceiveItem(:ASSAULTVEST)
-      break
-    elsif cmd == cmdSell
-      pbReceiveItem(:LIFEORB)
-      break
-    elsif cmd == cmdQuit
-      pbReceiveItem(:FOCUSSASH)
-      break
-    end
-  end
+
+   speech = nil
+      commands2 = []
+      commands2[cmdBuy = commands2.length]  = _INTL('No')
+      commands2[cmdSell = commands2.length] = _INTL('Yes')
+      cmd2 = pbMessage(
+        speech || _INTL('Are you sure?'),
+        commands2
+      )
+      loop do
+        if cmd2 == cmdBuy
+          pbMF_Reward_F4
+          break
+        elsif cmd2 == cmdSell
+       loop do
+           if cmd == cmdBuy
+             pbReceiveItem(:ASSAULTVEST)
+             break
+           elsif cmd == cmdSell
+             pbReceiveItem(:LIFEORB)
+             break
+           elsif cmd == cmdQuit
+             pbReceiveItem(:FOCUSSASH)
+             break
+           end
+         end
+          break
+        end
+      end
 end
 
 def pbGiveMoney(amount)
@@ -168,8 +204,22 @@ def pbOfferUsableMegaStones
 
   speech = nil
   cmd = pbMessage(speech || _INTL('Choose a Mega Stone.'), stones)
-  
-  pbReceiveItem(stones[cmd])
+    commands = []
+    commands[cmdBuy = commands.length]  = _INTL('No')
+    commands[cmdSell = commands.length] = _INTL('Yes')
+    cmd2 = pbMessage(
+      speech || _INTL('Are you sure?'),
+      commands
+    )
+    loop do
+      if cmd2 == cmdBuy
+        pbOfferUsableMegaStones
+        break
+      elsif cmd2 == cmdSell
+     pbReceiveItem(stones[cmd])
+        break
+      end
+    end
 end
 
 def pbSetMartPrices
