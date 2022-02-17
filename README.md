@@ -12,4 +12,5 @@
 - [ ] Die Map Oak kann man ohne Pokemon zu wählen verlassen
 - [ ] Bei der Option Oak nur einen NPC anzeigen
 - [ ] Nach Middle-Stage Trainer keinen Pokemoncenter anbieten, da bereits gehealt wurde
+- [ ] Texte Family-friendly gestalten
 - [ ] Move-Relearner Raum buffen?
