@@ -21,6 +21,13 @@ TRAINER_OVERRIDE = [
   },
 ]
 
+TRAINER_INTRO_TEXT = [
+  ['I was given $5 to stop you.', 'I just caught these. Let\'s see how strong they are.', 'Mom said I have to be home before it gets dark.'],
+  ['Stop right there!', 'What\'s the hurry?', 'I can\'t let you through.', 'I will not go easy on you!'],
+  ['You look weak. This will be easier than i thought.', 'Last chance to turn around.', 'You don\'t stand a chance!'],
+  ['First I will finish your Pokémon then I will finish you.', 'This will not end pretty.', 'I hope you wrote your testament.', 'Have you heard of Ligma?'],
+]
+
 Events.onTrainerPartyLoad += proc { |sender, trainer_list|
   return unless trainer_list
 
@@ -47,3 +54,9 @@ Events.onTrainerPartyLoad += proc { |sender, trainer_list|
     echoln "Generated trainer party: " + newParty.to_s
   end
 }
+
+def pbGenIntroText
+  stages_cleared = pbGet(48)
+  intro_list = TRAINER_INTRO_TEXT[stages_cleared]
+  pbSet(34, intro_list[rand(intro_list.length)])
+end

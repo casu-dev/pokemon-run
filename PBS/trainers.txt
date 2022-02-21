@@ -1,4 +1,25 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
+#
+# DEFAULT TRAINER TEMPLATES. WILL BE OVERRIDDEN!
+#===============================
+[YOUNGSTER,Trainer]
+LoseText = "..."
+Pokemon = EEVEE,1
+#-------------------------------
+[LASS,Trainer]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = GLOOM,1
+#-------------------------------
+[COOLTRAINER_F,Trainer]
+LoseText = "You just got lucky!"
+Pokemon = MACHAMP,1
+#-------------------------------
+[BIKER,Trainer]
+LoseText = "Now you got me mad."
+Pokemon = BULBASAUR,1
+#===============================
+#
+#
 #-------------------------------
 [CAMPER,Liam]
 LoseText = "A very good battle, indeed!"
@@ -143,49 +164,6 @@ Pokemon = BLISSEY,55
 Pokemon = SHIFTRY,55
     Item = SITRUSBERRY
 #-------------------------------
-[COOLTRAINER_F,Trainer,5]
-LoseText = "..."
-Pokemon = ALTARIA,45
-#-------------------------------
-[COOLTRAINER_F,Trainer,6]
-LoseText = "..."
-Pokemon = SHARPEDO,45
-#-------------------------------
-[COOLTRAINER_F,Trainer,7]
-LoseText = "..."
-Pokemon = NIDOKING,45
-#-------------------------------
-[COOLTRAINER_F,Trainer,8]
-LoseText = "..."
-Pokemon = GOLEM,45
-#-------------------------------
-[YOUNGSTER,Trainer]
-LoseText = "..."
-Pokemon = BUNNELBY,10
-    AbilityIndex = 2
-Pokemon = EEVEE,10
-#-------------------------------
-[YOUNGSTER,Trainer,1]
-LoseText = "..."
-Pokemon = BIDOOF,10
-Pokemon = LILLIPUP,10
-#-------------------------------
-[YOUNGSTER,Trainer,2]
-LoseText = "..."
-Pokemon = AIPOM,10
-Pokemon = BUNEARY,10
-#-------------------------------
-[YOUNGSTER,Trainer,3]
-LoseText = "..."
-Pokemon = MEOWTH,10
-Pokemon = MINCCINO,10
-#-------------------------------
-[YOUNGSTER,Trainer,4]
-LoseText = "..."
-Pokemon = RATTATA,10
-Pokemon = PATRAT,10
-    AbilityIndex = 2
-#-------------------------------
 [GENTLEMAN,Elite Trainer]
 LoseText = "A good battle indeed!"
 Pokemon = MUNNA,13
@@ -229,36 +207,6 @@ Pokemon = TIMBURR,16
     Moves = BULKUP,MACHPUNCH,THUNDERPUNCH,VITALTHROW
     AbilityIndex = 2
     IV = 20,20,20,20,20,20
-#-------------------------------
-[LASS,Trainer]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = GLOOM,25
-Pokemon = SEADRA,25
-Pokemon = LAMPENT,25
-    AbilityIndex = 0
-    Item = EVIOLITE
-#-------------------------------
-[LASS,Trainer,1]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = STARAVIA,25
-Pokemon = KIRLIA,25
-Pokemon = GRAVELER,25
-#-------------------------------
-[LASS,Trainer,2]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = LAMPENT,25
-    AbilityIndex = 0
-    Item = EVIOLITE
-Pokemon = MARSHTOMP,25
-Pokemon = LOUDRED,25
-#-------------------------------
-[LASS,Trainer,3]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = POLIWHIRL,25
-Pokemon = NUZLEAF,25
-Pokemon = LAMPENT,25
-    AbilityIndex = 0
-    Item = EVIOLITE
 #-------------------------------
 [LADY,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
@@ -311,44 +259,6 @@ Pokemon = GRANBULL,32
 Pokemon = MISMAGIUS,32
     Moves = NASTYPLOT,SHADOWBALL,HIDDENPOWERFIGHTING,CONFUSERAY
     IV = 24,24,24,24,24,24
-#-------------------------------
-[COOLTRAINER_F,Trainer]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = MACHAMP,55
-    AbilityIndex = 1
-Pokemon = ARCANINE,55
-Pokemon = AZUMARILL,55
-#-------------------------------
-[COOLTRAINER_F,Trainer,1]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = HONCHKROW,55
-    AbilityIndex = 1
-Pokemon = ABOMASNOW,55
-Pokemon = SLOWBRO,55
-#-------------------------------
-[COOLTRAINER_F,Trainer,2]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = BRONZONG,55
-    AbilityIndex = 1
-Pokemon = HITMONTOP,55
-Pokemon = STARMIE,55
-#-------------------------------
-[COOLTRAINER_F,Trainer,3]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = GALVANTULA,55
-    AbilityIndex = 1
-Pokemon = TOGEKISS,55
-    AbilityIndex = 1
-Pokemon = RHYDON,55
-    Item = EVIOLITE
-#-------------------------------
-[COOLTRAINER_F,Trainer,4]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = SCRAFTY,55
-    AbilityIndex = 2
-Pokemon = ROSERADE,55
-    AbilityIndex = 1
-Pokemon = AZUMARILL,55
 #-------------------------------
 [BEAUTY,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
@@ -439,10 +349,6 @@ Pokemon = HIPPOWDON,85
 Pokemon = GENGAR,85
 Pokemon = SCIZOR,85
     AbilityIndex = 1
-#-------------------------------
-[BIKER,Trainer]
-LoseText = "..."
-Pokemon = BULBASAUR,10
 #-------------------------------
 [LEADER_Giovanni,Giovanni]
 LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
