@@ -1,1 +1,7 @@
 DiegoWT Pokemonauswahl
+
+Please credit all the following people for their contributions, when using Trainer Sprites (for EBDX).
+
+    Spriters Resource
+    FoxyBluereaver
+    Flamejow

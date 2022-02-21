@@ -262,3 +262,18 @@ def pbForceSave2
   pbMEPlay('GUI save game')
   pbSEPlay('GUI save choice')
 end
+
+def pbResetMessage
+  speech = nil
+  commands = []
+  commands[cmdBuy = commands.length]  = _INTL('=)')
+  cmd = pbMessage(
+    speech || _INTL('Please press F12 to go back to Titlescreen.'),
+    commands
+  )
+        loop do
+          if cmd == cmdBuy
+            pbResetMessage
+          end
+        end
+end
