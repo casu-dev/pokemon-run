@@ -92,7 +92,7 @@ pkmn = pbChooseRandomPokemon(
 # pkmn.item=pbGetMegaStones(pkmn)[0].to_s
 end
 
-def pbRandomPkmnSelection(lv, mega = false)
+def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
     if mega
         pkmn1 = pbGenMegaPkmn
         pkmn2 = pbGenMegaPkmn
@@ -111,7 +111,42 @@ def pbRandomPkmnSelection(lv, mega = false)
         pkmn3 = pbGenMegaPkmn
     end
 
+    $h=rand(4)
+    #pbMessage(_INTL($h.to_s))
+
+    if(hiddenAbility && $h==1)
+        n = $PokemonStorage.boxes[0].length-1
+        $FirstEmptySlotBefore=0
+
+        (0..n).each do |i|
+            if ($PokemonStorage.boxes[0][i]==nil)
+                $FirstEmptySlotBefore=i
+            break
+            end
+        end
+    end
+
     DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv)
+
+    if(hiddenAbility  && $h==1)
+        m=$Trainer.party.length-1
+
+        (0..n).each do |i|
+          if ($PokemonStorage.boxes[0][i]==nil)
+            if(i>$FirstEmptySlotBefore)
+                 $PokemonStorage.boxes[0][i-1].setAbility(2)
+            else
+                (0..m).each do |j|
+                    if($Trainer.party[m-j] != nil)
+                        $Trainer.party[m-j].setAbility(2)
+                        break
+                    end
+                end
+            end
+            break
+          end
+        end
+    end
 end
 
 def pbGiveRandomPoke(saveSlot)
