@@ -2,16 +2,16 @@
 [BULBASAUR]
 BattlerEnemyY           = 74
 BattlerAltitude         = 0
-BattlerPlayerX          = 2
-BattlerPlayerY          = 65
+BattlerPlayerX          = -22
+BattlerPlayerY          = 63
 BattlerEnemyX           = 6
 #-------------------------------
 [IVYSAUR]
-BattlerEnemyY           = 24
+BattlerEnemyY           = 51
 BattlerAltitude         = 0
-BattlerPlayerX          = 0
-BattlerPlayerY          = 21
-BattlerEnemyX           = 0
+BattlerPlayerX          = -4
+BattlerPlayerY          = 46
+BattlerEnemyX           = -2
 #-------------------------------
 [VENUSAUR]
 BattlerEnemyY           = 43
