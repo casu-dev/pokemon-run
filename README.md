@@ -15,3 +15,7 @@
 - [ ] Nach Middle-Stage Trainer keinen Pokemoncenter anbieten, da bereits gehealt wurde
 - [x] Texte Family-friendly gestalten
 - [x] Move-Relearner Raum buffen?
+- [ ] Elite Trainer Kämpfe eigene Musik einführen. Ggf. auch für jeden Floor Boss
+- [ ] Musik bei der Evo reparieren(aktuell keine)
+- [ ] Schatten entfernen
+- [ ] Musik loopen
