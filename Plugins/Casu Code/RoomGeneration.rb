@@ -33,13 +33,11 @@ def pbGenDest
   prev1 = pbGet(29)
   prev2 = pbGet(31)
 
-  arr = pbGetPossDest(0, prev1)
-  room = arr[rand(arr.length)]
+  room = pbGetPossDest(0, prev1)
   pbSet(29, room)
   pbSet(30, room[:name])
 
-  arr = pbGetPossDest(1, prev2)
-  room = arr[rand(arr.length)]
+  room = pbGetPossDest(1, prev2)
   pbSet(31, room)
   pbSet(32, room[:name])
 
@@ -63,31 +61,37 @@ def pbTransferToDest(dest)
   end
 end
 
+# 	Clears	Option 1	Option 2
+#	0	Trainer	X
+#	1	Trainer	Move
+#	2	Trainer	Center
+#	3	Oak	X
+#	4	Trainer	Shop
+#	5	Trainer	Shop
+#	6	Grunt	X
+#	7	Trainer	Move
+#	8	Oak	X
+#	9	Trainer	Shop
+#	10	Trainer	Elite
+#	11	Trainer	Center
+#	12	Boss	X
 def pbGetPossDest(exit_no, prev_dest)
   stages_cleared = pbGet(48)
   rooms_cleared = pbGet(49)
 
-  # Show boss if all rooms are cleared on both exits
-  return [MAP_BOSS_LIST[stages_cleared]] if rooms_cleared >= Settings::ROOMS_PER_STAGE
+  # Forced Rooms
+  return MAP_BOSS_LIST[stages_cleared] if rooms_cleared >= 11
+  return MAP_PICK_POKEMON if rooms_cleared == 7 || rooms_cleared == 2
+  return MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST[stages_cleared] if rooms_cleared == 5
 
-  # Show middle trainer on both exits
-  return [MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST[stages_cleared]] if rooms_cleared == Settings::ROOMS_PER_STAGE / 2
+  # Left is fight trainer
+  return MAP_FIGHT_TRAINER_LIST[stages_cleared] if exit_no == 0
 
-  # Show Oak on both exits
-  if rooms_cleared == Settings::ROOMS_PER_STAGE / 3 || rooms_cleared == 2 * Settings::ROOMS_PER_STAGE / 3
-    return [MAP_PICK_POKEMON]
-  end
-
-  # Left exit is always trainer fight
-  return [MAP_FIGHT_TRAINER_LIST[stages_cleared]] if exit_no == 0
-
-  # Right exit without last room
-  [
-    MAP_FIGHT_ELITE_TRAINER_LIST[stages_cleared],
-    MAP_MART,
-    MAP_CENTER,
-    MAP_MOVE_RELEARNER
-  ].reject { |m| m == prev_dest }
+  # Right Room
+  return MAP_MOVE_RELEARNER if rooms_cleared == 0 || rooms_cleared == 6
+  return MAP_CENTER if rooms_cleared == 1 || rooms_cleared == 10
+  return MAP_MART if rooms_cleared == 3 || rooms_cleared == 4 || rooms_cleared == 8
+  return MAP_FIGHT_ELITE_TRAINER_LIST[stages_cleared] if rooms_cleared == 9
 end
 
 def pbGetFightTrainerDest

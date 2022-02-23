@@ -9,13 +9,9 @@
 
 ## To-Do Liste
 
-- [ ] Plugin: [Elite Battle: DX](https://luka-sj.com/res/ebdx)
-- [ ] Die Map Oak kann man ohne Pokemon zu wählen verlassen
 - [ ] Bei der Option Oak nur einen NPC anzeigen
-- [ ] Nach Middle-Stage Trainer keinen Pokemoncenter anbieten, da bereits gehealt wurde
-- [x] Texte Family-friendly gestalten
-- [x] Move-Relearner Raum buffen?
-- [ ] Elite Trainer Kämpfe eigene Musik einführen. Ggf. auch für jeden Floor Boss
-- [ ] Musik bei der Evo reparieren(aktuell keine)
-- [ ] Schatten entfernen
-- [ ] Musik loopen
+- [ ] Special Event Pattern einbauen
+- [ ] Musik: Neue Tracks, loopen
+- [ ] 30% mehr Geld F1+2, aber TMs teurer
+- [ ] Rayquaza nerfen
+- [ ] EVs geben im spawn
