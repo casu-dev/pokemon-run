@@ -10,10 +10,9 @@
 ## To-Do Liste
 
 - [ ] Bei der Option Oak nur einen NPC anzeigen
-- [ ] Special Event Pattern einbauen
+- [x] Special Event Pattern einbauen
 - [ ] Musik: Neue Tracks, loopen
-- [ ] 30% mehr Geld F1+2, aber TMs teurer
+- [x] 30% mehr Geld F1+2, aber TMs teurer
 - [x] Rayquaza nerfen
-- [ ] EVs geben im spawn
-- [ ] Attackenauswahl verbessern
-- [ ] tastenbelegung
+- [x] EVs geben im spawn
+- [ ] Attackenauswahl optisch verbessern?
