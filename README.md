@@ -16,3 +16,6 @@
 - [x] Rayquaza nerfen
 - [x] EVs geben im spawn
 - [ ] Attackenauswahl optisch verbessern?
+- [ ] Global Pc access?
+- [ ] Bei focierten Trainerkämpfen auch immer Elite Trainer als Alternative anbieten?
+

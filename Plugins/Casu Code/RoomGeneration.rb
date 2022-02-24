@@ -69,7 +69,7 @@ end
 #	4	Trainer	Shop
 #	5	Trainer	Shop
 #	6	Grunt	X
-#	7	Trainer	Move
+#	7	Trainer	Move geändert  zu ->  Elite Trainer
 #	8	Oak	X
 #	9	Trainer	Shop
 #	10	Trainer	Elite
@@ -88,10 +88,10 @@ def pbGetPossDest(exit_no, prev_dest)
   return MAP_FIGHT_TRAINER_LIST[stages_cleared] if exit_no == 0
 
   # Right Room
-  return MAP_MOVE_RELEARNER if rooms_cleared == 0 || rooms_cleared == 6
+  return MAP_MOVE_RELEARNER if rooms_cleared == 0
   return MAP_CENTER if rooms_cleared == 1 || rooms_cleared == 10
   return MAP_MART if rooms_cleared == 3 || rooms_cleared == 4 || rooms_cleared == 8
-  return MAP_FIGHT_ELITE_TRAINER_LIST[stages_cleared] if rooms_cleared == 9
+  return MAP_FIGHT_ELITE_TRAINER_LIST[stages_cleared] if rooms_cleared == 6 || rooms_cleared == 9
 end
 
 def pbGetFightTrainerDest
