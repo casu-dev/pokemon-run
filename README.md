@@ -13,5 +13,7 @@
 - [ ] Special Event Pattern einbauen
 - [ ] Musik: Neue Tracks, loopen
 - [ ] 30% mehr Geld F1+2, aber TMs teurer
-- [ ] Rayquaza nerfen
+- [x] Rayquaza nerfen
 - [ ] EVs geben im spawn
+- [ ] Attackenauswahl verbessern
+- [ ] tastenbelegung

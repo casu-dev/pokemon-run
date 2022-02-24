@@ -277,3 +277,40 @@ def pbResetMessage
           end
         end
 end
+
+def pbChangeAllPkmnEv
+    $Lv = pbGetPkmnTargetLvl
+    $TargetEv = 0
+    if($Lv == 30)
+        $TargetEv = 46
+    end
+    if($Lv == 60)
+        $TargetEv = 69
+    end
+    if($Lv == 90)
+        $TargetEv = 84
+    end
+
+# EV up party
+   $Trainer.party.each do |pkmn|
+     pkmn.ev[:HP] = $TargetEv if !pkmn.nil? && (pkmn.ev[:HP] < $TargetEv)
+     pkmn.ev[:ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:ATTACK] < $TargetEv)
+     pkmn.ev[:DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:DEFENSE] < $TargetEv)
+     pkmn.ev[:SPECIAL_ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
+     pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
+     pkmn.ev[:SPEED] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPEED] < $TargetEv)
+   end
+
+   # EV up box
+   $PokemonStorage.boxes.each do |box|
+     box.each do |pkmn|
+        pkmn.ev[:HP] = $TargetEv if !pkmn.nil? && (pkmn.ev[:HP] < $TargetEv)
+        pkmn.ev[:ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:ATTACK] < $TargetEv)
+        pkmn.ev[:DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:DEFENSE] < $TargetEv)
+        pkmn.ev[:SPECIAL_ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
+        pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
+        pkmn.ev[:SPEED] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPEED] < $TargetEv)
+     end
+   end
+
+end
