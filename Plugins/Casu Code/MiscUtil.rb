@@ -176,6 +176,10 @@ def pbForceEvo?(pkmn)
   end
 end
 
+def pbtest
+pbMessage(_INTL($Trainer.party[0].ability_index).to_s)
+end
+
 def pbOfferUsableMegaStones
   stones = []
 
