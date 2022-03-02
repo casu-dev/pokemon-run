@@ -18,4 +18,5 @@
 - [ ] Attackenauswahl optisch verbessern?
 - [ ] Global Pc access?
 - [ ] Bei focierten Trainerkämpfen auch immer Elite Trainer als Alternative anbieten?
+- [ ] Mart nach Oak1 überflüssig?
 
