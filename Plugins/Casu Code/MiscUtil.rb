@@ -232,7 +232,7 @@ def pbSetMartPrices
     setPrice(i, 500, 0)
   end
 
-  items_normal = %w[TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28 TR33 TR39 TR47 TR49 TR62 TR64 TR65 TR70
+  items_normal = %w[TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28 TR32 TR33 TR39 TR47 TR49 TR58 TR62 TR64 TR65 TR70
                     TR74 TR75 TR90 TR92]
   items_normal.each do |i|
     setPrice(i, 1000, 0)
