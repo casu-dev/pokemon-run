@@ -10,13 +10,11 @@
 ## To-Do Liste
 
 - [ ] Bei der Option Oak nur einen NPC anzeigen
-- [x] Special Event Pattern einbauen
 - [ ] Musik: Neue Tracks, loopen
-- [x] 30% mehr Geld F1+2, aber TMs teurer
-- [x] Rayquaza nerfen
-- [x] EVs geben im spawn
 - [ ] Attackenauswahl optisch verbessern?
 - [ ] Global Pc access?
 - [ ] Bei focierten Trainerkämpfen auch immer Elite Trainer als Alternative anbieten?
 - [ ] Mart nach Oak1 überflüssig?
+- [ ] Neuen Raum mit NPC implementieren der TOXICORB, FLAMEORB, WHITEHERB, ROCKYHELMET, AIRBALLON, SITRUSBERRY, WEAKNESSPOLICY gibt?
+- [ ] Im Spawn soll Oak in der Tür stehen und nach dem Gespräch auf Seite gehen
 
