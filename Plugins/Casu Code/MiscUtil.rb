@@ -153,7 +153,9 @@ def pbForceEvo?(pkmn)
     evos = []
 
     evo_info.each do |i|
-      evos << _INTL(i[0].to_s)
+        if(!(evos.include? i[0].to_s))
+            evos << _INTL(i[0].to_s)
+        end
     end
     evos << _INTL('Go back')
 
@@ -174,10 +176,6 @@ def pbForceEvo?(pkmn)
     pbMessage("This Pokémon can't evolve anymore.")
     false
   end
-end
-
-def pbtest
-pbMessage(_INTL($Trainer.party[0].ability_index).to_s)
 end
 
 def pbOfferUsableMegaStones
