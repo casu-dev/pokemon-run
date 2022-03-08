@@ -207,15 +207,15 @@ class ModularTitleScreen
   end
   # function to restart the game when BGM times out
   def restart
-    pbBGMStop(0)
-    51.times do
-      @viewport.tone.red-=5
-      @viewport.tone.green-=5
-      @viewport.tone.blue-=5
-      self.updateElements
-      Graphics.update
-    end
-    raise Reset.new
+   # pbBGMStop(0)
+    #51.times do
+     # @viewport.tone.red-=5
+     # @viewport.tone.green-=5
+      #@viewport.tone.blue-=5
+     # self.updateElements
+     # Graphics.update
+   # end
+    #raise Reset.new
   end
 end
 #===============================================================================
