@@ -7,13 +7,10 @@
 - Attacken mit 95% Genauigkeit wurden auf 100% gebufft.
 - Chance auf Hidden Ability 25% (außer Starter da 0%).
 
-## To-Do Liste
+## To-Do Liste MVP
 
-- [ ] Bei der Option Oak nur einen NPC anzeigen
-- [ ] Musik: Neue Tracks, loopen
-- [ ] Attackenauswahl optisch verbessern?
-- [ ] Global Pc access?
+- [ ] Global Pc access
 - [ ] Bei focierten Trainerkämpfen auch immer Elite Trainer als Alternative anbieten?
-- [ ] Mart nach Oak1 überflüssig?
+- [ ] Mart nach Oak1 überflüssig
 - [ ] Neuen Raum mit NPC implementieren der TOXICORB, FLAMEORB, WHITEHERB, ROCKYHELMET, AIRBALLON, SITRUSBERRY, WEAKNESSPOLICY gibt?
 

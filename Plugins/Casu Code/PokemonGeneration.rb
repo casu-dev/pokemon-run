@@ -25,6 +25,14 @@ def pbLvUpAllPkmn(targetLevel = nil)
   end
 end
 
+def pbHealBoxes
+  $PokemonStorage.boxes.each do |box|
+    box.each do |pkmn|
+      pkmn.heal if !pkmn.nil?
+    end
+  end
+end
+
 def pbGenPokeChoice
   pkmn = pbChooseRandomPokemon(
     whiteList = nil,
