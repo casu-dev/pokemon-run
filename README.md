@@ -9,8 +9,11 @@
 
 ## To-Do Liste MVP
 
-- [ ] Global Pc access
+- [x] Global Pc access
 - [ ] Bei focierten Trainerkämpfen auch immer Elite Trainer als Alternative anbieten?
 - [ ] Mart nach Oak1 überflüssig
 - [ ] Neuen Raum mit NPC implementieren der TOXICORB, FLAMEORB, WHITEHERB, ROCKYHELMET, AIRBALLON, SITRUSBERRY, WEAKNESSPOLICY gibt?
+- [ ] Optischer Indikator für die nächsten beiden Räume
+- [ ] Tutorial/ Regeln erklären
+- [ ] Titlescreen & Credits
 
