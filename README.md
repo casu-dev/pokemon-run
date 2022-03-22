@@ -11,7 +11,6 @@
 - [ ] Neuen Raum mit NPC implementieren der TOXICORB, FLAMEORB, WHITEHERB, ROCKYHELMET, AIRBALLOON, WEAKNESSPOLICY 
 - [ ] Optischer Indikator für die nächsten beiden Räume
 - [ ] Abfrage Abzweigung entfernen
-- [ ] Capsule back option
 - [ ] Spielname & Credits
 - [ ] Tutorial/ Regeln erklären
 
