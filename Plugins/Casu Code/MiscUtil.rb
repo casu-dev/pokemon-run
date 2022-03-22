@@ -314,5 +314,97 @@ def pbChangeAllPkmnEv
         pkmn.ev[:SPEED] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPEED] < $TargetEv)
      end
    end
+end
+def pbFighterBattleDialog
+  speech = nil
+  commands = []
+  commands[cmdBuy = commands.length]  = _INTL('Air Balloon')
+  commands[cmdSell = commands.length] = _INTL('Flame Orb')
+  commands[cmdQuit = commands.length] = _INTL('Rocky Helmet')
+  commands[cmdBuy2 = commands.length]  = _INTL('Toxic Orb')
+  commands[cmdSell2 = commands.length] = _INTL('Weakness Policy')
+  commands[cmdQuit2 = commands.length] = _INTL('White Herb')
+  commands[cmdEnd = commands.length] = _INTL('Quit')
+  cmd = pbMessage(
+    speech || _INTL('You want one of these Items?'),
+    commands
+  )
 
+if cmd == cmdEnd
+return
+end
+   speech = nil
+      commands2 = []
+      commands2[cmdBuy = commands2.length]  = _INTL('No')
+      commands2[cmdSell = commands2.length] = _INTL('Yes')
+      cmd2 = pbMessage(
+        speech || _INTL('Are you sure?'),
+        commands2
+      )
+
+pbMessage( _INTL('Then fight for it!'))
+
+      loop do
+        if cmd2 == cmdBuy
+          pbFighterBattleDialog
+          break
+        elsif cmd2 == cmdSell
+       loop do
+           if cmd == cmdBuy
+             pbReceiveItem(:AIRBALLOON)
+             break
+           elsif cmd == cmdSell
+             pbReceiveItem(:FLAMEORB)
+             break
+           elsif cmd == cmdQuit
+             pbReceiveItem(:ROCKYHELMET)
+             break
+           elsif cmd == cmdBuy2
+            pbReceiveItem(:TOXICORB)
+            break
+           elsif cmd == cmdSell2
+            pbReceiveItem(:WEAKNESSPOLICY)
+            break
+           elsif cmd == cmdQuit2
+           pbReceiveItem(:WHITEHERB)
+           break
+           end
+         end
+          break
+        end
+      end
+end
+def pbFighterShop(stock,speech=nil,cantsell=false)
+  for i in 0...stock.length
+    stock[i] = GameData::Item.get(stock[i]).id
+    stock[i] = nil if GameData::Item.get(stock[i]).is_important? && $PokemonBag.pbHasItem?(stock[i])
+  end
+  stock.compact!
+  commands = []
+  cmdBuy  = -1
+  cmdSell = -1
+  cmdQuit = -1
+  commands[cmdBuy = commands.length]  = _INTL("Buy")
+  # commands[cmdSell = commands.length] = _INTL("Sell") if !cantsell
+  commands[cmdQuit = commands.length] = _INTL("Quit")
+  cmd = pbMessage(
+     speech ? speech : _INTL("Using TMs let my Pokémon hit harder. Do you want some?"),
+     commands,cmdQuit+1)
+  loop do
+    if cmdBuy>=0 && cmd==cmdBuy
+      scene = PokemonMart_Scene.new
+      screen = PokemonMartScreen.new(scene,stock)
+      screen.pbBuyScreen
+    elsif cmdSell>=0 && cmd==cmdSell
+      scene = PokemonMart_Scene.new
+      screen = PokemonMartScreen.new(scene,stock)
+      screen.pbSellScreen
+    else
+      pbMessage(_INTL("See you!"))
+      break
+    end
+    cmd = pbMessage(_INTL("Is there anything else you want?"),
+       commands,cmdQuit+1)
+  end
+  $game_temp.clear_mart_prices
 end

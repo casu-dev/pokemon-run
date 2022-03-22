@@ -8,12 +8,10 @@
 - Chance auf Hidden Ability 25% (außer Starter da 0%).
 
 ## To-Do Liste MVP
-
-- [x] Global Pc access
-- [ ] Bei focierten Trainerkämpfen auch immer Elite Trainer als Alternative anbieten?
-- [ ] Mart nach Oak1 überflüssig
 - [ ] Neuen Raum mit NPC implementieren der TOXICORB, FLAMEORB, WHITEHERB, ROCKYHELMET, AIRBALLON, SITRUSBERRY, WEAKNESSPOLICY gibt?
 - [ ] Optischer Indikator für die nächsten beiden Räume
+- [ ] Abfrage Abzweigung entfernen
+- [ ] Capsule back option
+- [ ] Spielname & Credits
 - [ ] Tutorial/ Regeln erklären
-- [ ] Titlescreen & Credits
 
