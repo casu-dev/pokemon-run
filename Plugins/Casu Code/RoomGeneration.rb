@@ -3,6 +3,7 @@ MAP_PICK_POKEMON = { id: 88, name: 'Professor Oak', posx: 10, posy: 11, value: 1
 MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 5, posy: 10, value: 10 }
 MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7, value: 5 }
 MAP_CENTER = { id: 77, name: 'Poké Center', posx: 7, posy: 8, value: 0 }
+MAP_BLACK_BELT_BROTHERS = { id: 111, name: 'Combat Teachers', posx: 7, posy: 12, value: 40 }
 
 MAP_BOSS_LIST = [
   { id: 86, name: '1st Floor Boss', posx: 10, posy: 13, value: 20 }, # 1st floor
@@ -91,8 +92,9 @@ def pbGetPossDest(exit_no, _prev_dest)
 
   # Right Room
   return MAP_MOVE_RELEARNER if rooms_cleared == 0
+  return MAP_BLACK_BELT_BROTHERS if rooms_cleared == 3
   return MAP_CENTER if [1, 10].include?(rooms_cleared)
-  return MAP_MART if [3, 4, 8].include?(rooms_cleared)
+  return MAP_MART if [4, 8].include?(rooms_cleared)
   return MAP_FIGHT_ELITE_TRAINER_LIST[stages_cleared] if [6, 9].include?(rooms_cleared)
 end
 

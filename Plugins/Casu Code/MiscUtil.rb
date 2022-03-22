@@ -58,36 +58,34 @@ def pbBossRewardFloor2
     commands
   )
 
-
-
   speech = nil
-        commands2 = []
-        commands2[cmdBuy = commands2.length]  = _INTL('No')
-        commands2[cmdSell = commands2.length] = _INTL('Yes')
-        cmd2 = pbMessage(
-          speech || _INTL('Are you sure?'),
-          commands2
-        )
-        loop do
-          if cmd2 == cmdBuy
-            pbBossRewardFloor2
-            break
-          elsif cmd2 == cmdSell
-         loop do
-             if cmd == cmdBuy
-               pbReceiveItem(:CHOICESCARF)
-               break
-             elsif cmd == cmdSell
-               pbReceiveItem(:CHOICESPECS)
-               break
-             elsif cmd == cmdQuit
-               pbReceiveItem(:CHOICEBAND)
-               break
-             end
-         end
-             break
-         end
+  commands2 = []
+  commands2[cmdBuy = commands2.length]  = _INTL('No')
+  commands2[cmdSell = commands2.length] = _INTL('Yes')
+  cmd2 = pbMessage(
+    speech || _INTL('Are you sure?'),
+    commands2
+  )
+  loop do
+    if cmd2 == cmdBuy
+      pbBossRewardFloor2
+      break
+    elsif cmd2 == cmdSell
+      loop do
+        if cmd == cmdBuy
+          pbReceiveItem(:CHOICESCARF)
+          break
+        elsif cmd == cmdSell
+          pbReceiveItem(:CHOICESPECS)
+          break
+        elsif cmd == cmdQuit
+          pbReceiveItem(:CHOICEBAND)
+          break
         end
+      end
+      break
+    end
+  end
 end
 
 def pbMF_Reward_F4
@@ -101,34 +99,34 @@ def pbMF_Reward_F4
     commands
   )
 
-   speech = nil
-      commands2 = []
-      commands2[cmdBuy = commands2.length]  = _INTL('No')
-      commands2[cmdSell = commands2.length] = _INTL('Yes')
-      cmd2 = pbMessage(
-        speech || _INTL('Are you sure?'),
-        commands2
-      )
+  speech = nil
+  commands2 = []
+  commands2[cmdBuy = commands2.length]  = _INTL('No')
+  commands2[cmdSell = commands2.length] = _INTL('Yes')
+  cmd2 = pbMessage(
+    speech || _INTL('Are you sure?'),
+    commands2
+  )
+  loop do
+    if cmd2 == cmdBuy
+      pbMF_Reward_F4
+      break
+    elsif cmd2 == cmdSell
       loop do
-        if cmd2 == cmdBuy
-          pbMF_Reward_F4
+        if cmd == cmdBuy
+          pbReceiveItem(:ASSAULTVEST)
           break
-        elsif cmd2 == cmdSell
-       loop do
-           if cmd == cmdBuy
-             pbReceiveItem(:ASSAULTVEST)
-             break
-           elsif cmd == cmdSell
-             pbReceiveItem(:LIFEORB)
-             break
-           elsif cmd == cmdQuit
-             pbReceiveItem(:FOCUSSASH)
-             break
-           end
-         end
+        elsif cmd == cmdSell
+          pbReceiveItem(:LIFEORB)
+          break
+        elsif cmd == cmdQuit
+          pbReceiveItem(:FOCUSSASH)
           break
         end
       end
+      break
+    end
+  end
 end
 
 def pbGiveMoney(amount)
@@ -153,9 +151,7 @@ def pbForceEvo?(pkmn)
     evos = []
 
     evo_info.each do |i|
-        if(!(evos.include? i[0].to_s))
-            evos << _INTL(i[0].to_s)
-        end
+      evos << _INTL(i[0].to_s) unless evos.include? i[0].to_s
     end
     evos << _INTL('Go back')
 
@@ -206,22 +202,22 @@ def pbOfferUsableMegaStones
 
   speech = nil
   cmd = pbMessage(speech || _INTL('Choose a Mega Stone.'), stones)
-    commands = []
-    commands[cmdBuy = commands.length]  = _INTL('No')
-    commands[cmdSell = commands.length] = _INTL('Yes')
-    cmd2 = pbMessage(
-      speech || _INTL('Are you sure?'),
-      commands
-    )
-    loop do
-      if cmd2 == cmdBuy
-        pbOfferUsableMegaStones
-        break
-      elsif cmd2 == cmdSell
-     pbReceiveItem(stones[cmd])
-        break
-      end
+  commands = []
+  commands[cmdBuy = commands.length]  = _INTL('No')
+  commands[cmdSell = commands.length] = _INTL('Yes')
+  cmd2 = pbMessage(
+    speech || _INTL('Are you sure?'),
+    commands
+  )
+  loop do
+    if cmd2 == cmdBuy
+      pbOfferUsableMegaStones
+      break
+    elsif cmd2 == cmdSell
+      pbReceiveItem(stones[cmd])
+      break
     end
+  end
 end
 
 def pbSetMartPrices
@@ -268,55 +264,48 @@ end
 def pbResetMessage
   speech = nil
   commands = []
-  commands[cmdBuy = commands.length]  = _INTL('=)')
+  commands[cmdBuy = commands.length] = _INTL('=)')
   cmd = pbMessage(
     speech || _INTL('Please press F12 to go back to Titlescreen.'),
     commands
   )
-        loop do
-          if cmd == cmdBuy
-            pbResetMessage
-          end
-        end
+  loop do
+    pbResetMessage if cmd == cmdBuy
+  end
 end
 
 def pbChangeAllPkmnEv
-    $Lv = pbGetPkmnTargetLvl
-    $TargetEv = 0
-    if($Lv == 30)
-        $TargetEv = 46
-    end
-    if($Lv == 60)
-        $TargetEv = 69
-    end
-    if($Lv == 90)
-        $TargetEv = 84
-    end
+  $Lv = pbGetPkmnTargetLvl
+  $TargetEv = 0
+  $TargetEv = 46 if $Lv == 30
+  $TargetEv = 69 if $Lv == 60
+  $TargetEv = 84 if $Lv == 90
 
-# EV up party
-   $Trainer.party.each do |pkmn|
-     pkmn.ev[:HP] = $TargetEv if !pkmn.nil? && (pkmn.ev[:HP] < $TargetEv)
-     pkmn.ev[:ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:ATTACK] < $TargetEv)
-     pkmn.ev[:DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:DEFENSE] < $TargetEv)
-     pkmn.ev[:SPECIAL_ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
-     pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
-     pkmn.ev[:SPEED] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPEED] < $TargetEv)
-   end
+  # EV up party
+  $Trainer.party.each do |pkmn|
+    pkmn.ev[:HP] = $TargetEv if !pkmn.nil? && (pkmn.ev[:HP] < $TargetEv)
+    pkmn.ev[:ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:ATTACK] < $TargetEv)
+    pkmn.ev[:DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:DEFENSE] < $TargetEv)
+    pkmn.ev[:SPECIAL_ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
+    pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
+    pkmn.ev[:SPEED] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPEED] < $TargetEv)
+  end
 
-   # EV up box
-   $PokemonStorage.boxes.each do |box|
-     box.each do |pkmn|
-        pkmn.ev[:HP] = $TargetEv if !pkmn.nil? && (pkmn.ev[:HP] < $TargetEv)
-        pkmn.ev[:ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:ATTACK] < $TargetEv)
-        pkmn.ev[:DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:DEFENSE] < $TargetEv)
-        pkmn.ev[:SPECIAL_ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
-        pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
-        pkmn.ev[:SPEED] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPEED] < $TargetEv)
-     end
-   end
+  # EV up box
+  $PokemonStorage.boxes.each do |box|
+    box.each do |pkmn|
+      pkmn.ev[:HP] = $TargetEv if !pkmn.nil? && (pkmn.ev[:HP] < $TargetEv)
+      pkmn.ev[:ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:ATTACK] < $TargetEv)
+      pkmn.ev[:DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:DEFENSE] < $TargetEv)
+      pkmn.ev[:SPECIAL_ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
+      pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
+      pkmn.ev[:SPEED] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPEED] < $TargetEv)
+    end
+  end
 end
 
 def pbFighterBattleDialog
+  stages_cleared = pbGet(48)
   speech = nil
   commands = []
   commands[cmdBuy = commands.length]  = _INTL('Air Balloon')
@@ -331,52 +320,48 @@ def pbFighterBattleDialog
     commands
   )
 
-if cmd == cmdEnd
-return
-end
-   speech = nil
-      commands2 = []
-      commands2[cmdBuy = commands2.length]  = _INTL('No')
-      commands2[cmdSell = commands2.length] = _INTL('Yes')
-      cmd2 = pbMessage(
-        speech || _INTL('Are you sure?'),
-        commands2
-      )
+  return false if cmd == cmdEnd
 
-pbMessage( _INTL('Then fight for it!'))
+  speech = nil
+  commands2 = []
+  commands2[cmdBuy = commands2.length]  = _INTL('No')
+  commands2[cmdSell = commands2.length] = _INTL('Yes')
+  cmd2 = pbMessage(
+    speech || _INTL('Are you sure?'),
+    commands2
+  )
 
-      loop do
-        if cmd2 == cmdBuy
-          pbFighterBattleDialog
-          break
-        elsif cmd2 == cmdSell
-       loop do
-           if cmd == cmdBuy
-             pbReceiveItem(:AIRBALLOON)
-             break
-           elsif cmd == cmdSell
-             pbReceiveItem(:FLAMEORB)
-             break
-           elsif cmd == cmdQuit
-             pbReceiveItem(:ROCKYHELMET)
-             break
-           elsif cmd == cmdBuy2
-            pbReceiveItem(:TOXICORB)
-            break
-           elsif cmd == cmdSell2
-            pbReceiveItem(:WEAKNESSPOLICY)
-            break
-           elsif cmd == cmdQuit2
-           pbReceiveItem(:WHITEHERB)
-           break
-           end
-         end
-          break
-        end
+  loop do
+    if cmd2 == cmdBuy
+      return pbFighterBattleDialog
+    elsif cmd2 == cmdSell
+      pbMessage(_INTL('Then fight for it!'))
+      if cmd == cmdBuy
+        pbReceiveItem(:AIRBALLOON) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 0)
+        break
+      elsif cmd == cmdSell
+        pbReceiveItem(:FLAMEORB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 1)
+        break
+      elsif cmd == cmdQuit
+        pbReceiveItem(:ROCKYHELMET) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 2)
+        break
+      elsif cmd == cmdBuy2
+        pbReceiveItem(:TOXICORB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 3)
+        break
+      elsif cmd == cmdSell2
+        pbReceiveItem(:WEAKNESSPOLICY) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 4)
+        break
+      elsif cmd == cmdQuit2
+        pbReceiveItem(:WHITEHERB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 5)
+        break
       end
+      return true
+    end
+  end
 end
-def pbFighterShop(stock,speech=nil,cantsell=false)
-  for i in 0...stock.length
+
+def pbFighterShop(stock, speech = nil, _cantsell = false)
+  (0...stock.length).each do |i|
     stock[i] = GameData::Item.get(stock[i]).id
     stock[i] = nil if GameData::Item.get(stock[i]).is_important? && $PokemonBag.pbHasItem?(stock[i])
   end
@@ -385,27 +370,28 @@ def pbFighterShop(stock,speech=nil,cantsell=false)
   cmdBuy  = -1
   cmdSell = -1
   cmdQuit = -1
-  commands[cmdBuy = commands.length]  = _INTL("Buy")
+  commands[cmdBuy = commands.length]  = _INTL('Buy')
   # commands[cmdSell = commands.length] = _INTL("Sell") if !cantsell
-  commands[cmdQuit = commands.length] = _INTL("Quit")
+  commands[cmdQuit = commands.length] = _INTL('Quit')
   cmd = pbMessage(
-     speech ? speech : _INTL("Using TMs let my Pokémon hit harder. Do you want some?"),
-     commands,cmdQuit+1)
+    speech || _INTL('Using TMs let my Pokémon hit harder. Do you want some?'),
+    commands, cmdQuit + 1
+  )
   loop do
-    if cmdBuy>=0 && cmd==cmdBuy
+    if cmdBuy >= 0 && cmd == cmdBuy
       scene = PokemonMart_Scene.new
-      screen = PokemonMartScreen.new(scene,stock)
+      screen = PokemonMartScreen.new(scene, stock)
       screen.pbBuyScreen
-    elsif cmdSell>=0 && cmd==cmdSell
+    elsif cmdSell >= 0 && cmd == cmdSell
       scene = PokemonMart_Scene.new
-      screen = PokemonMartScreen.new(scene,stock)
+      screen = PokemonMartScreen.new(scene, stock)
       screen.pbSellScreen
     else
-      pbMessage(_INTL("See you!"))
+      pbMessage(_INTL('See you!'))
       break
     end
-    cmd = pbMessage(_INTL("Is there anything else you want?"),
-       commands,cmdQuit+1)
+    cmd = pbMessage(_INTL('Is there anything else you want?'),
+                    commands, cmdQuit + 1)
   end
   $game_temp.clear_mart_prices
 end
