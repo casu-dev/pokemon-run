@@ -1,11 +1,5 @@
-DiegoWT Pokemonauswahl
-
-Please credit all the following people for their contributions, when using Trainer Sprites (for EBDX).
-
-    Spriters Resource
-    FoxyBluereaver
-    Flamejow
-
-
-GameFreak | BGMs for the official Title Screen tracks​​
-Luka S.J. | Designs, graphics and code​
+Credits to:
+DiegoWT     | DiegoWT's Starter Selection script (Plugin)
+Luka S.J.   | Scripting Utilities & Modular Title Screen (Plugins)
+deoxysprime | EVs and IVs in Summary (Plugin)
+Nintendo    | For obvious reasons ;)
