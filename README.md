@@ -8,7 +8,7 @@
 - Chance auf Hidden Ability 25% (außer Starter da 0%).
 
 ## To-Do Liste MVP
-- [ ] Neuen Raum mit NPC implementieren der TOXICORB, FLAMEORB, WHITEHERB, ROCKYHELMET, AIRBALLON, SITRUSBERRY, WEAKNESSPOLICY gibt?
+- [ ] Neuen Raum mit NPC implementieren der TOXICORB, FLAMEORB, WHITEHERB, ROCKYHELMET, AIRBALLOON, WEAKNESSPOLICY 
 - [ ] Optischer Indikator für die nächsten beiden Räume
 - [ ] Abfrage Abzweigung entfernen
 - [ ] Capsule back option
