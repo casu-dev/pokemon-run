@@ -1,16 +1,11 @@
 # Pokemon Run
 
-## Regeln
-
-- Wenn Pokemons nach dem Kampf 0 HP haben, sind sie für immer tot.
-- Nur 100% Crit Chance führt zu einem kritischen Treffer.
-- Attacken mit 95% Genauigkeit wurden auf 100% gebufft.
-- Chance auf Hidden Ability 25% (außer Starter da 0%).
-
-## To-Do Liste MVP
-- [ ] Neuen Raum mit NPC implementieren der TOXICORB, FLAMEORB, WHITEHERB, ROCKYHELMET, AIRBALLOON, WEAKNESSPOLICY 
-- [ ] Optischer Indikator für die nächsten beiden Räume
-- [ ] Abfrage Abzweigung entfernen
-- [ ] Spielname & Credits
-- [ ] Tutorial/ Regeln erklären
+## Rules
+- To beat the game fight through all 4 floors, each consisting of 12 stages
+- After each floor the game will save and your team will be powered up to the next threshold
+- Pokémon with 0 hp at the end of a battle will be deleted
+- Obtained Pokémon have a 25% chance for their hidden ability (starters excluded)
+- Consumable BattleItems like Focus Sash, Air Balloon, ect. will be restored after battle
+- No critical hits, unless the chance is at 100%
+- Moves with 95% accuracy are buffed to 100%
 
