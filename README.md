@@ -14,3 +14,15 @@
 - [ ] Spielname & Credits
 - [ ] Tutorial/ Regeln erklären
 
+# Pokemon Run
+
+## Rules
+- To beat the Game fight through all 4 Floors, each consisting of 12 Stages
+- Pokémon with 0 HP at the end of a Battle will be deleted
+- Obtained Pokémon have a 25% chance for their hidden ability (Starters excluded)
+- Items like Focus Sash, Air Balloon, ect. will be restored after battle
+- Moves with 95% accuracy are buffed to 100%
+- No critical hits, unless the chance is at 100%
+
+
+
