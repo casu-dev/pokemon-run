@@ -315,6 +315,7 @@ def pbChangeAllPkmnEv
      end
    end
 end
+
 def pbFighterBattleDialog
   speech = nil
   commands = []
