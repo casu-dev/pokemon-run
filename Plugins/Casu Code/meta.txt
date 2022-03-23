@@ -1,4 +1,0 @@
-Name         = Casu Code
-Version      = 1.0.0
-Link         = https://casu-dev.github.io/
-Credits      = Casu
