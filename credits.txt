@@ -2,4 +2,5 @@ Credits to:
 DiegoWT     | DiegoWT's Starter Selection script (Plugin)
 Luka S.J.   | Scripting Utilities & Modular Title Screen (Plugins)
 deoxysprime | EVs and IVs in Summary (Plugin)
+phantombass | Speed_Up (Plugin)
 Nintendo    | For obvious reasons ;)
