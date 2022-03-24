@@ -310,7 +310,7 @@ def pbFighterBattleDialog
   commands = []
   commands[cmdBuy = commands.length]  = _INTL('Air Balloon')
   commands[cmdSell = commands.length] = _INTL('Flame Orb')
-  commands[cmdQuit = commands.length] = _INTL('Rocky Helmet')
+  # commands[cmdQuit = commands.length] = _INTL('Rocky Helmet')
   commands[cmdBuy2 = commands.length]  = _INTL('Toxic Orb')
   commands[cmdSell2 = commands.length] = _INTL('Weakness Policy')
   commands[cmdQuit2 = commands.length] = _INTL('White Herb')
@@ -342,9 +342,9 @@ def pbFighterBattleDialog
       elsif cmd == cmdSell
         pbReceiveItem(:FLAMEORB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 1)
         return true
-      elsif cmd == cmdQuit
-        pbReceiveItem(:ROCKYHELMET) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 2)
-        return true
+       # elsif cmd == cmdQuit
+       # pbReceiveItem(:ROCKYHELMET) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 2)
+       # return true
       elsif cmd == cmdBuy2
         pbReceiveItem(:TOXICORB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 3)
         return true
