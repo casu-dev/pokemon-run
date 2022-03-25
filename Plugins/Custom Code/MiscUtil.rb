@@ -338,23 +338,19 @@ def pbFighterBattleDialog
       pbMessage(_INTL('Then fight for it!'))
       if cmd == cmdBuy
         pbReceiveItem(:AIRBALLOON) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 0)
-        return true
       elsif cmd == cmdSell
         pbReceiveItem(:FLAMEORB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 1)
-        return true
        # elsif cmd == cmdQuit
        # pbReceiveItem(:ROCKYHELMET) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 2)
        # return true
       elsif cmd == cmdBuy2
         pbReceiveItem(:TOXICORB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 3)
-        return true
       elsif cmd == cmdSell2
         pbReceiveItem(:WEAKNESSPOLICY) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 4)
-        return true
       elsif cmd == cmdQuit2
         pbReceiveItem(:WHITEHERB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 5)
-        return true
       end
+      pbDeleteFainted
       return true
     end
   end
