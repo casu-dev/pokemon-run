@@ -6,7 +6,7 @@
 - To beat the game fight through all 4 floors, each consisting of 12 stages
 - Entering the next floor will save the game and power up your team
 - Pokémon with 0 hp at the end of a battle will be deleted
-- Consumable BattleItems like Focus Sash, Air Balloon, ect. will be restored after battle
+- Consumable Battle-Items like Focus Sash, Air Balloon, ect. will be restored after battle
 
 ## More Infos
 - Starters will evolve at Lv.18 & Lv.34
