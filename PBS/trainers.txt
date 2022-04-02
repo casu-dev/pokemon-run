@@ -289,9 +289,9 @@ Pokemon = PORYGON,13
 #-------------------------------
 [TEAMROCKET_M,Rocket Grunt]
 LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
-Pokemon = MANKEY,15
+Pokemon = MANKEY,12
     AbilityIndex = 0
-Pokemon = MAKUHITA,15
+Pokemon = MAKUHITA,12
     AbilityIndex = 2
 #-------------------------------
 [ELITEFOUR_Bruno,Bruno]
