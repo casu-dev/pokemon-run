@@ -309,6 +309,36 @@ Pokemon = TIMBURR,16
     AbilityIndex = 2
     IV = 20,20,20,20,20,20
 #-------------------------------
+[ELITEFOUR_Bruno,Bruno,1]
+LoseText = "GG WP"
+Pokemon = PANPOUR,16
+    Moves = WATERPULSE,ROCKTOMB,LOWKICK,FURYSWIPES
+    AbilityIndex = 2
+    IV = 20,20,20,20,20,20
+Pokemon = PANSEAR,16
+    Moves = YAWN,ROCKTOMB,LOWKICK,INCINERATE
+    AbilityIndex = 2
+    IV = 20,20,20,20,20,20
+Pokemon = PANSAGE,16
+    Moves = MAGICALLEAF, LEECHSEED, ROCKTOMB,  LOWKICK
+    AbilityIndex = 2
+    IV = 20,20,20,20,20,20
+#-------------------------------
+[ELITEFOUR_Bruno,Bruno,2]
+LoseText = "GG WP"
+Pokemon = GOOMY,16
+    Moves = TACKLE,ABSORB,PROTECT,DRAGONBREATH
+    AbilityIndex = 2
+    IV = 10,10,10,10,10,10
+Pokemon = DRATINI,16
+    Moves = WRAP,THUNDERWAVE,LEER,TWISTER
+    AbilityIndex = 0
+    IV = 10,10,10,10,10,10
+Pokemon = AXEW,16
+    Moves = BITE, SLASH, LEER, ASSURANCE
+    AbilityIndex = 1
+    IV = 10,10,10,10,10,10
+#-------------------------------
 [LADY,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
 Pokemon = MAWILE,28
@@ -349,16 +379,55 @@ Pokemon = CLEFAIRY,32
     AbilityIndex = 1
     Item = EVIOLITE
     IV = 24,24,24,24,24,24
-Pokemon = GOLETT,32
-    Moves = DYNAMICPUNCH,SHADOWPUNCH,MAGNITUDE,ROCKSLIDE
+Pokemon = AZUMARILL,32
+    Moves = AQUATAIL,PLAYROUGH,BODYSLAM,KNOCKOFF
     AbilityIndex = 2
     IV = 24,24,24,24,24,24
 Pokemon = GRANBULL,32
     Moves = FIREFANG,HEADBUTT,SCARYFACE,STOMPINGTANTRUM
     AbilityIndex = 0
     IV = 24,24,24,24,24,24
+Pokemon = GARDEVOIR,32
+    Moves = CALMMIND,DAZZLINGGLEAM,PSYCHIC,HIDDENPOWERFIGHTING
+    AbilityIndex = 1
+    IV = 24,24,24,24,24,24
+#-------------------------------
+[ELITEFOUR_Agatha,Agatha,1]
+LoseText = "GG WP"
+Pokemon = FRILLISH,32
+    Moves = NIGHTSHADE,RECOVER,BRINE,OMINOUSWIND
+    AbilityIndex = 0
+    Item = EVIOLITE
+    IV = 24,24,24,24,24,24
+Pokemon = GOLETT,32
+    Moves = DYNAMICPUNCH,SHADOWPUNCH,MAGNITUDE,ROCKSLIDE
+    AbilityIndex = 2
+    IV = 24,24,24,24,24,24
+Pokemon = CHANDELURE,32
+    Moves = FLAMETHROWER,HEX,ENERGYBALL,WILLOWISP
+    AbilityIndex = 0
+    IV = 24,24,24,24,24,24
 Pokemon = MISMAGIUS,32
     Moves = NASTYPLOT,SHADOWBALL,HIDDENPOWERFIGHTING,CONFUSERAY
+    IV = 24,24,24,24,24,24
+#-------------------------------
+[ELITEFOUR_Agatha,Agatha,2]
+LoseText = "GG WP"
+Pokemon = SIMISEAR,32
+    Moves = YAWN,FLAMETHROWER,SUPERPOWER,GRASSKNOT
+    AbilityIndex = 0
+    IV = 24,24,24,24,24,24
+Pokemon = SIMIPOUR,32
+    Moves = SCALD,ICEBEAM,ENDEAVOR,ROCKTOMB
+    AbilityIndex = 0
+    IV = 24,24,24,24,24,24
+Pokemon = SIMISAGE,32
+    Moves = SEEDBOMB,LEECHSEED,ACROBATICS,ROCKSLIDE
+    AbilityIndex = 0
+    IV = 24,24,24,24,24,24
+Pokemon = DITTO,32
+    AbilityIndex = 2
+     Item = CHOICESCARF
     IV = 24,24,24,24,24,24
 #-------------------------------
 [BEAUTY,Elite Trainer]
@@ -417,6 +486,61 @@ Pokemon = SCIZOR,60
     AbilityIndex = 1
     Item = LEFTOVERS
     IV = 0,0,0,0,0,0
+#-------------------------------
+[LEADER_Misty,Misty,1]
+LoseText = "GG WP"
+Pokemon = NINETALES,60
+    Moves = NASTYPLOT,FLAMETHROWER,SOLARBEAM,EXTRASENSORY
+    AbilityIndex = 2
+    Item = FOCUSSASH
+    IV = 0,0,0,0,0,0
+Pokemon = DARMANITAN,60
+    Moves = FLAREBLITZ,EARTHQUAKE,ROCKSLIDE,UTURN
+    AbilityIndex = 0
+    IV = 0,0,0,0,0,0
+Pokemon = VENUSAUR,60
+    Moves = GIGADRAIN,SLUDGEBOMB,WEATHERBALL,GROWTH
+    AbilityIndex = 2
+     Item = LIFEORB
+    IV = 0,0,0,0,0,0
+Pokemon = TORKOAL,60
+    Moves = LAVAPLUME,SOLARBEAM,EARTHPOWER,YAWN
+    AbilityIndex = 1
+    Item = LEFTOVERS
+    IV = 0,0,0,0,0,0
+Pokemon = CHARIZARD,60
+    Moves = FIREBLAST,SOLARBEAM,AIRSLASH,FOCUSBLAST
+    AbilityIndex = 2
+    Item = LIFEORB
+    IV = 0,0,0,0,0,0
+#-------------------------------
+[LEADER_Misty,Misty,2]
+LoseText = "GG WP"
+Pokemon = ABOMASNOW,60
+    Moves = GIGADRAIN,BLIZZARD,AURORAVEIL,EARTHQUAKE
+    AbilityIndex = 0
+    Item = FOCUSSASH
+    IV = 0,0,0,0,0,31
+Pokemon = VANILLUXE,60
+    Moves = BLIZZARD,EXPLOSION,FREEZEDRY,WATERPULSE
+    AbilityIndex = 1
+    Item = CHOICESPECS
+    IV = 0,0,0,0,0,31
+Pokemon = BEARTIC,60
+    Moves = ICICLECRASH,SUPERPOWER,SWORDSDANCE,THROATCHOP
+    AbilityIndex = 1
+    Item = EXPERTBELT
+    IV = 31,31,31,31,31,31
+Pokemon = MAMOSWINE,60
+    Moves = EARTHQUAKE,ICICLECRASH,ICESHARD,KNOCKOFF
+    AbilityIndex = 2
+    Item = LIFEORB
+    IV = 31,0,0,31,31,31
+Pokemon = FROSLASS,60
+    Moves = BLIZZARD,SHADOWBALL,DESTINYBOND,PSYCHIC
+    AbilityIndex = 0
+    Item = LIFEORB
+    IV = 0,0,0,0,0,31
 #-------------------------------
 [GAMBLER,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
