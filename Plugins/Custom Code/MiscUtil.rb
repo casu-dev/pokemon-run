@@ -1,4 +1,5 @@
 # User.methods - Object.methods
+#pbMessage(GameData::Species.get_species_form(pkmn.species,0).egg_moves.to_s)
 
 def pbDeleteFainted
   n = $Trainer.party.length
@@ -157,7 +158,6 @@ def pbForceEvo?(pkmn)
 
     cmd = pbMessage(speech || _INTL('Choose an Evolution.'), evos)
     # pbMessage(cmd.to_s)
-
     if cmd != evos.length - 1
       evo = PokemonEvolutionScene.new
       evo.pbStartScreen(pkmn, evo_info[cmd][0])
@@ -327,7 +327,7 @@ def pbFighterBattleDialog
   commands2[cmdBuy = commands2.length]  = _INTL('No')
   commands2[cmdSell = commands2.length] = _INTL('Yes')
   cmd2 = pbMessage(
-    speech || _INTL('Are you sure?'),
+    speech || _INTL('Are you sure, you have to fight for it?'),
     commands2
   )
 
@@ -335,7 +335,7 @@ def pbFighterBattleDialog
     if cmd2 == cmdBuy
       return pbFighterBattleDialog
     elsif cmd2 == cmdSell
-      pbMessage(_INTL('Then fight for it!'))
+      pbMessage(_INTL('Lets go!'))
       if cmd == cmdBuy
         pbReceiveItem(:AIRBALLOON) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 0)
       elsif cmd == cmdSell
@@ -360,6 +360,7 @@ def pbFighterShop(stock, speech = nil, _cantsell = false)
   (0...stock.length).each do |i|
     stock[i] = GameData::Item.get(stock[i]).id
     stock[i] = nil if GameData::Item.get(stock[i]).is_important? && $PokemonBag.pbHasItem?(stock[i])
+      # pbMessage(_INTL(GameData::Item.get(stock[i]).move.to_s))
   end
   stock.compact!
   commands = []
@@ -377,7 +378,7 @@ def pbFighterShop(stock, speech = nil, _cantsell = false)
     if cmdBuy >= 0 && cmd == cmdBuy
       scene = PokemonMart_Scene.new
       screen = PokemonMartScreen.new(scene, stock)
-      screen.pbBuyScreen
+      screen.pbBuyScreenTm
     elsif cmdSell >= 0 && cmd == cmdSell
       scene = PokemonMart_Scene.new
       screen = PokemonMartScreen.new(scene, stock)
