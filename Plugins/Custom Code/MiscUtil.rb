@@ -392,3 +392,7 @@ def pbFighterShop(stock, speech = nil, _cantsell = false)
   end
   $game_temp.clear_mart_prices
 end
+
+def pbscout
+pbMessage(_INTL(GameData::Species.get($Trainer.party[0].species).get_baby_species.to_s))
+end
