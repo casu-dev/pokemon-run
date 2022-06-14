@@ -221,7 +221,7 @@ def pbOfferUsableMegaStones
 end
 
 def pbSetMartPrices
-  items_cheap = %w[TM03 TM04 TM05 TM17 TM18 TM25 TM34 TM48 TM65 TR01 TR48]
+  items_cheap = %w[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM34 TM48 TM65 TR01 TR48]
   items_cheap.each do |i|
     setPrice(i, 500, 0)
   end
@@ -391,6 +391,16 @@ def pbFighterShop(stock, speech = nil, _cantsell = false)
                     commands, cmdQuit + 1)
   end
   $game_temp.clear_mart_prices
+end
+
+def pbPlainStatsPkmn(pkmn)
+ret = {}
+ret[:ATTACK]          = pkmn.attack
+ret[:DEFENSE]         = pkmn.defense
+ret[:SPECIAL_ATTACK]  = pkmn.spatk
+ret[:SPECIAL_DEFENSE] = pkmn.spdef
+ret[:SPEED]           = pkmn.speed
+return ret
 end
 
 def pbscout
