@@ -337,18 +337,17 @@ def pbFighterBattleDialog
     elsif cmd2 == cmdSell
       pbMessage(_INTL('Lets go!'))
       if cmd == cmdBuy
-        pbReceiveItem(:AIRBALLOON) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 0)
+        pbReceiveItem(:AIRBALLOON) if pbTrainerBattle(:BLACKBELT, 'Bruce', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 0)
       elsif cmd == cmdSell
-        pbReceiveItem(:FLAMEORB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 1)
+        pbReceiveItem(:FLAMEORB) if pbTrainerBattle(:BLACKBELT, 'Bruce', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 1)
        # elsif cmd == cmdQuit
-       # pbReceiveItem(:ROCKYHELMET) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 2)
-       # return true
+       # pbReceiveItem(:ROCKYHELMET) if pbTrainerBattle(:BLACKBELT, 'Bruce', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 2)
       elsif cmd == cmdBuy2
-        pbReceiveItem(:TOXICORB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 3)
+        pbReceiveItem(:TOXICORB) if pbTrainerBattle(:BLACKBELT, 'Bruce', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 3)
       elsif cmd == cmdSell2
-        pbReceiveItem(:WEAKNESSPOLICY) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 4)
+        pbReceiveItem(:WEAKNESSPOLICY) if pbTrainerBattle(:BLACKBELT, 'Bruce', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 4)
       elsif cmd == cmdQuit2
-        pbReceiveItem(:WHITEHERB) if pbTrainerBattle(:BLACKBELT, 'Blackbelt', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 5)
+        pbReceiveItem(:WHITEHERB) if pbTrainerBattle(:BLACKBELT, 'Bruce', endSpeech=nil, doubleBattle=false, trainerPartyID=stages_cleared * 6 + 5)
       end
       pbDeleteFainted
       return true
