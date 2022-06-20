@@ -48,7 +48,25 @@ def pbClearAllBoxes
   end
 end
 
-def pbBossRewardFloor2
+def pbConfirmChoice
+speech = nil
+  commands2 = []
+  commands2[cmdBuy = commands2.length]  = _INTL('No')
+  commands2[cmdSell = commands2.length] = _INTL('Yes')
+  cmd2 = pbMessage(
+    speech || _INTL('Are you sure?'),
+    commands2
+  )
+  loop do
+    if cmd2 == cmdBuy
+      return true
+    else
+      return false
+    end
+  end
+end
+
+def pbBossRewardFloor2Obsulete
   speech = nil
   commands = []
   commands[cmdBuy = commands.length]  = _INTL('Choice Scarf')
@@ -81,47 +99,6 @@ def pbBossRewardFloor2
           break
         elsif cmd == cmdQuit
           pbReceiveItem(:CHOICEBAND)
-          break
-        end
-      end
-      break
-    end
-  end
-end
-
-def pbMF_Reward_F4
-  speech = nil
-  commands = []
-  commands[cmdBuy = commands.length]  = _INTL('Assault Vest')
-  commands[cmdSell = commands.length] = _INTL('Life Orb')
-  commands[cmdQuit = commands.length] = _INTL('Focus Sash')
-  cmd = pbMessage(
-    speech || _INTL('Take one of the Items.'),
-    commands
-  )
-
-  speech = nil
-  commands2 = []
-  commands2[cmdBuy = commands2.length]  = _INTL('No')
-  commands2[cmdSell = commands2.length] = _INTL('Yes')
-  cmd2 = pbMessage(
-    speech || _INTL('Are you sure?'),
-    commands2
-  )
-  loop do
-    if cmd2 == cmdBuy
-      pbMF_Reward_F4
-      break
-    elsif cmd2 == cmdSell
-      loop do
-        if cmd == cmdBuy
-          pbReceiveItem(:ASSAULTVEST)
-          break
-        elsif cmd == cmdSell
-          pbReceiveItem(:LIFEORB)
-          break
-        elsif cmd == cmdQuit
-          pbReceiveItem(:FOCUSSASH)
           break
         end
       end
