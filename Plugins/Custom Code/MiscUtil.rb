@@ -402,6 +402,26 @@ ret[:SPEED]           = pkmn.speed
 return ret
 end
 
+def pbGetMoveset(pkmn)
+return nil if !pkmn
+moveset = "[ "
+    i = 0
+    pkmn.moves.each do |m|
+        if m
+            if i == 2
+            moveset += "<br>" + m.name
+            elsif i == 0
+            moveset += m.name
+            else
+            moveset += ", " + m.name
+            end
+            i+=1
+        end
+    end
+    moveset += " ]"
+    return moveset
+end
+
 def pbscout
 pbMessage(_INTL(GameData::Species.get($Trainer.party[0].species).get_baby_species.to_s))
 end
