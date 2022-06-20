@@ -4,7 +4,7 @@ MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 5, posy: 10, value:
 MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7, value: 5 }
 MAP_CENTER = { id: 77, name: 'Poké Center', posx: 7, posy: 8, value: 0 }
 MAP_BLACK_BELT_BROTHERS = { id: 111, name: 'Combat Teachers', posx: 7, posy: 12, value: 40 }
-MAP_EGG_MOVE_RELEARNER = { id: 109, name: 'Egg-Move Relearner', posx: 10, posy: 11, value: 45 }
+MAP_EGG_MOVE_RELEARNER = { id: 109, name: 'Egg-Move Tutor', posx: 10, posy: 11, value: 45 }
 
 MAP_BOSS_LIST = [
   { id: 86, name: '1st Floor Boss', posx: 10, posy: 13, value: 20 }, # 1st floor
