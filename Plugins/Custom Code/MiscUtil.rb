@@ -409,7 +409,7 @@ moveset = "[ "
     pkmn.moves.each do |m|
         if m
             if i == 2
-            moveset += "<br>" + m.name
+            moveset += ",<br>" + m.name
             elsif i == 0
             moveset += m.name
             else
