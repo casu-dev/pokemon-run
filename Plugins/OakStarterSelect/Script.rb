@@ -412,16 +412,6 @@ class DiegoWTsStarterSelection
     else
       @sprites["typebg"].tone = typeColor
     end
-    
-    @pkmnname = @pokemon.name
-    @sprites["textbox"].y = @sprites["textbox"].y - 16
-    if @pokemon.type2 != @pokemon.type1 && StarterSelSettings::TYPE2COLOR
-      @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + " #{type1}/#{type2}" + " Pokémon?</ac>")
-    elsif StarterSelSettings::TYPE2COLOR
-      @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + "  #{type1}"  + " Pokémon?</ac>")
-    else
-      @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + " #{type1}"  + " Pokémon?</ac>")
-    end
       
     @sprites["ballbase"].x = @x[@select]
     @sprites["ballbase"].y = @y[@select]
@@ -471,6 +461,18 @@ class DiegoWTsStarterSelection
       @sprites["pkmn_#{@select}"].opacity += 255/10
       pbWait(1)
     end
+    # Added by us
+        pbMessage(pbGetMoveset(@pokemon))
+
+    @pkmnname = @pokemon.name
+        @sprites["textbox"].y = @sprites["textbox"].y - 16
+        if @pokemon.type2 != @pokemon.type1 && StarterSelSettings::TYPE2COLOR
+          @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + " #{type1}/#{type2}" + " Pokémon?</ac>")
+        elsif StarterSelSettings::TYPE2COLOR
+          @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + "  #{type1}"  + " Pokémon?</ac>")
+        else
+          @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + " #{type1}"  + " Pokémon?</ac>")
+        end
     pbChoiceBoxes(0) # Turn on the choice boxes
     confirm = pbConfirm
     if confirm == 1
