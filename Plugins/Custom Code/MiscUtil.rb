@@ -399,6 +399,26 @@ moveset = "[ "
     return moveset
 end
 
+def pbShowLvUpMoves(pkmnid)
+    if $Trainer.party[pkmnid].species_data.moves.to_s != '[]'
+              moveInfo = $Trainer.party[pkmnid].species_data.moves
+              infoString = ""
+              moveInfo.each do |m|
+                  if m[0] != 0
+                    infoString += GameData::Move.get(m[1]).name
+                    infoString += " "
+                    infoString += m[0].to_s
+                    infoString += ", "
+                  end
+              end
+              infoString += "."
+              infoString =  infoString.gsub(", .", ".")
+              pbMessage(infoString)
+    else
+     pbMessage(_INTL("This Pokémon can't learn any move by lv-up."))
+    end
+end
+
 def pbscout
 pbMessage(_INTL(GameData::Species.get($Trainer.party[0].species).get_baby_species.to_s))
 end
