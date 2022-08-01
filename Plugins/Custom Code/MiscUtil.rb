@@ -419,6 +419,22 @@ def pbShowLvUpMoves(pkmnid)
     end
 end
 
+def pbShowEggMoves(pkmnid)
+    if GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,0).egg_moves.to_s != '[]'
+              moveInfo = GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,0).egg_moves
+              infoString = ""
+              moveInfo.each do |m|
+                infoString += GameData::Move.get(m).name
+                infoString += ", "
+              end
+              infoString += "."
+              infoString =  infoString.gsub(", .", ".")
+              pbMessage(infoString)
+    else
+     pbMessage(_INTL("This Pokémon has no egg moves."))
+    end
+end
+
 def pbscout
-pbMessage(_INTL(GameData::Species.get($Trainer.party[0].species).get_baby_species.to_s))
+pbMessage(_INTL("hi"))
 end
