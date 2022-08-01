@@ -100,6 +100,29 @@ pkmn = pbChooseRandomPokemon(
 # pkmn.item=pbGetMegaStones(pkmn)[0].to_s
 end
 
+def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
+#GameData::Species.get_species_form(pkmn.species_data.get_baby_species,0).egg_moves
+$PokemonStorage.boxes.each do |box|
+    box.each do |pkmn|
+        if pkmn != nil
+            if pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn1, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn2, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn3, 5).species_data.get_baby_species.to_s
+                return true
+            end
+        end
+    end
+end
+
+$Trainer.party.each do |pkmn|
+    if pkmn != nil
+        if pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn1, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn2, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn3, 5).species_data.get_baby_species.to_s
+            return true
+        end
+    end
+end
+
+return false
+end
+
 def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
     if mega
         pkmn1 = pbGenMegaPkmn
@@ -111,12 +134,16 @@ def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
         pkmn3 = pbGet(28)
     end
 
-    while (pkmn1 == pkmn2)
-        pkmn2 = pbGenMegaPkmn
-    end
-
-    while (pkmn1 == pkmn3 || pkmn2 == pkmn3)
-        pkmn3 = pbGenMegaPkmn
+    while (pkmn1 == pkmn2 || pkmn1 == pkmn3 || pkmn2 == pkmn3 || pbPkmnOwned?(pkmn1, pkmn2, pkmn3))
+        if mega
+            pkmn1 = pbGenMegaPkmn
+            pkmn2 = pbGenMegaPkmn
+            pkmn3 = pbGenMegaPkmn
+        else
+            pkmn1 = pbGet(26)
+            pkmn2 = pbGet(27)
+            pkmn3 = pbGet(28)
+        end
     end
 
     $h=rand(4)
