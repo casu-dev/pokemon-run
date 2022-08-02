@@ -435,6 +435,92 @@ def pbShowEggMoves(pkmnid)
     end
 end
 
+def pbPrepline(line)
+           line.sub!(/\s*\#.*$/,"")
+           line.sub!(/^\s+/,"")
+           line.sub!(/\s+$/,"")
+           return line
+end
+
+def pbReadFile(filename = "PBS/mode.txt")
+    output=""
+    File.open(filename,"rb") { |f|
+          FileLineData.file = filename
+                lineno = 1
+                f.each_line { |line|
+                  if lineno==1 && line[0].ord==0xEF && line[1].ord==0xBB && line[2].ord==0xBF
+                    line = line[3,line.length-3]
+                  end
+                  line.force_encoding(Encoding::UTF_8)
+                  line = pbPrepline(line)
+                  output = line.to_s
+                  if !line[/^\#/] && !line[/^\s*$/]
+                    FileLineData.setLine(line,lineno)
+                  end
+                  lineno += 1
+                }
+              }
+    return output
+end
+
+def pbWriteIntoFile(filename = "PBS/mode.txt", text = "")
+    File.open(filename, "w") { |f| f.write text }
+end
+
+def pbIncreaseCompletionCount
+    old = pbReadFile(filename = "PBS/runcompletedcount.txt").to_i
+    old = (old + 1).to_s
+    pbWriteIntoFile(filename = "PBS/runcompletedcount.txt", text = old)
+    pbMessage(_INTL("You unlocked a new game mode.")) if (old.to_i+1) <= pbGetGameModes.length()
+    pbMessage(_INTL("You unlocked all game modes.")) if (old.to_i+1) == pbGetGameModes.length()
+end
+
+def pbChoseMode
+    completionCounter = pbReadFile("PBS/runcompletedcount.txt").to_i
+    if (completionCounter > 0)
+        modes = pbGetGameModes
+        modeCounter = completionCounter
+        modeCounter = modes.length() if completionCounter > modes.length()
+
+          speech = nil
+          cmd2 = pbMessage(
+            speech || _INTL('Which game mode do you want to play?'), modes)
+
+            loop do
+                if cmd2 == 0
+                    pbWriteIntoFile(filename = "PBS/gamemode.txt", 0)
+                    pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 0)
+                    pbMessage(_INTL("Game mode set to Standard."))
+                    break
+                elsif cmd2 == 1
+                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 1)
+                     index = rand(1..10)
+                     info = "Error"
+                     info = "Atk and Def" if index == 1
+                     info = "Atk and Sp. Atk" if index == 2
+                     info = "Atk and Sp. Def" if index == 3
+                     info = "Atk and Speed" if index == 4
+                     info = "Def and Sp. Atk" if index == 5
+                     info = "Def and Sp. Def" if index == 6
+                     info = "Def and Speed" if index == 7
+                     info = "Sp. Atk and Sp. Def" if index == 8
+                     info = "Sp. Atk and Speed" if index == 9
+                     info = "Sp. Def and Speed" if index == 10
+
+                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", index)
+                     pbMessage(_INTL("Game mode set to Stat-Swap. The " + info + " stat of YOUR Pokémon will be swapped in battle."))
+                     break
+                end
+              end
+    else
+        pbMessage(_INTL("To play another game mode talk to me. You can unlock game modes by completing runs."))
+    end
+end
+
+def pbGetGameModes
+    return ["Standard", "Stat-Swap"]
+end
+
 def pbscout
 pbMessage(_INTL("hi"))
 end
