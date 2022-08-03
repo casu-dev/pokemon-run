@@ -483,16 +483,21 @@ def pbChoseMode
         modes = pbGetGameModes
         modeCounter = completionCounter
         modeCounter = modes.length() if completionCounter > modes.length()
+        shownmodes = []
+
+        (0...modeCounter+1).each do |i|
+            shownmodes.push(modes[i])
+        end
 
           speech = nil
           cmd2 = pbMessage(
-            speech || _INTL('Which game mode do you want to play?'), modes)
+            speech || _INTL('Which game mode do you want to play?'), shownmodes)
 
             loop do
                 if cmd2 == 0
                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 0)
                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 0)
-                    pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd] +"."))
+                    pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +"."))
                     break
                 elsif cmd2 == 1
                      pbWriteIntoFile(filename = "PBS/gamemode.txt", 1)
@@ -510,12 +515,12 @@ def pbChoseMode
                      info = "Sp. Def and Speed" if index == 10
 
                      pbWriteIntoFile(filename = "PBS/battlerinfo.txt", index)
-                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd] +". The " + info + " stat of YOUR Pokémon will be swapped in battle."))
+                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The " + info + " stat of YOUR Pokémon will be swapped in battle."))
                      break
                 elsif cmd2 == 2
                                      pbWriteIntoFile(filename = "PBS/gamemode.txt", 2)
                                      pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 11)
-                                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd] +". The first Pokémon in your party will have the ability of the last one in battle."))
+                                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The first Pokémon in your party will have the ability of the last one in battle."))
                                      break
                 end
             end
