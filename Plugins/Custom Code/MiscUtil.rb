@@ -492,7 +492,7 @@ def pbChoseMode
                 if cmd2 == 0
                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 0)
                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 0)
-                    pbMessage(_INTL("Game mode set to Standard."))
+                    pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd] +"."))
                     break
                 elsif cmd2 == 1
                      pbWriteIntoFile(filename = "PBS/gamemode.txt", 1)
@@ -510,17 +510,22 @@ def pbChoseMode
                      info = "Sp. Def and Speed" if index == 10
 
                      pbWriteIntoFile(filename = "PBS/battlerinfo.txt", index)
-                     pbMessage(_INTL("Game mode set to Stat-Swap. The " + info + " stat of YOUR Pokémon will be swapped in battle."))
+                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd] +". The " + info + " stat of YOUR Pokémon will be swapped in battle."))
                      break
+                elsif cmd2 == 2
+                                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 2)
+                                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 11)
+                                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd] +". The first Pokémon in your party will have the ability of the last one in battle."))
+                                     break
                 end
-              end
+            end
     else
         pbMessage(_INTL("To play another game mode talk to me. You can unlock game modes by completing runs."))
     end
 end
 
 def pbGetGameModes
-    return ["Standard", "Stat-Swap"]
+    return ["Standard", "Stat-Swap", "Copy-Ability"]
 end
 
 def pbResetRoom
@@ -613,6 +618,11 @@ end
 def pbPartyCountNotZero?
     return false if $Trainer.party.length() == 0
     return true
+end
+
+def pbBattlingPkmnFirstPkmn?(battler)
+    return true if (battler.name.to_s == $Trainer.party[0].name.to_s && battler.attack.to_s == $Trainer.party[0].attack.to_s && battler.speed.to_s == $Trainer.party[0].defense.to_s && battler.speed.to_s == $Trainer.party[0].defense.to_s)
+    return false
 end
 
 def pbScout
