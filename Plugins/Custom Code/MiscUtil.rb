@@ -626,7 +626,7 @@ def pbPartyCountNotZero?
 end
 
 def pbBattlingPkmnFirstPkmn?(battler)
-    return true if (battler.name.to_s == $Trainer.party[0].name.to_s && battler.attack.to_s == $Trainer.party[0].attack.to_s && battler.speed.to_s == $Trainer.party[0].defense.to_s && battler.speed.to_s == $Trainer.party[0].defense.to_s)
+    return true if (battler.name.to_s == $Trainer.party[0].name.to_s && battler.attack.to_s == $Trainer.party[0].attack.to_s && battler.speed.to_s == $Trainer.party[0].speed.to_s && battler.defense.to_s == $Trainer.party[0].defense.to_s)
     return false
 end
 
