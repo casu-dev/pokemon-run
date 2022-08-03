@@ -482,7 +482,7 @@ def pbChoseMode
     if (completionCounter > 0)
         modes = pbGetGameModes
         modeCounter = completionCounter
-        modeCounter = modes.length() if completionCounter > modes.length()
+        modeCounter = modes.length()-1 if completionCounter >= modes.length()
         shownmodes = []
 
         (0...modeCounter+1).each do |i|
