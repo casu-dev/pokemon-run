@@ -6,6 +6,8 @@ def pbDeleteFainted
   (0..n).each do |i|
     if $Trainer.party[n - i] && !$Trainer.party[n - i].able?
       pbReceiveItem($Trainer.party[n - i].item.id) if $Trainer.party[n - i].item
+      $Trainer.party[n - i].heal
+      $Trainer.mystery_gifts.push($Trainer.party[n - i]) #Collecting fainted Pokemon for offering later if player blacksout
       $Trainer.party.delete_at(n - i)
     end
   end
@@ -521,6 +523,99 @@ def pbGetGameModes
     return ["Standard", "Stat-Swap"]
 end
 
-def pbscout
-pbMessage(_INTL("hi"))
+def pbResetRoom
+    n = $Trainer.party.length
+      (0..n).each do |i|
+          if $Trainer.party[n - i]
+            $Trainer.mystery_gifts.push($Trainer.party[n - i])
+            $Trainer.party.delete_at(n - i)
+          end
+      end
+
+      $PokemonStorage.boxes.each do |box|
+        box.each do |pkmn|
+            $Trainer.mystery_gifts.push(pkmn)  if !pkmn.nil?
+        end
+      end
+
+    pbClearAllBoxes
+
+    for i in 0...$PokemonStorage.maxBoxes
+       for j in 0...$Trainer.mystery_gifts.length()
+         $PokemonStorage[i, j] = $Trainer.mystery_gifts[j]
+       end
+    end
+
+    $Trainer.money = 0
+    $PokemonBag.clear
+    $Trainer.mystery_gifts = []
+   #pbMessage(_INTL($Trainer.mystery_gifts.to_s))
+end
+
+def pbResetAssistant
+size = $Trainer.party.length()
+    if size == 0
+        speech = nil
+        yn = ["Yes", "No"]
+        cmd2 = pbMessage(speech || _INTL('You want to start the new run without one of your old Pokémon?'), yn)
+            loop do
+                if cmd2 == 0
+                   pbFadeOutIn do
+                       $game_temp.player_new_map_id = 79
+                       $scene.transfer_player
+                       $game_map.autoplay
+                       $game_map.refresh
+                       $game_temp.player_new_map_id = 79
+                       $game_temp.player_new_x         = 9
+                       $game_temp.player_new_y         = 6
+                       $game_temp.player_new_direction = 0
+                       $scene.transfer_player
+                       $game_map.autoplay
+                       $game_map.refresh
+                     end
+                    break
+                elsif cmd2 == 1
+                     break
+                end
+            end
+    elsif size == 1
+        speech = nil
+                yn = ["Yes", "No"]
+                cmd2 = pbMessage(speech || _INTL("You want to start the new run with " + $Trainer.party[0].name + "?"), yn)
+                    loop do
+                        if cmd2 == 0
+                           $Trainer.party.each do |pkmn|
+                              pbChangeLevel(pkmn, 15, nil) if !pkmn.nil?
+                           end
+                           pbFadeOutIn do
+                               $game_temp.player_new_map_id = 79
+                               $scene.transfer_player
+                               $game_map.autoplay
+                               $game_map.refresh
+                               $game_temp.player_new_map_id = 79
+                               $game_temp.player_new_x         = 9
+                               $game_temp.player_new_y         = 6
+                               $game_temp.player_new_direction = 0
+                               $scene.transfer_player
+                               $game_map.autoplay
+                               $game_map.refresh
+                             end
+                            break
+                        elsif cmd2 == 1
+                             break
+                        end
+                    end
+    else
+        pbMessage(_INTL("You can't take more than one Pokémon with you."))
+    end
+end
+
+def pbPartyCountNotZero?
+    return false if $Trainer.party.length() == 0
+    return true
+end
+
+def pbScout
+#$Trainer.mystery_gifts.push("gotcha")
+pbMessage(_INTL("Room scripts actice"))
 end
