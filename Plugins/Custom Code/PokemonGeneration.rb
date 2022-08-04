@@ -124,6 +124,9 @@ return false
 end
 
 def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
+    nfe = false
+    nfe = true if pbReadFile("PBS/gamemode.txt").to_i == 3
+
     if mega
         pkmn1 = pbGenMegaPkmn
         pkmn2 = pbGenMegaPkmn
@@ -134,16 +137,43 @@ def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
         pkmn3 = pbGet(28)
     end
 
+    if nfe
+        while (pbDevolvePkmn(pkmn1) == nil || pbDevolvePkmn(pkmn2) == nil || pbDevolvePkmn(pkmn3) == nil)
+             pbGenPokeChoice
+             pkmn1 = pbGet(26)
+             pkmn2 = pbGet(27)
+             pkmn3 = pbGet(28)
+        end
+
+         pkmn1 = pbDevolvePkmn(pkmn1)
+         pkmn2 = pbDevolvePkmn(pkmn2)
+         pkmn3 = pbDevolvePkmn(pkmn3)
+    end
+
     while (pkmn1 == pkmn2 || pkmn1 == pkmn3 || pkmn2 == pkmn3 || pbPkmnOwned?(pkmn1, pkmn2, pkmn3))
         if mega
             pkmn1 = pbGenMegaPkmn
             pkmn2 = pbGenMegaPkmn
             pkmn3 = pbGenMegaPkmn
         else
+        pbGenPokeChoice
             pkmn1 = pbGet(26)
             pkmn2 = pbGet(27)
             pkmn3 = pbGet(28)
         end
+
+       if nfe
+            while (pbDevolvePkmn(pkmn1) == nil || pbDevolvePkmn(pkmn2) == nil || pbDevolvePkmn(pkmn3) == nil)
+                 pbGenPokeChoice
+                 pkmn1 = pbGet(26)
+                 pkmn2 = pbGet(27)
+                 pkmn3 = pbGet(28)
+            end
+
+             pkmn1 = pbDevolvePkmn(pkmn1)
+             pkmn2 = pbDevolvePkmn(pkmn2)
+             pkmn3 = pbDevolvePkmn(pkmn3)
+       end
     end
 
     $h=rand(4)

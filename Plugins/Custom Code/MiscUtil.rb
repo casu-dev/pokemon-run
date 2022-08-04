@@ -126,7 +126,7 @@ end
 def pbForceEvo?(pkmn)
   # To-do?: Exclude Eggs
   evo_info = pkmn.species_data.get_evolutions
-  if pkmn.species_data.get_evolutions[0]
+  if pkmn.species_data.get_evolutions[0] && (pbReadFile("PBS/gamemode.txt").to_i != 3 || can_evolve?(Pokemon.new(pkmn.species_data.get_evolutions[0][0].to_s, 5)))
     speech = nil
     evos = []
 
@@ -148,7 +148,7 @@ def pbForceEvo?(pkmn)
       false
     end
   else
-    pbMessage("This Pokémon can't evolve anymore.")
+    pbMessage("This Pokémon can't evolve.")
     false
   end
 end
@@ -178,25 +178,26 @@ def pbOfferUsableMegaStones
       stones << _INTL(stone.to_s) unless stones.include? _INTL(stone.to_s)
     end
   end
-
-  speech = nil
-  cmd = pbMessage(speech || _INTL('Choose a Mega Stone.'), stones)
-  commands = []
-  commands[cmdBuy = commands.length]  = _INTL('No')
-  commands[cmdSell = commands.length] = _INTL('Yes')
-  cmd2 = pbMessage(
-    speech || _INTL('Are you sure?'),
-    commands
-  )
-  loop do
-    if cmd2 == cmdBuy
-      pbOfferUsableMegaStones
-      break
-    elsif cmd2 == cmdSell
-      pbReceiveItem(stones[cmd])
-      break
+    if stones != []
+          speech = nil
+          cmd = pbMessage(speech || _INTL('Choose a Mega Stone.'), stones)
+          commands = []
+          commands[cmdBuy = commands.length]  = _INTL('No')
+          commands[cmdSell = commands.length] = _INTL('Yes')
+          cmd2 = pbMessage(
+            speech || _INTL('Are you sure?'),
+            commands
+          )
+          loop do
+            if cmd2 == cmdBuy
+              pbOfferUsableMegaStones
+              break
+            elsif cmd2 == cmdSell
+              pbReceiveItem(stones[cmd])
+              break
+            end
+          end
     end
-  end
 end
 
 def pbSetMartPrices
@@ -519,9 +520,14 @@ def pbChoseMode
                      pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The " + info + " stat of YOUR Pokémon will be swapped in battle."))
                      break
                 elsif cmd2 == 2
-                                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 2)
-                                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 11)
-                                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The first Pokémon in your party will have the ability of the last one in battle."))
+                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 2)
+                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 11)
+                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The first Pokémon in your party will have the ability of the last one in battle."))
+                     break
+                elsif cmd2 == 3
+                                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 3)
+                                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 0)
+                                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
                                      break
                 end
             end
@@ -531,7 +537,7 @@ def pbChoseMode
 end
 
 def pbGetGameModes
-    return ["Standard", "Stat-Swap", "Copy-Ability"]
+    return ["Standard", "Stat-Swap", "Copy-Ability", "Lucky weakling"]
 end
 
 def pbResetRoom
