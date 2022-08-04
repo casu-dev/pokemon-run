@@ -220,3 +220,17 @@ def pbGiveRandomPoke(saveSlot)
   pkmn = Pokemon.new(pbGet(saveSlot), lvl)
   pbAddPokemon(pkmn)
 end
+
+def pbDevolvePkmn(p)
+    p = Pokemon.new(p, 5)
+    if !can_evolve?(p)
+        p = p.species_data.get_baby_species.to_s
+        p = Pokemon.new(p, 5)
+        if can_evolve?(p)
+            return p.species_data.get_evolutions[0][0].to_s if can_evolve?(Pokemon.new(p.species_data.get_evolutions[0][0].to_s, 5))
+        else
+            return nil
+        end
+    end
+    return p.species.to_s
+end
