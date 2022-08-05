@@ -126,7 +126,7 @@ end
 def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
     nfe = false
     nfe = true if pbReadFile("PBS/gamemode.txt").to_i == 3
-
+#
     if mega
         pkmn1 = pbGenMegaPkmn
         pkmn2 = pbGenMegaPkmn
