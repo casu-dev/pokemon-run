@@ -567,6 +567,7 @@ def pbResetRoom
 
     for i in 0...$PokemonStorage.maxBoxes
        for j in 0...$Trainer.mystery_gifts.length()
+         $Trainer.mystery_gifts[j].item=nil
          $PokemonStorage[i, j] = $Trainer.mystery_gifts[j]
        end
     end
