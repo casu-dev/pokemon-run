@@ -263,23 +263,31 @@ def pbChangeAllPkmnEv
 
   # EV up party
   $Trainer.party.each do |pkmn|
-    pkmn.ev[:HP] = $TargetEv if !pkmn.nil? && (pkmn.ev[:HP] < $TargetEv)
-    pkmn.ev[:ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:ATTACK] < $TargetEv)
-    pkmn.ev[:DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:DEFENSE] < $TargetEv)
-    pkmn.ev[:SPECIAL_ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
-    pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
-    pkmn.ev[:SPEED] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPEED] < $TargetEv)
+    if !pkmn.nil?
+        while 500 > (pkmn.ev[:HP] + pkmn.ev[:ATTACK] + pkmn.ev[:DEFENSE] + pkmn.ev[:SPECIAL_ATTACK] + pkmn.ev[:SPECIAL_DEFENSE] + pkmn.ev[:SPEED])
+            pkmn.ev[:HP] += 1 if (pkmn.ev[:HP] < $TargetEv)
+            pkmn.ev[:ATTACK] += 1 if (pkmn.ev[:ATTACK] < $TargetEv)
+            pkmn.ev[:DEFENSE] += 1 if (pkmn.ev[:DEFENSE] < $TargetEv)
+            pkmn.ev[:SPECIAL_ATTACK] += 1 if (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
+            pkmn.ev[:SPECIAL_DEFENSE] += 1 if (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
+            pkmn.ev[:SPEED] += 1 if (pkmn.ev[:SPEED] < $TargetEv)
+        end
+    end
   end
 
   # EV up box
   $PokemonStorage.boxes.each do |box|
     box.each do |pkmn|
-      pkmn.ev[:HP] = $TargetEv if !pkmn.nil? && (pkmn.ev[:HP] < $TargetEv)
-      pkmn.ev[:ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:ATTACK] < $TargetEv)
-      pkmn.ev[:DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:DEFENSE] < $TargetEv)
-      pkmn.ev[:SPECIAL_ATTACK] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
-      pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
-      pkmn.ev[:SPEED] = $TargetEv if !pkmn.nil? && (pkmn.ev[:SPEED] < $TargetEv)
+      if !pkmn.nil?
+          while 500 > (pkmn.ev[:HP] + pkmn.ev[:ATTACK] + pkmn.ev[:DEFENSE] + pkmn.ev[:SPECIAL_ATTACK] + pkmn.ev[:SPECIAL_DEFENSE] + pkmn.ev[:SPEED])
+              pkmn.ev[:HP] += 1 if (pkmn.ev[:HP] < $TargetEv)
+              pkmn.ev[:ATTACK] += 1 if (pkmn.ev[:ATTACK] < $TargetEv)
+              pkmn.ev[:DEFENSE] += 1 if (pkmn.ev[:DEFENSE] < $TargetEv)
+              pkmn.ev[:SPECIAL_ATTACK] += 1 if (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
+              pkmn.ev[:SPECIAL_DEFENSE] += 1 if (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
+              pkmn.ev[:SPEED] += 1 if (pkmn.ev[:SPEED] < $TargetEv)
+          end
+      end
     end
   end
 end
