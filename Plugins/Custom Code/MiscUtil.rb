@@ -264,15 +264,15 @@ def pbChangeAllPkmnEv
   # EV up party
   $Trainer.party.each do |pkmn|
     if !pkmn.nil?
-        sum = (pkmn.ev[:HP].to_i + pkmn.ev[:ATTACK].to_i + pkmn.ev[:DEFENSE].to_i + pkmn.ev[:SPECIAL_ATTACK].to_i + pkmn.ev[:SPECIAL_DEFENSE].to_i + pkmn.ev[:SPEED].to_i)
-        while (500 > sum && sum < 6 * $TargetEv)
+        sum = (pkmn.ev[:HP] + pkmn.ev[:ATTACK] + pkmn.ev[:DEFENSE] + pkmn.ev[:SPECIAL_ATTACK] + pkmn.ev[:SPECIAL_DEFENSE] + pkmn.ev[:SPEED])
+        while (sum < 6 * $TargetEv)
             pkmn.ev[:HP] += 1 if (pkmn.ev[:HP] < $TargetEv)
             pkmn.ev[:ATTACK] += 1 if (pkmn.ev[:ATTACK] < $TargetEv)
             pkmn.ev[:DEFENSE] += 1 if (pkmn.ev[:DEFENSE] < $TargetEv)
             pkmn.ev[:SPECIAL_ATTACK] += 1 if (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
             pkmn.ev[:SPECIAL_DEFENSE] += 1 if (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
             pkmn.ev[:SPEED] += 1 if (pkmn.ev[:SPEED] < $TargetEv)
-            sum = (pkmn.ev[:HP].to_i + pkmn.ev[:ATTACK].to_i + pkmn.ev[:DEFENSE].to_i + pkmn.ev[:SPECIAL_ATTACK].to_i + pkmn.ev[:SPECIAL_DEFENSE].to_i + pkmn.ev[:SPEED].to_i)
+            sum = (pkmn.ev[:HP] + pkmn.ev[:ATTACK] + pkmn.ev[:DEFENSE] + pkmn.ev[:SPECIAL_ATTACK] + pkmn.ev[:SPECIAL_DEFENSE] + pkmn.ev[:SPEED])
         end
     end
   end
@@ -281,16 +281,16 @@ def pbChangeAllPkmnEv
   $PokemonStorage.boxes.each do |box|
     box.each do |pkmn|
       if !pkmn.nil?
-          sum = (pkmn.ev[:HP].to_i + pkmn.ev[:ATTACK].to_i + pkmn.ev[:DEFENSE].to_i + pkmn.ev[:SPECIAL_ATTACK].to_i + pkmn.ev[:SPECIAL_DEFENSE].to_i + pkmn.ev[:SPEED].to_i)
-         while (500 > sum && sum < 6 * $TargetEv)
-             pkmn.ev[:HP] += 1 if (pkmn.ev[:HP] < $TargetEv)
-             pkmn.ev[:ATTACK] += 1 if (pkmn.ev[:ATTACK] < $TargetEv)
-             pkmn.ev[:DEFENSE] += 1 if (pkmn.ev[:DEFENSE] < $TargetEv)
-             pkmn.ev[:SPECIAL_ATTACK] += 1 if (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
-             pkmn.ev[:SPECIAL_DEFENSE] += 1 if (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
-             pkmn.ev[:SPEED] += 1 if (pkmn.ev[:SPEED] < $TargetEv)
-             sum = (pkmn.ev[:HP].to_i + pkmn.ev[:ATTACK].to_i + pkmn.ev[:DEFENSE].to_i + pkmn.ev[:SPECIAL_ATTACK].to_i + pkmn.ev[:SPECIAL_DEFENSE].to_i + pkmn.ev[:SPEED].to_i)
-         end
+          sum = (pkmn.ev[:HP] + pkmn.ev[:ATTACK] + pkmn.ev[:DEFENSE] + pkmn.ev[:SPECIAL_ATTACK] + pkmn.ev[:SPECIAL_DEFENSE] + pkmn.ev[:SPEED])
+          while (sum < 6 * $TargetEv)
+              pkmn.ev[:HP] += 1 if (pkmn.ev[:HP] < $TargetEv)
+              pkmn.ev[:ATTACK] += 1 if (pkmn.ev[:ATTACK] < $TargetEv)
+              pkmn.ev[:DEFENSE] += 1 if (pkmn.ev[:DEFENSE] < $TargetEv)
+              pkmn.ev[:SPECIAL_ATTACK] += 1 if (pkmn.ev[:SPECIAL_ATTACK] < $TargetEv)
+              pkmn.ev[:SPECIAL_DEFENSE] += 1 if (pkmn.ev[:SPECIAL_DEFENSE] < $TargetEv)
+              pkmn.ev[:SPEED] += 1 if (pkmn.ev[:SPEED] < $TargetEv)
+              sum = (pkmn.ev[:HP] + pkmn.ev[:ATTACK] + pkmn.ev[:DEFENSE] + pkmn.ev[:SPECIAL_ATTACK] + pkmn.ev[:SPECIAL_DEFENSE] + pkmn.ev[:SPEED])
+          end
       end
     end
   end
