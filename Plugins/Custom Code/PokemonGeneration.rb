@@ -42,10 +42,7 @@ def pbGenPokeChoice
   startGen = Process.clock_gettime(Process::CLOCK_MONOTONIC)
   
   if !nfe
-    pkmns = pbChooseRandomPokemon(
-      addList: alreadyOwned,
-      amount: 3
-    )
+    pkmns = pbChooseRandomPokemon(amount: 3)
     # do for every pokemon save slot
     [26, 27, 28].each do |i|
       pbSet(i, pbGetCorrectEvo(pkmns.pop, pbGetPkmnTargetLvl))   
@@ -53,7 +50,6 @@ def pbGenPokeChoice
   else
     startRoll = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     pkmns = pbChooseRandomPokemon(
-      addList: alreadyOwned,
       filterFunc: method(:filterPkmnHasEvolution),
       amount: 3
     )
@@ -75,7 +71,7 @@ def pbGenPokeChoice
 end
 
 def filterPkmnHasEvolution(species)
-  return !species.get_evolutions.empty?
+  return !GameData::Species.try_get(species).get_evolutions.empty?
 end
 
 def pbGetCorrectEvo(pkmn, lvl)
@@ -93,43 +89,40 @@ def pbGetCorrectEvo(pkmn, lvl)
 end
 
 def pbGenStarterPkmn(type)
-  pkmn = pbChooseRandomPokemon(
-    whiteList: %i[BULBASAUR CHARMANDER SQUIRTLE CHIKORITA CYNDAQUIL TOTODILE TREECKO TORCHIC MUDKIP
-                   TURTWIG CHIMCHAR PIPLUP SNIVY TEPIG OSHAWOTT],
-    typeWhitelist: [type]
-  )
+  return pbChooseRandomPokemon(whiteList: %i[CHARMANDER CYNDAQUIL TORCHIC CHIMCHAR TEPIG]) if type == :FIRE
+  return pbChooseRandomPokemon(whiteList: %i[SQUIRTLE TOTODILE MUDKIP PIPLUP OSHAWOTT]) if type == :WATER
+  return pbChooseRandomPokemon(whiteList: %i[BULBASAUR CHIKORITA TREECKO TURTWIG SNIVY]) if type == :GRASS
 end
 
 def pbGenMegaPkmn
 pkmn = pbChooseRandomPokemon(
     whiteList: %i[VENUSAUR CHARIZARD BLASTOISE BEEDRILL PIDGEOT ALAKAZAM SLOWBRO GENGAR KANGASKHAN PINSIR GYARADOS AERODACTYL
 	 AMPHAROS STEELIX SCIZOR HERACROSS TYRANITAR SCEPTILE BLAZIKEN SWAMPERT GARDEVOIR SABLEYE MAWILE AGGRON MEDICHAM MANECTRIC
-	 SHARPEDO CAMERUPT ALTARIA BANETTE ABSOL GLALIE SALAMENCE METAGROSS LOPUNNY GARCHOMP LUCARIO ABOMASNOW GALLADE AUDINO],
-    choose_gen: [1, 2, 3, 4, 5]
+	 SHARPEDO CAMERUPT ALTARIA BANETTE ABSOL GLALIE SALAMENCE METAGROSS LOPUNNY GARCHOMP LUCARIO ABOMASNOW GALLADE AUDINO]
 )
 end
 
 def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
-$PokemonStorage.boxes.each do |box|
-    box.each do |pkmn|
-        if pkmn != nil
-            if pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn1, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn2, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn3, 5).species_data.get_baby_species.to_s
-              echoln "Pokemon was found in a box"
+  $PokemonStorage.boxes.each do |box|
+      box.each do |pkmn|
+          if pkmn != nil
+              if pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn1, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn2, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn3, 5).species_data.get_baby_species.to_s
+                echoln "Pokemon was found in a box"
+                return true
+              end
+          end
+      end
+  end
+
+  $Trainer.party.each do |pkmn|
+      if pkmn != nil
+          if pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn1, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn2, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn3, 5).species_data.get_baby_species.to_s
               return true
-            end
-        end
-    end
-end
+          end
+      end
+  end
 
-$Trainer.party.each do |pkmn|
-    if pkmn != nil
-        if pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn1, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn2, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn3, 5).species_data.get_baby_species.to_s
-            return true
-        end
-    end
-end
-
-return false
+  return false
 end
 
 def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
@@ -143,7 +136,7 @@ def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
         pkmn3 = pbGet(28)
     end
 
-    while (pkmn1 == pkmn2 || pkmn1 == pkmn3 || pkmn2 == pkmn3 || pbPkmnOwned?(pkmn1, pkmn2, pkmn3))
+    while (pbPkmnOwned?(pkmn1, pkmn2, pkmn3))
       echoln "Pokemons are not unique. Rerolling..."
         if mega
           pkmn1 = pbGenMegaPkmn
@@ -203,15 +196,15 @@ def pbGiveRandomPoke(saveSlot)
 end
 
 def pbDevolvePkmn(p)
-    p = Pokemon.new(p, 5)
-    if !can_evolve?(p)
-        p = p.species_data.get_baby_species.to_s
-        p = Pokemon.new(p, 5)
-        if can_evolve?(p)
-            return p.species_data.get_evolutions[0][0].to_s if can_evolve?(Pokemon.new(p.species_data.get_evolutions[0][0].to_s, 5))
-        else
-            return nil
-        end
-    end
-    return p.species.to_s
+  p = Pokemon.new(p, 5)
+  if !can_evolve?(p)
+      p = p.species_data.get_baby_species.to_s
+      p = Pokemon.new(p, 5)
+      if can_evolve?(p)
+          return p.species_data.get_evolutions[0][0].to_s if can_evolve?(Pokemon.new(p.species_data.get_evolutions[0][0].to_s, 5))
+      else
+          return nil
+      end
+  end
+  return p.species.to_s
 end
