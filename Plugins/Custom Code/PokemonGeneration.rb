@@ -1,5 +1,5 @@
 POKEMON_FLOOR_START_LEVEL = [15, 30, 60, 90]
-POKEMON_GET_LEVEL = POKEMON_FLOOR_START_LEVEL # [16, 32, 62, 92]
+POKEMON_GET_LEVEL = POKEMON_FLOOR_START_LEVEL #[16, 32, 62, 92]
 
 def pbGetStagesCleared
   pbGet(48)
@@ -34,35 +34,57 @@ def pbHealBoxes
 end
 
 def pbGenPokeChoice
-  pkmn = pbChooseRandomPokemon(
-    whiteList = nil,
-    blackList = 'suggested',
-    addList = nil,
-    base_only = true,
-    choose_gen = [1, 2, 3, 4, 5]
-  )
+  startTime = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+  nfe = false
+  nfe = true if pbReadFile("PBS/gamemode.txt").to_i == 3
+  echoln "Generating Poke Choice. With nfe? " + nfe.to_s 
+  alreadyOwned = [] #todo
+  startGen = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+  
+  if !nfe
+    pkmns = pbChooseRandomPokemon(
+      whiteList = nil,
+      blackList = 'suggested',
+      addList = alreadyOwned,
+      base_only = true,
+      choose_gen = [1, 2, 3, 4, 5],
+      amount=3
+    )  
+    # do for every pokemon save slot
+    [26, 27, 28].each do |i|
+      pbSet(i, pbGetCorrectEvo(pkmns.pop, pbGetPkmnTargetLvl))   
+    end       
+  else
+    startRoll = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    pkmns = pbChooseRandomPokemon(
+      whiteList = nil,
+      blackList = 'suggested',
+      addList = alreadyOwned,
+      base_only = true,
+      choose_gen = [1, 2, 3, 4, 5],
+      typeWhitelist=nil,
+      filterFunc=method(:filterPkmnHasEvolution),
+      amount=3
+    )
+    echoln "Gen Result: " + pkmns.to_s
+    echoln "Generating Poke: pbChooseRandomPokemon took (s):" + (Process.clock_gettime(Process::CLOCK_MONOTONIC) - startRoll).to_s
+    startRoll = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    [26, 27, 28].each do |i|
+      correctEvo = pbGetCorrectEvo(pkmns.pop, pbGetPkmnTargetLvl)
+      echoln "Correct_evo " + correctEvo.to_s
+      devolvedEvo = pbDevolvePkmn(correctEvo)
+      echoln "Saving " + devolvedEvo.to_s
+      pbSet(i, devolvedEvo)
+    end    
+    echoln "Generating Poke: pbGetCorrectEvo + pbDevolvePkmn took (s):" + (Process.clock_gettime(Process::CLOCK_MONOTONIC) - startRoll).to_s
+  end
 
-  pbSet(26, pbGetCorrectEvo(pkmn, pbGetPkmnTargetLvl))
+  timeDiff = Process.clock_gettime(Process::CLOCK_MONOTONIC) - startTime
+  echoln "Generation took " + timeDiff.to_s + "s"
+end
 
-  pkmn = pbChooseRandomPokemon(
-    whiteList = nil,
-    blackList = 'suggested',
-    addList = nil,
-    base_only = true,
-    choose_gen = [1, 2, 3, 4, 5]
-  )
-
-  pbSet(27, pbGetCorrectEvo(pkmn, pbGetPkmnTargetLvl))
-
-  pkmn = pbChooseRandomPokemon(
-    whiteList = nil,
-    blackList = 'suggested',
-    addList = nil,
-    base_only = true,
-    choose_gen = [1, 2, 3, 4, 5]
-  )
-
-  pbSet(28, pbGetCorrectEvo(pkmn, pbGetPkmnTargetLvl))
+def filterPkmnHasEvolution(species)
+  return !species.get_evolutions.empty?
 end
 
 def pbGetCorrectEvo(pkmn, lvl)
@@ -106,7 +128,8 @@ $PokemonStorage.boxes.each do |box|
     box.each do |pkmn|
         if pkmn != nil
             if pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn1, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn2, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn3, 5).species_data.get_baby_species.to_s
-                return true
+              echoln "Pokemon was found in a box"
+              return true
             end
         end
     end
@@ -124,9 +147,6 @@ return false
 end
 
 def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
-    nfe = false
-    nfe = true if pbReadFile("PBS/gamemode.txt").to_i == 3
-#
     if mega
         pkmn1 = pbGenMegaPkmn
         pkmn2 = pbGenMegaPkmn
@@ -137,43 +157,18 @@ def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
         pkmn3 = pbGet(28)
     end
 
-    if nfe
-        while (pbDevolvePkmn(pkmn1) == nil || pbDevolvePkmn(pkmn2) == nil || pbDevolvePkmn(pkmn3) == nil)
-             pbGenPokeChoice
-             pkmn1 = pbGet(26)
-             pkmn2 = pbGet(27)
-             pkmn3 = pbGet(28)
-        end
-
-         pkmn1 = pbDevolvePkmn(pkmn1)
-         pkmn2 = pbDevolvePkmn(pkmn2)
-         pkmn3 = pbDevolvePkmn(pkmn3)
-    end
-
     while (pkmn1 == pkmn2 || pkmn1 == pkmn3 || pkmn2 == pkmn3 || pbPkmnOwned?(pkmn1, pkmn2, pkmn3))
+      echoln "Pokemons are not unique. Rerolling..."
         if mega
-            pkmn1 = pbGenMegaPkmn
-            pkmn2 = pbGenMegaPkmn
-            pkmn3 = pbGenMegaPkmn
+          pkmn1 = pbGenMegaPkmn
+          pkmn2 = pbGenMegaPkmn
+          pkmn3 = pbGenMegaPkmn
         else
-        pbGenPokeChoice
-            pkmn1 = pbGet(26)
-            pkmn2 = pbGet(27)
-            pkmn3 = pbGet(28)
+          pbGenPokeChoice
+          pkmn1 = pbGet(26)
+          pkmn2 = pbGet(27)
+          pkmn3 = pbGet(28)
         end
-
-       if nfe
-            while (pbDevolvePkmn(pkmn1) == nil || pbDevolvePkmn(pkmn2) == nil || pbDevolvePkmn(pkmn3) == nil)
-                 pbGenPokeChoice
-                 pkmn1 = pbGet(26)
-                 pkmn2 = pbGet(27)
-                 pkmn3 = pbGet(28)
-            end
-
-             pkmn1 = pbDevolvePkmn(pkmn1)
-             pkmn2 = pbDevolvePkmn(pkmn2)
-             pkmn3 = pbDevolvePkmn(pkmn3)
-       end
     end
 
     $h=rand(4)

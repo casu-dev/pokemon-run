@@ -1,5 +1,24 @@
+# returns a random pokemon when amount = 1 or returns a list of distinct random pokemons of size amount
 def pbChooseRandomPokemon(whiteList=nil, blackList=nil, addList=nil,
-                          base_only=true, choose_gen=nil, typeWhitelist=nil)
+  base_only=true, choose_gen=nil, typeWhitelist=nil,
+  filterFunc=method(:noFilter), amount = 1)
+  pool = pbGetRandomPokemonPool(whiteList, blackList, addList, base_only, choose_gen, typeWhitelist, filterFunc)
+
+  if amount <= 1
+    return pool.delete_at(rand(pool.length))
+  else
+    result = []
+    (0...amount).each do |i|
+      result.push(pool.delete_at(rand(pool.length)))
+    end
+    return result
+  end
+end
+
+# returns a list of random pokemon 
+def pbGetRandomPokemonPool(whiteList=nil, blackList=nil, addList=nil,
+                          base_only=true, choose_gen=nil, typeWhitelist=nil,
+                          filterFunc=method(:noFilter))
 
   # If blackList is set to "suggested", then set to mythical and legendary Pokémon
   if blackList == "suggested"
@@ -39,26 +58,26 @@ def pbChooseRandomPokemon(whiteList=nil, blackList=nil, addList=nil,
       whiteList[i] = GameData::Species.try_get(s)
     end
     if base_only
-      whiteList.each { |s| arr.push(s.id) if !blackList.include?(s.id) && s.id == s.get_baby_species  && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2))}
+      whiteList.each { |s| arr.push(s.id) if !blackList.include?(s.id) && s.id == s.get_baby_species  && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2)) && filterFunc.call(s)}
     else
-      whiteList.each { |s| arr.push(s.id) if !blackList.include?(s.id) && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2)) }
+      whiteList.each { |s| arr.push(s.id) if !blackList.include?(s.id) && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2)) && filterFunc.call(s)}
     end
   else
     if base_only
       GameData::Species.each do |s|
-        arr.push(s.id) if choose_gen.include?(s.generation) && !blackList.include?(s.id) && s.id == s.get_baby_species && s.form == 0 && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2))
+        arr.push(s.id) if choose_gen.include?(s.generation) && !blackList.include?(s.id) && s.id == s.get_baby_species && s.form == 0 && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2)) && filterFunc.call(s)
       end
     else
       GameData::Species.each do |s|
-        arr.push(s.id) if choose_gen.include?(s.generation) && !blackList.include?(s.id) && s.form == 0 && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2))
+        arr.push(s.id) if choose_gen.include?(s.generation) && !blackList.include?(s.id) && s.form == 0 && (typeWhitelist.include?(s.type1) || typeWhitelist.include?(s.type2)) && filterFunc.call(s)
       end
     end
   end
+  return arr
+end
 
-  # Pull random entry from array
-  pkmn = arr[rand(arr.length)]
-  return pkmn
-
+def noFilter(p)
+  return true
 end
 
 # Returns array of mythical and legendary Pokémon
