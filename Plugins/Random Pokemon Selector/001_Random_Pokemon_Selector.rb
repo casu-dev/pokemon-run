@@ -1,7 +1,14 @@
 # returns a random pokemon when amount = 1 or returns a list of distinct random pokemons of size amount
-def pbChooseRandomPokemon(whiteList=nil, blackList=nil, addList=nil,
-  base_only=true, choose_gen=nil, typeWhitelist=nil,
-  filterFunc=method(:noFilter), amount = 1)
+def pbChooseRandomPokemon(
+  whiteList: nil, 
+  blackList: nil, 
+  addList: nil,
+  base_only: true, 
+  choose_gen: nil, 
+  typeWhitelist: nil,
+  filterFunc: method(:noFilter), 
+  amount: 1
+)
   pool = pbGetRandomPokemonPool(whiteList, blackList, addList, base_only, choose_gen, typeWhitelist, filterFunc)
 
   if amount <= 1
@@ -28,7 +35,7 @@ def pbGetRandomPokemonPool(whiteList=nil, blackList=nil, addList=nil,
   # Option for a second black list, useful if suggested black list is requested and the user wants to add into that array rather than rewrite it
   # addList is ignored if blackList is not specified
   if addList && blackList
-    blackList += addList
+    blackList.concat(addList)
   end
 
   # Set blackList to empty array if it doesn't exist by this point

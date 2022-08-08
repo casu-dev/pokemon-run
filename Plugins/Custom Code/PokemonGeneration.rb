@@ -43,13 +43,9 @@ def pbGenPokeChoice
   
   if !nfe
     pkmns = pbChooseRandomPokemon(
-      whiteList = nil,
-      blackList = 'suggested',
-      addList = alreadyOwned,
-      base_only = true,
-      choose_gen = [1, 2, 3, 4, 5],
-      amount=3
-    )  
+      addList: alreadyOwned,
+      amount: 3
+    )
     # do for every pokemon save slot
     [26, 27, 28].each do |i|
       pbSet(i, pbGetCorrectEvo(pkmns.pop, pbGetPkmnTargetLvl))   
@@ -57,14 +53,9 @@ def pbGenPokeChoice
   else
     startRoll = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     pkmns = pbChooseRandomPokemon(
-      whiteList = nil,
-      blackList = 'suggested',
-      addList = alreadyOwned,
-      base_only = true,
-      choose_gen = [1, 2, 3, 4, 5],
-      typeWhitelist=nil,
-      filterFunc=method(:filterPkmnHasEvolution),
-      amount=3
+      addList: alreadyOwned,
+      filterFunc: method(:filterPkmnHasEvolution),
+      amount: 3
     )
     echoln "Gen Result: " + pkmns.to_s
     echoln "Generating Poke: pbChooseRandomPokemon took (s):" + (Process.clock_gettime(Process::CLOCK_MONOTONIC) - startRoll).to_s
@@ -99,31 +90,22 @@ end
 
 def pbGenStarterPkmn(type)
   pkmn = pbChooseRandomPokemon(
-    whiteList = %i[BULBASAUR CHARMANDER SQUIRTLE CHIKORITA CYNDAQUIL TOTODILE TREECKO TORCHIC MUDKIP
+    whiteList: %i[BULBASAUR CHARMANDER SQUIRTLE CHIKORITA CYNDAQUIL TOTODILE TREECKO TORCHIC MUDKIP
                    TURTWIG CHIMCHAR PIPLUP SNIVY TEPIG OSHAWOTT],
-    blackList = 'suggested',
-    addList = nil,
-    base_only = true,
-    choose_gen = [1, 2, 3, 4, 5],
-    typeWhitelist = [type]
+    typeWhitelist: [type]
   )
 end
 
 def pbGenMegaPkmn
 pkmn = pbChooseRandomPokemon(
-    whiteList = %i[VENUSAUR CHARIZARD BLASTOISE BEEDRILL PIDGEOT ALAKAZAM SLOWBRO GENGAR KANGASKHAN PINSIR GYARADOS AERODACTYL
+    whiteList: %i[VENUSAUR CHARIZARD BLASTOISE BEEDRILL PIDGEOT ALAKAZAM SLOWBRO GENGAR KANGASKHAN PINSIR GYARADOS AERODACTYL
 	 AMPHAROS STEELIX SCIZOR HERACROSS TYRANITAR SCEPTILE BLAZIKEN SWAMPERT GARDEVOIR SABLEYE MAWILE AGGRON MEDICHAM MANECTRIC
 	 SHARPEDO CAMERUPT ALTARIA BANETTE ABSOL GLALIE SALAMENCE METAGROSS LOPUNNY GARCHOMP LUCARIO ABOMASNOW GALLADE AUDINO],
-    blackList = 'suggested',
-    addList = nil,
-    base_only = true,
-    choose_gen = [1, 2, 3, 4, 5]
+    choose_gen: [1, 2, 3, 4, 5]
 )
-# pkmn.item=pbGetMegaStones(pkmn)[0].to_s
 end
 
 def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
-#GameData::Species.get_species_form(pkmn.species_data.get_baby_species,0).egg_moves
 $PokemonStorage.boxes.each do |box|
     box.each do |pkmn|
         if pkmn != nil
