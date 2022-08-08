@@ -79,13 +79,17 @@ def filterPkmnHasEvolution(species)
 end
 
 def pbGetCorrectEvo(pkmn, lvl)
-  res = pkmn
-  nxt = pkmn
-  while nxt
-    res = nxt
-    nxt = Pokemon.new(nxt, lvl).check_evolution_on_level_up
-  end
-  res
+#Hi
+    evos = Pokemon.new(pkmn, lvl).species_data.get_evolutions
+    if evos.to_s != '[]'
+        if evos[0][1].to_s == "Level" && lvl >= evos[0][2].to_i
+            return evos[0][0].to_s
+        else
+            return pkmn
+        end
+    else
+        return pkmn
+    end
 end
 
 def pbGenStarterPkmn(type)
