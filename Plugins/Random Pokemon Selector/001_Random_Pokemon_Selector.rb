@@ -1,10 +1,10 @@
 # returns a random pokemon when amount = 1 or returns a list of distinct random pokemons of size amount
 def pbChooseRandomPokemon(
   whiteList: nil, 
-  blackList: nil, 
+  blackList: "suggested", 
   addList: nil,
   base_only: true, 
-  choose_gen: nil, 
+  choose_gen: [1,2,3,4,5], 
   typeWhitelist: nil,
   filterFunc: method(:noFilter), 
   amount: 1
