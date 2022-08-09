@@ -254,6 +254,22 @@ def pbResetMessage
   end
 end
 
+# Used when Oak gives 1 Pokemon, so that not all Pokemon's EVs will be checked
+def pbSetPkmnEv(pkmn)
+      $Lv = pbGetPkmnTargetLvl
+      $TargetEv = 0
+      $TargetEv = 46 if $Lv == 30
+      $TargetEv = 69 if $Lv == 60
+      $TargetEv = 84 if $Lv == 90
+
+      pkmn.ev[:HP] = $TargetEv
+      pkmn.ev[:ATTACK] = $TargetEv
+      pkmn.ev[:DEFENSE] = $TargetEv
+      pkmn.ev[:SPECIAL_ATTACK] = $TargetEv
+      pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv
+      pkmn.ev[:SPEED] = $TargetEv
+end
+
 def pbChangeAllPkmnEv
   $Lv = pbGetPkmnTargetLvl
   $TargetEv = 0
@@ -704,12 +720,25 @@ def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false)
           species_name = pkmn.speciesName
           # Set hidden ability
           pkmn.setAbility(2)
+          pbSetPkmnEv(pkmn)
           pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
           pbNicknameAndStore(pkmn)
           $Trainer.pokedex.register(pkmn) if see_form
           return true
     else
-        pbAddPokemon(pkmn, level, see_form)
+          return false if !pkmn
+          if pbBoxesFull?
+            pbMessage(_INTL("There's no more room for Pokémon!\1"))
+            pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
+            return false
+          end
+          pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
+          species_name = pkmn.speciesName
+          pbSetPkmnEv(pkmn)
+          pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
+          pbNicknameAndStore(pkmn)
+          $Trainer.pokedex.register(pkmn) if see_form
+          return true
     end
 end
 

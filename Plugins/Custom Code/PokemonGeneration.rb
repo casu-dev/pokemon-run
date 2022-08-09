@@ -130,6 +130,7 @@ def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
         pkmn2 = pbGenMegaPkmn
         pkmn3 = pbGenMegaPkmn
     else
+        pbGenPokeChoice
         pkmn1 = pbGet(26)
         pkmn2 = pbGet(27)
         pkmn3 = pbGet(28)
