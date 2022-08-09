@@ -15,11 +15,10 @@
 - 25% chance for hidden abilities (starters excluded)
 
 ## Open Tickets
-- Offered Pokemon in F3 & F4 shall be fully evolved.
 - Oak at the start of Floor 4 shall teach the Player, how to activate Mega Pokemon (press "y").
 - Change Oak at the start of floor 4 in "Lucky weakling" mode. He shouldnt talk about Megas and shouldnt offer mega stones.
 - New map layout (make the user able to revisit rooms in an unrestricted order)
 - Increase Rocket Grump pool + Elite Trainer F1/F2 Pool + F1 Stanard Trainer pool
-- F3 start room: Oaks assistant shall come to the player and talk what he has to say.
+- F3 start room: Oaks assistant shall come to the player and talk what he has to say. Assistant remove bug in nfe
 - Fix sprites (some are huge)
 - Fix the whiteblock bug in JoiPlay.

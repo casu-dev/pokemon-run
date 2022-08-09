@@ -74,17 +74,40 @@ def filterPkmnHasEvolution(species)
   return !GameData::Species.try_get(species).get_evolutions.empty?
 end
 
-def pbGetCorrectEvo(pkmn, lvl)
-    evos = Pokemon.new(pkmn, lvl).species_data.get_evolutions
-    if evos.to_s != '[]'
+def pbGetCorrectLvlEvo(pkmn, lvl)
+    evos = GameData::Species.try_get(pkmn).get_evolutions
+    if evos.length() == 1
         if evos[0][1].to_s == "Level" && lvl >= evos[0][2].to_i
-            return evos[0][0].to_s
+            return pbGetCorrectLvlEvo(evos[0][0], lvl)
         else
             return pkmn
         end
     else
         return pkmn
     end
+end
+
+def pbGetCorrectEvo(pkmn, lvl)
+  p = GameData::Species.try_get(pbGetCorrectLvlEvo(pkmn, lvl))
+  $Lv = pbGetPkmnTargetLvl
+  evos = p.get_evolutions
+
+  if evos.length() == 1 && $Lv >= 60
+        # p2 is the evolution of p
+        p2 = GameData::Species.try_get(evos[0][0])
+        if !filterPkmnHasEvolution(p2)
+           return p2.id #i.e Sneasel -> Weavile
+        else
+           evos2 = p2.get_evolutions
+           if evos2.length() > 1
+                return p2.id # no i.e
+           else
+                return evos2[0][0] #i.e Cleffa -> Clefable
+           end
+        end
+  else
+        return p.id
+  end
 end
 
 def pbGenStarterPkmn(type)
