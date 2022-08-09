@@ -692,6 +692,27 @@ def pbBattlerIsPkmn?(bttlr, pkmn)
     return true
 end
 
+def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false)
+    if hiddenAbility
+          return false if !pkmn
+          if pbBoxesFull?
+            pbMessage(_INTL("There's no more room for Pokémon!\1"))
+            pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
+            return false
+          end
+          pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
+          species_name = pkmn.speciesName
+          # Set hidden ability
+          pkmn.setAbility(2)
+          pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
+          pbNicknameAndStore(pkmn)
+          $Trainer.pokedex.register(pkmn) if see_form
+          return true
+    else
+        pbAddPokemon(pkmn, level, see_form)
+    end
+end
+
 def pbScout
 #$Trainer.mystery_gifts.push("gotcha") hi
 pbMessage(_INTL("Room scripts actice"))

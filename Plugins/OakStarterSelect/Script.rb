@@ -2,13 +2,14 @@
 # DiegoWT's Starter Selection script
 #===============================================================================
 class DiegoWTsStarterSelection
-  def initialize(pkmn1,pkmn2,pkmn3, lv)
+  def initialize(pkmn1,pkmn2,pkmn3, lv, hiddenAbility = false)
     @select = nil
     @frame = 0
     @selframe = 0 
     @endscene = 0
     @pkmn1 = pkmn1; @pkmn2 = pkmn2; @pkmn3 = pkmn3
     @lv = lv;
+    @hiddenAbility = hiddenAbility;
     
     @viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
     @viewport.z = 99999
@@ -480,7 +481,8 @@ class DiegoWTsStarterSelection
       $game_variables[7] = @select if $game_variables[7] == 0
       @endscene = 1
       pbCloseScene
-      pbAddPokemon(@data["pkmn_#{@select}"],@lv)
+      # give to info about hidden ability
+      pbkAddPokemon(@data["pkmn_#{@select}"],@lv, true, @hiddenAbility)
     else
       @sprites["textbox"].y = @oldMsgY
       @sprites["textbox"].text = _INTL("<ac>Choose a Pokémon.</ac>")
