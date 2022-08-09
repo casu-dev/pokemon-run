@@ -75,7 +75,6 @@ def filterPkmnHasEvolution(species)
 end
 
 def pbGetCorrectEvo(pkmn, lvl)
-#Hi
     evos = Pokemon.new(pkmn, lvl).species_data.get_evolutions
     if evos.to_s != '[]'
         if evos[0][1].to_s == "Level" && lvl >= evos[0][2].to_i
@@ -196,15 +195,18 @@ def pbGiveRandomPoke(saveSlot)
 end
 
 def pbDevolvePkmn(p)
-  p = Pokemon.new(p, 5)
-  if !can_evolve?(p)
-      p = p.species_data.get_baby_species.to_s
-      p = Pokemon.new(p, 5)
-      if can_evolve?(p)
-          return p.species_data.get_evolutions[0][0].to_s if can_evolve?(Pokemon.new(p.species_data.get_evolutions[0][0].to_s, 5))
+  s = GameData::Species.try_get(p)
+  if s.get_evolutions.empty?
+      baby = GameData::Species.try_get(s.get_baby_species)
+      if !baby.get_evolutions.empty?
+           if filterPkmnHasEvolution(GameData::Species.try_get(baby.get_evolutions[0][0]))
+                return baby.get_evolutions[0][0]
+           else
+                return baby.id
+           end
       else
           return nil
       end
   end
-  return p.species.to_s
+  return s.id
 end
