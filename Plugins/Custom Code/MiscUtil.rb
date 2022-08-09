@@ -492,12 +492,12 @@ def pbReadFile(filename)
                   if lineno==1 && line[0].ord==0xEF && line[1].ord==0xBB && line[2].ord==0xBF
                     line = line[3,line.length-3]
                   end
-                  line.force_encoding(Encoding::UTF_8)
-                  line = pbPrepline(line)
+                  # line.force_encoding(Encoding::UTF_8)
+                  # line = pbPrepline(line)
                   output = line.to_s
-                  if !line[/^\#/] && !line[/^\s*$/]
-                    FileLineData.setLine(line,lineno)
-                  end
+                  #if !line[/^\#/] && !line[/^\s*$/]
+                  #  FileLineData.setLine(line,lineno)
+                  #end
                   lineno += 1
                 }
               }
