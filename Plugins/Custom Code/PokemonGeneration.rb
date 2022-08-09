@@ -36,7 +36,7 @@ end
 def pbGenPokeChoice
   startTime = Process.clock_gettime(Process::CLOCK_MONOTONIC)
   nfe = false
-  nfe = true if pbReadFile("PBS/gamemode.txt").to_i == 3
+  nfe = true if pbReadFile("gamemode.txt").to_i == 3
   echoln "Generating Poke Choice. With nfe? " + nfe.to_s 
   alreadyOwned = [] #todo
   startGen = Process.clock_gettime(Process::CLOCK_MONOTONIC)

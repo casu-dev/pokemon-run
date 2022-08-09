@@ -126,7 +126,7 @@ end
 def pbForceEvo?(pkmn)
   # To-do?: Exclude Eggs
   evo_info = pkmn.species_data.get_evolutions
-  if pkmn.species_data.get_evolutions[0] && (pbReadFile("PBS/gamemode.txt").to_i != 3 || can_evolve?(Pokemon.new(pkmn.species_data.get_evolutions[0][0].to_s, 5)))
+  if pkmn.species_data.get_evolutions[0] && (pbReadFile("gamemode.txt").to_i != 3 || can_evolve?(Pokemon.new(pkmn.species_data.get_evolutions[0][0].to_s, 5)))
     speech = nil
     evos = []
 
@@ -477,10 +477,16 @@ def pbPrepline(line)
            return line
 end
 
-def pbReadFile(filename = "PBS/mode.txt")
+def pbReadFile(filename)
+    path = if File.directory?(System.data_directory)
+                System.data_directory + '/' + filename
+              else
+                './' + filename
+              end
+    pbWriteIntoFile(filename, 0) if !File.exists?(path)
     output=""
-    File.open(filename,"rb") { |f|
-          FileLineData.file = filename
+    File.open(path,"rb") { |f|
+          FileLineData.file = path
                 lineno = 1
                 f.each_line { |line|
                   if lineno==1 && line[0].ord==0xEF && line[1].ord==0xBB && line[2].ord==0xBF
@@ -498,20 +504,25 @@ def pbReadFile(filename = "PBS/mode.txt")
     return output
 end
 
-def pbWriteIntoFile(filename = "PBS/mode.txt", text = "")
-    File.open(filename, "w") { |f| f.write text }
+def pbWriteIntoFile(filename, text = "")
+    path = if File.directory?(System.data_directory)
+                System.data_directory + '/' + filename
+              else
+                './' + filename
+              end
+    File.open(path, "w") { |f| f.write text }
 end
 
 def pbIncreaseCompletionCount
-    old = pbReadFile(filename = "PBS/runcompletedcount.txt").to_i
+    old = pbReadFile("runcompletedcount.txt").to_i
     old = (old + 1).to_s
-    pbWriteIntoFile(filename = "PBS/runcompletedcount.txt", text = old)
+    pbWriteIntoFile("runcompletedcount.txt", text = old)
     pbMessage(_INTL("You unlocked a new game mode.")) if (old.to_i+1) <= pbGetGameModes.length()
     pbMessage(_INTL("You unlocked all game modes.")) if (old.to_i+1) == pbGetGameModes.length()
 end
 
 def pbChoseMode
-    completionCounter = pbReadFile("PBS/runcompletedcount.txt").to_i
+    completionCounter = pbReadFile("runcompletedcount.txt").to_i
     if (completionCounter > 0)
         modes = pbGetGameModes
         modeCounter = completionCounter
@@ -529,12 +540,13 @@ def pbChoseMode
 
             loop do
                 if cmd2 == 0
-                    pbWriteIntoFile(filename = "PBS/gamemode.txt", 0)
-                    pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 0)
+                    pbWriteIntoFile("gamemode.txt", 0)
+                    pbWriteIntoFile("battlerinfo.txt", 0)
+                    pbPlaySaveSound
                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +"."))
                     break
                 elsif cmd2 == 1
-                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 1)
+                     pbWriteIntoFile("gamemode.txt", 1)
                      index = rand(1..10)
                      info = "Error"
                      info = "Atk and Def" if index == 1
@@ -548,17 +560,20 @@ def pbChoseMode
                      info = "Sp. Atk and Speed" if index == 9
                      info = "Sp. Def and Speed" if index == 10
 
-                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", index)
+                     pbWriteIntoFile("battlerinfo.txt", index)
+                     pbPlaySaveSound
                      pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The " + info + " stat of YOUR Pokémon will be swapped in battle."))
                      break
                 elsif cmd2 == 2
-                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 2)
-                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 11)
+                     pbWriteIntoFile("gamemode.txt", 2)
+                     pbWriteIntoFile("battlerinfo.txt", 11)
+                     pbPlaySaveSound
                      pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The first Pokémon in your party will have the ability of the last one in battle."))
                      break
                 elsif cmd2 == 3
-                                     pbWriteIntoFile(filename = "PBS/gamemode.txt", 3)
-                                     pbWriteIntoFile(filename = "PBS/battlerinfo.txt", 0)
+                                     pbWriteIntoFile("gamemode.txt", 3)
+                                     pbWriteIntoFile("battlerinfo.txt", 0)
+                                     pbPlaySaveSound
                                      pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
                                      break
                 end
@@ -566,6 +581,12 @@ def pbChoseMode
     else
         pbMessage(_INTL("To play another game mode talk to me. You can unlock game modes by completing runs."))
     end
+end
+
+def pbPlaySaveSound
+ if FileTest.audio_exist?("Audio/ME/GUI save game")
+                    pbMEPlay("GUI save game",80)
+ end
 end
 
 def pbGetGameModes
@@ -672,6 +693,6 @@ def pbBattlerIsPkmn?(bttlr, pkmn)
 end
 
 def pbScout
-#$Trainer.mystery_gifts.push("gotcha")
+#$Trainer.mystery_gifts.push("gotcha") hi
 pbMessage(_INTL("Room scripts actice"))
 end
