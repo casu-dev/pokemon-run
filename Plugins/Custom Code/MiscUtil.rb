@@ -115,7 +115,6 @@ def pbGiveMoney(amount)
 end
 
 def can_evolve?(pkmn)
-  # To-do?: Exclude Eggs
   if pkmn.species_data.get_evolutions[0]
     true
   else
@@ -126,7 +125,7 @@ end
 def pbForceEvo?(pkmn)
   # To-do?: Exclude Eggs
   evo_info = pkmn.species_data.get_evolutions
-  if pkmn.species_data.get_evolutions[0] && (pbReadFile("gamemode.txt").to_i != 3 || can_evolve?(Pokemon.new(pkmn.species_data.get_evolutions[0][0].to_s, 5)))
+  if pkmn.species_data.get_evolutions[0] && pbCanEvoInCurrentMode(pkmn)
     speech = nil
     evos = []
 
@@ -742,7 +741,32 @@ def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false)
     end
 end
 
+def pbOakSpawn4
+    if  pbReadFile("gamemode.txt").to_i != 3
+        pbMessage(_INTL("Gratulations to your victory! This is the last Floor. It's gonna be tough. I think you're ready for Mega-Evolutions. Take one of these Pokémon."))
+        pbRandomPkmnSelection(pbGetPkmnTargetLvl, true)
+        pbReceiveItem(:MEGARING)
+        pbMessage(_INTL("Okay, now take one of my Mega-Stones."))
+        pbOfferUsableMegaStones
+        pbMessage(_INTL("Excellent choice! Equip the Mega-Stone and press Y in Battle to mega evolve. I'm continuing my research now, have a good one!"))
+    else
+        pbMessage(_INTL("Gratulations to your victory! This is the last Floor. It's gonna be tough. Take one of these Pokémon."))
+        pbRandomPkmnSelection(pbGetPkmnTargetLvl)
+        pbMessage(_INTL("Excellent choice! I'm continuing my research now, have a good one!"))
+    end
+end
+
+def pbCanEvoInCurrentMode(pkmn)
+    if pbReadFile("gamemode.txt").to_i != 3
+        return can_evolve?(pkmn)
+    else
+        if can_evolve?(pkmn)
+            return false if GameData::Species.try_get(GameData::Species.try_get(pkmn.species).get_evolutions[0][0]).get_evolutions.empty? #Returns false, if evolution cant evolve.
+            return true
+        end
+    end
+end
+
 def pbScout
-#$Trainer.mystery_gifts.push("gotcha") hi
 pbMessage(_INTL("Room scripts actice"))
 end
