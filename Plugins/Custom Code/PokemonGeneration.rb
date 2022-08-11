@@ -120,7 +120,7 @@ def pbGenMegaPkmn
 pkmn = pbChooseRandomPokemon(
     whiteList: %i[VENUSAUR CHARIZARD BLASTOISE BEEDRILL PIDGEOT ALAKAZAM SLOWBRO GENGAR KANGASKHAN PINSIR GYARADOS AERODACTYL
 	 AMPHAROS STEELIX SCIZOR HERACROSS TYRANITAR SCEPTILE BLAZIKEN SWAMPERT GARDEVOIR SABLEYE MAWILE AGGRON MEDICHAM MANECTRIC
-	 SHARPEDO CAMERUPT ALTARIA BANETTE ABSOL GLALIE SALAMENCE METAGROSS LOPUNNY GARCHOMP LUCARIO ABOMASNOW GALLADE AUDINO]
+	 SHARPEDO CAMERUPT ALTARIA BANETTE ABSOL GLALIE SALAMENCE METAGROSS LOPUNNY GARCHOMP LUCARIO ABOMASNOW GALLADE AUDINO], amount:3
 )
 end
 
@@ -149,9 +149,10 @@ end
 
 def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
     if mega
-        pkmn1 = pbGenMegaPkmn
-        pkmn2 = pbGenMegaPkmn
-        pkmn3 = pbGenMegaPkmn
+        pkmnList = pbGenMegaPkmn
+        pkmn1 = pkmnList[0]
+        pkmn2 = pkmnList[1]
+        pkmn3 = pkmnList[2]
     else
         pbGenPokeChoice
         pkmn1 = pbGet(26)

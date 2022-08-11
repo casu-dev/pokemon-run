@@ -15,7 +15,6 @@ def pbChooseRandomPokemon(
 
   if amount <= 1
     pool.delete_at(rand(pool.length))
-    
   else
     result = []
     (0...amount).each do |_i|
