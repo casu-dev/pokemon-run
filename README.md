@@ -18,5 +18,3 @@
 - New map layout (make the user able to revisit rooms in an unrestricted order)
 - Increase Rocket Grump pool + Elite Trainer F1/F2 Pool + F1 Stanard Trainer pool
 - Fix sprites (some are huge)
-- offered mega pokemon should have no dublicates
-- Fix the whiteblock bug in JoiPlay.
