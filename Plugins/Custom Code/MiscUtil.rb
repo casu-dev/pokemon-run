@@ -671,7 +671,16 @@ size = $Trainer.party.length()
                     loop do
                         if cmd2 == 0
                            $Trainer.party.each do |pkmn|
-                              pbChangeLevel(pkmn, 15, nil) if !pkmn.nil?
+                               if !pkmn.nil?
+                                   pbChangeLevel(pkmn, 15, nil)
+                                   pkmn.ev[:HP] = 0
+                                   pkmn.ev[:ATTACK] = 0
+                                   pkmn.ev[:DEFENSE] = 0
+                                   pkmn.ev[:SPECIAL_ATTACK] = 0
+                                   pkmn.ev[:SPECIAL_DEFENSE] = 0
+                                   pkmn.ev[:SPEED] = 0
+                                   pkmn.reset_moves
+                               end
                            end
                            pbFadeOutIn do
                                $game_temp.player_new_map_id = 79

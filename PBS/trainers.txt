@@ -268,23 +268,23 @@ Pokemon = SHIFTRY,55
 #-------------------------------
 [GENTLEMAN,Elite Trainer]
 LoseText = "A good battle indeed!"
-Pokemon = MUNNA,13
+Pokemon = MUNNA,14
     AbilityIndex = 1
-Pokemon = RUFFLET,13
+Pokemon = RUFFLET,14
     AbilityIndex = 1
 #-------------------------------
 [GENTLEMAN,Elite Trainer,1]
 LoseText = "A good battle indeed!"
-Pokemon = MUNNA,13
+Pokemon = MUNNA,14
     AbilityIndex = 1
-Pokemon = MUNCHLAX,13
+Pokemon = MUNCHLAX,14
     AbilityIndex = 1
 #-------------------------------
 [GENTLEMAN,Elite Trainer,2]
 LoseText = "A good battle indeed!"
-Pokemon = MUNNA,13
+Pokemon = MUNNA,14
     AbilityIndex = 1
-Pokemon = PORYGON,13
+Pokemon = PORYGON,14
     AbilityIndex = 0
 #-------------------------------
 [TEAMROCKET_M,Rocket Grunt]
@@ -299,7 +299,7 @@ LoseText = "GG WP"
 Pokemon = MIENFOO,16
     Moves = FAKEOUT,UTURN,LOWSWEEP,ROCKTOMB
     AbilityIndex = 1
-    IV = 20,20,20,20,20,20
+    IV = 15,15,15,15,15,15
 Pokemon = MAKUHITA,16
     Moves = ROCKTOMB,KNOCKOFF,FORCEPALM,BULKUP
     AbilityIndex = 2
@@ -341,25 +341,25 @@ Pokemon = AXEW,16
 #-------------------------------
 [LADY,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = MAWILE,28
-Pokemon = CORSOLA,28
-Pokemon = CHIMECHO,28
+Pokemon = MAWILE,29
+Pokemon = CORSOLA,29
+Pokemon = CHIMECHO,29
 #-------------------------------
 [LADY,Elite Trainer,1]
 LoseText = "A good battle indeed!"
-Pokemon = KINGLER,28
+Pokemon = KINGLER,29
     AbilityIndex = 2
-Pokemon = TORKOAL,28
+Pokemon = TORKOAL,29
     AbilityIndex = 2
-Pokemon = TANGELA,28
+Pokemon = TANGELA,29
     AbilityIndex = 0
 #-------------------------------
 [LADY,Elite Trainer,2]
 LoseText = "A good battle indeed!"
-Pokemon = WIGGLYTUFF,28
-Pokemon = TROPIUS,28
+Pokemon = WIGGLYTUFF,29
+Pokemon = TROPIUS,29
     AbilityIndex = 0
-Pokemon = GIRAFARIG,28
+Pokemon = GIRAFARIG,29
     AbilityIndex = 0
 #-------------------------------
 [TEAMROCKET_F,Rocket Grunt]
@@ -406,10 +406,10 @@ Pokemon = GOLETT,32
 Pokemon = CHANDELURE,32
     Moves = FLAMETHROWER,HEX,ENERGYBALL,WILLOWISP
     AbilityIndex = 0
-    IV = 24,24,24,24,24,24
+    IV = 0,0,0,0,0,0
 Pokemon = MISMAGIUS,32
     Moves = NASTYPLOT,SHADOWBALL,HIDDENPOWERFIGHTING,CONFUSERAY
-    IV = 24,24,24,24,24,24
+    IV = 0,0,0,0,0,0
 #-------------------------------
 [ELITEFOUR_Agatha,Agatha,2]
 LoseText = "GG WP"
@@ -432,24 +432,24 @@ Pokemon = DITTO,32
 #-------------------------------
 [BEAUTY,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = TYRANITAR,55
-Pokemon = JELLICENT,55
-Pokemon = CROBAT,55
+Pokemon = TYRANITAR,58
+Pokemon = JELLICENT,58
+Pokemon = CROBAT,58
 #-------------------------------
 [BEAUTY,Elite Trainer,1]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = DRAGONITE,55
+Pokemon = DRAGONITE,58
     AbilityIndex = 2
-Pokemon = TENTACRUEL,55
-Pokemon = HIPPOWDON,55
+Pokemon = TENTACRUEL,58
+Pokemon = HIPPOWDON,58
 #-------------------------------
 [BEAUTY,Elite Trainer,2]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = GARCHOMP,55
+Pokemon = GARCHOMP,58
     AbilityIndex = 2
-Pokemon = SCIZOR,55
+Pokemon = SCIZOR,58
     AbilityIndex = 1
-Pokemon = SLOWBRO,55
+Pokemon = SLOWBRO,58
 #-------------------------------
 [ROCKETBOSS,Giovanni]
 LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
@@ -544,35 +544,35 @@ Pokemon = FROSLASS,60
 #-------------------------------
 [GAMBLER,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = MANECTRIC,85
+Pokemon = MANECTRIC,88
     AbilityIndex = 0
     Item = MANECTITE
-Pokemon = REUNICLUS,85
+Pokemon = REUNICLUS,88
     AbilityIndex = 1
-Pokemon = GLISCOR,85
+Pokemon = GLISCOR,88
     AbilityIndex = 1
-Pokemon = VENUSAUR,85
+Pokemon = VENUSAUR,88
 #-------------------------------
 [GAMBLER,Elite Trainer,1]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = AGGRON,85
+Pokemon = AGGRON,88
     AbilityIndex = 0
     Item = AGGRONITE
-Pokemon = JELLICENT,85
+Pokemon = JELLICENT,88
     AbilityIndex = 1
-Pokemon = MAMOSWINE,85
+Pokemon = MAMOSWINE,88
     AbilityIndex = 2
-Pokemon = CLEFABLE,85
+Pokemon = CLEFABLE,88
     AbilityIndex = 2
 #-------------------------------
 [GAMBLER,Elite Trainer,2]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = ALTARIA,85
+Pokemon = ALTARIA,88
     AbilityIndex = 2
     Item = ALTARIANITE
-Pokemon = HIPPOWDON,85
-Pokemon = GENGAR,85
-Pokemon = SCIZOR,85
+Pokemon = HIPPOWDON,88
+Pokemon = GENGAR,88
+Pokemon = SCIZOR,88
     AbilityIndex = 1
 #-------------------------------
 [LEADER_Giovanni,Giovanni]
