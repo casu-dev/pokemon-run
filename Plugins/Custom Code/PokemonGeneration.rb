@@ -163,9 +163,10 @@ def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
     while (pbPkmnOwned?(pkmn1, pkmn2, pkmn3))
       echoln "Pokemons are not unique. Rerolling..."
         if mega
-          pkmn1 = pbGenMegaPkmn
-          pkmn2 = pbGenMegaPkmn
-          pkmn3 = pbGenMegaPkmn
+          pkmnList = pbGenMegaPkmn
+          pkmn1 = pkmnList[0]
+          pkmn2 = pkmnList[1]
+          pkmn3 = pkmnList[2]
         else
           pbGenPokeChoice
           pkmn1 = pbGet(26)
