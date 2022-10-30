@@ -653,7 +653,7 @@ size = $Trainer.party.length()
                        $game_map.refresh
                        $game_temp.player_new_map_id = 79
                        $game_temp.player_new_x         = 9
-                       $game_temp.player_new_y         = 6
+                       $game_temp.player_new_y         = 4
                        $game_temp.player_new_direction = 0
                        $scene.transfer_player
                        $game_map.autoplay
