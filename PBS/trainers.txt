@@ -288,7 +288,7 @@ Pokemon = PORYGON,14
     AbilityIndex = 0
 #-------------------------------
 [TEAMROCKET_M,Rocket Grunt]
-LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+LoseText = "Wow! I'm impressed."
 Pokemon = MANKEY,12
     AbilityIndex = 0
 Pokemon = MAKUHITA,12
@@ -363,7 +363,7 @@ Pokemon = GIRAFARIG,29
     AbilityIndex = 0
 #-------------------------------
 [TEAMROCKET_F,Rocket Grunt]
-LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+LoseText = "Wow! I'm impressed."
 Pokemon = CLEFAIRY,28
     Item = EVIOLITE
     IV = 31,16,16,16,16,16
@@ -451,7 +451,7 @@ Pokemon = SCIZOR,58
 Pokemon = SLOWBRO,58
 #-------------------------------
 [ROCKETBOSS,Giovanni]
-LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+LoseText = "Wow! You are way stronger than I thought."
 Pokemon = MILOTIC,57
     AbilityIndex = 0
     Item = FLAMEORB
@@ -575,7 +575,7 @@ Pokemon = SCIZOR,88
     AbilityIndex = 1
 #-------------------------------
 [LEADER_Giovanni,Giovanni]
-LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+LoseText = "Well played, I'm impressed. Take this as a gift."
 Pokemon = MEDICHAM,90
     Item = MEDICHAMITE
     IV = 31,20,20,20,20,20
