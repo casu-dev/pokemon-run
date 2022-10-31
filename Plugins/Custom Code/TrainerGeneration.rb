@@ -7,7 +7,7 @@ TRAINER_OVERRIDE = [
   {
     tType: :LASS, tName: 'Trainer',
     lvl1: 25, lvl2: 28, numPkmn: 3,
-    pkmnPool: %i[GLOOM SEADRA LAMPENT STARAVIA KIRLIA GRAVELER MARSHTOMP LOUDRED POLIWHIRL NUZLEAF TANGELA WARTORTLE COMBUSKEN GOTHORITA BRONZOR KLANG KROKOROK MURKROW BAYLEEF CHARMELEON CROCONAW DEWOTT FLAAFFY GROTLE GROVYLE HERDIER IVYSAUR LAIRON LOMBRE MACHOKE NIDORINO PIDGEOTTO VANILLISH  WHIRLIPEDE]
+    pkmnPool: %i[GLOOM SEADRA LAMPENT STARAVIA KIRLIA GRAVELER MARSHTOMP LOUDRED POLIWHIRL NUZLEAF TANGELA WARTORTLE COMBUSKEN GOTHORITA BRONZOR KLANG KROKOROK MURKROW BAYLEEF CHARMELEON CROCONAW DEWOTT FLAAFFY GROTLE GROVYLE HERDIER IVYSAUR LAIRON LOMBRE MACHOKE NIDORINO PIDGEOTTO VANILLISH WHIRLIPEDE]
   },
   {
     tType: :COOLTRAINER_F, tName: 'Trainer',
@@ -18,17 +18,19 @@ TRAINER_OVERRIDE = [
     tType: :BIKER, tName: 'Trainer',
     lvl1: 80, lvl2: 85, numPkmn: 4,
     pkmnPool: %i[ALAKAZAM CONKELDURR EXCADRILL FERROTHORN GLISCOR GENGAR JELLICENT MAMOSWINE REUNICLUS SCIZOR STARMIE TENTACRUEL HIPPOWDON HAXORUS INFERNAPE LUCARIO METAGROSS ABOMASNOW TOXICROAK GYARADOS DONPHAN VAPOREON CHANDELURE FROSLASS STARAPTOR DARMANITAN EMPOLEON FLYGON RHYPERIOR MIENSHAO MILOTIC SNORLAX WEAVILE]
-  },
+  }
 ]
 
 TRAINER_INTRO_TEXT = [
-  ['I was given 5$ to stop you.', 'I just caught these. Let\'s see how strong they are.', 'Mom said I have to be home before it gets dark.'],
+  ['I was given 5$ to stop you.', 'I just caught these. Let\'s see how strong they are.',
+   'Mom said I have to be home before it gets dark.'],
   ['Stop right there!', 'What\'s the hurry?', 'I can\'t let you through.', 'I will not go easy on you!'],
   ['You look weak. This will be easier than i thought.', 'Last chance to turn around.', 'You don\'t stand a chance!'],
-  ['First I will finish your Pokémon, then I will finish you.', 'This will not end pretty.', 'I hope you wrote your testament.', 'Time to smash some Pokémon'],
+  ['First I will finish your Pokémon, then I will finish you.', 'This will not end pretty.',
+   'I hope you wrote your testament.', 'Time to smash some Pokémon']
 ]
 
-Events.onTrainerPartyLoad += proc { |sender, trainer_list|
+Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
   return unless trainer_list
 
   trainer_list.each do |trainer|
@@ -47,11 +49,11 @@ Events.onTrainerPartyLoad += proc { |sender, trainer_list|
       new_species = pkmnPool[rand(pkmnPool.length)]
 
       alreadyPicked.push(new_species)
-      newParty.push(Pokemon.new(new_species , lvl))
+      newParty.push(Pokemon.new(new_species, lvl))
     end
 
     trainer.party = newParty
-    echoln "Generated trainer party: " + newParty.to_s
+    echoln 'Generated trainer party: ' + newParty.to_s
   end
 }
 
@@ -59,4 +61,15 @@ def pbGenIntroText
   stages_cleared = pbGet(48)
   intro_list = TRAINER_INTRO_TEXT[stages_cleared]
   pbSet(34, intro_list[rand(intro_list.length)])
+end
+
+def pbDisplayBossTeam(prefix, trainerID, trainerName)
+  trainer =pbLoadTrainer(trainerID, trainerName, pbGet(37))
+  msg = prefix
+  party = trainer.party.each do |pkmn|
+    spec = GameData::Species.try_get(pkmn.species)
+    msg += spec.real_name.to_s + ', '
+  end  
+  msg = msg.delete_suffix(', ')
+  pbMessage(msg)
 end
