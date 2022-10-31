@@ -1,4 +1,4 @@
-MAP_PICK_POKEMON = { id: 88, name: 'Professor Oak', posx: 10, posy: 15, value: 15 }
+MAP_PICK_POKEMON = { id: 88, name: 'Professor Oak', posx: 10, posy: 10, value: 15 }
 
 MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 5, posy: 10, value: 10 }
 MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7, value: 5 }
