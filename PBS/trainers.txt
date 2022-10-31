@@ -416,19 +416,18 @@ LoseText = "GG WP"
 Pokemon = SIMISEAR,32
     Moves = YAWN,FLAMETHROWER,SUPERPOWER,GRASSKNOT
     AbilityIndex = 0
-    IV = 24,24,24,24,24,24
+    IV = 16,16,16,16,16,16
 Pokemon = SIMIPOUR,32
     Moves = SCALD,ICEBEAM,ENDEAVOR,ROCKTOMB
     AbilityIndex = 0
-    IV = 24,24,24,24,24,24
+    IV = 16,16,16,16,16,16
 Pokemon = SIMISAGE,32
     Moves = SEEDBOMB,LEECHSEED,ACROBATICS,ROCKSLIDE
     AbilityIndex = 0
-    IV = 24,24,24,24,24,24
+    IV = 16,16,16,16,16,16
 Pokemon = DITTO,32
     AbilityIndex = 2
-     Item = CHOICESCARF
-    IV = 24,24,24,24,24,24
+    IV = 16,16,16,16,16,16
 #-------------------------------
 [BEAUTY,Elite Trainer]
 LoseText = "You didn't have to win so convincingly!"
