@@ -117,11 +117,14 @@ def pbGenStarterPkmn(type)
 end
 
 def pbGenMegaPkmn
-pkmn = pbChooseRandomPokemon(
-    whiteList: %i[VENUSAUR CHARIZARD BLASTOISE BEEDRILL PIDGEOT ALAKAZAM SLOWBRO GENGAR KANGASKHAN PINSIR GYARADOS AERODACTYL
-	 AMPHAROS STEELIX SCIZOR HERACROSS TYRANITAR SCEPTILE BLAZIKEN SWAMPERT GARDEVOIR SABLEYE MAWILE AGGRON MEDICHAM MANECTRIC
-	 SHARPEDO CAMERUPT ALTARIA BANETTE ABSOL GLALIE SALAMENCE METAGROSS LOPUNNY GARCHOMP LUCARIO ABOMASNOW GALLADE AUDINO], amount:3
-)
+  pkmns = pbChooseRandomPokemon(
+      whiteList: %i[VENUSAUR CHARIZARD BLASTOISE BEEDRILL PIDGEOT ALAKAZAM SLOWBRO GENGAR KANGASKHAN PINSIR GYARADOS AERODACTYL
+    AMPHAROS STEELIX SCIZOR HERACROSS TYRANITAR SCEPTILE BLAZIKEN SWAMPERT GARDEVOIR SABLEYE MAWILE AGGRON MEDICHAM MANECTRIC
+    SHARPEDO CAMERUPT ALTARIA BANETTE ABSOL GLALIE SALAMENCE METAGROSS LOPUNNY GARCHOMP LUCARIO ABOMASNOW GALLADE AUDINO], amount:3
+  )
+  pbSet(26, pkmns[0])
+  pbSet(27, pkmns[1])
+  pbSet(28, pkmns[2])
 end
 
 def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
@@ -147,40 +150,33 @@ def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
   return false
 end
 
-def pbRandomPkmnSelection(lv, mega = false, hiddenAbility = true)
-    if mega
-        pkmnList = pbGenMegaPkmn
-        pkmn1 = pkmnList[0]
-        pkmn2 = pkmnList[1]
-        pkmn3 = pkmnList[2]
-    else
-        pbGenPokeChoice
-        pkmn1 = pbGet(26)
-        pkmn2 = pbGet(27)
-        pkmn3 = pbGet(28)
-    end
+def pbRandomPkmnGeneration(mega = false)
+  if mega
+    pbGenMegaPkmn()
+  else
+    pbGenPokeChoice()
+  end
 
-    while (pbPkmnOwned?(pkmn1, pkmn2, pkmn3))
-      echoln "Pokemons are not unique. Rerolling..."
-        if mega
-          pkmnList = pbGenMegaPkmn
-          pkmn1 = pkmnList[0]
-          pkmn2 = pkmnList[1]
-          pkmn3 = pkmnList[2]
-        else
-          pbGenPokeChoice
-          pkmn1 = pbGet(26)
-          pkmn2 = pbGet(27)
-          pkmn3 = pbGet(28)
-        end
-    end
+  while (pbPkmnOwned?(pbGet(26), pbGet(27), pbGet(28)))
+    echoln "Pokemons are not unique. Rerolling..."
+      if mega
+        pbGenMegaPkmn()
+      else
+        pbGenPokeChoice()
+      end
+  end
+end
 
-    # 25% chance for hidden ability
-    if(hiddenAbility && rand(4)==1)
-        DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv, hiddenAbility)
-    else
-        DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv)
-    end
+def pbRandomPkmnSelection(lv, hiddenAbility = true)
+  pkmn1 = pbGet(26)
+  pkmn2 = pbGet(27)
+  pkmn3 = pbGet(28)
+  # 25% chance for hidden ability
+  if(hiddenAbility && rand(4)==1)
+      DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv, hiddenAbility)
+  else
+      DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv)
+  end
 end
 
 def pbGiveRandomPoke(saveSlot)

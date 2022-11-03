@@ -753,7 +753,7 @@ end
 def pbOakSpawn4
     if  pbReadFile("gamemode.txt").to_i != 3
         pbMessage(_INTL("Gratulations to your victory! This is the last Floor. It's gonna be tough. I think you're ready for Mega-Evolutions. Take one of these Pokémon."))
-        pbRandomPkmnSelection(pbGetPkmnTargetLvl, true)
+        pbRandomPkmnSelection(pbGetPkmnTargetLvl)
         pbReceiveItem(:MEGARING)
         pbMessage(_INTL("Okay, now take one of my Mega-Stones."))
         pbOfferUsableMegaStones
