@@ -2,7 +2,7 @@ TRAINER_OVERRIDE = [
   {
     tType: :YOUNGSTER, tName: 'Trainer',
     lvl1: 10, lvl2: 12, numPkmn: 2,
-    pkmnPool: %i[BIDOOF BUNNELBY EEVEE LILLIPUP AIPOM BUNEARY MEOWTH MINCCINO RATTATA PATRAT CASTFORM JIGGLYPUFF GLAMEOW HOOTHOOT TEDDIURSA ZIGZAGOON WHISMUR DUSKULL RALTS MIMEJR POOCHYENA SOLOSIS SENTRET SKITTY CLEFFA RIOLU TYROGUE]
+    pkmnPool: %i[BIDOOF PURRLOIN GOTHITA MEDITITE EEVEE LILLIPUP AIPOM BUNEARY MEOWTH MINCCINO RATTATA PATRAT CASTFORM JIGGLYPUFF GLAMEOW HOOTHOOT TEDDIURSA ZIGZAGOON WHISMUR RALTS MIMEJR POOCHYENA SOLOSIS SENTRET SKITTY CLEFFA RIOLU TYROGUE]
   },
   {
     tType: :LASS, tName: 'Trainer',
@@ -71,5 +71,37 @@ def pbDisplayBossTeam(prefix, trainerID, trainerName)
     msg += spec.real_name.to_s + ', '
   end  
   msg = msg.delete_suffix(', ')
+  # F1 Boss
+  if msg.include? "Mienfoo"
+     msg = "Fighting"
+  elsif msg.include? "Axew"
+        msg = "Dragon"
+  elsif msg.include? "Pansear"
+          msg = "Fire-Water-Grass"
+
+  # F2 Boss
+  elsif msg.include? "Mismagius"
+          msg = "Ghost"
+  elsif msg.include? "Gardevoir"
+          msg = "Fairy"
+  elsif msg.include? "Simisear"
+          msg = "Fire-Water-Grass"
+
+  # F3 Boss
+  elsif msg.include? "Pelipper"
+          msg = "Rain"
+  elsif msg.include? "Ninetales"
+          msg = "Sun"
+  elsif msg.include? "Abomasnow"
+          msg = "Hail"
+
+  # F4 Boss
+  elsif msg.include? "Rayquaza"
+          msg = "Mega-Rayquaza."
+  elsif msg.include? "Groudon"
+          msg = "Primal-Groudon."
+  elsif msg.include? "Kyogre"
+          msg = "Primal-Kyogre."
+  end
   pbMessage(msg)
 end
