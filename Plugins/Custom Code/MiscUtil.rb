@@ -53,8 +53,8 @@ end
 def pbConfirmChoice
 speech = nil
   commands2 = []
-  commands2[cmdBuy = commands2.length]  = _INTL('No')
   commands2[cmdSell = commands2.length] = _INTL('Yes')
+  commands2[cmdBuy = commands2.length]  = _INTL('No')
   cmd2 = pbMessage(
     speech || _INTL('Are you sure?'),
     commands2
@@ -774,6 +774,29 @@ def pbCanEvoInCurrentMode(pkmn)
             return true
         end
     end
+end
+
+def pbOfferTypeBoostItems
+    pbPokemonMartEarn([
+    :BLACKBELT,
+    :BLACKGLASSES,
+    :CHARCOAL,
+    :DRAGONFANG,
+    :HARDSTONE,
+    :MAGNET,
+    :METALCOAT,
+    :MIRACLESEED,
+    :MYSTICWATER,
+    :NEVERMELTICE,
+    :PIXIEPLATE,
+    :POISONBARB,
+    :SHARPBEAK,
+    :SILKSCARF,
+    :SILVERPOWDER,
+    :SOFTSAND,
+    :SPELLTAG,
+    :TWISTEDSPOON
+    ],nil,false,2)
 end
 
 def pbScout
