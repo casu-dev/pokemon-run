@@ -181,8 +181,8 @@ def pbOfferUsableMegaStones
           speech = nil
           cmd = pbMessage(speech || _INTL('Choose a Mega Stone.'), stones)
           commands = []
-          commands[cmdBuy = commands.length]  = _INTL('No')
           commands[cmdSell = commands.length] = _INTL('Yes')
+          commands[cmdBuy = commands.length]  = _INTL('No')
           cmd2 = pbMessage(
             speech || _INTL('Are you sure?'),
             commands

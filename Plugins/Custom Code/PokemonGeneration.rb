@@ -33,6 +33,30 @@ def pbHealBoxes
   end
 end
 
+def getGen5BreedBabies
+  %i[PICHU CLEFFA IGGLYBUFF TOGEPI TYROGUE SMOOCHUM ELEKID MAGBY AZURILL WYNAUT BUDEW CHINGLING BONSLY HAPPINY MUNCHLAX RIOLU MANTYKE MIMEJR]
+end
+
+def getGen5BreedBabyEvos
+  %i[PIKACHU CLEFAIRY JIGGLYPUFF TOGETIC HITMONLEE HITMONCHAN HITMONTOP JYNX ELECTABUZZ MAGMAR MARILL WOBBUFFET ROSELIA CHIMECHO SUDOWOODO CHANSEY SNORLAX LUCARIO MANTINE MRMIME]
+end
+
+def pbEvolveBaby(pkmn)
+  evo_info = pkmn.species_data.get_evolutions
+  if pbCanEvoInCurrentMode(pkmn)
+      evo = PokemonEvolutionScene.new
+      evo.pbStartScreen(pkmn, evo_info[0][0])
+      evo.pbEvolution
+      evo.pbEndScreen
+  end
+end
+
+def pbEvolveBabiesInParty
+    $Trainer.party.each do |pkmn|
+        pbEvolveBaby(pkmn) if !pkmn.nil? && (getGen5BreedBabies.include? pkmn.species)
+    end
+end
+
 def pbGenPokeChoice
   startTime = Process.clock_gettime(Process::CLOCK_MONOTONIC)
   nfe = false
@@ -42,7 +66,16 @@ def pbGenPokeChoice
   startGen = Process.clock_gettime(Process::CLOCK_MONOTONIC)
   
   if !nfe
-    pkmns = pbChooseRandomPokemon(amount: 3)
+    pkmns = nil
+    if pbGetPkmnTargetLvl != 30
+        pkmns = pbChooseRandomPokemon(amount: 3)
+    else
+        pkmns = pbChooseRandomPokemon(
+              blacklist: getGen5BreedBabies,
+              amount: 3,
+              addToPool: getGen5BreedBabyEvos
+            )
+    end
     # do for every pokemon save slot
     [26, 27, 28].each do |i|
       pbSet(i, pbGetCorrectEvo(pkmns.pop, pbGetPkmnTargetLvl))   

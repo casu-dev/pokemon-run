@@ -3,11 +3,13 @@ def pbChooseRandomPokemon(
   whiteList: nil,
   blacklist: nil,
   filterFunc: method(:noFilter),
-  amount: 1
+  amount: 1,
+  addToPool: nil
 )
   pool = getGen5Babies
   pool = whiteList if whiteList
   pool -= blacklist if blacklist
+  pool += addToPool if addToPool
 
   pool = pool.select do |p|
     filterFunc.call(p)
