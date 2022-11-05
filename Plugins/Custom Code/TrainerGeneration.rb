@@ -63,45 +63,49 @@ def pbGenIntroText
   pbSet(34, intro_list[rand(intro_list.length)])
 end
 
-def pbDisplayBossTeam(prefix, trainerID, trainerName)
+def pbDisplayBossTeam(template, trainerID, trainerName)
   trainer =pbLoadTrainer(trainerID, trainerName, pbGet(37))
-  msg = prefix
+  pkmnList = ''
   party = trainer.party.each do |pkmn|
     spec = GameData::Species.try_get(pkmn.species)
-    msg += spec.real_name.to_s + ', '
+    pkmnList += spec.real_name.to_s + ' '
   end  
-  msg = msg.delete_suffix(', ')
+
+  msg = ""
   # F1 Boss
-  if msg.include? "Mienfoo"
-     msg = "Fighting"
-  elsif msg.include? "Axew"
-        msg = "Dragon"
-  elsif msg.include? "Pansear"
-          msg = "Fire-Water-Grass"
+  if pkmnList.include? "Mienfoo"
+     msg += "Fighting"
+  elsif pkmnList.include? "Axew"
+        msg += "Dragon"
+  elsif pkmnList.include? "Pansear"
+          msg += "Fire-Water-Grass"
 
   # F2 Boss
-  elsif msg.include? "Mismagius"
-          msg = "Ghost"
-  elsif msg.include? "Gardevoir"
-          msg = "Fairy"
-  elsif msg.include? "Simisear"
-          msg = "Fire-Water-Grass"
+  elsif pkmnList.include? "Mismagius"
+          msg += "Ghost"
+  elsif pkmnList.include? "Gardevoir"
+          msg += "Fairy"
+  elsif pkmnList.include? "Simisear"
+          msg += "Fire-Water-Grass"
 
   # F3 Boss
-  elsif msg.include? "Pelipper"
-          msg = "Rain"
-  elsif msg.include? "Ninetales"
-          msg = "Sun"
-  elsif msg.include? "Abomasnow"
-          msg = "Hail"
+  elsif pkmnList.include? "Pelipper"
+          msg += "Rain"
+  elsif pkmnList.include? "Ninetales"
+          msg += "Sun"
+  elsif pkmnList.include? "Abomasnow"
+          msg += "Hail"
 
   # F4 Boss
-  elsif msg.include? "Rayquaza"
-          msg = "Mega-Rayquaza."
-  elsif msg.include? "Groudon"
-          msg = "Primal-Groudon."
-  elsif msg.include? "Kyogre"
-          msg = "Primal-Kyogre."
+  elsif pkmnList.include? "Rayquaza"
+          msg += "Mega-Rayquaza"
+  elsif pkmnList.include? "Groudon"
+          msg += "Primal-Groudon"
+  elsif pkmnList.include? "Kyogre"
+          msg += "Primal-Kyogre"
   end
+
+  msg = template.gsub("\n", "").gsub("$team", "\\c[10]" + msg + template[0..1])
+
   pbMessage(msg)
 end

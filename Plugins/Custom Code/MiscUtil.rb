@@ -179,12 +179,12 @@ def pbOfferUsableMegaStones
   end
     if stones != []
           speech = nil
-          cmd = pbMessage(speech || _INTL('Choose a Mega Stone.'), stones)
+          cmd = pbMessage(speech || _INTL('\\bChoose a Mega Stone.'), stones)
           commands = []
           commands[cmdSell = commands.length] = _INTL('Yes')
           commands[cmdBuy = commands.length]  = _INTL('No')
           cmd2 = pbMessage(
-            speech || _INTL('Are you sure?'),
+            speech || _INTL('\\bAre you sure?'),
             commands
           )
           loop do
@@ -532,8 +532,8 @@ def pbIncreaseCompletionCount
     old = pbReadFile("runcompletedcount.txt").to_i
     old = (old + 1).to_s
     pbWriteIntoFile("runcompletedcount.txt", text = old)
-    pbMessage(_INTL("You unlocked a new game mode.")) if (old.to_i+1) <= pbGetGameModes.length()
-    pbMessage(_INTL("You unlocked all game modes.")) if (old.to_i+1) == pbGetGameModes.length()
+    pbMessage(_INTL("You unlocked a \\c[10]new game mode\\c[0].")) if (old.to_i+1) <= pbGetGameModes.length()
+    pbMessage(_INTL("You unlocked \\c[10]all game modes\\c[0].")) if (old.to_i+1) == pbGetGameModes.length()
 end
 
 def pbChoseMode
@@ -752,16 +752,16 @@ end
 
 def pbOakSpawn4
     if  pbReadFile("gamemode.txt").to_i != 3
-        pbMessage(_INTL("Gratulations to your victory! This is the last Floor. It's gonna be tough. I think you're ready for Mega-Evolutions. Take one of these Pokémon."))
+        pbMessage(_INTL("\\bGratulations to your victory! This is the last Floor. It's gonna be tough. I think you're ready for Mega-Evolutions. Take one of these Pokémon."))
         pbRandomPkmnSelection(pbGetPkmnTargetLvl)
         pbReceiveItem(:MEGARING)
-        pbMessage(_INTL("Okay, now take one of my Mega-Stones."))
+        pbMessage(_INTL("\\bOkay, now take one of my Mega-Stones."))
         pbOfferUsableMegaStones
-        pbMessage(_INTL("Excellent choice! Equip the Mega-Stone and press Y in Battle to mega evolve. I'm continuing my research now, have a good one!"))
+        pbMessage(_INTL("\\bExcellent choice! Equip the Mega-Stone and press \\c[10]Y\\b in Battle to mega evolve. I'm continuing my research now, have a good one!"))
     else
-        pbMessage(_INTL("Gratulations to your victory! This is the last Floor. It's gonna be tough. Take one of these Pokémon."))
+        pbMessage(_INTL("\\bGratulations to your victory! This is the last Floor. It's gonna be tough. Take one of these Pokémon."))
         pbRandomPkmnSelection(pbGetPkmnTargetLvl)
-        pbMessage(_INTL("Excellent choice! I'm continuing my research now, have a good one!"))
+        pbMessage(_INTL("\\bExcellent choice! I'm continuing my research now, have a good one!"))
     end
 end
 
