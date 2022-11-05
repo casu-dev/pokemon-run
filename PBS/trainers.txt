@@ -167,7 +167,7 @@ Pokemon = SLUGMA, 16
 #-------------------------------
 [BLACKBELT, Bruce, 2]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = FERROSEED, 16
+Pokemon = SLOWPOKE, 16
 #-------------------------------
 [BLACKBELT, Bruce, 3]
 LoseText = "Wow! I'm impressed. Here, take your reward."
@@ -193,7 +193,7 @@ Item = EVIOLITE
 #-------------------------------
 [BLACKBELT, Bruce, 8]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = FERROSEED, 32
+Pokemon = SLOWPOKE, 32
 Item = EVIOLITE
 #-------------------------------
 [BLACKBELT, Bruce, 9]
@@ -220,7 +220,7 @@ Pokemon = MAGCARGO, 63
 #-------------------------------
 [BLACKBELT, Bruce, 14]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = FERROTHORN, 63
+Pokemon = SLOWKING, 63
 #-------------------------------
 [BLACKBELT, Bruce, 15]
 LoseText = "Wow! I'm impressed. Here, take your reward."
@@ -245,7 +245,7 @@ Pokemon = MAGCARGO, 95
 #-------------------------------
 [BLACKBELT, Bruce, 20]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = FERROTHORN, 95
+Pokemon = SLOWKING, 95
 #-------------------------------
 [BLACKBELT, Bruce, 21]
 LoseText = "Wow! I'm impressed. Here, take your reward."
