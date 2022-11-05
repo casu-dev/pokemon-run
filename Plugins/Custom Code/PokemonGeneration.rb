@@ -41,6 +41,17 @@ def getGen5BreedBabyEvos
   %i[PIKACHU CLEFAIRY JIGGLYPUFF TOGETIC HITMONLEE HITMONCHAN HITMONTOP JYNX ELECTABUZZ MAGMAR MARILL WOBBUFFET ROSELIA CHIMECHO SUDOWOODO CHANSEY SNORLAX LUCARIO MANTINE MRMIME]
 end
 
+# For Lucky Weakling mode
+def pbModifyBreedBabyList
+    oldBabyList = getGen5BreedBabies
+    newBabyList = []
+    oldBabyList.each do |baby|
+        evo_info = GameData::Species.try_get(baby).get_evolutions
+        newBabyList << baby if filterPkmnHasEvolution(evo_info[0][0])
+    end
+    return newBabyList
+end
+
 def pbEvolveBaby(pkmn)
   evo_info = pkmn.species_data.get_evolutions
   if pbCanEvoInCurrentMode(pkmn)
@@ -67,7 +78,7 @@ def pbGenPokeChoice
   
   if !nfe
     pkmns = nil
-    if pbGetPkmnTargetLvl != 30
+    if pbGetStagesCleared != 1
         pkmns = pbChooseRandomPokemon(amount: 3)
     else
         pkmns = pbChooseRandomPokemon(
@@ -82,10 +93,20 @@ def pbGenPokeChoice
     end       
   else
     startRoll = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-    pkmns = pbChooseRandomPokemon(
-      filterFunc: method(:filterPkmnHasEvolution),
-      amount: 3
-    )
+    pkmns = nil
+        if pbGetStagesCleared != 1
+            pkmns = pbChooseRandomPokemon(
+                  filterFunc: method(:filterPkmnHasEvolution),
+                  amount: 3
+                )
+        else
+            pkmns = pbChooseRandomPokemon(
+                  blacklist: pbModifyBreedBabyList,
+                  filterFunc: method(:filterPkmnHasEvolution),
+                  amount: 3,
+                  addToPool: getGen5BreedBabyEvos
+                )
+        end
     echoln "Gen Result: " + pkmns.to_s
     echoln "Generating Poke: pbChooseRandomPokemon took (s):" + (Process.clock_gettime(Process::CLOCK_MONOTONIC) - startRoll).to_s
     startRoll = Process.clock_gettime(Process::CLOCK_MONOTONIC)
@@ -213,8 +234,7 @@ def pbRandomPkmnSelection(lv, hiddenAbility = true)
 end
 
 def pbGiveRandomPoke(saveSlot)
-  lvl = lvl = POKEMON_GET_LEVEL[pbGetStagesCleared]
-
+  lvl = POKEMON_GET_LEVEL[pbGetStagesCleared]
   pkmn = Pokemon.new(pbGet(saveSlot), lvl)
   pbAddPokemon(pkmn)
 end
