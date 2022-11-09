@@ -138,7 +138,7 @@ def pbForceEvo?(pkmn)
     # pbMessage(cmd.to_s)
     if cmd != evos.length - 1
       evo = PokemonEvolutionScene.new
-      evo.pbStartScreen(pkmn, evo_info[cmd][0])
+      evo.pbStartScreen(pkmn, evos[cmd])
       # evo.pbStartScreen(pkmn,pkmn.species_data.get_evolutions[0][0])
       evo.pbEvolution
       evo.pbEndScreen
