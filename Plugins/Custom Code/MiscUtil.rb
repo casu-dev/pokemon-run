@@ -586,11 +586,24 @@ def pbChoseMode
                      pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The first Pokémon in your party will have the ability of the last one in battle."))
                      break
                 elsif cmd2 == 3
-                                     pbWriteIntoFile("gamemode.txt", 3)
-                                     pbWriteIntoFile("battlerinfo.txt", 0)
-                                     pbPlaySaveSound
-                                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
-                                     break
+                    hasFullyEvolved = false
+                    $Trainer.party.each do |pkmn|
+                       if !pkmn.nil?
+                           if !can_evolve?(pkmn)
+                            hasFullyEvolved = true
+                           end
+                       end
+                   end
+                   if (!hasFullyEvolved)
+                     pbWriteIntoFile("gamemode.txt", 3)
+                     pbWriteIntoFile("battlerinfo.txt", 0)
+                     pbPlaySaveSound
+                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
+                     break
+                   else
+                        pbMessage("You \\c[10]can't switch\\c[0] to this mode, while having a fully evolved Pokémon in your party.")
+                        break
+                   end
                 end
             end
     else
@@ -643,9 +656,10 @@ size = $Trainer.party.length()
     if size == 0
         speech = nil
         yn = ["Yes", "No"]
-        cmd2 = pbMessage(speech || _INTL('You want to start the new run without one of your old Pokémon?'), yn)
+        cmd2 = pbMessage(speech || _INTL('You want to start the new run \\c[10]without\\c[0] one of your old Pokémon?'), yn)
             loop do
                 if cmd2 == 0
+                   pbClearAllBoxes
                    pbFadeOutIn do
                        $game_temp.player_new_map_id = 79
                        $scene.transfer_player
@@ -667,9 +681,10 @@ size = $Trainer.party.length()
     elsif size == 1
         speech = nil
                 yn = ["Yes", "No"]
-                cmd2 = pbMessage(speech || _INTL("You want to start the new run with " + $Trainer.party[0].name + "?"), yn)
+                cmd2 = pbMessage(speech || _INTL("You want to start the new run with \\c[10]" + $Trainer.party[0].name + "\\c[0]?"), yn)
                     loop do
                         if cmd2 == 0
+                           pbClearAllBoxes
                            $Trainer.party.each do |pkmn|
                                if !pkmn.nil?
                                    pbChangeLevel(pkmn, 15, nil)
@@ -800,5 +815,5 @@ def pbOfferTypeBoostItems
 end
 
 def pbScout
-pbMessage(_INTL("Room scripts actice"))
+pbMessage(_INTL("\\c[10]bla\\c[0]"))
 end
