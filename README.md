@@ -1,10 +1,10 @@
 # Pokemon Battle Woods
 
 ## Open Tickets
-- [ ] Generate rooms random (also enable us to put a weight on the odds)
+- [x] Generate rooms random (also enable us to put a weight on the odds)
+- [x] Place a copy of Oak (choose Pokémon) and his Assistant (evolve Pokémon) in the Pokémon Center map
 - [ ] Create new map for Standard Trainer, where there is no fork in the way
 - [ ] Last Oak each floor shall offer higher lv Pokémon
-- [ ] Place a copy of Oak (choose Pokémon) and his Assistant (evolve Pokémon) in the Pokémon Center map
 - [ ] Place a NPC that heals the party on every floor boss map
 - [ ] Money room (medium odds)
 - [ ] Pokémon steal room (low odds)
