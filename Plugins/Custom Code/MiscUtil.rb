@@ -814,6 +814,65 @@ def pbOfferTypeBoostItems
     ],nil,false,2)
 end
 
+def pbOfferHealBerries
+   return pbPokemonMartEarn([
+    :LUMBERRY,
+    :SITRUSBERRY,
+    :FIGYBERRY,
+    :WIKIBERRY,
+    :MAGOBERRY,
+    :AGUAVBERRY,
+    :IAPAPABERRY
+    ],nil,false,1)
+end
+
+def pbOfferStatBerries
+   return pbPokemonMartEarn([
+    :LIECHIBERRY,
+    :GANLONBERRY,
+    :SALACBERRY,
+    :PETAYABERRY,
+    :APICOTBERRY,
+    :STARFBERRY
+    ],nil,false,1)
+end
+
+def pbOfferWeakenBerries
+   return pbPokemonMartEarn([
+    :OCCABERRY,
+    :PASSHOBERRY,
+    :WACANBERRY,
+    :RINDOBERRY,
+    :YACHEBERRY,
+    :CHOPLEBERRY,
+    :KEBIABERRY,
+    :SHUCABERRY,
+    :COBABERRY,
+    :PAYAPABERRY,
+    :TANGABERRY,
+    :CHARTIBERRY,
+    :KASIBBERRY,
+    :HABANBERRY,
+    :COLBURBERRY,
+    :BABIRIBERRY,
+    :CHILANBERRY,
+    :ROSELIBERRY
+    ],nil,false,1)
+end
+
+def pbReceiveGems(amount)
+    gems = %i[FIREGEM WATERGEM ELECTRICGEM GRASSGEM ICEGEM FIGHTINGGEM POISONGEM GROUNDGEM FLYINGGEM PSYCHICGEM BUGGEM ROCKGEM GHOSTGEM DRAGONGEM DARKGEM STEELGEM NORMALGEM FAIRYGEM]
+    if amount >= 1
+        result = []
+        (0...amount).each do |_i|
+          result.push(gems.delete_at(rand(gems.length)))
+          pbStoreItem(result[_i])
+        end
+    end
+    pbMEPlay("Item get")
+    pbMessage("You found \\c[1]" + amount.to_s + " gems\\c[0].")
+end
+
 def pbScout
-pbMessage(_INTL("\\c[10]bla\\c[0]"))
+pbMessage("HI")
 end
