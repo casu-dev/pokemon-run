@@ -1,46 +1,57 @@
-MAP_PICK_POKEMON = { id: 88, name: 'Professor Oak', posx: 10, posy: 10, value: 15 }
+# Room definitions
+MAP_CENTER = { id: 77, name: 'Poké Center', posx: 7, posy: 8, value: 0, weight: -1}
+MAP_PICK_POKEMON = { id: 88, name: 'Professor Oak', posx: 10, posy: 10, value: 15, weight: -1 }
+MAP_CENTER_WITH_OAK = { id: 112, name: 'Poké Center', posx: 7, posy: 8, value: 15, weight: -1 }
 
-MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 5, posy: 10, value: 10 }
-MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7, value: 5 }
-MAP_CENTER = { id: 77, name: 'Poké Center', posx: 7, posy: 8, value: 0 }
-MAP_BLACK_BELT_BROTHERS = { id: 111, name: 'Combat Teachers', posx: 7, posy: 12, value: 40 }
-MAP_EGG_MOVE_RELEARNER = { id: 109, name: 'Egg-Move Tutor', posx: 10, posy: 14, value: 45 }
+MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 5, posy: 10, value: 10, weight: 10 }
+MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7, value: 5, weight: 20 }
+MAP_BLACK_BELT_BROTHERS = { id: 111, name: 'Combat Teachers', posx: 7, posy: 12, value: 40, weight: 10 }
+MAP_EGG_MOVE_RELEARNER = { id: 109, name: 'Egg-Move Tutor', posx: 10, posy: 14, value: 45, weight: 10 }
 
+# Pool used for rolling random event
+MAP_EVENT_POOL = [
+  MAP_MOVE_RELEARNER,
+  MAP_MART,
+  MAP_BLACK_BELT_BROTHERS,
+  MAP_EGG_MOVE_RELEARNER
+]
+
+# Rooms that are different on each floor 
 MAP_BOSS_LIST = [
-  { id: 86, name: '1st Floor Boss', posx: 10, posy: 13, value: 20 }, # 1st floor
-  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 13, value: 20 }, # 2nd floor
-  { id: 100, name: '3rd Floor Boss', posx: 9, posy: 17, value: 20 }, # 3rd floor
-  { id: 106, name: 'Final Boss', posx: 9, posy: 17, value: 20 } # 4th floor
+  { id: 86, name: '1st Floor Boss', posx: 10, posy: 13, value: 20, weight: 10 }, # 1st floor
+  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 13, value: 20, weight: 10 }, # 2nd floor
+  { id: 100, name: '3rd Floor Boss', posx: 9, posy: 17, value: 20, weight: 10 }, # 3rd floor
+  { id: 106, name: 'Final Boss', posx: 9, posy: 17, value: 20, weight: 10 } # 4th floor
 ]
 MAP_FIGHT_TRAINER_LIST = [
-  { id: 84, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25 }, # 1st floor
-  { id: 93, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25 }, # 2nd floor
-  { id: 101, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25 }, # 3rd floor
-  { id: 107, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25 } # 4th floor
+  { id: 84, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 }, # 1st floor
+  { id: 93, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 }, # 2nd floor
+  { id: 101, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 }, # 3rd floor
+  { id: 107, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 } # 4th floor
 ]
 MAP_FIGHT_ELITE_TRAINER_LIST = [
-  { id: 85, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30 }, # 1st floor
-  { id: 96, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30 }, # 2nd floor
-  { id: 102, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30 }, # 3rd floor
-  { id: 108, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30 } # 4th floor
+  { id: 85, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10 }, # 1st floor
+  { id: 96, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10 }, # 2nd floor
+  { id: 102, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10 }, # 3rd floor
+  { id: 108, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10 } # 4th floor
 ]
 MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
-  { id: 87, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35 }, # 1st floor
-  { id: 94, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35 }, # 2nd floor
-  { id: 99, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35 }, # 3rd floor
-  { id: 105, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35 } # 4th floor
+  { id: 87, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35, weight: 10 }, # 1st floor
+  { id: 94, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35, weight: 10 }, # 2nd floor
+  { id: 99, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35, weight: 10 }, # 3rd floor
+  { id: 105, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35, weight: 10 } # 4th floor
 ]
 
 def pbGenDest
   prev1 = pbGet(29)
   prev2 = pbGet(31)
 
-  room = pbGetPossDest(0, prev1)
+  room = pbGetPossDest(0, nil)
   pbSet(29, room)
   pbSet(30, room[:name])
   pbSet(35, room[:value])
 
-  room = pbGetPossDest(1, prev2)
+  room = pbGetPossDest(1, room)
   pbSet(31, room)
   pbSet(32, room[:name])
   pbSet(36, room[:value])
@@ -79,27 +90,39 @@ end
 #	10	Trainer	Elite
 #	11	Trainer	Center
 #	12	Boss	X
-def pbGetPossDest(exit_no, _prev_dest)
+def pbGetPossDest(exit_no, other_dest)
   stages_cleared = pbGet(48)
   rooms_cleared = pbGet(49)
 
-  # Forced Rooms
-  return MAP_BOSS_LIST[stages_cleared] if rooms_cleared >= 11
-  return MAP_PICK_POKEMON if [7, 2].include?(rooms_cleared)
-  return MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST[stages_cleared] if rooms_cleared == 5
-
-  # Left is fight trainer
-  return MAP_EGG_MOVE_RELEARNER if rooms_cleared == 10 && exit_no == 0
-  return MAP_FIGHT_TRAINER_LIST[stages_cleared] if exit_no == 0
-
-  # Right Room
-  return MAP_MOVE_RELEARNER if rooms_cleared == 0
-  return MAP_BLACK_BELT_BROTHERS if rooms_cleared == 3
-  return MAP_CENTER if [1, 10].include?(rooms_cleared)
-  return MAP_MART if [4, 8].include?(rooms_cleared)
-  return MAP_FIGHT_ELITE_TRAINER_LIST[stages_cleared] if [6, 9].include?(rooms_cleared)
+  nextMap = MAP_FIGHT_TRAINER_LIST[stages_cleared]
+  nextMap = rollEventRoom(other_dest) if rooms_cleared % 2 == 0
+  nextMap = MAP_CENTER_WITH_OAK if rooms_cleared == 2
+  nextMap = MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST[stages_cleared] if rooms_cleared == 5
+  nextMap = MAP_PICK_POKEMON if rooms_cleared == 8
+  nextMap = MAP_BOSS_LIST[stages_cleared] if rooms_cleared >= 11
+  return nextMap
 end
 
 def pbGetFightTrainerDest
   MAP_FIGHT_TRAINER_LIST[pbGet(48)]
 end
+
+
+def rollEventRoom(avoidRoom)
+  pool = MAP_EVENT_POOL.dup
+  pool += [MAP_FIGHT_ELITE_TRAINER_LIST[pbGet(48)]]
+  pool -= [avoidRoom]
+  pool = pool.shuffle
+
+  # alogrithm stolen from internet
+
+  sumWeight = pool.inject(0) { |sum, element| sum + element[:weight]}
+  echoln 'Pool max weight: ' + sumWeight.to_s
+  targetWeight = rand(1..sumWeight)  
+
+  pool.each do |room|
+    return room if targetWeight <= room[:weight]
+    targetWeight -= room[:weight]
+  end
+end
+
