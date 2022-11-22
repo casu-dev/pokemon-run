@@ -114,6 +114,18 @@ def pbGiveMoney(amount)
   pbMessage(_INTL('You got ${1} for winning!', amount.to_s_formatted))
 end
 
+def pbLootWell
+floor = pbGet(48)
+amount = 1500 + rand(100) if floor == 0
+amount = 2500 + rand(200) if floor == 1
+amount = 3500 + rand(300) if floor == 2
+amount = 4500 + rand(500) if floor == 3
+  $Trainer.money += amount
+  pbMessage("You looted the well.")
+  pbMEPlay("Item get")
+  pbMessage(_INTL('You found \\b${1}\\c[0]!', amount.to_s_formatted))
+end
+
 def can_evolve?(pkmn)
   if pkmn.species_data.get_evolutions[0]
     true
@@ -206,19 +218,19 @@ def pbSetMartPrices
   end
 
   items_normal = %w[TM39 TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28 TR32 TR33 TR39 TR47 TR49 TR58 TR62 TR64 TR65 TR70
-                    TR74 TR75 TR90 TR92]
+                    TR74 TR75 TR90 TR92 TR99]
   items_normal.each do |i|
     setPrice(i, 1000, 0)
   end
 
-  items_expensive = %w[TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR84]
+  items_expensive = %w[TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR68 TR84]
   items_expensive.each do |i|
     setPrice(i, 1500, 0)
   end
 
   items_insane = %w[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
   items_insane.each do |i|
-    setPrice(i, 2000, 0)
+    setPrice(i, 1800, 0)
   end
 end
 
@@ -817,6 +829,7 @@ end
 def pbOfferHealBerries
    return pbPokemonMartEarn([
     :LUMBERRY,
+    :CUSTAPBERRY,
     :SITRUSBERRY,
     :FIGYBERRY,
     :WIKIBERRY,
