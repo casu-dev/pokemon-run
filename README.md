@@ -15,7 +15,7 @@
 - [ ] Create Pokémon pools for Rocket Grunts and Elite Trainer
 - [ ] Increase all Pokémon pools
 - [ ] Rework evolution info text
-- [ ] After beating the run, force the player to start a new run and overwrite the old save file
+- [x] After beating the run, force the player to start a new run and overwrite the old save file
 - [ ] Ensure every room has background music (espacially the Combat Teacher rooms)
 - [ ] Each floor boss team, shall make the boss use a different sprite
 - [ ] Rework Oaks Pokemon generation (make an algorithm based on base stat totals etc.)
