@@ -904,6 +904,30 @@ def pbReceiveGems(amount)
     pbMessage("You found \\c[1]" + amount.to_s + " gems\\c[0].")
 end
 
+def pbGetEvoInfo(pkmnid)
+    evoData = $Trainer.party[pkmnid].species_data.get_evolutions
+    if evoData.to_s != '[]'
+        evosArray = []
+        evoNames = []
+        evoData.each do |evo|
+            if !(evoNames.include? evo[0].to_s)
+                evoNames << evo[0].to_s
+                if evo[1].to_s == 'Level'
+                    evosArray.push(evo)
+                else
+                    evosArray.push([evo[0], 'Oaks assistant'])
+                end
+            end
+        end
+      evoInfo = evosArray.to_s.gsub(/[:\"]/, '')
+      evoInfo[0] = ''
+      evoInfo[evoInfo.length-1]= ''
+      pbMessage(evoInfo)
+    else
+             pbMessage(_INTL("This Pokémon can't evolve."))
+    end
+end
+
 def pbScout
 pbMessage("HI")
 end

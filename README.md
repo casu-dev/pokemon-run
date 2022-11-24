@@ -14,7 +14,7 @@
 - [ ] Oaks in F3 and F4 shall roll for legendaries (exception: Spawn F4, where Oak offers Mega-Pokémon)
 - [ ] Create Pokémon pools for Rocket Grunts and Elite Trainer
 - [ ] Increase all Pokémon pools
-- [ ] Rework evolution info text
+- [x] Rework evolution info text
 - [x] After beating the run, force the player to start a new run and overwrite the old save file
 - [ ] Ensure every room has background music (espacially the Combat Teacher rooms)
 - [ ] Each floor boss team, shall make the boss use a different sprite
