@@ -68,60 +68,211 @@ def pbEvolveBabiesInParty
     end
 end
 
-def pbGenPokeChoice
-  startTime = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-  nfe = false
-  nfe = true if pbReadFile("gamemode.txt").to_i == 3
-  echoln "Generating Poke Choice. With nfe? " + nfe.to_s 
-  alreadyOwned = [] #todo
-  startGen = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-  
-  if !nfe
-    pkmns = nil
-    if pbGetStagesCleared != 1
-        pkmns = pbChooseRandomPokemon(amount: 3)
+def pbGetCorrectOakPool
+    floor = pbGet(48) + 1
+    diceRoll = rand(1..100)
+    #if Lucky Weakling
+    if pbReadFile("gamemode.txt").to_i == 3
+        if floor == 1
+            # 50% chance
+            if 1 <= diceRoll && diceRoll <= 50
+                return getOakPoolLW3
+            # 20% chance
+            elsif 51 <= diceRoll && diceRoll <= 70
+                return getOakPoolLW2
+            # 20% chance
+            elsif 71 <= diceRoll && diceRoll <= 90
+                return getOakPoolLW4
+            # 10% chance
+            elsif 91 <= diceRoll && diceRoll <= 100
+                return getOakPoolLW1
+            end
+        elsif floor == 2
+            # 50% chance
+            if 1 <= diceRoll && diceRoll <= 50
+                return getOakPoolLW5
+            # 25% chance
+            elsif 51 <= diceRoll && diceRoll <= 75
+                return getOakPoolLW4
+            # 25% chance
+            elsif 76 <= diceRoll && diceRoll <= 100
+                return getOakPoolLW6
+            end
+        elsif floor == 3
+            # 50% chance
+            if 1 <= diceRoll && diceRoll <= 50
+                return getOakPoolLW6
+            # 20% chance
+            elsif 51 <= diceRoll && diceRoll <= 70
+               return getOakPoolLW5
+            # 20% chance
+            elsif 71 <= diceRoll && diceRoll <= 90
+                return getOakPoolLW7
+            # 10% chance
+            elsif 91 <= diceRoll && diceRoll <= 100
+                return getOakPoolLW8
+            end
+        elsif floor == 4
+            # 50% chance
+            if 1 <= diceRoll && diceRoll <= 50
+                return getOakPoolLW7
+            # 25% chance
+            elsif 51 <= diceRoll && diceRoll <= 75
+                return getOakPoolLW6
+            # 25% chance
+            elsif 76 <= diceRoll && diceRoll <= 100
+                return getOakPoolLW8
+            end
+        end
     else
-        pkmns = pbChooseRandomPokemon(
-              blacklist: getGen5BreedBabies,
-              amount: 3,
-              addToPool: getGen5BreedBabyEvos
-            )
+        if floor == 1
+            # 50% chance
+            if 1 <= diceRoll && diceRoll <= 50
+                return getOakPool3
+            # 20% chance
+            elsif 51 <= diceRoll && diceRoll <= 70
+                return getOakPool2
+            # 20% chance
+            elsif 71 <= diceRoll && diceRoll <= 90
+                return getOakPool4
+            # 10% chance
+            elsif 91 <= diceRoll && diceRoll <= 100
+                return getOakPool1
+            end
+        elsif floor == 2
+            # 50% chance
+            if 1 <= diceRoll && diceRoll <= 50
+                return getOakPool6
+            # 25% chance
+            elsif 51 <= diceRoll && diceRoll <= 75
+                return getOakPool5
+            # 25% chance
+            elsif 76 <= diceRoll && diceRoll <= 100
+                return getOakPool7
+            end
+        elsif floor == 3
+            # 50% chance
+            if 1 <= diceRoll && diceRoll <= 50
+                return getOakPool9
+            # 20% chance
+            elsif 51 <= diceRoll && diceRoll <= 70
+                return getOakPool8
+            # 20% chance
+            elsif 71 <= diceRoll && diceRoll <= 90
+                return getOakPool10
+            # 10% chance
+            elsif 91 <= diceRoll && diceRoll <= 100
+                return getOakPool11
+            end
+        elsif floor == 4
+            # 50% chance
+            if 1 <= diceRoll && diceRoll <= 50
+                return getOakPool10
+            # 25% chance
+            elsif 51 <= diceRoll && diceRoll <= 75
+                return getOakPool9
+            # 25% chance
+            elsif 76 <= diceRoll && diceRoll <= 100
+                return getOakPool11
+            end
+        end
     end
+end
+
+def diverse_types?(pkmnIDs)
+    types = []
+    pkmnIDs.each do |pkmnid|
+        pkmn = GameData::Species.try_get(pkmnid)
+        typing = []
+        typing.push(pkmn.type1)
+        typing.push(pkmn.type2) if pkmn.type1.to_s != pkmn.type2.to_s
+        types.push(typing)
+    end
+    # types could now look like this: [[WATER,GROUND],[DRAGON],[ICE,WATER]]
+
+    for i1 in 0 .. (types.length-1) do
+        for i2 in (i1+1) .. (types.length-1) do
+            # returns false, if typing is identic
+            return false if types[i1][0] == types[i2][0] && types[i1][1] == types[i2][1]
+            # returns false if typing is just flipped (for example [WATER,GROUND] compared with [GROUND,WATER])
+            return false if types[i1][0] == types[i2][1] && types[i1][1] == types[i2][0]
+        end
+    end
+    return true
+end
+
+def pbRollForChance(chance)
+    diceRoll = rand(1..100)
+    return true if diceRoll <= chance
+    return false
+end
+
+def pbGenPokeChoice
+    amount = 3
+    # Integer in %
+    legiChance = 30
+    output = []
+    legiPkmns = []
+    amountLegis = 0
+    # Checks if mode is not "Lucky Weakling" and if the floor is > 2
+    if pbGet(48) > 1 && !(pbReadFile("gamemode.txt").to_i == 3)
+        for i in 1 .. amount do
+           amountLegis += 1 if pbRollForChance(legiChance)
+        end
+    end
+    if amountLegis > 0
+        if pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis).is_a?(Array)
+            legiPkmns = pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis)
+        else
+            legiPkmns.push(pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis))
+        end
+        while !diverse_types?(legiPkmns) do
+            if pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis).is_a?(Array)
+                legiPkmns = pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis)
+            else
+                legiPkmns.push(pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis))
+            end
+        end
+        output = legiPkmns
+        amount -= amountLegis
+        if amount > 0
+           normalPkmns = []
+           if pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount).is_a?(Array)
+               normalPkmns = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
+           else
+               normalPkmns.push(pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount))
+           end
+            mergedPkmns = Marshal.load(Marshal.dump(legiPkmns))
+            normalPkmns.each do |pkmn|
+                mergedPkmns.push(pkmn)
+            end
+            #pbMessage("Invalid") if !diverse_types?(pkmns)
+            while !diverse_types?(mergedPkmns) do
+                if pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount).is_a?(Array)
+                   normalPkmns = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
+                else
+                   normalPkmns.push(pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount))
+                end
+                mergedPkmns = Marshal.load(Marshal.dump(legiPkmns))
+                normalPkmns.each do |pkmn|
+                    mergedPkmns.push(pkmn)
+                end
+            end
+            output = mergedPkmns
+        end
+    else
+        output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
+        while !diverse_types?(output) do
+            output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
+        end
+    end
+    pbMessage(output.to_s)
+    output = output.shuffle
+    pbMessage(output.to_s)
     # do for every pokemon save slot
     [26, 27, 28].each do |i|
-      pbSet(i, pbGetCorrectEvo(pkmns.pop, pbGetPkmnTargetLvl))   
-    end       
-  else
-    startRoll = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-    pkmns = nil
-        if pbGetStagesCleared != 1
-            pkmns = pbChooseRandomPokemon(
-                  filterFunc: method(:filterPkmnHasEvolution),
-                  amount: 3
-                )
-        else
-            pkmns = pbChooseRandomPokemon(
-                  blacklist: pbModifyBreedBabyList,
-                  filterFunc: method(:filterPkmnHasEvolution),
-                  amount: 3,
-                  addToPool: getGen5BreedBabyEvos
-                )
-        end
-    echoln "Gen Result: " + pkmns.to_s
-    echoln "Generating Poke: pbChooseRandomPokemon took (s):" + (Process.clock_gettime(Process::CLOCK_MONOTONIC) - startRoll).to_s
-    startRoll = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-    [26, 27, 28].each do |i|
-      correctEvo = pbGetCorrectEvo(pkmns.pop, pbGetPkmnTargetLvl)
-      echoln "Correct_evo " + correctEvo.to_s
-      devolvedEvo = pbDevolvePkmn(correctEvo)
-      echoln "Saving " + devolvedEvo.to_s
-      pbSet(i, devolvedEvo)
-    end    
-    echoln "Generating Poke: pbGetCorrectEvo + pbDevolvePkmn took (s):" + (Process.clock_gettime(Process::CLOCK_MONOTONIC) - startRoll).to_s
-  end
-
-  timeDiff = Process.clock_gettime(Process::CLOCK_MONOTONIC) - startTime
-  echoln "Generation took " + timeDiff.to_s + "s"
+        pbSet(i, output.pop)
+    end
 end
 
 def filterPkmnHasEvolution(species)
@@ -204,15 +355,15 @@ def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
   return false
 end
 
+#Generates the Pokemon (usually used when entering Oaks room)
 def pbRandomPkmnGeneration(mega = false)
   if mega
     pbGenMegaPkmn()
   else
     pbGenPokeChoice()
   end
-
   while (pbPkmnOwned?(pbGet(26), pbGet(27), pbGet(28)))
-    echoln "Pokemons are not unique. Rerolling..."
+    echoln "Pokemon owned. Rerolling..."
       if mega
         pbGenMegaPkmn()
       else

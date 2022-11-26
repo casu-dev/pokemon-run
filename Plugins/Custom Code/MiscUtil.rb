@@ -929,5 +929,5 @@ def pbGetEvoInfo(pkmnid)
 end
 
 def pbScout
-pbMessage("HI")
+ pbMessage(diverse_types?(["ABRA"]))
 end
