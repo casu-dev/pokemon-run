@@ -5,8 +5,14 @@ def pbGetStagesCleared
   pbGet(48)
 end
 
+def pbGetRoomsCleared
+    pbGet(49)
+  end
+
 def pbGetPkmnTargetLvl
-  POKEMON_GET_LEVEL[pbGetStagesCleared]
+  return POKEMON_GET_LEVEL[pbGetStagesCleared] + 2 if pbGetRoomsCleared > 5 && pbGetStagesCleared > 3
+  return POKEMON_GET_LEVEL[pbGetStagesCleared] + 1 if pbGetRoomsCleared > 5
+  return POKEMON_GET_LEVEL[pbGetStagesCleared]
 end
 
 def pbLvUpAllPkmn(targetLevel = nil)
@@ -246,7 +252,6 @@ def pbGenPokeChoice
             normalPkmns.each do |pkmn|
                 mergedPkmns.push(pkmn)
             end
-            #pbMessage("Invalid") if !diverse_types?(pkmns)
             while !diverse_types?(mergedPkmns) do
                 if pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount).is_a?(Array)
                    normalPkmns = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
@@ -266,9 +271,7 @@ def pbGenPokeChoice
             output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
         end
     end
-    pbMessage(output.to_s)
     output = output.shuffle
-    pbMessage(output.to_s)
     # do for every pokemon save slot
     [26, 27, 28].each do |i|
         pbSet(i, output.pop)

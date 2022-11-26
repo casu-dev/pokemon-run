@@ -1,8 +1,6 @@
 # Pokemon Battle Woods
 
 ## Open Tickets
-- [ ] Create new map for Standard Trainer, where there is no fork in the way
-- [ ] Last Oak of each floor shall offer higher lv Pokémon
 - [ ] Pokémon steal room (low odds)
 - [ ] Create Pokémon pools for Rocket Grunts and Elite Trainer
 - [ ] Increase all Pokémon pools
@@ -13,6 +11,8 @@
 - [ ] Add Trainers that contain a Mega Evolution Pokemon
 
 ## Closed Tickets
+- [x] Last Oak of each floor shall offer higher lv Pokémon
+- [x] Create new map for Standard Trainer, where there is no fork in the way
 - [x] Generate rooms random (also enable us to put a weight on the odds)
 - [x] Place a copy of Oak (choose Pokémon) and his Assistant (evolve Pokémon) in the Pokémon Center map
 - [x] Place a NPC that heals the party on every floor boss map
