@@ -165,9 +165,9 @@ def pbGetCorrectEvo(pkmn, lvl)
 end
 
 def pbGenStarterPkmn(type)
-  return pbChooseRandomPokemon(whiteList: %i[CHARMANDER CYNDAQUIL TORCHIC CHIMCHAR TEPIG]) if type == :FIRE
-  return pbChooseRandomPokemon(whiteList: %i[SQUIRTLE TOTODILE MUDKIP PIPLUP OSHAWOTT]) if type == :WATER
-  return pbChooseRandomPokemon(whiteList: %i[BULBASAUR CHIKORITA TREECKO TURTWIG SNIVY]) if type == :GRASS
+  return pbChooseRandomPokemon(whiteList: %i[CHARMANDER CYNDAQUIL TORCHIC CHIMCHAR TEPIG FENNEKIN LITTEN SCORBUNNY]) if type == :FIRE
+  return pbChooseRandomPokemon(whiteList: %i[SQUIRTLE TOTODILE MUDKIP PIPLUP OSHAWOTT FROAKIE POPPLIO SOBBLE]) if type == :WATER
+  return pbChooseRandomPokemon(whiteList: %i[BULBASAUR CHIKORITA TREECKO TURTWIG SNIVY CHESPIN ROWLET GROOKEY]) if type == :GRASS
 end
 
 def pbGenMegaPkmn
