@@ -5,9 +5,7 @@
 - [ ] Create Pokémon pools for Rocket Grunts and Elite Trainer
 - [ ] Increase all Pokémon pools
 - [ ] Ensure every room has background music (espacially the Combat Teacher rooms)
-- [ ] Each floor boss team, shall make the boss use a different sprite
 - [ ] Dynamically load room sprites
-- [ ] Oak's Assistants allows change of Poké forms
 - [ ] Add Trainers that contain a Mega Evolution Pokemon
 
 ## Closed Tickets
