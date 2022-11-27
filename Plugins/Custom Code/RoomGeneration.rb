@@ -28,8 +28,8 @@ MAP_EVENT_POOL = [
 
 # Rooms that are different on each floor 
 MAP_BOSS_LIST = [
-  { id: 86, name: '1st Floor Boss', posx: 10, posy: 13, value: 20, weight: 10 }, # 1st floor
-  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 13, value: 20, weight: 10 }, # 2nd floor
+  { id: 86, name: '1st Floor Boss', posx: 10, posy: 14, value: 20, weight: 10 }, # 1st floor
+  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 14, value: 20, weight: 10 }, # 2nd floor
   { id: 100, name: '3rd Floor Boss', posx: 9, posy: 17, value: 20, weight: 10 }, # 3rd floor
   { id: 106, name: 'Final Boss', posx: 9, posy: 17, value: 20, weight: 10 } # 4th floor
 ]
