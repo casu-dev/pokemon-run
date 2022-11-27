@@ -81,14 +81,14 @@ class DiegoWTsStarterSelection
     @sprites["ballbase"].ox = @sprites["ballbase"].bitmap.width/2
     @sprites["ballbase"].oy = @sprites["ballbase"].bitmap.height/2
     @sprites["ballbase"].opacity = 0
-    
+    pbWriteIntoFile("form.txt", 0)
     @data = {}
     @data["pkmn_1"] = Pokemon.new(@pkmn1,@lv)
-    @data["pkmn_1"].form = StarterSelSettings::STARTER1F
+    @data["pkmn_1"].form = pbRollForm(pkmn1)
     @data["pkmn_2"] = Pokemon.new(@pkmn2,@lv)
-    @data["pkmn_2"].form = StarterSelSettings::STARTER2F
+    @data["pkmn_2"].form = pbRollForm(pkmn2)
     @data["pkmn_3"] = Pokemon.new(@pkmn3,@lv)
-    @data["pkmn_3"].form = StarterSelSettings::STARTER3F
+    @data["pkmn_3"].form = pbRollForm(pkmn3)
     for i in 1..3
       @sprites["pkmn_#{i}"] = PokemonSprite.new(@viewport)
       @sprites["pkmn_#{i}"].setOffset(PictureOrigin::Center)
@@ -482,7 +482,7 @@ class DiegoWTsStarterSelection
       @endscene = 1
       pbCloseScene
       # give to info about hidden ability
-      pbkAddPokemon(@data["pkmn_#{@select}"],@lv, true, @hiddenAbility)
+      pbkAddPokemon(@data["pkmn_#{@select}"],@lv, true, @hiddenAbility, @data["pkmn_#{@select}"].form)
     else
       @sprites["textbox"].y = @oldMsgY
       @sprites["textbox"].text = _INTL("<ac>Choose a Pokémon.</ac>")
