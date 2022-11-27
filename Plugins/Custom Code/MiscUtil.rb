@@ -761,8 +761,23 @@ def pbBattlerIsPkmn?(bttlr, pkmn)
     return true
 end
 
-def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false)
+def pbRollForm(pkmnID)
+     # (relevant) Pokémon with more than 2 forms %i[NECROZMA CALYREX DEOXYS ROTOM MEOWTH KYUREM ORICORIO GOURGEIST PUMPKABOO LYCANROC]
+     # Form count                                %i[   3        3        4      6     3     3       4         4         4        3]
+     if pkmnID == "NECROZMA" || pkmnID == "CALYREX" || pkmnID == "MEOWTH" || pkmnID == "KYUREM" || pkmnID == "LYCANROC"
+        return rand(3)
+     elsif pkmnID == "DEOXYS" || pkmnID == "ORICORIO" || pkmnID == "GOURGEIST" || pkmnID == "PUMPKABOO"
+        return rand(4)
+     elsif pkmnID == "ROTOM"
+        return rand(6)
+     else
+        return rand(2)
+     end
+end
+
+def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false, form = 0)
     if hiddenAbility
+          pkmn.form = 0
           return false if !pkmn
           if pbBoxesFull?
             pbMessage(_INTL("There's no more room for Pokémon!\1"))
@@ -771,14 +786,17 @@ def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false)
           end
           pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
           species_name = pkmn.speciesName
+          pbWriteIntoFile("form.txt", 1)
+          pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
+          pkmn.form = form
           # Set hidden ability
           pkmn.setAbility(2)
           pbSetPkmnEv(pkmn)
-          pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
           pbNicknameAndStore(pkmn)
           $Trainer.pokedex.register(pkmn) if see_form
           return true
     else
+          pkmn.form = 0
           return false if !pkmn
           if pbBoxesFull?
             pbMessage(_INTL("There's no more room for Pokémon!\1"))
@@ -787,8 +805,10 @@ def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false)
           end
           pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
           species_name = pkmn.speciesName
-          pbSetPkmnEv(pkmn)
+          pbWriteIntoFile("form.txt", 1)
           pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
+          pkmn.form = form
+          pbSetPkmnEv(pkmn)
           pbNicknameAndStore(pkmn)
           $Trainer.pokedex.register(pkmn) if see_form
           return true
