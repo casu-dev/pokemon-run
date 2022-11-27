@@ -58,21 +58,37 @@ MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
   { id: 105, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35, weight: 10 } # 4th floor
 ]
 
-def pbGenDest
-  prev1 = pbGet(29)
-  prev2 = pbGet(31)
+def isEventRoom(room)
+  return true if MAP_EVENT_POOL.include? room
+  return true if MAP_FIGHT_ELITE_TRAINER_LIST.include? room
+  return false
+end
 
-  room = pbGetPossDest(0, nil)
-  pbSet(29, room)
-  pbSet(30, room[:name])
-  pbSet(35, room[:value])
+def pbGenDest()
+  # load last event rooms as blacklist
+  avoidRooms = [pbGet(38),  pbGet(39)]
 
-  room = pbGetPossDest(1, room)
-  pbSet(31, room)
-  pbSet(32, room[:name])
-  pbSet(36, room[:value])
+  room1 = pbGetPossDest(0, avoidRooms)
+  pbSet(29, room1)
+  pbSet(30, room1[:name])
+  pbSet(35, room1[:value])
 
-  echoln 'Generated destinations: ' + pbGet(30).to_s + ' | ' + pbGet(32).to_s
+  avoidRooms += [room1]
+
+  room2 = pbGetPossDest(1, avoidRooms)
+  pbSet(31, room2)
+  pbSet(32, room2[:name])
+  pbSet(36, room2[:value])
+
+  # Save generated event rooms so we know what to avoid next time
+  if isEventRoom(room1) || isEventRoom(room2)
+    echoln "The next rooms are event rooms. Remembering it for next time"
+    pbSet(38, pbGet(29)) 
+    pbSet(39, pbGet(31))
+  end
+
+  echoln 'Generated destinations: ' + pbGet(30).to_s + ' | ' + pbGet(32).to_s 
+  echoln "Rooms avoided: " + avoidRooms.to_s
 end
 
 def pbTransferToDest(dest)
@@ -106,13 +122,13 @@ end
 #	10	Trainer	Elite
 #	11	Trainer	Center
 #	12	Boss	X
-def pbGetPossDest(exit_no, other_dest)
+def pbGetPossDest(exit_no, avoidRooms)
   stages_cleared = pbGet(48)
   rooms_cleared = pbGet(49)
 
   nextMap = MAP_FIGHT_TRAINER_LIST[stages_cleared]
   nextMap = MAP_FIGHT_TRAINER_SINGLE_OPTION_LIST[stages_cleared] if rooms_cleared == 10 || rooms_cleared == 7 || rooms_cleared == 4 || rooms_cleared == 1
-  nextMap = rollEventRoom(other_dest) if rooms_cleared % 2 == 0
+  nextMap = rollEventRoom(avoidRooms) if rooms_cleared % 2 == 0
   nextMap = MAP_CENTER_WITH_OAK if rooms_cleared == 2
   nextMap = MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST[stages_cleared] if rooms_cleared == 5
   nextMap = MAP_PICK_POKEMON if rooms_cleared == 8
@@ -125,10 +141,10 @@ def pbGetFightTrainerDest
 end
 
 
-def rollEventRoom(avoidRoom)
+def rollEventRoom(avoidRooms)
   pool = MAP_EVENT_POOL.dup
   pool += [MAP_FIGHT_ELITE_TRAINER_LIST[pbGet(48)]]
-  pool -= [avoidRoom]
+  pool -= avoidRooms
   pool = pool.shuffle
 
   # alogrithm stolen from internet
