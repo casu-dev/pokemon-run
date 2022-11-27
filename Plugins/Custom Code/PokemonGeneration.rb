@@ -74,11 +74,10 @@ def pbEvolveBabiesInParty
     end
 end
 
-def pbGetCorrectOakPool
+def pbGetCorrectOakPool(luckyWeakling = false)
     floor = pbGet(48) + 1
     diceRoll = rand(1..100)
-    #if Lucky Weakling
-    if pbReadFile("gamemode.txt").to_i == 3
+    if luckyWeakling
         if floor == 1
             # 50% chance
             if 1 <= diceRoll && diceRoll <= 50
@@ -216,12 +215,13 @@ end
 def pbGenPokeChoice
     amount = 3
     # Integer in %
-    legiChance = 30
+    legiChance = 3
     output = []
     legiPkmns = []
     amountLegis = 0
+    luckyWeakling = (pbReadFile("gamemode.txt").to_i == 3)
     # Checks if mode is not "Lucky Weakling" and if the floor is > 2
-    if pbGet(48) > 1 && !(pbReadFile("gamemode.txt").to_i == 3)
+    if pbGet(48) > 1 && !luckyWeakling
         for i in 1 .. amount do
            amountLegis += 1 if pbRollForChance(legiChance)
         end
@@ -233,6 +233,7 @@ def pbGenPokeChoice
             legiPkmns.push(pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis))
         end
         while !diverse_types?(legiPkmns) do
+            # Same if-else block as above
             if pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis).is_a?(Array)
                 legiPkmns = pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis)
             else
@@ -248,17 +249,19 @@ def pbGenPokeChoice
            else
                normalPkmns.push(pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount))
            end
-            mergedPkmns = Marshal.load(Marshal.dump(legiPkmns))
+            mergedPkmns = legiPkmns.dup
             normalPkmns.each do |pkmn|
                 mergedPkmns.push(pkmn)
             end
             while !diverse_types?(mergedPkmns) do
+                # Same if-else block as above
+                normalPkmns = []
                 if pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount).is_a?(Array)
                    normalPkmns = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
                 else
                    normalPkmns.push(pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount))
                 end
-                mergedPkmns = Marshal.load(Marshal.dump(legiPkmns))
+                mergedPkmns = legiPkmns.dup
                 normalPkmns.each do |pkmn|
                     mergedPkmns.push(pkmn)
                 end
@@ -266,9 +269,9 @@ def pbGenPokeChoice
             output = mergedPkmns
         end
     else
-        output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
+        output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool(luckyWeakling), amount: amount)
         while !diverse_types?(output) do
-            output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
+            output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool(luckyWeakling), amount: amount)
         end
     end
     output = output.shuffle
