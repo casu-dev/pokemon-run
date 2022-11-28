@@ -166,7 +166,6 @@ end
 
 def pbOfferUsableMegaStones
   stones = []
-
   $PokemonStorage.boxes.each do |box|
     (0...box.length).each do |i|
       next unless box[i]
@@ -237,7 +236,10 @@ end
 def pbGetMegaStones(pkmn)
   res = []
   GameData::Species.each do |data|
-    res.push(data.mega_stone) if data.mega_stone && (data.species == pkmn.species)
+      if data.mega_stone && (data.species == pkmn.species)
+          res.push(data.mega_stone)
+          break if (res.length >= 2)
+      end
   end
   res
 end
