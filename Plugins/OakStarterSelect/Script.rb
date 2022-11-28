@@ -85,10 +85,13 @@ class DiegoWTsStarterSelection
     @data = {}
     @data["pkmn_1"] = Pokemon.new(@pkmn1,@lv)
     @data["pkmn_1"].form = formPkmn1
+    @data["pkmn_1"].item = pbGiveSignatureItem(pkmn1)
     @data["pkmn_2"] = Pokemon.new(@pkmn2,@lv)
     @data["pkmn_2"].form = formPkmn2
+    @data["pkmn_2"].item = pbGiveSignatureItem(pkmn2)
     @data["pkmn_3"] = Pokemon.new(@pkmn3,@lv)
     @data["pkmn_3"].form = formPkmn3
+    @data["pkmn_3"].item = pbGiveSignatureItem(pkmn3)
     for i in 1..3
       @sprites["pkmn_#{i}"] = PokemonSprite.new(@viewport)
       @sprites["pkmn_#{i}"].setOffset(PictureOrigin::Center)

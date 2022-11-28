@@ -959,6 +959,29 @@ def pbKeepBaseForm(pkmnID)
     return false
 end
 
+def pbGiveSignatureItem(pkmnID)
+    if pkmnID == "GENESECT"
+        itemPool = %i[BURNDRIVE CHILLDRIVE DOUSEDRIVE SHOCKDRIVE]
+        return itemPool[rand(4)]
+    elsif pkmnID == "ARCEUS"
+        itemPool = %i[FLAMEPLATE SPLASHPLATE ZAPPLATE MEADOWPLATE ICICLEPLATE FISTPLATE TOXICPLATE EARTHPLATE SKYPLATE MINDPLATE INSECTPLATE STONEPLATE SPOOKYPLATE DRACOPLATE DREADPLATE IRONPLATE PIXIEPLATE]
+        return itemPool[rand(17)]
+    elsif pkmnID == "ZACIAN"
+        return "RUSTEDSWORD"
+    elsif pkmnID == "ZAMAZENTA"
+        return "RUSTEDSHIELD"
+    elsif pkmnID == "GROUDON"
+        return "REDORB"
+    elsif pkmnID == "KYOGRE"
+        return "BLUEORB"
+    elsif pkmnID == "SILVALLY"
+        itemPool = %i[FIREMEMORY WATERMEMORY ELECTRICMEMORY GRASSMEMORY ICEMEMORY FIGHTINGMEMORY POISONMEMORY GROUNDMEMORY FLYINGMEMORY PSYCHICMEMORY BUGMEMORY ROCKMEMORY GHOSTMEMORY DRAGONMEMORY DARKMEMORY STEELMEMORY FAIRYMEMORY]
+        return itemPool[rand(17)]
+    end
+    # Other Pokémon shouldn't hold an item
+    return nil
+end
+
 def pbScout
 pbAddPokemon(:AEGISLASH, 20)
 end
