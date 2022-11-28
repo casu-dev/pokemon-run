@@ -4,75 +4,76 @@ TRAINER_OVERRIDE = [
     # Trainer F1
     tType: :YOUNGSTER, tName: 'Trainer',
     lvl1: 10, lvl2: 12, numPkmn: 2,
-    pkmnPool: %i[BIDOOF PURRLOIN GOTHITA MEDITITE EEVEE LILLIPUP AIPOM BUNEARY MEOWTH MINCCINO RATTATA PATRAT CASTFORM JIGGLYPUFF GLAMEOW HOOTHOOT TEDDIURSA ZIGZAGOON WHISMUR RALTS MIMEJR POOCHYENA SOLOSIS SENTRET SKITTY CLEFFA RIOLU TYROGUE]
+    pkmnPool: getF1StdTrainerPool
   },
   {
     # Trainer F2
     tType: :LASS, tName: 'Trainer',
     lvl1: 25, lvl2: 28, numPkmn: 3,
-    pkmnPool: %i[GLOOM SEADRA LAMPENT STARAVIA KIRLIA GRAVELER MARSHTOMP LOUDRED POLIWHIRL NUZLEAF TANGELA WARTORTLE COMBUSKEN GOTHORITA BRONZOR KLANG KROKOROK MURKROW BAYLEEF CHARMELEON CROCONAW DEWOTT FLAAFFY GROTLE GROVYLE HERDIER IVYSAUR LAIRON LOMBRE MACHOKE NIDORINO PIDGEOTTO VANILLISH WHIRLIPEDE]
+    pkmnPool: getOak5Merged6
   },
   {
     # Trainer F3
     tType: :COOLTRAINER_F, tName: 'Trainer',
     lvl1: 53, lvl2: 55, numPkmn: 3,
-    pkmnPool: %i[ARCANINE AZUMARILL ABOMASNOW SLOWBRO HITMONTOP STARMIE BRONZONG MACHAMP HONCHKROW GALVANTULA TOGEKISS RHYDON SCRAFTY ROSERADE CHANDELURE AMBIPOM CLAYDOL COFAGRIGUS CROBAT DUSKNOIR MISMAGIUS NIDOKING NIDOQUEEN XATU VENOMOTH AGGRON AMOONGUSS BOUFFALANT CRUSTLE ELECTIVIRE KLINKLANG MANECTRIC LANTURN POLIWRATH QWILFISH WHIMSICOTT]
+    pkmnPool: getOak8Merged9
   },
   {
     # Trainer F4
     tType: :BIKER, tName: 'Trainer',
     lvl1: 80, lvl2: 85, numPkmn: 4,
-    pkmnPool: %i[ALAKAZAM CONKELDURR EXCADRILL FERROTHORN GLISCOR GENGAR JELLICENT MAMOSWINE REUNICLUS SCIZOR STARMIE TENTACRUEL HIPPOWDON HAXORUS INFERNAPE LUCARIO METAGROSS ABOMASNOW TOXICROAK GYARADOS DONPHAN VAPOREON CHANDELURE FROSLASS STARAPTOR DARMANITAN EMPOLEON FLYGON RHYPERIOR MIENSHAO MILOTIC SNORLAX WEAVILE]
+    pkmnPool: getOakPool10
   },
   # ====== Elite =========
   {
     # Elite F1
     tType: :GENTLEMAN, tName: 'Elite Trainer',
-    lvl1: 15, lvl2: 15, numPkmn: 4, 
-    pkmnPool: %i[MEW ARCEUS NIHILEGO REGIROCK MOLTRES ZARUDE SUICUNE] # //TODO
+    lvl1: 14, lvl2: 14, numPkmn: 2,
+    pkmnPool: getF1EliteTrainerPool
   },
   {
     # Elite F2
     tType: :LADY, tName: 'Elite Trainer',
-    lvl1: 30, lvl2: 30, numPkmn: 4,
-    pkmnPool: %i[MEW ARCEUS NIHILEGO REGIROCK MOLTRES ZARUDE SUICUNE] # //TODO
+    lvl1: 29, lvl2: 29, numPkmn: 3,
+    pkmnPool: getOakPool7
   },
   {
     # Elite F3
     tType: :BEAUTY, tName: 'Elite Trainer',
-    lvl1: 60, lvl2: 60, numPkmn: 4,
-    pkmnPool: %i[MEW ARCEUS NIHILEGO REGIROCK MOLTRES ZARUDE SUICUNE] # //TODO
+    lvl1: 58, lvl2: 58, numPkmn: 3,
+    pkmnPool: getOakPool10
   },
   {
     # Elite F4
     tType: :GAMBLER, tName: 'Elite Trainer',
     lvl1: 90, lvl2: 90, numPkmn: 4,
-    pkmnPool: %i[MEW ARCEUS NIHILEGO REGIROCK MOLTRES ZARUDE SUICUNE] # //TODO
+    pkmnPool: getOakPool11
   },
   # ====== Middle Boss =========
   {
     # Middle Boss F1
-    tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
-    lvl1: 15, lvl2: 15, numPkmn: 4,
-    pkmnPool: %i[MEW ARCEUS NIHILEGO REGIROCK MOLTRES ZARUDE SUICUNE] # //TODO
+    #tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
+    tType: :RIVAL1, tName: 'Gary',
+    lvl1: 12, lvl2: 12, numPkmn: 2,
+    pkmnPool: getF1EliteTrainerPool
   },
   {
     # Middle Boss F2
-    tType: :TEAMROCKET_F, tName: 'Rocket Grunt',
-    lvl1: 30, lvl2: 30, numPkmn: 4,
-    pkmnPool: %i[MEW ARCEUS NIHILEGO REGIROCK MOLTRES ZARUDE SUICUNE] # //TODO
+    tType: :RIVAL1, tName: 'Gary',
+    lvl1: 28, lvl2: 28, numPkmn: 3,
+    pkmnPool: getOakPool7
   },
   {
     # Middle Boss F3
     tType: :ROCKETBOSS, tName: 'Giovanni',
-    lvl1: 60, lvl2: 60, numPkmn: 4,
-    pkmnPool: %i[MEW ARCEUS NIHILEGO REGIROCK MOLTRES ZARUDE SUICUNE] # //TODO
+    lvl1: 57, lvl2: 57, numPkmn: 4,
+    pkmnPool: getOakPool10
   },
   {
     # Middle Boss F4
     tType: :LEADER_Giovanni, tName: 'Giovanni',
-    lvl1: 90, lvl2: 90, numPkmn: 4,
-    pkmnPool: %i[MEW ARCEUS NIHILEGO REGIROCK MOLTRES ZARUDE SUICUNE] # //TODO
+    lvl1: 88, lvl2: 88, numPkmn: 4,
+    pkmnPool: getOakPool11
   },
 ]
 
