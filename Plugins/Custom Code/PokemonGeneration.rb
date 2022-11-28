@@ -298,23 +298,19 @@ def pbGetCorrectLvlEvo(pkmn, lvl)
     end
 end
 
-def pbGetCorrectEvo(pkmn, lvl)
-  p = GameData::Species.try_get(pbGetCorrectLvlEvo(pkmn, lvl))
-  $Lv = pbGetPkmnTargetLvl
+#Reworked
+def pbGetCorrectEvo(pkmn)
+  p = GameData::Species.try_get(pbGetCorrectLvlEvo(pkmn, 70))
   evos = p.get_evolutions
 
-  if evos.length() == 1 && $Lv >= 60
+  if evos.length() >= 1
         # p2 is the evolution of p
         p2 = GameData::Species.try_get(evos[0][0])
         if !filterPkmnHasEvolution(p2)
            return p2.id #i.e Sneasel -> Weavile
         else
            evos2 = p2.get_evolutions
-           if evos2.length() > 1
-                return p2.id # no i.e
-           else
-                return evos2[0][0] #i.e Cleffa -> Clefable
-           end
+           return evos2[0][0] #i.e Cleffa -> Clefable
         end
   else
         return p.id
@@ -328,11 +324,7 @@ def pbGenStarterPkmn(type)
 end
 
 def pbGenMegaPkmn
-  pkmns = pbChooseRandomPokemon(
-      whiteList: %i[VENUSAUR CHARIZARD BLASTOISE BEEDRILL PIDGEOT ALAKAZAM SLOWBRO GENGAR KANGASKHAN PINSIR GYARADOS AERODACTYL
-    AMPHAROS STEELIX SCIZOR HERACROSS TYRANITAR SCEPTILE BLAZIKEN SWAMPERT GARDEVOIR SABLEYE MAWILE AGGRON MEDICHAM MANECTRIC
-    SHARPEDO CAMERUPT ALTARIA BANETTE ABSOL GLALIE SALAMENCE METAGROSS LOPUNNY GARCHOMP LUCARIO ABOMASNOW GALLADE AUDINO], amount:3
-  )
+  pkmns = pbChooseRandomPokemon(whiteList: getOakMegas, amount:3)
   pbSet(26, pkmns[0])
   pbSet(27, pkmns[1])
   pbSet(28, pkmns[2])
@@ -376,17 +368,28 @@ def pbRandomPkmnGeneration(mega = false)
         pbGenPokeChoice()
       end
   end
+
+  # Roll Pokémon forms like Galar or Alolan form
+  # First Poke
+  pbSet(4321, pbRollForm(pbGet(26)))
+  # Second Poke
+  pbSet(4322, pbRollForm(pbGet(27)))
+  # Third Poke
+  pbSet(4323, pbRollForm(pbGet(28)))
 end
 
 def pbRandomPkmnSelection(lv, hiddenAbility = true)
   pkmn1 = pbGet(26)
+  formPkmn1 = pbGet(4321)
   pkmn2 = pbGet(27)
+  formPkmn2 = pbGet(4322)
   pkmn3 = pbGet(28)
+  formPkmn3 = pbGet(4323)
   # 25% chance for hidden ability
   if(hiddenAbility && rand(4)==1)
-      DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv, hiddenAbility)
+      DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv, hiddenAbility, formPkmn1, formPkmn2, formPkmn3)
   else
-      DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv)
+      DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv, false, formPkmn1, formPkmn2, formPkmn3)
   end
 end
 

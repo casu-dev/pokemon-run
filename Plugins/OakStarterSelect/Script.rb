@@ -2,7 +2,7 @@
 # DiegoWT's Starter Selection script
 #===============================================================================
 class DiegoWTsStarterSelection
-  def initialize(pkmn1,pkmn2,pkmn3, lv, hiddenAbility = false)
+  def initialize(pkmn1,pkmn2,pkmn3, lv, hiddenAbility = false, formPkmn1 = 0, formPkmn2 = 0, formPkmn3 = 0)
     @select = nil
     @frame = 0
     @selframe = 0 
@@ -84,11 +84,11 @@ class DiegoWTsStarterSelection
     pbWriteIntoFile("form.txt", 0)
     @data = {}
     @data["pkmn_1"] = Pokemon.new(@pkmn1,@lv)
-    @data["pkmn_1"].form = pbRollForm(pkmn1)
+    @data["pkmn_1"].form = formPkmn1
     @data["pkmn_2"] = Pokemon.new(@pkmn2,@lv)
-    @data["pkmn_2"].form = pbRollForm(pkmn2)
+    @data["pkmn_2"].form = formPkmn2
     @data["pkmn_3"] = Pokemon.new(@pkmn3,@lv)
-    @data["pkmn_3"].form = pbRollForm(pkmn3)
+    @data["pkmn_3"].form = formPkmn3
     for i in 1..3
       @sprites["pkmn_#{i}"] = PokemonSprite.new(@viewport)
       @sprites["pkmn_#{i}"].setOffset(PictureOrigin::Center)

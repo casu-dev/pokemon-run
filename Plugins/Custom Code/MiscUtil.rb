@@ -770,6 +770,8 @@ def pbRollForm(pkmnID)
         return rand(4)
      elsif pkmnID == "ROTOM"
         return rand(6)
+     elsif pbKeepBaseForm(pkmnID)
+        return 0
      else
         return rand(2)
      end
@@ -948,6 +950,15 @@ def pbGetEvoInfo(pkmnid)
     end
 end
 
+def pbKeepBaseForm(pkmnID)
+    pkmnFullyEvolvedID = pbGetCorrectEvo(pkmnID)
+    megaPool = getOakMegas.dup
+    megaPool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE AEGISLASH]
+    megaPool -= %i[SLOWBRO]
+    return true if megaPool.include? pkmnFullyEvolvedID
+    return false
+end
+
 def pbScout
- pbMessage(diverse_types?(["ABRA"]))
+pbAddPokemon(:AEGISLASH, 20)
 end
