@@ -3,11 +3,11 @@
 ## Open Tickets
 - [ ] Pokémon steal room (low odds)
 - [ ] Create Pokémon pools for Rocket Grunts and Elite Trainer
-- [ ] Increase all Pokémon pools
 - [ ] Ensure every room has background music (espacially the Combat Teacher rooms)
 - [ ] Add Trainers that contain a Mega Evolution Pokemon
 
 ## Closed Tickets
+- [x] Increase all Pokémon pools
 - [x] Rooms should not appear 2 time in a row
 - [x] Last Oak of each floor shall offer higher lv Pokémon
 - [x] Create new map for Standard Trainer, where there is no fork in the way

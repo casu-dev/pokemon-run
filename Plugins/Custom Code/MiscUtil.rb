@@ -170,10 +170,10 @@ def pbOfferUsableMegaStones
   $PokemonStorage.boxes.each do |box|
     (0...box.length).each do |i|
       next unless box[i]
+      newStones = pbGetMegaStones(box[i])
+      next unless newStones
 
-      next unless pbGetMegaStones(box[i])
-
-      pbGetMegaStones(box[i]).each do |stone|
+      newStones.each do |stone|
         stones << _INTL(stone.to_s) unless stones.include? _INTL(stone.to_s)
       end
     end
@@ -182,10 +182,10 @@ def pbOfferUsableMegaStones
   n = $Trainer.party.length
   (0..n).each do |i|
     next unless $Trainer.party[n - i]
+    newStones = pbGetMegaStones($Trainer.party[n - i])
+    next unless newStones
 
-    next unless pbGetMegaStones($Trainer.party[n - i])
-
-    pbGetMegaStones($Trainer.party[n - i]).each do |stone|
+    newStones.each do |stone|
       stones << _INTL(stone.to_s) unless stones.include? _INTL(stone.to_s)
     end
   end
