@@ -28,31 +28,30 @@ TRAINER_OVERRIDE = [
   {
     # Elite F1
     tType: :GENTLEMAN, tName: 'Elite Trainer',
-    lvl1: 14, lvl2: 14, numPkmn: 2,
+    lvl1: 13, lvl2: 14, numPkmn: 2,
     pkmnPool: getF1EliteTrainerPool
   },
   {
     # Elite F2
     tType: :LADY, tName: 'Elite Trainer',
-    lvl1: 29, lvl2: 29, numPkmn: 3,
+    lvl1: 28, lvl2: 29, numPkmn: 3,
     pkmnPool: getOakPool7
   },
   {
     # Elite F3
     tType: :BEAUTY, tName: 'Elite Trainer',
-    lvl1: 58, lvl2: 58, numPkmn: 3,
+    lvl1: 57, lvl2: 58, numPkmn: 3,
     pkmnPool: getOakPool10
   },
   {
     # Elite F4
     tType: :GAMBLER, tName: 'Elite Trainer',
-    lvl1: 90, lvl2: 90, numPkmn: 4,
+    lvl1: 89, lvl2: 90, numPkmn: 4,
     pkmnPool: getOakPool11
   },
   # ====== Middle Boss =========
   {
     # Middle Boss F1
-    #tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
     tType: :RIVAL1, tName: 'Gary',
     lvl1: 12, lvl2: 12, numPkmn: 2,
     pkmnPool: getF1EliteTrainerPool
@@ -75,6 +74,31 @@ TRAINER_OVERRIDE = [
     lvl1: 88, lvl2: 88, numPkmn: 4,
     pkmnPool: getOakPool11
   },
+  # ====== Rocket Grunt =========
+    {
+      # Rocket Grunt F1
+      tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
+      lvl1: 11, lvl2: 13, numPkmn: 3,
+      pkmnPool: getF1StdTrainerPool
+    },
+    {
+      # Rocket Grunt F2
+      tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
+      lvl1: 28, lvl2: 30, numPkmn: 3,
+      pkmnPool: getOakPool6
+    },
+    {
+      # Rocket Grunt F3
+      tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
+      lvl1: 55, lvl2: 57, numPkmn: 3,
+      pkmnPool: getOakPool8
+    },
+    {
+      # Rocket Grunt F4
+      tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
+      lvl1: 85, lvl2: 87, numPkmn: 3,
+      pkmnPool: getOakPool10
+    },
 ]
 
 TRAINER_INTRO_TEXT = [
