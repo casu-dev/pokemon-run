@@ -52,50 +52,50 @@ TRAINER_OVERRIDE = [
   # ====== Middle Boss =========
   {
     # Middle Boss F1
-    tType: :RIVAL1, tName: 'Gary',
+    tType: :RIVAL1, tName: 'Gary1',
     lvl1: 12, lvl2: 12, numPkmn: 2,
     pkmnPool: getF1EliteTrainerPool
   },
   {
     # Middle Boss F2
-    tType: :RIVAL1, tName: 'Gary',
+    tType: :RIVAL1, tName: 'Gary2',
     lvl1: 28, lvl2: 28, numPkmn: 3,
     pkmnPool: getOakPool7
   },
   {
     # Middle Boss F3
-    tType: :ROCKETBOSS, tName: 'Giovanni',
+    tType: :ROCKETBOSS, tName: 'Gary3',
     lvl1: 57, lvl2: 57, numPkmn: 4,
     pkmnPool: getOakPool10
   },
   {
     # Middle Boss F4
-    tType: :LEADER_Giovanni, tName: 'Giovanni',
+    tType: :LEADER_Giovanni, tName: 'Gary4',
     lvl1: 88, lvl2: 88, numPkmn: 4,
     pkmnPool: getOakPool11
   },
   # ====== Rocket Grunt =========
     {
       # Rocket Grunt F1
-      tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
+      tType: :TEAMROCKET_M, tName: 'Rocket Grunt1',
       lvl1: 11, lvl2: 13, numPkmn: 3,
       pkmnPool: getF1StdTrainerPool
     },
     {
       # Rocket Grunt F2
-      tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
+      tType: :TEAMROCKET_M, tName: 'Rocket Grunt2',
       lvl1: 28, lvl2: 30, numPkmn: 3,
       pkmnPool: getOakPool6
     },
     {
       # Rocket Grunt F3
-      tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
+      tType: :TEAMROCKET_M, tName: 'Rocket Grunt3',
       lvl1: 55, lvl2: 57, numPkmn: 3,
       pkmnPool: getOakPool8
     },
     {
       # Rocket Grunt F4
-      tType: :TEAMROCKET_M, tName: 'Rocket Grunt',
+      tType: :TEAMROCKET_M, tName: 'Rocket Grunt4',
       lvl1: 85, lvl2: 87, numPkmn: 3,
       pkmnPool: getOakPool10
     },
@@ -131,7 +131,6 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
       alreadyPicked.push(new_species)
       newParty.push(Pokemon.new(new_species, lvl))
     end
-
     trainer.party = newParty
     echoln 'Generated trainer party: ' + newParty.to_s
   end
