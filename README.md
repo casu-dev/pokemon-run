@@ -1,12 +1,14 @@
 # Pokemon Battle Woods
 
 ## Open Tickets
-- [ ] Pokémon steal room (low odds)
-- [ ] Create Pokémon pools for Rocket Grunts and Elite Trainer
-- [ ] Ensure every room has background music (espacially the Combat Teacher rooms)
-- [ ] Add Trainers that contain a Mega Evolution Pokemon
+- [ ] Rocket Grunts and Middle Floor trainer shall use their pool
+- [ ] Add intro/lose text Middle Floor and Elite Trainer
+- [ ] Update next room indicator
+- [ ] Ensure every room has background music
 
 ## Closed Tickets
+- [x] Pokémon steal room (low odds)
+- [x] Add Trainers that contain a Mega Evolution Pokemon
 - [x] Increase all Pokémon pools
 - [x] Rooms should not appear 2 time in a row
 - [x] Last Oak of each floor shall offer higher lv Pokémon
