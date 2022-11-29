@@ -131,6 +131,16 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
       alreadyPicked.push(new_species)
       newParty.push(Pokemon.new(new_species, lvl))
     end
+
+    # Replace first Pokemon with a Mega Pokemon if on F4 Middle Floor Trainer or Elite Trainer map
+    if (($game_map.map_id == 108) || ($game_map.map_id == 105))
+        megaPkmnID = pbChooseRandomPokemon(whiteList: getOakMegas)
+        megaPkmn = Pokemon.new(megaPkmnID, lvl)
+        megaStones = pbGetMegaStones(megaPkmn)
+        megaPkmn.item = megaStones[rand(megaStones.length)]
+        newParty[0] = megaPkmn if newParty[0]
+    end
+
     trainer.party = newParty
 
     # Preperation steal Pokémon
