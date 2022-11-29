@@ -2,7 +2,7 @@
 # DiegoWT's Starter Selection script
 #===============================================================================
 class DiegoWTsStarterSelection
-  def initialize(pkmn1,pkmn2,pkmn3, lv, hiddenAbility = false, formPkmn1 = 0, formPkmn2 = 0, formPkmn3 = 0)
+  def initialize(pkmn1,pkmn2,pkmn3, lv, hiddenAbility = false, formPkmn1 = 0, formPkmn2 = 0, formPkmn3 = 0, steal = false)
     @select = nil
     @frame = 0
     @selframe = 0 
@@ -84,12 +84,15 @@ class DiegoWTsStarterSelection
     pbWriteIntoFile("form.txt", 0)
     @data = {}
     @data["pkmn_1"] = Pokemon.new(@pkmn1,@lv)
+    @data["pkmn_1"] = pbGet(4324)[0] if steal
     @data["pkmn_1"].form = formPkmn1
     @data["pkmn_1"].item = pbGiveSignatureItem(pkmn1)
     @data["pkmn_2"] = Pokemon.new(@pkmn2,@lv)
+    @data["pkmn_2"] = pbGet(4324)[1] if steal
     @data["pkmn_2"].form = formPkmn2
     @data["pkmn_2"].item = pbGiveSignatureItem(pkmn2)
     @data["pkmn_3"] = Pokemon.new(@pkmn3,@lv)
+    @data["pkmn_3"] = pbGet(4324)[2] if steal
     @data["pkmn_3"].form = formPkmn3
     @data["pkmn_3"].item = pbGiveSignatureItem(pkmn3)
     for i in 1..3

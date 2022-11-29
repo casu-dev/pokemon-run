@@ -780,6 +780,7 @@ def pbRollForm(pkmnID)
 end
 
 def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false, form = 0)
+    pkmn.heal
     if hiddenAbility
           pkmn.form = 0
           return false if !pkmn
@@ -982,6 +983,15 @@ def pbGiveSignatureItem(pkmnID)
     end
     # Other Pokémon shouldn't hold an item
     return nil
+end
+
+def pbStealPkmn
+    if pbGet(4324) != 0
+        pkmn1 = pbGet(4324)[0].species if pbGet(4324)[0].species
+        pkmn2 = pbGet(4324)[1].species if pbGet(4324)[1].species
+        pkmn3 = pbGet(4324)[2].species if pbGet(4324)[2].species
+        DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, pbGet(4324)[0].level, false, 0, 0, 0, true) if pbGet(4324)[0].level
+    end
 end
 
 def pbScout

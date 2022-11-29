@@ -132,6 +132,10 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
       newParty.push(Pokemon.new(new_species, lvl))
     end
     trainer.party = newParty
+
+    # Preperation steal Pokémon
+    pbSet(4324, trainer.party.dup)
+
     echoln 'Generated trainer party: ' + newParty.to_s
   end
 }

@@ -672,6 +672,6 @@ Pokemon = KYOGRE,92
     Moves = THUNDER,ORIGINPULSE,ICEBEAM,CALMMIND
     Item = BLUEORB
 #-------------------------------
-[RIVAL1,Gary]
+[TEAMROCKET_M,Rocket Grunt1]
 LoseText = "..."
 Pokemon = BULBASAUR,10
