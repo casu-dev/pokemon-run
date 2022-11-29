@@ -110,12 +110,17 @@ TRAINER_INTRO_TEXT = [
    'I hope you wrote your testament.', 'Time to smash some Pokémon']
 ]
 
+TRAINER_LOOSE_TEXT = ["I'm never lucky...", "Well played!", "Damn, you are strong.", "I hope I don't get Ligma.", "...", "Aw man...", "I will get you next time!", "How was I supposed to win?"]
+
+
 Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
   return unless trainer_list
 
   trainer_list.each do |trainer|
     template = TRAINER_OVERRIDE.find { |i| i[:tType] == trainer.trainer_type and i[:tName] == trainer.name }
     next unless template # Do nothing if no override was found
+
+    echoln "Trainer loose text is " + trainer.lose_text.to_s
 
     # Determin lvl
     lvl = template[:lvl1]
@@ -150,6 +155,7 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
     end
 
     trainer.party = newParty
+    trainer.lose_text = TRAINER_LOOSE_TEXT.sample
 
     # Preperation steal Pokémon
     pbSet(4324, trainer.party.dup)
