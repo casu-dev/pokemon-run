@@ -2,11 +2,11 @@
 
 ## Open Tickets
 - [ ] Rocket Grunts and Middle Floor trainer shall use their pool
-- [ ] Add intro/lose text Middle Floor and Elite Trainer
-- [ ] Update next room indicator
+- [ ] Add intro<s>/lose</s> text Middle Floor and Elite Trainer
 - [ ] Ensure every room has background music
 
 ## Closed Tickets
+- [x] Update next room indicator
 - [x] Pokémon steal room (low odds)
 - [x] Add Trainers that contain a Mega Evolution Pokemon
 - [x] Increase all Pokémon pools
