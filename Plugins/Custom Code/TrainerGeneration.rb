@@ -134,7 +134,15 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
 
     # Replace first Pokemon with a Mega Pokemon if on F4 Middle Floor Trainer or Elite Trainer map
     if (($game_map.map_id == 108) || ($game_map.map_id == 105))
-        megaPkmnID = pbChooseRandomPokemon(whiteList: getOakMegas)
+        newPartyIDs = []
+        newParty.each do |pkmn|
+            newPartyIDs.push(pkmn.species) if pkmn.species
+        end
+        pbMessage(newPartyIDs.to_s)
+        pool = getOakMegas
+        pool -= newPartyIDs
+        pbMessage(pool.to_s)
+        megaPkmnID = pbChooseRandomPokemon(whiteList: pool)
         megaPkmn = Pokemon.new(megaPkmnID, lvl)
         megaStones = pbGetMegaStones(megaPkmn)
         megaPkmn.item = megaStones[rand(megaStones.length)]
