@@ -219,7 +219,7 @@ def pbGenPokeChoice
     output = []
     legiPkmns = []
     amountLegis = 0
-    luckyWeakling = (pbReadFile("gamemode.txt").to_i == 3)
+    luckyWeakling = pbLW
     # Checks if mode is not "Lucky Weakling" and if the floor is > 2
     if pbGet(48) > 1 && !luckyWeakling
         for i in 1 .. amount do
@@ -355,7 +355,7 @@ end
 
 #Generates the Pokemon (usually used when entering Oaks room)
 def pbRandomPkmnGeneration(mega = false)
-  mega = false if (pbReadFile("gamemode.txt").to_i == 3)
+  mega = false if pbLW
   if mega
     pbGenMegaPkmn()
   else

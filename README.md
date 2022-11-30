@@ -1,8 +1,6 @@
 # Pokemon Battle Woods
 
 ## Open Tickets
-- [ ] Rocket Grunts and Middle Floor trainer shall use their pool
-- [ ] Add intro<s>/lose</s> text Middle Floor and Elite Trainer
 - [ ] Ensure every room has background music
 
 ## Closed Tickets
@@ -25,3 +23,5 @@
 - [x] After beating the run, force the player to start a new run and overwrite the old save file
 - [x] Rework Oaks Pokemon generation (make an algorithm based on base stat totals etc.)
 - [x] Release Gen 6,7,8
+- [x] Rocket Grunts and Middle Floor trainer shall use their pool
+- [x] Add intro<s>/lose</s> text Middle Floor and Elite Trainer

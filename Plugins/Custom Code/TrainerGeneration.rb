@@ -4,101 +4,146 @@ TRAINER_OVERRIDE = [
     # Trainer F1
     tType: :YOUNGSTER, tName: 'Trainer',
     lvl1: 10, lvl2: 12, numPkmn: 2,
-    pkmnPool: getF1StdTrainerPool
+    pkmnPool: getF1StdTrainerPool,
+    LoseText: "..."
   },
   {
     # Trainer F2
     tType: :LASS, tName: 'Trainer',
     lvl1: 25, lvl2: 28, numPkmn: 3,
-    pkmnPool: getOak5Merged6
+    pkmnPool: getOak5Merged6,
+    LoseText: "..."
   },
   {
     # Trainer F3
     tType: :COOLTRAINER_F, tName: 'Trainer',
     lvl1: 53, lvl2: 55, numPkmn: 3,
-    pkmnPool: getOak8Merged9
+    pkmnPool: getOak8Merged9,
+    LoseText: "..."
   },
   {
     # Trainer F4
     tType: :BIKER, tName: 'Trainer',
     lvl1: 80, lvl2: 85, numPkmn: 4,
-    pkmnPool: getOakPool10
+    pkmnPool: getOakPool10,
+    LoseText: "..."
   },
   # ====== Elite =========
   {
     # Elite F1
     tType: :GENTLEMAN, tName: 'Elite Trainer',
     lvl1: 13, lvl2: 14, numPkmn: 2,
-    pkmnPool: getF1EliteTrainerPool
+    pkmnPool: getF1EliteTrainerPool,
+    LoseText: "..."
   },
   {
     # Elite F2
     tType: :LADY, tName: 'Elite Trainer',
     lvl1: 28, lvl2: 29, numPkmn: 3,
-    pkmnPool: getOakPool7
+    pkmnPool: getOakPool7,
+    LoseText: "..."
   },
   {
     # Elite F3
     tType: :BEAUTY, tName: 'Elite Trainer',
     lvl1: 57, lvl2: 58, numPkmn: 3,
-    pkmnPool: getOakPool10
+    pkmnPool: getOakPool10,
+    LoseText: "..."
   },
   {
     # Elite F4
     tType: :GAMBLER, tName: 'Elite Trainer',
     lvl1: 89, lvl2: 90, numPkmn: 4,
-    pkmnPool: getOakPool11
+    pkmnPool: getOakPool11,
+    LoseText: "..."
   },
   # ====== Middle Boss =========
   {
     # Middle Boss F1
-    tType: :RIVAL1, tName: 'Gary1',
+    tType: :RIVAL1, tName: 'Gary',
     lvl1: 12, lvl2: 12, numPkmn: 2,
-    pkmnPool: getF1EliteTrainerPool
+    pkmnPool: getF1EliteTrainerPool,
+    LoseText: "I will get you next time!"
   },
   {
     # Middle Boss F2
-    tType: :RIVAL1, tName: 'Gary2',
+    tType: :RIVAL1, tName: 'Gary',
     lvl1: 28, lvl2: 28, numPkmn: 3,
-    pkmnPool: getOakPool7
+    pkmnPool: getOakPool7,
+    LoseText: "You didn't have to win so convincingly!"
   },
   {
     # Middle Boss F3
-    tType: :ROCKETBOSS, tName: 'Gary3',
+    tType: :RIVAL1, tName: 'Gary',
     lvl1: 57, lvl2: 57, numPkmn: 4,
-    pkmnPool: getOakPool10
+    pkmnPool: getOakPool10,
+    LoseText: "Aw man..."
   },
   {
     # Middle Boss F4
-    tType: :LEADER_Giovanni, tName: 'Gary4',
+    tType: :RIVAL1, tName: 'Gary',
     lvl1: 88, lvl2: 88, numPkmn: 4,
-    pkmnPool: getOakPool11
+    pkmnPool: getOakPool11,
+    LoseText: "I'm never lucky..."
   },
-  # ====== Rocket Grunt =========
+  # ====== Rocket Grunt (Steal Trainer) =========
     {
       # Rocket Grunt F1
-      tType: :TEAMROCKET_M, tName: 'Rocket Grunt1',
+      tType: :TEAMROCKET_M, tName: 'Grunt',
       lvl1: 11, lvl2: 13, numPkmn: 3,
-      pkmnPool: getF1StdTrainerPool
+      pkmnPool: getF1StdTrainerPool,
+      LoseText: "gruntF1"
     },
     {
       # Rocket Grunt F2
-      tType: :TEAMROCKET_M, tName: 'Rocket Grunt2',
+      tType: :TEAMROCKET_M, tName: 'Grunt',
       lvl1: 28, lvl2: 30, numPkmn: 3,
-      pkmnPool: getOakPool6
+      pkmnPool: getOakPool6,
+      LoseText: "gruntF2"
     },
     {
       # Rocket Grunt F3
-      tType: :TEAMROCKET_M, tName: 'Rocket Grunt3',
+      tType: :TEAMROCKET_M, tName: 'Grunt',
       lvl1: 55, lvl2: 57, numPkmn: 3,
-      pkmnPool: getOakPool8
+      pkmnPool: getOakPool8,
+      LoseText: "gruntF3"
     },
     {
       # Rocket Grunt F4
-      tType: :TEAMROCKET_M, tName: 'Rocket Grunt4',
+      tType: :TEAMROCKET_M, tName: 'Grunt',
       lvl1: 85, lvl2: 87, numPkmn: 3,
-      pkmnPool: getOakPool10
+      pkmnPool: getOakPool10,
+      LoseText: "gruntF4"
     },
+  # ====== Rocket Grunt (Steal Trainer) Lucky Weakling mode =========
+      {
+        # Rocket Grunt F1
+        tType: :TEAMROCKET_M, tName: 'Grunt',
+        lvl1: 11, lvl2: 13, numPkmn: 3,
+        pkmnPool: getF1StdTrainerPool,
+        LoseText: "gruntF1LW"
+      },
+      {
+        # Rocket Grunt F2
+        tType: :TEAMROCKET_M, tName: 'Grunt',
+        lvl1: 28, lvl2: 30, numPkmn: 3,
+        pkmnPool: getOakPoolLW5,
+        LoseText: "gruntF2LW"
+      },
+      {
+        # Rocket Grunt F3
+        tType: :TEAMROCKET_M, tName: 'Grunt',
+        lvl1: 55, lvl2: 57, numPkmn: 3,
+        pkmnPool: getOakPoolLW6,
+        LoseText: "gruntF3LW"
+      },
+      {
+        # Rocket Grunt F4
+        tType: :TEAMROCKET_M, tName: 'Grunt',
+        lvl1: 85, lvl2: 87, numPkmn: 3,
+        pkmnPool: getOakPoolLW7,
+        LoseText: "gruntF4LW"
+      },
 ]
 
 TRAINER_INTRO_TEXT = [
@@ -110,17 +155,15 @@ TRAINER_INTRO_TEXT = [
    'I hope you wrote your testament.', 'Time to smash some Pokémon']
 ]
 
-TRAINER_LOOSE_TEXT = ["I'm never lucky...", "Well played!", "Damn, you are strong.", "I hope I don't get Ligma.", "...", "Aw man...", "I will get you next time!", "How was I supposed to win?"]
+TRAINER_LOOSE_TEXT = ["I'm never lucky...", "Well played!", "Damn, you are strong.", "Aw man...", "I will get you next time!", "How was I supposed to win?"]
 
 
 Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
   return unless trainer_list
 
   trainer_list.each do |trainer|
-    template = TRAINER_OVERRIDE.find { |i| i[:tType] == trainer.trainer_type and i[:tName] == trainer.name }
+    template = TRAINER_OVERRIDE.find { |i| i[:tType] == trainer.trainer_type and i[:tName] == trainer.name and trainer.lose_text == i[:LoseText]}
     next unless template # Do nothing if no override was found
-
-    echoln "Trainer loose text is " + trainer.lose_text.to_s
 
     # Determin lvl
     lvl = template[:lvl1]
@@ -155,7 +198,8 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
     end
 
     trainer.party = newParty
-    trainer.lose_text = TRAINER_LOOSE_TEXT.sample
+    trainer.lose_text = TRAINER_LOOSE_TEXT.sample if trainer.lose_text == "..."
+    trainer.lose_text = "..." if trainer.trainer_type.to_s == "TEAMROCKET_M"
 
     # Preperation steal Pokémon
     pbSet(44, trainer.party.dup)
@@ -163,6 +207,12 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
     echoln 'Generated trainer party: ' + newParty.to_s
   end
 }
+
+def pbGetGruntID
+ id =  pbGet(48)
+ id += 4 if pbLW
+ return id
+end
 
 def pbGenIntroText
   stages_cleared = pbGet(48)

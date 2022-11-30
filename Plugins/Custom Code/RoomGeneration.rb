@@ -11,7 +11,7 @@ MAP_GEMS = { id: 113, name: 'Gem Cave', posx: 10, posy: 11, value: 50, weight: 1
 MAP_BERRYS = { id: 114, name: 'Berry Granny', posx: 9, posy: 10, value: 55, weight: 10 }
 MAP_MONEY = { id: 115, name: 'Wishing Well', posx: 10, posy: 11, value: 60, weight: 10 }
 MAP_TM_SHOP = { id: 110, name: 'TM Shop', posx: 4, posy: 8, value: 65, weight: 20 }
-MAP_STEAL_POKE = { id: 116, name: 'STEAL POKE TODO', posx: 6, posy: 9, value: 70, weight: 5 }
+MAP_STEAL_POKE = { id: 116, name: 'Rocket Hideout', posx: 6, posy: 9, value: 70, weight: 5 }
 
 # Pool used for rolling random event
 MAP_EVENT_POOL = [
@@ -52,10 +52,10 @@ MAP_FIGHT_ELITE_TRAINER_LIST = [
   { id: 108, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10 } # 4th floor
 ]
 MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
-  { id: 87, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35, weight: 10 }, # 1st floor
-  { id: 94, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35, weight: 10 }, # 2nd floor
-  { id: 99, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35, weight: 10 }, # 3rd floor
-  { id: 105, name: 'Fight a Rocket Grump', posx: 10, posy: 11, value: 35, weight: 10 } # 4th floor
+  { id: 87, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10 }, # 1st floor
+  { id: 94, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10 }, # 2nd floor
+  { id: 99, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10 }, # 3rd floor
+  { id: 105, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10 } # 4th floor
 ]
 
 def isEventRoom(room)

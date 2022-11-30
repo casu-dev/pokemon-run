@@ -833,7 +833,7 @@ def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false, form 
 end
 
 def pbOakSpawn4
-    if  pbReadFile("gamemode.txt").to_i != 3
+    if  !pbLW
         pbMessage(_INTL("\\bGratulations to your victory! This is the last Floor. It's gonna be tough. I think you're ready for Mega-Evolutions. Take one of these Pokémon."))
         pbRandomPkmnSelection(pbGetPkmnTargetLvl)
         pbReceiveItem(:MEGARING)
@@ -848,7 +848,7 @@ def pbOakSpawn4
 end
 
 def pbCanEvoInCurrentMode(pkmn)
-    if pbReadFile("gamemode.txt").to_i != 3
+    if !pbLW
         return can_evolve?(pkmn)
     else
         if can_evolve?(pkmn)
@@ -1004,6 +1004,11 @@ def pbStealPkmn
         pkmn3 = pbGet(44)[2].species if pbGet(44)[2].species
         DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, pbGet(44)[0].level, false, 0, 0, 0, true) if pbGet(44)[0].level
     end
+end
+
+def pbLW
+    return true if (pbReadFile("gamemode.txt").to_i == 3)
+    return false
 end
 
 def pbScout

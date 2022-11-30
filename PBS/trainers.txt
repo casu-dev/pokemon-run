@@ -5,15 +5,15 @@ LoseText = "..."
 Pokemon = EEVEE,1
 #-------------------------------
 [LASS,Trainer]
-LoseText = "You didn't have to win so convincingly!"
+LoseText = "..."
 Pokemon = GLOOM,1
 #-------------------------------
 [COOLTRAINER_F,Trainer]
-LoseText = "You just got lucky!"
+LoseText = "..."
 Pokemon = MACHAMP,1
 #-------------------------------
 [BIKER,Trainer]
-LoseText = "Now you got me mad."
+LoseText = "..."
 Pokemon = BULBASAUR,1
 #-------------------------------
 [CAMPER,Liam]
@@ -39,22 +39,12 @@ Pokemon = ONIX,14
     IV = 20,20,20,20,20,20
     Ball = HEAVYBALL
 #-------------------------------
-[TEAMROCKET_M,Grunt,1]
-LoseText = "You're too good for me!"
-Pokemon = WEEPINBELL,21
-    Shadow = yes
-#-------------------------------
 [TEAMROCKET_F,Grunt,1]
 LoseText = "You're too good for me!"
 Pokemon = BURMY,19
 Pokemon = WINGULL,19
 Pokemon = ELECTABUZZ,20
     Shadow = yes
-#-------------------------------
-[YOUNGSTER,Ben]
-LoseText = "Aww, I lost."
-Pokemon = RATTATA,11
-Pokemon = EKANS,11
 #-------------------------------
 [CAMPER,Jeff]
 LoseText = "A very good battle, indeed!"
@@ -84,11 +74,11 @@ Pokemon = MAGIKARP,14
 Pokemon = MAGIKARP,18
 #-------------------------------
 [BEAUTY,Bridget]
-LoseText = "My Skitty!"
+LoseText = "..."
 Pokemon = SKITTY,18
 #-------------------------------
 [LASS,Crissy]
-LoseText = "You didn't have to win so convincingly!"
+LoseText = "..."
 Pokemon = PLUSLE,17
 Pokemon = MINUN,17
 #-------------------------------
@@ -106,8 +96,26 @@ LoseText = "Washed out!"
 Pokemon = STARYU,15
 Pokemon = GOLDEEN,11
 #-------------------------------
-[RIVAL1,Blue]
-LoseText = "Not too shabby."
+[RIVAL1,Gary]
+LoseText = "I will get you next time!"
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = BULBASAUR,18
+#-------------------------------
+[RIVAL1,Gary,1]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = BULBASAUR,18
+#-------------------------------
+[RIVAL1,Gary,2]
+LoseText = "Aw man..."
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = BULBASAUR,18
+#-------------------------------
+[RIVAL1,Gary,3]
+LoseText = "I'm never lucky..."
 Pokemon = PIDGEOTTO,17
 Pokemon = RATTATA,15
 Pokemon = BULBASAUR,18
@@ -279,7 +287,7 @@ Pokemon = SHIFTRY,55
     Item = SITRUSBERRY
 #-------------------------------
 [GENTLEMAN,Elite Trainer]
-LoseText = "A good battle indeed!"
+LoseText = "..."
 Pokemon = MUNNA,14
     AbilityIndex = 1
 Pokemon = RUFFLET,14
@@ -299,12 +307,45 @@ Pokemon = MUNNA,14
 Pokemon = PORYGON,14
     AbilityIndex = 0
 #-------------------------------
-[TEAMROCKET_M,Rocket Grunt]
-LoseText = "Wow! I'm impressed."
+[TEAMROCKET_M,Grunt]
+LoseText = "gruntF1"
 Pokemon = MANKEY,12
-    AbilityIndex = 0
 Pokemon = MAKUHITA,12
-    AbilityIndex = 2
+#-------------------------------
+[TEAMROCKET_M,Grunt,1]
+LoseText = "gruntF2"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,2]
+LoseText = "gruntF3"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,3]
+LoseText = "gruntF4"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,4]
+LoseText = "gruntF1LW"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,5]
+LoseText = "gruntF2LW"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,6]
+LoseText = "gruntF3LW"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,7]
+LoseText = "gruntF4LW"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
 #-------------------------------
 [ELITEFOUR_Bruno,Bruno]
 LoseText = "GG WP"
@@ -352,7 +393,7 @@ Pokemon = AXEW,16
     IV = 10,10,10,10,10,10
 #-------------------------------
 [LADY,Elite Trainer]
-LoseText = "You didn't have to win so convincingly!"
+LoseText = "..."
 Pokemon = MAWILE,29
 Pokemon = CORSOLA,29
 Pokemon = CHIMECHO,29
@@ -374,7 +415,7 @@ Pokemon = TROPIUS,29
 Pokemon = GIRAFARIG,29
     AbilityIndex = 0
 #-------------------------------
-[TEAMROCKET_F,Rocket Grunt]
+[TEAMROCKET_F,Grunt]
 LoseText = "Wow! I'm impressed."
 Pokemon = CLEFAIRY,28
     Item = EVIOLITE
@@ -442,7 +483,7 @@ Pokemon = DITTO,32
     IV = 16,16,16,16,16,16
 #-------------------------------
 [BEAUTY,Elite Trainer]
-LoseText = "You didn't have to win so convincingly!"
+LoseText = "..."
 Pokemon = TYRANITAR,58
 Pokemon = JELLICENT,58
 Pokemon = CROBAT,58
@@ -554,7 +595,7 @@ Pokemon = FROSLASS,60
     IV = 0,0,0,0,0,31
 #-------------------------------
 [GAMBLER,Elite Trainer]
-LoseText = "You didn't have to win so convincingly!"
+LoseText = "..."
 Pokemon = MANECTRIC,88
     AbilityIndex = 0
     Item = MANECTITE
@@ -671,7 +712,3 @@ Pokemon = VOLCARONA,92
 Pokemon = KYOGRE,92
     Moves = THUNDER,ORIGINPULSE,ICEBEAM,CALMMIND
     Item = BLUEORB
-#-------------------------------
-[TEAMROCKET_M,Rocket Grunt1]
-LoseText = "..."
-Pokemon = BULBASAUR,10
