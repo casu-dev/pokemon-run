@@ -186,10 +186,8 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
         newParty.each do |pkmn|
             newPartyIDs.push(pkmn.species) if pkmn.species
         end
-        pbMessage(newPartyIDs.to_s)
         pool = getOakMegas
         pool -= newPartyIDs
-        pbMessage(pool.to_s)
         megaPkmnID = pbChooseRandomPokemon(whiteList: pool)
         megaPkmn = Pokemon.new(megaPkmnID, lvl)
         megaStones = pbGetMegaStones(megaPkmn)
