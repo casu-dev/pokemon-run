@@ -81,18 +81,19 @@ class DiegoWTsStarterSelection
     @sprites["ballbase"].ox = @sprites["ballbase"].bitmap.width/2
     @sprites["ballbase"].oy = @sprites["ballbase"].bitmap.height/2
     @sprites["ballbase"].opacity = 0
-    pbWriteIntoFile("form.txt", 0)
+    # Disable form moves while Pokemon selection
+    pbSet(40, 1)
     @data = {}
     @data["pkmn_1"] = Pokemon.new(@pkmn1,@lv)
-    @data["pkmn_1"] = pbGet(4324)[0] if steal
+    @data["pkmn_1"] = pbGet(44)[0] if steal
     @data["pkmn_1"].form = formPkmn1
     @data["pkmn_1"].item = pbGiveSignatureItem(pkmn1)
     @data["pkmn_2"] = Pokemon.new(@pkmn2,@lv)
-    @data["pkmn_2"] = pbGet(4324)[1] if steal
+    @data["pkmn_2"] = pbGet(44)[1] if steal
     @data["pkmn_2"].form = formPkmn2
     @data["pkmn_2"].item = pbGiveSignatureItem(pkmn2)
     @data["pkmn_3"] = Pokemon.new(@pkmn3,@lv)
-    @data["pkmn_3"] = pbGet(4324)[2] if steal
+    @data["pkmn_3"] = pbGet(44)[2] if steal
     @data["pkmn_3"].form = formPkmn3
     @data["pkmn_3"].item = pbGiveSignatureItem(pkmn3)
     for i in 1..3

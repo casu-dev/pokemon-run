@@ -801,7 +801,8 @@ def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false, form 
           end
           pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
           species_name = pkmn.speciesName
-          pbWriteIntoFile("form.txt", 1)
+          # Enable form moves to learn them
+          pbSet(40, 0)
           pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
           pkmn.form = form
           # Set hidden ability
@@ -820,7 +821,8 @@ def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false, form 
           end
           pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
           species_name = pkmn.speciesName
-          pbWriteIntoFile("form.txt", 1)
+          # Enable form moves to learn them
+          pbSet(40, 0)
           pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
           pkmn.form = form
           pbSetPkmnEv(pkmn)
@@ -996,11 +998,11 @@ def pbGiveSignatureItem(pkmnID)
 end
 
 def pbStealPkmn
-    if pbGet(4324) != 0
-        pkmn1 = pbGet(4324)[0].species if pbGet(4324)[0].species
-        pkmn2 = pbGet(4324)[1].species if pbGet(4324)[1].species
-        pkmn3 = pbGet(4324)[2].species if pbGet(4324)[2].species
-        DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, pbGet(4324)[0].level, false, 0, 0, 0, true) if pbGet(4324)[0].level
+    if pbGet(44) != 0
+        pkmn1 = pbGet(44)[0].species if pbGet(44)[0].species
+        pkmn2 = pbGet(44)[1].species if pbGet(44)[1].species
+        pkmn3 = pbGet(44)[2].species if pbGet(44)[2].species
+        DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, pbGet(44)[0].level, false, 0, 0, 0, true) if pbGet(44)[0].level
     end
 end
 

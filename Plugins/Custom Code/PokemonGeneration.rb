@@ -372,20 +372,20 @@ def pbRandomPkmnGeneration(mega = false)
 
   # Roll Pokémon forms like Galar or Alolan form
   # First Poke
-  pbSet(4321, pbRollForm(pbGet(26)))
+  pbSet(41, pbRollForm(pbGet(26)))
   # Second Poke
-  pbSet(4322, pbRollForm(pbGet(27)))
+  pbSet(42, pbRollForm(pbGet(27)))
   # Third Poke
-  pbSet(4323, pbRollForm(pbGet(28)))
+  pbSet(43, pbRollForm(pbGet(28)))
 end
 
 def pbRandomPkmnSelection(lv, hiddenAbility = true)
   pkmn1 = pbGet(26)
-  formPkmn1 = pbGet(4321)
+  formPkmn1 = pbGet(41)
   pkmn2 = pbGet(27)
-  formPkmn2 = pbGet(4322)
+  formPkmn2 = pbGet(42)
   pkmn3 = pbGet(28)
-  formPkmn3 = pbGet(4323)
+  formPkmn3 = pbGet(43)
   # 25% chance for hidden ability
   if(hiddenAbility && rand(4)==1)
       DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv, hiddenAbility, formPkmn1, formPkmn2, formPkmn3)

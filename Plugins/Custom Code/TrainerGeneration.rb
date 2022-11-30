@@ -158,7 +158,7 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
     trainer.lose_text = TRAINER_LOOSE_TEXT.sample
 
     # Preperation steal Pokémon
-    pbSet(4324, trainer.party.dup)
+    pbSet(44, trainer.party.dup)
 
     echoln 'Generated trainer party: ' + newParty.to_s
   end
