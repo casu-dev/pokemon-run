@@ -608,6 +608,16 @@ def pbChoseMode
                            end
                        end
                    end
+
+                   $PokemonStorage.boxes.each do |box|
+                     box.each do |pkmn|
+                       if !pkmn.nil?
+                          if !can_evolve?(pkmn)
+                           hasFullyEvolved = true
+                          end
+                       end
+                     end
+                   end
                    if (!hasFullyEvolved)
                      pbWriteIntoFile("gamemode.txt", 3)
                      pbWriteIntoFile("battlerinfo.txt", 0)
@@ -615,7 +625,7 @@ def pbChoseMode
                      pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
                      break
                    else
-                        pbMessage("You \\c[10]can't switch\\c[0] to this mode, while having a fully evolved Pokémon in your party.")
+                        pbMessage("You \\c[10]can't switch\\c[0] to this mode, while owning a fully evolved Pokémon.")
                         break
                    end
                 end

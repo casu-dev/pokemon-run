@@ -355,6 +355,7 @@ end
 
 #Generates the Pokemon (usually used when entering Oaks room)
 def pbRandomPkmnGeneration(mega = false)
+  mega = false if (pbReadFile("gamemode.txt").to_i == 3)
   if mega
     pbGenMegaPkmn()
   else
