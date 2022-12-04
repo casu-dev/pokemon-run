@@ -271,11 +271,11 @@ end
 
 # Used when Oak gives 1 Pokemon, so that not all Pokemon's EVs will be checked
 def pbSetPkmnEv(pkmn)
-      $Lv = pbGetPkmnTargetLvl
+      floor = pbGet(48) + 1
       $TargetEv = 0
-      $TargetEv = 46 if $Lv == 30
-      $TargetEv = 69 if $Lv == 60
-      $TargetEv = 84 if $Lv == 90
+      $TargetEv = 46 if floor == 2
+      $TargetEv = 69 if floor == 3
+      $TargetEv = 84 if floor == 4
 
       pkmn.ev[:HP] = $TargetEv
       pkmn.ev[:ATTACK] = $TargetEv
@@ -286,11 +286,11 @@ def pbSetPkmnEv(pkmn)
 end
 
 def pbChangeAllPkmnEv
-  $Lv = pbGetPkmnTargetLvl
+  floor = pbGet(48) + 1
   $TargetEv = 0
-  $TargetEv = 46 if $Lv == 30
-  $TargetEv = 69 if $Lv == 60
-  $TargetEv = 84 if $Lv == 90
+  $TargetEv = 46 if floor == 2
+  $TargetEv = 69 if floor == 3
+  $TargetEv = 84 if floor == 4
 
   # EV up party
   $Trainer.party.each do |pkmn|
