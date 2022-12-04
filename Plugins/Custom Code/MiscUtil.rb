@@ -235,10 +235,12 @@ end
 
 def pbGetMegaStones(pkmn)
   res = []
-  GameData::Species.each do |data|
-      if data.mega_stone && (data.species == pkmn.species)
-          res.push(data.mega_stone)
-          break if (res.length >= 2)
+  if !((pkmn.species.to_s == "SLOWBRO") && (pkmn.form == 1))
+      GameData::Species.each do |data|
+          if data.mega_stone && (data.species == pkmn.species)
+              res.push(data.mega_stone)
+              break if (res.length >= 2)
+          end
       end
   end
   res
