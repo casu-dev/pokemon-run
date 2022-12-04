@@ -68,14 +68,14 @@ TRAINER_OVERRIDE = [
   {
     # Middle Boss F2
     tType: :RIVAL1, tName: 'Gary',
-    lvl1: 28, lvl2: 28, numPkmn: 3,
+    lvl1: 30, lvl2: 30, numPkmn: 3,
     pkmnPool: getOakPool7,
     LoseText: "You didn't have to win so convincingly!"
   },
   {
     # Middle Boss F3
     tType: :RIVAL1, tName: 'Gary',
-    lvl1: 57, lvl2: 57, numPkmn: 4,
+    lvl1: 60, lvl2: 60, numPkmn: 4,
     pkmnPool: getOakPool10,
     LoseText: "Aw man..."
   },

@@ -2,6 +2,13 @@
 
 ## Open Tickets
 - [ ] Ensure every room has background music
+- [ ] F3 Oak labor gibt keine EV
+- [ ] Egg Move Tutor soll GEld kosten
+- [ ] Alex: Starter soll sich zweites mal auf 33 entwickeln. Oak Intro anpassen.
+- [ ] mints -> 1500
+- [ ] Nerf evolvable pkmn in choice
+- [ ] legi roll Oak spawn f4 (mega)
+- [ ] Alex: def reset_moves methode überarbeiten
 
 ## Closed Tickets
 - [x] Update next room indicator
@@ -25,3 +32,4 @@
 - [x] Release Gen 6,7,8
 - [x] Rocket Grunts and Middle Floor trainer shall use their pool
 - [x] Add intro<s>/lose</s> text Middle Floor and Elite Trainer
+- [x] F2,F3 Gary zu schwach -> Lv 30, Lv 60
