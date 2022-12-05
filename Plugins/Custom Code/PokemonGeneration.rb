@@ -212,12 +212,21 @@ def pbRollForChance(chance)
     return false
 end
 
+def pbRandomPkmnsAsArray(whiteList: nil, amount: 3)
+    output = []
+    if pbChooseRandomPokemon(whiteList, amount).is_a?(Array)
+       output = pbChooseRandomPokemon(whiteList, amount)
+    else
+       output.push(pbChooseRandomPokemon(whiteList, amount))
+    end
+    return output
+end
+
 def pbGenPokeChoice
     amount = 3
-    # Integer in %
+    # Chance in % (integer)
     legiChance = 3
     output = []
-    legiPkmns = []
     amountLegis = 0
     luckyWeakling = pbLW
     # Checks if mode is not "Lucky Weakling" and if the floor is > 2
@@ -227,44 +236,18 @@ def pbGenPokeChoice
         end
     end
     if amountLegis > 0
-        if pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis).is_a?(Array)
-            legiPkmns = pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis)
-        else
-            legiPkmns.push(pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis))
-        end
+        legiPkmns = pbRandomPkmnsAsArray(whiteList: getOakLegendOrMythic, amount: amountLegis)
         while !diverse_types?(legiPkmns) do
-            # Same if-else block as above
-            if pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis).is_a?(Array)
-                legiPkmns = pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis)
-            else
-                legiPkmns.push(pbChooseRandomPokemon(whiteList: getOakLegendOrMythic, amount: amountLegis))
-            end
+          legiPkmns = pbRandomPkmnsAsArray(whiteList: getOakLegendOrMythic, amount: amountLegis)
         end
         output = legiPkmns
         amount -= amountLegis
         if amount > 0
-           normalPkmns = []
-           if pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount).is_a?(Array)
-               normalPkmns = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
-           else
-               normalPkmns.push(pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount))
-           end
             mergedPkmns = legiPkmns.dup
-            normalPkmns.each do |pkmn|
-                mergedPkmns.push(pkmn)
-            end
+            mergedPkmns += pbRandomPkmnsAsArray(whiteList: pbGetCorrectOakPool, amount: amount)
             while !diverse_types?(mergedPkmns) do
-                # Same if-else block as above
-                normalPkmns = []
-                if pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount).is_a?(Array)
-                   normalPkmns = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount)
-                else
-                   normalPkmns.push(pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool, amount: amount))
-                end
                 mergedPkmns = legiPkmns.dup
-                normalPkmns.each do |pkmn|
-                    mergedPkmns.push(pkmn)
-                end
+                mergedPkmns += pbRandomPkmnsAsArray(whiteList: pbGetCorrectOakPool, amount: amount)
             end
             output = mergedPkmns
         end
@@ -324,10 +307,41 @@ def pbGenStarterPkmn(type)
 end
 
 def pbGenMegaPkmn
-  pkmns = pbChooseRandomPokemon(whiteList: getOakMegas, amount:3)
-  pbSet(26, pkmns[0])
-  pbSet(27, pkmns[1])
-  pbSet(28, pkmns[2])
+    amount = 3
+    # Chance in % (integer)
+    legiChance = 3
+    output = []
+    amountLegis = 0
+        for i in 1 .. amount do
+           amountLegis += 1 if pbRollForChance(legiChance)
+        end
+    if amountLegis > 0
+        legiPkmns = pbRandomPkmnsAsArray(whiteList: %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE], amount: amountLegis)
+        while !diverse_types?(legiPkmns) do
+          legiPkmns = pbRandomPkmnsAsArray(whiteList: %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE], amount: amountLegis)
+        end
+        output = legiPkmns
+        amount -= amountLegis
+        if amount > 0
+            mergedPkmns = legiPkmns.dup
+            mergedPkmns += pbRandomPkmnsAsArray(whiteList: getOakMegas, amount: amount)
+            while !diverse_types?(mergedPkmns) do
+                mergedPkmns = legiPkmns.dup
+                mergedPkmns += pbRandomPkmnsAsArray(whiteList: getOakMegas, amount: amount)
+            end
+            output = mergedPkmns
+        end
+    else
+        output = pbChooseRandomPokemon(whiteList: getOakMegas, amount: amount)
+        while !diverse_types?(output) do
+            output = pbChooseRandomPokemon(whiteList: getOakMegas, amount: amount)
+        end
+    end
+    output = output.shuffle
+    # do for every pokemon save slot
+    [26, 27, 28].each do |i|
+        pbSet(i, output.pop)
+    end
 end
 
 def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
@@ -357,16 +371,16 @@ end
 def pbRandomPkmnGeneration(mega = false)
   mega = false if pbLW
   if mega
-    pbGenMegaPkmn()
+    pbGenMegaPkmn
   else
-    pbGenPokeChoice()
+    pbGenPokeChoice
   end
   while (pbPkmnOwned?(pbGet(26), pbGet(27), pbGet(28)))
     echoln "Pokemon owned. Rerolling..."
       if mega
-        pbGenMegaPkmn()
+        pbGenMegaPkmn
       else
-        pbGenPokeChoice()
+        pbGenPokeChoice
       end
   end
 
