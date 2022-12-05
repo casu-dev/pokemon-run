@@ -214,10 +214,11 @@ end
 
 def pbRandomPkmnsAsArray(whiteList: nil, amount: 3)
     output = []
-    if pbChooseRandomPokemon(whiteList, amount).is_a?(Array)
-       output = pbChooseRandomPokemon(whiteList, amount)
+    result = pbChooseRandomPokemon(whiteList: whiteList, amount: amount)
+    if result.is_a?(Array)
+       output = result
     else
-       output.push(pbChooseRandomPokemon(whiteList, amount))
+       output.push(result)
     end
     return output
 end
