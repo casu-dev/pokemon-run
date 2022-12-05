@@ -229,7 +229,7 @@ def pbSetMartPrices
 
   items_insane = %w[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
   items_insane.each do |i|
-    setPrice(i, 1800, 0)
+    setPrice(i, 1500, 0)
   end
 end
 

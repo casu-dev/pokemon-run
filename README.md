@@ -2,9 +2,7 @@
 
 ## Open Tickets
 - [ ] Ensure every room has background music
-- [ ] F3 Oak labor gibt keine EV
 - [ ] Egg Move Tutor soll GEld kosten
-- [ ] mints -> 1500
 - [ ] legi roll Oak spawn f4 (mega)
 
 ## Closed Tickets
@@ -33,3 +31,5 @@
 - [x] def reset_moves methode überarbeiten
 - [x] Starter soll sich zweites mal auf 33 entwickeln. Oak Intro anpassen.
 - [x] Nerf evolvable pkmn in choice
+- [x] mints -> 1500
+- [x] F3 Oak labor gibt keine EV
