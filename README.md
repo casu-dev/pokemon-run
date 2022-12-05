@@ -2,8 +2,7 @@
 
 ## Open Tickets
 - [ ] Ensure every room has background music
-- [ ] Egg Move Tutor soll GEld kosten
-- [ ] legi roll Oak spawn f4 (mega)
+- [ ] Egg Move Tutor money text shall be highlighted
 
 ## Closed Tickets
 - [x] Update next room indicator
@@ -33,3 +32,4 @@
 - [x] Nerf evolvable pkmn in choice
 - [x] mints -> 1500
 - [x] F3 Oak labor gibt keine EV
+- [x] legi roll Oak spawn f4 (mega)
