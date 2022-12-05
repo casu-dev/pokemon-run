@@ -1,7 +1,6 @@
 # Pokemon Battle Woods
 
 ## Open Tickets
-- [ ] Ensure every room has background music
 - [ ] Egg Move Tutor money text shall be highlighted
 
 ## Closed Tickets
@@ -33,3 +32,4 @@
 - [x] mints -> 1500
 - [x] F3 Oak labor gibt keine EV
 - [x] legi roll Oak spawn f4 (mega)
+- [x] Ensure every room has background music
