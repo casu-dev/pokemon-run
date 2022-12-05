@@ -8,7 +8,6 @@
 - [ ] mints -> 1500
 - [ ] Nerf evolvable pkmn in choice
 - [ ] legi roll Oak spawn f4 (mega)
-- [ ] Alex: def reset_moves methode überarbeiten
 
 ## Closed Tickets
 - [x] Update next room indicator
@@ -33,3 +32,4 @@
 - [x] Rocket Grunts and Middle Floor trainer shall use their pool
 - [x] Add intro<s>/lose</s> text Middle Floor and Elite Trainer
 - [x] F2,F3 Gary zu schwach -> Lv 30, Lv 60
+- [x] def reset_moves methode überarbeiten
