@@ -1,7 +1,11 @@
 # Pokemon Battle Woods
 
 ## Open Tickets
-- [ ] Egg Move Tutor money text shall be highlighted
+- [ ] Egg Move Tutor price text shall be highlighted
+- [ ] Nerf money at F3 + F4 in sum at about ~7k
+- [ ] reset_moves: exclude moves with power >= 140. Last move-slot shall become a non-attacking move.
+- [ ] Check if a cancel option in Oak selection is easy doable
+- [ ] Brunos fighting team
 
 ## Closed Tickets
 - [x] Update next room indicator
