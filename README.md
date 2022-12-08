@@ -33,3 +33,4 @@
 - [x] F3 Oak labor gibt keine EV
 - [x] legi roll Oak spawn f4 (mega)
 - [x] Ensure every room has background music
+- [x] Fix Hall of Fame BG
