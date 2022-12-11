@@ -1013,6 +1013,21 @@ def pbLW
     return false
 end
 
+def pbGetStatusAfter(pkmn)
+    statusAfter = "NONE"
+    ability =  pkmn.ability.name.to_s
+    if pkmn.status.to_s == "POISON"
+      if ((["Poison Heal", "Guts", "Toxic Boost", "Marvel Scale", "Quick Feet"].include?(ability)) || (pkmn.hasMove?(:FACADE)))
+        statusAfter = "POISON"
+      end
+    elsif pkmn.status.to_s == "BURN"
+      if ((["Flare Boost", "Guts", "Marvel Scale", "Quick Feet"].include?(ability)) || (pkmn.hasMove?(:FACADE)))
+        statusAfter = "BURN"
+      end
+    end
+    return statusAfter
+end
+
 def pbScout
 pbAddPokemon(:AEGISLASH, 20)
 end

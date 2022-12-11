@@ -34,7 +34,11 @@ end
 def pbHealBoxes
   $PokemonStorage.boxes.each do |box|
     box.each do |pkmn|
-      pkmn.heal if !pkmn.nil?
+      if !pkmn.nil?
+          statusAfter = pbGetStatusAfter(pkmn)
+          pkmn.heal
+          pkmn.status = statusAfter
+      end
     end
   end
 end
