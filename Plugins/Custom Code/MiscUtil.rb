@@ -116,10 +116,10 @@ end
 
 def pbLootWell
 floor = pbGet(48)
-amount = 1500 + rand(100) if floor == 0
-amount = 2500 + rand(200) if floor == 1
-amount = 3500 + rand(300) if floor == 2
-amount = 4500 + rand(500) if floor == 3
+amount = 1200 + rand(100) if floor == 0
+amount = 2000 + rand(200) if floor == 1
+amount = 2800 + rand(300) if floor == 2
+amount = 3600 + rand(500) if floor == 3
   $Trainer.money += amount
   pbMessage("You looted the well.")
   pbMEPlay("Item get")

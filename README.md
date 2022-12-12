@@ -2,9 +2,7 @@
 
 ## Open Tickets
 - [ ] Egg Move Tutor price text shall be highlighted
-- [ ] Nerf money at F3 + F4 in sum ~7k
 - [ ] reset_moves: exclude moves with power >= 140. Last move-slot shall become a non-attacking move.
-- [ ] Nerf Brunos fighting team
 
 ## Closed Tickets
 - [x] Update next room indicator
@@ -37,3 +35,5 @@
 - [x] legi roll Oak spawn f4 (mega)
 - [x] Ensure every room has background music
 - [x] Fix Hall of Fame BG
+- [x] Nerf money at F3 + F4 in sum ~7k
+- [x] Nerf Brunos fighting team

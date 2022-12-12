@@ -350,7 +350,7 @@ Pokemon = MAKUHITA,12
 [ELITEFOUR_Bruno,Bruno]
 LoseText = "GG WP"
 Pokemon = MIENFOO,16
-    Moves = FAKEOUT,UTURN,LOWSWEEP,ROCKTOMB
+    Moves = FAKEOUT,KNOCKOFF,LOWSWEEP,ROCKTOMB
     AbilityIndex = 1
     IV = 15,15,15,15,15,15
 Pokemon = MAKUHITA,16
