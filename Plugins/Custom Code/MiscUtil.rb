@@ -283,6 +283,7 @@ def pbSetPkmnEv(pkmn)
       pkmn.ev[:SPECIAL_ATTACK] = $TargetEv
       pkmn.ev[:SPECIAL_DEFENSE] = $TargetEv
       pkmn.ev[:SPEED] = $TargetEv
+      pkmn.calc_stats
 end
 
 def pbChangeAllPkmnEv
@@ -315,10 +316,11 @@ def pbChangeAllPkmnEv
                 sum = (pkmn.ev[:HP] + pkmn.ev[:ATTACK] + pkmn.ev[:DEFENSE] + pkmn.ev[:SPECIAL_ATTACK] + pkmn.ev[:SPECIAL_DEFENSE] + pkmn.ev[:SPEED])
             end
         end
+        pkmn.calc_stats
     end
   end
 
-  # EV up boxx
+  # EV up box
   $PokemonStorage.boxes.each do |box|
     box.each do |pkmn|
       if !pkmn.nil?
@@ -342,6 +344,7 @@ def pbChangeAllPkmnEv
                   sum = (pkmn.ev[:HP] + pkmn.ev[:ATTACK] + pkmn.ev[:DEFENSE] + pkmn.ev[:SPECIAL_ATTACK] + pkmn.ev[:SPECIAL_DEFENSE] + pkmn.ev[:SPEED])
               end
          end
+         pkmn.calc_stats
       end
     end
   end
