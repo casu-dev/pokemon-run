@@ -2,14 +2,14 @@
 # DiegoWT's Starter Selection script
 #===============================================================================
 class DiegoWTsStarterSelection
-  def initialize(pkmn1,pkmn2,pkmn3, lv, hiddenAbility = false, formPkmn1 = 0, formPkmn2 = 0, formPkmn3 = 0, steal = false)
+  def initialize(pkmn1,pkmn2,pkmn3, steal = false)
     @select = nil
     @frame = 0
     @selframe = 0 
     @endscene = 0
-    @pkmn1 = pkmn1; @pkmn2 = pkmn2; @pkmn3 = pkmn3
-    @lv = lv;
-    @hiddenAbility = hiddenAbility;
+    @pkmn1 = pkmn1.species; @pkmn2 = pkmn2.species; @pkmn3 = pkmn3.species
+    @lv = pbGetPkmnTargetLvl;
+    @lv = pkmn1.level if steal;
     
     @viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
     @viewport.z = 99999
@@ -84,18 +84,18 @@ class DiegoWTsStarterSelection
     # Disable form moves while Pokemon selection
     pbSet(40, 1)
     @data = {}
-    @data["pkmn_1"] = Pokemon.new(@pkmn1,@lv)
+    @data["pkmn_1"] = pkmn1
     @data["pkmn_1"] = pbGet(44)[0] if steal
-    @data["pkmn_1"].form = formPkmn1
-    @data["pkmn_1"].item = pbGiveSignatureItem(pkmn1)
-    @data["pkmn_2"] = Pokemon.new(@pkmn2,@lv)
+    @data["pkmn_1"].form = pbGet(41)
+    @data["pkmn_1"].item = pbGiveSignatureItem(pkmn1.species)
+    @data["pkmn_2"] = pkmn2
     @data["pkmn_2"] = pbGet(44)[1] if steal
-    @data["pkmn_2"].form = formPkmn2
-    @data["pkmn_2"].item = pbGiveSignatureItem(pkmn2)
-    @data["pkmn_3"] = Pokemon.new(@pkmn3,@lv)
+    @data["pkmn_2"].form = pbGet(42)
+    @data["pkmn_2"].item = pbGiveSignatureItem(pkmn2.species)
+    @data["pkmn_3"] = pkmn3
     @data["pkmn_3"] = pbGet(44)[2] if steal
-    @data["pkmn_3"].form = formPkmn3
-    @data["pkmn_3"].item = pbGiveSignatureItem(pkmn3)
+    @data["pkmn_3"].form = pbGet(43)
+    @data["pkmn_3"].item = pbGiveSignatureItem(pkmn3.species)
     for i in 1..3
       @sprites["pkmn_#{i}"] = PokemonSprite.new(@viewport)
       @sprites["pkmn_#{i}"].setOffset(PictureOrigin::Center)
@@ -103,7 +103,7 @@ class DiegoWTsStarterSelection
       @data.values.each { |pkmn| 
         if pkmn.form != 0
           pkmn.calc_stats
-          pkmn.reset_moves
+          #pkmn.reset_moves
         end
       }
       @sprites["pkmn_#{i}"].setPokemonBitmap(@pokemon)
@@ -488,8 +488,7 @@ class DiegoWTsStarterSelection
       $game_variables[7] = @select if $game_variables[7] == 0
       @endscene = 1
       pbCloseScene
-      # give to info about hidden ability
-      pbkAddPokemon(@data["pkmn_#{@select}"],@lv, true, @hiddenAbility, @data["pkmn_#{@select}"].form)
+      pbkAddPokemon(@data["pkmn_#{@select}"],@lv, true)
     else
       @sprites["textbox"].y = @oldMsgY
       @sprites["textbox"].text = _INTL("<ac>Choose a Pokémon.</ac>")

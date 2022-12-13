@@ -306,9 +306,9 @@ def pbGetCorrectEvo(pkmn)
 end
 
 def pbGenStarterPkmn(type)
-  return pbChooseRandomPokemon(whiteList: %i[CHARMANDER CYNDAQUIL TORCHIC CHIMCHAR TEPIG FENNEKIN LITTEN SCORBUNNY]) if type == :FIRE
-  return pbChooseRandomPokemon(whiteList: %i[SQUIRTLE TOTODILE MUDKIP PIPLUP OSHAWOTT FROAKIE POPPLIO SOBBLE]) if type == :WATER
-  return pbChooseRandomPokemon(whiteList: %i[BULBASAUR CHIKORITA TREECKO TURTWIG SNIVY CHESPIN ROWLET GROOKEY]) if type == :GRASS
+  return Pokemon.new(pbChooseRandomPokemon(whiteList: %i[CHARMANDER CYNDAQUIL TORCHIC CHIMCHAR TEPIG FENNEKIN LITTEN SCORBUNNY]), pbGetPkmnTargetLvl) if type == :FIRE
+  return Pokemon.new(pbChooseRandomPokemon(whiteList: %i[SQUIRTLE TOTODILE MUDKIP PIPLUP OSHAWOTT FROAKIE POPPLIO SOBBLE]), pbGetPkmnTargetLvl) if type == :WATER
+  return Pokemon.new(pbChooseRandomPokemon(whiteList: %i[BULBASAUR CHIKORITA TREECKO TURTWIG SNIVY CHESPIN ROWLET GROOKEY]), pbGetPkmnTargetLvl) if type == :GRASS
 end
 
 def pbGenMegaPkmn
@@ -396,21 +396,21 @@ def pbRandomPkmnGeneration(mega = false)
   pbSet(42, pbRollForm(pbGet(27)))
   # Third Poke
   pbSet(43, pbRollForm(pbGet(28)))
+
+  #Replace species names by real Pokémon
+  pbSet(26, Pokemon.new(pbGet(26), pbGetPkmnTargetLvl))
+  pbSet(27, Pokemon.new(pbGet(27), pbGetPkmnTargetLvl))
+  pbSet(28, Pokemon.new(pbGet(28), pbGetPkmnTargetLvl))
 end
 
-def pbRandomPkmnSelection(lv, hiddenAbility = true)
-  pkmn1 = pbGet(26)
-  formPkmn1 = pbGet(41)
-  pkmn2 = pbGet(27)
-  formPkmn2 = pbGet(42)
-  pkmn3 = pbGet(28)
-  formPkmn3 = pbGet(43)
+def pbRandomPkmnSelection(hiddenAbility = true)
   # 25% chance for hidden ability
   if(hiddenAbility && rand(4)==1)
-      DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv, hiddenAbility, formPkmn1, formPkmn2, formPkmn3)
-  else
-      DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, lv, false, formPkmn1, formPkmn2, formPkmn3)
+      pbGet(26).setAbility(2)
+      pbGet(27).setAbility(2)
+      pbGet(28).setAbility(2)
   end
+  DiegoWTsStarterSelection.new(pbGet(26), pbGet(27), pbGet(28))
 end
 
 def pbGiveRandomPoke(saveSlot)

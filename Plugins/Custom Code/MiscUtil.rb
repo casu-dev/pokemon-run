@@ -794,60 +794,39 @@ def pbRollForm(pkmnID)
      end
 end
 
-def pbkAddPokemon(pkmn, level = 1, see_form = true, hiddenAbility = false, form = 0)
-    pkmn.heal
-    if hiddenAbility
-          pkmn.form = 0
-          return false if !pkmn
-          if pbBoxesFull?
-            pbMessage(_INTL("There's no more room for Pokémon!\1"))
-            pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
-            return false
-          end
-          pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
-          species_name = pkmn.speciesName
-          # Enable form moves to learn them
-          pbSet(40, 0)
-          pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
-          pkmn.form = form
-          # Set hidden ability
-          pkmn.setAbility(2)
-          pbSetPkmnEv(pkmn)
-          pbNicknameAndStore(pkmn)
-          $Trainer.pokedex.register(pkmn) if see_form
-          return true
-    else
-          pkmn.form = 0
-          return false if !pkmn
-          if pbBoxesFull?
-            pbMessage(_INTL("There's no more room for Pokémon!\1"))
-            pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
-            return false
-          end
-          pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
-          species_name = pkmn.speciesName
-          # Enable form moves to learn them
-          pbSet(40, 0)
-          pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
-          pkmn.form = form
-          pbSetPkmnEv(pkmn)
-          pbNicknameAndStore(pkmn)
-          $Trainer.pokedex.register(pkmn) if see_form
-          return true
-    end
+def pbkAddPokemon(pkmn, level = 1, see_form = true)
+      return false if !pkmn
+      pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
+      pkmn.heal
+      form = pkmn.form
+      pkmn.form = 0
+      if pbBoxesFull?
+        pbMessage(_INTL("There's no more room for Pokémon!\1"))
+        pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
+        return false
+      end
+      species_name = pkmn.speciesName
+      # Enable form moves to learn them
+      pbSet(40, 0)
+      pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
+      pkmn.form = form
+      pbSetPkmnEv(pkmn)
+      pbNicknameAndStore(pkmn)
+      $Trainer.pokedex.register(pkmn) if see_form
+      return true
 end
 
 def pbOakSpawn4
     if  !pbLW
         pbMessage(_INTL("\\bGratulations to your victory! This is the last Floor. It's gonna be tough. I think you're ready for Mega-Evolutions. Take one of these Pokémon."))
-        pbRandomPkmnSelection(pbGetPkmnTargetLvl)
+        pbRandomPkmnSelection
         pbReceiveItem(:MEGARING)
         pbMessage(_INTL("\\bOkay, now take one of my Mega-Stones."))
         pbOfferUsableMegaStones
         pbMessage(_INTL("\\bExcellent choice! Equip the Mega-Stone and press \\c[10]Y\\b in Battle to mega evolve. I'm continuing my research now, have a good one!"))
     else
         pbMessage(_INTL("\\bGratulations to your victory! This is the last Floor. It's gonna be tough. Take one of these Pokémon."))
-        pbRandomPkmnSelection(pbGetPkmnTargetLvl)
+        pbRandomPkmnSelection
         pbMessage(_INTL("\\bExcellent choice! I'm continuing my research now, have a good one!"))
     end
 end
@@ -1004,10 +983,7 @@ end
 
 def pbStealPkmn
     if pbGet(44) != 0
-        pkmn1 = pbGet(44)[0].species if pbGet(44)[0].species
-        pkmn2 = pbGet(44)[1].species if pbGet(44)[1].species
-        pkmn3 = pbGet(44)[2].species if pbGet(44)[2].species
-        DiegoWTsStarterSelection.new(pkmn1, pkmn2, pkmn3, pbGet(44)[0].level, false, 0, 0, 0, true) if pbGet(44)[0].level
+        DiegoWTsStarterSelection.new(pbGet(44)[0], pbGet(44)[1], pbGet(44)[2], true) if pbGet(44)[0].level
     end
 end
 
