@@ -211,7 +211,7 @@ def pbOfferUsableMegaStones
 end
 
 def pbSetMartPrices
-  items_cheap = %w[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM34 TM48 TM65 TR01 TR48]
+  items_cheap = %w[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM48 TM65 TR01 TR48]
   items_cheap.each do |i|
     setPrice(i, 500, 0)
   end
@@ -781,11 +781,11 @@ end
 def pbRollForm(pkmnID)
      # (relevant) Pokémon with more than 2 forms %i[NECROZMA CALYREX DEOXYS ROTOM MEOWTH KYUREM ORICORIO GOURGEIST PUMPKABOO LYCANROC]
      # Form count                                %i[   3        3        4      6     3     3       4         4         4        3]
-     if pkmnID == "NECROZMA" || pkmnID == "CALYREX" || pkmnID == "MEOWTH" || pkmnID == "KYUREM" || pkmnID == "LYCANROC"
+     if pkmnID == :NECROZMA || pkmnID == :CALYREX || pkmnID == :MEOWTH || pkmnID == :KYUREM || pkmnID == :LYCANROC
         return rand(3)
-     elsif pkmnID == "DEOXYS" || pkmnID == "ORICORIO" || pkmnID == "GOURGEIST" || pkmnID == "PUMPKABOO"
+     elsif pkmnID == :DEOXYS || pkmnID == :ORICORIO || pkmnID == :GOURGEIST || pkmnID == :PUMPKABOO
         return rand(4)
-     elsif pkmnID == "ROTOM"
+     elsif pkmnID == :ROTOM
         return rand(6)
      elsif pbKeepBaseForm(pkmnID)
         return 0
@@ -959,21 +959,21 @@ def pbKeepBaseForm(pkmnID)
 end
 
 def pbGiveSignatureItem(pkmnID)
-    if pkmnID == "GENESECT"
+    if pkmnID == :GENESECT
         itemPool = %i[BURNDRIVE CHILLDRIVE DOUSEDRIVE SHOCKDRIVE]
         return itemPool[rand(4)]
-    elsif pkmnID == "ARCEUS"
+    elsif pkmnID == :ARCEUS
         itemPool = %i[FLAMEPLATE SPLASHPLATE ZAPPLATE MEADOWPLATE ICICLEPLATE FISTPLATE TOXICPLATE EARTHPLATE SKYPLATE MINDPLATE INSECTPLATE STONEPLATE SPOOKYPLATE DRACOPLATE DREADPLATE IRONPLATE PIXIEPLATE]
         return itemPool[rand(17)]
-    elsif pkmnID == "ZACIAN"
+    elsif pkmnID == :ZACIAN
         return "RUSTEDSWORD"
-    elsif pkmnID == "ZAMAZENTA"
+    elsif pkmnID == :ZAMAZENTA
         return "RUSTEDSHIELD"
-    elsif pkmnID == "GROUDON"
+    elsif pkmnID == :GROUDON
         return "REDORB"
-    elsif pkmnID == "KYOGRE"
+    elsif pkmnID == :KYOGRE
         return "BLUEORB"
-    elsif pkmnID == "SILVALLY"
+    elsif pkmnID == :SILVALLY
         itemPool = %i[FIREMEMORY WATERMEMORY ELECTRICMEMORY GRASSMEMORY ICEMEMORY FIGHTINGMEMORY POISONMEMORY GROUNDMEMORY FLYINGMEMORY PSYCHICMEMORY BUGMEMORY ROCKMEMORY GHOSTMEMORY DRAGONMEMORY DARKMEMORY STEELMEMORY FAIRYMEMORY]
         return itemPool[rand(17)]
     end
