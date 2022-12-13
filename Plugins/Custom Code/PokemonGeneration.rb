@@ -389,18 +389,23 @@ def pbRandomPkmnGeneration(mega = false)
       end
   end
 
-  # Roll Pokémon forms like Galar or Alolan form
+  # Replace species names by real Pokémon and roll Pokémon forms like Galar or Alolan form
+  # deactivate asking player for learning move on form change
+  pbSet(40, 1)
   # First Poke
-  pbSet(41, pbRollForm(pbGet(26)))
-  # Second Poke
-  pbSet(42, pbRollForm(pbGet(27)))
-  # Third Poke
-  pbSet(43, pbRollForm(pbGet(28)))
-
-  #Replace species names by real Pokémon
   pbSet(26, Pokemon.new(pbGet(26), pbGetPkmnTargetLvl))
+  pbGet(26).form = pbRollForm(pbGet(26).species)
+  pbGet(26).reset_moves
+  # Second Poke
   pbSet(27, Pokemon.new(pbGet(27), pbGetPkmnTargetLvl))
+  pbGet(27).form = pbRollForm(pbGet(27).species)
+  pbGet(27).reset_moves
+  # Third Poke
   pbSet(28, Pokemon.new(pbGet(28), pbGetPkmnTargetLvl))
+  pbGet(28).form = pbRollForm(pbGet(28).species)
+  pbGet(28).reset_moves
+  # activate asking player for learning move on form change
+  pbSet(40, 0)
 end
 
 def pbRandomPkmnSelection(hiddenAbility = true)

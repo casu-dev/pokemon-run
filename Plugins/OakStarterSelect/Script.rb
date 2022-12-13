@@ -81,20 +81,15 @@ class DiegoWTsStarterSelection
     @sprites["ballbase"].ox = @sprites["ballbase"].bitmap.width/2
     @sprites["ballbase"].oy = @sprites["ballbase"].bitmap.height/2
     @sprites["ballbase"].opacity = 0
-    # Disable form moves while Pokemon selection
-    pbSet(40, 1)
     @data = {}
     @data["pkmn_1"] = pkmn1
     @data["pkmn_1"] = pbGet(44)[0] if steal
-    @data["pkmn_1"].form = pbGet(41)
     @data["pkmn_1"].item = pbGiveSignatureItem(pkmn1.species)
     @data["pkmn_2"] = pkmn2
     @data["pkmn_2"] = pbGet(44)[1] if steal
-    @data["pkmn_2"].form = pbGet(42)
     @data["pkmn_2"].item = pbGiveSignatureItem(pkmn2.species)
     @data["pkmn_3"] = pkmn3
     @data["pkmn_3"] = pbGet(44)[2] if steal
-    @data["pkmn_3"].form = pbGet(43)
     @data["pkmn_3"].item = pbGiveSignatureItem(pkmn3.species)
     for i in 1..3
       @sprites["pkmn_#{i}"] = PokemonSprite.new(@viewport)
