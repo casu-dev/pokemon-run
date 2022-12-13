@@ -1,8 +1,6 @@
 # Pokemon Battle Woods
 
 ## Open Tickets
-- [ ] Egg Move Tutor price text shall be highlighted
-- [ ] reset_moves: exclude moves with power >= 140. Last move-slot shall become a non-attacking move.
 
 ## Closed Tickets
 - [x] Update next room indicator
@@ -37,3 +35,4 @@
 - [x] Fix Hall of Fame BG
 - [x] Nerf money at F3 + F4 in sum ~7k
 - [x] Nerf Brunos fighting team
+- [x] reset_moves: exclude moves with power >= 140. Last move-slot shall become a non-attacking move.
