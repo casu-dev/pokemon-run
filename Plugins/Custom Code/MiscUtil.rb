@@ -577,7 +577,7 @@ def pbChoseMode
                     pbWriteIntoFile("gamemode.txt", 0)
                     pbWriteIntoFile("battlerinfo.txt", 0)
                     pbPlaySaveSound
-                    pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +"."))
+                    pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]."))
                     break
                 elsif cmd2 == 1
                      pbWriteIntoFile("gamemode.txt", 1)
@@ -596,13 +596,13 @@ def pbChoseMode
 
                      pbWriteIntoFile("battlerinfo.txt", index)
                      pbPlaySaveSound
-                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The " + info + " stat of YOUR Pokémon will be swapped in battle."))
+                     pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. The " + info + " stat of YOUR Pokémon will be swapped in battle."))
                      break
                 elsif cmd2 == 2
                      pbWriteIntoFile("gamemode.txt", 2)
                      pbWriteIntoFile("battlerinfo.txt", 11)
                      pbPlaySaveSound
-                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". The first Pokémon in your party will have the ability of the last one in battle."))
+                     pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. The first Pokémon in your party will have the ability of the last one in battle."))
                      break
                 elsif cmd2 == 3
                     hasFullyEvolved = false
@@ -627,12 +627,18 @@ def pbChoseMode
                      pbWriteIntoFile("gamemode.txt", 3)
                      pbWriteIntoFile("battlerinfo.txt", 0)
                      pbPlaySaveSound
-                     pbMessage(_INTL("Game mode set to "+ pbGetGameModes[cmd2] +". All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
+                     pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
                      break
                    else
                         pbMessage("You \\c[10]can't switch\\c[0] to this mode, while owning a fully evolved Pokémon.")
                         break
                    end
+                elsif cmd2 == 4
+                     pbWriteIntoFile("gamemode.txt", 4)
+                     pbWriteIntoFile("battlerinfo.txt", 0)
+                     pbPlaySaveSound
+                     pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. Every moves damage gets boosted by 10% for each Pokémon in your party, that has the same type. Party Pokémon not having this type will reduce the damage by 10%."))
+                     break
                 end
             end
     else
@@ -647,7 +653,7 @@ def pbPlaySaveSound
 end
 
 def pbGetGameModes
-    return ["Standard", "Stat-Swap", "Copy-Ability", "Lucky weakling"]
+    return ["Standard", "Stat-Swap", "Copy-Ability", "Lucky weakling", "Type Boost"]
 end
 
 def pbResetRoom
@@ -1006,6 +1012,26 @@ def pbGetStatusAfter(pkmn)
       end
     end
     return statusAfter
+end
+
+def pbTypeBoost(moveType)
+    typeCount = 0
+    $Trainer.party.each do |pkmn|
+        typing = []
+        typing.push(pkmn.type1)
+        typing.push(pkmn.type2)
+        if typing.include?(moveType)
+            typeCount += 1
+        else
+            typeCount -= 1
+        end
+    end
+    factor = 1.0 + (typeCount/10.0)
+    return factor
+end
+
+def pbGetGameMode
+    return pbReadFile("gamemode.txt").to_i if pbReadFile("gamemode.txt")
 end
 
 def pbScout

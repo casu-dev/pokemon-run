@@ -116,7 +116,7 @@ end
 #	4	Trainer	Shop
 #	5	Trainer	Shop
 #	6	Grunt	X
-#	7	Trainer	Move geändert  zu ->  Elite Trainer
+#	7	Trainer	Move ->  Elite Trainer
 #	8	Oak	X
 #	9	Trainer	Shop
 #	10	Trainer	Elite
