@@ -9,6 +9,7 @@
 - Back option via cancel button in all menus
 - Difficulty option
 - Show movesets with move descriptions in Pokémon selection
+- Option to train against bosses
 
 ## Open tickets
 
