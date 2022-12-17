@@ -305,10 +305,28 @@ def pbGetCorrectEvo(pkmn)
   end
 end
 
+def pbGetStarters(type)
+    return [:BULBASAUR, :CHIKORITA, :TREECKO, :TURTWIG, :SNIVY, :CHESPIN, :ROWLET, :GROOKEY] if type == :GRASS
+    return [:CHARMANDER, :CYNDAQUIL, :TORCHIC, :CHIMCHAR, :TEPIG, :FENNEKIN, :LITTEN, :SCORBUNNY] if type == :FIRE
+    return [:SQUIRTLE, :TOTODILE, :MUDKIP, :PIPLUP, :OSHAWOTT, :FROAKIE, :POPPLIO, :SOBBLE] if type == :WATER
+end
+
 def pbGenStarterPkmn(type)
-  return Pokemon.new(pbChooseRandomPokemon(whiteList: %i[CHARMANDER CYNDAQUIL TORCHIC CHIMCHAR TEPIG FENNEKIN LITTEN SCORBUNNY]), pbGetPkmnTargetLvl) if type == :FIRE
-  return Pokemon.new(pbChooseRandomPokemon(whiteList: %i[SQUIRTLE TOTODILE MUDKIP PIPLUP OSHAWOTT FROAKIE POPPLIO SOBBLE]), pbGetPkmnTargetLvl) if type == :WATER
-  return Pokemon.new(pbChooseRandomPokemon(whiteList: %i[BULBASAUR CHIKORITA TREECKO TURTWIG SNIVY CHESPIN ROWLET GROOKEY]), pbGetPkmnTargetLvl) if type == :GRASS
+    index = pbReadFile("f3completedcount.txt").to_i
+    maxIndex = pbGetStarters(:GRASS).length-1
+    index = maxIndex if index > maxIndex
+    pickableGrassStarter = []
+    pickableFireStarter = []
+    pickableWaterStarter = []
+    for i in 0 .. index do
+        pickableGrassStarter.push(pbGetStarters(:GRASS)[i])
+        pickableFireStarter.push(pbGetStarters(:FIRE)[i])
+        pickableWaterStarter.push(pbGetStarters(:WATER)[i])
+    end
+
+    return Pokemon.new(pbChooseRandomPokemon(whiteList: pickableGrassStarter), pbGetPkmnTargetLvl) if type == :GRASS
+    return Pokemon.new(pbChooseRandomPokemon(whiteList: pickableFireStarter), pbGetPkmnTargetLvl) if type == :FIRE
+    return Pokemon.new(pbChooseRandomPokemon(whiteList: pickableWaterStarter), pbGetPkmnTargetLvl) if type == :WATER
 end
 
 def pbGenMegaPkmn

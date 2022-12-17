@@ -549,10 +549,18 @@ end
 
 def pbIncreaseCompletionCount
     old = pbReadFile("runcompletedcount.txt").to_i
-    old = (old + 1).to_s
-    pbWriteIntoFile("runcompletedcount.txt", text = old)
-    pbMessage(_INTL("You unlocked a \\c[10]new game mode\\c[0].")) if (old.to_i+1) <= pbGetGameModes.length()
-    pbMessage(_INTL("You unlocked \\c[10]all game modes\\c[0].")) if (old.to_i+1) == pbGetGameModes.length()
+    nnew = (old + 1).to_s
+    pbWriteIntoFile("runcompletedcount.txt", nnew)
+    pbMessage(_INTL("You unlocked the \\c[10]" + pbGetGameModes[nnew.to_i] + " game mode\\c[0].")) if (old+2) <= pbGetGameModes.length
+    pbMessage(_INTL("You unlocked \\c[10]all game modes\\c[0].")) if (old+2) == pbGetGameModes.length
+end
+
+def pbIncreaseF3CompletionCount
+    old = pbReadFile("f3completedcount.txt").to_i
+    nnew = (old + 1).to_s
+    pbWriteIntoFile("f3completedcount.txt", nnew)
+    pbMessage(_INTL("You unlocked the \\c[10]Gen " + (old+2).to_s + " Starter Pokémon\\c[0].")) if (old+2) <= pbGetStarters(:GRASS).length
+    pbMessage(_INTL("You unlocked \\c[10]all Starter Pokémon\\c[0].")) if (old+2) == pbGetStarters(:GRASS).length
 end
 
 def pbChoseMode
