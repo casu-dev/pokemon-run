@@ -1,8 +1,18 @@
 # Pokemon Battle Woods
 
-## Open Tickets
+## Ideas for future
+- Floor layout like Binding of Isaac
+- Achievements (optional quests)
+- Z-moves
+- Offer some loot on Sale
+- Implement items/events, that motivate/force the player to change strategy during the run
+- Back option via cancel button in all menus
+- Difficulty option
+- Show movesets with move descriptions in Pokémon selection
 
-## Closed Tickets
+## Open tickets
+
+## Closed tickets
 - [x] Update next room indicator
 - [x] Pokémon steal room (low odds)
 - [x] Add Trainers that contain a Mega Evolution Pokemon
