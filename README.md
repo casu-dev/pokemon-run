@@ -10,8 +10,6 @@
 
 ## Open tickets
 - [ ] Fix the room indicator: Gary shall have Gary sprite and Boss shall have coresponding Boss sprite
-- [ ] Fix sprite size of: PACHIRISU FLOATZEL TORCHIC WOBUFFET
-- [ ] Gittiehab: Fix text errors
 - [ ] Implement code structure for achievements
 - [ ] Define achievements and rewards
 - [ ] Place easter eggs
@@ -21,3 +19,5 @@
 
 ## Closed tickets
 - [x] Implement language option for moves
+- [x] Fix sprite size of: PACHIRISU FLOATZEL TORCHIC WOBUFFET
+- [x] Fix text errors
