@@ -1,0 +1,2226 @@
+1
+Megahorn
+Megahōn
+2
+Attack Order
+Kōgeki Shirei
+3
+Bug Buzz
+Mushi no Sazameki
+4
+First Impression
+Deaigashira
+5
+Pollen Puff
+Kafun Dango
+6
+Leech Life
+Kyūketsu
+7
+Lunge
+Tobikakaru
+8
+X-Scissor
+Shizā Kurosu
+9
+Signal Beam
+Shigunaru Bīmu
+10
+U-turn
+Tonbo Gaeri
+11
+Steamroller
+Hādo Rorā
+12
+Bug Bite
+Mushi Kui
+13
+Silver Wind
+Gin'iro no Kaze
+14
+Fell Stinger
+Todome-bari
+15
+Struggle Bug
+Mushi no Teikō
+16
+Fury Cutter
+Renzoku Giri
+17
+Pin Missile
+Misairu Bari
+18
+Twineedle
+Daburu Nīdoru
+19
+Infestation
+Matowaritsuku
+20
+Defend Order
+Bōgyo Shirei
+21
+Heal Order
+Kaifuku Shirei
+22
+Powder
+Funjin
+23
+Quiver Dance
+Chō no Mai
+24
+Rage Powder
+Ikari no Kona
+25
+Spider Web
+Kumo no Su
+26
+Sticky Web
+Nebaneba Net
+27
+String Shot
+Ito o Haku
+28
+Tail Glow
+Hotarubi
+29
+Skitter Smack
+Haiyoru Ichigeki
+30
+Hyperspace Fury
+Ijigen Rasshu
+31
+Foul Play
+Ikasama
+32
+Darkest Lariat
+DD Rariatto
+33
+Night Daze
+Naito Bāsuto
+34
+Crunch
+Kamikudaku
+35
+Dark Pulse
+Aku no Hadō
+36
+Throat Chop
+Jigokuzuki
+37
+Night Slash
+Tsujigiri
+38
+Sucker Punch
+Fuiuchi
+39
+Knock Off
+Hataki Otosu
+40
+Assurance
+Dame Oshi
+41
+Bite
+Kamitsuku
+42
+Brutal Swing
+Bunmawasu
+43
+Feint Attack
+Damashiuchi
+44
+Thief
+Dorobō
+45
+Snarl
+Bāku Auto
+46
+Payback
+Shippegaeshi
+47
+Pursuit
+Oiuchi
+48
+Beat Up
+Fukurodataki
+49
+Fling
+Nagetsukeru
+50
+Power Trip
+Tsukeagaru
+51
+Punishment
+Oshioki
+52
+Dark Void
+Dāku Hōru
+53
+Embargo
+Sashiosae
+54
+Fake Tears
+Uso Naki
+55
+Flatter
+Odateru
+56
+Hone Claws
+Tsumetogi
+57
+Memento
+Okimiyage
+58
+Nasty Plot
+Waru Dakumi
+59
+Parting Shot
+Sute Zerifu
+60
+Quash
+Saki Okuri
+61
+Snatch
+Yokodori
+62
+Switcheroo
+Surikae
+63
+Taunt
+Chōhatsu
+64
+Topsy-Turvy
+Hikkurikaesu
+65
+Torment
+Ichamon
+66
+Jaw Lock
+Kuraitsuku
+67
+False Surrender
+Dogeza Tsuki
+68
+Obstruct
+Burokkingu
+69
+Wicked Blow
+Ankoku Kyōda
+70
+Lash Out
+Uppun Barashi
+71
+Fiery Wrath
+Moeagaru Ikari
+72
+Roar of Time
+Toki no Hōkō
+73
+Draco Meteor
+Ryūseigun
+74
+Outrage
+Gekirin
+75
+Clanging Scales
+Sukeiru Noizu
+76
+Core Enforcer
+Koa Panisshā
+77
+Dragon Rush
+Doragon Daibu
+78
+Spacial Rend
+Akū Setsudan
+79
+Dragon Hammer
+Doragon Hanmā
+80
+Dragon Pulse
+Ryū no Hadō
+81
+Dragon Claw
+Doragon Kurō
+82
+Dragon Breath
+Ryū no Ibuki
+83
+Dragon Tail
+Doragon Tēru
+84
+Dual Chop
+Daburu Choppu
+85
+Twister
+Tatsumaki
+86
+Dragon Rage
+Ryū no Ikari
+87
+Dragon Dance
+Ryū no Mai
+88
+Breaking Swipe
+Waido Bureikā
+89
+Dragon Darts
+Doragon Arō
+90
+Dynamax Cannon
+Daimakkusu Hō
+91
+Eternabeam
+Mugendai Bīmu
+92
+Clangorous Soul
+Sōru Bīto
+93
+Scale Shot
+Sukeiru Shotto
+94
+Dragon Energy
+Doragon Enajī
+95
+Bolt Strike
+Raigeki
+96
+Volt Tackle
+Borutekkā
+97
+Zap Cannon
+Denjihō
+98
+Thunder
+Kaminari
+99
+Fusion Bolt
+Kurosu Sandā
+100
+Plasma Fists
+Purazuma Fisuto
+101
+Thunderbolt
+Jūman Boruto
+102
+Wild Charge
+Wairudo Boruto
+103
+Discharge
+Hōden
+104
+Zing Zap
+Biribiri Chikuchiku
+105
+Thunder Punch
+Kaminari Panchi
+106
+Volt Switch
+Boruto Chenji
+107
+Parabolic Charge
+Parabora Chāji
+108
+Spark
+Supāku
+109
+Thunder Fang
+Kaminari no Kiba
+110
+Shock Wave
+Dengekiha
+111
+Electroweb
+Ereki Netto
+112
+Charge Beam
+Chāji Bīmu
+113
+Thunder Shock
+Denki Shokku
+114
+Nuzzle
+Hoppe Suri Suri
+115
+Electro Ball
+Ereki Bōru
+116
+Charge
+Jūden
+117
+Eerie Impulse
+Kaidenpa
+118
+Electric Terrain
+Ereki Fīrudo
+119
+Electrify
+Sōden
+120
+Ion Deluge
+Purazuma Shawā
+121
+Magnet Rise
+Denji Fuyū
+122
+Magnetic Flux
+Jiba Sōsa
+123
+Thunder Wave
+Denjiha
+124
+Overdrive
+Ōbādoraibu
+125
+Aura Wheel
+Ōra Guruma
+126
+Bolt Beak
+Dengeki Kuchibashi
+127
+Rising Voltage
+Raijingu Boruto
+128
+Thunder Cage
+Sandā Purizun
+129
+Light of Ruin
+Hametsu no Hikari
+130
+Fleur Cannon
+Frūru Kanon
+131
+Moonblast
+Mūn Fōsu
+132
+Play Rough
+Jaretsuku
+133
+Dazzling Gleam
+Majikaru Shain
+134
+Draining Kiss
+Dorein Kissu
+135
+Disarming Voice
+Chāmu Boisu
+136
+Fairy Wind
+Yōsei no Kaze
+137
+Aromatic Mist
+Aroma Misuto
+138
+Baby-Doll Eyes
+Tsuburana Hitomi
+139
+Charm
+Amaeru
+140
+Crafty Shield
+Torikku Gādo
+141
+Fairy Lock
+Fearī Rokku
+142
+Floral Healing
+Furawā Hīru
+143
+Flower Shield
+Furawā Gādo
+144
+Geomancy
+Jiokontorōru
+145
+Misty Terrain
+Misuto Fīrudo
+146
+Moonlight
+Tsuki no Hikari
+147
+Nature's Madness
+Shizen no Ikari
+148
+Sweet Kiss
+Tenshi no Kissu
+149
+Spirit Break
+Sōru Kurasshu
+150
+Decorate
+Dekorēshon
+151
+Misty Explosion
+Misuto Bāsuto
+152
+Strange Steam
+Wandā Suchīmu
+153
+Focus Punch
+Kiai Panchi
+154
+High Jump Kick
+Tobihizageri
+155
+Close Combat
+Infaito
+156
+Focus Blast
+Kiai Dama
+157
+Superpower
+Bakajikara
+158
+Cross Chop
+Kurosu Choppu
+159
+Dynamic Punch
+Bakuretsu Panchi
+160
+Flying Press
+Furaingu Puresu
+161
+Hammer Arm
+Āmu Hanmā
+162
+Jump Kick
+Tobigeri
+163
+Sacred Sword
+Seinaru Tsurugi
+164
+Secret Sword
+Shinpi no Tsurugi
+165
+Sky Uppercut
+Sukai Appā
+166
+Aura Sphere
+Hadōdan
+167
+Submission
+Jigoku Guruma
+168
+Brick Break
+Kawarawari
+169
+Drain Punch
+Dorein Panchi
+170
+Vital Throw
+Ateminage
+171
+Wake-Up Slap
+Mezamashi Binta
+172
+Low Sweep
+Rō Kikku
+173
+Circle Throw
+Tomoenage
+174
+Force Palm
+Hakkei
+175
+Revenge
+Ribenji
+176
+Rolling Kick
+Mawashigeri
+177
+Storm Throw
+Yama Arashi
+178
+Karate Chop
+Karate Choppu
+179
+Mach Punch
+Mahha Panchi
+180
+Power-Up Punch
+Gurō Panchi
+181
+Rock Smash
+Iwakudaki
+182
+Vacuum Wave
+Shinkū Ha
+183
+Double Kick
+Nidogeri
+184
+Arm Thrust
+Tsuppari
+185
+Triple Kick
+Toripuru Kikku
+186
+Counter
+Kauntā
+187
+Final Gambit
+Inochigake
+188
+Low Kick
+Ketaguri
+189
+Reversal
+Kishi Kaisei
+190
+Seismic Toss
+Chikyū Nage
+191
+Bulk Up
+Birudo Appu
+192
+Detect
+Mikiri
+193
+Mat Block
+Tatami-gaeshi
+194
+Quick Guard
+Fasuto Gādo
+195
+Octolock
+Tako Gatame
+196
+Meteor Assault
+Sutā Asaruto
+197
+No Retreat
+Haisui no Jin
+198
+Coaching
+Kōchingu
+199
+Body Press
+Bodi Puresu
+200
+Thunderous Kick
+Raimei Geri
+201
+V-create
+V Jenerēto
+202
+Blast Burn
+Burasuto Bān
+203
+Eruption
+Funka
+204
+Mind Blown
+Bikkuri Heddo
+205
+Shell Trap
+Torappu Sheru
+206
+Blue Flare
+Aoi Honō
+207
+Burn Up
+Moetsukiru
+208
+Overheat
+Ōbāhīto
+209
+Flare Blitz
+Furea Doraibu
+210
+Fire Blast
+Dai Monji
+211
+Fusion Flare
+Kurosu Fureimu
+212
+Inferno
+Rengoku
+213
+Magma Storm
+Maguma Sutōmu
+214
+Sacred Fire
+Seinaru Honō
+215
+Searing Shot
+Kaendan
+216
+Heat Wave
+Neppū
+217
+Flamethrower
+Kaen Hōsha
+218
+Blaze Kick
+Bureizu Kikku
+219
+Fiery Dance
+Honō no Mai
+220
+Fire Lash
+Honō no Muchi
+221
+Fire Pledge
+Honō no Chikai
+222
+Lava Plume
+Fun'en
+223
+Fire Punch
+Honō no Panchi
+224
+Mystical Fire
+Majikaru Fureimu
+225
+Flame Burst
+Hajikeru Honō
+226
+Fire Fang
+Honō no Kiba
+227
+Flame Wheel
+Kaen Guruma
+228
+Incinerate
+Yaki Tsukusu
+229
+Flame Charge
+Nitoro Chāji
+230
+Ember
+Hinoko
+231
+Fire Spin
+Honō no Uzu
+232
+Heat Crash
+Hīto Sutanpu
+233
+Sunny Day
+Nihonbare
+234
+Will-O-Wisp
+Onibi
+235
+Pyro Ball
+Kaen Bōru
+236
+Burning Jealousy
+Shitto no Honō
+237
+Sky Attack
+Goddo Bādo
+238
+Brave Bird
+Bureibu Bādo
+239
+Dragon Ascent
+Garyō Tensei
+240
+Hurricane
+Bōfū
+241
+Aeroblast
+Earoburasuto
+242
+Beak Blast
+Kuchibashi Kyanon
+243
+Fly
+Sora o Tobu
+244
+Bounce
+Tobihaneru
+245
+Drill Peck
+Doriru Kuchibashi
+246
+Oblivion Wing
+Desu Uingu
+247
+Air Slash
+Ea Surasshu
+248
+Chatter
+Oshaberi
+249
+Aerial Ace
+Tsubame Gaeshi
+250
+Air Cutter
+Ea Kattā
+251
+Pluck
+Tsuibamu
+252
+Sky Drop
+Furī Fōru
+253
+Wing Attack
+Tsubasa de Utsu
+254
+Acrobatics
+Akurobatto
+255
+Gust
+Kaze Okoshi
+256
+Peck
+Tsutsuku
+257
+Defog
+Kiribarai
+258
+Feather Dance
+Fezā Dansu
+259
+Mirror Move
+Ōmu Gaeshi
+260
+Roost
+Hane Yasume
+261
+Tailwind
+Oikaze
+262
+Dual Wingbeat
+Daburu Uingu
+263
+Shadow Force
+Shadō Daibu
+264
+Moongeist Beam
+Shadō Rei
+265
+Phantom Force
+Gōsuto Daibu
+266
+Spectral Thief
+Shadō Suchīru
+267
+Shadow Bone
+Shadō Bōn
+268
+Shadow Ball
+Shadō Bōru
+269
+Spirit Shackle
+Kagenui
+270
+Shadow Claw
+Shadō Kurō
+271
+Hex
+Tatarime
+272
+Ominous Wind
+Ayashii Kaze
+273
+Shadow Punch
+Shadō Panchi
+274
+Shadow Sneak
+Kageuchi
+275
+Astonish
+Odorokasu
+276
+Lick
+Shita de Nameru
+277
+Night Shade
+Naito Heddo
+278
+Confuse Ray
+Ayashī Hikari
+279
+Curse
+Noroi
+280
+Destiny Bond
+Michizure
+281
+Grudge
+Onnen
+282
+Nightmare
+Akumu
+283
+Spite
+Urami
+284
+Trick-or-Treat
+Harouin
+285
+Poltergeist
+Porutāgaisuto
+286
+Astral Barrage
+Asutoraru Bitto
+287
+Frenzy Plant
+Hādo Puranto
+288
+Leaf Storm
+Rīfu Sutōmu
+289
+Solar Blade
+Sōrā Burēdo
+290
+Petal Dance
+Hanabira no Mai
+291
+Power Whip
+Pawā Uippu
+292
+Seed Flare
+Shīdo Furea
+293
+Solar Beam
+Sōrā Bīmu
+294
+Wood Hammer
+Uddo Hanmā
+295
+Energy Ball
+Enajī Bōru
+296
+Leaf Blade
+Rīfu Bureido
+297
+Petal Blizzard
+Hana Fubuki
+298
+Grass Pledge
+Kusa no Chikai
+299
+Seed Bomb
+Tane Bakudan
+300
+Giga Drain
+Giga Dorein
+301
+Horn Leech
+Uddo Hōn
+302
+Trop Kick
+Toropikaru Kikku
+303
+Leaf Tornado
+Gurasu Mikusā
+304
+Magical Leaf
+Majikaru Rīfu
+305
+Needle Arm
+Nīdoru Āmu
+306
+Razor Leaf
+Happa Kattā
+307
+Vine Whip
+Tsuru no Muchi
+308
+Leafage
+Ko no Ha
+309
+Mega Drain
+Mega Dorein
+310
+Bullet Seed
+Tane Mashin Gan
+311
+Absorb
+Suitoru
+312
+Grass Knot
+Kusa Musubi
+313
+Aromatherapy
+Aromaserapī
+314
+Cotton Guard
+Cotton Gādo
+315
+Cotton Spore
+Wata Hōshi
+316
+Forest's Curse
+Mori no Noroi
+317
+Grass Whistle
+Kusabue
+318
+Grassy Terrain
+Gurasu Fīrudo
+319
+Ingrain
+Ne o Haru
+320
+Leech Seed
+Yadorigi no Tane
+321
+Sleep Powder
+Nemuri Gona
+322
+Spiky Shield
+Nīdoru Gādo
+323
+Spore
+Kinoko no Hōshi
+324
+Strength Sap
+Chikara o Suitoru
+325
+Stun Spore
+Shibire Gona
+326
+Synthesis
+Kōgōsei
+327
+Worry Seed
+Nayami no Tane
+328
+Branch Poke
+Edazuki
+329
+Drum Beating
+Doramu Atakku
+330
+Grav Apple
+G no Chikara
+331
+Apple Acid
+Ringo San
+332
+Snap Trap
+Torabasami
+333
+Grassy Glide
+Gurasu Suraidā
+334
+Jungle Healing
+Janguru Hīru
+335
+Precipice Blades
+Dangai no Tsurugi
+336
+Earthquake
+Jishin
+337
+High Horsepower
+Jūman Bariki
+338
+Earth Power
+Daichi no Chikara
+339
+Land's Wrath
+Gurando Fōsu
+340
+Thousand Arrows
+Sauzando Arō
+341
+Thousand Waves
+Sauzando Uēbu
+342
+Dig
+Ana o Horu
+343
+Drill Run
+Doriru Rainā
+344
+Stomping Tantrum
+Jidanda
+345
+Bone Club
+Hone Konbō
+346
+Mud Bomb
+Doro Bakudan
+347
+Bulldoze
+Jinarashi
+348
+Mud Shot
+Maddo Shotto
+349
+Bonemerang
+Hone Būmeran
+350
+Sand Tomb
+Suna Jigoku
+351
+Bone Rush
+Bōn Rasshu
+352
+Mud-Slap
+Dorokake
+353
+Fissure
+Jiware
+354
+Magnitude
+Magunichūdo
+355
+Mud Sport
+Doro Asobi
+356
+Rototiller
+Tagayasu
+357
+Sand Attack
+Sunakake
+358
+Shore Up
+Sunaatsume
+359
+Spikes
+Makibishi
+360
+Scorching Sands
+Nessa no Daichi
+361
+Freeze Shock
+Furīzu Boruto
+362
+Ice Burn
+Kōrudo Furea
+363
+Blizzard
+Fubuki
+364
+Ice Hammer
+Aise Hanmā
+365
+Ice Beam
+Reitō Bīmu
+366
+Icicle Crash
+Tsurara Otoshi
+367
+Ice Punch
+Reitō Panchi
+368
+Freeze-Dry
+Furīzu Dorai
+369
+Aurora Beam
+Ōrora Bīmu
+370
+Glaciate
+Kogoeru Sekai
+371
+Ice Fang
+Koori no Kiba
+372
+Avalanche
+Yuki Nadare
+373
+Frost Breath
+Kōri no Ibuki
+374
+Icy Wind
+Kogoeru Kaze
+375
+Ice Shard
+Koori no Tsubute
+376
+Powder Snow
+Konayuki
+377
+Ice Ball
+Aisu Bōru
+378
+Icicle Spear
+Tsurara Bari
+379
+Sheer Cold
+Zettai Reido
+380
+Aurora Veil
+Ōrora Bēru
+381
+Hail
+Arare
+382
+Haze
+Kuroi Kiri
+383
+Mist
+Shiroi Kiri
+384
+Triple Axel
+Toripuru Akuseru
+385
+Glacial Lance
+Burizādo Ransu
+386
+Explosion
+Dai Bakuhatsu
+387
+Self-Destruct
+Jibaku
+388
+Giga Impact
+Giga Inpakuto
+389
+Hyper Beam
+Hakai Kōsen
+390
+Boomburst
+Bakuonpa
+391
+Last Resort
+Totteoki
+392
+Skull Bash
+Rokketo Zutsuki
+393
+Double-Edge
+Sutemi Takkuru
+394
+Head Charge
+Afuro Bureiku
+395
+Mega Kick
+Megaton Kikku
+396
+Techno Blast
+Tekuno Basutā
+397
+Thrash
+Abareru
+398
+Egg Bomb
+Tamago Bakudan
+399
+Judgment
+Sabaki no Tsubute
+400
+Hyper Voice
+Haipā Boisu
+401
+Multi-Attack
+Maruchi Atakku
+402
+Revelation Dance
+Mezameru Dansu
+403
+Rock Climb
+Rokku Kuraimu
+404
+Take Down
+Tosshin
+405
+Uproar
+Sawagu
+406
+Body Slam
+Noshikakari
+407
+Extreme Speed
+Shinsoku
+408
+Hyper Fang
+Hissatsu Maeba
+409
+Mega Punch
+Megaton Panchi
+410
+Razor Wind
+Kamaitachi
+411
+Slam
+Tatakitsukeru
+412
+Strength
+Kairiki
+413
+Tri Attack
+Torai Atakku
+414
+Crush Claw
+Bureiku Kurō
+415
+Relic Song
+Inishie no Uta
+416
+Chip Away
+Nashikuzushi
+417
+Dizzy Punch
+Piyopiyo Panchi
+418
+Facade
+Karagenki
+419
+Headbutt
+Zutsuki
+420
+Retaliate
+Kataki Uchi
+421
+Secret Power
+Himitsu no Chikara
+422
+Slash
+Kirisaku
+423
+Smelling Salts
+Kitsuke
+424
+Horn Attack
+Tsuno de Tsuku
+425
+Stomp
+Fumitsuke
+426
+Covet
+Hoshigaru
+427
+Hidden Power
+Mezameru Pawā
+428
+Round
+Rinshō
+429
+Swift
+Supīdo Sutā
+430
+Vise Grip
+Hasamu
+431
+Cut
+Iaigiri
+432
+Snore
+Ibiki
+433
+Struggle
+Waruagaki
+434
+Weather Ball
+Uezā Bōru
+435
+Echoed Voice
+Ekō Boisu
+436
+Fake Out
+Nekodamashi
+437
+False Swipe
+Mineuchi
+438
+Hold Back
+Tekagen
+439
+Pay Day
+Neko ni Koban
+440
+Pound
+Hataku
+441
+Quick Attack
+Denkō Sekka
+442
+Scratch
+Hikkaku
+443
+Tackle
+Taiatari
+444
+Double Hit
+Daburu Atakku
+445
+Feint
+Feinto
+446
+Tail Slap
+Suīpu Binta
+447
+Rage
+Ikari
+448
+Rapid Spin
+Kōsoku Supin
+449
+Spike Cannon
+Toge Kyanon
+450
+Comet Punch
+Renzoku Panchi
+451
+Fury Swipes
+Midare Hikkaki
+452
+Barrage
+Tamanage
+453
+Bind
+Shimetsukeru
+454
+Double Slap
+Ōfuku Binta
+455
+Fury Attack
+Midare Dzuki
+456
+Wrap
+Makitsuku
+457
+Constrict
+Karamitsuku
+458
+Bide
+Gaman
+459
+Crush Grip
+Nigiri Tsubusu
+460
+Endeavor
+Gamushara
+461
+Flail
+Jitabata
+462
+Frustration
+Yatsuatari
+463
+Guillotine
+Hasami Girochin
+464
+Horn Drill
+Tsuno Doriru
+465
+Natural Gift
+Shizen no Megumi
+466
+Present
+Purezento
+467
+Return
+Ongaeshi
+468
+Sonic Boom
+Sonikku Būmu
+469
+Spit Up
+Hakidasu
+470
+Super Fang
+Ikari no Maeba
+471
+Trump Card
+Kirifuda
+472
+Wring Out
+Shiboritoru
+473
+Acupressure
+Tsubo o Tsuku
+474
+After You
+Osaki ni Dōzo
+475
+Assist
+Neko no Te
+476
+Attract
+Meromero
+477
+Baton Pass
+Baton Tacchi
+478
+Belly Drum
+Haradaiko
+479
+Bestow
+Gifuto Pasu
+480
+Block
+Tōsenbō
+481
+Camouflage
+Hogoshoku
+482
+Captivate
+Yūwaku
+483
+Celebrate
+Oiwai
+484
+Confide
+Naisho-banashi
+485
+Conversion
+Tekusuchā
+486
+Conversion 2
+Tekusuchā 2
+487
+Copycat
+Manekko
+488
+Defense Curl
+Marukunaru
+489
+Disable
+Kanashibari
+490
+Double Team
+Kage Bunshin
+491
+Encore
+Ankōru
+492
+Endure
+Koraeru
+493
+Entrainment
+Nakama Zukuri
+494
+Flash
+Furasshu
+495
+Focus Energy
+Kiai Dame
+496
+Follow Me
+Kono Yubi Tomare
+497
+Foresight
+Miyaburu
+498
+Glare
+Hebi Nirami
+499
+Growl
+Nakigoe
+500
+Growth
+Seichō
+501
+Happy Hour
+Happī Taimu
+502
+Harden
+Katakunaru
+503
+Heal Bell
+Iyashi no Suzu
+504
+Helping Hand
+Tedasuke
+505
+Hold Hands
+Te o Tsunagu
+506
+Howl
+Tōboe
+507
+Laser Focus
+Togisumasu
+508
+Leer
+Niramitsukeru
+509
+Lock-On
+Rokku On
+510
+Lovely Kiss
+Akuma no Kissu
+511
+Lucky Chant
+Omajinai
+512
+Me First
+Sakidori
+513
+Mean Look
+Kuroi Manazashi
+514
+Metronome
+Yubi o Furu
+515
+Milk Drink
+Miruku Nomi
+516
+Mimic
+Monomane
+517
+Mind Reader
+Kokoro no Me
+518
+Minimize
+Chīsakunaru
+519
+Morning Sun
+Asa no Hizashi
+520
+Nature Power
+Shizen no Chikara
+521
+Noble Roar
+Otakebi
+522
+Odor Sleuth
+Kagiwakeru
+523
+Pain Split
+Itamiwake
+524
+Perish Song
+Horobi no Uta
+525
+Play Nice
+Nakayoku-suru
+526
+Protect
+Mamoru
+527
+Psych Up
+Jikoanji
+528
+Recover
+Jikosaisei
+529
+Recycle
+Risaikuru
+530
+Reflect Type
+Mirā Taipu
+531
+Refresh
+Rifuresshu
+532
+Roar
+Hoeru
+533
+Safeguard
+Shinpi no Mamori
+534
+Scary Face
+Kowai Kao
+535
+Screech
+Iyanaoto
+536
+Sharpen
+Kakubaru
+537
+Shell Smash
+Kara o Yaburu
+538
+Simple Beam
+Shinpuru Bīmu
+539
+Sing
+Utau
+540
+Sketch
+Sukecchi
+541
+Slack Off
+Namakeru
+542
+Sleep Talk
+Negoto
+543
+Smokescreen
+Enmaku
+544
+Soft-Boiled
+Tamago Umi
+545
+Splash
+Haneru
+546
+Spotlight
+Supottoraito
+547
+Stockpile
+Takuwaeru
+548
+Substitute
+Migawari
+549
+Supersonic
+Chōonpa
+550
+Swagger
+Ibaru
+551
+Swallow
+Nomikomu
+552
+Sweet Scent
+Amai Kaori
+553
+Swords Dance
+Tsurugi no Mai
+554
+Tail Whip
+Shippo o Furu
+555
+Tearful Look
+Namida Me
+556
+Teeter Dance
+Furafura Dansu
+557
+Tickle
+Kusuguru
+558
+Transform
+Henshin
+559
+Whirlwind
+Fukitobashi
+560
+Wish
+Negaigoto
+561
+Work Up
+Furui Tateru
+562
+Yawn
+Akubi
+563
+Court Change
+Kōto Chenji
+564
+Stuff Cheeks
+Hōbaru
+565
+Teatime
+Ochakai
+566
+Terrain Pulse
+Daichi no Hadō
+567
+Belch
+Geppu
+568
+Gunk Shot
+Dasuto Shūto
+569
+Sludge Wave
+Hedoro Uēbu
+570
+Sludge Bomb
+Hedoro Bakudan
+571
+Poison Jab
+Dokudzuki
+572
+Cross Poison
+Kurosu Poizun
+573
+Sludge
+Hedoro Kōgeki
+574
+Venoshock
+Benomu Shokku
+575
+Clear Smog
+Kuria Smoggu
+576
+Poison Fang
+Dokudoku no Kiba
+577
+Poison Tail
+Poizun Tēru
+578
+Acid
+Yōkaieki
+579
+Acid Spray
+Ashiddo Bomu
+580
+Smog
+Sumoggu
+581
+Poison Sting
+Doku Bari
+582
+Acid Armor
+Tokeru
+583
+Baneful Bunker
+Tochka
+584
+Coil
+Toguro o Maku
+585
+Gastro Acid
+Ieki
+586
+Poison Gas
+Doku Gasu
+587
+Poison Powder
+Doku no Kona
+588
+Purify
+Jōka
+589
+Toxic
+Dokudoku
+590
+Toxic Spikes
+Dokubishi
+591
+Toxic Thread
+Doku no Ito
+592
+Venom Drench
+Benomu Torappu
+593
+Corrosive Gas
+Fushoku Gasu
+594
+Shell Side Arm
+Sheru Āmuzu
+595
+Prismatic Laser
+Purizumu Rēzā
+596
+Psycho Boost
+Saiko Būsuto
+597
+Future Sight
+Mirai Yochi
+598
+Synchronoise
+Shinkuronoizu
+599
+Dream Eater
+Yume Kui
+600
+Photon Geyser
+Foton Geizā
+601
+Psystrike
+Saiko Bureiku
+602
+Psychic
+Saikokineshisu
+603
+Psychic Fangs
+Saiko Fangu
+604
+Extrasensory
+Jintsūriki
+605
+Hyperspace Hole
+Ijigen Hole
+606
+Psyshock
+Saiko Shokku
+607
+Zen Headbutt
+Shinen no Zutsuki
+608
+Luster Purge
+Rasutā Pāji
+609
+Mist Ball
+Misuto Bōru
+610
+Psycho Cut
+Saiko Kattā
+611
+Psybeam
+Psyche Kōsen
+612
+Heart Stamp
+Hāto Sutanpu
+613
+Confusion
+Nenriki
+614
+Stored Power
+Ashisuto Pawā
+615
+Mirror Coat
+Mirā Kōto
+616
+Psywave
+Saiko Uēbu
+617
+Agility
+Kōsoku Idō
+618
+Ally Switch
+Saido Chenji
+619
+Amnesia
+Dowasure
+620
+Barrier
+Bariā
+621
+Calm Mind
+Meisō
+622
+Cosmic Power
+Kosumo Pawā
+623
+Gravity
+Jūryoku
+624
+Guard Split
+Gādo Shea
+625
+Guard Swap
+Gādo Suwappu
+626
+Heal Block
+Kaifuku Fūji
+627
+Heal Pulse
+Iyashi no Hadō
+628
+Healing Wish
+Iyashi no Negai
+629
+Heart Swap
+Hāto Suwappu
+630
+Hypnosis
+Saimin Jutsu
+631
+Imprison
+Fūin
+632
+Instruct
+Saihai
+633
+Kinesis
+Supūn Mage
+634
+Light Screen
+Hikari no Kabe
+635
+Lunar Dance
+Mikazuki no Mai
+636
+Magic Coat
+Majikku Kōto
+637
+Magic Room
+Majikku Rūmu
+638
+Meditate
+Yoga no Pōzu
+639
+Miracle Eye
+Mirakuru Ai
+640
+Power Split
+Pawā Shea
+641
+Power Swap
+Pawā Suwappu
+642
+Power Trick
+Pawā Torikku
+643
+Psychic Terrain
+Saiko Fīrudo
+644
+Psycho Shift
+Saiko Shifuto
+645
+Reflect
+Rifurekutā
+646
+Rest
+Nemuru
+647
+Role Play
+Narikiri
+648
+Skill Swap
+Sukiru Suwappu
+649
+Speed Swap
+Supīdo Suwappu
+650
+Telekinesis
+Terekineshisu
+651
+Teleport
+Terepōto
+652
+Trick
+Torikku
+653
+Trick Room
+Torikku Rūmu
+654
+Wonder Room
+Wandā Rūmu
+655
+Magic Powder
+Mahō no Kona
+656
+Expanding Force
+Waido Fōsu
+657
+Eerie Spell
+Bukimi na Jūmon
+658
+Freezing Glare
+Itetsuku Shisen
+659
+Head Smash
+Moroha no Zutsuki
+660
+Rock Wrecker
+Ganseki Hō
+661
+Diamond Storm
+Daiya Sutōmu
+662
+Stone Edge
+Sutōn Ejji
+663
+Power Gem
+Pawā Jemu
+664
+Rock Slide
+Iwa Nadare
+665
+Ancient Power
+Genshi no Chikara
+666
+Rock Tomb
+Ganseki Fūji
+667
+Rock Throw
+Iwa Otoshi
+668
+Smack Down
+Uchiotosu
+669
+Accelerock
+Akuseru Rokku
+670
+Rollout
+Korogaru
+671
+Rock Blast
+Rokku Burasuto
+672
+Rock Polish
+Rokku Katto
+673
+Sandstorm
+Suna Arashi
+674
+Stealth Rock
+Suterusu Rokku
+675
+Wide Guard
+Waido Gādo
+676
+Tar Shot
+Tāru Shotto
+677
+Meteor Beam
+Meteo Bīmu
+678
+Doom Desire
+Hametsu no Negai
+679
+Iron Tail
+Aian Tēru
+680
+Sunsteel Strike
+Meteo Doraibu
+681
+Meteor Mash
+Kometto Panchi
+682
+Anchor Shot
+Ankā Shotto
+683
+Flash Cannon
+Rasutā Kanon
+684
+Iron Head
+Aian Heddo
+685
+Smart Strike
+Smāto Hōn
+686
+Steel Wing
+Hagane no Tsubasa
+687
+Double Iron Bash
+Daburu Panzā
+688
+Mirror Shot
+Mirā Shotto
+689
+Magnet Bomb
+Maguneto Bomu
+690
+Gear Grind
+Gia Sōsā
+691
+Metal Claw
+Metaru Kurō
+692
+Bullet Punch
+Baretto Panchi
+693
+Gyro Ball
+Jairo Bōru
+694
+Heavy Slam
+Hebī Bonbā
+695
+Metal Burst
+Metaru Bāsuto
+696
+Autotomize
+Bodi Pāji
+697
+Gear Up
+Ashisuto Gia
+698
+Iron Defense
+Teppeki
+699
+King's Shield
+Kingu Shīrudo
+700
+Metal Sound
+Kinzoku On
+701
+Shift Gear
+Gia Chenji
+702
+Behemoth Bash
+Kyojūdan
+703
+Behemoth Blade
+Kyojūzan
+704
+Steel Roller
+Aian Rōrā
+705
+Steel Beam
+Tettei Kōsen
+706
+Hydro Cannon
+Haidoro Kyanon
+707
+Water Spout
+Shiofuki
+708
+Hydro Pump
+Haidoro Ponpu
+709
+Origin Pulse
+Kongen no Hadō
+710
+Steam Eruption
+Suchīmu Bāsuto
+711
+Crabhammer
+Kurabu Hanma
+712
+Aqua Tail
+Akua Tēru
+713
+Muddy Water
+Dakuryū
+714
+Sparkling Aria
+Utakata no Aria
+715
+Surf
+Naminori
+716
+Liquidation
+Akua Bureiku
+717
+Dive
+Daibingu
+718
+Scald
+Nettō
+719
+Water Pledge
+Mizu no Chikai
+720
+Waterfall
+Taki Nobori
+721
+Razor Shell
+Sheru Burēdo
+722
+Brine
+Shiomizu
+723
+Bubble Beam
+Baburu Kōsen
+724
+Octazooka
+Okutank Hō
+725
+Water Pulse
+Mizu no Hadō
+726
+Aqua Jet
+Akua Jetto
+727
+Bubble
+Awa
+728
+Water Gun
+Mizu Deppō
+729
+Clamp
+Kara de Hasamu
+730
+Whirlpool
+Uzushio
+731
+Water Shuriken
+Mizu Shuriken
+732
+Aqua Ring
+Akua Ringu
+733
+Rain Dance
+Amagoi
+734
+Soak
+Mizubitashi
+735
+Water Sport
+Mizu Asobi
+736
+Withdraw
+Kara ni Komoru
+737
+Snipe Shot
+Neraiuchi
+738
+Fishious Rend
+Era Gami
+739
+Life Dew
+Inochi no Shizuku
+740
+Surging Strikes
+Suiryū Renda
+741
+Flip Turn
+Kuikku Tān
+742
+Hidden Power
+Mezameru Pawā

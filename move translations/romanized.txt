@@ -1,0 +1,2226 @@
+1
+Megahorn
+Megapon
+2
+Attack Order
+Gonggyeok Jiryeong
+3
+Bug Buzz
+Beolle-yi Yadanbeopseok
+4
+First Impression
+Mannajamaja
+5
+Pollen Puff
+Kkotgaru Gyeongdan
+6
+Leech Life
+Heuphyeol
+7
+Lunge
+Deombyeodeulgi
+8
+X-Scissor
+Scissor Cross
+9
+Signal Beam
+Signal Beam
+10
+U-turn
+U-turn
+11
+Steamroller
+Hard Roller
+12
+Bug Bite
+Beolle Meok'eum
+13
+Silver Wind
+Eunbit Baram
+14
+Fell Stinger
+Majimak'il-chim
+15
+Struggle Bug
+Bulrae-eui Jauhang
+16
+Fury Cutter
+Yeonsok Jareugi
+17
+Pin Missile
+Bineul Missile
+18
+Twineedle
+Double Needle
+19
+Infestation
+Eonggyeobutgi
+20
+Defend Order
+Bang'eo Jiryeong
+21
+Heal Order
+Hoebok Jiryeong
+22
+Powder
+Bunjin
+23
+Quiver Dance
+Nabi-chum
+24
+Rage Powder
+Bunno Garu
+25
+Spider Web
+Geomijip
+26
+Sticky Web
+Kkeunjeok-kkeunjeok Net
+27
+String Shot
+Silppumgi
+28
+Tail Glow
+Banditbul
+29
+Skitter Smack
+Eomseuphaneun Ilgyeok
+30
+Hyperspace Fury
+Daleunchawon Rush
+31
+Foul Play
+Sog-imsu
+32
+Darkest Lariat
+DD Lariat
+33
+Night Daze
+Night Burst
+34
+Crunch
+Kkaemul'eobusugi
+35
+Dark Pulse
+Ak-yi Padong
+36
+Throat Chop
+Jiok Jjileugi
+37
+Night Slash
+Kkamjjakbegi
+38
+Sucker Punch
+Giseup
+39
+Knock Off
+Takchyeoseo Tteolgugi
+40
+Assurance
+Seungbu Gutigi
+41
+Bite
+Mulgi
+42
+Brutal Swing
+Sechage Hwiduleugi
+43
+Feint Attack
+Sogyeo Ttaerigi
+44
+Thief
+Dodukjil
+45
+Snarl
+Bark Out
+46
+Payback
+Bobok
+47
+Pursuit
+Ttaragattaerigi
+48
+Beat Up
+Jipdan Guta
+49
+Fling
+Naedeonjigi
+50
+Power Trip
+Gieo-oreugi
+51
+Punishment
+Honnaegi
+52
+Dark Void
+Dark Hole
+53
+Embargo
+Geumje
+54
+Fake Tears
+Geojit Ul'eum
+55
+Flatter
+Buchugigi
+56
+Hone Claws
+Sontopgalgi
+57
+Memento
+Chueok-yi Seonmul
+58
+Nasty Plot
+Nappeun Eummo
+59
+Parting Shot
+Makmal'naebaetgi
+60
+Quash
+Sunseo Mirugi
+61
+Snatch
+Garochaem
+62
+Switcheroo
+Bakkweochigi
+63
+Taunt
+Dobal
+64
+Topsy-Turvy
+Dwijib'eoeopgi
+65
+Torment
+Teujip
+66
+Jaw Lock
+Mulgobeotigi
+67
+False Surrender
+Sajoeuijjireugi
+68
+Obstruct
+Blocking
+69
+Wicked Blow
+Amheuk Gangta
+70
+Lash Out
+Bunpuri
+71
+Fiery Wrath
+Taoreuneun Bunno
+72
+Roar of Time
+Sigan-yi Pohyo
+73
+Draco Meteor
+Yong Seonggun
+74
+Outrage
+Yeokrin
+75
+Clanging Scales
+Scale Noise
+76
+Core Enforcer
+Core Punisher
+77
+Dragon Rush
+Dragon Dive
+78
+Spacial Rend
+Gonggan Jeoldan
+79
+Dragon Hammer
+Dragon Hammer
+80
+Dragon Pulse
+Yong-yi Padong
+81
+Dragon Claw
+Dragon Claw
+82
+Dragon Breath
+Yong-ui Sumgyeol
+83
+Dragon Tail
+Dragon Tail
+84
+Dual Chop
+Double Chop
+85
+Twister
+Hoe'ori
+86
+Dragon Rage
+Yong-yi Bunno
+87
+Dragon Dance
+Yong-yi Chum
+88
+Breaking Swipe
+Wide Breaker
+89
+Dragon Darts
+Dragon Arrow
+90
+Dynamax Cannon
+Daimax Po
+91
+Eternabeam
+Muhandaibeam
+92
+Clangorous Soul
+Soul Beat
+93
+Scale Shot
+Scale Shot
+94
+Dragon Energy
+Dragon Energy
+95
+Bolt Strike
+Nyaegyuk
+96
+Volt Tackle
+Volt Tackle
+97
+Zap Cannon
+Jeonjapo
+98
+Thunder
+Beongae
+99
+Fusion Bolt
+Cross Thunder
+100
+Plasma Fists
+Plasma Fist
+101
+Thunderbolt
+Sipman Volt
+102
+Wild Charge
+Wild Bolt
+103
+Discharge
+Bangjeon
+104
+Zing Zap
+Jjiriri Ttakkeumttakkeum
+105
+Thunder Punch
+Beongae Punch
+106
+Volt Switch
+Volt Change
+107
+Parabolic Charge
+Parabola Charge
+108
+Spark
+Spark
+109
+Thunder Fang
+Beongae Eomni
+110
+Shock Wave
+Jeongyeokpa
+111
+Electroweb
+Electric Net
+112
+Charge Beam
+Charge Beam
+113
+Thunder Shock
+Jeongi Shock
+114
+Nuzzle
+Bolbubibubi
+115
+Electro Ball
+Electric Ball
+116
+Charge
+Chungjeon
+117
+Eerie Impulse
+Goejeonpa
+118
+Electric Terrain
+Electric Field
+119
+Electrify
+Songjeon
+120
+Ion Deluge
+Plasma Shower
+121
+Magnet Rise
+Jeonja Buyu
+122
+Magnetic Flux
+Jagijang Jojak
+123
+Thunder Wave
+Jeongi Jaseokpa
+124
+Overdrive
+Overdrive
+125
+Aura Wheel
+Aura Wheel
+126
+Bolt Beak
+Jeongyeok Buri
+127
+Rising Voltage
+Rising Volt
+128
+Thunder Cage
+Thunder Prison
+129
+Light of Ruin
+Pamyeol'uibich
+130
+Fleur Cannon
+Fleur Cannon
+131
+Moonblast
+Moon Force
+132
+Play Rough
+Chigeungeorigi
+133
+Dazzling Gleam
+Magical Shine
+134
+Draining Kiss
+Drain Kiss
+135
+Disarming Voice
+Charming Voice
+136
+Fairy Wind
+Yojeong-yi Baram
+137
+Aromatic Mist
+Aroma Mist
+138
+Baby-Doll Eyes
+Chorongchorong Nundongja
+139
+Charm
+Aegyo Burigi
+140
+Crafty Shield
+Trick Guard
+141
+Fairy Lock
+Fairy Lock
+142
+Floral Healing
+Flower Heal
+143
+Flower Shield
+Flower Guard
+144
+Geomancy
+Geocontrol
+145
+Misty Terrain
+Mist Field
+146
+Moonlight
+Dal-ui Bulbit
+147
+Nature's Madness
+Jayeon-ui Bunno
+148
+Sweet Kiss
+Cheonsa-ui Kiss
+149
+Spirit Break
+Soul Crash
+150
+Decorate
+Decoration
+151
+Misty Explosion
+Mist Burst
+152
+Strange Steam
+Hweondeo Steam
+153
+Focus Punch
+Himkkeot Punch
+154
+High Jump Kick
+Mureupchagi
+155
+Close Combat
+In-Fight
+156
+Focus Blast
+Gihap Guseul
+157
+Superpower
+Eomcheongnan Him
+158
+Cross Chop
+Cross Chop
+159
+Dynamic Punch
+Pokbal Punch
+160
+Flying Press
+Flying Press
+161
+Hammer Arm
+Arm Hammer
+162
+Jump Kick
+Jump Kick
+163
+Sacred Sword
+Seongseureo-un Kal
+164
+Secret Sword
+Sinbi-yi Kal
+165
+Sky Uppercut
+Sky Upper
+166
+Aura Sphere
+Padongtan
+167
+Submission
+Jiok-yi Bakwi
+168
+Brick Break
+Kkaeteurida
+169
+Drain Punch
+Drain Punch
+170
+Vital Throw
+Bat'a Deonjigi
+171
+Wake-Up Slap
+Jamkkae'um Ppyamchigi
+172
+Low Sweep
+Low Kick
+173
+Circle Throw
+Baedae Duichigi
+174
+Force Palm
+Balgyeong
+175
+Revenge
+Revenge
+176
+Rolling Kick
+Dollyeo Chagi
+177
+Storm Throw
+Ubua Hoorigi
+178
+Karate Chop
+Taegweon Dangsu
+179
+Mach Punch
+Mach Punch
+180
+Power-Up Punch
+Glow Punch
+181
+Rock Smash
+Bawi Kkaegi
+182
+Vacuum Wave
+Jin-gong Pa
+183
+Double Kick
+Dubeonchigi
+184
+Arm Thrust
+Sonbadak Chigi
+185
+Triple Kick
+Triple Kick
+186
+Counter
+Counter
+187
+Final Gambit
+Moksum Geolgi
+188
+Low Kick
+Andarigeolgi
+189
+Reversal
+Gisa Hoesaeng
+190
+Seismic Toss
+Jigu Deonjigi
+191
+Bulk Up
+Build-Up
+192
+Detect
+Panbyeol
+193
+Mat Block
+Marutbadaksewomaggi
+194
+Quick Guard
+First Guard
+195
+Octolock
+Muneoguthigi
+196
+Meteor Assault
+Star Assault
+197
+No Retreat
+Baesu Uijin
+198
+Coaching
+Coaching
+199
+Body Press
+Body Press
+200
+Thunderous Kick
+Cheondung Chagi
+201
+V-create
+V Generate
+202
+Blast Burn
+Blast Burn
+203
+Eruption
+Bunhwa
+204
+Mind Blown
+Kkamjjak Head
+205
+Shell Trap
+Trap Shell
+206
+Blue Flare
+Pureun Bulkkot
+207
+Burn Up
+Bulsareugi
+208
+Overheat
+Overheat
+209
+Flare Blitz
+Flare Drive
+210
+Fire Blast
+Bul Daemunja
+211
+Fusion Flare
+Cross Flame
+212
+Inferno
+Yeon-ok
+213
+Magma Storm
+Magma Storm
+214
+Sacred Fire
+Seongseureoun Bulkkot
+215
+Searing Shot
+Hwayeomtan
+216
+Heat Wave
+Yeolpung
+217
+Flamethrower
+Hwayeom Bangsa
+218
+Blaze Kick
+Blaze Kick
+219
+Fiery Dance
+Bulkkotchum
+220
+Fire Lash
+Bulkkot Chaejjik
+221
+Fire Pledge
+Bulkkot-ui Maengse
+222
+Lava Plume
+Bun'yeon
+223
+Fire Punch
+Bulkkot Punch
+224
+Mystical Fire
+Magical Flame
+225
+Flame Burst
+Bulkot Twigigi
+226
+Fire Fang
+Bulkkot Eomni
+227
+Flame Wheel
+Hwayeom Jadongcha
+228
+Incinerate
+Bultaeoogi
+229
+Flame Charge
+Nitro Charge
+230
+Ember
+Bulkkot Serye
+231
+Fire Spin
+Hoe-ori Bulkkot
+232
+Heat Crash
+Heat Stamp
+233
+Sunny Day
+Kwaecheong
+234
+Will-O-Wisp
+Dokkaebi Bul
+235
+Pyro Ball
+Hwayam Ball
+236
+Burning Jealousy
+Jiltu-ui Bulkkot
+237
+Sky Attack
+Bul Sae
+238
+Brave Bird
+Brave Bird
+239
+Dragon Ascent
+Hwaryong Jeomjeong
+240
+Hurricane
+Pokpung
+241
+Aeroblast
+Aeroblast
+242
+Beak Blast
+Buri Cannon
+243
+Fly
+Gongjung Nalgi
+244
+Bounce
+Ttwieooreuda
+245
+Drill Peck
+Hoejeon Buri
+246
+Oblivion Wing
+Death Wing
+247
+Air Slash
+Air Slash
+248
+Chatter
+Suda
+249
+Aerial Ace
+Jebi Banhwan
+250
+Air Cutter
+Air Cutter
+251
+Pluck
+Jjoadaegi
+252
+Sky Drop
+Free Fall
+253
+Wing Attack
+Nalgae Chigi
+254
+Acrobatics
+Acrobat
+255
+Gust
+Baram Il'eukigi
+256
+Peck
+Jjogi
+257
+Defog
+Angaejegeo
+258
+Feather Dance
+Git'teol Dance
+259
+Mirror Move
+Ttarahagi
+260
+Roost
+Nalgae Swigi
+261
+Tailwind
+Sunpung
+262
+Dual Wingbeat
+Double Wing
+263
+Shadow Force
+Shadow Dive
+264
+Moongeist Beam
+Shadow Ray
+265
+Phantom Force
+Ghost Dive
+266
+Spectral Thief
+Shadow Steal
+267
+Shadow Bone
+Shadow Bone
+268
+Shadow Ball
+Shadow Ball
+269
+Spirit Shackle
+Geurimja Kkwemaegi
+270
+Shadow Claw
+Shadow Claw
+271
+Hex
+Byeongsang Cheom Byeong
+272
+Ominous Wind
+Goesanghan Baram
+273
+Shadow Punch
+Shadow Punch
+274
+Shadow Sneak
+Yaseup
+275
+Astonish
+Nollaekigi
+276
+Lick
+Hatgi
+277
+Night Shade
+Night Head
+278
+Confuse Ray
+Isanghan Bit
+279
+Curse
+Jeoju
+280
+Destiny Bond
+Gil Dongmu
+281
+Grudge
+Wonnyeom
+282
+Nightmare
+Akmong
+283
+Spite
+Weonhan
+284
+Trick-or-Treat
+Halloween
+285
+Poltergeist
+Poltergeist
+286
+Astral Barrage
+Astral Bit
+287
+Frenzy Plant
+Hard Plant
+288
+Leaf Storm
+Leaf Storm
+289
+Solar Blade
+Solar Blade
+290
+Petal Dance
+Kkoch'ip Dance
+291
+Power Whip
+Power Whip
+292
+Seed Flare
+Seed Flare
+293
+Solar Beam
+Solar Beam
+294
+Wood Hammer
+Wood Hammer
+295
+Energy Ball
+Energy Ball
+296
+Leaf Blade
+Leaf Blade
+297
+Petal Blizzard
+Kkotbora
+298
+Grass Pledge
+Pul-ui Maengse
+299
+Seed Bomb
+Ssi Poktan
+300
+Giga Drain
+Giga Drain
+301
+Horn Leech
+Wood Horn
+302
+Trop Kick
+Tropical Kick
+303
+Leaf Tornado
+Grass Mixer
+304
+Magical Leaf
+Magical Leaf
+305
+Needle Arm
+Bineul Pal
+306
+Razor Leaf
+Ipnal Gareugi
+307
+Vine Whip
+Deonggul Chaejjik
+308
+Leafage
+Namusip
+309
+Mega Drain
+Mega Drain
+310
+Bullet Seed
+Gigwanchong
+311
+Absorb
+Heubsu
+312
+Grass Knot
+Pul Mokki
+313
+Aromatherapy
+Aromatherapy
+314
+Cotton Guard
+Cotton Guard
+315
+Cotton Spore
+Mokhwa Poja
+316
+Forest's Curse
+Sup-yi Jeoju
+317
+Grass Whistle
+Pul Piri
+318
+Grassy Terrain
+Grass Field
+319
+Ingrain
+Ppuri Bakgi
+320
+Leech Seed
+Ssi Ppurigi
+321
+Sleep Powder
+Sumyeon Garu
+322
+Spiky Shield
+Needle Guard
+323
+Spore
+Beoseot Poja
+324
+Strength Sap
+Him Heubsu
+325
+Stun Spore
+Jeori Garu
+326
+Synthesis
+Gwanghapseong
+327
+Worry Seed
+Gomin Ssi
+328
+Branch Poke
+Gaji Jjireugi
+329
+Drum Beating
+Drum Attack
+330
+Grav Apple
+G Uihim
+331
+Apple Acid
+Sagwa San
+332
+Snap Trap
+Jipgedeot
+333
+Grassy Glide
+Grass Slider
+334
+Jungle Healing
+Jungle Heal
+335
+Precipice Blades
+Dan'ae-ui Kal
+336
+Earthquake
+Jijin
+337
+High Horsepower
+Sipman Maryeok
+338
+Earth Power
+Daeji-yi Him
+339
+Land's Wrath
+Ground Force
+340
+Thousand Arrows
+Thousand Arrow
+341
+Thousand Waves
+Thousand Wave
+342
+Dig
+Gumeong Pagi
+343
+Drill Run
+Drill Liner
+344
+Stomping Tantrum
+Bunhamui Balgureugi
+345
+Bone Club
+Ppyeo Dagwichigi
+346
+Mud Bomb
+Jinheulk Poktan
+347
+Bulldoze
+Ttang Goreugi
+348
+Mud Shot
+Mud Shot
+349
+Bonemerang
+Ppyeodagwi Boomerang
+350
+Sand Tomb
+Morae Jiok
+351
+Bone Rush
+Bone Rush
+352
+Mud-Slap
+Jinheuk Ppurigi
+353
+Fissure
+Ttang Gareugi
+354
+Magnitude
+Magnitude
+355
+Mud Sport
+Heulk Nol-i
+356
+Rototiller
+Ilgugi
+357
+Sand Attack
+Morae Ppurigi
+358
+Shore Up
+Morae Moeugi
+359
+Spikes
+Apjeong Ppurigi
+360
+Scorching Sands
+Yeolsa-ui Daeji
+361
+Freeze Shock
+Freeze Volt
+362
+Ice Burn
+Cold Flare
+363
+Blizzard
+Nunbora
+364
+Ice Hammer
+Ice Hammer
+365
+Ice Beam
+Naengdong Beam
+366
+Icicle Crash
+Godureum Tteolgugi
+367
+Ice Punch
+Naengdong Punch
+368
+Freeze-Dry
+Freeze Dry
+369
+Aurora Beam
+Aurora Beam
+370
+Glaciate
+Eolda-segye
+371
+Ice Fang
+Eol'eum Eomni
+372
+Avalanche
+Nun Satae
+373
+Frost Breath
+Eureum Soomgyul
+374
+Icy Wind
+Eolda Baram
+375
+Ice Shard
+Eol'eum Mungchi
+376
+Powder Snow
+Nun Ssaragi
+377
+Ice Ball
+Ice Ball
+378
+Icicle Spear
+Godoreum Chim
+379
+Sheer Cold
+Jeoldae Yeongdo
+380
+Aurora Veil
+Aurora Veil
+381
+Hail
+Ssaragi Nun
+382
+Haze
+Heuk Angae
+383
+Mist
+Hyin Angae
+384
+Triple Axel
+Triple Axel
+385
+Glacial Lance
+Blizzard Lance
+386
+Explosion
+Dae Pokbal
+387
+Self-Destruct
+Japok
+388
+Giga Impact
+Giga Impact
+389
+Hyper Beam
+Pagoe Gwangseon
+390
+Boomburst
+Pok'eumpa
+391
+Last Resort
+Dwottasseugi
+392
+Skull Bash
+Rocket Bakchigi
+393
+Double-Edge
+Ipansapan Tackle
+394
+Head Charge
+Afro Break
+395
+Mega Kick
+Megaton Kick
+396
+Techno Blast
+Techno Buster
+397
+Thrash
+Nandong Burigi
+398
+Egg Bomb
+Al Poktan
+399
+Judgment
+Simpan-yi Mungchi
+400
+Hyper Voice
+Hyper Voice
+401
+Multi-Attack
+Multi Attack
+402
+Revelation Dance
+Jamjae Dance
+403
+Rock Climb
+Rock Climb
+404
+Take Down
+Doljin
+405
+Uproar
+Soranpigi
+406
+Body Slam
+Nureugi
+407
+Extreme Speed
+Sinsok
+408
+Hyper Fang
+Pilsal Apni
+409
+Mega Punch
+Megaton Punch
+410
+Razor Wind
+Kalbaram
+411
+Slam
+Himkkeotchigi
+412
+Strength
+Goeryeok
+413
+Tri Attack
+Tri Attack
+414
+Crush Claw
+Break Claw
+415
+Relic Song
+Yennorae
+416
+Chip Away
+Yageum-yageum
+417
+Dizzy Punch
+Jaemjaem Punch
+418
+Facade
+Gaekgi
+419
+Headbutt
+Bakchigi
+420
+Retaliate
+Wonsu Gapgi
+421
+Secret Power
+Bimil-yi Him
+422
+Slash
+Beeo Gareugi
+423
+Smelling Salts
+Jeongsin Charigi
+424
+Horn Attack
+Ppul Jjireugi
+425
+Stomp
+Jitbalgi
+426
+Covet
+Tamnaeda
+427
+Hidden Power
+Jamjae Power
+428
+Round
+Dolrimnorae
+429
+Swift
+Speed Star
+430
+Vise Grip
+Jjipgi
+431
+Cut
+Pulbegi
+432
+Snore
+Kogolgi
+433
+Struggle
+Balbeodung
+434
+Weather Ball
+Weather Ball
+435
+Echoed Voice
+Echo Voice
+436
+Fake Out
+Sok'ida
+437
+False Swipe
+Kaldeungchigi
+438
+Hold Back
+Jeokdanghisonbwajugi
+439
+Pay Day
+Goyang'i Donbatgi
+440
+Pound
+Makchigi
+441
+Quick Attack
+Jeongwangseokwa
+442
+Scratch
+Halkwigi
+443
+Tackle
+Momtong Bakchigi
+444
+Double Hit
+Double Attack
+445
+Feint
+Feint
+446
+Tail Slap
+Sweep Ppyamchigi
+447
+Rage
+Bunno
+448
+Rapid Spin
+Gosok Spin
+449
+Spike Cannon
+Gasi Daepo
+450
+Comet Punch
+Yeonsok Punch
+451
+Fury Swipes
+Magu Halkwigi
+452
+Barrage
+Guseul Deonjigi
+453
+Bind
+Joigi
+454
+Double Slap
+Yeonsok Ppyamchigi
+455
+Fury Attack
+Magu Jjireugi
+456
+Wrap
+Gimbapmal'i
+457
+Constrict
+Hwigamgi
+458
+Bide
+Chamgi
+459
+Crush Grip
+Moksabal
+460
+Endeavor
+Jukgisalgi
+461
+Flail
+Badungbadung
+462
+Frustration
+Hwapul'i
+463
+Guillotine
+Gawi Jareugi
+464
+Horn Drill
+Ppul Drill
+465
+Natural Gift
+Jayeon-yi Eunhae
+466
+Present
+Present
+467
+Return
+Eunhye Gapgi
+468
+Sonic Boom
+Sonic Boom
+469
+Spit Up
+Tohaenaegi
+470
+Super Fang
+Bunno-yi Apni
+471
+Trump Card
+Majimak Sudan
+472
+Wring Out
+Jwieojjagi
+473
+Acupressure
+Gyeonghyeol Jjireugi
+474
+After You
+Dangsin Meonjeo
+475
+Assist
+Josu
+476
+Attract
+Herongherong
+477
+Baton Pass
+Baton Touch
+478
+Belly Drum
+Baebuk
+479
+Bestow
+Gift Pass
+480
+Block
+Block
+481
+Camouflage
+Bohosaek
+482
+Captivate
+Yuhok
+483
+Celebrate
+Chukha
+484
+Confide
+Bimil'iyagi
+485
+Conversion
+Texture
+486
+Conversion 2
+Texture 2
+487
+Copycat
+Hyungnaejaeng'i
+488
+Defense Curl
+Ungkeurigi
+489
+Disable
+Saseul Mukgi
+490
+Double Team
+Geurimja Bunsin
+491
+Encore
+Encore
+492
+Endure
+Beotigi
+493
+Entrainment
+Dongryo Mandulgi
+494
+Flash
+Flash
+495
+Focus Energy
+Gichungjeon
+496
+Follow Me
+Nalttareum
+497
+Foresight
+Kkwettul'eobogi
+498
+Glare
+Baemnunchori
+499
+Growl
+Ur-eum Sori
+500
+Growth
+Seongjang
+501
+Happy Hour
+Happy Time
+502
+Harden
+Dandanhaejigi
+503
+Heal Bell
+Chiryo Bang'ul
+504
+Helping Hand
+Doumi
+505
+Hold Hands
+Son-e-son Japgi
+506
+Howl
+Meolli Jit'eum
+507
+Laser Focus
+Yeminhaejigi
+508
+Leer
+Jjaeryeobogi
+509
+Lock-On
+Lock On
+510
+Lovely Kiss
+Akma-yi Kiss
+511
+Lucky Chant
+Jusul
+512
+Me First
+Seonchwi
+513
+Mean Look
+Geom-eun Nunbit
+514
+Metronome
+Songarak Heundeulgi
+515
+Milk Drink
+Uyu Masigi
+516
+Mimic
+Hyungnaenaegi
+517
+Mind Reader
+Ma'eum-yi Nun
+518
+Minimize
+Jak'ajigi
+519
+Morning Sun
+Achim Haetsal
+520
+Nature Power
+Jayeon-yi Him
+521
+Noble Roar
+Bureujijgi
+522
+Odor Sleuth
+Naemsae Gubyeol
+523
+Pain Split
+Apeum Nanugi
+524
+Perish Song
+Myeolmang-yi Norae
+525
+Play Nice
+Chinhaejigi
+526
+Protect
+Bang'eo
+527
+Psych Up
+Jagi Amsi
+528
+Recover
+HP Hoebok
+529
+Recycle
+Recycle
+530
+Reflect Type
+Mirror Type
+531
+Refresh
+Refresh
+532
+Roar
+Ulbujitki
+533
+Safeguard
+Sinbiui Bujeok
+534
+Scary Face
+Geomnaneun Eolgul
+535
+Screech
+Salh'eun Sori
+536
+Sharpen
+Gakjigi
+537
+Shell Smash
+Khupjilkhegi
+538
+Simple Beam
+Simple Beam
+539
+Sing
+Norae Hagi
+540
+Sketch
+Sketch
+541
+Slack Off
+Taemanham
+542
+Sleep Talk
+Jamkkodae
+543
+Smokescreen
+Yeonmak
+544
+Soft-Boiled
+Alnaki
+545
+Splash
+Twieo Oreugi
+546
+Spotlight
+Spotlight
+547
+Stockpile
+Bichukhagi
+548
+Substitute
+Daetachuldong
+549
+Supersonic
+Cho-Eumpa
+550
+Swagger
+Ppomnaegi
+551
+Swallow
+Kkulkkeok
+552
+Sweet Scent
+Dalkomhan Hyanggi
+553
+Swords Dance
+Kalchum
+554
+Tail Whip
+Kkori Heundeulgi
+555
+Tearful Look
+Nunmul Geureong-geureong
+556
+Teeter Dance
+Heundeulheundeul Dance
+557
+Tickle
+Ganjireugi
+558
+Transform
+Byeonsin
+559
+Whirlwind
+Nallyeobeorigi
+560
+Wish
+Hyimang Sahang
+561
+Work Up
+Bunbal
+562
+Yawn
+Hapum
+563
+Court Change
+Court Change
+564
+Stuff Cheeks
+Bolgateuk Natgi
+565
+Teatime
+Dagwahoe
+566
+Terrain Pulse
+Daeji-ui Padong
+567
+Belch
+Teurim
+568
+Gunk Shot
+Dust Shoot
+569
+Sludge Wave
+Omul Wave
+570
+Sludge Bomb
+Omul Poktan
+571
+Poison Jab
+Dok Jjareugi
+572
+Cross Poison
+Cross Poison
+573
+Sludge
+Omul Gonggyeok
+574
+Venoshock
+Venom Shock
+575
+Clear Smog
+Clear Smog
+576
+Poison Fang
+Dok Eomni
+577
+Poison Tail
+Poison Tail
+578
+Acid
+Yonghae Aek
+579
+Acid Spray
+Acid Bomb
+580
+Smog
+Smog
+581
+Poison Sting
+Dokchim
+582
+Acid Armor
+Nokgi
+583
+Baneful Bunker
+Tochka
+584
+Coil
+Ttwariteulgi
+585
+Gastro Acid
+Wiaek
+586
+Poison Gas
+Dok Gas
+587
+Poison Powder
+Dok Garu
+588
+Purify
+Jeonghwa
+589
+Toxic
+Maengdok
+590
+Toxic Spikes
+Dok Apjeong
+591
+Toxic Thread
+Doksil
+592
+Venom Drench
+Venom Trap
+593
+Corrosive Gas
+Busik Gas
+594
+Shell Side Arm
+Shell Arms
+595
+Prismatic Laser
+Prism Laser
+596
+Psycho Boost
+Psycho Boost
+597
+Future Sight
+Mirae Yeoji
+598
+Synchronoise
+Synchronoise
+599
+Dream Eater
+Kkum Meokgi
+600
+Photon Geyser
+Photon Geyser
+601
+Psystrike
+Psycho Break
+602
+Psychic
+Psychokinesis
+603
+Psychic Fangs
+Psycho Fang
+604
+Extrasensory
+Sintongryeok
+605
+Hyperspace Hole
+Daleunchawon Hole
+606
+Psyshock
+Psycho Shock
+607
+Zen Headbutt
+Sanyeom-ui Bakchigi
+608
+Luster Purge
+Luster Purge
+609
+Mist Ball
+Mist Ball
+610
+Psycho Cut
+Psycho Cutter
+611
+Psybeam
+Hwansang Beam
+612
+Heart Stamp
+Heart Stamp
+613
+Confusion
+Yeomdongryeok
+614
+Stored Power
+Assist Power
+615
+Mirror Coat
+Mirror Coat
+616
+Psywave
+Psycho Wave
+617
+Agility
+Gosok Idong
+618
+Ally Switch
+Side Change
+619
+Amnesia
+Manggaksul
+620
+Barrier
+Barrier
+621
+Calm Mind
+Myeongsong
+622
+Cosmic Power
+Cosmic Power
+623
+Gravity
+Jungryeok
+624
+Guard Split
+Guard Share
+625
+Guard Swap
+Guard Swap
+626
+Heal Block
+Hoebok Bong'in
+627
+Heal Pulse
+Chiyu Padong
+628
+Healing Wish
+Chiyu Soweon
+629
+Heart Swap
+Heart Swap
+630
+Hypnosis
+Choemyeon Sul
+631
+Imprison
+Bong'in
+632
+Instruct
+Jihwi
+633
+Kinesis
+Sutgarak Hwigi
+634
+Light Screen
+Bit-yi Jangmak
+635
+Lunar Dance
+Choseungdal Chum
+636
+Magic Coat
+Magic Coat
+637
+Magic Room
+Magic Room
+638
+Meditate
+Yoga Pose
+639
+Miracle Eye
+Miracle Eye
+640
+Power Split
+Power Share
+641
+Power Swap
+Power Swap
+642
+Power Trick
+Power Trick
+643
+Psychic Terrain
+Psycho Field
+644
+Psycho Shift
+Psycho Shift
+645
+Reflect
+Reflector
+646
+Rest
+Jamjagi
+647
+Role Play
+Yeokhal
+648
+Skill Swap
+Skill Swap
+649
+Speed Swap
+Speed Swap
+650
+Telekinesis
+Telekinesis
+651
+Teleport
+Sungan Idong
+652
+Trick
+Trick
+653
+Trick Room
+Trick Room
+654
+Wonder Room
+Wonder Room
+655
+Magic Powder
+Mabeop Garu
+656
+Expanding Force
+Wide Force
+657
+Eerie Spell
+Seomtteukhan Jumun
+658
+Freezing Glare
+Eoreobunneun Siseon
+659
+Head Smash
+Yangnal Bakchigi
+660
+Rock Wrecker
+Amseok Po
+661
+Diamond Storm
+Dia Storm
+662
+Stone Edge
+Stone Edge
+663
+Power Gem
+Power Gem
+664
+Rock Slide
+Stone Shower
+665
+Ancient Power
+Wonsi-ui Him
+666
+Rock Tomb
+Amseok Bong'in
+667
+Rock Throw
+Dol Tteolgugi
+668
+Smack Down
+Tteol-eo Tteurigi
+669
+Accelerock
+Accel Rock
+670
+Rollout
+Gureugi
+671
+Rock Blast
+Rock Blast
+672
+Rock Polish
+Rock Cut
+673
+Sandstorm
+Morae Baram
+674
+Stealth Rock
+Stealth Rock
+675
+Wide Guard
+Wide Guard
+676
+Tar Shot
+Tar Shot
+677
+Meteor Beam
+Meteor Beam
+678
+Doom Desire
+Pamyeol-ui Soweon
+679
+Iron Tail
+Iron Tail
+680
+Sunsteel Strike
+Meteor Drive
+681
+Meteor Mash
+Comet Punch
+682
+Anchor Shot
+Anchor Shot
+683
+Flash Cannon
+Luster Cannon
+684
+Iron Head
+Iron Head
+685
+Smart Strike
+Smart Horn
+686
+Steel Wing
+Gangcheol Nalgae
+687
+Double Iron Bash
+Double Puncher
+688
+Mirror Shot
+Mirror Shot
+689
+Magnet Bomb
+Magnet Bomb
+690
+Gear Grind
+Gear Saucer
+691
+Metal Claw
+Metal Claw
+692
+Bullet Punch
+Bullet Punch
+693
+Gyro Ball
+Gyroball
+694
+Heavy Slam
+Heavy Bomber
+695
+Metal Burst
+Metal Burst
+696
+Autotomize
+Body Purge
+697
+Gear Up
+Assist Gear
+698
+Iron Defense
+Cheolbyeok
+699
+King's Shield
+King Shield
+700
+Metal Sound
+Geumsok Eum
+701
+Shift Gear
+Gear Change
+702
+Behemoth Bash
+Gasa Teon
+703
+Behemoth Blade
+Gasa Cham
+704
+Steel Roller
+Iron Roller
+705
+Steel Beam
+Cheolje Gwangseon
+706
+Hydro Cannon
+Hydrocannon
+707
+Water Spout
+Haesu Spouting
+708
+Hydro Pump
+Hydro Pump
+709
+Origin Pulse
+Geun'won-ui Padong
+710
+Steam Eruption
+Steam Burst
+711
+Crabhammer
+Jjipge Hammer
+712
+Aqua Tail
+Aqua Tail
+713
+Muddy Water
+Taklyu
+714
+Sparkling Aria
+Mulgeopum Aria
+715
+Surf
+Padotagi
+716
+Liquidation
+Aqua Break
+717
+Dive
+Diving
+718
+Scald
+Yeoul-tang
+719
+Water Pledge
+Mul-ui Maengse
+720
+Waterfall
+Pokpo Oreugi
+721
+Razor Shell
+Shell Blade
+722
+Brine
+Sogeummul
+723
+Bubble Beam
+Geopum Gwangseon
+724
+Octazooka
+Daepomuno Po
+725
+Water Pulse
+Mul-ui Padong
+726
+Aqua Jet
+Aqua Jet
+727
+Bubble
+Geopum
+728
+Water Gun
+Mul Daepo
+729
+Clamp
+Kkeopjil Kkiugi
+730
+Whirlpool
+Bada Hoe'ori
+731
+Water Shuriken
+Mul Surigeom
+732
+Aqua Ring
+Aqua Ring
+733
+Rain Dance
+Bibaragi
+734
+Soak
+Mulbutgi
+735
+Water Sport
+Mul Nol-i
+736
+Withdraw
+Kkeobjil-e Sumgi
+737
+Snipe Shot
+Noryeo Mathigi
+738
+Fishious Rend
+Agamimulgi
+739
+Life Dew
+Saengmyeonguimulbang-ul
+740
+Surging Strikes
+Suryu Yeonta
+741
+Flip Turn
+Quick Turn
+742
+Hidden Power
+Jamjae Power

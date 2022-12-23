@@ -1,0 +1,2226 @@
+1
+Megahorn
+Megacorno
+2
+Attack Order
+Comandourto
+3
+Bug Buzz
+Ronzio
+4
+First Impression
+Schermaglia
+5
+Pollen Puff
+Sferapolline
+6
+Leech Life
+Sanguisuga
+7
+Lunge
+Assalto
+8
+X-Scissor
+Forbice X
+9
+Signal Beam
+Segnoraggio
+10
+U-turn
+Retromarcia
+11
+Steamroller
+Rulloduro
+12
+Bug Bite
+Coleomorso
+13
+Silver Wind
+Ventargenteo
+14
+Fell Stinger
+Pungiglione
+15
+Struggle Bug
+Entomoblocco
+16
+Fury Cutter
+Tagliofuria
+17
+Pin Missile
+Missilspillo
+18
+Twineedle
+Doppio Ago
+19
+Infestation
+Assillo
+20
+Defend Order
+Comandoscudo
+21
+Heal Order
+Comandocura
+22
+Powder
+Pulviscoppio
+23
+Quiver Dance
+Eledanza
+24
+Rage Powder
+Polverabbia
+25
+Spider Web
+Ragnatela
+26
+Sticky Web
+Rete Vischiosa
+27
+String Shot
+Millebave
+28
+Tail Glow
+Codadiluce
+29
+Skitter Smack
+Strisciacolpo
+30
+Hyperspace Fury
+Urtodimensionale
+31
+Foul Play
+Ripicca
+32
+Darkest Lariat
+Braccioteso
+33
+Night Daze
+Urtoscuro
+34
+Crunch
+Sgranocchio
+35
+Dark Pulse
+Neropulsar
+36
+Throat Chop
+Colpo Infernale
+37
+Night Slash
+Nottesferza
+38
+Sucker Punch
+Sbigoattacco
+39
+Knock Off
+Privazione
+40
+Assurance
+Garanzia
+41
+Bite
+Morso
+42
+Brutal Swing
+Vorticolpo
+43
+Feint Attack
+Finta
+44
+Thief
+Furto
+45
+Snarl
+Urlorabbia
+46
+Payback
+Rivincita
+47
+Pursuit
+Inseguimento
+48
+Beat Up
+Picchiaduro
+49
+Fling
+Lancio
+50
+Power Trip
+Tracotanza
+51
+Punishment
+Punizione
+52
+Dark Void
+Vuototetro
+53
+Embargo
+Divieto
+54
+Fake Tears
+Falselacrime
+55
+Flatter
+Adulazione
+56
+Hone Claws
+Unghiaguzze
+57
+Memento
+Memento
+58
+Nasty Plot
+Congiura
+59
+Parting Shot
+Monito
+60
+Quash
+Spintone
+61
+Snatch
+Scippo
+62
+Switcheroo
+Rapidscambio
+63
+Taunt
+Provocazione
+64
+Topsy-Turvy
+Sottosopra
+65
+Torment
+Attaccalite
+66
+Jaw Lock
+Morostretto
+67
+False Surrender
+Supplicolpo
+68
+Obstruct
+Sbarramento
+69
+Wicked Blow
+Pugnotenebra
+70
+Lash Out
+Sfogarabbia
+71
+Fiery Wrath
+Furia Ardente
+72
+Roar of Time
+Fragortempo
+73
+Draco Meteor
+Dragobolide
+74
+Outrage
+Oltraggio
+75
+Clanging Scales
+Clamorsquame
+76
+Core Enforcer
+Nucleocastigo
+77
+Dragon Rush
+Dragofuria
+78
+Spacial Rend
+Fendispazio
+79
+Dragon Hammer
+Marteldrago
+80
+Dragon Pulse
+Dragopulsar
+81
+Dragon Claw
+Dragartigli
+82
+Dragon Breath
+Dragospiro
+83
+Dragon Tail
+Codadrago
+84
+Dual Chop
+Doppiocolpo
+85
+Twister
+Tornado
+86
+Dragon Rage
+Ira di Drago
+87
+Dragon Dance
+Dragodanza
+88
+Breaking Swipe
+Vastoimpatto
+89
+Dragon Darts
+Dragofrecce
+90
+Dynamax Cannon
+Cannone Dynamax
+91
+Eternabeam
+Raggio Infinito
+92
+Clangorous Soul
+Dracofonia
+93
+Scale Shot
+Squamacolpo
+94
+Dragon Energy
+Dragoenergia
+95
+Bolt Strike
+Lucesiluro
+96
+Volt Tackle
+Locomovolt
+97
+Zap Cannon
+Falcecannone
+98
+Thunder
+Tuono
+99
+Fusion Bolt
+Incrotuono
+100
+Plasma Fists
+Pugni Plasma
+101
+Thunderbolt
+Fulmine
+102
+Wild Charge
+Sprizzalampo
+103
+Discharge
+Scarica
+104
+Zing Zap
+Elettropizzico
+105
+Thunder Punch
+Tuonopugno
+106
+Volt Switch
+Invertivolt
+107
+Parabolic Charge
+Caricaparabola
+108
+Spark
+Scintilla
+109
+Thunder Fang
+Fulmindenti
+110
+Shock Wave
+Ondashock
+111
+Electroweb
+Elettrotela
+112
+Charge Beam
+Raggioscossa
+113
+Thunder Shock
+Tuonoshock
+114
+Nuzzle
+Elettrococcola
+115
+Electro Ball
+Energisfera
+116
+Charge
+Sottocarica
+117
+Eerie Impulse
+Elettromistero
+118
+Electric Terrain
+Campo Elettrico
+119
+Electrify
+Elettrocontagio
+120
+Ion Deluge
+Pioggiaplasma
+121
+Magnet Rise
+Magnetascesa
+122
+Magnetic Flux
+Controllo Polare
+123
+Thunder Wave
+Tuononda
+124
+Overdrive
+Overdrive
+125
+Aura Wheel
+Ruota d'Aura
+126
+Bolt Beak
+Beccoshock
+127
+Rising Voltage
+Elettroimpennata
+128
+Thunder Cage
+Elettrogabbia
+129
+Light of Ruin
+Luce Nefasta
+130
+Fleur Cannon
+Cannonfiore
+131
+Moonblast
+Forza Lunare
+132
+Play Rough
+Carineria
+133
+Dazzling Gleam
+Magibrillio
+134
+Draining Kiss
+Assorbibacio
+135
+Disarming Voice
+Incantavoce
+136
+Fairy Wind
+Vento di Fata
+137
+Aromatic Mist
+Nebularoma
+138
+Baby-Doll Eyes
+Occhioni Teneri
+139
+Charm
+Fascino
+140
+Crafty Shield
+Truccodifesa
+141
+Fairy Lock
+Blocco Fatato
+142
+Floral Healing
+Cura Floreale
+143
+Flower Shield
+Fiordifesa
+144
+Geomancy
+Geocontrollo
+145
+Misty Terrain
+Campo Nebbioso
+146
+Moonlight
+Lucelunare
+147
+Nature's Madness
+Ira della Natura
+148
+Sweet Kiss
+Dolcebacio
+149
+Spirit Break
+Frantumanima
+150
+Decorate
+Decorazione
+151
+Misty Explosion
+Nebbioscoppio
+152
+Strange Steam
+Vapore Incantato
+153
+Focus Punch
+Centripugno
+154
+High Jump Kick
+Calcinvolo
+155
+Close Combat
+Zuffa
+156
+Focus Blast
+Focalcolpo
+157
+Superpower
+Troppoforte
+158
+Cross Chop
+Incrocolpo
+159
+Dynamic Punch
+Dinamipugno
+160
+Flying Press
+Schiacciatuffo
+161
+Hammer Arm
+Martelpugno
+162
+Jump Kick
+Calciosalto
+163
+Sacred Sword
+Spadasolenne
+164
+Secret Sword
+Spadamistica
+165
+Sky Uppercut
+Stramontante
+166
+Aura Sphere
+Forzasfera
+167
+Submission
+Sottomissione
+168
+Brick Break
+Breccia
+169
+Drain Punch
+Assorbipugno
+170
+Vital Throw
+Vitaltiro
+171
+Wake-Up Slap
+Svegliopacca
+172
+Low Sweep
+Calciobasso
+173
+Circle Throw
+Ribaltiro
+174
+Force Palm
+Palmoforza
+175
+Revenge
+Vendetta
+176
+Rolling Kick
+Calciorullo
+177
+Storm Throw
+Tempestretta
+178
+Karate Chop
+Colpokarate
+179
+Mach Punch
+Pugnorapido
+180
+Power-Up Punch
+Crescipugno
+181
+Rock Smash
+Spaccaroccia
+182
+Vacuum Wave
+Vuotonda
+183
+Double Kick
+Doppiocalcio
+184
+Arm Thrust
+Sberletese
+185
+Triple Kick
+Triplocalcio
+186
+Counter
+Contrattacco
+187
+Final Gambit
+Azzardo
+188
+Low Kick
+Colpo Basso
+189
+Reversal
+Contropiede
+190
+Seismic Toss
+Movim. Sismico
+191
+Bulk Up
+Granfisico
+192
+Detect
+Individua
+193
+Mat Block
+Ribaltappeto
+194
+Quick Guard
+Anticipo
+195
+Octolock
+Tentacolock
+196
+Meteor Assault
+Sfolgorassalto
+197
+No Retreat
+Spalle al Muro
+198
+Coaching
+Coaching
+199
+Body Press
+Schiacciacorpo
+200
+Thunderous Kick
+Calcio Tonante
+201
+V-create
+Generatore V
+202
+Blast Burn
+Incendio
+203
+Eruption
+Eruzione
+204
+Mind Blown
+Sbalorditesta
+205
+Shell Trap
+Gusciotrappola
+206
+Blue Flare
+Fuocoblu
+207
+Burn Up
+Ultima Fiamma
+208
+Overheat
+Vampata
+209
+Flare Blitz
+Fuococarica
+210
+Fire Blast
+Fuocobomba
+211
+Fusion Flare
+Incrofiamma
+212
+Inferno
+Marchiatura
+213
+Magma Storm
+Magmaclisma
+214
+Sacred Fire
+Magifuoco
+215
+Searing Shot
+Sparafuoco
+216
+Heat Wave
+Ondacalda
+217
+Flamethrower
+Lanciafiamme
+218
+Blaze Kick
+Calciardente
+219
+Fiery Dance
+Voldifuoco
+220
+Fire Lash
+Frusta di Fuoco
+221
+Fire Pledge
+Fiammapatto
+222
+Lava Plume
+Lavasbuffo
+223
+Fire Punch
+Fuocopugno
+224
+Mystical Fire
+Magifiamma
+225
+Flame Burst
+Pirolancio
+226
+Fire Fang
+Rogodenti
+227
+Flame Wheel
+Ruotafuoco
+228
+Incinerate
+Bruciatutto
+229
+Flame Charge
+Nitrocarica
+230
+Ember
+Braciere
+231
+Fire Spin
+Turbofuoco
+232
+Heat Crash
+Marchiafuoco
+233
+Sunny Day
+Giornodisole
+234
+Will-O-Wisp
+Fuocofatuo
+235
+Pyro Ball
+Palla Infuocata
+236
+Burning Jealousy
+Fiamminvidia
+237
+Sky Attack
+Aeroattacco
+238
+Brave Bird
+Baldeali
+239
+Dragon Ascent
+Ascesa del Drago
+240
+Hurricane
+Tifone
+241
+Aeroblast
+Aerocolpo
+242
+Beak Blast
+Cannonbecco
+243
+Fly
+Volo
+244
+Bounce
+Rimbalzo
+245
+Drill Peck
+Perforbecco
+246
+Oblivion Wing
+Ali del Fato
+247
+Air Slash
+Eterelama
+248
+Chatter
+Schiamazzo
+249
+Aerial Ace
+Aeroassalto
+250
+Air Cutter
+Aerasoio
+251
+Pluck
+Spennata
+252
+Sky Drop
+Cadutalibera
+253
+Wing Attack
+Attacco d'Ala
+254
+Acrobatics
+Acrobazia
+255
+Gust
+Raffica
+256
+Peck
+Beccata
+257
+Defog
+Scacciabruma
+258
+Feather Dance
+Danzadipiume
+259
+Mirror Move
+Speculmossa
+260
+Roost
+Trespolo
+261
+Tailwind
+Ventoincoda
+262
+Dual Wingbeat
+Doppia Ala
+263
+Shadow Force
+Oscurotuffo
+264
+Moongeist Beam
+Raggio d'Ombra
+265
+Phantom Force
+Spettrotuffo
+266
+Spectral Thief
+Ombrafurto
+267
+Shadow Bone
+Ossotetro
+268
+Shadow Ball
+Palla Ombra
+269
+Spirit Shackle
+Cucitura d'Ombra
+270
+Shadow Claw
+Ombrartigli
+271
+Hex
+Sciagura
+272
+Ominous Wind
+Funestovento
+273
+Shadow Punch
+Pugnodombra
+274
+Shadow Sneak
+Furtivombra
+275
+Astonish
+Sgomento
+276
+Lick
+Leccata
+277
+Night Shade
+Ombra Notturna
+278
+Confuse Ray
+Stordiraggio
+279
+Curse
+Maledizione
+280
+Destiny Bond
+Destinobbligato
+281
+Grudge
+Rancore
+282
+Nightmare
+Incubo
+283
+Spite
+Dispetto
+284
+Trick-or-Treat
+Halloween
+285
+Poltergeist
+Poltergeist
+286
+Astral Barrage
+Schegge Astrali
+287
+Frenzy Plant
+Radicalbero
+288
+Leaf Storm
+Verdebufera
+289
+Solar Blade
+Lama Solare
+290
+Petal Dance
+Petalodanza
+291
+Power Whip
+Vigorcolpo
+292
+Seed Flare
+Infuriaseme
+293
+Solar Beam
+Solarraggio
+294
+Wood Hammer
+Mazzuolegno
+295
+Energy Ball
+Energipalla
+296
+Leaf Blade
+Fendifoglia
+297
+Petal Blizzard
+Fiortempesta
+298
+Grass Pledge
+Erbapatto
+299
+Seed Bomb
+Semebomba
+300
+Giga Drain
+Gigassorbimento
+301
+Horn Leech
+Legnicorno
+302
+Trop Kick
+Tropicalcio
+303
+Leaf Tornado
+Vorticerba
+304
+Magical Leaf
+Fogliamagica
+305
+Needle Arm
+Pugnospine
+306
+Razor Leaf
+Foglielama
+307
+Vine Whip
+Frustata
+308
+Leafage
+Fogliame
+309
+Mega Drain
+Megassorbimento
+310
+Bullet Seed
+Semitraglia
+311
+Absorb
+Assorbimento
+312
+Grass Knot
+Laccioerboso
+313
+Aromatherapy
+Aromaterapia
+314
+Cotton Guard
+Cotonscudo
+315
+Cotton Spore
+Cottonspora
+316
+Forest's Curse
+Schiacciatuffo
+317
+Grass Whistle
+Meloderba
+318
+Grassy Terrain
+Campo Erboso
+319
+Ingrain
+Radicamento
+320
+Leech Seed
+Parassiseme
+321
+Sleep Powder
+Sonnifero
+322
+Spiky Shield
+Agodifesa
+323
+Spore
+Spora
+324
+Strength Sap
+Assorbiforza
+325
+Stun Spore
+Paralizzante
+326
+Synthesis
+Sintesi
+327
+Worry Seed
+Affannoseme
+328
+Branch Poke
+Ramostoccata
+329
+Drum Beating
+Tamburattacco
+330
+Grav Apple
+Forza G
+331
+Apple Acid
+Acido Malico
+332
+Snap Trap
+Tagliola
+333
+Grassy Glide
+Erboscivolata
+334
+Jungle Healing
+Giunglacura
+335
+Precipice Blades
+Spade Telluriche
+336
+Earthquake
+Terremoto
+337
+High Horsepower
+Forza Equina
+338
+Earth Power
+Geoforza
+339
+Land's Wrath
+Forza Tellurica
+340
+Thousand Arrows
+Mille Frecce
+341
+Thousand Waves
+Mille Onde
+342
+Dig
+Fossa
+343
+Drill Run
+Giravvita
+344
+Stomping Tantrum
+Battipiedi
+345
+Bone Club
+Ossoclava
+346
+Mud Bomb
+Pantanobomba
+347
+Bulldoze
+Battiterra
+348
+Mud Shot
+Colpodifango
+349
+Bonemerang
+Ossomerang
+350
+Sand Tomb
+Sabbiotomba
+351
+Bone Rush
+Ossoraffica
+352
+Mud-Slap
+Fangosberla
+353
+Fissure
+Abisso
+354
+Magnitude
+Magnitudo
+355
+Mud Sport
+Fangata
+356
+Rototiller
+Aracampo
+357
+Sand Attack
+Turbosabbia
+358
+Shore Up
+Sabbiaccumulo
+359
+Spikes
+Punte
+360
+Scorching Sands
+Sabbiardente
+361
+Freeze Shock
+Elettrogelo
+362
+Ice Burn
+Vampagelida
+363
+Blizzard
+Bora
+364
+Ice Hammer
+Martelgelo
+365
+Ice Beam
+Geloraggio
+366
+Icicle Crash
+Scagliagelo
+367
+Ice Punch
+Gelopugno
+368
+Freeze-Dry
+Liofilizzazione
+369
+Aurora Beam
+Raggiaurora
+370
+Glaciate
+Gelamondo
+371
+Ice Fang
+Gelodenti
+372
+Avalanche
+Slavina
+373
+Frost Breath
+Alitogelido
+374
+Icy Wind
+Ventogelato
+375
+Ice Shard
+Geloscheggia
+376
+Powder Snow
+Polneve
+377
+Ice Ball
+Palla Gelo
+378
+Icicle Spear
+Gelolancia
+379
+Sheer Cold
+Purogelo
+380
+Aurora Veil
+Velaurora
+381
+Hail
+Grandine
+382
+Haze
+Nube
+383
+Mist
+Nebbia
+384
+Triple Axel
+Triplo Axel
+385
+Glacial Lance
+Lancia Glaciale
+386
+Explosion
+Esplosione
+387
+Self-Destruct
+Autodistruzione
+388
+Giga Impact
+Gigaimpatto
+389
+Hyper Beam
+Iper Raggio
+390
+Boomburst
+Ondaboato
+391
+Last Resort
+Ultimascelta
+392
+Skull Bash
+Capocciata
+393
+Double-Edge
+Sdoppiatore
+394
+Head Charge
+Ricciolata
+395
+Mega Kick
+Megacalcio
+396
+Techno Blast
+Tecnobotto
+397
+Thrash
+Colpo
+398
+Egg Bomb
+Uovobomba
+399
+Judgment
+Giudizio
+400
+Hyper Voice
+Granvoce
+401
+Multi-Attack
+Multiattacco
+402
+Revelation Dance
+Mutadanza
+403
+Rock Climb
+Scalaroccia
+404
+Take Down
+Riduttore
+405
+Uproar
+Baraonda
+406
+Body Slam
+Corposcontro
+407
+Extreme Speed
+Extrarapido
+408
+Hyper Fang
+Iperzanna
+409
+Mega Punch
+Megapugno
+410
+Razor Wind
+Ventagliente
+411
+Slam
+Schianto
+412
+Strength
+Forza
+413
+Tri Attack
+Tripletta
+414
+Crush Claw
+Tritartigli
+415
+Relic Song
+Cantoantico
+416
+Chip Away
+Insidia
+417
+Dizzy Punch
+Stordipugno
+418
+Facade
+Facciata
+419
+Headbutt
+Bottintesta
+420
+Retaliate
+Nemesi
+421
+Secret Power
+Forzasegreta
+422
+Slash
+Lacerazione
+423
+Smelling Salts
+Maniereforti
+424
+Horn Attack
+Incornata
+425
+Stomp
+Pestone
+426
+Covet
+Supplica
+427
+Hidden Power
+Introforza
+428
+Round
+Coro
+429
+Swift
+Comete
+430
+Vise Grip
+Presa
+431
+Cut
+Taglio
+432
+Snore
+Russare
+433
+Struggle
+Scontro
+434
+Weather Ball
+Palla Clima
+435
+Echoed Voice
+Echeggiavoce
+436
+Fake Out
+Bruciapelo
+437
+False Swipe
+Falsofinale
+438
+Hold Back
+Riguardo
+439
+Pay Day
+Giornopaga
+440
+Pound
+Botta
+441
+Quick Attack
+Attacco Rapido
+442
+Scratch
+Graffio
+443
+Tackle
+Azione
+444
+Double Hit
+Doppiosmash
+445
+Feint
+Fintoattacco
+446
+Tail Slap
+Spazzasberla
+447
+Rage
+Ira
+448
+Rapid Spin
+Rapigiro
+449
+Spike Cannon
+Sparalance
+450
+Comet Punch
+Cometapugno
+451
+Fury Swipes
+Sfuriate
+452
+Barrage
+Attacco Pioggia
+453
+Bind
+Legatutto
+454
+Double Slap
+Doppiasberla
+455
+Fury Attack
+Furia
+456
+Wrap
+Avvolgibotta
+457
+Constrict
+Limitazione
+458
+Bide
+Pazienza
+459
+Crush Grip
+Sbriciolmano
+460
+Endeavor
+Rimonta
+461
+Flail
+Flagello
+462
+Frustration
+Frustrazione
+463
+Guillotine
+Ghigliottina
+464
+Horn Drill
+Perforcorno
+465
+Natural Gift
+Dononaturale
+466
+Present
+Regalino
+467
+Return
+Ritorno
+468
+Sonic Boom
+Sonicboom
+469
+Spit Up
+Sfoghenergia
+470
+Super Fang
+Superzanna
+471
+Trump Card
+Asso
+472
+Wring Out
+Strizzata
+473
+Acupressure
+Acupressione
+474
+After You
+Cortesia
+475
+Assist
+Assistente
+476
+Attract
+Attrazione
+477
+Baton Pass
+Staffetta
+478
+Belly Drum
+Panciamburo
+479
+Bestow
+Cediregalo
+480
+Block
+Blocco
+481
+Camouflage
+Camuffamento
+482
+Captivate
+Incanto
+483
+Celebrate
+Auguri
+484
+Confide
+Confidenza
+485
+Conversion
+Conversione
+486
+Conversion 2
+Conversione2
+487
+Copycat
+Copione
+488
+Defense Curl
+Ricciolscudo
+489
+Disable
+Inibitore
+490
+Double Team
+Doppioteam
+491
+Encore
+Ripeti
+492
+Endure
+Resistenza
+493
+Entrainment
+Saltamicizia
+494
+Flash
+Flash
+495
+Focus Energy
+Focalenergia
+496
+Follow Me
+Sonoqui
+497
+Foresight
+Preveggenza
+498
+Glare
+Sguardo Feroce
+499
+Growl
+Ruggito
+500
+Growth
+Crescita
+501
+Happy Hour
+Cuccagna
+502
+Harden
+Rafforzatore
+503
+Heal Bell
+Rintoccasana
+504
+Helping Hand
+Altruismo
+505
+Hold Hands
+Mano nella Mano
+506
+Howl
+Gridodilotta
+507
+Laser Focus
+Concentrazione
+508
+Leer
+Fulmisguardo
+509
+Lock-On
+Localizza
+510
+Lovely Kiss
+Demonbacio
+511
+Lucky Chant
+Fortuncanto
+512
+Me First
+Precedenza
+513
+Mean Look
+Malosguardo
+514
+Metronome
+Metronomo
+515
+Milk Drink
+Buonlatte
+516
+Mimic
+Mimica
+517
+Mind Reader
+Leggimente
+518
+Minimize
+Minimizzato
+519
+Morning Sun
+Mattindoro
+520
+Nature Power
+Naturforza
+521
+Noble Roar
+Urlo
+522
+Odor Sleuth
+Segugio
+523
+Pain Split
+Malcomune
+524
+Perish Song
+Ultimocanto
+525
+Play Nice
+Simpatia
+526
+Protect
+Protezione
+527
+Psych Up
+Psicamisù
+528
+Recover
+Ripresa
+529
+Recycle
+Riciclo
+530
+Reflect Type
+Riflettipo
+531
+Refresh
+Rinfrescata
+532
+Roar
+Boato
+533
+Safeguard
+Salvaguardia
+534
+Scary Face
+Visotruce
+535
+Screech
+Stridio
+536
+Sharpen
+Affilatore
+537
+Shell Smash
+Gettaguscio
+538
+Simple Beam
+Ondisinvolta
+539
+Sing
+Canto
+540
+Sketch
+Schizzo
+541
+Slack Off
+Pigro
+542
+Sleep Talk
+Sonnolalia
+543
+Smokescreen
+Muro di Fumo
+544
+Soft-Boiled
+Covauova
+545
+Splash
+Splash
+546
+Spotlight
+Riflettore
+547
+Stockpile
+Accumulo
+548
+Substitute
+Sostituto
+549
+Supersonic
+Supersuono
+550
+Swagger
+Bullo
+551
+Swallow
+Intoenergia
+552
+Sweet Scent
+Profumino
+553
+Swords Dance
+Danzaspada
+554
+Tail Whip
+Colpocoda
+555
+Tearful Look
+Occhionilucidi
+556
+Teeter Dance
+Strampadanza
+557
+Tickle
+Solletico
+558
+Transform
+Trasformazione
+559
+Whirlwind
+Turbine
+560
+Wish
+Desiderio
+561
+Work Up
+Cuordileone
+562
+Yawn
+Sbadiglio
+563
+Court Change
+Cambiocampo
+564
+Stuff Cheeks
+Riempiguance
+565
+Teatime
+Ora del Tè
+566
+Terrain Pulse
+Campopulsar
+567
+Belch
+Rutto
+568
+Gunk Shot
+Sporcolancio
+569
+Sludge Wave
+Fangonda
+570
+Sludge Bomb
+Fangobomba
+571
+Poison Jab
+Velenpuntura
+572
+Cross Poison
+Velenocroce
+573
+Sludge
+Fango
+574
+Venoshock
+Velenoshock
+575
+Clear Smog
+Pulifumo
+576
+Poison Fang
+Velenodenti
+577
+Poison Tail
+Velenocoda
+578
+Acid
+Acido
+579
+Acid Spray
+Acidobomba
+580
+Smog
+Smog
+581
+Poison Sting
+Velenospina
+582
+Acid Armor
+Scudo Acido
+583
+Baneful Bunker
+Fortino
+584
+Coil
+Arrotola
+585
+Gastro Acid
+Gastroacido
+586
+Poison Gas
+Velenogas
+587
+Poison Powder
+Velenpolvere
+588
+Purify
+Purificazione
+589
+Toxic
+Tossina
+590
+Toxic Spikes
+Fielepunte
+591
+Toxic Thread
+Velenotela
+592
+Venom Drench
+Velenotrappola
+593
+Corrosive Gas
+Gas Corrosivo
+594
+Shell Side Arm
+Armaguscio
+595
+Prismatic Laser
+Prismalaser
+596
+Psycho Boost
+Psicoslancio
+597
+Future Sight
+Divinazione
+598
+Synchronoise
+Sincrumore
+599
+Dream Eater
+Mangiasogni
+600
+Photon Geyser
+Geyser Fotonico
+601
+Psystrike
+Psicobotta
+602
+Psychic
+Psichico
+603
+Psychic Fangs
+Psicozanna
+604
+Extrasensory
+Extrasenso
+605
+Hyperspace Hole
+Forodimensionale
+606
+Psyshock
+Psicoshock
+607
+Zen Headbutt
+Cozzata Zen
+608
+Luster Purge
+Abbagliante
+609
+Mist Ball
+Foschisfera
+610
+Psycho Cut
+Psicotaglio
+611
+Psybeam
+Psicoraggio
+612
+Heart Stamp
+Cuorestampo
+613
+Confusion
+Confusione
+614
+Stored Power
+Veicolaforza
+615
+Mirror Coat
+Specchiovelo
+616
+Psywave
+Psiconda
+617
+Agility
+Agilità
+618
+Ally Switch
+Cambiaposto
+619
+Amnesia
+Amnesia
+620
+Barrier
+Barriera
+621
+Calm Mind
+Calmamente
+622
+Cosmic Power
+Cosmoforza
+623
+Gravity
+Gravità
+624
+Guard Split
+Paridifesa
+625
+Guard Swap
+Barattoscudo
+626
+Heal Block
+Anticura
+627
+Heal Pulse
+Ondasana
+628
+Healing Wish
+Curardore
+629
+Heart Swap
+Cuorbaratto
+630
+Hypnosis
+Ipnosi
+631
+Imprison
+Esclusiva
+632
+Instruct
+Imposizione
+633
+Kinesis
+Cinèsi
+634
+Light Screen
+Schermoluce
+635
+Lunar Dance
+Lunardanza
+636
+Magic Coat
+Magivelo
+637
+Magic Room
+Magicozona
+638
+Meditate
+Meditazione
+639
+Miracle Eye
+Miracolvista
+640
+Power Split
+Pariattacco
+641
+Power Swap
+Barattoforza
+642
+Power Trick
+Ingannoforza
+643
+Psychic Terrain
+Campo Psichico
+644
+Psycho Shift
+Psicotrasfer
+645
+Reflect
+Riflesso
+646
+Rest
+Riposo
+647
+Role Play
+Giocodiruolo
+648
+Skill Swap
+Baratto
+649
+Speed Swap
+Velociscambio
+650
+Telekinesis
+Telecinesi
+651
+Teleport
+Teletrasporto
+652
+Trick
+Raggiro
+653
+Trick Room
+Distortozona
+654
+Wonder Room
+Mirabilzona
+655
+Magic Powder
+Magipolvere
+656
+Expanding Force
+Vasterngia
+657
+Eerie Spell
+Inquietantesimo
+658
+Freezing Glare
+Sguardo Gelido
+659
+Head Smash
+Zuccata
+660
+Rock Wrecker
+Devastomasso
+661
+Diamond Storm
+Diamantempesta
+662
+Stone Edge
+Pietrataglio
+663
+Power Gem
+Gemmoforza
+664
+Rock Slide
+Frana
+665
+Ancient Power
+Forzantica
+666
+Rock Tomb
+Rocciotomba
+667
+Rock Throw
+Sassata
+668
+Smack Down
+Abbattimento
+669
+Accelerock
+Rocciarapida
+670
+Rollout
+Rotolamento
+671
+Rock Blast
+Cadutamassi
+672
+Rock Polish
+Lucidatura
+673
+Sandstorm
+Terrempesta
+674
+Stealth Rock
+Levitoroccia
+675
+Wide Guard
+Bodyguard
+676
+Tar Shot
+Colpocatrame
+677
+Meteor Beam
+Raggiometeora
+678
+Doom Desire
+Obbliderio
+679
+Iron Tail
+Codacciaio
+680
+Sunsteel Strike
+Astrocarica
+681
+Meteor Mash
+Meteorpugno
+682
+Anchor Shot
+Colpo d'Ancora
+683
+Flash Cannon
+Cannonflash
+684
+Iron Head
+Metaltestata
+685
+Smart Strike
+Sottilcorno
+686
+Steel Wing
+Alacciaio
+687
+Double Iron Bash
+Pugni Corazzati
+688
+Mirror Shot
+Cristalcolpo
+689
+Magnet Bomb
+Bombagnete
+690
+Gear Grind
+Ingracolpo
+691
+Metal Claw
+Ferrartigli
+692
+Bullet Punch
+Pugnoscarica
+693
+Gyro Ball
+Vortexpalla
+694
+Heavy Slam
+Pesobomba
+695
+Metal Burst
+Metalscoppio
+696
+Autotomize
+Sganciapesi
+697
+Gear Up
+Marciainpiù
+698
+Iron Defense
+Ferroscudo
+699
+King's Shield
+Scudo Reale
+700
+Metal Sound
+Ferrostrido
+701
+Shift Gear
+Cambiomarcia
+702
+Behemoth Bash
+Colpo Maestoso
+703
+Behemoth Blade
+Taglio Maestoso
+704
+Steel Roller
+Ferrorullo
+705
+Steel Beam
+Raggio d'Acciaio
+706
+Hydro Cannon
+Idrocannone
+707
+Water Spout
+Zampillo
+708
+Hydro Pump
+Idropompa
+709
+Origin Pulse
+Primopulsar
+710
+Steam Eruption
+Vaporscoppio
+711
+Crabhammer
+Martellata
+712
+Aqua Tail
+Idrondata
+713
+Muddy Water
+Fanghiglia
+714
+Sparkling Aria
+Canto Effimero
+715
+Surf
+Surf
+716
+Liquidation
+Idrobreccia
+717
+Dive
+Sub
+718
+Scald
+Idrovampata
+719
+Water Pledge
+Acquapatto
+720
+Waterfall
+Cascata
+721
+Razor Shell
+Conchilama
+722
+Brine
+Acquadisale
+723
+Bubble Beam
+Bollaraggio
+724
+Octazooka
+Octazooka
+725
+Water Pulse
+Idropulsar
+726
+Aqua Jet
+Acquagetto
+727
+Bubble
+Bolla
+728
+Water Gun
+Pistolacqua
+729
+Clamp
+Tenaglia
+730
+Whirlpool
+Mulinello
+731
+Water Shuriken
+Acqualame
+732
+Aqua Ring
+Acquanello
+733
+Rain Dance
+Pioggiadanza
+734
+Soak
+Inondazione
+735
+Water Sport
+Docciascudo
+736
+Withdraw
+Ritirata
+737
+Snipe Shot
+Tiromirato
+738
+Fishious Rend
+Branchiomorso
+739
+Life Dew
+Goccia Vitale
+740
+Surging Strikes
+Idroraffica
+741
+Flip Turn
+Virata
+742
+Hidden Power
+Introforza

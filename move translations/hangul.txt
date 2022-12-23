@@ -1,0 +1,2226 @@
+1
+Megahorn
+메가폰
+2
+Attack Order
+공격지령
+3
+Bug Buzz
+벌레의야단법석
+4
+First Impression
+만나자마자
+5
+Pollen Puff
+꽃가루경단
+6
+Leech Life
+흡혈
+7
+Lunge
+덤벼들기
+8
+X-Scissor
+시저크로스
+9
+Signal Beam
+시그널빔
+10
+U-turn
+유턴
+11
+Steamroller
+하드롤러
+12
+Bug Bite
+벌레먹음
+13
+Silver Wind
+은빛바람
+14
+Fell Stinger
+마지막일침
+15
+Struggle Bug
+벌레의저항
+16
+Fury Cutter
+연속자르기
+17
+Pin Missile
+바늘미사일
+18
+Twineedle
+더블니들
+19
+Infestation
+엉겨붙기
+20
+Defend Order
+방어지령
+21
+Heal Order
+회복지령
+22
+Powder
+분진
+23
+Quiver Dance
+나비춤
+24
+Rage Powder
+분노가루
+25
+Spider Web
+거미집
+26
+Sticky Web
+끈적끈적네트
+27
+String Shot
+실뿜기
+28
+Tail Glow
+반딧불
+29
+Skitter Smack
+엄습하는일격
+30
+Hyperspace Fury
+다른차원러시
+31
+Foul Play
+속임수
+32
+Darkest Lariat
+DD래리어트
+33
+Night Daze
+나이트버스트
+34
+Crunch
+깨물어부수기
+35
+Dark Pulse
+악의파동
+36
+Throat Chop
+지옥찌르기
+37
+Night Slash
+깜짝베기
+38
+Sucker Punch
+기습
+39
+Knock Off
+탁쳐서떨구기
+40
+Assurance
+승부굳히기
+41
+Bite
+물기
+42
+Brutal Swing
+세차게휘두르기
+43
+Feint Attack
+속여때리기
+44
+Thief
+도둑질
+45
+Snarl
+바크아웃
+46
+Payback
+보복
+47
+Pursuit
+따라가때리기
+48
+Beat Up
+집단구타
+49
+Fling
+내던지기
+50
+Power Trip
+기어오르기
+51
+Punishment
+혼내기
+52
+Dark Void
+다크홀
+53
+Embargo
+금제
+54
+Fake Tears
+거짓울음
+55
+Flatter
+부추기기
+56
+Hone Claws
+손톱갈기
+57
+Memento
+추억의선물
+58
+Nasty Plot
+나쁜음모
+59
+Parting Shot
+막말내뱉기
+60
+Quash
+순서미루기
+61
+Snatch
+가로챔
+62
+Switcheroo
+바꿔치기
+63
+Taunt
+도발
+64
+Topsy-Turvy
+뒤집어엎기
+65
+Torment
+트집
+66
+Jaw Lock
+물고버티기
+67
+False Surrender
+사죄의찌르기
+68
+Obstruct
+블로킹
+69
+Wicked Blow
+암흑강타
+70
+Lash Out
+분풀이
+71
+Fiery Wrath
+타오르는분노
+72
+Roar of Time
+시간의포효
+73
+Draco Meteor
+용성군
+74
+Outrage
+역린
+75
+Clanging Scales
+스케일노이즈
+76
+Core Enforcer
+코어퍼니셔
+77
+Dragon Rush
+드래곤다이브
+78
+Spacial Rend
+공간절단
+79
+Dragon Hammer
+드래곤해머
+80
+Dragon Pulse
+용의파동
+81
+Dragon Claw
+드래곤크루
+82
+Dragon Breath
+용의숨결
+83
+Dragon Tail
+드래곤테일
+84
+Dual Chop
+더블촙
+85
+Twister
+회오리
+86
+Dragon Rage
+용의분노
+87
+Dragon Dance
+용의춤
+88
+Breaking Swipe
+와이드브레이커
+89
+Dragon Darts
+드래곤애로
+90
+Dynamax Cannon
+다이맥스포
+91
+Eternabeam
+무한다이빔
+92
+Clangorous Soul
+소울비트
+93
+Scale Shot
+스케일샷
+94
+Dragon Energy
+드래곤에너지
+95
+Bolt Strike
+뇌격
+96
+Volt Tackle
+볼트태클
+97
+Zap Cannon
+전자포
+98
+Thunder
+번개
+99
+Fusion Bolt
+크로스썬더
+100
+Plasma Fists
+플라스마피스트
+101
+Thunderbolt
+１０만볼트
+102
+Wild Charge
+와일드볼트
+103
+Discharge
+방전
+104
+Zing Zap
+찌리리따끔따끔
+105
+Thunder Punch
+번개펀치
+106
+Volt Switch
+볼트체인지
+107
+Parabolic Charge
+파라볼라차지
+108
+Spark
+스파크
+109
+Thunder Fang
+번개엄니
+110
+Shock Wave
+전격파
+111
+Electroweb
+일렉트릭네트
+112
+Charge Beam
+차지빔
+113
+Thunder Shock
+전기쇼크
+114
+Nuzzle
+볼부비부비
+115
+Electro Ball
+일렉트릭볼
+116
+Charge
+충전
+117
+Eerie Impulse
+괴전파
+118
+Electric Terrain
+일렉트릭필드
+119
+Electrify
+송전
+120
+Ion Deluge
+플라스마샤워
+121
+Magnet Rise
+전자부유
+122
+Magnetic Flux
+자기장조작
+123
+Thunder Wave
+전기자석파
+124
+Overdrive
+오버드라이브
+125
+Aura Wheel
+오라휠
+126
+Bolt Beak
+전격부리
+127
+Rising Voltage
+라이징볼트
+128
+Thunder Cage
+썬더프리즌
+129
+Light of Ruin
+파멸의빛
+130
+Fleur Cannon
+플뢰르캐논
+131
+Moonblast
+문포스
+132
+Play Rough
+치근거리기
+133
+Dazzling Gleam
+매지컬샤인
+134
+Draining Kiss
+드레인키스
+135
+Disarming Voice
+차밍보이스
+136
+Fairy Wind
+요정의바람
+137
+Aromatic Mist
+아로마미스트
+138
+Baby-Doll Eyes
+초롱초롱눈동자
+139
+Charm
+애교부리기
+140
+Crafty Shield
+트릭가드
+141
+Fairy Lock
+페어리록
+142
+Floral Healing
+플라워힐
+143
+Flower Shield
+플라워가드
+144
+Geomancy
+지오컨트롤
+145
+Misty Terrain
+미스트필드
+146
+Moonlight
+달의불빛
+147
+Nature's Madness
+자연의분노
+148
+Sweet Kiss
+천사의키스
+149
+Spirit Break
+소울크래시
+150
+Decorate
+데코레이션
+151
+Misty Explosion
+미스트버스트
+152
+Strange Steam
+원더스팀
+153
+Focus Punch
+힘껏펀치
+154
+High Jump Kick
+무릎차기
+155
+Close Combat
+인파이트
+156
+Focus Blast
+기합구슬
+157
+Superpower
+엄청난힘
+158
+Cross Chop
+크로스촙
+159
+Dynamic Punch
+폭발펀치
+160
+Flying Press
+플라잉프레스
+161
+Hammer Arm
+암해머
+162
+Jump Kick
+점프킥
+163
+Sacred Sword
+성스러운칼
+164
+Secret Sword
+신비의칼
+165
+Sky Uppercut
+스카이업퍼
+166
+Aura Sphere
+파동탄
+167
+Submission
+지옥의바퀴
+168
+Brick Break
+깨트리다
+169
+Drain Punch
+드레인펀치
+170
+Vital Throw
+받아던지기
+171
+Wake-Up Slap
+잠깨움뺨치기
+172
+Low Sweep
+로킥
+173
+Circle Throw
+배대뒤치기
+174
+Force Palm
+발경
+175
+Revenge
+리벤지
+176
+Rolling Kick
+돌려차기
+177
+Storm Throw
+업어후리기
+178
+Karate Chop
+태권당수
+179
+Mach Punch
+마하펀치
+180
+Power-Up Punch
+그로우펀치
+181
+Rock Smash
+바위깨기
+182
+Vacuum Wave
+진공파
+183
+Double Kick
+두번치기
+184
+Arm Thrust
+손바닥치기
+185
+Triple Kick
+트리플킥
+186
+Counter
+카운터
+187
+Final Gambit
+목숨걸기
+188
+Low Kick
+안다리걸기
+189
+Reversal
+기사회생
+190
+Seismic Toss
+지구던지기
+191
+Bulk Up
+벌크업
+192
+Detect
+판별
+193
+Mat Block
+마룻바닥세워막기
+194
+Quick Guard
+퍼스트가드
+195
+Octolock
+문어굳히기
+196
+Meteor Assault
+스타어설트
+197
+No Retreat
+배수의진
+198
+Coaching
+코칭
+199
+Body Press
+바디프레스
+200
+Thunderous Kick
+천둥차기
+201
+V-create
+V제너레이트
+202
+Blast Burn
+블러스트번
+203
+Eruption
+분화
+204
+Mind Blown
+깜짝헤드
+205
+Shell Trap
+트랩셸
+206
+Blue Flare
+푸른불꽃
+207
+Burn Up
+불사르기
+208
+Overheat
+오버히트
+209
+Flare Blitz
+플레어드라이브
+210
+Fire Blast
+불대문자
+211
+Fusion Flare
+크로스플레임
+212
+Inferno
+연옥
+213
+Magma Storm
+마그마스톰
+214
+Sacred Fire
+성스러운불꽃
+215
+Searing Shot
+화염탄
+216
+Heat Wave
+열풍
+217
+Flamethrower
+화염방사
+218
+Blaze Kick
+브레이즈킥
+219
+Fiery Dance
+불꽃춤
+220
+Fire Lash
+불꽃채찍
+221
+Fire Pledge
+불꽃의맹세
+222
+Lava Plume
+분연
+223
+Fire Punch
+불꽃펀치
+224
+Mystical Fire
+매지컬플레임
+225
+Flame Burst
+불꽃튀기기
+226
+Fire Fang
+불꽃엄니
+227
+Flame Wheel
+화염자동차
+228
+Incinerate
+불태우기
+229
+Flame Charge
+니트로차지
+230
+Ember
+불꽃세례
+231
+Fire Spin
+회오리불꽃
+232
+Heat Crash
+히트스탬프
+233
+Sunny Day
+쾌청
+234
+Will-O-Wisp
+도깨비불
+235
+Pyro Ball
+화염볼
+236
+Burning Jealousy
+질투의불꽃﻿
+237
+Sky Attack
+불새
+238
+Brave Bird
+브레이브버드
+239
+Dragon Ascent
+화룡점정
+240
+Hurricane
+폭풍
+241
+Aeroblast
+에어로블라스트
+242
+Beak Blast
+부리캐논
+243
+Fly
+공중날기
+244
+Bounce
+뛰어오르다
+245
+Drill Peck
+회전부리
+246
+Oblivion Wing
+데스윙
+247
+Air Slash
+에어슬래시
+248
+Chatter
+수다
+249
+Aerial Ace
+제비반환
+250
+Air Cutter
+에어컷터
+251
+Pluck
+쪼아대기
+252
+Sky Drop
+프리폴
+253
+Wing Attack
+날개치기
+254
+Acrobatics
+애크러뱃
+255
+Gust
+바람일으키기
+256
+Peck
+쪼기
+257
+Defog
+안개제거
+258
+Feather Dance
+깃털댄스
+259
+Mirror Move
+따라하기
+260
+Roost
+날개쉬기
+261
+Tailwind
+순풍
+262
+Dual Wingbeat
+더블윙
+263
+Shadow Force
+섀도다이브
+264
+Moongeist Beam
+섀도레이
+265
+Phantom Force
+고스트다이브
+266
+Spectral Thief
+섀도스틸
+267
+Shadow Bone
+섀도본
+268
+Shadow Ball
+섀도볼
+269
+Spirit Shackle
+그림자꿰매기
+270
+Shadow Claw
+섀도크루
+271
+Hex
+병상첨병
+272
+Ominous Wind
+괴상한바람
+273
+Shadow Punch
+섀도펀치
+274
+Shadow Sneak
+야습
+275
+Astonish
+놀래키기
+276
+Lick
+핥기
+277
+Night Shade
+나이트헤드
+278
+Confuse Ray
+이상한빛
+279
+Curse
+저주
+280
+Destiny Bond
+길동무
+281
+Grudge
+원념
+282
+Nightmare
+악몽
+283
+Spite
+원한
+284
+Trick-or-Treat
+핼러윈
+285
+Poltergeist
+폴터가이스트
+286
+Astral Barrage
+아스트랄비트
+287
+Frenzy Plant
+하드플랜트
+288
+Leaf Storm
+리프스톰
+289
+Solar Blade
+솔라블레이드
+290
+Petal Dance
+꽃잎댄스
+291
+Power Whip
+파워휩
+292
+Seed Flare
+시드플레어
+293
+Solar Beam
+솔라빔
+294
+Wood Hammer
+우드해머
+295
+Energy Ball
+에너지볼
+296
+Leaf Blade
+리프블레이드
+297
+Petal Blizzard
+꽃보라
+298
+Grass Pledge
+풀의맹세
+299
+Seed Bomb
+씨폭탄
+300
+Giga Drain
+기가드레인
+301
+Horn Leech
+우드호른
+302
+Trop Kick
+트로피컬킥
+303
+Leaf Tornado
+그래스믹서
+304
+Magical Leaf
+메지컬리프
+305
+Needle Arm
+바늘팔
+306
+Razor Leaf
+잎날가르기
+307
+Vine Whip
+덩굴채찍
+308
+Leafage
+나뭇잎
+309
+Mega Drain
+메가드레인
+310
+Bullet Seed
+기관총
+311
+Absorb
+흡수
+312
+Grass Knot
+풀묶기
+313
+Aromatherapy
+아로마테라피
+314
+Cotton Guard
+코튼가드
+315
+Cotton Spore
+목화포자
+316
+Forest's Curse
+숲의저주
+317
+Grass Whistle
+풀피리
+318
+Grassy Terrain
+그래스필드
+319
+Ingrain
+뿌리박기
+320
+Leech Seed
+씨뿌리기
+321
+Sleep Powder
+수면가루
+322
+Spiky Shield
+니들가드
+323
+Spore
+버섯포자
+324
+Strength Sap
+힘흡수
+325
+Stun Spore
+저리가루
+326
+Synthesis
+광합성
+327
+Worry Seed
+고민씨
+328
+Branch Poke
+가지찌르기
+329
+Drum Beating
+드럼어택
+330
+Grav Apple
+G의힘
+331
+Apple Acid
+사과산
+332
+Snap Trap
+집게덫
+333
+Grassy Glide
+그래스슬라이더﻿
+334
+Jungle Healing
+정글힐
+335
+Precipice Blades
+단애의칼
+336
+Earthquake
+지진
+337
+High Horsepower
+10만마력
+338
+Earth Power
+대지의힘
+339
+Land's Wrath
+그라운드포스
+340
+Thousand Arrows
+사우전드애로
+341
+Thousand Waves
+사우전드웨이브
+342
+Dig
+구멍파기
+343
+Drill Run
+드릴라이너
+344
+Stomping Tantrum
+분함의발구르기
+345
+Bone Club
+뼈다귀치기
+346
+Mud Bomb
+진흙폭탄
+347
+Bulldoze
+땅고르기
+348
+Mud Shot
+머드숏
+349
+Bonemerang
+뼈다귀부메랑
+350
+Sand Tomb
+모래지옥
+351
+Bone Rush
+본러쉬
+352
+Mud-Slap
+진흙뿌리기
+353
+Fissure
+땅가르기
+354
+Magnitude
+매그니튜드
+355
+Mud Sport
+흙놀이
+356
+Rototiller
+일구기
+357
+Sand Attack
+모래뿌리기
+358
+Shore Up
+모래모으기
+359
+Spikes
+압정뿌리기
+360
+Scorching Sands
+열사의대지
+361
+Freeze Shock
+프리즈볼트
+362
+Ice Burn
+콜드플레어
+363
+Blizzard
+눈보라
+364
+Ice Hammer
+아이스해머
+365
+Ice Beam
+냉동빔
+366
+Icicle Crash
+고드름떨구기
+367
+Ice Punch
+냉동펀치
+368
+Freeze-Dry
+프리즈드라이
+369
+Aurora Beam
+오로라빔
+370
+Glaciate
+얼다세계
+371
+Ice Fang
+얼음엄니
+372
+Avalanche
+눈사태
+373
+Frost Breath
+얼음숨결
+374
+Icy Wind
+얼다바람
+375
+Ice Shard
+얼음뭉치
+376
+Powder Snow
+눈싸라기
+377
+Ice Ball
+아이스볼
+378
+Icicle Spear
+고드름침
+379
+Sheer Cold
+절대영도
+380
+Aurora Veil
+오로라베일
+381
+Hail
+싸라기눈
+382
+Haze
+흑안개
+383
+Mist
+흰안개
+384
+Triple Axel
+트리플악셀
+385
+Glacial Lance
+블리자드랜스
+386
+Explosion
+대폭발
+387
+Self-Destruct
+자폭
+388
+Giga Impact
+기가임팩트
+389
+Hyper Beam
+파괴광선
+390
+Boomburst
+폭음파
+391
+Last Resort
+뒀다쓰기
+392
+Skull Bash
+로케트박치기
+393
+Double-Edge
+이판사판태클
+394
+Head Charge
+아프로브레이크
+395
+Mega Kick
+메가톤킥
+396
+Techno Blast
+테크노버스터
+397
+Thrash
+난동부리기
+398
+Egg Bomb
+알폭탄
+399
+Judgment
+심판의뭉치
+400
+Hyper Voice
+하이퍼보이스
+401
+Multi-Attack
+멀티어택
+402
+Revelation Dance
+잠재댄스
+403
+Rock Climb
+락클라임
+404
+Take Down
+돌진
+405
+Uproar
+소란피기
+406
+Body Slam
+누르기
+407
+Extreme Speed
+신속
+408
+Hyper Fang
+필살앞니
+409
+Mega Punch
+메가톤펀치
+410
+Razor Wind
+칼바람
+411
+Slam
+힘껏치기
+412
+Strength
+괴력
+413
+Tri Attack
+트라이어택
+414
+Crush Claw
+브레이크크루
+415
+Relic Song
+옛노래
+416
+Chip Away
+야금야금
+417
+Dizzy Punch
+잼잼펀치
+418
+Facade
+객기
+419
+Headbutt
+박치기
+420
+Retaliate
+원수갚기
+421
+Secret Power
+비밀의힘
+422
+Slash
+베어가르기
+423
+Smelling Salts
+정신차리기
+424
+Horn Attack
+뿔찌르기
+425
+Stomp
+짓밟기
+426
+Covet
+탐내다
+427
+Hidden Power
+잠재파워
+428
+Round
+돌림노래
+429
+Swift
+스피드스타
+430
+Vise Grip
+찝기
+431
+Cut
+풀베기
+432
+Snore
+코골기
+433
+Struggle
+발버둥
+434
+Weather Ball
+웨더볼
+435
+Echoed Voice
+에코보이스
+436
+Fake Out
+속이다
+437
+False Swipe
+칼등치기
+438
+Hold Back
+적당히손봐주기
+439
+Pay Day
+고양이돈받기
+440
+Pound
+막치기
+441
+Quick Attack
+전광석화
+442
+Scratch
+할퀴기
+443
+Tackle
+몸통박치기
+444
+Double Hit
+더블어택
+445
+Feint
+페인트
+446
+Tail Slap
+스위프뺨치기
+447
+Rage
+분노
+448
+Rapid Spin
+고속스핀
+449
+Spike Cannon
+가시대포
+450
+Comet Punch
+연속펀치
+451
+Fury Swipes
+마구할퀴기
+452
+Barrage
+구슬던지기
+453
+Bind
+조이기
+454
+Double Slap
+연속뺨치기
+455
+Fury Attack
+마구찌르기
+456
+Wrap
+김밥말이
+457
+Constrict
+휘감기
+458
+Bide
+참기
+459
+Crush Grip
+묵사발
+460
+Endeavor
+죽기살기
+461
+Flail
+바둥바둥
+462
+Frustration
+화풀이
+463
+Guillotine
+가위자르기
+464
+Horn Drill
+뿔드릴
+465
+Natural Gift
+자연의은혜
+466
+Present
+프레젠트
+467
+Return
+은혜갚기
+468
+Sonic Boom
+소닉붐
+469
+Spit Up
+토해내기
+470
+Super Fang
+분노의앞니
+471
+Trump Card
+마지막수단
+472
+Wring Out
+쥐어짜기
+473
+Acupressure
+경혈찌르기
+474
+After You
+당신먼저
+475
+Assist
+조수
+476
+Attract
+헤롱헤롱
+477
+Baton Pass
+바톤터치
+478
+Belly Drum
+배북
+479
+Bestow
+기프트패스
+480
+Block
+블록
+481
+Camouflage
+보호색
+482
+Captivate
+유혹
+483
+Celebrate
+축하
+484
+Confide
+비밀이야기
+485
+Conversion
+텍스처
+486
+Conversion 2
+텍스처２
+487
+Copycat
+흉내쟁이
+488
+Defense Curl
+웅크리기
+489
+Disable
+사슬묶기
+490
+Double Team
+그림자분신
+491
+Encore
+앵콜
+492
+Endure
+버티기
+493
+Entrainment
+동료만들기
+494
+Flash
+플래시
+495
+Focus Energy
+기충전
+496
+Follow Me
+날따름
+497
+Foresight
+꿰뚫어보기
+498
+Glare
+뱀눈초리
+499
+Growl
+울음소리
+500
+Growth
+성장
+501
+Happy Hour
+해피타임
+502
+Harden
+단단해지기
+503
+Heal Bell
+치료방울
+504
+Helping Hand
+도우미
+505
+Hold Hands
+손에손잡기
+506
+Howl
+멀리짖음
+507
+Laser Focus
+예민해지기
+508
+Leer
+째려보기
+509
+Lock-On
+록온
+510
+Lovely Kiss
+악마의키스
+511
+Lucky Chant
+주술
+512
+Me First
+선취
+513
+Mean Look
+검은눈빛
+514
+Metronome
+손가락흔들기
+515
+Milk Drink
+우유마시기
+516
+Mimic
+흉내내기
+517
+Mind Reader
+마음의눈
+518
+Minimize
+작아지기
+519
+Morning Sun
+아침햇살
+520
+Nature Power
+자연의힘
+521
+Noble Roar
+부르짖기
+522
+Odor Sleuth
+냄새구별
+523
+Pain Split
+아픔나누기
+524
+Perish Song
+멸망의노래
+525
+Play Nice
+친해지기
+526
+Protect
+방어
+527
+Psych Up
+자기암시
+528
+Recover
+HP회복
+529
+Recycle
+리사이클
+530
+Reflect Type
+미러타입
+531
+Refresh
+리프레쉬
+532
+Roar
+울부짖기
+533
+Safeguard
+신비의부적
+534
+Scary Face
+겁나는얼굴
+535
+Screech
+싫은소리
+536
+Sharpen
+각지기
+537
+Shell Smash
+껍질깨기
+538
+Simple Beam
+심플빔
+539
+Sing
+노래하기
+540
+Sketch
+스케치
+541
+Slack Off
+태만함
+542
+Sleep Talk
+잠꼬대
+543
+Smokescreen
+연막
+544
+Soft-Boiled
+알낳기
+545
+Splash
+튀어오르기
+546
+Spotlight
+스포트라이트
+547
+Stockpile
+비축하기
+548
+Substitute
+대타출동
+549
+Supersonic
+초음파
+550
+Swagger
+뽐내기
+551
+Swallow
+꿀꺽
+552
+Sweet Scent
+달콤한향기
+553
+Swords Dance
+칼춤
+554
+Tail Whip
+꼬리흔들기
+555
+Tearful Look
+눈물그렁그렁
+556
+Teeter Dance
+흔들흔들댄스
+557
+Tickle
+간지르기
+558
+Transform
+변신
+559
+Whirlwind
+날려버리기
+560
+Wish
+희망사항
+561
+Work Up
+분발
+562
+Yawn
+하품
+563
+Court Change
+코트체인지
+564
+Stuff Cheeks
+볼가득넣기
+565
+Teatime
+다과회
+566
+Terrain Pulse
+대지의파동
+567
+Belch
+트림
+568
+Gunk Shot
+더스트슈트
+569
+Sludge Wave
+오물웨이브
+570
+Sludge Bomb
+오물폭탄
+571
+Poison Jab
+독찌르기
+572
+Cross Poison
+크로스포이즌
+573
+Sludge
+오물공격
+574
+Venoshock
+베놈쇼크
+575
+Clear Smog
+클리어스모그
+576
+Poison Fang
+독엄니
+577
+Poison Tail
+포이즌테일
+578
+Acid
+용해액
+579
+Acid Spray
+애시드봄
+580
+Smog
+스모그
+581
+Poison Sting
+독침
+582
+Acid Armor
+녹기
+583
+Baneful Bunker
+토치카
+584
+Coil
+똬리틀기
+585
+Gastro Acid
+위액
+586
+Poison Gas
+독가스
+587
+Poison Powder
+독가루
+588
+Purify
+정화
+589
+Toxic
+맹독
+590
+Toxic Spikes
+독압정
+591
+Toxic Thread
+독실
+592
+Venom Drench
+베놈트랩
+593
+Corrosive Gas
+부식가스
+594
+Shell Side Arm
+셸암즈
+595
+Prismatic Laser
+프리즘레이저
+596
+Psycho Boost
+사이코부스트
+597
+Future Sight
+미래예지
+598
+Synchronoise
+싱크로노이즈
+599
+Dream Eater
+꿈먹기
+600
+Photon Geyser
+포톤가이저
+601
+Psystrike
+사이코브레이크
+602
+Psychic
+사이코키네시스
+603
+Psychic Fangs
+사이코팽
+604
+Extrasensory
+신통력
+605
+Hyperspace Hole
+다른차원홀
+606
+Psyshock
+사이코쇼크
+607
+Zen Headbutt
+사념의박치기
+608
+Luster Purge
+라스트버지
+609
+Mist Ball
+미스트볼
+610
+Psycho Cut
+사이코커터
+611
+Psybeam
+환상빔
+612
+Heart Stamp
+하트스탬프
+613
+Confusion
+염동력
+614
+Stored Power
+어시스트파워
+615
+Mirror Coat
+미러코트
+616
+Psywave
+사이코웨이브
+617
+Agility
+고속이동
+618
+Ally Switch
+사이드체인지
+619
+Amnesia
+망각술
+620
+Barrier
+배리어
+621
+Calm Mind
+명상
+622
+Cosmic Power
+코스믹파워
+623
+Gravity
+중력
+624
+Guard Split
+가드셰어
+625
+Guard Swap
+가드스웹
+626
+Heal Block
+회복봉인
+627
+Heal Pulse
+치유파동
+628
+Healing Wish
+치유소원
+629
+Heart Swap
+하트스웹
+630
+Hypnosis
+최면술
+631
+Imprison
+봉인
+632
+Instruct
+지휘
+633
+Kinesis
+숟가락휘기
+634
+Light Screen
+빛의장막
+635
+Lunar Dance
+초승달춤
+636
+Magic Coat
+매직코트
+637
+Magic Room
+매직룸
+638
+Meditate
+요가포즈
+639
+Miracle Eye
+미라클아이
+640
+Power Split
+파워셰어
+641
+Power Swap
+파워스웹
+642
+Power Trick
+파워트릭
+643
+Psychic Terrain
+사이코필드
+644
+Psycho Shift
+사이코시프트
+645
+Reflect
+리플렉터
+646
+Rest
+잠자기
+647
+Role Play
+역할
+648
+Skill Swap
+스킬스웹
+649
+Speed Swap
+스피드스웹
+650
+Telekinesis
+텔레키네시스
+651
+Teleport
+순간이동
+652
+Trick
+트릭
+653
+Trick Room
+트릭룸
+654
+Wonder Room
+원더룸
+655
+Magic Powder
+마법가루
+656
+Expanding Force
+와이드포스
+657
+Eerie Spell
+섬뜩한주문
+658
+Freezing Glare
+얼어붙는시선
+659
+Head Smash
+양날박치기
+660
+Rock Wrecker
+암석포
+661
+Diamond Storm
+다이아스톰
+662
+Stone Edge
+스톤에지
+663
+Power Gem
+파워젬
+664
+Rock Slide
+스톤샤워
+665
+Ancient Power
+원시의힘
+666
+Rock Tomb
+암석봉인
+667
+Rock Throw
+돌떨구기
+668
+Smack Down
+떨어뜨리기
+669
+Accelerock
+액셀록
+670
+Rollout
+구르기
+671
+Rock Blast
+락블레스트
+672
+Rock Polish
+록커트
+673
+Sandstorm
+모래바람
+674
+Stealth Rock
+스텔스록
+675
+Wide Guard
+와이드가드
+676
+Tar Shot
+타르숏
+677
+Meteor Beam
+메테오빔
+678
+Doom Desire
+파멸의소원
+679
+Iron Tail
+아이언테일
+680
+Sunsteel Strike
+메테오드라이브
+681
+Meteor Mash
+코멧펀치
+682
+Anchor Shot
+앵커숏
+683
+Flash Cannon
+러스터캐논
+684
+Iron Head
+아이언헤드
+685
+Smart Strike
+스마트호른
+686
+Steel Wing
+강철날개
+687
+Double Iron Bash
+더블펀처
+688
+Mirror Shot
+미러숏
+689
+Magnet Bomb
+마그넷봄
+690
+Gear Grind
+기어소서
+691
+Metal Claw
+메탈크로우
+692
+Bullet Punch
+불릿펀치
+693
+Gyro Ball
+자이로볼
+694
+Heavy Slam
+헤비봄버
+695
+Metal Burst
+메탈버스트
+696
+Autotomize
+바디퍼지
+697
+Gear Up
+어시스트기어
+698
+Iron Defense
+철벽
+699
+King's Shield
+킹실드
+700
+Metal Sound
+금속음
+701
+Shift Gear
+기어체인지
+702
+Behemoth Bash
+거수탄
+703
+Behemoth Blade
+거수참
+704
+Steel Roller
+아이언롤러
+705
+Steel Beam
+철제광선
+706
+Hydro Cannon
+하이드로캐논
+707
+Water Spout
+해수스파우팅
+708
+Hydro Pump
+하이드로펌프
+709
+Origin Pulse
+근원의파동
+710
+Steam Eruption
+스팀버스트
+711
+Crabhammer
+찝게햄머
+712
+Aqua Tail
+아쿠아테일
+713
+Muddy Water
+탁류
+714
+Sparkling Aria
+물거품아리아
+715
+Surf
+파도타기
+716
+Liquidation
+아쿠아브레이크
+717
+Dive
+다이빙
+718
+Scald
+열탕
+719
+Water Pledge
+물의맹세
+720
+Waterfall
+폭포오르기
+721
+Razor Shell
+셸블레이드
+722
+Brine
+소금물
+723
+Bubble Beam
+거품광선
+724
+Octazooka
+대포무노포
+725
+Water Pulse
+물의파동
+726
+Aqua Jet
+아쿠아제트
+727
+Bubble
+거품
+728
+Water Gun
+물대포
+729
+Clamp
+껍질끼우기
+730
+Whirlpool
+바다회오리
+731
+Water Shuriken
+물수리검
+732
+Aqua Ring
+아쿠아링
+733
+Rain Dance
+비바라기
+734
+Soak
+물붓기
+735
+Water Sport
+물놀이
+736
+Withdraw
+껍질에숨기
+737
+Snipe Shot
+노려맞히기
+738
+Fishious Rend
+아가미물기
+739
+Life Dew
+생명의물방울
+740
+Surging Strikes
+수류연타
+741
+Flip Turn
+퀵턴
+742
+Hidden Power
+잠재파워
