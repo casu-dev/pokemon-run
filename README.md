@@ -9,15 +9,16 @@
 - Option to train against bosses
 
 ## Open tickets
-- [ ] Fix the room indicator: Gary shall have Gary sprite and Boss shall have coresponding Boss sprite
+- [ ] Fix the room indicator: Gary shall have Gary sprite
 - [ ] Implement code structure for achievements
 - [ ] Define achievements and rewards
 - [ ] Place easter eggs
 - [ ] Implement difficulty options normal/hard
-- [ ] Offer 3 TMs, 2 Mints, 1 Earnable item on Sale.
+- [ ] Gittiehab: Fix U-turn move descriptio in TM Shop
 
 
 ## Closed tickets
 - [x] Implement language option for moves
 - [x] Fix sprite size of: PACHIRISU FLOATZEL TORCHIC WOBUFFET
 - [x] Fix text errors
+- [x] Offer some TMs and Mints on sale. Add earnable items.
