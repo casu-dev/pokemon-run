@@ -210,27 +210,83 @@ def pbOfferUsableMegaStones
     end
 end
 
-def pbSetMartPrices
-  items_cheap = %w[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM48 TM65 TR01 TR48]
-  items_cheap.each do |i|
-    setPrice(i, 500, 0)
-  end
+def pbRollMintSale
+    mints = %i[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
+    return rand(mints.length)
+end
 
-  items_normal = %w[TM39 TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28 TR32 TR33 TR39 TR47 TR49 TR58 TR62 TR64 TR65 TR70
+def pbGetMints(saleSlot)
+    mints = %i[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
+    mints.each do |i|
+        setPrice(i, 1500, 0)
+    end
+
+    saleMint = mints[saleSlot]
+    oldPrice = $game_temp.mart_prices[saleMint][0]
+    newPrice = ((oldPrice * 0.5).ceil).to_i
+    setPrice(saleMint, newPrice, 0)
+    tempArray = [saleMint]
+    mints -= tempArray
+    reorderedMints = []
+    reorderedMints.push(saleMint)
+    reorderedMints += mints
+
+    return reorderedMints
+end
+
+def pbRollTmSale
+tms = %i[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM48 TM65 TR01 TR48 TM39 TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28
+         TR32 TR33 TR39 TR47 TR49 TR58 TR62 TR64 TR65 TR70 TR74 TR75 TR90 TR92 TR99 TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR68 TR84]
+
+    itemSlots = []
+    (0...tms.length).each do |i|
+        itemSlots.push(i)
+    end
+    itemSlots = itemSlots.shuffle
+
+    saleItemCount = 5
+    saleSlots = []
+    (0...saleItemCount).each do |i|
+        saleSlots.push(itemSlots[i])
+    end
+    saleSlots = saleSlots.sort
+    return saleSlots
+end
+
+def pbGetTms(saleSlots)
+    items_cheap = %i[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM48 TM65 TR01 TR48]
+    items_cheap.each do |i|
+        setPrice(i, 500, 0)
+    end
+
+    items_normal = %i[TM39 TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28 TR32 TR33 TR39 TR47 TR49 TR58 TR62 TR64 TR65 TR70
                     TR74 TR75 TR90 TR92 TR99]
-  items_normal.each do |i|
-    setPrice(i, 1000, 0)
-  end
+    items_normal.each do |i|
+        setPrice(i, 1000, 0)
+    end
 
-  items_expensive = %w[TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR68 TR84]
-  items_expensive.each do |i|
-    setPrice(i, 1500, 0)
-  end
+    items_expensive = %i[TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR68 TR84]
+    items_expensive.each do |i|
+        setPrice(i, 1500, 0)
+    end
 
-  items_insane = %w[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
-  items_insane.each do |i|
-    setPrice(i, 1500, 0)
-  end
+    tms = %i[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM48 TM65 TR01 TR48 TM39 TM43 TM92 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR22 TR28
+         TR32 TR33 TR39 TR47 TR49 TR58 TR62 TR64 TR65 TR70 TR74 TR75 TR90 TR92 TR99 TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR68 TR84]
+
+    reorderedTms = []
+
+    saleSlots.each do |i|
+        myItem = tms[i]
+        oldPrice = $game_temp.mart_prices[myItem][0]
+        newPrice = ((oldPrice * 0.7).ceil).to_i
+        setPrice(myItem, newPrice, 0)
+        reorderedTms.push(myItem)
+    end
+
+    reorderedTms = reorderedTms.clone
+    tms -= reorderedTms
+    reorderedTms += tms
+    return reorderedTms
 end
 
 def pbGetMegaStones(pkmn)
