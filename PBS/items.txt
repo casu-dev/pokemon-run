@@ -753,7 +753,7 @@
 731,TR32,TR32,TR32s,4,6000,"The user crunches up the target with sharp fangs. This may also lower the target's Defense stat.",3,0,0,CRUNCH
 732,TR33,TR33,TR33s,4,6000,"The user hurls a shadowy blob at the target. This may also lower the target's Sp. Def stat.",3,0,0,SHADOWBALL
 733,TR34,TR34,TR34s,4,6000,"Two turns after this move is used, a hunk of psychic energy attacks the target.",3,0,0,FUTURESIGHT
-734,TR35,TR35,TR35s,4,6000,"The user whips up a vicious tornado to tear at opposing Pokémon. This may also make them flinch.",3,0,0,UPROAR
+734,TR35,TR35,TR35s,4,6000,"The user attacks in an uproar for three turns. Over that time, no one can fall asleep.",3,0,0,UPROAR
 735,TR36,TR36,TR36s,4,10000,"The user attacks by exhaling hot breath on opposing Pokémon. This may also leave those Pokémon with a burn.",3,0,0,HEATWAVE
 736,TR37,TR37,TR37s,4,4000,"The target is taunted into a rage that allows it to use only attack moves for three turns.",3,0,0,TAUNT
 737,TR38,TR38,TR38s,4,4000,"The user catches the target off guard and swaps its held item with its own.",3,0,0,TRICK
