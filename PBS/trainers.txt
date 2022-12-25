@@ -190,94 +190,147 @@ Pokemon = PETILIL,16
 #-------------------------------
 [BLACKBELT,Bruce,7]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = DRIFLOON,32
-    Item = EVIOLITE
+Pokemon = BALTOY,16
 #-------------------------------
 [BLACKBELT,Bruce,8]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = SLUGMA,32
-    Item = EVIOLITE
+Pokemon = UNOWN,16
 #-------------------------------
 [BLACKBELT,Bruce,9]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = SLOWPOKE,32
-    Item = EVIOLITE
+Pokemon = UNOWN,16
 #-------------------------------
 [BLACKBELT,Bruce,10]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = KOFFING,32
+Pokemon = DRIFLOON,32
     Item = EVIOLITE
 #-------------------------------
 [BLACKBELT,Bruce,11]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = RHYHORN,32
+Pokemon = SLUGMA,32
     Item = EVIOLITE
 #-------------------------------
 [BLACKBELT,Bruce,12]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = GLOOM,32
+Pokemon = SLOWPOKE,32
+    Item = EVIOLITE
 #-------------------------------
 [BLACKBELT,Bruce,13]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = PETILIL,32
+Pokemon = KOFFING,32
     Item = EVIOLITE
 #-------------------------------
 [BLACKBELT,Bruce,14]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = DRIFBLIM,63
+Pokemon = RHYHORN,32
+    Item = EVIOLITE
 #-------------------------------
 [BLACKBELT,Bruce,15]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = MAGCARGO,63
+Pokemon = GLOOM,32
 #-------------------------------
 [BLACKBELT,Bruce,16]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = SLOWKING,63
+Pokemon = PETILIL,32
+    Item = EVIOLITE
 #-------------------------------
 [BLACKBELT,Bruce,17]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = WEEZING,63
+Pokemon = BALTOY,32
+    Item = EVIOLITE
 #-------------------------------
 [BLACKBELT,Bruce,18]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,32
+#-------------------------------
+[BLACKBELT,Bruce,19]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,32
+#-------------------------------
+[BLACKBELT,Bruce,20]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = DRIFBLIM,63
+#-------------------------------
+[BLACKBELT,Bruce,21]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = MAGCARGO,63
+#-------------------------------
+[BLACKBELT,Bruce,22]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = SLOWKING,63
+#-------------------------------
+[BLACKBELT,Bruce,23]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = WEEZING,63
+#-------------------------------
+[BLACKBELT,Bruce,24]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = RHYDON,63
     Item = EVIOLITE
 #-------------------------------
-[BLACKBELT,Bruce,19]
+[BLACKBELT,Bruce,25]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = VILEPLUME,63
 #-------------------------------
-[BLACKBELT,Bruce,20]
+[BLACKBELT,Bruce,26]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = LILLIGANT,63
 #-------------------------------
-[BLACKBELT,Bruce,21]
+[BLACKBELT,Bruce,27]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = CLAYDOL,63
+#-------------------------------
+[BLACKBELT,Bruce,28]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,63
+Item = CHOICESPECS
+#-------------------------------
+[BLACKBELT,Bruce,29]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,63
+Item = CHOICESPECS
+#-------------------------------
+[BLACKBELT,Bruce,30]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = DRIFBLIM,95
 #-------------------------------
-[BLACKBELT,Bruce,22]
+[BLACKBELT,Bruce,31]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = MAGCARGO,95
 #-------------------------------
-[BLACKBELT,Bruce,23]
+[BLACKBELT,Bruce,32]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = SLOWKING,95
 #-------------------------------
-[BLACKBELT,Bruce,24]
+[BLACKBELT,Bruce,33]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = WEEZING,95
 #-------------------------------
-[BLACKBELT,Bruce,25]
+[BLACKBELT,Bruce,34]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = RHYPERIOR,95
 #-------------------------------
-[BLACKBELT,Bruce,26]
+[BLACKBELT,Bruce,35]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = VILEPLUME,95
 #-------------------------------
-[BLACKBELT,Bruce,27]
+[BLACKBELT,Bruce,36]
 LoseText = "Wow! I'm impressed. Here, take your reward."
 Pokemon = LILLIGANT,95
+#-------------------------------
+[BLACKBELT,Bruce,37]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = CLAYDOL,95
+#-------------------------------
+[BLACKBELT,Bruce,38]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,95
+Item = CHOICESPECS
+#-------------------------------
+[BLACKBELT,Bruce,39]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,95
+Item = CHOICESPECS
 #-------------------------------
 [ROCKETBOSS,Elite Trainerr]
 LoseText = "A good battle indeed!"

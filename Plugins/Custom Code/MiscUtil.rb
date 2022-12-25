@@ -406,6 +406,7 @@ def pbChangeAllPkmnEv
   end
 end
 
+#unused?
 def pbFighterBattleDialog
   stages_cleared = pbGet(48)
   speech = nil
