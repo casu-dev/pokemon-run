@@ -1,30 +1,31 @@
-TRAINER_OVERRIDE = [
+def pbGetTRAINER_OVERRIDE
+ return [
   # ====== TRAINER =========
   {
     # Trainer F1
     tType: :YOUNGSTER, tName: 'Trainer',
-    lvl1: 10, lvl2: 12, numPkmn: 2,
+    lvl1: pbGetLvTrainer, lvl2: pbGetLvTrainer, numPkmn: 2,
     pkmnPool: getF1StdTrainerPool,
     LoseText: "..."
   },
   {
     # Trainer F2
     tType: :LASS, tName: 'Trainer',
-    lvl1: 25, lvl2: 28, numPkmn: 3,
+    lvl1: pbGetLvTrainer, lvl2: pbGetLvTrainer, numPkmn: 3,
     pkmnPool: getOak5Merged6,
     LoseText: "..."
   },
   {
     # Trainer F3
     tType: :COOLTRAINER_F, tName: 'Trainer',
-    lvl1: 53, lvl2: 55, numPkmn: 3,
+    lvl1: pbGetLvTrainer, lvl2: pbGetLvTrainer, numPkmn: 3,
     pkmnPool: getOak8Merged9,
     LoseText: "..."
   },
   {
     # Trainer F4
     tType: :BIKER, tName: 'Trainer',
-    lvl1: 80, lvl2: 85, numPkmn: 4,
+    lvl1: pbGetLvTrainer, lvl2: pbGetLvTrainer, numPkmn: 4,
     pkmnPool: getOakPool10,
     LoseText: "..."
   },
@@ -32,28 +33,28 @@ TRAINER_OVERRIDE = [
   {
     # Elite F1
     tType: :GENTLEMAN, tName: 'Elite Trainer',
-    lvl1: 13, lvl2: 14, numPkmn: 2,
+    lvl1: pbGetLvElite, lvl2: pbGetLvElite, numPkmn: 2,
     pkmnPool: getF1EliteTrainerPool,
     LoseText: "..."
   },
   {
     # Elite F2
     tType: :LADY, tName: 'Elite Trainer',
-    lvl1: 28, lvl2: 29, numPkmn: 3,
+    lvl1: pbGetLvElite, lvl2: pbGetLvElite, numPkmn: 3,
     pkmnPool: getOakPool7,
     LoseText: "..."
   },
   {
     # Elite F3
     tType: :BEAUTY, tName: 'Elite Trainer',
-    lvl1: 57, lvl2: 58, numPkmn: 3,
+    lvl1: pbGetLvElite, lvl2: pbGetLvElite, numPkmn: 3,
     pkmnPool: getOakPool10,
     LoseText: "..."
   },
   {
     # Elite F4
     tType: :GAMBLER, tName: 'Elite Trainer',
-    lvl1: 89, lvl2: 90, numPkmn: 4,
+    lvl1: pbGetLvElite, lvl2: pbGetLvElite, numPkmn: 4,
     pkmnPool: getOakPool11,
     LoseText: "..."
   },
@@ -61,28 +62,28 @@ TRAINER_OVERRIDE = [
   {
     # Middle Boss F1
     tType: :RIVAL1, tName: 'Gary',
-    lvl1: 12, lvl2: 12, numPkmn: 2,
+    lvl1: pbGetLvMiddle, lvl2: pbGetLvMiddle, numPkmn: 2,
     pkmnPool: getF1EliteTrainerPool,
     LoseText: "I will get you next time!"
   },
   {
     # Middle Boss F2
     tType: :RIVAL1, tName: 'Gary',
-    lvl1: 30, lvl2: 30, numPkmn: 3,
+    lvl1: pbGetLvMiddle, lvl2: pbGetLvMiddle, numPkmn: 3,
     pkmnPool: getOakPool7,
     LoseText: "You didn't have to win so convincingly!"
   },
   {
     # Middle Boss F3
     tType: :RIVAL1, tName: 'Gary',
-    lvl1: 60, lvl2: 60, numPkmn: 4,
+    lvl1: pbGetLvMiddle, lvl2: pbGetLvMiddle, numPkmn: 4,
     pkmnPool: getOakPool10,
     LoseText: "Aw man..."
   },
   {
     # Middle Boss F4
     tType: :RIVAL1, tName: 'Gary',
-    lvl1: 88, lvl2: 88, numPkmn: 4,
+    lvl1: pbGetLvMiddle, lvl2: pbGetLvMiddle, numPkmn: 4,
     pkmnPool: getOakPool11,
     LoseText: "I'm never lucky..."
   },
@@ -90,28 +91,28 @@ TRAINER_OVERRIDE = [
     {
       # Rocket Grunt F1
       tType: :TEAMROCKET_M, tName: 'Grunt',
-      lvl1: 11, lvl2: 13, numPkmn: 3,
+      lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
       pkmnPool: getF1StdTrainerPool,
       LoseText: "gruntF1"
     },
     {
       # Rocket Grunt F2
       tType: :TEAMROCKET_M, tName: 'Grunt',
-      lvl1: 28, lvl2: 30, numPkmn: 3,
+      lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
       pkmnPool: getOakPool6,
       LoseText: "gruntF2"
     },
     {
       # Rocket Grunt F3
       tType: :TEAMROCKET_M, tName: 'Grunt',
-      lvl1: 55, lvl2: 57, numPkmn: 3,
+      lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
       pkmnPool: getOakPool8,
       LoseText: "gruntF3"
     },
     {
       # Rocket Grunt F4
       tType: :TEAMROCKET_M, tName: 'Grunt',
-      lvl1: 85, lvl2: 87, numPkmn: 3,
+      lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
       pkmnPool: getOakPool10,
       LoseText: "gruntF4"
     },
@@ -119,32 +120,62 @@ TRAINER_OVERRIDE = [
       {
         # Rocket Grunt F1
         tType: :TEAMROCKET_M, tName: 'Grunt',
-        lvl1: 11, lvl2: 13, numPkmn: 3,
+        lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
         pkmnPool: getF1StdTrainerPool,
         LoseText: "gruntF1LW"
       },
       {
         # Rocket Grunt F2
         tType: :TEAMROCKET_M, tName: 'Grunt',
-        lvl1: 28, lvl2: 30, numPkmn: 3,
+        lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
         pkmnPool: getOakPoolLW5,
         LoseText: "gruntF2LW"
       },
       {
         # Rocket Grunt F3
         tType: :TEAMROCKET_M, tName: 'Grunt',
-        lvl1: 55, lvl2: 57, numPkmn: 3,
+        lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
         pkmnPool: getOakPoolLW6,
         LoseText: "gruntF3LW"
       },
       {
         # Rocket Grunt F4
         tType: :TEAMROCKET_M, tName: 'Grunt',
-        lvl1: 85, lvl2: 87, numPkmn: 3,
+        lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
         pkmnPool: getOakPoolLW7,
         LoseText: "gruntF4LW"
       },
+  # ====== Floor Bosses =========
+      {
+        # Boss F1
+        tType: :ELITEFOUR_Bruno, tName: 'Bruno',
+        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 3,
+        pkmnPool: getF1StdTrainerPool,
+        LoseText: "GG WP"
+      },
+      {
+        # Boss F2
+        tType: :ELITEFOUR_Agatha, tName: 'Agatha',
+        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 3,
+        pkmnPool: getOakPoolLW5,
+        LoseText: "GG WP"
+      },
+      {
+        # Boss F3
+        tType: :LEADER_Misty, tName: 'Misty',
+        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 3,
+        pkmnPool: getOakPoolLW6,
+        LoseText: "GG WP"
+      },
+      {
+        # Boss F4
+        tType: :ELITEFOUR_Lance, tName: 'Lance',
+        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 3,
+        pkmnPool: getOakPoolLW7,
+        LoseText: "GG WP"
+      },
 ]
+end
 
 TRAINER_INTRO_TEXT = [
   ['I was given 5$ to stop you.', 'I just caught these. Let\'s see how strong they are.',
@@ -162,47 +193,54 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
   return unless trainer_list
 
   trainer_list.each do |trainer|
-    template = TRAINER_OVERRIDE.find { |i| i[:tType] == trainer.trainer_type and i[:tName] == trainer.name and trainer.lose_text == i[:LoseText]}
+    template = pbGetTRAINER_OVERRIDE.find { |i| i[:tType] == trainer.trainer_type and i[:tName] == trainer.name and trainer.lose_text == i[:LoseText]}
     next unless template # Do nothing if no override was found
 
     # Determin lvl
     lvl = template[:lvl1]
     lvl = template[:lvl2] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+    blacklist = %i[ELITEFOUR_Bruno ELITEFOUR_Agatha LEADER_Misty ELITEFOUR_Lance]
 
-    # Generate Party
-    newParty = []
-    alreadyPicked = []
-    while newParty.length < template[:numPkmn]
-      pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }
-      new_species = pkmnPool[rand(pkmnPool.length)]
-
-      alreadyPicked.push(new_species)
-      newParty.push(Pokemon.new(new_species, lvl))
-    end
-
-    # Replace first Pokemon with a Mega Pokemon if on F4 Middle Floor Trainer or Elite Trainer map
-    if (($game_map.map_id == 108) || ($game_map.map_id == 105))
-        newPartyIDs = []
-        newParty.each do |pkmn|
-            newPartyIDs.push(pkmn.species) if pkmn.species
+    if blacklist.include?(template[:tType])
+        trainer.party.each do |pkmn|
+            pkmn.level = lvl
         end
-        pool = getOakMegas
-        pool -= newPartyIDs
-        megaPkmnID = pbChooseRandomPokemon(whiteList: pool)
-        megaPkmn = Pokemon.new(megaPkmnID, lvl)
-        megaStones = pbGetMegaStones(megaPkmn)
-        megaPkmn.item = megaStones[rand(megaStones.length)]
-        newParty[0] = megaPkmn if newParty[0]
+    else
+        # Generate Party
+        newParty = []
+        alreadyPicked = []
+        while newParty.length < template[:numPkmn]
+          pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }
+          new_species = pkmnPool[rand(pkmnPool.length)]
+
+          alreadyPicked.push(new_species)
+          newParty.push(Pokemon.new(new_species, lvl))
+        end
+
+        # Replace first Pokemon with a Mega Pokemon if on F4 Middle Floor Trainer or Elite Trainer map
+        if (($game_map.map_id == 108) || ($game_map.map_id == 105))
+            newPartyIDs = []
+            newParty.each do |pkmn|
+                newPartyIDs.push(pkmn.species) if pkmn.species
+            end
+            pool = getOakMegas
+            pool -= newPartyIDs
+            megaPkmnID = pbChooseRandomPokemon(whiteList: pool)
+            megaPkmn = Pokemon.new(megaPkmnID, lvl)
+            megaStones = pbGetMegaStones(megaPkmn)
+            megaPkmn.item = megaStones[rand(megaStones.length)]
+            newParty[0] = megaPkmn if newParty[0]
+        end
+
+        trainer.party = newParty
+        trainer.lose_text = TRAINER_LOOSE_TEXT.sample if trainer.lose_text == "..."
+        trainer.lose_text = "..." if trainer.trainer_type.to_s == "TEAMROCKET_M"
+
+        # Preperation steal Pokémon
+        pbSet(44, trainer.party.dup)
+
+        echoln 'Generated trainer party: ' + newParty.to_s
     end
-
-    trainer.party = newParty
-    trainer.lose_text = TRAINER_LOOSE_TEXT.sample if trainer.lose_text == "..."
-    trainer.lose_text = "..." if trainer.trainer_type.to_s == "TEAMROCKET_M"
-
-    # Preperation steal Pokémon
-    pbSet(44, trainer.party.dup)
-
-    echoln 'Generated trainer party: ' + newParty.to_s
   end
 }
 
@@ -224,7 +262,7 @@ def pbDisplayBossTeam(template, trainerID, trainerName)
   party = trainer.party.each do |pkmn|
     spec = GameData::Species.try_get(pkmn.species)
     pkmnList += spec.real_name.to_s + ' '
-  end  
+  end
 
   msg = ""
   # F1 Boss

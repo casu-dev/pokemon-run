@@ -77,11 +77,6 @@ Pokemon = MAGIKARP,18
 LoseText = "..."
 Pokemon = SKITTY,18
 #-------------------------------
-[LASS,Crissy]
-LoseText = "..."
-Pokemon = PLUSLE,17
-Pokemon = MINUN,17
-#-------------------------------
 [COOLCOUPLE,Alice & Bob]
 LoseText = "Our teamwork failed!"
 Pokemon = TURTWIG,19
@@ -346,20 +341,6 @@ Pokemon = MUNNA,14
 Pokemon = RUFFLET,14
     AbilityIndex = 1
 #-------------------------------
-[GENTLEMAN,Elite Trainer,1]
-LoseText = "A good battle indeed!"
-Pokemon = MUNNA,14
-    AbilityIndex = 1
-Pokemon = MUNCHLAX,14
-    AbilityIndex = 1
-#-------------------------------
-[GENTLEMAN,Elite Trainer,2]
-LoseText = "A good battle indeed!"
-Pokemon = MUNNA,14
-    AbilityIndex = 1
-Pokemon = PORYGON,14
-    AbilityIndex = 0
-#-------------------------------
 [TEAMROCKET_M,Grunt]
 LoseText = "gruntF1"
 Pokemon = MANKEY,12
@@ -451,23 +432,6 @@ Pokemon = MAWILE,29
 Pokemon = CORSOLA,29
 Pokemon = CHIMECHO,29
 #-------------------------------
-[LADY,Elite Trainer,1]
-LoseText = "A good battle indeed!"
-Pokemon = KINGLER,29
-    AbilityIndex = 2
-Pokemon = TORKOAL,29
-    AbilityIndex = 2
-Pokemon = TANGELA,29
-    AbilityIndex = 0
-#-------------------------------
-[LADY,Elite Trainer,2]
-LoseText = "A good battle indeed!"
-Pokemon = WIGGLYTUFF,29
-Pokemon = TROPIUS,29
-    AbilityIndex = 0
-Pokemon = GIRAFARIG,29
-    AbilityIndex = 0
-#-------------------------------
 [TEAMROCKET_F,Grunt]
 LoseText = "Wow! I'm impressed."
 Pokemon = CLEFAIRY,28
@@ -540,21 +504,6 @@ LoseText = "..."
 Pokemon = TYRANITAR,58
 Pokemon = JELLICENT,58
 Pokemon = CROBAT,58
-#-------------------------------
-[BEAUTY,Elite Trainer,1]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = DRAGONITE,58
-    AbilityIndex = 2
-Pokemon = TENTACRUEL,58
-Pokemon = HIPPOWDON,58
-#-------------------------------
-[BEAUTY,Elite Trainer,2]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = GARCHOMP,58
-    AbilityIndex = 2
-Pokemon = SCIZOR,58
-    AbilityIndex = 1
-Pokemon = SLOWBRO,58
 #-------------------------------
 [ROCKETBOSS,Giovanni]
 LoseText = "Wow! You are way stronger than I thought."
@@ -657,28 +606,6 @@ Pokemon = REUNICLUS,88
 Pokemon = GLISCOR,88
     AbilityIndex = 1
 Pokemon = VENUSAUR,88
-#-------------------------------
-[GAMBLER,Elite Trainer,1]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = AGGRON,88
-    AbilityIndex = 0
-    Item = AGGRONITE
-Pokemon = JELLICENT,88
-    AbilityIndex = 1
-Pokemon = MAMOSWINE,88
-    AbilityIndex = 2
-Pokemon = CLEFABLE,88
-    AbilityIndex = 2
-#-------------------------------
-[GAMBLER,Elite Trainer,2]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = ALTARIA,88
-    AbilityIndex = 2
-    Item = ALTARIANITE
-Pokemon = HIPPOWDON,88
-Pokemon = GENGAR,88
-Pokemon = SCIZOR,88
-    AbilityIndex = 1
 #-------------------------------
 [LEADER_Giovanni,Giovanni]
 LoseText = "Well played, I'm impressed. Take this as a gift."

@@ -620,7 +620,40 @@ def pbIncreaseF3CompletionCount
     pbMessage(_INTL("You unlocked \\c[10]all Starter Pokémon\\c[0].")) if (old+2) == pbGetStarters(:GRASS).length
 end
 
-def pbChoseMode
+def pbGetDifficulties
+    return %w[Easy Normal Hard]
+end
+
+def pbChooseDifficulty
+    difficulties = pbGetDifficulties
+    normalIndex = 0
+    (0...difficulties.length).each do |i|
+        normalIndex = i if (difficulties[i] == "Normal")
+    end
+    speech = nil
+    cmd2 = pbMessage(speech || _INTL('Choose the games difficulty.'), difficulties)
+
+    loop do
+        if cmd2 == 0
+            pbWriteIntoFile("difficulty.txt", cmd2-normalIndex)
+            pbPlaySaveSound
+            pbMessage(_INTL("Difficulty set to \\c[10]"+ difficulties[cmd2] +"\\c[0]."))
+            break
+        elsif cmd2 == 1
+             pbWriteIntoFile("difficulty.txt", cmd2-normalIndex)
+             pbPlaySaveSound
+             pbMessage(_INTL("Difficulty set to \\c[10]"+ difficulties[cmd2] +"\\c[0]."))
+             break
+        elsif cmd2 == 2
+            pbWriteIntoFile("difficulty.txt", cmd2-normalIndex)
+            pbPlaySaveSound
+            pbMessage(_INTL("Difficulty set to \\c[10]"+ difficulties[cmd2] +"\\c[0]."))
+            break
+        end
+    end
+end
+
+def pbChooseMode
     completionCounter = pbReadFile("runcompletedcount.txt").to_i
     if (completionCounter > 0)
         modes = pbGetGameModes
@@ -1095,10 +1128,238 @@ def pbTypeBoost(moveType)
     return factor
 end
 
+def pbGetDifficulty
+    return pbReadFile("difficulty.txt").to_i if pbReadFile("difficulty.txt")
+end
+
+def pbSetDifficulty(difficultyIndex)
+    pbWriteIntoFile("difficulty.txt", difficultyIndex)
+end
+
 def pbGetGameMode
     return pbReadFile("gamemode.txt").to_i if pbReadFile("gamemode.txt")
 end
 
+def pbGetLvTrainer
+    difficulty = pbGetDifficulty
+    floor = pbGet(48) + 1
+    #hard
+    if difficulty == 1
+        if floor == 1
+            return POKEMON_FLOOR_START_LEVEL[floor-1] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return 12
+        elsif floor == 2
+            return POKEMON_FLOOR_START_LEVEL[floor-1] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return 28
+        elsif floor == 3
+            return POKEMON_FLOOR_START_LEVEL[floor-1] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return 55
+        else
+            return POKEMON_FLOOR_START_LEVEL[floor-1] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return 85
+        end
+    #normal
+    elsif difficulty == 0
+        if floor == 1
+                return 12 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 10
+            elsif floor == 2
+                return 28 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 25
+            elsif floor == 3
+                return 55 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 53
+            else
+                return 85 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 80
+            end
+    #easy
+    elsif difficulty == -1
+        if floor == 1
+                return 10
+            elsif floor == 2
+                return 25
+            elsif floor == 3
+                return 53
+            else
+                return 80
+            end
+    end
+end
+
+def pbGetLvElite
+    difficulty = pbGetDifficulty
+    floor = pbGet(48) + 1
+    #hard
+    if difficulty == 1
+        if floor == 1
+            return 17 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return 14
+        elsif floor == 2
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+4 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return POKEMON_FLOOR_START_LEVEL[floor-1]
+        elsif floor == 3
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+5 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return POKEMON_FLOOR_START_LEVEL[floor-1]
+        else
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+5 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return POKEMON_FLOOR_START_LEVEL[floor-1]
+        end
+    #normal
+    elsif difficulty == 0
+        if floor == 1
+                return 14 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 13
+            elsif floor == 2
+                return 29 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 28
+            elsif floor == 3
+                return 58 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 57
+            else
+                return 90 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 89
+            end
+    #easy
+    elsif difficulty == -1
+        if floor == 1
+                return 12
+            elsif floor == 2
+                return 28
+            elsif floor == 3
+                return 55
+            else
+                return 85
+            end
+    end
+end
+
+def pbGetLvMiddle
+    difficulty = pbGetDifficulty
+    floor = pbGet(48) + 1
+    #hard
+    if difficulty == 1
+        if floor == 1
+            return POKEMON_FLOOR_START_LEVEL[floor-1]-1
+        elsif floor == 2
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+2
+        elsif floor == 3
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+2
+        else
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+2
+        end
+    #normal
+    elsif difficulty == 0
+        if floor == 1
+                return 12
+            elsif floor == 2
+                return 30
+            elsif floor == 3
+                return 60
+            else
+                return 88
+            end
+    #easy
+    elsif difficulty == -1
+        if floor == 1
+                return 11
+            elsif floor == 2
+                return 28
+            elsif floor == 3
+                return 55
+            else
+                return 83
+            end
+    end
+end
+
+def pbGetLvGrunt
+    difficulty = pbGetDifficulty
+    floor = pbGet(48) + 1
+    #hard
+    if difficulty == 1
+        if floor == 1
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+1 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return 13
+        elsif floor == 2
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+2 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return 29
+        elsif floor == 3
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+2 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return 57
+        else
+            return POKEMON_FLOOR_START_LEVEL[floor-1]+2 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+            return 87
+        end
+    #normal
+    elsif difficulty == 0
+        if floor == 1
+                return 13 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 11
+            elsif floor == 2
+                return 30 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 28
+            elsif floor == 3
+                return 57 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 55
+            else
+                return 87 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
+                return 85
+            end
+    #easy
+    elsif difficulty == -1
+        if floor == 1
+                return 10
+            elsif floor == 2
+                return 25
+            elsif floor == 3
+                return 53
+            else
+                return 80
+            end
+    end
+end
+
+def pbGetBossLv
+    difficulty = pbGetDifficulty
+    floor = pbGet(48) + 1
+    #hard
+    if difficulty == 1
+        return 96 if !$Trainer
+        return 96 if !$Trainer.party
+        lv = 0
+        $Trainer.party.each do |pkmn|
+            lv += pkmn.level
+        end
+        lv = ((lv/($Trainer.party.length))+5).round(half: :up)
+        lv = 100 if lv > 100
+        return lv
+    #normal
+    elsif difficulty == 0
+        if floor == 1
+                return 16
+            elsif floor == 2
+                return 32
+            elsif floor == 3
+                return 60
+            else
+                return 92
+            end
+    #easy
+    elsif difficulty == -1
+        if floor == 1
+                return 14
+            elsif floor == 2
+                return 29
+            elsif floor == 3
+                return 56
+            else
+                return 87
+            end
+    end
+
+end
+
 def pbScout
-pbAddPokemon(:AEGISLASH, 20)
+    pbAddPokemon(:AEGISLASH, 20)
 end
