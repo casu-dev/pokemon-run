@@ -568,6 +568,16 @@ def pbPrepline(line)
            return line
 end
 
+def pbFileExists?(filename)
+    path = if File.directory?(System.data_directory)
+                System.data_directory + '/' + filename
+              else
+                './' + filename
+              end
+    return false if !File.exists?(path)
+    return true
+end
+
 def pbReadFile(filename)
     path = if File.directory?(System.data_directory)
                 System.data_directory + '/' + filename
