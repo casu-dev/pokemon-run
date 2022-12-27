@@ -631,7 +631,7 @@ def pbChooseDifficulty
         normalIndex = i if (difficulties[i] == "Normal")
     end
     speech = nil
-    cmd2 = pbMessage(speech || _INTL('Choose the games difficulty.'), difficulties)
+    cmd2 = pbMessage(speech || _INTL('\rChoose the games difficulty.'), difficulties)
 
     loop do
         if cmd2 == 0
@@ -668,7 +668,7 @@ def pbChooseMode
 
           speech = nil
           cmd2 = pbMessage(
-            speech || _INTL('Which game mode do you want to play?'), shownmodes)
+            speech || _INTL('\rWhich game mode do you want to play?'), shownmodes)
 
             loop do
                 if cmd2 == 0
@@ -1331,7 +1331,7 @@ def pbGetBossLv
         $Trainer.party.each do |pkmn|
             lv += pkmn.level
         end
-        lv = ((lv/($Trainer.party.length))+5).round(half: :up)
+        lv = ((lv.to_f/($Trainer.party.length)).round(half: :up)+5).to_i
         lv = 100 if lv > 100
         return lv
     #normal
