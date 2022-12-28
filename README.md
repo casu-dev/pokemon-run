@@ -19,6 +19,7 @@
 - [x] Implement language option for moves
 - [x] Fix sprite size of: PACHIRISU FLOATZEL TORCHIC WOBUFFET Staraptor
 - [x] Fix text errors
+- [x] Sale Items are highlighted
 - [x] Offer some TMs and Mints on sale. Add earnable items.
 - [x] Fix the room indicator: Gary shall have Gary sprite
 - [x] Implement difficulty options normal/hard
