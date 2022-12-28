@@ -1,17 +1,17 @@
 # Room definitions
 #MAP_CENTER = { id: 77, name: 'Poké Center', posx: 7, posy: 8, value: 0, weight: -1}
-MAP_PICK_POKEMON = { id: 88, name: 'Professor Oak', posx: 10, posy: 10, value: 15, weight: -1 }
-MAP_CENTER_WITH_OAK = { id: 112, name: 'Poké Center', posx: 7, posy: 8, value: 15, weight: -1 }
+MAP_PICK_POKEMON = { id: 88, name: 'Professor Oak', posx: 10, posy: 10, value: 15, weight: -1, sprite: "phone001"}
+MAP_CENTER_WITH_OAK = { id: 112, name: 'Poké Center', posx: 7, posy: 8, value: 15, weight: -1, sprite: "phone001" }
 
-MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 5, posy: 10, value: 10, weight: 10 }
-MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7, value: 5, weight: 20 }
-MAP_BLACK_BELT_BROTHERS = { id: 111, name: 'Earn Held Item', posx: 6, posy: 12, value: 40, weight: 10 }
-MAP_EGG_MOVE_RELEARNER = { id: 109, name: 'Buy Egg-Moves', posx: 10, posy: 14, value: 45, weight: 10 }
-MAP_GEMS = { id: 113, name: 'Gem Cave', posx: 10, posy: 11, value: 50, weight: 10 }
-MAP_BERRYS = { id: 114, name: 'Berry Granny', posx: 9, posy: 10, value: 55, weight: 10 }
-MAP_MONEY = { id: 115, name: 'Wishing Well', posx: 10, posy: 11, value: 60, weight: 10 }
-MAP_TM_SHOP = { id: 110, name: 'TM Shop', posx: 4, posy: 8, value: 65, weight: 20 }
-MAP_STEAL_POKE = { id: 116, name: 'Rocket Hideout', posx: 6, posy: 9, value: 70, weight: 5 }
+MAP_MOVE_RELEARNER = { id: 81, name: 'Move Relearner', posx: 5, posy: 10, value: 10, weight: 10, sprite: "NPC 06" }
+MAP_MART = { id: 48, name: 'Poké Mart', posx: 4, posy: 7, value: 5, weight: 20, sprite: "NPC 19" }
+MAP_BLACK_BELT_BROTHERS = { id: 111, name: 'Earn Held Item', posx: 6, posy: 12, value: 40, weight: 10, sprite: "trainer_BLACKBELT" }
+MAP_EGG_MOVE_RELEARNER = { id: 109, name: 'Buy Egg-Moves', posx: 10, posy: 14, value: 45, weight: 10, sprite: "trainer_RUINMANIAC" }
+MAP_GEMS = { id: 113, name: 'Gem Cave', posx: 10, posy: 11, value: 50, weight: 10, sprite: "skull_2:1" }
+MAP_BERRYS = { id: 114, name: 'Berry Granny', posx: 9, posy: 10, value: 55, weight: 10, sprite: "NPC 11" }
+MAP_MONEY = { id: 115, name: 'Wishing Well', posx: 10, posy: 11, value: 60, weight: 10, sprite: "skull_2:2" }
+MAP_TM_SHOP = { id: 110, name: 'TM Shop', posx: 4, posy: 8, value: 65, weight: 20, sprite: "trainer_SAILOR" }
+MAP_STEAL_POKE = { id: 116, name: 'Rocket Hideout', posx: 6, posy: 9, value: 70, weight: 5, sprite: "trainer_TEAMROCKET_M" }
 
 # Pool used for rolling random event
 MAP_EVENT_POOL = [
@@ -28,34 +28,34 @@ MAP_EVENT_POOL = [
 
 # Rooms that are different on each floor 
 MAP_BOSS_LIST = [
-  { id: 86, name: '1st Floor Boss', posx: 10, posy: 14, value: 20, weight: 10 }, # 1st floor
-  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 14, value: 20, weight: 10 }, # 2nd floor
-  { id: 100, name: '3rd Floor Boss', posx: 9, posy: 17, value: 20, weight: 10 }, # 3rd floor
-  { id: 106, name: 'Final Boss', posx: 9, posy: 17, value: 20, weight: 10 } # 4th floor
+  { id: 86, name: '1st Floor Boss', posx: 10, posy: 14, value: 20, weight: 10, sprite: "trainer_ELITEFOUR_Bruno" }, # 1st floor
+  { id: 95, name: '2nd Floor Boss', posx: 10, posy: 14, value: 20, weight: 10, sprite: "trainer_ELITEFOUR_Agatha" }, # 2nd floor
+  { id: 100, name: '3rd Floor Boss', posx: 9, posy: 17, value: 20, weight: 10, sprite: "trainer_LEADER_Misty" }, # 3rd floor
+  { id: 106, name: 'Final Boss', posx: 9, posy: 17, value: 20, weight: 10, sprite: "trainer_ELITEFOUR_Lance" } # 4th floor
 ]
 MAP_FIGHT_TRAINER_LIST = [
-  { id: 84, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 }, # 1st floor
-  { id: 93, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 }, # 2nd floor
-  { id: 101, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 }, # 3rd floor
-  { id: 107, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 } # 4th floor
+  { id: 84, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10, sprite: "trainer_YOUNGSTER" }, # 1st floor
+  { id: 93, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10, sprite: "trainer_LASS" }, # 2nd floor
+  { id: 101, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10, sprite: "trainer_COOLTRAINER_F" }, # 3rd floor
+  { id: 107, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10, sprite: "trainer_CUEBALL" } # 4th floor
 ]
 MAP_FIGHT_TRAINER_SINGLE_OPTION_LIST = [
-  { id: 117, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 }, # 1st floor
-  { id: 118, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 }, # 2nd floor
-  { id: 119, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 }, # 3rd floor
-  { id: 120, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10 } # 4th floor
+  { id: 117, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10, sprite: "trainer_YOUNGSTER" }, # 1st floor
+  { id: 118, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10, sprite: "trainer_LASS" }, # 2nd floor
+  { id: 119, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10, sprite: "trainer_COOLTRAINER_F" }, # 3rd floor
+  { id: 120, name: 'Fight a Trainer', posx: 10, posy: 11, value: 25, weight: 10, sprite: "trainer_CUEBALL" } # 4th floor
 ]
 MAP_FIGHT_ELITE_TRAINER_LIST = [
-  { id: 85, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10 }, # 1st floor
-  { id: 96, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10 }, # 2nd floor
-  { id: 102, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10 }, # 3rd floor
-  { id: 108, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10 } # 4th floor
+  { id: 85, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10, sprite: "trainer_GENTLEMAN" }, # 1st floor
+  { id: 96, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10, sprite: "trainer_GENTLEMAN" }, # 2nd floor
+  { id: 102, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10, sprite: "trainer_GENTLEMAN" }, # 3rd floor
+  { id: 108, name: 'Fight an Elite Trainer', posx: 10, posy: 11, value: 30, weight: 10, sprite: "trainer_GENTLEMAN" } # 4th floor
 ]
 MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
-  { id: 87, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10 }, # 1st floor
-  { id: 94, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10 }, # 2nd floor
-  { id: 99, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10 }, # 3rd floor
-  { id: 105, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10 } # 4th floor
+  { id: 87, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10, sprite: "trainer_RIVAL1" }, # 1st floor
+  { id: 94, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10, sprite: "trainer_RIVAL1" }, # 2nd floor
+  { id: 99, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10, sprite: "trainer_RIVAL1" }, # 3rd floor
+  { id: 105, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10, sprite: "trainer_RIVAL1" } # 4th floor
 ]
 
 def isEventRoom(room)
@@ -89,6 +89,8 @@ def pbGenDest()
 
   echoln 'Generated destinations: ' + pbGet(30).to_s + ' | ' + pbGet(32).to_s 
   echoln "Rooms avoided: " + avoidRooms.to_s
+  
+  pbSetRoomSprites()
 end
 
 def pbTransferToDest(dest)
@@ -105,6 +107,34 @@ def pbTransferToDest(dest)
     $scene.transfer_player
     $game_map.autoplay
     $game_map.refresh
+  end
+end
+
+def pbSetRoomSprites()
+  roomLSprite = pbGet(29)[:sprite]
+  roomLIndex = 0
+  roomRSprite = pbGet(31)[:sprite]
+  roomRIndex = 0
+
+  if(i = roomLSprite.index(':'))
+    roomLIndex = roomLSprite[i + 1...i+2].to_i
+    roomLSprite = roomLSprite[0...i]
+  end
+
+  if(i = roomRSprite.index(':'))
+    roomRIndex = roomRSprite[i + 1...i+2].to_i
+    roomRSprite = roomRSprite[0...i]
+  end
+
+  for event in $game_map.events.values
+    if event.name[/ExitLeft/i]
+      event.character_name = roomLSprite
+      event.pattern = roomLIndex
+    end
+    if event.name[/ExitRight/i]
+      event.character_name = roomRSprite
+      event.pattern = roomRIndex
+    end
   end
 end
 
