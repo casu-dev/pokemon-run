@@ -9,8 +9,7 @@
 - Option to train against bosses
 
 ## Open tickets
-- [ ] Implement code structure for achievements
-- [ ] Define achievements and rewards
+- [ ] Implement achievements
 - [ ] Place easter eggs
 - [ ] Gittiehab: Fix U-turn move descriptio in TM Shop
 
@@ -23,3 +22,5 @@
 - [x] Offer some TMs and Mints on sale. Add earnable items.
 - [x] Fix the room indicator: Gary shall have Gary sprite
 - [x] Implement difficulty options normal/hard
+- [x] Implement code structure for achievements
+- [x] Define achievements
