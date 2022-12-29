@@ -1374,17 +1374,45 @@ def pbGetTms(saleTms)
     return reorderedTms
 end
 
+def pbSetAchvDone(index)
+    if (index >= 0 && index <=8)
+        filename = "achievements.txt"
+        achvsStatus = pbReadFile(filename)
+        count = pbGetAchvs.length
+        if achvsStatus.length != count
+            status = ""
+            (0...count).each do |i|
+                status +="0"
+            end
+            pbWriteIntoFile(filename, status)
+        end
+        achvsStatus[index] = "1"
+        pbWriteIntoFile(filename, achvsStatus)
+    end
+end
+
 def pbGetAchvs
-return %i[JUSTANORMALGUY EXPERT FIRSTTRY MULTITALENT DISCSAREOUTDATED NORISKNOFUN REJECTED TOPTHREE PERFECTRUN]
- #return ["Just a normal guy", "Expert", "First try!", "Multi talent", "Discs are outdated", "No risk, no fun", "Rejected", "Top three", "Perfect run"]
+    return %i[JUSTANORMALGUY0 EXPERT0 FIRSTTRY0 MULTITALENT0 DISCSAREOUTDATED0 NORISKNOFUN0 REJECTED0 TOPTHREE0 PERFECTRUN0]
+end
+
+def pbGetAchvsCompleted
+    return %i[JUSTANORMALGUY1 EXPERT1 FIRSTTRY1 MULTITALENT1 DISCSAREOUTDATED1 NORISKNOFUN1 REJECTED1 TOPTHREE1 PERFECTRUN1]
 end
 
 def pbShowAchvs
-pbPokemonMartEarn(pbGetAchvs, nil, false, 5)
-    #achvComments = ["Beat difficulty normal.", "Beat difficulty hard.", "Complete a run without taking a Pokémon from the previous run with you.",
-    #                "Beat every game mode once.", "Complete a run without buying a TM, HM, or TR.", "Complete a run without using the Boss hints.",
-     #               "Release 1 Pokémon before the Boss each floor and complete the run.", "Beat the final Boss, but start the battle with 3 or less Pokémon in party.",
-     #               "Complete a run without losing a Pokémon."]
+    count = pbGetAchvs.length
+    filename = "achievements.txt"
+    achvsStatus = pbReadFile(filename)
+    achvs = pbGetAchvs.clone
+    if achvsStatus.length == count
+        completed = pbGetAchvsCompleted.clone
+        (0...achvsStatus.length).each do |i|
+           achvs[i] = completed[i] if achvsStatus[i] == '1'
+        end
+        pbPokemonMartEarn(achvs, nil, false, 5)
+    else
+        pbPokemonMartEarn(achvs, nil, false, 5)
+    end
 end
 
 def pbScout
