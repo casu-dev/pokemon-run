@@ -1375,22 +1375,16 @@ def pbGetTms(saleTms)
 end
 
 def pbGetAchvs
- return ["Just a normal guy", "Expert", "First try!", "Multi talent", "Discs are outdated", "No risk, no fun", "Rejected", "Top three", "Perfect run"]
+return %i[JUSTANORMALGUY EXPERT FIRSTTRY MULTITALENT DISCSAREOUTDATED NORISKNOFUN REJECTED TOPTHREE PERFECTRUN]
+ #return ["Just a normal guy", "Expert", "First try!", "Multi talent", "Discs are outdated", "No risk, no fun", "Rejected", "Top three", "Perfect run"]
 end
 
 def pbShowAchvs
-    achvs = pbGetAchvs.clone
-    achvs.push("Close")
-    achvComments = ["Beat difficulty normal.", "Beat difficulty hard.", "Complete a run without taking a Pokémon from the previous run with you.",
-                    "Beat every game mode once.", "Complete a run without buying a TM, HM, or TR.", "Complete a run without using the Boss hints.",
-                    "Release 1 Pokémon before the Boss each floor and complete the run.", "Beat the final Boss, but start the battle with 3 or less Pokémon in party.",
-                    "Complete a run without losing a Pokémon."]
-    loop do
-        cmd = pbMessage( _INTL('Achievements'), achvs)
-        #pbMessage(cmd.to_s)
-        break if cmd == achvs.length-1
-        pbMessage(achvComments[cmd])
-    end
+pbPokemonMartEarn(pbGetAchvs, nil, false, 5)
+    #achvComments = ["Beat difficulty normal.", "Beat difficulty hard.", "Complete a run without taking a Pokémon from the previous run with you.",
+    #                "Beat every game mode once.", "Complete a run without buying a TM, HM, or TR.", "Complete a run without using the Boss hints.",
+     #               "Release 1 Pokémon before the Boss each floor and complete the run.", "Beat the final Boss, but start the battle with 3 or less Pokémon in party.",
+     #               "Complete a run without losing a Pokémon."]
 end
 
 def pbScout

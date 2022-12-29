@@ -818,3 +818,13 @@
 796,TR97,TR97,TR97s,4,10000,"The user bites the target with its psychic capabilities. This can also destroy Light Screen and Reflect.",3,0,0,PSYCHICFANGS
 797,TR98,TR98,TR98s,4,6000,"The user slams into the target using a full-force blast of water. May also lower the target's Defense stat.",3,0,0,LIQUIDATION
 798,TR99,TR99,TR99s,4,6000,"The user attacks by slamming its body into the target. Damages more the higher the user's Defense.",3,0,0,BODYPRESS
+#-------Achievements
+799,JUSTANORMALGUY,Just a normal guy,Unnamed,8,0,"Beat difficulty normal.",2,0,6
+800,EXPERT,Expert,Unnamed,8,0,"Beat difficulty hard.",2,0,6
+801,FIRSTTRY,"First try!",Unnamed,8,0,"Complete a run without taking a Pokémon from the previous run with you.",2,0,6
+802,MULTITALENT,Multi talent,Unnamed,8,0,"Beat every game mode once.",2,0,6
+803,DISCSAREOUTDATED,Discs are outdated,Unnamed,8,0,"Complete a run without buying a TM, HM, or TR.",2,0,6
+804,NORISKNOFUN,"No risk, no fun",Unnamed,8,0,"Complete a run without using the Boss hints.",2,0,6
+805,REJECTED,Rejected,Unnamed,8,0,"Release 1 Pokémon before the Boss each floor and complete the run.",2,0,6
+806,TOPTHREE,Top three,Unnamed,8,0,"Beat the final Boss, but start the battle with 3 or less Pokémon in party.",2,0,6
+807,PERFECTRUN,Perfect run,Unnamed,8,0,"Complete a run without losing a Pokémon.",2,0,6
