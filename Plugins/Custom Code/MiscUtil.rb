@@ -766,6 +766,7 @@ size = $Trainer.party.length()
                 cmd2 = pbMessage(speech || _INTL("You want to start the new run with \\c[10]" + $Trainer.party[0].name + "\\c[0]?"), yn)
                     loop do
                         if cmd2 == 0
+                           pbReceiveItem(:POTION)
                            pbClearAllBoxes
                            $Trainer.party.each do |pkmn|
                                if !pkmn.nil?
@@ -1413,6 +1414,66 @@ def pbShowAchvs
     else
         pbPokemonMartEarn(achvs, nil, false, 5)
     end
+end
+
+def pbCheckAchvsAfterRun
+    if !pbAllAchvs?
+        pbSetAchvDone(0) if pbGetDifficulty == 0
+        pbSetAchvDone(1) if pbGetDifficulty == 1
+        pbSetAchvDone(2) if pbGet(51) == true   # reset on restart
+        pbSetAchvDone(3) if pbCheckMultiTalent(pbGetGameMode)
+        pbSetAchvDone(4) if pbGet(52) == true # reset on restart
+        pbSetAchvDone(5) if pbGet(53) == true # reset on restart
+        pbSetAchvDone(6) if pbGet(54) == true # reset on restart
+        pbSetAchvDone(7) if pbGet(55) == true # reset on restart
+        # implement faintcheck on lance
+        pbSetAchvDone(8) if ($Trainer.mystery_gifts.length == 0) && (pbGet(56) == false)
+    end
+end
+
+def pbCheckMultiTalent(gamemode)
+    filename = "gamemodesbeaten.txt"
+    data = pbReadFile(filename)
+    if data.length <= pbGetGameModes.length
+        data = data.chars
+        gamemode = [gamemode.to_s]
+        data -= gamemode
+        data += gamemode
+        allModes = ["0","1","2","3","4"]
+        allModes -= data
+
+        newData = ""
+        data.each do |i|
+            newData += i
+        end
+        pbWriteIntoFile(filename, newData)
+
+        return true if allModes.length == 0
+    end
+    return false
+end
+
+def pbAllAchvs?
+    count = pbGetAchvs.length
+    filename = "achievements.txt"
+    achvsStatus = pbReadFile(filename)
+    allAchvs = ""
+    (1..count).each do |i|
+        allAchvs += 1
+    end
+
+    return true if achvsStatus == allAchvs
+    return false
+end
+
+def pbSomeFainted?
+    n = $Trainer.party.length
+    (0..n).each do |i|
+        if $Trainer.party[n - i] && !$Trainer.party[n - i].able?
+            return true
+        end
+    end
+    return false
 end
 
 def pbScout
