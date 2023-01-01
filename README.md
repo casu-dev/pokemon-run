@@ -10,7 +10,8 @@
 
 ## Open tickets
 - [ ] Place easter eggs
-- [ ] Gittiehab: Fix U-turn move descriptio in TM Shop
+- [ ] Playtest easy mode
+- [ ] Check for updates via java easy doable?
 
 
 ## Closed tickets
@@ -24,3 +25,5 @@
 - [x] Implement code structure for achievements
 - [x] Define achievements
 - [x] Implement achievements
+- [x] Fix U-turn move descriptio in TM Shop
+- [x] TMs added to shop
