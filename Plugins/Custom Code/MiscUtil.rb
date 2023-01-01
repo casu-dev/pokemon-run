@@ -1286,7 +1286,7 @@ def pbGetBossLv
             elsif floor == 3
                 return 56
             else
-                return 87
+                return 85
             end
     end
 
@@ -1386,6 +1386,7 @@ def pbSetAchvDone(index)
                 status +="0"
             end
             pbWriteIntoFile(filename, status)
+            achvsStatus = pbReadFile(filename)
         end
         achvsStatus[index] = "1"
         pbWriteIntoFile(filename, achvsStatus)
@@ -1420,15 +1421,23 @@ def pbCheckAchvsAfterRun
     if !pbAllAchvs?
         pbSetAchvDone(0) if pbGetDifficulty == 0
         pbSetAchvDone(1) if pbGetDifficulty == 1
-        pbSetAchvDone(2) if pbGet(51) == true   # reset on restart
+        pbSetAchvDone(2) if pbGet(51) == true # reset on restart
         pbSetAchvDone(3) if pbCheckMultiTalent(pbGetGameMode)
         pbSetAchvDone(4) if pbGet(52) == true # reset on restart
         pbSetAchvDone(5) if pbGet(53) == true # reset on restart
         pbSetAchvDone(6) if pbGet(54) == true # reset on restart
         pbSetAchvDone(7) if pbGet(55) == true # reset on restart
-        # implement faintcheck on lance
-        pbSetAchvDone(8) if ($Trainer.mystery_gifts.length == 0) && (pbGet(56) == false)
+        pbSetAchvDone(8) if ($Trainer.mystery_gifts.length == 0) && (pbGet(56) == true)
     end
+end
+
+def pbUpdateTop3
+  pbSet(55, false) if $Trainer.party.length > 3
+end
+
+def pbUpdateRejected
+    pbSet(54, false) if pbGet(47) == false
+    pbSet(47, false)
 end
 
 def pbCheckMultiTalent(gamemode)
@@ -1459,11 +1468,15 @@ def pbAllAchvs?
     achvsStatus = pbReadFile(filename)
     allAchvs = ""
     (1..count).each do |i|
-        allAchvs += 1
+        allAchvs += "1"
     end
 
     return true if achvsStatus == allAchvs
     return false
+end
+
+def pbUpdatePerfectRun
+    pbSet(56, false) if pbSomeFainted?
 end
 
 def pbSomeFainted?
