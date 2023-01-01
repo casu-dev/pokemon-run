@@ -9,7 +9,6 @@
 - Option to train against bosses
 
 ## Open tickets
-- [ ] Implement achievements
 - [ ] Place easter eggs
 - [ ] Gittiehab: Fix U-turn move descriptio in TM Shop
 
@@ -24,3 +23,4 @@
 - [x] Implement difficulty options normal/hard
 - [x] Implement code structure for achievements
 - [x] Define achievements
+- [x] Implement achievements
