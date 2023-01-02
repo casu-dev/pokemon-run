@@ -1432,6 +1432,10 @@ def pbCheckAchvsAfterRun
         pbSetAchvDone(6) if pbGet(54) == true # reset on restart
         pbSetAchvDone(7) if pbGet(55) == true # reset on restart
         pbSetAchvDone(8) if ($Trainer.mystery_gifts.length == 0) && (pbGet(56) == true)
+        if pbAllAchvs?
+            pbMessage("\\c[10]All achievements unlocked\\c[0].")
+            pbReceiveItem(:PREMIUMSOAP)
+        end
     end
 end
 

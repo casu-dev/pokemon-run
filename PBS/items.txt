@@ -838,3 +838,4 @@
 814,REJECTED1,Rejected,Unnamed,8,0,"Release 1 Pokémon before the Boss each floor and complete the run.",2,0,6
 815,TOPTHREE1,Top three,Unnamed,8,0,"Beat the final Boss, but start the battle with 3 or less Pokémon in party.",2,0,6
 816,PERFECTRUN1,Perfect run,Unnamed,8,0,"Complete a run without losing a Pokémon.",2,0,6
+817,PREMIUMSOAP,Premium Soap,Unnamed,1,0,"A soap so intense, cleaning with it makes the target shine. This item respawns at the start of each run.",1,0,0
