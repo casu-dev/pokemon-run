@@ -414,7 +414,7 @@ Pokemon = PANSAGE,16
 [ELITEFOUR_Bruno,Bruno,2]
 LoseText = "GG WP"
 Pokemon = GOOMY,16
-    Moves = TACKLE,ABSORB,PROTECT,DRAGONBREATH
+    Moves = TACKLE,ABSORB,WATERGUN,DRAGONBREATH
     AbilityIndex = 2
     IV = 10,10,10,10,10,10
 Pokemon = DRATINI,16
