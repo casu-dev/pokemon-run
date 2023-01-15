@@ -401,6 +401,9 @@ class DiegoWTsStarterSelection
   end
   
   def pbChooseBall
+    # Added by us
+    pbRelearnMoveScreen(@pokemon, false, true)
+
     typeColor  = pbTypeColor(@pokemon.type1)
     type1 = @type 
     if @pokemon.type2 != @pokemon.type1 && StarterSelSettings::TYPE2COLOR
@@ -464,8 +467,6 @@ class DiegoWTsStarterSelection
       @sprites["pkmn_#{@select}"].opacity += 255/10
       pbWait(1)
     end
-    # Added by us
-        pbMessage(pbGetMoveset(@pokemon))
 
     @pkmnname = @pokemon.name
         @sprites["textbox"].y = @sprites["textbox"].y - 16
