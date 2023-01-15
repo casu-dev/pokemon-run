@@ -1345,21 +1345,32 @@ def pbRollTmSale
     return saleTms
 end
 
+  def pbsetPrice(item, buy_price = -1, sell_price = -1)
+    item = GameData::Item.get(item).id
+    $game_temp.mart_prices[item] = [-1, -1] if !$game_temp.mart_prices[item]
+    $game_temp.mart_prices[item][0] = buy_price if buy_price > 0
+    if sell_price >= 0   # 0=can't sell
+      $game_temp.mart_prices[item][1] = sell_price * 2
+    else
+      $game_temp.mart_prices[item][1] = buy_price if buy_price > 0
+    end
+  end
+
 def pbGetTms(saleTms)
     items_cheap = %i[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM48 TM65 TM70 TR01 TR37 TR38 TR48]
     items_cheap.each do |i|
-        setPrice(i, 500, 0)
+       pbsetPrice(i, 500, 0)
     end
 
     items_normal = %i[TM06 TM22 TM39 TM43 TM92 TM95 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR19 TR22 TR28 TR32 TR33 TR39 TR47 TR49 TR53 TR57
      TR58 TR59 TR60 TR61 TR62 TR63 TR64 TR65 TR66 TR67 TR70 TR73 TR74 TR75 TR81 TR86 TR89 TR90 TR92 TR97 TR98 TR99]
     items_normal.each do |i|
-        setPrice(i, 1000, 0)
+        pbsetPrice(i, 1000, 0)
     end
 
     items_expensive = %i[TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR68 TR84]
     items_expensive.each do |i|
-        setPrice(i, 1500, 0)
+        pbsetPrice(i, 1500, 0)
     end
 
     tms = pbGetAllTms.clone
@@ -1369,7 +1380,7 @@ def pbGetTms(saleTms)
     saleTms.each do |myItem|
         oldPrice = $game_temp.mart_prices[myItem][0]
         newPrice = ((oldPrice * 0.7).ceil).to_i
-        setPrice(myItem, newPrice, 0)
+        pbsetPrice(myItem, newPrice, 0)
         reorderedTms.push(myItem)
     end
 
@@ -1498,5 +1509,5 @@ def pbSomeFainted?
 end
 
 def pbScout
-    pbAddPokemon(:AEGISLASH, 20)
+pbMessage(GameData::Item.get(:TM05).move.to_s)
 end
