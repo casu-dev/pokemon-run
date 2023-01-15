@@ -1508,6 +1508,25 @@ def pbSomeFainted?
     return false
 end
 
+def pbGetRemainingTMs
+   allTMs = pbGetTms(pbGet(45)).clone
+   ownedTMs = []
+   # Slot 4 is the TM slot in the bag
+   $PokemonBag.pockets[4].each do |item|
+    ownedTMs.push(item[0])
+   end
+   allTMs -= ownedTMs
+   return allTMs
+end
+
+def pbTMShop
+pbSet(57, true)
+    while(pbGet(57)) do
+        pbRelearnMoveScreen(nil)
+    end
+pbSet(57, true)
+end
+
 def pbScout
 pbMessage(GameData::Item.get(:TM05).move.to_s)
 end
