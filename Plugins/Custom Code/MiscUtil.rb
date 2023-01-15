@@ -11,6 +11,19 @@ def pbDeleteFainted
       $Trainer.party.delete_at(n - i)
     end
   end
+
+n = 6 - $Trainer.party.length
+$PokemonStorage.boxes.each do |box|
+  (0...box.length).each do |i|
+      if box[i]
+           pkmn = box[i].clone
+           $Trainer.party.push(pkmn)
+           box[i] = nil
+           n -= 1
+           return if n <= 0
+      end
+  end
+end
 end
 
 # Not used
