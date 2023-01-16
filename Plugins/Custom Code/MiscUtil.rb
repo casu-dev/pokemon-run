@@ -11,19 +11,20 @@ def pbDeleteFainted
       $Trainer.party.delete_at(n - i)
     end
   end
-
-n = 6 - $Trainer.party.length
-$PokemonStorage.boxes.each do |box|
-  (0...box.length).each do |i|
-      if box[i]
-           pkmn = box[i].clone
-           $Trainer.party.push(pkmn)
-           box[i] = nil
-           n -= 1
-           return if n <= 0
+  n = 6 - $Trainer.party.length
+  if (n > 0)
+      $PokemonStorage.boxes.each do |box|
+        (0...box.length).each do |i|
+            if box[i]
+                 pkmn = box[i].clone
+                 $Trainer.party.push(pkmn)
+                 box[i] = nil
+                 n -= 1
+                 return if n <= 0
+            end
+        end
       end
   end
-end
 end
 
 # Not used
@@ -1273,10 +1274,18 @@ def pbGetBossLv
         return 96 if !$Trainer
         return 96 if !$Trainer.party
         lv = 0
+        counter = 0
         $Trainer.party.each do |pkmn|
             lv += pkmn.level
+            counter += 1
         end
-        lv = ((lv.to_f/($Trainer.party.length)).round(half: :up)+5).to_i
+        counter = 6 - counter
+        while (counter > 0) do
+            lv += 90
+            counter -= 1
+        end
+
+        lv = ((lv.to_f/6).round(half: :up)+5).to_i
         lv = 100 if lv > 100
         return lv
     #normal
