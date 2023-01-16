@@ -1,4 +1,4 @@
-def reset_moves
+  def reset_moves
     this_level = self.level
     # Find all level-up moves that self could have learned
     moveset = self.getMoveList
@@ -20,35 +20,12 @@ def reset_moves
     knowable_moves = knowable_moves.sort_by do |m|
       # Here we can calucalte the move quality. Higher is better
       move_data = GameData::Move.get(m)
-      attack = self.baseStats[:ATTACK]
-      attack = self.baseStats[:SPECIAL_ATTACK] if (move_data.category == 1)
-      stab = 1
-      stab = 1.5 if (self.type1 == move_data.type || self.type2 == move_data.type)
       acc = move_data.accuracy
-      acc = 100 if move_data.accuracy == 0      
-      move_data.base_damage * acc * stab * attack
+      acc = 100 if move_data.accuracy == 0
+      move_data.base_damage * acc
     end
-    # Delete Type duplicates for attacking moves   
+    # Add all moves    
     @moves.clear
-    kml = knowable_moves.length
-    blacklist_moves = []
-    attack_moves = knowable_moves.clone
-    attack_moves -= non_attack_moves
-    (1...attack_moves.length).each do |i|
-      myType = GameData::Move.get(attack_moves[i]).type
-      (0...i).each do |j|
-        if ((!(blacklist_moves.include? attack_moves[j]))&&(myType == GameData::Move.get(attack_moves[j]).type)&& ((kml-blacklist_moves.length-1) >= 4))
-          blacklist_moves.push(attack_moves[j])
-        end
-      end
-    end
-    knowable_moves -= blacklist_moves
-    attack_moves = knowable_moves.clone
-    attack_moves -= non_attack_moves
-    non_attack_moves = non_attack_moves.shuffle
-    non_attack_moves += attack_moves
-    knowable_moves = non_attack_moves
-    # Add all moves 
     kml = knowable_moves.length
     first_move_index = kml - MAX_MOVES
     first_move_index = 0 if first_move_index < 0
@@ -69,3 +46,6 @@ def reset_moves
       @moves.push(Pokemon::Move.new(knowable_moves[kml-i]))
     end
   end
+
+
+old
