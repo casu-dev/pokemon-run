@@ -1342,8 +1342,8 @@ def pbGetAllTms
               TM80 TR00 TR18 TR51 TR68 TR84]
 end
 
-def pbRollTmSale
-    tms = pbGetAllTms.clone
+def pbRollTmSale(tms = pbGetAllTms.clone, saleItemCount = 5)
+    #tms = pbGetAllTms.clone
     # Generate index array of tms
     itemSlots = []
     (0...tms.length).each do |i|
@@ -1352,7 +1352,7 @@ def pbRollTmSale
 
     # Shuffle and take the first 5 indexes, then sort them
     itemSlots = itemSlots.shuffle
-    saleItemCount = 5
+    #saleItemCount = 5
     saleSlots = []
     (0...saleItemCount).each do |i|
         saleSlots.push(itemSlots[i])
@@ -1364,7 +1364,7 @@ def pbRollTmSale
     saleSlots.each do |slot|
         saleTms.push(tms[slot])
     end
-    return saleTms
+    return [tms, saleTms]
 end
 
   def pbsetPrice(item, buy_price = -1, sell_price = -1)
@@ -1378,7 +1378,7 @@ end
     end
   end
 
-def pbGetTms(saleTms)
+def pbGetTms(tms = pbGetAllTms.clone, saleTms)
     items_cheap = %i[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM48 TM65 TM70 TR01 TR37 TR38 TR48]
     items_cheap.each do |i|
        pbsetPrice(i, 500, 0)
@@ -1395,8 +1395,6 @@ def pbGetTms(saleTms)
         pbsetPrice(i, 1500, 0)
     end
 
-    tms = pbGetAllTms.clone
-
     reorderedTms = []
 
     saleTms.each do |myItem|
@@ -1410,6 +1408,23 @@ def pbGetTms(saleTms)
     tms -= reorderedTms
     reorderedTms += tms
     return reorderedTms
+end
+
+def pbRollTms
+    items_cheap = %i[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM48 TM65 TM70 TR01 TR37 TR38 TR48]
+    items_normal = %i[TM06 TM22 TM39 TM43 TM92 TM95 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR19 TR22 TR28 TR32 TR33 TR39 TR47 TR49 TR53 TR57
+         TR58 TR59 TR60 TR61 TR62 TR63 TR64 TR65 TR66 TR67 TR70 TR73 TR74 TR75 TR81 TR86 TR89 TR90 TR92 TR97 TR98 TR99]
+    items_expensive = %i[TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR68 TR84]
+
+    items_cheap = pbRollTmSale(items_cheap.clone, saleItemCount = 5)[1]
+    items_normal = pbRollTmSale(items_normal.clone, saleItemCount = 15)[1]
+    items_expensive = pbRollTmSale(items_expensive.clone, items_expensive = 3)[1]
+
+    output = items_cheap
+    output += items_normal
+    output += items_expensive
+
+    return output
 end
 
 def pbSetAchvDone(index)
@@ -1531,7 +1546,7 @@ def pbSomeFainted?
 end
 
 def pbGetRemainingTMs
-   allTMs = pbGetTms(pbGet(45)).clone
+   allTMs = pbGetTms(pbGet(45)[0], pbGet(45)[1]).clone
    ownedTMs = []
    # Slot 4 is the TM slot in the bag
    $PokemonBag.pockets[4].each do |item|
@@ -1550,5 +1565,6 @@ pbSet(57, true)
 end
 
 def pbScout
-pbMessage(GameData::Item.get(:TM05).move.to_s)
+pbMessage(pbRollTms.length.to_s)
+pbMessage(pbRollTms.to_s)
 end
