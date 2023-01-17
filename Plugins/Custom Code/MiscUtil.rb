@@ -1549,6 +1549,86 @@ pbSet(57, true)
 pbSet(57, true)
 end
 
+def pbGetBattlerIndexLeft(size)
+    return 4 if size >= 5
+    return 3 if size == 4
+    return 2 if size == 3
+    return 0 if size <= 2
+end
+
+def pbHallofFamePCLeft(i, size)
+    if size == 6
+        return -1 if i == 1
+        return 1 if i == 0
+        return 0 if i == 2
+        return 2 if i == 5
+        return 5 if i == 3
+        return 3 if i == 4
+    elsif size == 5
+        return -1 if i == 1
+        return 1 if i == 0
+        return 0 if i == 2
+        return 2 if i == 3
+        return 3 if i == 4
+    elsif size == 4
+        return -1 if i == 1
+        return 1 if i == 0
+        return 0 if i == 2
+        return 2 if i == 3
+    elsif size == 3
+        return -1 if i == 1
+        return 1 if i == 0
+        return 0 if i == 2
+    elsif size == 2
+        return -1 if i == 1
+        return 1 if i == 0
+    elsif size == 1
+        return -1 if i == 0
+    else
+        return -1
+    end
+    return -1
+end
+
+def pbGetBattlerIndexRight(size)
+    return 1 if size >= 2
+    return 0
+end
+
+def pbHallofFamePCRight(i, size)
+    if size == 6
+        return 0 if i == 1
+        return 2 if i == 0
+        return 5 if i == 2
+        return 3 if i == 5
+        return 4 if i == 3
+        return 6 if i == 4
+    elsif size == 5
+        return 0 if i == 1
+        return 2 if i == 0
+        return 3 if i == 2
+        return 4 if i == 3
+        return 5 if i == 4
+    elsif size == 4
+        return 0 if i == 1
+        return 2 if i == 0
+        return 3 if i == 2
+        return 4 if i == 3
+    elsif size == 3
+        return 0 if i == 1
+        return 2 if i == 0
+        return 3 if i == 2
+    elsif size == 2
+        return 0 if i == 1
+        return 2 if i == 0
+    elsif size == 1
+        return 1 if i == 0
+    else
+        return 6
+    end
+    return 6
+end
+
 def pbScout
 pbMessage(GameData::Item.get(:TM05).move.to_s)
 end
