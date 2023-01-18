@@ -1564,6 +1564,12 @@ pbSet(57, true)
 pbSet(57, true)
 end
 
+def pbRerollMoney?
+    price = 500
+    return true if $Trainer.money >= price
+    return false
+end
+
 def pbScout
 pbMessage(pbRollTms.length.to_s)
 pbMessage(pbRollTms.to_s)
