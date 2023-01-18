@@ -2208,7 +2208,7 @@ Withdraw
 Panzerschutz
 737
 Snipe Shot
-Präisionsschuss
+Präzisionsschuss
 738
 Fishious Rend
 Kiemenbiss
