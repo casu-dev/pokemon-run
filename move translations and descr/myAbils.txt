@@ -1,0 +1,801 @@
+1
+This Pokemon's attacks without a chance to flinch gain a 10% chance to flinch.
+This Pokemon's attacks without a chance to flinch gain a 10% chance to flinch.
+2
+On switch-in, this Pokemon summons Rain Dance.
+On switch-in, this Pokemon summons Rain Dance.
+3
+This Pokemon's Speed is raised 1 stage at the end of each full turn on the field.
+This Pokemon's Speed is raised 1 stage at the end of each full turn on the field.
+4
+This Pokemon cannot be struck by a critical hit.
+This Pokemon cannot be struck by a critical hit.
+5
+If this Pokemon is at full HP, it survives one hit with at least 1 HP. Immune to OHKO.
+If this Pokemon is at full HP, it survives one hit with at least 1 HP. Immune to OHKO.
+6
+Prevents Explosion/Mind Blown/Misty Explosion/Self-Destruct/Aftermath while active.
+Prevents Explosion/Mind Blown/Misty Explosion/Self-Destruct/Aftermath while active.
+7
+This Pokemon cannot be paralyzed. Gaining this Ability while paralyzed cures it.
+This Pokemon cannot be paralyzed. Gaining this Ability while paralyzed cures it.
+8
+If Sandstorm is active, this Pokemon's evasiveness is 1.25x; immunity to Sandstorm.
+If Sandstorm is active, this Pokemon's evasiveness is 1.25x; immunity to Sandstorm.
+9
+30% chance a Pokemon making contact with this Pokemon will be paralyzed.
+30% chance a Pokemon making contact with this Pokemon will be paralyzed.
+10
+This Pokemon heals 1/4 of its max HP when hit by Electric moves; Electric immunity.
+This Pokemon heals 1/4 of its max HP when hit by Electric moves; Electric immunity.
+11
+This Pokemon heals 1/4 of its max HP when hit by Water moves; Water immunity.
+This Pokemon heals 1/4 of its max HP when hit by Water moves; Water immunity.
+12
+This Pokemon cannot be infatuated or taunted. Immune to Intimidate.
+This Pokemon cannot be infatuated or taunted. Immune to Intimidate.
+13
+While this Pokemon is active, the effects of weather conditions are disabled.
+While this Pokemon is active, the effects of weather conditions are disabled.
+14
+This Pokemon's moves have their accuracy multiplied by 1.3.
+This Pokemon's moves have their accuracy multiplied by 1.3.
+15
+This Pokemon cannot fall asleep. Gaining this Ability while asleep cures it.
+This Pokemon cannot fall asleep. Gaining this Ability while asleep cures it.
+16
+This Pokemon's type changes to the type of a move it's hit by, unless it has the type.
+This Pokemon's type changes to the type of a move it's hit by, unless it has the type.
+17
+This Pokemon cannot be poisoned. Gaining this Ability while poisoned cures it.
+This Pokemon cannot be poisoned. Gaining this Ability while poisoned cures it.
+18
+This Pokemon's Fire attacks do 1.5x damage if hit by one Fire move; Fire immunity.
+This Pokemon's Fire attacks do 1.5x damage if hit by one Fire move; Fire immunity.
+19
+This Pokemon is not affected by the secondary effect of another Pokemon's attack.
+This Pokemon is not affected by the secondary effect of another Pokemon's attack.
+20
+This Pokemon cannot be confused. Immune to Intimidate.
+This Pokemon cannot be confused. Immune to Intimidate.
+21
+This Pokemon cannot be forced to switch out by another Pokemon's attack or item.
+This Pokemon cannot be forced to switch out by another Pokemon's attack or item.
+22
+On switch-in, this Pokemon lowers the Attack of opponents by 1 stage.
+On switch-in, this Pokemon lowers the Attack of opponents by 1 stage.
+23
+Prevents foes from choosing to switch unless they also have this Ability.
+Prevents foes from choosing to switch unless they also have this Ability.
+24
+Pokemon making contact with this Pokemon lose 1/8 of their max HP.
+Pokemon making contact with this Pokemon lose 1/8 of their max HP.
+25
+This Pokemon can only be damaged by supereffective moves and indirect damage.
+This Pokemon can only be damaged by supereffective moves and indirect damage.
+26
+This Pokemon is immune to Ground; Gravity/Ingrain/Smack Down/Iron Ball nullify it.
+This Pokemon is immune to Ground; Gravity/Ingrain/Smack Down/Iron Ball nullify it.
+27
+30% chance of poison/paralysis/sleep on others making contact with this Pokemon.
+30% chance of poison/paralysis/sleep on others making contact with this Pokemon.
+28
+If another Pokemon burns/poisons/paralyzes this Pokemon, it also gets that status.
+If another Pokemon burns/poisons/paralyzes this Pokemon, it also gets that status.
+29
+Prevents other Pokemon from lowering this Pokemon's stat stages.
+Prevents other Pokemon from lowering this Pokemon's stat stages.
+30
+This Pokemon has its non-volatile status condition cured when it switches out.
+This Pokemon has its non-volatile status condition cured when it switches out.
+31
+This Pokemon draws Electric moves to itself to raise Sp. Atk by 1; Electric immunity.
+This Pokemon draws Electric moves to itself to raise Sp. Atk by 1; Electric immunity.
+32
+This Pokemon's moves have their secondary effect chance doubled.
+This Pokemon's moves have their secondary effect chance doubled.
+33
+If Rain Dance is active, this Pokemon's Speed is doubled.
+If Rain Dance is active, this Pokemon's Speed is doubled.
+34
+If Sunny Day is active, this Pokemon's Speed is doubled.
+If Sunny Day is active, this Pokemon's Speed is doubled.
+35
+No competitive use.
+No competitive use.
+36
+On switch-in, or when it can, this Pokemon copies a random adjacent foe's Ability.
+On switch-in, or when it can, this Pokemon copies a random adjacent foe's Ability.
+37
+This Pokemon's Attack is doubled.
+This Pokemon's Attack is doubled.
+38
+30% chance a Pokemon making contact with this Pokemon will be poisoned.
+30% chance a Pokemon making contact with this Pokemon will be poisoned.
+39
+This Pokemon cannot be made to flinch. Immune to Intimidate.
+This Pokemon cannot be made to flinch. Immune to Intimidate.
+40
+This Pokemon cannot be frozen. Gaining this Ability while frozen cures it.
+This Pokemon cannot be frozen. Gaining this Ability while frozen cures it.
+41
+This Pokemon cannot be burned. Gaining this Ability while burned cures it.
+This Pokemon cannot be burned. Gaining this Ability while burned cures it.
+42
+Prevents opposing Steel-type Pokemon from choosing to switch out.
+Prevents opposing Steel-type Pokemon from choosing to switch out.
+43
+This Pokemon is immune to sound-based moves, unless it used the move.
+This Pokemon is immune to sound-based moves, unless it used the move.
+44
+If Rain Dance is active, this Pokemon heals 1/16 of its max HP each turn.
+If Rain Dance is active, this Pokemon heals 1/16 of its max HP each turn.
+45
+On switch-in, this Pokemon summons Sandstorm.
+On switch-in, this Pokemon summons Sandstorm.
+46
+If this Pokemon is the target of a foe's move, that move loses one additional PP.
+If this Pokemon is the target of a foe's move, that move loses one additional PP.
+47
+Fire-/Ice-type moves against this Pokemon deal damage with a halved offensive stat.
+Fire-/Ice-type moves against this Pokemon deal damage with a halved offensive stat.
+48
+This Pokemon's sleep counter drops by 2 instead of 1.
+This Pokemon's sleep counter drops by 2 instead of 1.
+49
+30% chance a Pokemon making contact with this Pokemon will be burned.
+30% chance a Pokemon making contact with this Pokemon will be burned.
+50
+No competitive use.
+No competitive use.
+51
+This Pokemon's accuracy can't be lowered by others; ignores their evasiveness stat.
+This Pokemon's accuracy can't be lowered by others; ignores their evasiveness stat.
+52
+Prevents other Pokemon from lowering this Pokemon's Attack stat stage.
+Prevents other Pokemon from lowering this Pokemon's Attack stat stage.
+53
+If this Pokemon has no item, it finds one used by an adjacent Pokemon this turn.
+If this Pokemon has no item, it finds one used by an adjacent Pokemon this turn.
+54
+This Pokemon skips every other turn instead of using a move.
+This Pokemon skips every other turn instead of using a move.
+55
+This Pokemon's Attack is 1.5x and accuracy of its physical attacks is 0.8x.
+This Pokemon's Attack is 1.5x and accuracy of its physical attacks is 0.8x.
+56
+30% chance of infatuating Pokemon of the opposite gender if they make contact.
+30% chance of infatuating Pokemon of the opposite gender if they make contact.
+57
+If an active ally has this Ability or the Minus Ability, this Pokemon's Sp. Atk is 1.5x.
+If an active ally has this Ability or the Minus Ability, this Pokemon's Sp. Atk is 1.5x.
+58
+If an active ally has this Ability or the Plus Ability, this Pokemon's Sp. Atk is 1.5x.
+If an active ally has this Ability or the Plus Ability, this Pokemon's Sp. Atk is 1.5x.
+59
+Castform's type changes to the current weather condition's type, except Sandstorm.
+Castform's type changes to the current weather condition's type, except Sandstorm.
+60
+This Pokemon cannot lose its held item due to another Pokemon's Ability or attack.
+This Pokemon cannot lose its held item due to another Pokemon's Ability or attack.
+61
+This Pokemon has a 33% chance to have its status cured at the end of each turn.
+This Pokemon has a 33% chance to have its status cured at the end of each turn.
+62
+If this Pokemon is statused, its Attack is 1.5x; ignores burn halving physical damage.
+If this Pokemon is statused, its Attack is 1.5x; ignores burn halving physical damage.
+63
+If this Pokemon has a non-volatile status condition, its Defense is multiplied by 1.5.
+If this Pokemon has a non-volatile status condition, its Defense is multiplied by 1.5.
+64
+This Pokemon damages those draining HP from it for as much as they would heal.
+This Pokemon damages those draining HP from it for as much as they would heal.
+65
+At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Grass attacks.
+At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Grass attacks.
+66
+At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Fire attacks.
+At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Fire attacks.
+67
+At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Water attacks.
+At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Water attacks.
+68
+At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Bug attacks.
+At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Bug attacks.
+69
+This Pokemon does not take recoil damage besides Struggle/Life Orb/crash damage.
+This Pokemon does not take recoil damage besides Struggle/Life Orb/crash damage.
+70
+On switch-in, this Pokemon summons Sunny Day.
+On switch-in, this Pokemon summons Sunny Day.
+71
+Prevents opposing Pokemon from choosing to switch out unless they are airborne.
+Prevents opposing Pokemon from choosing to switch out unless they are airborne.
+72
+This Pokemon cannot fall asleep. Gaining this Ability while asleep cures it.
+This Pokemon cannot fall asleep. Gaining this Ability while asleep cures it.
+73
+Prevents other Pokemon from lowering this Pokemon's stat stages.
+Prevents other Pokemon from lowering this Pokemon's stat stages.
+74
+This Pokemon's Attack is doubled.
+This Pokemon's Attack is doubled.
+75
+This Pokemon cannot be struck by a critical hit.
+This Pokemon cannot be struck by a critical hit.
+76
+While this Pokemon is active, the effects of weather conditions are disabled.
+While this Pokemon is active, the effects of weather conditions are disabled.
+77
+This Pokemon's evasiveness is doubled as long as it is confused.
+This Pokemon's evasiveness is doubled as long as it is confused.
+78
+This Pokemon's Speed is raised 1 stage if hit by an Electric move; Electric immunity.
+This Pokemon's Speed is raised 1 stage if hit by an Electric move; Electric immunity.
+79
+This Pokemon's attacks do 1.25x on same gender targets; 0.75x on opposite gender.
+This Pokemon's attacks do 1.25x on same gender targets; 0.75x on opposite gender.
+80
+If this Pokemon flinches, its Speed is raised by 1 stage.
+If this Pokemon flinches, its Speed is raised by 1 stage.
+81
+If Snow is active, this Pokemon's evasiveness is 1.25x.
+If Snow is active, this Pokemon's evasiveness is 1.25x.
+82
+This Pokemon eats Berries at 1/2 max HP or less instead of their usual 1/4 max HP.
+This Pokemon eats Berries at 1/2 max HP or less instead of their usual 1/4 max HP.
+83
+If this Pokemon (not its substitute) takes a critical hit, its Attack is raised 12 stages.
+If this Pokemon (not its substitute) takes a critical hit, its Attack is raised 12 stages.
+84
+Speed is doubled on held item loss; boost is lost if it switches, gets new item/Ability.
+Speed is doubled on held item loss; boost is lost if it switches, gets new item/Ability.
+85
+The power of Fire-type attacks against this Pokemon is halved; burn damage halved.
+The power of Fire-type attacks against this Pokemon is halved; burn damage halved.
+86
+When one of this Pokemon's stat stages is raised or lowered, the amount is doubled.
+When one of this Pokemon's stat stages is raised or lowered, the amount is doubled.
+87
+This Pokemon is healed 1/4 by Water, 1/8 by Rain; is hurt 1.25x by Fire, 1/8 by Sun.
+This Pokemon is healed 1/4 by Water, 1/8 by Rain; is hurt 1.25x by Fire, 1/8 by Sun.
+88
+On switch-in, Attack or Sp. Atk is raised 1 stage based on the foes' weaker Defense.
+On switch-in, Attack or Sp. Atk is raised 1 stage based on the foes' weaker Defense.
+89
+This Pokemon's punch-based attacks have 1.2x power. Sucker Punch is not boosted.
+This Pokemon's punch-based attacks have 1.2x power. Sucker Punch is not boosted.
+90
+This Pokemon is healed by 1/8 of its max HP each turn when poisoned; no HP loss.
+This Pokemon is healed by 1/8 of its max HP each turn when poisoned; no HP loss.
+91
+This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.
+This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.
+92
+This Pokemon's multi-hit attacks always hit the maximum number of times.
+This Pokemon's multi-hit attacks always hit the maximum number of times.
+93
+This Pokemon has its status cured at the end of each turn if Rain Dance is active.
+This Pokemon has its status cured at the end of each turn if Rain Dance is active.
+94
+If Sunny Day is active, this Pokemon's Sp. Atk is 1.5x; loses 1/8 max HP per turn.
+If Sunny Day is active, this Pokemon's Sp. Atk is 1.5x; loses 1/8 max HP per turn.
+95
+If this Pokemon is statused, its Speed is 1.5x; ignores Speed drop from paralysis.
+If this Pokemon is statused, its Speed is 1.5x; ignores Speed drop from paralysis.
+96
+This Pokemon's moves are changed to be Normal type and have 1.2x power.
+This Pokemon's moves are changed to be Normal type and have 1.2x power.
+97
+If this Pokemon strikes with a critical hit, the damage is multiplied by 1.5.
+If this Pokemon strikes with a critical hit, the damage is multiplied by 1.5.
+98
+This Pokemon can only be damaged by direct attacks.
+This Pokemon can only be damaged by direct attacks.
+99
+Every move used by or against this Pokemon will always hit.
+Every move used by or against this Pokemon will always hit.
+100
+This Pokemon moves last among Pokemon using the same or greater priority moves.
+This Pokemon moves last among Pokemon using the same or greater priority moves.
+101
+This Pokemon's moves of 60 power or less have 1.5x power, including Struggle.
+This Pokemon's moves of 60 power or less have 1.5x power, including Struggle.
+102
+If Sunny Day is active, this Pokemon cannot be statused and Rest will fail for it.
+If Sunny Day is active, this Pokemon cannot be statused and Rest will fail for it.
+103
+This Pokemon's held item has no effect, except Macho Brace. Fling cannot be used.
+This Pokemon's held item has no effect, except Macho Brace. Fling cannot be used.
+104
+This Pokemon's moves and their effects ignore the Abilities of other Pokemon.
+This Pokemon's moves and their effects ignore the Abilities of other Pokemon.
+105
+This Pokemon's critical hit ratio is raised by 1 stage.
+This Pokemon's critical hit ratio is raised by 1 stage.
+106
+If this Pokemon is KOed with a contact move, that move's user loses 1/4 its max HP.
+If this Pokemon is KOed with a contact move, that move's user loses 1/4 its max HP.
+107
+On switch-in, this Pokemon shudders if any foe has a supereffective or OHKO move.
+On switch-in, this Pokemon shudders if any foe has a supereffective or OHKO move.
+108
+On switch-in, this Pokemon is alerted to the foes' move with the highest power.
+On switch-in, this Pokemon is alerted to the foes' move with the highest power.
+109
+This Pokemon ignores other Pokemon's stat stages when taking or doing damage.
+This Pokemon ignores other Pokemon's stat stages when taking or doing damage.
+110
+This Pokemon's attacks that are not very effective on a target deal double damage.
+This Pokemon's attacks that are not very effective on a target deal double damage.
+111
+This Pokemon receives 3/4 damage from supereffective attacks.
+This Pokemon receives 3/4 damage from supereffective attacks.
+112
+On switch-in, this Pokemon's Attack and Speed are halved for 5 turns.
+On switch-in, this Pokemon's Attack and Speed are halved for 5 turns.
+113
+Fighting, Normal moves hit Ghost. Immune to Intimidate.
+Fighting, Normal moves hit Ghost. Immune to Intimidate.
+114
+This Pokemon draws Water moves to itself to raise Sp. Atk by 1; Water immunity.
+This Pokemon draws Water moves to itself to raise Sp. Atk by 1; Water immunity.
+115
+If Snow is active, this Pokemon heals 1/16 of its max HP each turn.
+If Snow is active, this Pokemon heals 1/16 of its max HP each turn.
+116
+This Pokemon receives 3/4 damage from supereffective attacks.
+This Pokemon receives 3/4 damage from supereffective attacks.
+117
+On switch-in, this Pokemon summons Snow.
+On switch-in, this Pokemon summons Snow.
+118
+No competitive use.
+No competitive use.
+119
+On switch-in, this Pokemon identifies the held items of all opposing Pokemon.
+On switch-in, this Pokemon identifies the held items of all opposing Pokemon.
+120
+This Pokemon's attacks with recoil or crash damage have 1.2x power; not Struggle.
+This Pokemon's attacks with recoil or crash damage have 1.2x power; not Struggle.
+121
+If this Pokemon is an Arceus, its type changes to match its held Plate.
+If this Pokemon is an Arceus, its type changes to match its held Plate.
+122
+If user is Cherrim and Sunny Day is active, it and allies' Attack and Sp. Def are 1.5x.
+If user is Cherrim and Sunny Day is active, it and allies' Attack and Sp. Def are 1.5x.
+123
+Causes sleeping foes to lose 1/8 of their max HP at the end of each turn.
+Causes sleeping foes to lose 1/8 of their max HP at the end of each turn.
+124
+If this Pokemon has no item and is hit by a contact move, it steals the attacker's item.
+If this Pokemon has no item and is hit by a contact move, it steals the attacker's item.
+125
+This Pokemon's attacks with secondary effects have 1.3x power; nullifies the effects.
+This Pokemon's attacks with secondary effects have 1.3x power; nullifies the effects.
+126
+If this Pokemon has a stat stage raised it is lowered instead, and vice versa.
+If this Pokemon has a stat stage raised it is lowered instead, and vice versa.
+127
+While this Pokemon is active, it prevents opposing Pokemon from using their Berries.
+While this Pokemon is active, it prevents opposing Pokemon from using their Berries.
+128
+This Pokemon's Attack is raised by 2 for each of its stats that is lowered by a foe.
+This Pokemon's Attack is raised by 2 for each of its stats that is lowered by a foe.
+129
+While this Pokemon has 1/2 or less of its max HP, its Attack and Sp. Atk are halved.
+While this Pokemon has 1/2 or less of its max HP, its Attack and Sp. Atk are halved.
+130
+If this Pokemon is hit by an attack, there is a 30% chance that move gets disabled.
+If this Pokemon is hit by an attack, there is a 30% chance that move gets disabled.
+131
+30% chance this Pokemon's ally has its status cured at the end of each turn.
+30% chance this Pokemon's ally has its status cured at the end of each turn.
+132
+This Pokemon's allies receive 3/4 damage from other Pokemon's attacks.
+This Pokemon's allies receive 3/4 damage from other Pokemon's attacks.
+133
+If a physical attack hits this Pokemon, Defense is lowered by 1, Speed is raised by 2.
+If a physical attack hits this Pokemon, Defense is lowered by 1, Speed is raised by 2.
+134
+This Pokemon's weight is doubled.
+This Pokemon's weight is doubled.
+135
+This Pokemon's weight is halved.
+This Pokemon's weight is halved.
+136
+If this Pokemon is at full HP, damage taken from attacks is halved.
+If this Pokemon is at full HP, damage taken from attacks is halved.
+137
+While this Pokemon is poisoned, its physical attacks have 1.5x power.
+While this Pokemon is poisoned, its physical attacks have 1.5x power.
+138
+While this Pokemon is burned, its special attacks have 1.5x power.
+While this Pokemon is burned, its special attacks have 1.5x power.
+139
+If last item used is a Berry, 50% chance to restore it each end of turn. 100% in Sun.
+If last item used is a Berry, 50% chance to restore it each end of turn. 100% in Sun.
+140
+This Pokemon does not take damage from attacks made by its allies.
+This Pokemon does not take damage from attacks made by its allies.
+141
+Boosts a random stat (except accuracy/evasion) +2 and another stat -1 every turn.
+Boosts a random stat (except accuracy/evasion) +2 and another stat -1 every turn.
+142
+This Pokemon is immune to powder moves, Sandstorm damage, and Effect Spore.
+This Pokemon is immune to powder moves, Sandstorm damage, and Effect Spore.
+143
+This Pokemon's contact moves have a 30% chance of poisoning.
+This Pokemon's contact moves have a 30% chance of poisoning.
+144
+This Pokemon restores 1/3 of its maximum HP, rounded down, when it switches out.
+This Pokemon restores 1/3 of its maximum HP, rounded down, when it switches out.
+145
+Prevents other Pokemon from lowering this Pokemon's Defense stat stage.
+Prevents other Pokemon from lowering this Pokemon's Defense stat stage.
+146
+If Sandstorm is active, this Pokemon's Speed is doubled; immunity to Sandstorm.
+If Sandstorm is active, this Pokemon's Speed is doubled; immunity to Sandstorm.
+147
+Status moves with accuracy checks are 50% accurate when used on this Pokemon.
+Status moves with accuracy checks are 50% accurate when used on this Pokemon.
+148
+This Pokemon's attacks have 1.3x power if it is the last to move in a turn.
+This Pokemon's attacks have 1.3x power if it is the last to move in a turn.
+149
+This Pokemon appears as the last Pokemon in the party until it takes direct damage.
+This Pokemon appears as the last Pokemon in the party until it takes direct damage.
+150
+On switch-in, this Pokemon Transforms into the opposing Pokemon that is facing it.
+On switch-in, this Pokemon Transforms into the opposing Pokemon that is facing it.
+151
+Moves ignore substitutes and foe's Reflect/Light Screen/Safeguard/Mist/Aurora Veil.
+Moves ignore substitutes and foe's Reflect/Light Screen/Safeguard/Mist/Aurora Veil.
+152
+Pokemon making contact with this Pokemon have their Ability changed to Mummy.
+Pokemon making contact with this Pokemon have their Ability changed to Mummy.
+153
+This Pokemon's Attack is raised by 1 stage if it attacks and KOes another Pokemon.
+This Pokemon's Attack is raised by 1 stage if it attacks and KOes another Pokemon.
+154
+This Pokemon's Attack is raised by 1 stage after it is damaged by a Dark-type move.
+This Pokemon's Attack is raised by 1 stage after it is damaged by a Dark-type move.
+155
+Speed is raised 1 stage if hit by a Bug-, Dark-, or Ghost-type attack, or Intimidated.
+Speed is raised 1 stage if hit by a Bug-, Dark-, or Ghost-type attack, or Intimidated.
+156
+This Pokemon blocks certain Status moves and bounces them back to the user.
+This Pokemon blocks certain Status moves and bounces them back to the user.
+157
+This Pokemon's Attack is raised 1 stage if hit by a Grass move; Grass immunity.
+This Pokemon's Attack is raised 1 stage if hit by a Grass move; Grass immunity.
+158
+This Pokemon's Status moves have priority raised by 1, but Dark types are immune.
+This Pokemon's Status moves have priority raised by 1, but Dark types are immune.
+159
+This Pokemon's Ground/Rock/Steel attacks do 1.3x in Sandstorm; immunity to it.
+This Pokemon's Ground/Rock/Steel attacks do 1.3x in Sandstorm; immunity to it.
+160
+Pokemon making contact with this Pokemon lose 1/8 of their max HP.
+Pokemon making contact with this Pokemon lose 1/8 of their max HP.
+161
+If Darmanitan, at end of turn changes Mode to Standard if > 1/2 max HP, else Zen.
+If Darmanitan, at end of turn changes Mode to Standard if > 1/2 max HP, else Zen.
+162
+This Pokemon and its allies' moves have their accuracy multiplied by 1.1.
+This Pokemon and its allies' moves have their accuracy multiplied by 1.1.
+163
+This Pokemon's moves and their effects ignore the Abilities of other Pokemon.
+This Pokemon's moves and their effects ignore the Abilities of other Pokemon.
+164
+This Pokemon's moves and their effects ignore the Abilities of other Pokemon.
+This Pokemon's moves and their effects ignore the Abilities of other Pokemon.
+165
+Protects user/allies from Attract, Disable, Encore, Heal Block, Taunt, and Torment.
+Protects user/allies from Attract, Disable, Encore, Heal Block, Taunt, and Torment.
+166
+This side's Grass types can't have stats lowered or status inflicted by other Pokemon.
+This side's Grass types can't have stats lowered or status inflicted by other Pokemon.
+167
+If this Pokemon eats a Berry, it restores 1/3 of its max HP after the Berry's effect.
+If this Pokemon eats a Berry, it restores 1/3 of its max HP after the Berry's effect.
+168
+This Pokemon's type changes to the type of the move it is using. Once per switch-in.
+This Pokemon's type changes to the type of the move it is using. Once per switch-in.
+169
+This Pokemon's Defense is doubled.
+This Pokemon's Defense is doubled.
+170
+If this Pokemon has no item, it steals the item off a Pokemon it hits with an attack.
+If this Pokemon has no item, it steals the item off a Pokemon it hits with an attack.
+171
+This Pokemon is immune to bullet moves.
+This Pokemon is immune to bullet moves.
+172
+This Pokemon's Sp. Atk is raised by 2 for each of its stats that is lowered by a foe.
+This Pokemon's Sp. Atk is raised by 2 for each of its stats that is lowered by a foe.
+173
+This Pokemon's bite-based attacks have 1.5x power. Bug Bite is not boosted.
+This Pokemon's bite-based attacks have 1.5x power. Bug Bite is not boosted.
+174
+This Pokemon's Normal-type moves become Ice type and have 1.2x power.
+This Pokemon's Normal-type moves become Ice type and have 1.2x power.
+175
+This Pokemon and its allies cannot fall asleep; those already asleep do not wake up.
+This Pokemon and its allies cannot fall asleep; those already asleep do not wake up.
+176
+If Aegislash, changes Forme to Blade before attacks and Shield before King's Shield.
+If Aegislash, changes Forme to Blade before attacks and Shield before King's Shield.
+177
+If this Pokemon is at full HP, its Flying-type moves have their priority increased by 1.
+If this Pokemon is at full HP, its Flying-type moves have their priority increased by 1.
+178
+This Pokemon's pulse moves have 1.5x power. Heal Pulse heals 3/4 target's max HP.
+This Pokemon's pulse moves have 1.5x power. Heal Pulse heals 3/4 target's max HP.
+179
+If Grassy Terrain is active, this Pokemon's Defense is multiplied by 1.5.
+If Grassy Terrain is active, this Pokemon's Defense is multiplied by 1.5.
+180
+If an ally uses its item, this Pokemon gives its item to that ally immediately.
+If an ally uses its item, this Pokemon gives its item to that ally immediately.
+181
+This Pokemon's contact moves have their power multiplied by 1.3.
+This Pokemon's contact moves have their power multiplied by 1.3.
+182
+This Pokemon's Normal-type moves become Fairy type and have 1.2x power.
+This Pokemon's Normal-type moves become Fairy type and have 1.2x power.
+183
+Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.
+Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.
+184
+This Pokemon's Normal-type moves become Flying type and have 1.2x power.
+This Pokemon's Normal-type moves become Flying type and have 1.2x power.
+185
+This Pokemon's damaging moves hit twice. The second hit has its damage quartered.
+This Pokemon's damaging moves hit twice. The second hit has its damage quartered.
+186
+While this Pokemon is active, a Dark move used by any Pokemon has 1.33x power.
+While this Pokemon is active, a Dark move used by any Pokemon has 1.33x power.
+187
+While this Pokemon is active, a Fairy move used by any Pokemon has 1.33x power.
+While this Pokemon is active, a Fairy move used by any Pokemon has 1.33x power.
+188
+While this Pokemon is active, the Dark Aura and Fairy Aura power modifier is 0.75x.
+While this Pokemon is active, the Dark Aura and Fairy Aura power modifier is 0.75x.
+189
+On switch-in, heavy rain begins until this Ability is not active in battle.
+On switch-in, heavy rain begins until this Ability is not active in battle.
+190
+On switch-in, extremely harsh sunlight begins until this Ability is not active in battle.
+On switch-in, extremely harsh sunlight begins until this Ability is not active in battle.
+191
+On switch-in, strong winds begin until this Ability is not active in battle.
+On switch-in, strong winds begin until this Ability is not active in battle.
+192
+This Pokemon's Defense is raised by 1 stage after it is damaged by a move.
+This Pokemon's Defense is raised by 1 stage after it is damaged by a move.
+193
+This Pokemon switches out when it reaches 1/2 or less of its maximum HP.
+This Pokemon switches out when it reaches 1/2 or less of its maximum HP.
+194
+This Pokemon switches out when it reaches 1/2 or less of its maximum HP.
+This Pokemon switches out when it reaches 1/2 or less of its maximum HP.
+195
+This Pokemon's Defense is raised 2 stages after it is damaged by a Water-type move.
+This Pokemon's Defense is raised 2 stages after it is damaged by a Water-type move.
+196
+This Pokemon's attacks are critical hits if the target is poisoned.
+This Pokemon's attacks are critical hits if the target is poisoned.
+197
+If Minior, switch-in/end of turn it changes to Core at 1/2 max HP or less, else Meteor.
+If Minior, switch-in/end of turn it changes to Core at 1/2 max HP or less, else Meteor.
+198
+This Pokemon's offensive stat is doubled against a target that switched in this turn.
+This Pokemon's offensive stat is doubled against a target that switched in this turn.
+199
+This Pokemon's Water power is 2x; it can't be burned; Fire power against it is halved.
+This Pokemon's Water power is 2x; it can't be burned; Fire power against it is halved.
+200
+This Pokemon's offensive stat is multiplied by 1.5 while using a Steel-type attack.
+This Pokemon's offensive stat is multiplied by 1.5 while using a Steel-type attack.
+201
+This Pokemon's Sp. Atk is raised by 1 when it reaches 1/2 or less of its max HP.
+This Pokemon's Sp. Atk is raised by 1 when it reaches 1/2 or less of its max HP.
+202
+If Snow is active, this Pokemon's Speed is doubled.
+If Snow is active, this Pokemon's Speed is doubled.
+203
+This Pokemon's attacks do not make contact with the target.
+This Pokemon's attacks do not make contact with the target.
+204
+This Pokemon's sound-based moves become Water type.
+This Pokemon's sound-based moves become Water type.
+205
+This Pokemon's healing moves have their priority increased by 3.
+This Pokemon's healing moves have their priority increased by 3.
+206
+This Pokemon's Normal-type moves become Electric type and have 1.2x power.
+This Pokemon's Normal-type moves become Electric type and have 1.2x power.
+207
+If Electric Terrain is active, this Pokemon's Speed is doubled.
+If Electric Terrain is active, this Pokemon's Speed is doubled.
+208
+If user is Wishiwashi, changes to School Form if it has > 1/4 max HP, else Solo Form.
+If user is Wishiwashi, changes to School Form if it has > 1/4 max HP, else Solo Form.
+209
+(Mimikyu only) The first hit it takes is blocked, and it takes 1/8 HP damage instead.
+(Mimikyu only) The first hit it takes is blocked, and it takes 1/8 HP damage instead.
+210
+After KOing a Pokemon: raises Attack, Sp. Atk, Speed by 1 stage. Once per battle.
+After KOing a Pokemon: raises Attack, Sp. Atk, Speed by 1 stage. Once per battle.
+211
+If Zygarde 10%/50%, changes to Complete if at 1/2 max HP or less at end of turn.
+If Zygarde 10%/50%, changes to Complete if at 1/2 max HP or less at end of turn.
+212
+This Pokemon can poison or badly poison a Pokemon regardless of its typing.
+This Pokemon can poison or badly poison a Pokemon regardless of its typing.
+213
+This Pokemon cannot be statused, and is considered to be asleep.
+This Pokemon cannot be statused, and is considered to be asleep.
+214
+This Pokemon and its allies are protected from opposing priority moves.
+This Pokemon and its allies are protected from opposing priority moves.
+215
+If this Pokemon is KOed with a move, that move's user loses an equal amount of HP.
+If this Pokemon is KOed with a move, that move's user loses an equal amount of HP.
+216
+After another Pokemon uses a dance move, this Pokemon uses the same move.
+After another Pokemon uses a dance move, this Pokemon uses the same move.
+217
+This Pokemon's allies have the power of their special attacks multiplied by 1.3.
+This Pokemon's allies have the power of their special attacks multiplied by 1.3.
+218
+This Pokemon takes 1/2 damage from contact moves, 2x damage from Fire moves.
+This Pokemon takes 1/2 damage from contact moves, 2x damage from Fire moves.
+219
+This Pokemon and its allies are protected from opposing priority moves.
+This Pokemon and its allies are protected from opposing priority moves.
+220
+This Pokemon's Special Attack is raised by 1 stage when another Pokemon faints.
+This Pokemon's Special Attack is raised by 1 stage when another Pokemon faints.
+221
+Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.
+Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.
+222
+This Pokemon copies the Ability of an ally that faints.
+This Pokemon copies the Ability of an ally that faints.
+223
+This Pokemon copies the Ability of an ally that faints.
+This Pokemon copies the Ability of an ally that faints.
+224
+This Pokemon's highest stat is raised by 1 if it attacks and KOes another Pokemon.
+This Pokemon's highest stat is raised by 1 if it attacks and KOes another Pokemon.
+225
+If this Pokemon is a Silvally, its type changes to match its held Memory.
+If this Pokemon is a Silvally, its type changes to match its held Memory.
+226
+On switch-in, this Pokemon summons Electric Terrain.
+On switch-in, this Pokemon summons Electric Terrain.
+227
+On switch-in, this Pokemon summons Psychic Terrain.
+On switch-in, this Pokemon summons Psychic Terrain.
+228
+On switch-in, this Pokemon summons Misty Terrain.
+On switch-in, this Pokemon summons Misty Terrain.
+229
+On switch-in, this Pokemon summons Grassy Terrain.
+On switch-in, this Pokemon summons Grassy Terrain.
+230
+Prevents other Pokemon from lowering this Pokemon's stat stages.
+Prevents other Pokemon from lowering this Pokemon's stat stages.
+231
+If this Pokemon is at full HP, damage taken from attacks is halved.
+If this Pokemon is at full HP, damage taken from attacks is halved.
+232
+This Pokemon receives 3/4 damage from supereffective attacks.
+This Pokemon receives 3/4 damage from supereffective attacks.
+233
+This Pokemon's attacks that are super effective against the target do 1.25x damage.
+This Pokemon's attacks that are super effective against the target do 1.25x damage.
+234
+No competitive use.
+No competitive use.
+235
+If this Pokemon is hit, it lowers the Speed of all other Pokemon on the field 1 stage.
+If this Pokemon is hit, it lowers the Speed of all other Pokemon on the field 1 stage.
+236
+On switch-in, this Pokemon's Defense is raised by 1 stage. Once per battle.
+On switch-in, this Pokemon's Defense is raised by 1 stage. Once per battle.
+237
+This Pokemon's Attack is 1.5x, but it can only select the first move it executes.
+This Pokemon's Attack is 1.5x, but it can only select the first move it executes.
+238
+When hit after Surf/Dive, attacker takes 1/4 max HP and -1 Defense or paralysis.
+When hit after Surf/Dive, attacker takes 1/4 max HP and -1 Defense or paralysis.
+239
+If Morpeko, it changes between Full Belly and Hangry Mode at the end of each turn.
+If Morpeko, it changes between Full Belly and Hangry Mode at the end of each turn.
+240
+If Eiscue, the first physical hit it takes deals 0 damage. Effect is restored in Snow.
+If Eiscue, the first physical hit it takes deals 0 damage. Effect is restored in Snow.
+241
+This Pokemon receives 1/2 damage from special attacks.
+This Pokemon receives 1/2 damage from special attacks.
+242
+On switch-in, this Pokemon's Attack is raised by 1 stage. Once per battle.
+On switch-in, this Pokemon's Attack is raised by 1 stage. Once per battle.
+243
+This Pokemon's type changes to the type of the move it is using. Once per switch-in.
+This Pokemon's type changes to the type of the move it is using. Once per switch-in.
+244
+This Pokemon's types change to match the Terrain. Type reverts when Terrain ends.
+This Pokemon's types change to match the Terrain. Type reverts when Terrain ends.
+245
+If this Pokemon's stat stages would be lowered, the attacker's are lowered instead.
+If this Pokemon's stat stages would be lowered, the attacker's are lowered instead.
+246
+While this Pokemon is active, Abilities have no effect.
+While this Pokemon is active, Abilities have no effect.
+247
+This Pokemon and its allies cannot be poisoned. On switch-in, cures poisoned allies.
+This Pokemon and its allies cannot be poisoned. On switch-in, cures poisoned allies.
+248
+Making contact with this Pokemon starts the Perish Song effect for it and the attacker.
+Making contact with this Pokemon starts the Perish Song effect for it and the attacker.
+249
+This Pokemon's allies have the power of their moves multiplied by 1.3.
+This Pokemon's allies have the power of their moves multiplied by 1.3.
+250
+This Pokemon's moves cannot be redirected to a different target by any effect.
+This Pokemon's moves cannot be redirected to a different target by any effect.
+251
+This Pokemon receives 1/2 damage from sound moves. Its own have 1.3x power.
+This Pokemon receives 1/2 damage from sound moves. Its own have 1.3x power.
+252
+When this Pokemon eats certain Berries, the effects are doubled.
+When this Pokemon eats certain Berries, the effects are doubled.
+253
+When this Pokemon is hit by an attack, the effect of Sandstorm begins.
+When this Pokemon is hit by an attack, the effect of Sandstorm begins.
+254
+On switch-in, the effects of Aurora Veil, Light Screen, and Reflect end for both sides.
+On switch-in, the effects of Aurora Veil, Light Screen, and Reflect end for both sides.
+255
+This Pokemon's moves cannot be redirected to a different target by any effect.
+This Pokemon's moves cannot be redirected to a different target by any effect.
+256
+This Pokemon's Speed is raised by 6 stages after it is damaged by Fire/Water moves.
+This Pokemon's Speed is raised by 6 stages after it is damaged by Fire/Water moves.
+257
+This Pokemon and its allies' Steel-type moves have their power multiplied by 1.5.
+This Pokemon and its allies' Steel-type moves have their power multiplied by 1.5.
+258
+Pokemon making contact with this Pokemon have their Ability swapped with this one.
+Pokemon making contact with this Pokemon have their Ability swapped with this one.
+259
+This Pokemon's contact moves ignore the target's protection, except Max Guard.
+This Pokemon's contact moves ignore the target's protection, except Max Guard.
+260
+This Pokemon has a 30% chance to move first in its priority bracket with attacking moves.
+This Pokemon has a 30% chance to move first in its priority bracket with attacking moves.
+261
+On switch-in, this Pokemon's allies have their stat stages reset to 0.
+On switch-in, this Pokemon's allies have their stat stages reset to 0.
+262
+This Pokemon's offensive stat is multiplied by 1.5 while using an Electric-type attack.
+This Pokemon's offensive stat is multiplied by 1.5 while using an Electric-type attack.
+263
+This Pokemon's offensive stat is multiplied by 1.5 while using a Dragon-type attack.
+This Pokemon's offensive stat is multiplied by 1.5 while using a Dragon-type attack.
+264
+This Pokemon's Attack is raised by 1 stage if it attacks and KOes another Pokemon.
+This Pokemon's Attack is raised by 1 stage if it attacks and KOes another Pokemon.
+265
+This Pokemon's Sp. Atk is raised by 1 stage if it attacks and KOes another Pokemon.
+This Pokemon's Sp. Atk is raised by 1 stage if it attacks and KOes another Pokemon.
+266
+See 'As One (Glastrier)' and 'As One (Spectrier)'.
+See 'As One (Glastrier)' and 'As One (Spectrier)'.
+267
+See 'As One (Glastrier)' and 'As One (Spectrier)'.
+See 'As One (Glastrier)' and 'As One (Spectrier)'.
