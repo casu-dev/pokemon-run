@@ -224,10 +224,7 @@ class DiegoWTsStarterSelection
       pbUpdateSpriteHash(@sprites)
       Graphics.update
       Input.update
-      if Input.trigger?(Input::RIGHT) || Input.trigger?(Input::LEFT) ||
-        Input.trigger?(Input::ACTION) || Input.trigger?(Input::USE) ||
-        Input.trigger?(Input::BACK)
-        @select = 2
+        @select = 1
         @oldx = @sprites["ball_#{@select}"].x
         @frame = 0 
         pbPlayCursorSE
@@ -239,7 +236,6 @@ class DiegoWTsStarterSelection
         @sprites["selection"].y = @y[@select] - 154
         @sprites["select"].angle = 0
         pbChoosingScene
-      end
     end
   end
   
@@ -402,8 +398,6 @@ class DiegoWTsStarterSelection
   
   def pbChooseBall
     # Added by us
-    pbRelearnMoveScreen(@pokemon, false, true)
-
     typeColor  = pbTypeColor(@pokemon.type1)
     type1 = @type 
     if @pokemon.type2 != @pokemon.type1 && StarterSelSettings::TYPE2COLOR
@@ -477,14 +471,62 @@ class DiegoWTsStarterSelection
         else
           @sprites["textbox"].text = _INTL("<ac>Will you choose #{@pkmnname}, <br>the" + " #{type1}"  + " Pokémon?</ac>")
         end
-    pbChoiceBoxes(0) # Turn on the choice boxes
-    confirm = pbConfirm
-    if confirm == 1
-      @sprites["textbox"].visible = false
-      $game_variables[7] = @select if $game_variables[7] == 0
-      @endscene = 1
-      pbCloseScene
-      pbkAddPokemon(@data["pkmn_#{@select}"],@lv, true)
+    if pbRelearnMoveScreen(@pokemon, false, true)
+        pbChoiceBoxes(0) # Turn on the choice boxes
+        confirm = pbConfirm
+        if confirm == 1
+          @sprites["textbox"].visible = false
+          $game_variables[7] = @select if $game_variables[7] == 0
+          @endscene = 1
+          pbCloseScene
+          pbkAddPokemon(@data["pkmn_#{@select}"],@lv, true)
+        else
+          @sprites["textbox"].y = @oldMsgY
+          @sprites["textbox"].text = _INTL("<ac>Choose a Pokémon.</ac>")
+          10.times do
+            pbUpdateSpriteHash(@sprites)
+            @sprites["pkmn_#{@select}"].opacity -= 255/10
+            pbWait(1)
+          end
+          2.times do
+            pbUpdateSpriteHash(@sprites)
+            @sprites["ballbase"].x -= 6 if @select == 1
+            @sprites["ballbase"].x += 6 if @select == 3
+            pbWait(1)
+          end
+          20.times do
+            pbUpdateSpriteHash(@sprites)
+            @sprites["ballbase"].x -= 154/20 if @select == 1
+            @sprites["ballbase"].x += 154/20 if @select == 3
+            @sprites["base"].y -= 40/20
+            @sprites["ball_1"].y -= 40/20
+            @sprites["ball_2"].y -= 40/20
+            @sprites["ball_3"].y -= 40/20
+            @sprites["ballbase"].y += 40/20
+            @sprites["ballbase"].zoom_x -= zoom/20 if StarterSelSettings::STARTERCZ >= 1
+            @sprites["ballbase"].zoom_y -= zoom/20 if StarterSelSettings::STARTERCZ >= 1
+            pbWait(1)
+          end
+          @sprites["ballbase"].x = @sprites["ball_#{@select}"].x if @select != 1
+          @sprites["select"].visible = true
+          @sprites["selection"].visible = true
+          20.times do
+            pbUpdateSpriteHash(@sprites)
+            if StarterSelSettings::TYPE2COLOR
+              @sprites["type1"].opacity -= @sprites["starterbg"].opacity/18
+              @sprites["type2"].opacity -= @sprites["starterbg"].opacity/18
+            else
+              @sprites["typebg"].opacity -= @sprites["starterbg"].opacity/18
+            end
+            @sprites["ballbase"].opacity-=255/18
+            @sprites["base"].opacity += 105/10
+            for i in 1..3
+              @sprites["shadow_#{i}"].opacity += 155/10
+              @sprites["ball_#{i}"].opacity += 105/10
+            end
+            pbWait(1)
+          end
+        end
     else
       @sprites["textbox"].y = @oldMsgY
       @sprites["textbox"].text = _INTL("<ac>Choose a Pokémon.</ac>")
