@@ -9,7 +9,6 @@
 - Place easter eggs
 
 ## Open tickets
-- [ ] First and last event shouldn't be "useless" events. This means the first event of f1 mustn't be Egg-move Tutor or Tm shop (maybe also ban the mart?). And the last event on F4 mustn't be the wishing well event.
 - [ ] Change the current ability descriptions back to the old ones.
 
 
@@ -21,3 +20,4 @@
 - [x] Add more precise descriptions to the game
 - [x] Fix Rayquaza bug
 - [x] reset_moves considers Stab bonus, phy/special attack stat and type coverage
+- [x] First and last event shouldn't be "useless" events. This means the first event of f1 mustn't be Egg-move Tutor or Tm shop (maybe also ban the mart?). And the last event on F4 mustn't be the wishing well event.
