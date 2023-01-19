@@ -67,7 +67,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 28
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = VENUSAUR,Level,34
+Evolutions = VENUSAUR,Level,33
 #-------------------------------
 [3]
 Name = Venusaur
@@ -167,7 +167,7 @@ BattlerEnemyX = 5
 BattlerEnemyY = 22
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = CHARIZARD,Level,34
+Evolutions = CHARIZARD,Level,33
 #-------------------------------
 [6]
 Name = Charizard
@@ -267,7 +267,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 21
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = BLASTOISE,Level,34
+Evolutions = BLASTOISE,Level,33
 #-------------------------------
 [9]
 Name = Blastoise
@@ -5210,7 +5210,7 @@ BattlerEnemyX = -1
 BattlerEnemyY = 26
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = MEGANIUM,Level,34
+Evolutions = MEGANIUM,Level,33
 #-------------------------------
 [154]
 Name = Meganium
@@ -5309,7 +5309,7 @@ BattlerEnemyX = 2
 BattlerEnemyY = 30
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = TYPHLOSION,Level,34
+Evolutions = TYPHLOSION,Level,33
 #-------------------------------
 [157]
 Name = Typhlosion
@@ -5408,7 +5408,7 @@ BattlerEnemyX = 2
 BattlerEnemyY = 24
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = FERALIGATR,Level,34
+Evolutions = FERALIGATR,Level,33
 #-------------------------------
 [160]
 Name = Feraligatr
@@ -8583,7 +8583,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 23
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = SCEPTILE,Level,34
+Evolutions = SCEPTILE,Level,33
 #-------------------------------
 [254]
 Name = Sceptile
@@ -8683,7 +8683,7 @@ BattlerEnemyX = 1
 BattlerEnemyY = 22
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = BLAZIKEN,Level,34
+Evolutions = BLAZIKEN,Level,33
 #-------------------------------
 [257]
 Name = Blaziken
@@ -8784,7 +8784,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 23
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = SWAMPERT,Level,34
+Evolutions = SWAMPERT,Level,33
 #-------------------------------
 [260]
 Name = Swampert
@@ -13154,7 +13154,7 @@ BattlerEnemyX = -1
 BattlerEnemyY = 30
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = TORTERRA,Level,34
+Evolutions = TORTERRA,Level,33
 #-------------------------------
 [389]
 Name = Torterra
@@ -13252,7 +13252,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 27
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = INFERNAPE,Level,34
+Evolutions = INFERNAPE,Level,33
 #-------------------------------
 [392]
 Name = Infernape
@@ -13349,7 +13349,7 @@ BattlerEnemyX = 4
 BattlerEnemyY = 24
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = EMPOLEON,Level,34
+Evolutions = EMPOLEON,Level,33
 #-------------------------------
 [395]
 Name = Empoleon
@@ -16662,7 +16662,7 @@ BattlerEnemyX = 4
 BattlerEnemyY = 22
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = SERPERIOR,Level,34
+Evolutions = SERPERIOR,Level,33
 #-------------------------------
 [497]
 Name = Serperior
@@ -16759,7 +16759,7 @@ BattlerEnemyX = 1
 BattlerEnemyY = 27
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = EMBOAR,Level,34
+Evolutions = EMBOAR,Level,33
 #-------------------------------
 [500]
 Name = Emboar
@@ -16856,7 +16856,7 @@ BattlerEnemyX = 5
 BattlerEnemyY = 23
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = SAMUROTT,Level,34
+Evolutions = SAMUROTT,Level,33
 #-------------------------------
 [503]
 Name = Samurott
@@ -21688,7 +21688,7 @@ BattlerEnemyX = 1
 BattlerEnemyY = 28
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = QUILLADIN,Level,16
+Evolutions = QUILLADIN,Level,18
 #-------------------------------
 [651]
 Name = Quilladin
@@ -21720,7 +21720,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 26
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = CHESNAUGHT,Level,36
+Evolutions = CHESNAUGHT,Level,33
 #-------------------------------
 [652]
 Name = Chesnaught
@@ -21785,7 +21785,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 29
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = BRAIXEN,Level,16
+Evolutions = BRAIXEN,Level,18
 #-------------------------------
 [654]
 Name = Braixen
@@ -21817,7 +21817,7 @@ BattlerEnemyX = 1
 BattlerEnemyY = 17
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = DELPHOX,Level,36
+Evolutions = DELPHOX,Level,33
 #-------------------------------
 [655]
 Name = Delphox
@@ -21882,7 +21882,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 35
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = FROGADIER,Level,16
+Evolutions = FROGADIER,Level,18
 #-------------------------------
 [657]
 Name = Frogadier
@@ -21914,7 +21914,7 @@ BattlerEnemyX = 7
 BattlerEnemyY = 28
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = GRENINJA,Level,36
+Evolutions = GRENINJA,Level,33
 #-------------------------------
 [658]
 Name = Greninja
@@ -24029,7 +24029,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 34
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = DARTRIX,Level,17
+Evolutions = DARTRIX,Level,18
 #-------------------------------
 [723]
 Name = Dartrix
@@ -24062,7 +24062,7 @@ BattlerEnemyX = 2
 BattlerEnemyY = 25
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = DECIDUEYE,Level,34
+Evolutions = DECIDUEYE,Level,33
 #-------------------------------
 [724]
 Name = Decidueye
@@ -24127,7 +24127,7 @@ BattlerEnemyX = -1
 BattlerEnemyY = 31
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = TORRACAT,Level,17
+Evolutions = TORRACAT,Level,18
 #-------------------------------
 [726]
 Name = Torracat
@@ -24159,7 +24159,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 20
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = INCINEROAR,Level,34
+Evolutions = INCINEROAR,Level,33
 #-------------------------------
 [727]
 Name = Incineroar
@@ -24224,7 +24224,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 34
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = BRIONNE,Level,17
+Evolutions = BRIONNE,Level,18
 #-------------------------------
 [729]
 Name = Brionne
@@ -24256,7 +24256,7 @@ BattlerEnemyX = 1
 BattlerEnemyY = 27
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = PRIMARINA,Level,34
+Evolutions = PRIMARINA,Level,33
 #-------------------------------
 [730]
 Name = Primarina
@@ -26885,7 +26885,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 31
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = THWACKEY,Level,16
+Evolutions = THWACKEY,Level,18
 #-------------------------------
 [811]
 Name = Thwackey
@@ -26917,7 +26917,7 @@ BattlerEnemyX = -6
 BattlerEnemyY = 24
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = RILLABOOM,Level,35
+Evolutions = RILLABOOM,Level,33
 #-------------------------------
 [812]
 Name = Rillaboom
@@ -26981,7 +26981,7 @@ BattlerEnemyX = 2
 BattlerEnemyY = 28
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = RABOOT,Level,16
+Evolutions = RABOOT,Level,18
 #-------------------------------
 [814]
 Name = Raboot
@@ -27013,7 +27013,7 @@ BattlerEnemyX = 4
 BattlerEnemyY = 22
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = CINDERACE,Level,35
+Evolutions = CINDERACE,Level,33
 #-------------------------------
 [815]
 Name = Cinderace
@@ -27077,7 +27077,7 @@ BattlerEnemyX = 2
 BattlerEnemyY = 30
 BattlerShadowX = 0
 BattlerShadowSize = 1
-Evolutions = DRIZZILE,Level,16
+Evolutions = DRIZZILE,Level,18
 #-------------------------------
 [817]
 Name = Drizzile
@@ -27109,7 +27109,7 @@ BattlerEnemyX = -5
 BattlerEnemyY = 26
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = INTELEON,Level,35
+Evolutions = INTELEON,Level,33
 #-------------------------------
 [818]
 Name = Inteleon

@@ -1,25 +1,20 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
-#
-# DEFAULT TRAINER TEMPLATES. WILL BE OVERRIDDEN!
-#===============================
+#-------------------------------
 [YOUNGSTER,Trainer]
 LoseText = "..."
 Pokemon = EEVEE,1
 #-------------------------------
 [LASS,Trainer]
-LoseText = "You didn't have to win so convincingly!"
+LoseText = "..."
 Pokemon = GLOOM,1
 #-------------------------------
 [COOLTRAINER_F,Trainer]
-LoseText = "You just got lucky!"
+LoseText = "..."
 Pokemon = MACHAMP,1
 #-------------------------------
 [BIKER,Trainer]
-LoseText = "Now you got me mad."
+LoseText = "..."
 Pokemon = BULBASAUR,1
-#===============================
-#
-#
 #-------------------------------
 [CAMPER,Liam]
 LoseText = "A very good battle, indeed!"
@@ -44,22 +39,12 @@ Pokemon = ONIX,14
     IV = 20,20,20,20,20,20
     Ball = HEAVYBALL
 #-------------------------------
-[TEAMROCKET_M,Grunt,1]
-LoseText = "You're too good for me!"
-Pokemon = WEEPINBELL,21
-    Shadow = yes
-#-------------------------------
 [TEAMROCKET_F,Grunt,1]
 LoseText = "You're too good for me!"
 Pokemon = BURMY,19
 Pokemon = WINGULL,19
 Pokemon = ELECTABUZZ,20
     Shadow = yes
-#-------------------------------
-[YOUNGSTER,Ben]
-LoseText = "Aww, I lost."
-Pokemon = RATTATA,11
-Pokemon = EKANS,11
 #-------------------------------
 [CAMPER,Jeff]
 LoseText = "A very good battle, indeed!"
@@ -89,13 +74,8 @@ Pokemon = MAGIKARP,14
 Pokemon = MAGIKARP,18
 #-------------------------------
 [BEAUTY,Bridget]
-LoseText = "My Skitty!"
+LoseText = "..."
 Pokemon = SKITTY,18
-#-------------------------------
-[LASS,Crissy]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = PLUSLE,17
-Pokemon = MINUN,17
 #-------------------------------
 [COOLCOUPLE,Alice & Bob]
 LoseText = "Our teamwork failed!"
@@ -111,8 +91,26 @@ LoseText = "Washed out!"
 Pokemon = STARYU,15
 Pokemon = GOLDEEN,11
 #-------------------------------
-[RIVAL1,Blue]
-LoseText = "Not too shabby."
+[RIVAL1,Gary]
+LoseText = "I will get you next time!"
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = BULBASAUR,18
+#-------------------------------
+[RIVAL1,Gary,1]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = BULBASAUR,18
+#-------------------------------
+[RIVAL1,Gary,2]
+LoseText = "Aw man..."
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = BULBASAUR,18
+#-------------------------------
+[RIVAL1,Gary,3]
+LoseText = "I'm never lucky..."
 Pokemon = PIDGEOTTO,17
 Pokemon = RATTATA,15
 Pokemon = BULBASAUR,18
@@ -157,107 +155,177 @@ Pokemon = VILEPLUME,50
     Item = BLACKSLUDGE
     IV = 20,20,20,20,20,20
 #-------------------------------
-[BLACKBELT, Bruce]
+[BLACKBELT,Bruce]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = DRIFLOON, 16
+Pokemon = DRIFLOON,16
 #-------------------------------
-[BLACKBELT, Bruce, 1]
+[BLACKBELT,Bruce,1]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = SLUGMA, 16
+Pokemon = SLUGMA,16
 #-------------------------------
-[BLACKBELT, Bruce, 2]
+[BLACKBELT,Bruce,2]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = FERROSEED, 16
+Pokemon = SLOWPOKE,16
 #-------------------------------
-[BLACKBELT, Bruce, 3]
+[BLACKBELT,Bruce,3]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = KOFFING, 16
+Pokemon = KOFFING,16
 #-------------------------------
-[BLACKBELT, Bruce, 4]
+[BLACKBELT,Bruce,4]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = RHYHORN, 16
+Pokemon = RHYHORN,16
 #-------------------------------
-[BLACKBELT, Bruce, 5]
+[BLACKBELT,Bruce,5]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = ODDISH, 16
+Pokemon = ODDISH,16
 #-------------------------------
-[BLACKBELT, Bruce, 6]
+[BLACKBELT,Bruce,6]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = DRIFLOON, 32
-Item = EVIOLITE
+Pokemon = PETILIL,16
 #-------------------------------
-[BLACKBELT, Bruce, 7]
+[BLACKBELT,Bruce,7]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = SLUGMA, 32
-Item = EVIOLITE
+Pokemon = BALTOY,16
 #-------------------------------
-[BLACKBELT, Bruce, 8]
+[BLACKBELT,Bruce,8]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = FERROSEED, 32
-Item = EVIOLITE
+Pokemon = UNOWN,16
 #-------------------------------
-[BLACKBELT, Bruce, 9]
+[BLACKBELT,Bruce,9]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = KOFFING, 32
-Item = EVIOLITE
+Pokemon = UNOWN,16
 #-------------------------------
-[BLACKBELT, Bruce, 10]
+[BLACKBELT,Bruce,10]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = RHYHORN, 32
-Item = EVIOLITE
+Pokemon = DRIFLOON,32
+    Item = EVIOLITE
 #-------------------------------
-[BLACKBELT, Bruce, 11]
+[BLACKBELT,Bruce,11]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = GLOOM, 32
+Pokemon = SLUGMA,32
+    Item = EVIOLITE
 #-------------------------------
-[BLACKBELT, Bruce, 12]
+[BLACKBELT,Bruce,12]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = DRIFBLIM , 63
+Pokemon = SLOWPOKE,32
+    Item = EVIOLITE
 #-------------------------------
-[BLACKBELT, Bruce, 13]
+[BLACKBELT,Bruce,13]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = MAGCARGO, 63
+Pokemon = KOFFING,32
+    Item = EVIOLITE
 #-------------------------------
-[BLACKBELT, Bruce, 14]
+[BLACKBELT,Bruce,14]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = FERROTHORN, 63
+Pokemon = RHYHORN,32
+    Item = EVIOLITE
 #-------------------------------
-[BLACKBELT, Bruce, 15]
+[BLACKBELT,Bruce,15]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = WEEZING, 63
+Pokemon = GLOOM,32
 #-------------------------------
-[BLACKBELT, Bruce, 16]
+[BLACKBELT,Bruce,16]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = RHYDON, 63
-Item = EVIOLITE
+Pokemon = PETILIL,32
+    Item = EVIOLITE
 #-------------------------------
-[BLACKBELT, Bruce, 17]
+[BLACKBELT,Bruce,17]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = VILEPLUME, 63
+Pokemon = BALTOY,32
+    Item = EVIOLITE
 #-------------------------------
-[BLACKBELT, Bruce, 18]
+[BLACKBELT,Bruce,18]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = DRIFBLIM , 95
+Pokemon = UNOWN,32
 #-------------------------------
-[BLACKBELT, Bruce, 19]
+[BLACKBELT,Bruce,19]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = MAGCARGO, 95
+Pokemon = UNOWN,32
 #-------------------------------
-[BLACKBELT, Bruce, 20]
+[BLACKBELT,Bruce,20]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = FERROTHORN, 95
+Pokemon = DRIFBLIM,63
 #-------------------------------
-[BLACKBELT, Bruce, 21]
+[BLACKBELT,Bruce,21]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = WEEZING, 95
+Pokemon = MAGCARGO,63
 #-------------------------------
-[BLACKBELT, Bruce, 22]
+[BLACKBELT,Bruce,22]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = RHYPERIOR, 95
+Pokemon = SLOWKING,63
 #-------------------------------
-[BLACKBELT, Bruce, 23]
+[BLACKBELT,Bruce,23]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = VILEPLUME, 95
+Pokemon = WEEZING,63
+#-------------------------------
+[BLACKBELT,Bruce,24]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = RHYDON,63
+    Item = EVIOLITE
+#-------------------------------
+[BLACKBELT,Bruce,25]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = VILEPLUME,63
+#-------------------------------
+[BLACKBELT,Bruce,26]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = LILLIGANT,63
+#-------------------------------
+[BLACKBELT,Bruce,27]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = CLAYDOL,63
+#-------------------------------
+[BLACKBELT,Bruce,28]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,63
+Item = CHOICESPECS
+#-------------------------------
+[BLACKBELT,Bruce,29]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,63
+Item = CHOICESPECS
+#-------------------------------
+[BLACKBELT,Bruce,30]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = DRIFBLIM,95
+#-------------------------------
+[BLACKBELT,Bruce,31]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = MAGCARGO,95
+#-------------------------------
+[BLACKBELT,Bruce,32]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = SLOWKING,95
+#-------------------------------
+[BLACKBELT,Bruce,33]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = WEEZING,95
+#-------------------------------
+[BLACKBELT,Bruce,34]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = RHYPERIOR,95
+#-------------------------------
+[BLACKBELT,Bruce,35]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = VILEPLUME,95
+#-------------------------------
+[BLACKBELT,Bruce,36]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = LILLIGANT,95
+#-------------------------------
+[BLACKBELT,Bruce,37]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = CLAYDOL,95
+#-------------------------------
+[BLACKBELT,Bruce,38]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,95
+Item = CHOICESPECS
+#-------------------------------
+[BLACKBELT,Bruce,39]
+LoseText = "Wow! I'm impressed. Here, take your reward."
+Pokemon = UNOWN,95
+Item = CHOICESPECS
 #-------------------------------
 [ROCKETBOSS,Elite Trainerr]
 LoseText = "A good battle indeed!"
@@ -267,39 +335,58 @@ Pokemon = SHIFTRY,55
     Item = SITRUSBERRY
 #-------------------------------
 [GENTLEMAN,Elite Trainer]
-LoseText = "A good battle indeed!"
-Pokemon = MUNNA,13
+LoseText = "..."
+Pokemon = MUNNA,14
     AbilityIndex = 1
-Pokemon = RUFFLET,13
-    AbilityIndex = 1
-#-------------------------------
-[GENTLEMAN,Elite Trainer,1]
-LoseText = "A good battle indeed!"
-Pokemon = MUNNA,13
-    AbilityIndex = 1
-Pokemon = MUNCHLAX,13
+Pokemon = RUFFLET,14
     AbilityIndex = 1
 #-------------------------------
-[GENTLEMAN,Elite Trainer,2]
-LoseText = "A good battle indeed!"
-Pokemon = MUNNA,13
-    AbilityIndex = 1
-Pokemon = PORYGON,13
-    AbilityIndex = 0
-#-------------------------------
-[TEAMROCKET_M,Rocket Grunt]
-LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+[TEAMROCKET_M,Grunt]
+LoseText = "gruntF1"
 Pokemon = MANKEY,12
-    AbilityIndex = 0
 Pokemon = MAKUHITA,12
-    AbilityIndex = 2
+#-------------------------------
+[TEAMROCKET_M,Grunt,1]
+LoseText = "gruntF2"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,2]
+LoseText = "gruntF3"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,3]
+LoseText = "gruntF4"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,4]
+LoseText = "gruntF1LW"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,5]
+LoseText = "gruntF2LW"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,6]
+LoseText = "gruntF3LW"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
+#-------------------------------
+[TEAMROCKET_M,Grunt,7]
+LoseText = "gruntF4LW"
+Pokemon = MANKEY,12
+Pokemon = MAKUHITA,12
 #-------------------------------
 [ELITEFOUR_Bruno,Bruno]
 LoseText = "GG WP"
 Pokemon = MIENFOO,16
-    Moves = FAKEOUT,UTURN,LOWSWEEP,ROCKTOMB
+    Moves = FAKEOUT,KNOCKOFF,LOWSWEEP,ROCKTOMB
     AbilityIndex = 1
-    IV = 20,20,20,20,20,20
+    IV = 15,15,15,15,15,15
 Pokemon = MAKUHITA,16
     Moves = ROCKTOMB,KNOCKOFF,FORCEPALM,BULKUP
     AbilityIndex = 2
@@ -320,14 +407,14 @@ Pokemon = PANSEAR,16
     AbilityIndex = 2
     IV = 20,20,20,20,20,20
 Pokemon = PANSAGE,16
-    Moves = MAGICALLEAF, LEECHSEED, ROCKTOMB,  LOWKICK
+    Moves = MAGICALLEAF,LEECHSEED,ROCKTOMB,LOWKICK
     AbilityIndex = 2
     IV = 20,20,20,20,20,20
 #-------------------------------
 [ELITEFOUR_Bruno,Bruno,2]
 LoseText = "GG WP"
 Pokemon = GOOMY,16
-    Moves = TACKLE,ABSORB,PROTECT,DRAGONBREATH
+    Moves = TACKLE,ABSORB,WATERGUN,DRAGONBREATH
     AbilityIndex = 2
     IV = 10,10,10,10,10,10
 Pokemon = DRATINI,16
@@ -335,38 +422,21 @@ Pokemon = DRATINI,16
     AbilityIndex = 0
     IV = 10,10,10,10,10,10
 Pokemon = AXEW,16
-    Moves = BITE, SLASH, LEER, ASSURANCE
+    Moves = BITE,SLASH,LEER,ASSURANCE
     AbilityIndex = 1
     IV = 10,10,10,10,10,10
 #-------------------------------
 [LADY,Elite Trainer]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = MAWILE,28
-Pokemon = CORSOLA,28
-Pokemon = CHIMECHO,28
+LoseText = "..."
+Pokemon = MAWILE,29
+Pokemon = CORSOLA,29
+Pokemon = CHIMECHO,29
 #-------------------------------
-[LADY,Elite Trainer,1]
-LoseText = "A good battle indeed!"
-Pokemon = KINGLER,28
-    AbilityIndex = 2
-Pokemon = TORKOAL,28
-    AbilityIndex = 2
-Pokemon = TANGELA,28
-    AbilityIndex = 0
-#-------------------------------
-[LADY,Elite Trainer,2]
-LoseText = "A good battle indeed!"
-Pokemon = WIGGLYTUFF,28
-Pokemon = TROPIUS,28
-    AbilityIndex = 0
-Pokemon = GIRAFARIG,28
-    AbilityIndex = 0
-#-------------------------------
-[TEAMROCKET_F,Rocket Grunt]
-LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+[TEAMROCKET_F,Grunt]
+LoseText = "Wow! I'm impressed."
 Pokemon = CLEFAIRY,28
     Item = EVIOLITE
-    IV = 31,16,16,16,16,16
+    IV = 31,15,16,16,16,16
 Pokemon = COFAGRIGUS,28
     IV = 31,16,16,16,16,16
 Pokemon = SPIRITOMB,28
@@ -406,53 +476,37 @@ Pokemon = GOLETT,32
 Pokemon = CHANDELURE,32
     Moves = FLAMETHROWER,HEX,ENERGYBALL,WILLOWISP
     AbilityIndex = 0
-    IV = 24,24,24,24,24,24
+    IV = 0,0,0,0,0,0
 Pokemon = MISMAGIUS,32
     Moves = NASTYPLOT,SHADOWBALL,HIDDENPOWERFIGHTING,CONFUSERAY
-    IV = 24,24,24,24,24,24
+    IV = 0,0,0,0,0,0
 #-------------------------------
 [ELITEFOUR_Agatha,Agatha,2]
 LoseText = "GG WP"
 Pokemon = SIMISEAR,32
     Moves = YAWN,FLAMETHROWER,SUPERPOWER,GRASSKNOT
     AbilityIndex = 0
-    IV = 24,24,24,24,24,24
+    IV = 16,16,16,16,16,16
 Pokemon = SIMIPOUR,32
     Moves = SCALD,ICEBEAM,ENDEAVOR,ROCKTOMB
     AbilityIndex = 0
-    IV = 24,24,24,24,24,24
+    IV = 16,16,16,16,16,16
 Pokemon = SIMISAGE,32
     Moves = SEEDBOMB,LEECHSEED,ACROBATICS,ROCKSLIDE
     AbilityIndex = 0
-    IV = 24,24,24,24,24,24
+    IV = 16,16,16,16,16,16
 Pokemon = DITTO,32
     AbilityIndex = 2
-     Item = CHOICESCARF
-    IV = 24,24,24,24,24,24
+    IV = 16,16,16,16,16,16
 #-------------------------------
 [BEAUTY,Elite Trainer]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = TYRANITAR,55
-Pokemon = JELLICENT,55
-Pokemon = CROBAT,55
-#-------------------------------
-[BEAUTY,Elite Trainer,1]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = DRAGONITE,55
-    AbilityIndex = 2
-Pokemon = TENTACRUEL,55
-Pokemon = HIPPOWDON,55
-#-------------------------------
-[BEAUTY,Elite Trainer,2]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = GARCHOMP,55
-    AbilityIndex = 2
-Pokemon = SCIZOR,55
-    AbilityIndex = 1
-Pokemon = SLOWBRO,55
+LoseText = "..."
+Pokemon = TYRANITAR,58
+Pokemon = JELLICENT,58
+Pokemon = CROBAT,58
 #-------------------------------
 [ROCKETBOSS,Giovanni]
-LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+LoseText = "Wow! You are way stronger than I thought."
 Pokemon = MILOTIC,57
     AbilityIndex = 0
     Item = FLAMEORB
@@ -501,7 +555,7 @@ Pokemon = DARMANITAN,60
 Pokemon = VENUSAUR,60
     Moves = GIGADRAIN,SLUDGEBOMB,WEATHERBALL,GROWTH
     AbilityIndex = 2
-     Item = LIFEORB
+    Item = LIFEORB
     IV = 0,0,0,0,0,0
 Pokemon = TORKOAL,60
     Moves = LAVAPLUME,SOLARBEAM,EARTHPOWER,YAWN
@@ -543,40 +597,18 @@ Pokemon = FROSLASS,60
     IV = 0,0,0,0,0,31
 #-------------------------------
 [GAMBLER,Elite Trainer]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = MANECTRIC,85
+LoseText = "..."
+Pokemon = MANECTRIC,88
     AbilityIndex = 0
     Item = MANECTITE
-Pokemon = REUNICLUS,85
+Pokemon = REUNICLUS,88
     AbilityIndex = 1
-Pokemon = GLISCOR,85
+Pokemon = GLISCOR,88
     AbilityIndex = 1
-Pokemon = VENUSAUR,85
-#-------------------------------
-[GAMBLER,Elite Trainer,1]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = AGGRON,85
-    AbilityIndex = 0
-    Item = AGGRONITE
-Pokemon = JELLICENT,85
-    AbilityIndex = 1
-Pokemon = MAMOSWINE,85
-    AbilityIndex = 2
-Pokemon = CLEFABLE,85
-    AbilityIndex = 2
-#-------------------------------
-[GAMBLER,Elite Trainer,2]
-LoseText = "You didn't have to win so convincingly!"
-Pokemon = ALTARIA,85
-    AbilityIndex = 2
-    Item = ALTARIANITE
-Pokemon = HIPPOWDON,85
-Pokemon = GENGAR,85
-Pokemon = SCIZOR,85
-    AbilityIndex = 1
+Pokemon = VENUSAUR,88
 #-------------------------------
 [LEADER_Giovanni,Giovanni]
-LoseText = "Wow! I'm impressed. Therefore i'll heal your remaining Pokémon."
+LoseText = "Well played, I'm impressed. Take this as a gift."
 Pokemon = MEDICHAM,90
     Item = MEDICHAMITE
     IV = 31,20,20,20,20,20
@@ -609,3 +641,54 @@ Pokemon = TOGEKISS,92
 Pokemon = RAYQUAZA,92
     Moves = DRAGONASCENT,SWORDSDANCE,EARTHQUAKE,EXTREMESPEED
     Item = SITRUSBERRY
+#-------------------------------
+[ELITEFOUR_Lance,Lance,1]
+LoseText = "GG WP"
+Pokemon = DRAGONITE,92
+    Moves = ICEBEAM,FLAMETHROWER,EARTHQUAKE,OUTRAGE
+    AbilityIndex = 2
+    Item = WEAKNESSPOLICY
+Pokemon = FERROTHORN,92
+    Moves = POWERWHIP,GYROBALL,KNOCKOFF,LEECHSEED
+    Item = ROCKYHELMET
+Pokemon = GLISCOR,92
+    Moves = FACADE,EARTHQUAKE,ROOST,SWORDSDANCE
+    AbilityIndex = 2
+    Item = TOXICORB
+Pokemon = ROTOM,92
+    Form = 2
+    Moves = DISCHARGE,HYDROPUMP,FOULPLAY,VOLTSWITCH
+    Item = LEFTOVERS
+Pokemon = CLEFABLE,92
+    Moves = SOFTBOILED,CALMMIND,MOONBLAST,FLAMETHROWER
+    AbilityIndex = 2
+    Item = REDORB
+Pokemon = GROUDON,92
+    Moves = PRECIPICEBLADES,ROCKTOMB,FIREBLAST,SWORDSDANCE
+    Item = REDORB
+#-------------------------------
+[ELITEFOUR_Lance,Lance,2]
+LoseText = "GG WP"
+Pokemon = GARCHOMP,92
+    Moves = STONEEDGE,EARTHQUAKE,OUTRAGE,SWORDSDANCE
+    AbilityIndex = 2
+    Item = FOCUSSASH
+Pokemon = SCIZOR,92
+    Moves = SWORDSDANCE,BULLETPUNCH,BUGBITE,SUPERPOWER
+    AbilityIndex = 1
+    Item = LIFEORB
+Pokemon = CONKELDURR,92
+    Moves = DRAINPUNCH,MACHPUNCH,ICEPUNCH,THUNDERPUNCH
+    AbilityIndex = 1
+    Item = LIFEORB
+Pokemon = EMPOLEON,92
+    Moves = ICEBEAM,SCALD,FLASHCANNON,GRASSKNOT
+    AbilityIndex = 2
+    Item = AIRBALLOON
+Pokemon = VOLCARONA,92
+    Moves = QUIVERDANCE,ROOST,FIERYDANCE,BUGBUZZ
+    AbilityIndex = 0
+    Item = LEFTOVERS
+Pokemon = KYOGRE,92
+    Moves = THUNDER,ORIGINPULSE,ICEBEAM,CALMMIND
+    Item = BLUEORB

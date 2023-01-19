@@ -1,15 +1,23 @@
 # Pokemon Battle Woods
 
-## Main Infos
-- Press F1 => Key bindings
-- Press Q => Speed-Up the game
-- To beat the game fight through all 4 floors, each consisting of 12 stages
-- Entering the next floor will save the game and power up your team
-- Pokémon with 0 hp at the end of a battle will be deleted
-- Consumable Battle-Items like Focus Sash, Air Balloon, ect. will be restored after battle
+## Ideas for future
+- Floor layout like Binding of Isaac
+- Z-moves
+- Implement items/events, that motivate/force the player to change strategy during the run
+- Back option via cancel button in all menus
+- Option to train against bosses
+- Place easter eggs
 
-## More Infos
-- Starters will evolve at Lv.18 & Lv.34
-- No critical hits, unless the chance is at 100%
-- Moves with 95% accuracy are buffed to 100%
-- 25% chance for hidden abilities (starters excluded)
+## Open tickets
+- [ ] Change the current ability descriptions back to the old ones.
+
+
+## Closed tickets
+- [x] Show move descriptions in Pokémon selection
+- [x] Implement Hall of Fame history
+- [x] Rework TM shop UI
+- [x] Limit TM shop items and make them rerollable
+- [x] Add more precise descriptions to the game
+- [x] Fix Rayquaza bug
+- [x] reset_moves considers Stab bonus, phy/special attack stat and type coverage
+- [x] First and last event shouldn't be "useless" events. This means the first event of f1 mustn't be Egg-move Tutor or Tm shop (maybe also ban the mart?). And the last event on F4 mustn't be the wishing well event.

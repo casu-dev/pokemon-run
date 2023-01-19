@@ -1,0 +1,2223 @@
+1
+No additional effect.
+No additional effect.
+2
+High critical hit ratio.
+High critical hit ratio.
+3
+10% chance to lower the target's Sp. Def by 1.
+10% chance to lower the target's Sp. Def by 1.
+4
+Hits first. First turn out only.
+Hits first. First turn out only.
+5
+If the target is an ally, heals 50% of its max HP.
+If the target is an ally, heals 50% of its max HP.
+6
+User recovers 50% of the damage dealt.
+User recovers 50% of the damage dealt.
+7
+100% chance to lower the target's Attack by 1.
+100% chance to lower the target's Attack by 1.
+8
+No additional effect.
+No additional effect.
+9
+10% chance to confuse the target.
+10% chance to confuse the target.
+10
+User switches out after damaging the target.
+User switches out after damaging the target.
+11
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+12
+User steals and eats the target's Berry.
+User steals and eats the target's Berry.
+13
+10% chance to raise all stats by 1 (not acc/eva).
+10% chance to raise all stats by 1 (not acc/eva).
+14
+Raises user's Attack by 3 if this KOes the target.
+Raises user's Attack by 3 if this KOes the target.
+15
+100% chance to lower the foe(s) Sp. Atk by 1.
+100% chance to lower the foe(s) Sp. Atk by 1.
+16
+Power doubles with each hit, up to 160.
+Power doubles with each hit, up to 160.
+17
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+18
+Hits 2 times. Each hit has 20% chance to poison.
+Hits 2 times. Each hit has 20% chance to poison.
+19
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+20
+Raises the user's Defense and Sp. Def by 1.
+Raises the user's Defense and Sp. Def by 1.
+21
+Heals the user by 50% of its max HP.
+Heals the user by 50% of its max HP.
+22
+If using a Fire move, target loses 1/4 max HP.
+If using a Fire move, target loses 1/4 max HP.
+23
+Raises the user's Sp. Atk, Sp. Def, Speed by 1.
+Raises the user's Sp. Atk, Sp. Def, Speed by 1.
+24
+The foes' moves target the user on the turn used.
+The foes' moves target the user on the turn used.
+25
+Prevents the target from switching out.
+Prevents the target from switching out.
+26
+Lowers Speed of grounded foes by 1 on switch-in.
+Lowers Speed of grounded foes by 1 on switch-in.
+27
+Lowers the foe(s) Speed by 2.
+Lowers the foe(s) Speed by 2.
+28
+Raises the user's Sp. Atk by 3.
+Raises the user's Sp. Atk by 3.
+29
+100% chance to lower target's Sp. Atk by 1.
+100% chance to lower target's Sp. Atk by 1.
+30
+Hoopa-U: Lowers user's Def by 1; breaks protect.
+Hoopa-U: Lowers user's Def by 1; breaks protect.
+31
+Uses target's Attack stat in damage calculation.
+Uses target's Attack stat in damage calculation.
+32
+Ignores the target's stat stage changes.
+Ignores the target's stat stage changes.
+33
+40% chance to lower the target's accuracy by 1.
+40% chance to lower the target's accuracy by 1.
+34
+20% chance to lower the target's Defense by 1.
+20% chance to lower the target's Defense by 1.
+35
+20% chance to make the target flinch.
+20% chance to make the target flinch.
+36
+For 2 turns, the target cannot use sound moves.
+For 2 turns, the target cannot use sound moves.
+37
+High critical hit ratio.
+High critical hit ratio.
+38
+Usually goes first. Fails if target is not attacking.
+Usually goes first. Fails if target is not attacking.
+39
+1.5x damage if foe holds an item. Removes item.
+1.5x damage if foe holds an item. Removes item.
+40
+Power doubles if target was damaged this turn.
+Power doubles if target was damaged this turn.
+41
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+42
+No additional effect. Hits adjacent Pokemon.
+No additional effect. Hits adjacent Pokemon.
+43
+This move does not check accuracy.
+This move does not check accuracy.
+44
+If the user has no item, it steals the target's.
+If the user has no item, it steals the target's.
+45
+100% chance to lower the foe(s) Sp. Atk by 1.
+100% chance to lower the foe(s) Sp. Atk by 1.
+46
+Power doubles if the user moves after the target.
+Power doubles if the user moves after the target.
+47
+If a foe is switching out, hits it at 2x power.
+If a foe is switching out, hits it at 2x power.
+48
+All healthy allies aid in damaging the target.
+All healthy allies aid in damaging the target.
+49
+Flings the user's item at the target. Power varies.
+Flings the user's item at the target. Power varies.
+50
+ + 20 power for each of the user's stat boosts.
+ + 20 power for each of the user's stat boosts.
+51
+60 power +20 for each of the target's stat boosts.
+60 power +20 for each of the target's stat boosts.
+52
+Darkrai: Causes the foe(s) to fall asleep.
+Darkrai: Causes the foe(s) to fall asleep.
+53
+For 5 turns, the target's item has no effect.
+For 5 turns, the target's item has no effect.
+54
+Lowers the target's Sp. Def by 2.
+Lowers the target's Sp. Def by 2.
+55
+Raises the target's Sp. Atk by 1 and confuses it.
+Raises the target's Sp. Atk by 1 and confuses it.
+56
+Raises the user's Attack and accuracy by 1.
+Raises the user's Attack and accuracy by 1.
+57
+Lowers target's Attack, Sp. Atk by 2. User faints.
+Lowers target's Attack, Sp. Atk by 2. User faints.
+58
+Raises the user's Sp. Atk by 2.
+Raises the user's Sp. Atk by 2.
+59
+Lowers target's Atk, Sp. Atk by 1. User switches.
+Lowers target's Atk, Sp. Atk by 1. User switches.
+60
+Forces the target to move last this turn.
+Forces the target to move last this turn.
+61
+User steals certain support moves to use itself.
+User steals certain support moves to use itself.
+62
+User switches its held item with the target's.
+User switches its held item with the target's.
+63
+Target can't use status moves its next 3 turns.
+Target can't use status moves its next 3 turns.
+64
+Inverts the target's stat stages.
+Inverts the target's stat stages.
+65
+Target can't select the same move twice in a row.
+Target can't select the same move twice in a row.
+66
+Prevents both user and target from switching out.
+Prevents both user and target from switching out.
+67
+This move does not check accuracy.
+This move does not check accuracy.
+68
+Protects from damaging attacks. Contact: -2 Def.
+Protects from damaging attacks. Contact: -2 Def.
+69
+Always results in a critical hit.
+Always results in a critical hit.
+70
+2x power if the user had a stat lowered this turn.
+2x power if the user had a stat lowered this turn.
+71
+20% chance to make the foe(s) flinch.
+20% chance to make the foe(s) flinch.
+72
+User cannot move next turn.
+User cannot move next turn.
+73
+Lowers the user's Sp. Atk by 2.
+Lowers the user's Sp. Atk by 2.
+74
+Lasts 2-3 turns. Confuses the user afterwards.
+Lasts 2-3 turns. Confuses the user afterwards.
+75
+Lowers the user's Defense by 1.
+Lowers the user's Defense by 1.
+76
+Nullifies the foe(s) Ability if the foe(s) move first.
+Nullifies the foe(s) Ability if the foe(s) move first.
+77
+20% chance to make the target flinch.
+20% chance to make the target flinch.
+78
+High critical hit ratio.
+High critical hit ratio.
+79
+No additional effect.
+No additional effect.
+80
+No additional effect.
+No additional effect.
+81
+No additional effect.
+No additional effect.
+82
+30% chance to paralyze the target.
+30% chance to paralyze the target.
+83
+Forces the target to switch to a random ally.
+Forces the target to switch to a random ally.
+84
+Hits 2 times in one turn.
+Hits 2 times in one turn.
+85
+20% chance to make the foe(s) flinch.
+20% chance to make the foe(s) flinch.
+86
+Deals 40 HP of damage to the target.
+Deals 40 HP of damage to the target.
+87
+Raises the user's Attack and Speed by 1.
+Raises the user's Attack and Speed by 1.
+88
+100% chance to lower the foe(s) Attack by 1.
+100% chance to lower the foe(s) Attack by 1.
+89
+Hits twice. Doubles: Tries to hit each foe once.
+Hits twice. Doubles: Tries to hit each foe once.
+90
+Damage doubles if the target is Dynamaxed.
+Damage doubles if the target is Dynamaxed.
+91
+User cannot move next turn.
+User cannot move next turn.
+92
+User loses 33% of its max HP. +1 to all stats.
+User loses 33% of its max HP. +1 to all stats.
+93
+Hits 2-5 times. User: -1 Def, +1 Spe after last hit.
+Hits 2-5 times. User: -1 Def, +1 Spe after last hit.
+94
+Less power as user's HP decreases. Hits foe(s).
+Less power as user's HP decreases. Hits foe(s).
+95
+20% chance to paralyze the target.
+20% chance to paralyze the target.
+96
+Has 33% recoil. 10% chance to paralyze target.
+Has 33% recoil. 10% chance to paralyze target.
+97
+100% chance to paralyze the target.
+100% chance to paralyze the target.
+98
+30% chance to paralyze. Can't miss in rain.
+30% chance to paralyze. Can't miss in rain.
+99
+Power doubles if used after Fusion Flare this turn.
+Power doubles if used after Fusion Flare this turn.
+100
+Normal moves become Electric type this turn.
+Normal moves become Electric type this turn.
+101
+10% chance to paralyze the target.
+10% chance to paralyze the target.
+102
+Has 1/4 recoil.
+Has 1/4 recoil.
+103
+30% chance to paralyze adjacent Pokemon.
+30% chance to paralyze adjacent Pokemon.
+104
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+105
+10% chance to paralyze the target.
+10% chance to paralyze the target.
+106
+User switches out after damaging the target.
+User switches out after damaging the target.
+107
+User recovers 50% of the damage dealt.
+User recovers 50% of the damage dealt.
+108
+30% chance to paralyze the target.
+30% chance to paralyze the target.
+109
+10% chance to paralyze. 10% chance to flinch.
+10% chance to paralyze. 10% chance to flinch.
+110
+This move does not check accuracy.
+This move does not check accuracy.
+111
+100% chance to lower the foe(s) Speed by 1.
+100% chance to lower the foe(s) Speed by 1.
+112
+70% chance to raise the user's Sp. Atk by 1.
+70% chance to raise the user's Sp. Atk by 1.
+113
+10% chance to paralyze the target.
+10% chance to paralyze the target.
+114
+100% chance to paralyze the target.
+100% chance to paralyze the target.
+115
+More power the faster the user is than the target.
+More power the faster the user is than the target.
+116
++1 SpD, user's next Electric move 2x power.
++1 SpD, user's next Electric move 2x power.
+117
+Lowers the target's Sp. Atk by 2.
+Lowers the target's Sp. Atk by 2.
+118
+5 turns. Grounded: +Electric power, can't sleep.
+5 turns. Grounded: +Electric power, can't sleep.
+119
+Changes the target's move to Electric this turn.
+Changes the target's move to Electric this turn.
+120
+Normal moves become Electric type this turn.
+Normal moves become Electric type this turn.
+121
+For 5 turns, the user has immunity to Ground.
+For 5 turns, the user has immunity to Ground.
+122
+Raises Def, Sp. Def of allies with Plus/Minus by 1.
+Raises Def, Sp. Def of allies with Plus/Minus by 1.
+123
+Paralyzes the target.
+Paralyzes the target.
+124
+No additional effect. Hits foe(s).
+No additional effect. Hits foe(s).
+125
+Morpeko: Electric; Hangry: Dark; 100% +1 Spe.
+Morpeko: Electric; Hangry: Dark; 100% +1 Spe.
+126
+Power doubles if user moves before the target.
+Power doubles if user moves before the target.
+127
+2x power if target is grounded in Electric Terrain.
+2x power if target is grounded in Electric Terrain.
+128
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+129
+Has 1/2 recoil.
+Has 1/2 recoil.
+130
+Lowers the user's Sp. Atk by 2.
+Lowers the user's Sp. Atk by 2.
+131
+30% chance to lower the target's Sp. Atk by 1.
+30% chance to lower the target's Sp. Atk by 1.
+132
+10% chance to lower the target's Attack by 1.
+10% chance to lower the target's Attack by 1.
+133
+No additional effect. Hits adjacent foes.
+No additional effect. Hits adjacent foes.
+134
+User recovers 75% of the damage dealt.
+User recovers 75% of the damage dealt.
+135
+This move does not check accuracy. Hits foes.
+This move does not check accuracy. Hits foes.
+136
+No additional effect.
+No additional effect.
+137
+Raises an ally's Sp. Def by 1.
+Raises an ally's Sp. Def by 1.
+138
+Lowers the target's Attack by 1.
+Lowers the target's Attack by 1.
+139
+Lowers the target's Attack by 2.
+Lowers the target's Attack by 2.
+140
+Protects allies from Status moves this turn.
+Protects allies from Status moves this turn.
+141
+Prevents all Pokemon from switching next turn.
+Prevents all Pokemon from switching next turn.
+142
+Heals the target by 50% of its max HP.
+Heals the target by 50% of its max HP.
+143
+Raises Defense by 1 of all active Grass types.
+Raises Defense by 1 of all active Grass types.
+144
+Charges, then raises SpA, SpD, Spe by 2 turn 2.
+Charges, then raises SpA, SpD, Spe by 2 turn 2.
+145
+5 turns. Can't status,-Dragon power vs grounded.
+5 turns. Can't status,-Dragon power vs grounded.
+146
+Heals the user by a weather-dependent amount.
+Heals the user by a weather-dependent amount.
+147
+Does damage equal to 1/2 target's current HP.
+Does damage equal to 1/2 target's current HP.
+148
+Causes the target to become confused.
+Causes the target to become confused.
+149
+100% chance to lower the target's Sp. Atk by 1.
+100% chance to lower the target's Sp. Atk by 1.
+150
+Raises the target's Attack and Sp. Atk by 2.
+Raises the target's Attack and Sp. Atk by 2.
+151
+User faints. User on Misty Terrain: 1.5x power.
+User faints. User on Misty Terrain: 1.5x power.
+152
+20% chance to confuse the target.
+20% chance to confuse the target.
+153
+Fails if the user takes damage before it hits.
+Fails if the user takes damage before it hits.
+154
+User is hurt by 50% of its max HP if it misses.
+User is hurt by 50% of its max HP if it misses.
+155
+Lowers the user's Defense and Sp. Def by 1.
+Lowers the user's Defense and Sp. Def by 1.
+156
+10% chance to lower the target's Sp. Def by 1.
+10% chance to lower the target's Sp. Def by 1.
+157
+Lowers the user's Attack and Defense by 1.
+Lowers the user's Attack and Defense by 1.
+158
+High critical hit ratio.
+High critical hit ratio.
+159
+100% chance to confuse the target.
+100% chance to confuse the target.
+160
+Combines Flying in its type effectiveness.
+Combines Flying in its type effectiveness.
+161
+Lowers the user's Speed by 1.
+Lowers the user's Speed by 1.
+162
+User is hurt by 50% of its max HP if it misses.
+User is hurt by 50% of its max HP if it misses.
+163
+Ignores the target's stat stage changes.
+Ignores the target's stat stage changes.
+164
+Damages target based on Defense, not Sp. Def.
+Damages target based on Defense, not Sp. Def.
+165
+Can hit Pokemon using Bounce, Fly, or Sky Drop.
+Can hit Pokemon using Bounce, Fly, or Sky Drop.
+166
+This move does not check accuracy.
+This move does not check accuracy.
+167
+Has 1/4 recoil.
+Has 1/4 recoil.
+168
+Destroys screens, unless the target is immune.
+Destroys screens, unless the target is immune.
+169
+User recovers 50% of the damage dealt.
+User recovers 50% of the damage dealt.
+170
+This move does not check accuracy. Goes last.
+This move does not check accuracy. Goes last.
+171
+Power doubles if target is asleep, and wakes it.
+Power doubles if target is asleep, and wakes it.
+172
+100% chance to lower the target's Speed by 1.
+100% chance to lower the target's Speed by 1.
+173
+Forces the target to switch to a random ally.
+Forces the target to switch to a random ally.
+174
+30% chance to paralyze the target.
+30% chance to paralyze the target.
+175
+Power doubles if user is damaged by the target.
+Power doubles if user is damaged by the target.
+176
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+177
+Always results in a critical hit.
+Always results in a critical hit.
+178
+High critical hit ratio.
+High critical hit ratio.
+179
+Usually goes first.
+Usually goes first.
+180
+100% chance to raise the user's Attack by 1.
+100% chance to raise the user's Attack by 1.
+181
+50% chance to lower the target's Defense by 1.
+50% chance to lower the target's Defense by 1.
+182
+Usually goes first.
+Usually goes first.
+183
+Hits 2 times in one turn.
+Hits 2 times in one turn.
+184
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+185
+Hits 3 times. Each hit can miss, but power rises.
+Hits 3 times. Each hit can miss, but power rises.
+186
+If hit by physical attack, returns double damage.
+If hit by physical attack, returns double damage.
+187
+Does damage equal to the user's HP. User faints.
+Does damage equal to the user's HP. User faints.
+188
+More power the heavier the target.
+More power the heavier the target.
+189
+More power the less HP the user has left.
+More power the less HP the user has left.
+190
+Does damage equal to the user's level.
+Does damage equal to the user's level.
+191
+Raises the user's Attack and Defense by 1.
+Raises the user's Attack and Defense by 1.
+192
+Prevents moves from affecting the user this turn.
+Prevents moves from affecting the user this turn.
+193
+Protects allies from damaging attacks. Turn 1 only.
+Protects allies from damaging attacks. Turn 1 only.
+194
+Protects allies from priority attacks this turn.
+Protects allies from priority attacks this turn.
+195
+Traps target, lowers Def and SpD by 1 each turn.
+Traps target, lowers Def and SpD by 1 each turn.
+196
+User cannot move next turn.
+User cannot move next turn.
+197
+Raises all stats by 1 (not acc/eva). Traps user.
+Raises all stats by 1 (not acc/eva). Traps user.
+198
+Raises an ally's Attack and Defense by 1.
+Raises an ally's Attack and Defense by 1.
+199
+Uses user's Def stat as Atk in damage calculation.
+Uses user's Def stat as Atk in damage calculation.
+200
+100% chance to lower the target's Defense by 1.
+100% chance to lower the target's Defense by 1.
+201
+Lowers the user's Defense, Sp. Def, Speed by 1.
+Lowers the user's Defense, Sp. Def, Speed by 1.
+202
+User cannot move next turn.
+User cannot move next turn.
+203
+Less power as user's HP decreases. Hits foe(s).
+Less power as user's HP decreases. Hits foe(s).
+204
+User loses 50% max HP. Hits adjacent Pokemon.
+User loses 50% max HP. Hits adjacent Pokemon.
+205
+User must take physical damage before moving.
+User must take physical damage before moving.
+206
+20% chance to burn the target.
+20% chance to burn the target.
+207
+User's Fire type becomes typeless; must be Fire.
+User's Fire type becomes typeless; must be Fire.
+208
+Lowers the user's Sp. Atk by 2.
+Lowers the user's Sp. Atk by 2.
+209
+Has 33% recoil. 10% chance to burn. Thaws user.
+Has 33% recoil. 10% chance to burn. Thaws user.
+210
+10% chance to burn the target.
+10% chance to burn the target.
+211
+Power doubles if used after Fusion Bolt this turn.
+Power doubles if used after Fusion Bolt this turn.
+212
+100% chance to burn the target.
+100% chance to burn the target.
+213
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+214
+50% chance to burn the target. Thaws user.
+50% chance to burn the target. Thaws user.
+215
+30% chance to burn adjacent Pokemon.
+30% chance to burn adjacent Pokemon.
+216
+10% chance to burn the foe(s).
+10% chance to burn the foe(s).
+217
+10% chance to burn the target.
+10% chance to burn the target.
+218
+High critical hit ratio. 10% chance to burn.
+High critical hit ratio. 10% chance to burn.
+219
+50% chance to raise the user's Sp. Atk by 1.
+50% chance to raise the user's Sp. Atk by 1.
+220
+100% chance to lower the target's Defense by 1.
+100% chance to lower the target's Defense by 1.
+221
+Use with Grass or Water Pledge for added effect.
+Use with Grass or Water Pledge for added effect.
+222
+30% chance to burn adjacent Pokemon.
+30% chance to burn adjacent Pokemon.
+223
+10% chance to burn the target.
+10% chance to burn the target.
+224
+100% chance to lower the target's Sp. Atk by 1.
+100% chance to lower the target's Sp. Atk by 1.
+225
+Damages Pokemon next to the target as well.
+Damages Pokemon next to the target as well.
+226
+10% chance to burn. 10% chance to flinch.
+10% chance to burn. 10% chance to flinch.
+227
+10% chance to burn the target. Thaws user.
+10% chance to burn the target. Thaws user.
+228
+Destroys the foe(s) Berry/Gem.
+Destroys the foe(s) Berry/Gem.
+229
+100% chance to raise the user's Speed by 1.
+100% chance to raise the user's Speed by 1.
+230
+10% chance to burn the target.
+10% chance to burn the target.
+231
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+232
+More power the heavier the user than the target.
+More power the heavier the user than the target.
+233
+For 5 turns, intense sunlight powers Fire moves.
+For 5 turns, intense sunlight powers Fire moves.
+234
+Burns the target.
+Burns the target.
+235
+10% chance to burn the target. Thaws user.
+10% chance to burn the target. Thaws user.
+236
+100% burns a target that had a stat rise this turn.
+100% burns a target that had a stat rise this turn.
+237
+Charges, then hits turn 2. 30% flinch. High crit.
+Charges, then hits turn 2. 30% flinch. High crit.
+238
+Has 33% recoil.
+Has 33% recoil.
+239
+Lowers the user's Defense and Sp. Def by 1.
+Lowers the user's Defense and Sp. Def by 1.
+240
+30% chance to confuse target. Can't miss in rain.
+30% chance to confuse target. Can't miss in rain.
+241
+High critical hit ratio.
+High critical hit ratio.
+242
+Burns on contact with the user before it moves.
+Burns on contact with the user before it moves.
+243
+Flies up on first turn, then strikes the next turn.
+Flies up on first turn, then strikes the next turn.
+244
+Bounces turn 1. Hits turn 2. 30% paralyze.
+Bounces turn 1. Hits turn 2. 30% paralyze.
+245
+No additional effect.
+No additional effect.
+246
+User recovers 75% of the damage dealt.
+User recovers 75% of the damage dealt.
+247
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+248
+100% chance to confuse the target.
+100% chance to confuse the target.
+249
+This move does not check accuracy.
+This move does not check accuracy.
+250
+High critical hit ratio. Hits adjacent foes.
+High critical hit ratio. Hits adjacent foes.
+251
+User steals and eats the target's Berry.
+User steals and eats the target's Berry.
+252
+User and foe fly up turn 1. Damages on turn 2.
+User and foe fly up turn 1. Damages on turn 2.
+253
+No additional effect.
+No additional effect.
+254
+Power doubles if the user has no held item.
+Power doubles if the user has no held item.
+255
+Power doubles during Bounce, Fly, and Sky Drop.
+Power doubles during Bounce, Fly, and Sky Drop.
+256
+No additional effect.
+No additional effect.
+257
+-1 evasion; clears terrain and hazards on both sides.
+-1 evasion; clears terrain and hazards on both sides.
+258
+Lowers the target's Attack by 2.
+Lowers the target's Attack by 2.
+259
+User uses the target's last used move against it.
+User uses the target's last used move against it.
+260
+Heals 50% HP. Flying-type removed 'til turn ends.
+Heals 50% HP. Flying-type removed 'til turn ends.
+261
+For 4 turns, allies' Speed is doubled.
+For 4 turns, allies' Speed is doubled.
+262
+Hits 2 times in one turn.
+Hits 2 times in one turn.
+263
+Disappears turn 1. Hits turn 2. Breaks protection.
+Disappears turn 1. Hits turn 2. Breaks protection.
+264
+Ignores the Abilities of other Pokemon.
+Ignores the Abilities of other Pokemon.
+265
+Disappears turn 1. Hits turn 2. Breaks protection.
+Disappears turn 1. Hits turn 2. Breaks protection.
+266
+Steals target's boosts before dealing damage.
+Steals target's boosts before dealing damage.
+267
+20% chance to lower the target's Defense by 1.
+20% chance to lower the target's Defense by 1.
+268
+20% chance to lower the target's Sp. Def by 1.
+20% chance to lower the target's Sp. Def by 1.
+269
+Prevents the target from switching out.
+Prevents the target from switching out.
+270
+High critical hit ratio.
+High critical hit ratio.
+271
+Power doubles if the target has a status ailment.
+Power doubles if the target has a status ailment.
+272
+10% chance to raise all stats by 1 (not acc/eva).
+10% chance to raise all stats by 1 (not acc/eva).
+273
+This move does not check accuracy.
+This move does not check accuracy.
+274
+Usually goes first.
+Usually goes first.
+275
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+276
+30% chance to paralyze the target.
+30% chance to paralyze the target.
+277
+Does damage equal to the user's level.
+Does damage equal to the user's level.
+278
+Confuses the target.
+Confuses the target.
+279
+Curses if Ghost, else -1 Spe, +1 Atk, +1 Def.
+Curses if Ghost, else -1 Spe, +1 Atk, +1 Def.
+280
+If an opponent knocks out the user, it also faints.
+If an opponent knocks out the user, it also faints.
+281
+If the user faints, the attack used loses all its PP.
+If the user faints, the attack used loses all its PP.
+282
+A sleeping target is hurt by 1/4 max HP per turn.
+A sleeping target is hurt by 1/4 max HP per turn.
+283
+Lowers the PP of the target's last move by 4.
+Lowers the PP of the target's last move by 4.
+284
+Adds Ghost to the target's type(s).
+Adds Ghost to the target's type(s).
+285
+Fails if the target has no held item.
+Fails if the target has no held item.
+286
+No additional effect. Hits adjacent foes.
+No additional effect. Hits adjacent foes.
+287
+User cannot move next turn.
+User cannot move next turn.
+288
+Lowers the user's Sp. Atk by 2.
+Lowers the user's Sp. Atk by 2.
+289
+Charges turn 1. Hits turn 2. No charge in sunlight.
+Charges turn 1. Hits turn 2. No charge in sunlight.
+290
+Lasts 2-3 turns. Confuses the user afterwards.
+Lasts 2-3 turns. Confuses the user afterwards.
+291
+No additional effect.
+No additional effect.
+292
+40% chance to lower the target's Sp. Def by 2.
+40% chance to lower the target's Sp. Def by 2.
+293
+Charges turn 1. Hits turn 2. No charge in sunlight.
+Charges turn 1. Hits turn 2. No charge in sunlight.
+294
+Has 33% recoil.
+Has 33% recoil.
+295
+10% chance to lower the target's Sp. Def by 1.
+10% chance to lower the target's Sp. Def by 1.
+296
+High critical hit ratio.
+High critical hit ratio.
+297
+No additional effect. Hits adjacent Pokemon.
+No additional effect. Hits adjacent Pokemon.
+298
+Use with Fire or Water Pledge for added effect.
+Use with Fire or Water Pledge for added effect.
+299
+No additional effect.
+No additional effect.
+300
+User recovers 50% of the damage dealt.
+User recovers 50% of the damage dealt.
+301
+User recovers 50% of the damage dealt.
+User recovers 50% of the damage dealt.
+302
+100% chance to lower the target's Attack by 1.
+100% chance to lower the target's Attack by 1.
+303
+50% chance to lower the target's accuracy by 1.
+50% chance to lower the target's accuracy by 1.
+304
+This move does not check accuracy.
+This move does not check accuracy.
+305
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+306
+High critical hit ratio. Hits adjacent foes.
+High critical hit ratio. Hits adjacent foes.
+307
+No additional effect.
+No additional effect.
+308
+No additional effect.
+No additional effect.
+309
+User recovers 50% of the damage dealt.
+User recovers 50% of the damage dealt.
+310
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+311
+User recovers 50% of the damage dealt.
+User recovers 50% of the damage dealt.
+312
+More power the heavier the target.
+More power the heavier the target.
+313
+Cures the user's party of all status conditions.
+Cures the user's party of all status conditions.
+314
+Raises the user's Defense by 3.
+Raises the user's Defense by 3.
+315
+Lowers the target's Speed by 2.
+Lowers the target's Speed by 2.
+316
+Adds Grass to the target's type(s).
+Adds Grass to the target's type(s).
+317
+Causes the target to fall asleep.
+Causes the target to fall asleep.
+318
+5 turns. Grounded: +Grass power, +1/16 max HP.
+5 turns. Grounded: +Grass power, +1/16 max HP.
+319
+Traps/grounds user; heals 1/16 max HP per turn.
+Traps/grounds user; heals 1/16 max HP per turn.
+320
+1/8 of target's HP is restored to user every turn.
+1/8 of target's HP is restored to user every turn.
+321
+Causes the target to fall asleep.
+Causes the target to fall asleep.
+322
+Protects from moves. Contact: loses 1/8 max HP.
+Protects from moves. Contact: loses 1/8 max HP.
+323
+Causes the target to fall asleep.
+Causes the target to fall asleep.
+324
+User heals HP=target's Atk stat. Lowers Atk by 1.
+User heals HP=target's Atk stat. Lowers Atk by 1.
+325
+Paralyzes the target.
+Paralyzes the target.
+326
+Heals the user by a weather-dependent amount.
+Heals the user by a weather-dependent amount.
+327
+The target's Ability becomes Insomnia.
+The target's Ability becomes Insomnia.
+328
+No additional effect.
+No additional effect.
+329
+100% chance to lower the target's Speed by 1.
+100% chance to lower the target's Speed by 1.
+330
+Target: 100% -1 Def. During Gravity: 1.5x power.
+Target: 100% -1 Def. During Gravity: 1.5x power.
+331
+100% chance to lower the target's Sp. Def by 1.
+100% chance to lower the target's Sp. Def by 1.
+332
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+333
+User on Grassy Terrain: +1 priority.
+User on Grassy Terrain: +1 priority.
+334
+User and allies: healed 1/4 max HP, status cured.
+User and allies: healed 1/4 max HP, status cured.
+335
+No additional effect. Hits adjacent foes.
+No additional effect. Hits adjacent foes.
+336
+Hits adjacent Pokemon. Double damage on Dig.
+Hits adjacent Pokemon. Double damage on Dig.
+337
+No additional effect.
+No additional effect.
+338
+10% chance to lower the target's Sp. Def by 1.
+10% chance to lower the target's Sp. Def by 1.
+339
+No additional effect. Hits adjacent foes.
+No additional effect. Hits adjacent foes.
+340
+Grounds adjacent foes. First hit neutral on Flying.
+Grounds adjacent foes. First hit neutral on Flying.
+341
+Hits adjacent foes. Prevents them from switching.
+Hits adjacent foes. Prevents them from switching.
+342
+Digs underground turn 1, strikes turn 2.
+Digs underground turn 1, strikes turn 2.
+343
+High critical hit ratio.
+High critical hit ratio.
+344
+Power doubles if the user's last move failed.
+Power doubles if the user's last move failed.
+345
+10% chance to make the target flinch.
+10% chance to make the target flinch.
+346
+30% chance to lower the target's accuracy by 1.
+30% chance to lower the target's accuracy by 1.
+347
+100% chance lower adjacent Pkmn Speed by 1.
+100% chance lower adjacent Pkmn Speed by 1.
+348
+100% chance to lower the target's Speed by 1.
+100% chance to lower the target's Speed by 1.
+349
+Hits 2 times in one turn.
+Hits 2 times in one turn.
+350
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+351
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+352
+100% chance to lower the target's accuracy by 1.
+100% chance to lower the target's accuracy by 1.
+353
+OHKOs the target. Fails if user is a lower level.
+OHKOs the target. Fails if user is a lower level.
+354
+Hits adjacent Pokemon. Power varies; 2x on Dig.
+Hits adjacent Pokemon. Power varies; 2x on Dig.
+355
+For 5 turns, Electric-type attacks have 1/3 power.
+For 5 turns, Electric-type attacks have 1/3 power.
+356
+Raises Atk/Sp. Atk of grounded Grass types by 1.
+Raises Atk/Sp. Atk of grounded Grass types by 1.
+357
+Lowers the target's accuracy by 1.
+Lowers the target's accuracy by 1.
+358
+User restores 1/2 its max HP; 2/3 in Sandstorm.
+User restores 1/2 its max HP; 2/3 in Sandstorm.
+359
+Hurts grounded foes on switch-in. Max 3 layers.
+Hurts grounded foes on switch-in. Max 3 layers.
+360
+30% chance to burn the target. Thaws target.
+30% chance to burn the target. Thaws target.
+361
+Charges turn 1. Hits turn 2. 30% paralyze.
+Charges turn 1. Hits turn 2. 30% paralyze.
+362
+Charges turn 1. Hits turn 2. 30% burn.
+Charges turn 1. Hits turn 2. 30% burn.
+363
+10% chance to freeze foe(s). Can't miss in hail.
+10% chance to freeze foe(s). Can't miss in hail.
+364
+Lowers the user's Speed by 1.
+Lowers the user's Speed by 1.
+365
+10% chance to freeze the target.
+10% chance to freeze the target.
+366
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+367
+10% chance to freeze the target.
+10% chance to freeze the target.
+368
+10% chance to freeze. Super effective on Water.
+10% chance to freeze. Super effective on Water.
+369
+10% chance to lower the target's Attack by 1.
+10% chance to lower the target's Attack by 1.
+370
+100% chance to lower the foe(s) Speed by 1.
+100% chance to lower the foe(s) Speed by 1.
+371
+10% chance to freeze. 10% chance to flinch.
+10% chance to freeze. 10% chance to flinch.
+372
+Power doubles if user is damaged by the target.
+Power doubles if user is damaged by the target.
+373
+Always results in a critical hit.
+Always results in a critical hit.
+374
+100% chance to lower the foe(s) Speed by 1.
+100% chance to lower the foe(s) Speed by 1.
+375
+Usually goes first.
+Usually goes first.
+376
+10% chance to freeze the foe(s).
+10% chance to freeze the foe(s).
+377
+Power doubles with each hit. Repeats for 5 turns.
+Power doubles with each hit. Repeats for 5 turns.
+378
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+379
+OHKOs non-Ice targets. Fails if user's lower level.
+OHKOs non-Ice targets. Fails if user's lower level.
+380
+For 5 turns, damage to allies is halved. Hail only.
+For 5 turns, damage to allies is halved. Hail only.
+381
+For 5 turns, hail crashes down.
+For 5 turns, hail crashes down.
+382
+Eliminates all stat changes.
+Eliminates all stat changes.
+383
+For 5 turns, protects user's party from stat drops.
+For 5 turns, protects user's party from stat drops.
+384
+Hits 3 times. Each hit can miss, but power rises.
+Hits 3 times. Each hit can miss, but power rises.
+385
+No additional effect. Hits adjacent foes.
+No additional effect. Hits adjacent foes.
+386
+Hits adjacent Pokemon. The user faints.
+Hits adjacent Pokemon. The user faints.
+387
+Hits adjacent Pokemon. The user faints.
+Hits adjacent Pokemon. The user faints.
+388
+User cannot move next turn.
+User cannot move next turn.
+389
+User cannot move next turn.
+User cannot move next turn.
+390
+No additional effect. Hits adjacent Pokemon.
+No additional effect. Hits adjacent Pokemon.
+391
+Fails unless each known move has been used.
+Fails unless each known move has been used.
+392
+Raises user's Defense by 1 on turn 1. Hits turn 2.
+Raises user's Defense by 1 on turn 1. Hits turn 2.
+393
+Has 33% recoil.
+Has 33% recoil.
+394
+Has 1/4 recoil.
+Has 1/4 recoil.
+395
+No additional effect.
+No additional effect.
+396
+Type varies based on the held Drive.
+Type varies based on the held Drive.
+397
+Lasts 2-3 turns. Confuses the user afterwards.
+Lasts 2-3 turns. Confuses the user afterwards.
+398
+No additional effect.
+No additional effect.
+399
+Type varies based on the held Plate.
+Type varies based on the held Plate.
+400
+No additional effect. Hits adjacent foes.
+No additional effect. Hits adjacent foes.
+401
+Type varies based on the held Memory.
+Type varies based on the held Memory.
+402
+Type varies based on the user's primary type.
+Type varies based on the user's primary type.
+403
+20% chance to confuse the target.
+20% chance to confuse the target.
+404
+Has 1/4 recoil.
+Has 1/4 recoil.
+405
+Lasts 3 turns. Active Pokemon cannot fall asleep.
+Lasts 3 turns. Active Pokemon cannot fall asleep.
+406
+30% chance to paralyze the target.
+30% chance to paralyze the target.
+407
+Nearly always goes first.
+Nearly always goes first.
+408
+10% chance to make the target flinch.
+10% chance to make the target flinch.
+409
+No additional effect.
+No additional effect.
+410
+Charges, then hits foe(s) turn 2. High crit ratio.
+Charges, then hits foe(s) turn 2. High crit ratio.
+411
+No additional effect.
+No additional effect.
+412
+No additional effect.
+No additional effect.
+413
+20% chance to paralyze or burn or freeze target.
+20% chance to paralyze or burn or freeze target.
+414
+50% chance to lower the target's Defense by 1.
+50% chance to lower the target's Defense by 1.
+415
+10% chance to sleep foe(s). Meloetta transforms.
+10% chance to sleep foe(s). Meloetta transforms.
+416
+Ignores the target's stat stage changes.
+Ignores the target's stat stage changes.
+417
+20% chance to confuse the target.
+20% chance to confuse the target.
+418
+Power doubles if user is burn/poison/paralyzed.
+Power doubles if user is burn/poison/paralyzed.
+419
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+420
+Power doubles if an ally fainted last turn.
+Power doubles if an ally fainted last turn.
+421
+Effect varies with terrain. (30% paralysis chance)
+Effect varies with terrain. (30% paralysis chance)
+422
+High critical hit ratio.
+High critical hit ratio.
+423
+Power doubles if target is paralyzed, and cures it.
+Power doubles if target is paralyzed, and cures it.
+424
+No additional effect.
+No additional effect.
+425
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+426
+If the user has no item, it steals the target's.
+If the user has no item, it steals the target's.
+427
+Varies in type based on the user's IVs.
+Varies in type based on the user's IVs.
+428
+Power doubles if others used Round this turn.
+Power doubles if others used Round this turn.
+429
+This move does not check accuracy. Hits foes.
+This move does not check accuracy. Hits foes.
+430
+No additional effect.
+No additional effect.
+431
+No additional effect.
+No additional effect.
+432
+User must be asleep. 30% chance to flinch target.
+User must be asleep. 30% chance to flinch target.
+433
+User loses 1/4 of its max HP.
+User loses 1/4 of its max HP.
+434
+Power doubles and type varies in each weather.
+Power doubles and type varies in each weather.
+435
+Power increases when used on consecutive turns.
+Power increases when used on consecutive turns.
+436
+Hits first. First turn out only. 100% flinch chance.
+Hits first. First turn out only. 100% flinch chance.
+437
+Always leaves the target with at least 1 HP.
+Always leaves the target with at least 1 HP.
+438
+Always leaves the target with at least 1 HP.
+Always leaves the target with at least 1 HP.
+439
+Scatters coins.
+Scatters coins.
+440
+No additional effect.
+No additional effect.
+441
+Usually goes first.
+Usually goes first.
+442
+No additional effect.
+No additional effect.
+443
+No additional effect.
+No additional effect.
+444
+Hits 2 times in one turn.
+Hits 2 times in one turn.
+445
+Nullifies Detect, Protect, and Quick/Wide Guard.
+Nullifies Detect, Protect, and Quick/Wide Guard.
+446
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+447
+Raises the user's Attack by 1 if hit during use.
+Raises the user's Attack by 1 if hit during use.
+448
+Free user from hazards/bind/Leech Seed; +1 Spe.
+Free user from hazards/bind/Leech Seed; +1 Spe.
+449
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+450
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+451
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+452
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+453
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+454
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+455
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+456
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+457
+10% chance to lower the target's Speed by 1.
+10% chance to lower the target's Speed by 1.
+458
+Waits 2 turns; deals double the damage taken.
+Waits 2 turns; deals double the damage taken.
+459
+More power the more HP the target has left.
+More power the more HP the target has left.
+460
+Lowers the target's HP to the user's HP.
+Lowers the target's HP to the user's HP.
+461
+More power the less HP the user has left.
+More power the less HP the user has left.
+462
+Max 102 power at minimum Happiness.
+Max 102 power at minimum Happiness.
+463
+OHKOs the target. Fails if user is a lower level.
+OHKOs the target. Fails if user is a lower level.
+464
+OHKOs the target. Fails if user is a lower level.
+OHKOs the target. Fails if user is a lower level.
+465
+Power and type depends on the user's Berry.
+Power and type depends on the user's Berry.
+466
+40, 80, 120 power, or heals target 1/4 max HP.
+40, 80, 120 power, or heals target 1/4 max HP.
+467
+Max 102 power at maximum Happiness.
+Max 102 power at maximum Happiness.
+468
+Always does 20 HP of damage.
+Always does 20 HP of damage.
+469
+More power with more uses of Stockpile.
+More power with more uses of Stockpile.
+470
+Does damage equal to 1/2 target's current HP.
+Does damage equal to 1/2 target's current HP.
+471
+More power the fewer PP this move has left.
+More power the fewer PP this move has left.
+472
+More power the more HP the target has left.
+More power the more HP the target has left.
+473
+Raises a random stat of the user or an ally by 2.
+Raises a random stat of the user or an ally by 2.
+474
+The target makes its move right after the user.
+The target makes its move right after the user.
+475
+Uses a random move known by a team member.
+Uses a random move known by a team member.
+476
+A target of the opposite gender gets infatuated.
+A target of the opposite gender gets infatuated.
+477
+User switches, passing stat changes and more.
+User switches, passing stat changes and more.
+478
+User loses 50% max HP. Maximizes Attack.
+User loses 50% max HP. Maximizes Attack.
+479
+User passes its held item to the target.
+User passes its held item to the target.
+480
+Prevents the target from switching out.
+Prevents the target from switching out.
+481
+Changes user's type by terrain (default Normal).
+Changes user's type by terrain (default Normal).
+482
+Lowers the foe(s) Sp. Atk by 2 if opposite gender.
+Lowers the foe(s) Sp. Atk by 2 if opposite gender.
+483
+No competitive use.
+No competitive use.
+484
+Lowers the target's Sp. Atk by 1.
+Lowers the target's Sp. Atk by 1.
+485
+Changes user's type to match its first move.
+Changes user's type to match its first move.
+486
+Changes user's type to resist target's last move.
+Changes user's type to resist target's last move.
+487
+Uses the last move used in the battle.
+Uses the last move used in the battle.
+488
+Raises the user's Defense by 1.
+Raises the user's Defense by 1.
+489
+For 4 turns, disables the target's last move used.
+For 4 turns, disables the target's last move used.
+490
+Raises the user's evasiveness by 1.
+Raises the user's evasiveness by 1.
+491
+Target repeats its last move for its next 3 turns.
+Target repeats its last move for its next 3 turns.
+492
+User survives attacks this turn with at least 1 HP.
+User survives attacks this turn with at least 1 HP.
+493
+The target's Ability changes to match the user's.
+The target's Ability changes to match the user's.
+494
+Lowers the target's accuracy by 1.
+Lowers the target's accuracy by 1.
+495
+Raises the user's critical hit ratio by 2.
+Raises the user's critical hit ratio by 2.
+496
+The foes' moves target the user on the turn used.
+The foes' moves target the user on the turn used.
+497
+Fighting, Normal hit Ghost. Evasiveness ignored.
+Fighting, Normal hit Ghost. Evasiveness ignored.
+498
+Paralyzes the target.
+Paralyzes the target.
+499
+Lowers the foe(s) Attack by 1.
+Lowers the foe(s) Attack by 1.
+500
+Raises user's Attack and Sp. Atk by 1; 2 in Sun.
+Raises user's Attack and Sp. Atk by 1; 2 in Sun.
+501
+No competitive use.
+No competitive use.
+502
+Raises the user's Defense by 1.
+Raises the user's Defense by 1.
+503
+Cures the user's party of all status conditions.
+Cures the user's party of all status conditions.
+504
+One adjacent ally's move power is 1.5x this turn.
+One adjacent ally's move power is 1.5x this turn.
+505
+No competitive use.
+No competitive use.
+506
+Raises the user's and ally's Attack by 1.
+Raises the user's and ally's Attack by 1.
+507
+Until the end of the next turn, user's moves crit.
+Until the end of the next turn, user's moves crit.
+508
+Lowers the foe(s) Defense by 1.
+Lowers the foe(s) Defense by 1.
+509
+User's next move will not miss the target.
+User's next move will not miss the target.
+510
+Causes the target to fall asleep.
+Causes the target to fall asleep.
+511
+For 5 turns, shields user's party from critical hits.
+For 5 turns, shields user's party from critical hits.
+512
+Copies a foe at 1.5x power. User must be faster.
+Copies a foe at 1.5x power. User must be faster.
+513
+Prevents the target from switching out.
+Prevents the target from switching out.
+514
+Picks a random move.
+Picks a random move.
+515
+Heals the user by 50% of its max HP.
+Heals the user by 50% of its max HP.
+516
+The last move the target used replaces this one.
+The last move the target used replaces this one.
+517
+User's next move will not miss the target.
+User's next move will not miss the target.
+518
+Raises the user's evasiveness by 2.
+Raises the user's evasiveness by 2.
+519
+Heals the user by a weather-dependent amount.
+Heals the user by a weather-dependent amount.
+520
+Attack depends on terrain (default Tri Attack).
+Attack depends on terrain (default Tri Attack).
+521
+Lowers the target's Attack and Sp. Atk by 1.
+Lowers the target's Attack and Sp. Atk by 1.
+522
+Fighting, Normal hit Ghost. Evasiveness ignored.
+Fighting, Normal hit Ghost. Evasiveness ignored.
+523
+Shares HP of user and target equally.
+Shares HP of user and target equally.
+524
+All active Pokemon will faint in 3 turns.
+All active Pokemon will faint in 3 turns.
+525
+Lowers the target's Attack by 1.
+Lowers the target's Attack by 1.
+526
+Prevents moves from affecting the user this turn.
+Prevents moves from affecting the user this turn.
+527
+Copies the target's current stat stages.
+Copies the target's current stat stages.
+528
+Heals the user by 50% of its max HP.
+Heals the user by 50% of its max HP.
+529
+Restores the item the user last used.
+Restores the item the user last used.
+530
+User becomes the same type as the target.
+User becomes the same type as the target.
+531
+User cures its burn, poison, or paralysis.
+User cures its burn, poison, or paralysis.
+532
+Forces the target to switch to a random ally.
+Forces the target to switch to a random ally.
+533
+For 5 turns, protects user's party from status.
+For 5 turns, protects user's party from status.
+534
+Lowers the target's Speed by 2.
+Lowers the target's Speed by 2.
+535
+Lowers the target's Defense by 2.
+Lowers the target's Defense by 2.
+536
+Raises the user's Attack by 1.
+Raises the user's Attack by 1.
+537
+Lowers Def, SpD by 1; raises Atk, SpA, Spe by 2.
+Lowers Def, SpD by 1; raises Atk, SpA, Spe by 2.
+538
+The target's Ability becomes Simple.
+The target's Ability becomes Simple.
+539
+Causes the target to fall asleep.
+Causes the target to fall asleep.
+540
+Permanently copies the last move target used.
+Permanently copies the last move target used.
+541
+Heals the user by 50% of its max HP.
+Heals the user by 50% of its max HP.
+542
+User must be asleep. Uses another known move.
+User must be asleep. Uses another known move.
+543
+Lowers the target's accuracy by 1.
+Lowers the target's accuracy by 1.
+544
+Heals the user by 50% of its max HP.
+Heals the user by 50% of its max HP.
+545
+No competitive use.
+No competitive use.
+546
+Target's foes' moves are redirected to it this turn.
+Target's foes' moves are redirected to it this turn.
+547
+Raises user's Defense, Sp. Def by 1. Max 3 uses.
+Raises user's Defense, Sp. Def by 1. Max 3 uses.
+548
+User takes 1/4 its max HP to put in a substitute.
+User takes 1/4 its max HP to put in a substitute.
+549
+Causes the target to become confused.
+Causes the target to become confused.
+550
+Raises the target's Attack by 2 and confuses it.
+Raises the target's Attack by 2 and confuses it.
+551
+Heals the user based on uses of Stockpile.
+Heals the user based on uses of Stockpile.
+552
+Lowers the foe(s) evasiveness by 2.
+Lowers the foe(s) evasiveness by 2.
+553
+Raises the user's Attack by 2.
+Raises the user's Attack by 2.
+554
+Lowers the foe(s) Defense by 1.
+Lowers the foe(s) Defense by 1.
+555
+Lowers the target's Attack and Sp. Atk by 1.
+Lowers the target's Attack and Sp. Atk by 1.
+556
+Confuses adjacent Pokemon.
+Confuses adjacent Pokemon.
+557
+Lowers the target's Attack and Defense by 1.
+Lowers the target's Attack and Defense by 1.
+558
+Copies target's stats, moves, types, and Ability.
+Copies target's stats, moves, types, and Ability.
+559
+Forces the target to switch to a random ally.
+Forces the target to switch to a random ally.
+560
+Next turn, 50% of the user's max HP is restored.
+Next turn, 50% of the user's max HP is restored.
+561
+Raises the user's Attack and Sp. Atk by 1.
+Raises the user's Attack and Sp. Atk by 1.
+562
+Puts the target to sleep after 1 turn.
+Puts the target to sleep after 1 turn.
+563
+Swaps user's field effects with the opposing side.
+Swaps user's field effects with the opposing side.
+564
+Must hold Berry to use. User eats Berry, Def +2.
+Must hold Berry to use. User eats Berry, Def +2.
+565
+All active Pokemon consume held Berries.
+All active Pokemon consume held Berries.
+566
+User on terrain: power doubles, type varies.
+User on terrain: power doubles, type varies.
+567
+Cannot be selected until the user eats a Berry.
+Cannot be selected until the user eats a Berry.
+568
+30% chance to poison the target.
+30% chance to poison the target.
+569
+10% chance to poison adjacent Pokemon.
+10% chance to poison adjacent Pokemon.
+570
+30% chance to poison the target.
+30% chance to poison the target.
+571
+30% chance to poison the target.
+30% chance to poison the target.
+572
+High critical hit ratio. 10% chance to poison.
+High critical hit ratio. 10% chance to poison.
+573
+30% chance to poison the target.
+30% chance to poison the target.
+574
+Power doubles if the target is poisoned.
+Power doubles if the target is poisoned.
+575
+Resets all of the target's stat stages to 0.
+Resets all of the target's stat stages to 0.
+576
+50% chance to badly poison the target.
+50% chance to badly poison the target.
+577
+High critical hit ratio. 10% chance to poison.
+High critical hit ratio. 10% chance to poison.
+578
+10% chance to lower the foe(s) Sp. Def by 1.
+10% chance to lower the foe(s) Sp. Def by 1.
+579
+100% chance to lower the target's Sp. Def by 2.
+100% chance to lower the target's Sp. Def by 2.
+580
+40% chance to poison the target.
+40% chance to poison the target.
+581
+30% chance to poison the target.
+30% chance to poison the target.
+582
+Raises the user's Defense by 2.
+Raises the user's Defense by 2.
+583
+Protects from moves. Contact: poison.
+Protects from moves. Contact: poison.
+584
+Raises user's Attack, Defense, accuracy by 1.
+Raises user's Attack, Defense, accuracy by 1.
+585
+Nullifies the target's Ability.
+Nullifies the target's Ability.
+586
+Poisons the foe(s).
+Poisons the foe(s).
+587
+Poisons the target.
+Poisons the target.
+588
+Cures target's status; heals user 1/2 max HP if so.
+Cures target's status; heals user 1/2 max HP if so.
+589
+Badly poisons the target. Poison types can't miss.
+Badly poisons the target. Poison types can't miss.
+590
+Poisons grounded foes on switch-in. Max 2 layers.
+Poisons grounded foes on switch-in. Max 2 layers.
+591
+Lowers the target's Speed by 1 and poisons it.
+Lowers the target's Speed by 1 and poisons it.
+592
+Lowers Atk/Sp. Atk/Speed of poisoned foes by 1.
+Lowers Atk/Sp. Atk/Speed of poisoned foes by 1.
+593
+Removes adjacent Pokemon's held items.
+Removes adjacent Pokemon's held items.
+594
+20% psn. Physical+contact if it would be stronger.
+20% psn. Physical+contact if it would be stronger.
+595
+User cannot move next turn.
+User cannot move next turn.
+596
+Lowers the user's Sp. Atk by 2.
+Lowers the user's Sp. Atk by 2.
+597
+Hits two turns after being used.
+Hits two turns after being used.
+598
+Hits adjacent Pokemon sharing the user's type.
+Hits adjacent Pokemon sharing the user's type.
+599
+User gains 1/2 HP inflicted. Sleeping target only.
+User gains 1/2 HP inflicted. Sleeping target only.
+600
+Physical if user's Atk > Sp. Atk. Ignores Abilities.
+Physical if user's Atk > Sp. Atk. Ignores Abilities.
+601
+Damages target based on Defense, not Sp. Def.
+Damages target based on Defense, not Sp. Def.
+602
+10% chance to lower the target's Sp. Def by 1.
+10% chance to lower the target's Sp. Def by 1.
+603
+Destroys screens, unless the target is immune.
+Destroys screens, unless the target is immune.
+604
+10% chance to make the target flinch.
+10% chance to make the target flinch.
+605
+Breaks the target's protection for this turn.
+Breaks the target's protection for this turn.
+606
+Damages target based on Defense, not Sp. Def.
+Damages target based on Defense, not Sp. Def.
+607
+20% chance to make the target flinch.
+20% chance to make the target flinch.
+608
+50% chance to lower the target's Sp. Def by 1.
+50% chance to lower the target's Sp. Def by 1.
+609
+50% chance to lower the target's Sp. Atk by 1.
+50% chance to lower the target's Sp. Atk by 1.
+610
+High critical hit ratio.
+High critical hit ratio.
+611
+10% chance to confuse the target.
+10% chance to confuse the target.
+612
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+613
+10% chance to confuse the target.
+10% chance to confuse the target.
+614
+ + 20 power for each of the user's stat boosts.
+ + 20 power for each of the user's stat boosts.
+615
+If hit by special attack, returns double damage.
+If hit by special attack, returns double damage.
+616
+Random damage equal to 0.5x-1.5x user's level.
+Random damage equal to 0.5x-1.5x user's level.
+617
+Raises the user's Speed by 2.
+Raises the user's Speed by 2.
+618
+The user swaps positions with its ally.
+The user swaps positions with its ally.
+619
+Raises the user's Sp. Def by 2.
+Raises the user's Sp. Def by 2.
+620
+Raises the user's Defense by 2.
+Raises the user's Defense by 2.
+621
+Raises the user's Sp. Atk and Sp. Def by 1.
+Raises the user's Sp. Atk and Sp. Def by 1.
+622
+Raises the user's Defense and Sp. Def by 1.
+Raises the user's Defense and Sp. Def by 1.
+623
+5 turns: no Ground immunities, 1.67x accuracy.
+5 turns: no Ground immunities, 1.67x accuracy.
+624
+Averages Defense and Sp. Def stats with target.
+Averages Defense and Sp. Def stats with target.
+625
+Swaps Defense and Sp. Def changes with target.
+Swaps Defense and Sp. Def changes with target.
+626
+For 5 turns, the foe(s) is prevented from healing.
+For 5 turns, the foe(s) is prevented from healing.
+627
+Heals the target by 50% of its max HP.
+Heals the target by 50% of its max HP.
+628
+User faints. Next hurt Pokemon is fully healed.
+User faints. Next hurt Pokemon is fully healed.
+629
+Swaps all stat changes with target.
+Swaps all stat changes with target.
+630
+Causes the target to fall asleep.
+Causes the target to fall asleep.
+631
+No foe can use any move known by the user.
+No foe can use any move known by the user.
+632
+The target immediately uses its last used move.
+The target immediately uses its last used move.
+633
+Lowers the target's accuracy by 1.
+Lowers the target's accuracy by 1.
+634
+For 5 turns, special damage to allies is halved.
+For 5 turns, special damage to allies is halved.
+635
+User faints. Next hurt Pkmn is cured, max HP/PP.
+User faints. Next hurt Pkmn is cured, max HP/PP.
+636
+Bounces back certain non-damaging moves.
+Bounces back certain non-damaging moves.
+637
+For 5 turns, all held items have no effect.
+For 5 turns, all held items have no effect.
+638
+Raises the user's Attack by 1.
+Raises the user's Attack by 1.
+639
+Psychic hits Dark. Evasiveness ignored.
+Psychic hits Dark. Evasiveness ignored.
+640
+Averages Attack and Sp. Atk stats with target.
+Averages Attack and Sp. Atk stats with target.
+641
+Swaps Attack and Sp. Atk stat stages with target.
+Swaps Attack and Sp. Atk stat stages with target.
+642
+Switches user's Attack and Defense stats.
+Switches user's Attack and Defense stats.
+643
+5 turns. Grounded: +Psychic power, priority-safe.
+5 turns. Grounded: +Psychic power, priority-safe.
+644
+Transfers the user's status ailment to the target.
+Transfers the user's status ailment to the target.
+645
+For 5 turns, physical damage to allies is halved.
+For 5 turns, physical damage to allies is halved.
+646
+User sleeps 2 turns and restores HP and status.
+User sleeps 2 turns and restores HP and status.
+647
+User replaces its Ability with the target's.
+User replaces its Ability with the target's.
+648
+The user and the target trade Abilities.
+The user and the target trade Abilities.
+649
+Swaps Speed stat with target.
+Swaps Speed stat with target.
+650
+For 3 turns, target floats but moves can't miss it.
+For 3 turns, target floats but moves can't miss it.
+651
+User switches out.
+User switches out.
+652
+User switches its held item with the target's.
+User switches its held item with the target's.
+653
+Goes last. For 5 turns, turn order is reversed.
+Goes last. For 5 turns, turn order is reversed.
+654
+For 5 turns, all Defense and Sp. Def stats switch.
+For 5 turns, all Defense and Sp. Def stats switch.
+655
+Changes the target's type to Psychic.
+Changes the target's type to Psychic.
+656
+User on Psychic Terrain: 1.5x power, hits foes.
+User on Psychic Terrain: 1.5x power, hits foes.
+657
+Removes 3 PP from the target's last move.
+Removes 3 PP from the target's last move.
+658
+10% chance to freeze the target.
+10% chance to freeze the target.
+659
+Has 1/2 recoil.
+Has 1/2 recoil.
+660
+User cannot move next turn.
+User cannot move next turn.
+661
+50% chance to raise user's Defense by 2.
+50% chance to raise user's Defense by 2.
+662
+High critical hit ratio.
+High critical hit ratio.
+663
+No additional effect.
+No additional effect.
+664
+30% chance to make the foe(s) flinch.
+30% chance to make the foe(s) flinch.
+665
+10% chance to raise all stats by 1 (not acc/eva).
+10% chance to raise all stats by 1 (not acc/eva).
+666
+100% chance to lower the target's Speed by 1.
+100% chance to lower the target's Speed by 1.
+667
+No additional effect.
+No additional effect.
+668
+Removes the target's Ground immunity.
+Removes the target's Ground immunity.
+669
+Usually goes first.
+Usually goes first.
+670
+Power doubles with each hit. Repeats for 5 turns.
+Power doubles with each hit. Repeats for 5 turns.
+671
+Hits 2-5 times in one turn.
+Hits 2-5 times in one turn.
+672
+Raises the user's Speed by 2.
+Raises the user's Speed by 2.
+673
+For 5 turns, a sandstorm rages. Rock: 1.5x SpD.
+For 5 turns, a sandstorm rages. Rock: 1.5x SpD.
+674
+Hurts foes on switch-in. Factors Rock weakness.
+Hurts foes on switch-in. Factors Rock weakness.
+675
+Protects allies from multi-target moves this turn.
+Protects allies from multi-target moves this turn.
+676
+Target gets -1 Spe and becomes weaker to Fire.
+Target gets -1 Spe and becomes weaker to Fire.
+677
+Raises user's Sp. Atk by 1 on turn 1. Hits turn 2.
+Raises user's Sp. Atk by 1 on turn 1. Hits turn 2.
+678
+Hits two turns after being used.
+Hits two turns after being used.
+679
+30% chance to lower the target's Defense by 1.
+30% chance to lower the target's Defense by 1.
+680
+Ignores the Abilities of other Pokemon.
+Ignores the Abilities of other Pokemon.
+681
+20% chance to raise the user's Attack by 1.
+20% chance to raise the user's Attack by 1.
+682
+Prevents the target from switching out.
+Prevents the target from switching out.
+683
+10% chance to lower the target's Sp. Def by 1.
+10% chance to lower the target's Sp. Def by 1.
+684
+30% chance to make the target flinch.
+30% chance to make the target flinch.
+685
+This move does not check accuracy.
+This move does not check accuracy.
+686
+10% chance to raise the user's Defense by 1.
+10% chance to raise the user's Defense by 1.
+687
+Hits twice. 30% chance to make the target flinch.
+Hits twice. 30% chance to make the target flinch.
+688
+30% chance to lower the target's accuracy by 1.
+30% chance to lower the target's accuracy by 1.
+689
+This move does not check accuracy.
+This move does not check accuracy.
+690
+Hits 2 times in one turn.
+Hits 2 times in one turn.
+691
+10% chance to raise the user's Attack by 1.
+10% chance to raise the user's Attack by 1.
+692
+Usually goes first.
+Usually goes first.
+693
+More power the slower the user than the target.
+More power the slower the user than the target.
+694
+More power the heavier the user than the target.
+More power the heavier the user than the target.
+695
+If hit by an attack, returns 1.5x damage.
+If hit by an attack, returns 1.5x damage.
+696
+Raises the user's Speed by 2; user loses 100 kg.
+Raises the user's Speed by 2; user loses 100 kg.
+697
+Raises Atk, Sp. Atk of allies with Plus/Minus by 1.
+Raises Atk, Sp. Atk of allies with Plus/Minus by 1.
+698
+Raises the user's Defense by 2.
+Raises the user's Defense by 2.
+699
+Protects from damaging attacks. Contact: -1 Atk.
+Protects from damaging attacks. Contact: -1 Atk.
+700
+Lowers the target's Sp. Def by 2.
+Lowers the target's Sp. Def by 2.
+701
+Raises the user's Speed by 2 and Attack by 1.
+Raises the user's Speed by 2 and Attack by 1.
+702
+Damage doubles if the target is Dynamaxed.
+Damage doubles if the target is Dynamaxed.
+703
+Damage doubles if the target is Dynamaxed.
+Damage doubles if the target is Dynamaxed.
+704
+Fails if there is no terrain active. Ends the terrain.
+Fails if there is no terrain active. Ends the terrain.
+705
+User loses 50% max HP.
+User loses 50% max HP.
+706
+User cannot move next turn.
+User cannot move next turn.
+707
+Less power as user's HP decreases. Hits foe(s).
+Less power as user's HP decreases. Hits foe(s).
+708
+No additional effect.
+No additional effect.
+709
+No additional effect. Hits adjacent foes.
+No additional effect. Hits adjacent foes.
+710
+30% chance to burn the target. Thaws target.
+30% chance to burn the target. Thaws target.
+711
+High critical hit ratio.
+High critical hit ratio.
+712
+No additional effect.
+No additional effect.
+713
+30% chance to lower the foe(s) accuracy by 1.
+30% chance to lower the foe(s) accuracy by 1.
+714
+The target is cured of its burn.
+The target is cured of its burn.
+715
+Hits adjacent Pokemon. Double damage on Dive.
+Hits adjacent Pokemon. Double damage on Dive.
+716
+20% chance to lower the target's Defense by 1.
+20% chance to lower the target's Defense by 1.
+717
+Dives underwater turn 1, strikes turn 2.
+Dives underwater turn 1, strikes turn 2.
+718
+30% chance to burn the target. Thaws target.
+30% chance to burn the target. Thaws target.
+719
+Use with Grass or Fire Pledge for added effect.
+Use with Grass or Fire Pledge for added effect.
+720
+20% chance to make the target flinch.
+20% chance to make the target flinch.
+721
+50% chance to lower the target's Defense by 1.
+50% chance to lower the target's Defense by 1.
+722
+Power doubles if the target's HP is 50% or less.
+Power doubles if the target's HP is 50% or less.
+723
+10% chance to lower the target's Speed by 1.
+10% chance to lower the target's Speed by 1.
+724
+50% chance to lower the target's accuracy by 1.
+50% chance to lower the target's accuracy by 1.
+725
+20% chance to confuse the target.
+20% chance to confuse the target.
+726
+Usually goes first.
+Usually goes first.
+727
+10% chance to lower the foe(s) Speed by 1.
+10% chance to lower the foe(s) Speed by 1.
+728
+No additional effect.
+No additional effect.
+729
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+730
+Traps and damages the target for 4-5 turns.
+Traps and damages the target for 4-5 turns.
+731
+Usually goes first. Hits 2-5 times in one turn.
+Usually goes first. Hits 2-5 times in one turn.
+732
+User recovers 1/16 max HP per turn.
+User recovers 1/16 max HP per turn.
+733
+For 5 turns, heavy rain powers Water moves.
+For 5 turns, heavy rain powers Water moves.
+734
+Changes the target's type to Water.
+Changes the target's type to Water.
+735
+For 5 turns, Fire-type attacks have 1/3 power.
+For 5 turns, Fire-type attacks have 1/3 power.
+736
+Raises the user's Defense by 1.
+Raises the user's Defense by 1.
+737
+High critical hit ratio. Cannot be redirected.
+High critical hit ratio. Cannot be redirected.
+738
+Power doubles if user moves before the target.
+Power doubles if user moves before the target.
+739
+Heals the user and its allies by 1/4 their max HP.
+Heals the user and its allies by 1/4 their max HP.
+740
+Always results in a critical hit. Hits 3 times.
+Always results in a critical hit. Hits 3 times.
+741
+User switches out after damaging the target.
+User switches out after damaging the target.
