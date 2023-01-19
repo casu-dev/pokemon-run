@@ -26,6 +26,17 @@ MAP_EVENT_POOL = [
   MAP_STEAL_POKE
 ]
 
+#  First and last event shouldn't be "useless" events. This means the first event of f1 mustn't be Egg-move Tutor or Tm shop (maybe also ban the mart?). And the last event on F4 mustn't be the wishing well event.
+MAP_EVENT_AVOID_FIRST = [
+  MAP_EGG_MOVE_RELEARNER,
+  MAP_TM_SHOP,
+  MAP_MART
+]
+
+MAP_EVENT_AVOID_LAST = [
+  MAP_MONEY
+]
+
 # Rooms that are different on each floor 
 MAP_BOSS_LIST = [
   { id: 86, name: '1st Floor Boss', posx: 10, posy: 14, value: 20, weight: 10, sprite: "trainer_ELITEFOUR_Bruno" }, # 1st floor
@@ -65,8 +76,15 @@ def isEventRoom(room)
 end
 
 def pbGenDest()
+  stages_cleared = pbGet(48)
+  rooms_cleared = pbGet(49)
+
   # load last event rooms as blacklist
   avoidRooms = [pbGet(38),  pbGet(39)]
+
+  # special handling for first and last room
+  avoidRooms += MAP_EVENT_AVOID_FIRST if rooms_cleared == 0 and stages_cleared == 0
+  avoidRooms += MAP_EVENT_AVOID_LAST if rooms_cleared == 10 and stages_cleared == 3
 
   room1 = pbGetPossDest(0, avoidRooms)
   pbSet(29, room1)
