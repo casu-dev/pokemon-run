@@ -1,0 +1,801 @@
+1
+Stench
+Duftnote
+2
+Drizzle
+Niesel
+3
+Speed Boost
+Temposchub
+4
+Battle Armor
+Kampfpanzer
+5
+Sturdy
+Robustheit
+6
+Damp
+Feuchtigkeit
+7
+Limber
+Flexibilität
+8
+Sand Veil
+Sandschleier
+9
+Static
+Statik
+10
+Volt Absorb
+Voltabsorber
+11
+Water Absorb
+H2O-Absorber
+12
+Oblivious
+Dösigkeit
+13
+Cloud Nine
+Wolke Sieben
+14
+Compound Eyes
+Facettenauge
+15
+Insomnia
+Insomnia
+16
+Color Change
+Farbwechsel
+17
+Immunity
+Immunität
+18
+Flash Fire
+Feuerfänger
+19
+Shield Dust
+Puderabwehr
+20
+Own Tempo
+Tempomacher
+21
+Suction Cups
+Saugnapf
+22
+Intimidate
+Bedroher
+23
+Shadow Tag
+Wegsperre
+24
+Rough Skin
+Rauhaut
+25
+Wonder Guard
+Wunderwache
+26
+Levitate
+Schwebe
+27
+Effect Spore
+Sporenwirt
+28
+Synchronize
+Synchro
+29
+Clear Body
+Neutraltorso
+30
+Natural Cure
+Innere Kraft
+31
+Lightning Rod
+Blitzfänger
+32
+Serene Grace
+Edelmut
+33
+Swift Swim
+Wassertempo
+34
+Chlorophyll
+Chlorophyll
+35
+Illuminate
+Erleuchtung
+36
+Trace
+Fährte
+37
+Huge Power
+Kraftkoloss
+38
+Poison Point
+Giftdorn
+39
+Inner Focus
+Konzentrator
+40
+Magma Armor
+Magmapanzer
+41
+Water Veil
+Aquahülle
+42
+Magnet Pull
+Magnetfalle
+43
+Soundproof
+Lärmschutz
+44
+Rain Dish
+Regengenuss
+45
+Sand Stream
+Sandsturm
+46
+Pressure
+Erzwinger
+47
+Thick Fat
+Speckschicht
+48
+Early Bird
+Frühwecker
+49
+Flame Body
+Flammkörper
+50
+Run Away
+Angsthase
+51
+Keen Eye
+Adlerauge
+52
+Hyper Cutter
+Scherenmacht
+53
+Pickup
+Mitnahme
+54
+Truant
+Schnarchnase
+55
+Hustle
+Übereifer
+56
+Cute Charm
+Charmebolzen
+57
+Plus
+Plus
+58
+Minus
+Minus
+59
+Forecast
+Prognose
+60
+Sticky Hold
+Wertehalter
+61
+Shed Skin
+Expidermis
+62
+Guts
+Adrenalin
+63
+Marvel Scale
+Notschutz
+64
+Liquid Ooze
+Kloakensoße
+65
+Overgrow
+Notdünger
+66
+Blaze
+Großbrand
+67
+Torrent
+Sturzbach
+68
+Swarm
+Hexaplaga
+69
+Rock Head
+Steinhaupt
+70
+Drought
+Dürre
+71
+Arena Trap
+Ausweglos
+72
+Vital Spirit
+Munterkeit
+73
+White Smoke
+Pulverrauch
+74
+Pure Power
+Mentalkraft
+75
+Shell Armor
+Panzerhaut
+76
+Air Lock
+Klimaschutz
+77
+Tangled Feet
+Fußangel
+78
+Motor Drive
+Starthilfe
+79
+Rivalry
+Rivalität
+80
+Steadfast
+Felsenfest
+81
+Snow Cloak
+Schneemantel
+82
+Gluttony
+Völlerei
+83
+Anger Point
+Kurzschluss
+84
+Unburden
+Entlastung
+85
+Heatproof
+Hitzeschutz
+86
+Simple
+Wankelmut
+87
+Dry Skin
+Trockenheit
+88
+Download
+Download
+89
+Iron Fist
+Eisenfaust
+90
+Poison Heal
+Aufheber
+91
+Adaptability
+Anpassung
+92
+Skill Link
+Wertelink
+93
+Hydration
+Hydration
+94
+Solar Power
+Solarkraft
+95
+Quick Feet
+Rasanz
+96
+Normalize
+Regulierung
+97
+Sniper
+Superschütze
+98
+Magic Guard
+Magieschild
+99
+No Guard
+Schildlos
+100
+Stall
+Zeitspiel
+101
+Technician
+Techniker
+102
+Leaf Guard
+Floraschild
+103
+Klutz
+Tollpatsch
+104
+Mold Breaker
+Überbrückung
+105
+Super Luck
+Glückspilz
+106
+Aftermath
+Finalschlag
+107
+Anticipation
+Vorahnung
+108
+Forewarn
+Vorwarnung
+109
+Unaware
+Unkenntnis
+110
+Tinted Lens
+Aufwertung
+111
+Filter
+Filter
+112
+Slow Start
+Saumselig
+113
+Scrappy
+Rauflust
+114
+Storm Drain
+Sturmsog
+115
+Ice Body
+Eishaut
+116
+Solid Rock
+Felskern
+117
+Snow Warning
+Hagelalarm
+118
+Honey Gather
+Honigmaul
+119
+Frisk
+Schnüffler
+120
+Reckless
+Achtlos
+121
+Multitype
+Variabilität
+122
+Flower Gift
+Pflanzengabe
+123
+Bad Dreams
+Alptraum
+124
+Pickpocket
+Langfinger
+125
+Sheer Force
+Rohe Gewalt
+126
+Contrary
+Umkehrung
+127
+Unnerve
+Anspannung
+128
+Defiant
+Siegeswille
+129
+Defeatist
+Schwächling
+130
+Cursed Body
+Tastfluch
+131
+Healer
+Heilherz
+132
+Friend Guard
+Freundeshut
+133
+Weak Armor
+Bruchrüstung
+134
+Heavy Metal
+Schwermetall
+135
+Light Metal
+Leichtmetall
+136
+Multiscale
+Multischuppe
+137
+Toxic Boost
+Giftwahn
+138
+Flare Boost
+Hitzewahn
+139
+Harvest
+Reiche Ernte
+140
+Telepathy
+Telepathie
+141
+Moody
+Gefühlswippe
+142
+Overcoat
+Wetterfest
+143
+Poison Touch
+Giftgriff
+144
+Regenerator
+Belebekraft
+145
+Big Pecks
+Brustbieter
+146
+Sand Rush
+Sandscharrer
+147
+Wonder Skin
+Wunderhaut
+148
+Analytic
+Analyse
+149
+Illusion
+Trugbild
+150
+Imposter
+Doppelgänger
+151
+Infiltrator
+Schwebedurch
+152
+Mummy
+Mumie
+153
+Moxie
+Hochmut
+154
+Justified
+Redlichkeit
+155
+Rattled
+Hasenfuß
+156
+Magic Bounce
+Magiespiegel
+157
+Sap Sipper
+Vegetarier
+158
+Prankster
+Strolch
+159
+Sand Force
+Sandgewalt
+160
+Iron Barbs
+Eisenstachel
+161
+Zen Mode
+Trance-Modus
+162
+Victory Star
+Triumphstern
+163
+Turboblaze
+Turbobrand
+164
+Teravolt
+Teravolt
+165
+Aroma Veil
+Dufthülle
+166
+Flower Veil
+Blütenhülle
+167
+Cheek Pouch
+Backentaschen
+168
+Protean
+Wandlungskunst
+169
+Fur Coat
+Fellkleid
+170
+Magician
+Zauberer
+171
+Bulletproof
+Kugelsicher
+172
+Competitive
+Unbeugsamkeit
+173
+Strong Jaw
+Titankiefer
+174
+Refrigerate
+Frostschicht
+175
+Sweet Veil
+Zuckerhülle
+176
+Stance Change
+Taktikwechsel
+177
+Gale Wings
+Orkanschwingen
+178
+Mega Launcher
+Megawumme
+179
+Grass Pelt
+Pflanzenpelz
+180
+Symbiosis
+Nutznießer
+181
+Tough Claws
+Krallenwucht
+182
+Pixilate
+Feenschicht
+183
+Gooey
+Viskosität
+184
+Aerilate
+Zenithaut
+185
+Parental Bond
+Familienbande
+186
+Dark Aura
+Dunkelaura
+187
+Fairy Aura
+Feenaura
+188
+Aura Break
+Aura-Umkehr
+189
+Primordial Sea
+Urmeer
+190
+Desolate Land
+Endland
+191
+Delta Stream
+Delta-Wind
+192
+Stamina
+Zähigkeit
+193
+Wimp Out
+Reißaus
+194
+Emergency Exit
+Rückzug
+195
+Water Compaction
+Verklumpen
+196
+Merciless
+Quälerei
+197
+Shields Down
+Limitschild
+198
+Stakeout
+Beschattung
+199
+Water Bubble
+Water Bubble
+200
+Steelworker
+Stahlprofi
+201
+Berserk
+Wutausbruch
+202
+Slush Rush
+Schneescharrer
+203
+Long Reach
+Langstrecke
+204
+Liquid Voice
+Plätscherstimme
+205
+Triage
+Heilwandel
+206
+Galvanize
+Elektrohaut
+207
+Surge Surfer
+Surf-Schweif
+208
+Schooling
+Fischschwarm
+209
+Disguise
+Kostümspuk
+210
+Battle Bond
+Freundschaftsakt
+211
+Power Construct
+Scharwandel
+212
+Corrosion
+Korrosion
+213
+Comatose
+Dauerschlaf
+214
+Queenly Majesty
+Majestät
+215
+Innards Out
+Magenkrempler
+216
+Dancer
+Tänzer
+217
+Battery
+Batterie
+218
+Fluffy
+Flauschigkeit
+219
+Dazzling
+Buntkörper
+220
+Soul-Heart
+Seelenherz
+221
+Tangling Hair
+Lockenkopf
+222
+Receiver
+Receiver
+223
+Power of Alchemy
+Chemiekraft
+224
+Beast Boost
+Bestien-Boost
+225
+RKS System
+Alpha-System
+226
+Electric Surge
+Elektro-Erzeuger
+227
+Psychic Surge
+Psycho-Erzeuger
+228
+Misty Surge
+Nebel-Erzeuger
+229
+Grassy Surge
+Gras-Erzeuger
+230
+Full Metal Body
+Metallprotektor
+231
+Shadow Shield
+Phantomschutz
+232
+Prism Armor
+Prismarüstung
+233
+Neuroforce
+Zerebralmacht
+234
+Ball Fetch
+Apport
+235
+Cotton Down
+Wollflaum
+236
+Dauntless Shield
+Wackerer Schild
+237
+Gorilla Tactics
+Affenfokus
+238
+Gulp Missile
+Würggeschoss
+239
+Hunger Switch
+Heißhunger
+240
+Ice Face
+Tiefkühlkopf
+241
+Ice Scales
+Eisflügelstaub
+242
+Intrepid Sword
+Kühnes Schwert
+243
+Libero
+Libero
+244
+Mimicry
+Mimese
+245
+Mirror Armor
+Spiegelrüstung
+246
+Neutralizing Gas
+Reaktionsgas
+247
+Pastel Veil
+Pastellhülle
+248
+Perish Body
+Unheilskörper
+249
+Power Spot
+Kraftquelle
+250
+Propeller Tail
+Schraubflosse
+251
+Punk Rock
+Punk Rock
+252
+Ripen
+Heranreifen
+253
+Sand Spit
+Sandspeier
+254
+Screen Cleaner
+Hemmungslos
+255
+Stalwart
+Stahlrückgrat
+256
+Steam Engine
+Dampfantrieb
+257
+Steely Spirit
+Stählerner Wille
+258
+Wandering Spirit
+Rastlose Seele
+259
+Unseen Fist
+Verborgene Faust
+260
+Quick Draw
+Schnellschuss
+261
+Curious Medicine
+Kuriose Arznei
+262
+Transistor
+Transistor
+263
+Dragon's Maw
+Drachenkiefer
+264
+Chilling Neigh
+Helles Wiehern
+265
+Grim Neigh
+Dunkles Wiehern
+266
+As One
+Reitgespann
+267
+As One
+Reitgespann

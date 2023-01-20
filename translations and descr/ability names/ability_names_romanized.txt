@@ -1,0 +1,801 @@
+1
+Stench
+Akchwi
+2
+Drizzle
+Janbi
+3
+Speed Boost
+Gasok
+4
+Battle Armor
+Jeontu Mujang
+5
+Sturdy
+Onggolcham
+6
+Damp
+Seupgi
+7
+Limber
+Yuyeon
+8
+Sand Veil
+Morae Sumgi
+9
+Static
+Jeongjeon'gi
+10
+Volt Absorb
+Chukjeon
+11
+Water Absorb
+Jeosu
+12
+Oblivious
+Dungam
+13
+Cloud Nine
+Nalssi Bujeong
+14
+Compound Eyes
+Bok'an
+15
+Insomnia
+Bulmyeon
+16
+Color Change
+Byeonsaek
+17
+Immunity
+Myeon'yeok
+18
+Flash Fire
+Taoreuneun Bulkkot
+19
+Shield Dust
+Inbun
+20
+Own Tempo
+My Pace
+21
+Suction Cups
+Heupban
+22
+Intimidate
+Wihyeop
+23
+Shadow Tag
+Geurimja Balgi
+24
+Rough Skin
+Kkachilhan Pibu
+25
+Wonder Guard
+Bulgasayi Bujeok
+26
+Levitate
+Buyu
+27
+Effect Spore
+Poja
+28
+Synchronize
+Synchro
+29
+Clear Body
+Clear Body
+30
+Natural Cure
+Jayeon Hoebok
+31
+Lightning Rod
+Piroechim
+32
+Serene Grace
+Haneul-yi Eunchong
+33
+Swift Swim
+Sseuksseuk
+34
+Chlorophyll
+Yeoprokso
+35
+Illuminate
+Balgwang
+36
+Trace
+Trace
+37
+Huge Power
+Cheonhajangsa
+38
+Poison Point
+Dokgasi
+39
+Inner Focus
+Jeongsinryeok
+40
+Magma Armor
+Magma-yi Mujang
+41
+Water Veil
+Su-yi Veil
+42
+Magnet Pull
+Jiryeok
+43
+Soundproof
+Bang'eum
+44
+Rain Dish
+Jeoj'eun Jeopsi
+45
+Sand Stream
+Morae Nallim
+46
+Pressure
+Pressure
+47
+Thick Fat
+Dukkeoun Jibang
+48
+Early Bird
+Iljjik Gisang
+49
+Flame Body
+Bulkkot Mom
+50
+Run Away
+Doju
+51
+Keen Eye
+Nalkaroun Nun
+52
+Hyper Cutter
+Goeryeok Jipge
+53
+Pickup
+Pick-Up
+54
+Truant
+Geeureum
+55
+Hustle
+Yiyok
+56
+Cute Charm
+Herongherong Body
+57
+Plus
+Plus
+58
+Minus
+Minus
+59
+Forecast
+Gibunpa
+60
+Sticky Hold
+Jeomchak
+61
+Shed Skin
+Talpi
+62
+Guts
+Geunseong
+63
+Marvel Scale
+Isanghan Bineul
+64
+Liquid Ooze
+Haegam Aek
+65
+Overgrow
+Simrok
+66
+Blaze
+Menghwa
+67
+Torrent
+Geupryu
+68
+Swarm
+Beolle-yi Allim
+69
+Rock Head
+Dol Meori
+70
+Drought
+Gamum
+71
+Arena Trap
+Gaemi Jiok
+72
+Vital Spirit
+Yigiyang'yang
+73
+White Smoke
+Hayan Yeongi
+74
+Pure Power
+Sunsuhan Him
+75
+Shell Armor
+Jogabi Gab'ot
+76
+Air Lock
+Air-Lock
+77
+Tangled Feet
+Galjija Geor'eum
+78
+Motor Drive
+Jeongi Engine
+79
+Rivalry
+Tujaengsim
+80
+Steadfast
+Bulgul-yi Ma'eum
+81
+Snow Cloak
+Nun Sumgi
+82
+Gluttony
+Meokbo
+83
+Anger Point
+Bunno-yi Gyeonghyeol
+84
+Unburden
+Gok'ye
+85
+Heatproof
+Naeyeol
+86
+Simple
+Dansun
+87
+Dry Skin
+Geonjo Pibu
+88
+Download
+Download
+89
+Iron Fist
+Cheol Jumeok
+90
+Poison Heal
+Poison Heal
+91
+Adaptability
+Jeok'eungryeok
+92
+Skill Link
+Skill Link
+93
+Hydration
+Chokchok Body
+94
+Solar Power
+Sun Power
+95
+Quick Feet
+Sokbo
+96
+Normalize
+Normal Skin
+97
+Sniper
+Sniper
+98
+Magic Guard
+Magic Guard
+99
+No Guard
+No Guard
+100
+Stall
+Sigan Beolgi
+101
+Technician
+Technician
+102
+Leaf Guard
+Leaf Guard
+103
+Klutz
+Seotureum
+104
+Mold Breaker
+Teulkkaegi
+105
+Super Luck
+Dae'un
+106
+Aftermath
+Yupok
+107
+Anticipation
+Wiheom Yeji
+108
+Forewarn
+Yejimong
+109
+Unaware
+Cheonjin
+110
+Tinted Lens
+Saek'angyeong
+111
+Filter
+Filter
+112
+Slow Start
+Slow Start
+113
+Scrappy
+Baejjang
+114
+Storm Drain
+Majungmul
+115
+Ice Body
+Ice Body
+116
+Solid Rock
+Hard Rock
+117
+Snow Warning
+Nun Peotteurigi
+118
+Honey Gather
+Kkul Moeugi
+119
+Frisk
+Tongchal
+120
+Reckless
+Ipansapan
+121
+Multitype
+Multi-Type
+122
+Flower Gift
+Flower Gift
+123
+Bad Dreams
+Nightmare
+124
+Pickpocket
+Nappeun Sonbeoreut
+125
+Sheer Force
+Ugyeokdajim
+126
+Contrary
+Simsul Kkureogi
+127
+Unnerve
+Ginjanggam
+128
+Defiant
+Ogi
+129
+Defeatist
+Mugiryeok
+130
+Cursed Body
+Jeojubad-eun Body
+131
+Healer
+Chiyu-yi Ma'eum
+132
+Friend Guard
+Friend Guard
+133
+Weak Armor
+Kkaeeojin Gab'ot
+134
+Heavy Metal
+Heavy Metal
+135
+Light Metal
+Light Metal
+136
+Multiscale
+Multiscale
+137
+Toxic Boost
+Dok Pokju
+138
+Flare Boost
+Yeol Pokju
+139
+Harvest
+Suhwak
+140
+Telepathy
+Telepathy
+141
+Moody
+Byeondeokjaeng-i
+142
+Overcoat
+Bangjin
+143
+Poison Touch
+Doksu
+144
+Regenerator
+Jaesaengnyeok
+145
+Big Pecks
+Bupullin Gaseum
+146
+Sand Rush
+Morae Hechigi
+147
+Wonder Skin
+Miracle Skin
+148
+Analytic
+Analyze
+149
+Illusion
+Illusion
+150
+Imposter
+Goejja
+151
+Infiltrator
+Tuemsae Pochag
+152
+Mummy
+Mira
+153
+Moxie
+Jagigwashin
+154
+Justified
+Jeong'ui-yi Ma'eum
+155
+Rattled
+Junuk
+156
+Magic Bounce
+Magic Mirror
+157
+Sap Sipper
+Chosik
+158
+Prankster
+Jitguch-eun Ma'eum
+159
+Sand Force
+Morae-yi Him
+160
+Iron Barbs
+Cheol Gasi
+161
+Zen Mode
+Dalma Mode
+162
+Victory Star
+Seungni-yi Beol
+163
+Turboblaze
+Turboblaze
+164
+Teravolt
+Teravoltage
+165
+Aroma Veil
+Aroma Veil
+166
+Flower Veil
+Flower Veil
+167
+Cheek Pouch
+Boljumeoni
+168
+Protean
+Byeonhwan Jajae
+169
+Fur Coat
+Fur Coat
+170
+Magician
+Magician
+171
+Bulletproof
+Bangtan
+172
+Competitive
+Seunggi
+173
+Strong Jaw
+Onggolchanteok
+174
+Refrigerate
+Freeze Skin
+175
+Sweet Veil
+Sweet Veil
+176
+Stance Change
+Battle Switch
+177
+Gale Wings
+Jilpung Nalgae
+178
+Mega Launcher
+Mega Launcher
+179
+Grass Pelt
+Pulmopi
+180
+Symbiosis
+Gongsaeng
+181
+Tough Claws
+Dandanhan Baltop
+182
+Pixilate
+Fairy Skin
+183
+Gooey
+Mikkeunmikkeun
+184
+Aerilate
+Sky Skin
+185
+Parental Bond
+Bujayuchin
+186
+Dark Aura
+Dark Aura
+187
+Fairy Aura
+Fairy Aura
+188
+Aura Break
+Aura Break
+189
+Primordial Sea
+Sijak-ui Bada
+190
+Desolate Land
+Kkeut-ui Daeji
+191
+Delta Stream
+Delta Stream
+192
+Stamina
+Jiguryeok
+193
+Wimp Out
+Domang Taese
+194
+Emergency Exit
+Wigi Hoepi
+195
+Water Compaction
+Kkudeok-kkudeok Gutgi
+196
+Merciless
+Mudohan Haengdong
+197
+Shields Down
+Limit Shield
+198
+Stakeout
+Chambok
+199
+Water Bubble
+Water Bubble
+200
+Steelworker
+Gangcheolsulsa
+201
+Berserk
+Balkkeun
+202
+Slush Rush
+Nun Chiugi
+203
+Long Reach
+Wongyeok
+204
+Liquid Voice
+Chokchok Voice
+205
+Triage
+Healing Shift
+206
+Galvanize
+Electric Skin
+207
+Surge Surfer
+Surfing Tail
+208
+Schooling
+Eogun
+209
+Disguise
+Tal
+210
+Battle Bond
+Yudae Byeonhwa
+211
+Power Construct
+Swarm Change
+212
+Corrosion
+Busig
+213
+Comatose
+Jeoldae Ankkaem
+214
+Queenly Majesty
+Yeowang-ui Wieom
+215
+Innards Out
+Naeyongmul Bunchul
+216
+Dancer
+Muhui
+217
+Battery
+Battery
+218
+Fluffy
+Bokseulbokseul
+219
+Dazzling
+Vivid Body
+220
+Soul-Heart
+Soul-Heart
+221
+Tangling Hair
+Curly Hair
+222
+Receiver
+Receiver
+223
+Power of Alchemy
+Gwahak-ui Him
+224
+Beast Boost
+Beast Boost
+225
+RKS System
+AR System
+226
+Electric Surge
+Electric Maker
+227
+Psychic Surge
+Psycho Maker
+228
+Misty Surge
+Mist Maker
+229
+Grassy Surge
+Grass Maker
+230
+Full Metal Body
+Metal Protect
+231
+Shadow Shield
+Specter Guard
+232
+Prism Armor
+Prism Armor
+233
+Neuroforce
+Brain Force
+234
+Ball Fetch
+Ball Jupgi
+235
+Cotton Down
+Somteol
+236
+Dauntless Shield
+Bulgul-ui Bangpae
+237
+Gorilla Tactics
+Mua-ji Gyeong
+238
+Gulp Missile
+Geudaero Kulkkeok Missile
+239
+Hunger Switch
+Kkoreureuk Switch
+240
+Ice Face
+Ice Face
+241
+Ice Scales
+Eoreum Inbun
+242
+Intrepid Sword
+Buryo-ui Geom
+243
+Libero
+Libero
+244
+Mimicry
+Uitae
+245
+Mirror Armor
+Mirror Armor
+246
+Neutralizing Gas
+Hwahak Byeonhwa Gas
+247
+Pastel Veil
+Pastel Veil
+248
+Perish Body
+Myeolmang-ui Body
+249
+Power Spot
+Power Spot
+250
+Propeller Tail
+Screw Jineureomi
+251
+Punk Rock
+Punk Rock
+252
+Ripen
+Sukseong
+253
+Sand Spit
+Morae Ppumgi
+254
+Screen Cleaner
+Barrier-Free
+255
+Stalwart
+Gutgeon-han Sinnyeom
+256
+Steam Engine
+Jeunggi Gigwan
+257
+Steely Spirit
+Gangcheol Jeongshin
+258
+Wandering Spirit
+Tteodoneun Yeonghon
+259
+Unseen Fist
+Boijianneun Jumeok
+260
+Quick Draw
+Kwik Deuro
+261
+Curious Medicine
+Gimyohan Yak
+262
+Transistor
+Teuraenjiseuteo
+263
+Dragon's Maw
+Yong-ui Teog
+264
+Chilling Neigh
+Baeg-ui Eureum
+265
+Grim Neigh
+Heug-ui Ureum
+266
+As One
+Honyeon-Ilche
+267
+As One
+Honyeon-Ilche

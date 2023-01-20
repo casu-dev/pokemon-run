@@ -1,0 +1,801 @@
+1
+Stench
+Akushū
+2
+Drizzle
+Amefurashi
+3
+Speed Boost
+Kasoku
+4
+Battle Armor
+Kabuto Āmā
+5
+Sturdy
+Ganjō
+6
+Damp
+Shimerike
+7
+Limber
+Jūnan
+8
+Sand Veil
+Sunagakure
+9
+Static
+Seidenki
+10
+Volt Absorb
+Chikuden
+11
+Water Absorb
+Chosui
+12
+Oblivious
+Donkan
+13
+Cloud Nine
+Nō Tenki
+14
+Compound Eyes
+Fukugan
+15
+Insomnia
+Fumin
+16
+Color Change
+Henshoku
+17
+Immunity
+Men'eki
+18
+Flash Fire
+Moraibi
+19
+Shield Dust
+Rinpun
+20
+Own Tempo
+Mai Pēsu
+21
+Suction Cups
+Kyūban
+22
+Intimidate
+Ikaku
+23
+Shadow Tag
+Kage Fumi
+24
+Rough Skin
+Samehada
+25
+Wonder Guard
+Fushigina Mamori
+26
+Levitate
+Fuyū
+27
+Effect Spore
+Hōshi
+28
+Synchronize
+Shinkuro
+29
+Clear Body
+Kuria Bodi
+30
+Natural Cure
+Shizen Kaifuku
+31
+Lightning Rod
+Hiraishin
+32
+Serene Grace
+Ten no Megumi
+33
+Swift Swim
+Suisui
+34
+Chlorophyll
+Yōryokuso
+35
+Illuminate
+Hakkō
+36
+Trace
+Torēsu
+37
+Huge Power
+Chikara Mochi
+38
+Poison Point
+Doku no Toge
+39
+Inner Focus
+Seishinryoku
+40
+Magma Armor
+Maguma no Yoroi
+41
+Water Veil
+Mizu no Bēru
+42
+Magnet Pull
+Jiryoku
+43
+Soundproof
+Bō'on
+44
+Rain Dish
+Ame Ukezara
+45
+Sand Stream
+Suna Okoshi
+46
+Pressure
+Puresshā
+47
+Thick Fat
+Atsui Shibō
+48
+Early Bird
+Hayaoki
+49
+Flame Body
+Honō no Karada
+50
+Run Away
+Nige Ashi
+51
+Keen Eye
+Surudoi Me
+52
+Hyper Cutter
+Kairiki Basami
+53
+Pickup
+Mono Hiroi
+54
+Truant
+Namake
+55
+Hustle
+Harikiri
+56
+Cute Charm
+Meromero Bodi
+57
+Plus
+Purasu
+58
+Minus
+Mainasu
+59
+Forecast
+Tenkiya
+60
+Sticky Hold
+Nenchaku
+61
+Shed Skin
+Dappi
+62
+Guts
+Konjō
+63
+Marvel Scale
+Fushigi na Uroko
+64
+Liquid Ooze
+Hedoro Eki
+65
+Overgrow
+Shinryoku
+66
+Blaze
+Mōka
+67
+Torrent
+Gekiryū
+68
+Swarm
+Mushi no Shirase
+69
+Rock Head
+Ishi Atama
+70
+Drought
+Hideri
+71
+Arena Trap
+Arijigoku
+72
+Vital Spirit
+Yaruki
+73
+White Smoke
+Shiroi Kemuri
+74
+Pure Power
+Yoga Pawā
+75
+Shell Armor
+Sheru Āmā
+76
+Air Lock
+Ea Rokku
+77
+Tangled Feet
+Chidori Ashi
+78
+Motor Drive
+Denki Enjin
+79
+Rivalry
+Tōsōshin
+80
+Steadfast
+Fukutsu no Kokoro
+81
+Snow Cloak
+Yukigakure
+82
+Gluttony
+Kuishinbō
+83
+Anger Point
+Ikari no Tsubo
+84
+Unburden
+Karuwaza
+85
+Heatproof
+Tainetsu
+86
+Simple
+Tanjun
+87
+Dry Skin
+Kansō Hada
+88
+Download
+Daunrōdo
+89
+Iron Fist
+Tetsu no Kobushi
+90
+Poison Heal
+Poizun Hīru
+91
+Adaptability
+Tekiōryoku
+92
+Skill Link
+Sukiru Rinku
+93
+Hydration
+Uruoi Bodi
+94
+Solar Power
+San Pawā
+95
+Quick Feet
+Haya'ashi
+96
+Normalize
+Nōmaru Sukin
+97
+Sniper
+Sunaipā
+98
+Magic Guard
+Majikku Gādo
+99
+No Guard
+Nō Gādo
+100
+Stall
+Atodashi
+101
+Technician
+Tekunishan
+102
+Leaf Guard
+Rīfu Gādo
+103
+Klutz
+Bukiyō
+104
+Mold Breaker
+Katayaburi
+105
+Super Luck
+Kyōun
+106
+Aftermath
+Yūbaku
+107
+Anticipation
+Kiken Yochi
+108
+Forewarn
+Yochimu
+109
+Unaware
+Tennen
+110
+Tinted Lens
+Iromegane
+111
+Filter
+Firutā
+112
+Slow Start
+Surō Sutāto
+113
+Scrappy
+Kimottama
+114
+Storm Drain
+Yobimizu
+115
+Ice Body
+Aisu Bodi
+116
+Solid Rock
+Hādo Rokku
+117
+Snow Warning
+Yuki Furashi
+118
+Honey Gather
+Mitsu Atsume
+119
+Frisk
+Omitooshi
+120
+Reckless
+Sutemi
+121
+Multitype
+Maruchitaipu
+122
+Flower Gift
+Furawā Gifuto
+123
+Bad Dreams
+Naitomea
+124
+Pickpocket
+Waruite Guse
+125
+Sheer Force
+Chikara Zuku
+126
+Contrary
+Ama no Jaku
+127
+Unnerve
+Kinchōkan
+128
+Defiant
+Makenki
+129
+Defeatist
+Yowaki
+130
+Cursed Body
+Noroware Bodi
+131
+Healer
+Iyashi no Kokoro
+132
+Friend Guard
+Furend Gādo
+133
+Weak Armor
+Kudakeru Yoroi
+134
+Heavy Metal
+Hevi Metaru
+135
+Light Metal
+Raito Metaru
+136
+Multiscale
+Maruchisukeiru
+137
+Toxic Boost
+Doku Bōsō
+138
+Flare Boost
+Netsu Bōsō
+139
+Harvest
+Shūkaku
+140
+Telepathy
+Terepashī
+141
+Moody
+Murakke
+142
+Overcoat
+Bōjin
+143
+Poison Touch
+Dokushu
+144
+Regenerator
+Saiseiryoku
+145
+Big Pecks
+Hato Mune
+146
+Sand Rush
+Sunakaki
+147
+Wonder Skin
+Mirakuru Sukin
+148
+Analytic
+Anaraizu
+149
+Illusion
+Iryūjon
+150
+Imposter
+Kawari Mono
+151
+Infiltrator
+Surinuke
+152
+Mummy
+Mīra
+153
+Moxie
+Jishin Kajō
+154
+Justified
+Seigi no Kokoro
+155
+Rattled
+Bibiri
+156
+Magic Bounce
+Majikku Mirā
+157
+Sap Sipper
+Sōshoku
+158
+Prankster
+Itazura-gokoro
+159
+Sand Force
+Suna no Chikara
+160
+Iron Barbs
+Tetsu no Toge
+161
+Zen Mode
+Daruma Mōdo
+162
+Victory Star
+Shōri no Hoshi
+163
+Turboblaze
+Tābobureizu
+164
+Teravolt
+Teraborutēji
+165
+Aroma Veil
+Aroma Bēru
+166
+Flower Veil
+Furawā Bēru
+167
+Cheek Pouch
+Hō Bukuro
+168
+Protean
+Hengen Jizai
+169
+Fur Coat
+Fā Kōto
+170
+Magician
+Majishan
+171
+Bulletproof
+Bōdan
+172
+Competitive
+Kachiki
+173
+Strong Jaw
+Ganjō Ago
+174
+Refrigerate
+Furīzu Sukin
+175
+Sweet Veil
+Suīto Bēru
+176
+Stance Change
+Batoru Suicchi
+177
+Gale Wings
+Hayate no Tsubasa
+178
+Mega Launcher
+Mega Ranchā
+179
+Grass Pelt
+Grass Pelt
+180
+Symbiosis
+Kyōsei
+181
+Tough Claws
+Katai Tsume
+182
+Pixilate
+Fearī Sukin
+183
+Gooey
+Numenume
+184
+Aerilate
+Sky Skin
+185
+Parental Bond
+Oyako Ai
+186
+Dark Aura
+Dāku Ōra
+187
+Fairy Aura
+Fearī Ōra
+188
+Aura Break
+Ōra Bureiku
+189
+Primordial Sea
+Hajimari no Umi
+190
+Desolate Land
+Owari no Daichi
+191
+Delta Stream
+Deruta Sutorīmu
+192
+Stamina
+Jikyūryoku
+193
+Wimp Out
+Nigegoshi
+194
+Emergency Exit
+Kiki Kaihi
+195
+Water Compaction
+Mizu Gatame
+196
+Merciless
+Hitodenashi
+197
+Shields Down
+Rimitto Shīrudo
+198
+Stakeout
+Harikomi
+199
+Water Bubble
+Water Bubble
+200
+Steelworker
+Hagane Tsukai
+201
+Berserk
+Gyakujō
+202
+Slush Rush
+Yuki Kaki
+203
+Long Reach
+Enkaku
+204
+Liquid Voice
+Uruoi Boisu
+205
+Triage
+Hīringu Shifuto
+206
+Galvanize
+Ereki Sukin
+207
+Surge Surfer
+Sāfu Tēru
+208
+Schooling
+Gyogun
+209
+Disguise
+Bake no Kawa
+210
+Battle Bond
+Kizuna Henge
+211
+Power Construct
+Swāmu Chenji
+212
+Corrosion
+Fushoku
+213
+Comatose
+Zettai Nemuri
+214
+Queenly Majesty
+Joō no Igen
+215
+Innards Out
+Tobidasu Nakami
+216
+Dancer
+Odoriko
+217
+Battery
+Batterī
+218
+Fluffy
+Mofumofu
+219
+Dazzling
+Bibiddo Bodi
+220
+Soul-Heart
+Sōru-Hāto
+221
+Tangling Hair
+Kārī Heā
+222
+Receiver
+Reshībā
+223
+Power of Alchemy
+Kagaku no Chikara
+224
+Beast Boost
+Bīsuto Būsuto
+225
+RKS System
+AR Shisutemu
+226
+Electric Surge
+Ereki Meikā
+227
+Psychic Surge
+Saiko Meikā
+228
+Misty Surge
+Misuto Meikā
+229
+Grassy Surge
+Gurasu Meikā
+230
+Full Metal Body
+Metaru Purotekuto
+231
+Shadow Shield
+Fantomu Gādo
+232
+Prism Armor
+Purizumu Āmā
+233
+Neuroforce
+Burein Fōsu
+234
+Ball Fetch
+Tama Hiroi
+235
+Cotton Down
+Watage
+236
+Dauntless Shield
+Fukutsu no Tate
+237
+Gorilla Tactics
+Gorimuchū
+238
+Gulp Missile
+U no Misairu
+239
+Hunger Switch
+Harapeko Suicchi
+240
+Ice Face
+Aisu Fēsu
+241
+Ice Scales
+Koori no Rinpun
+242
+Intrepid Sword
+Futō no Ken
+243
+Libero
+Ribero
+244
+Mimicry
+Gitai
+245
+Mirror Armor
+Mirā Āmā
+246
+Neutralizing Gas
+Kagaku Henka Gasu
+247
+Pastel Veil
+Pasuteru Bēru
+248
+Perish Body
+Horobi no Bodi
+249
+Power Spot
+Pawā Supotto
+250
+Propeller Tail
+Skuryū Obire
+251
+Punk Rock
+Panku Rokku
+252
+Ripen
+Jukusei
+253
+Sand Spit
+Suna Haki
+254
+Screen Cleaner
+Baria Furī
+255
+Stalwart
+Sujiganeiri
+256
+Steam Engine
+Jōkikikan
+257
+Steely Spirit
+Hagane no Seishin
+258
+Wandering Spirit
+Samayou Tamashii
+259
+Unseen Fist
+Fukashi no Kobushi
+260
+Quick Draw
+Kuikku Dorō
+261
+Curious Medicine
+Kimyou na Kusuri
+262
+Transistor
+Toranjisuta
+263
+Dragon's Maw
+Ryuu no Agito
+264
+Chilling Neigh
+Shiro no Inanaki
+265
+Grim Neigh
+Kuro no Inanaki
+266
+As One
+Jinba Ittai
+267
+As One
+Jinba Ittai
