@@ -26,17 +26,6 @@ MAP_EVENT_POOL = [
   MAP_STEAL_POKE
 ]
 
-#  First and last event shouldn't be "useless" events. This means the first event of f1 mustn't be Egg-move Tutor or Tm shop (maybe also ban the mart?). And the last event on F4 mustn't be the wishing well event.
-MAP_EVENT_AVOID_FIRST = [
-  MAP_EGG_MOVE_RELEARNER,
-  MAP_TM_SHOP,
-  MAP_MART
-]
-
-MAP_EVENT_AVOID_LAST = [
-  MAP_MONEY
-]
-
 # Rooms that are different on each floor 
 MAP_BOSS_LIST = [
   { id: 86, name: '1st Floor Boss', posx: 10, posy: 14, value: 20, weight: 10, sprite: "trainer_ELITEFOUR_Bruno" }, # 1st floor
@@ -67,6 +56,18 @@ MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
   { id: 94, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10, sprite: "trainer_RIVAL1" }, # 2nd floor
   { id: 99, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10, sprite: "trainer_RIVAL1" }, # 3rd floor
   { id: 105, name: 'Fight Gary', posx: 10, posy: 11, value: 35, weight: 10, sprite: "trainer_RIVAL1" } # 4th floor
+]
+
+#  First and last event shouldn't be "useless" events. This means the first event of f1 mustn't be Egg-move Tutor or Tm shop (maybe also ban the mart?). And the last event on F4 mustn't be the wishing well event.
+MAP_EVENT_AVOID_FIRST = [
+  MAP_EGG_MOVE_RELEARNER,
+  MAP_TM_SHOP,
+  MAP_MART,
+  MAP_FIGHT_ELITE_TRAINER_LIST[0]
+]
+
+MAP_EVENT_AVOID_LAST = [
+  MAP_MONEY
 ]
 
 def isEventRoom(room)
