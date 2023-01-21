@@ -1546,6 +1546,8 @@ def pbSomeFainted?
 end
 
 def pbGetRemainingTMs
+   pbSet(45, pbRollTmSale(pbRollTms,3)) if !(pbGet(45)[1].kind_of?(Array))
+   pbSet(45, pbRollTmSale(pbRollTms,3)) if !(pbGet(45)[0].kind_of?(Array))
    allTMs = pbGetTms(pbGet(45)[0], pbGet(45)[1]).clone
    ownedTMs = []
    # Slot 4 is the TM slot in the bag
