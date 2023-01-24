@@ -1281,7 +1281,7 @@ def pbGetBossLv
         end
         counter = 6 - counter
         while (counter > 0) do
-            lv += 90
+            lv += POKEMON_FLOOR_START_LEVEL[floor-1]
             counter -= 1
         end
 
