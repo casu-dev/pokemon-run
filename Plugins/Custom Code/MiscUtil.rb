@@ -1558,14 +1558,6 @@ def pbGetRemainingTMs
    return allTMs
 end
 
-def pbTMShop
-pbSet(57, true)
-    while(pbGet(57)) do
-        pbRelearnMoveScreen(nil)
-    end
-pbSet(57, true)
-end
-
 def pbRerollMoney?
     price = 500
     return true if $Trainer.money >= price
