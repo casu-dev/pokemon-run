@@ -1315,21 +1315,45 @@ def pbGetBossLv
 
 end
 
-def pbRollMintSale
+def pbRollMintSale(saleItemCount = 2)
     mints = %i[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
-    return mints[rand(mints.length)]
+
+    # Generate index array of MINTS
+    itemSlots = []
+    (0...mints.length).each do |i|
+        itemSlots.push(i)
+    end
+
+    # Shuffle and take the first 2 indexes, then sort them
+    itemSlots = itemSlots.shuffle
+    saleSlots = []
+    (0...saleItemCount).each do |i|
+        saleSlots.push(itemSlots[i])
+    end
+    saleSlots = saleSlots.sort
+
+    # Return the corresponding TMs to the saleSlots array
+    saleMints = []
+    saleSlots.each do |slot|
+        saleMints.push(mints[slot])
+    end
+    return saleMints
 end
 
-def pbGetMints(saleMint)
+def pbGetMints(saleMints)
     mints = %i[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
     mints.each do |i|
         setPrice(i, 1500, 0)
     end
 
-    oldPrice = $game_temp.mart_prices[saleMint][0]
-    newPrice = ((oldPrice * 0.5).ceil).to_i
-    setPrice(saleMint, newPrice, 0)
-    reorderedMints = [saleMint]
+    reorderedMints = []
+    saleMints.each do |myItem|
+        oldPrice = $game_temp.mart_prices[myItem][0]
+        newPrice = ((oldPrice * 0.5).ceil).to_i
+        setPrice(myItem, newPrice, 0)
+        reorderedMints.push(myItem)
+    end
+
     reorderedMints = reorderedMints.clone
     mints -= reorderedMints
     reorderedMints += mints
