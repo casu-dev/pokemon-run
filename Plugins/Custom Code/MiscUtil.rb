@@ -916,6 +916,14 @@ def pbOfferTypeBoostItems
     ],nil,false,2)
 end
 
+def pbOfferF3EliteItems
+    pbPokemonMartEarn([
+    :BLACKSLUDGE,
+    :EXPERTBELT,
+    :ROCKYHELMET
+    ],nil,false,2)
+end
+
 def pbOfferHealBerries
    return pbPokemonMartEarn([
     :LUMBERRY,
