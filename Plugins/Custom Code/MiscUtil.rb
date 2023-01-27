@@ -1003,7 +1003,7 @@ end
 def pbKeepBaseForm(pkmnID)
     pkmnFullyEvolvedID = pbGetCorrectEvo(pkmnID)
     megaPool = getOakMegas.dup
-    megaPool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE AEGISLASH]
+    megaPool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE AEGISLASH CASTFORM]
     megaPool -= %i[SLOWBRO]
     return true if megaPool.include? pkmnFullyEvolvedID
     return false
@@ -1086,23 +1086,40 @@ def pbGetGameMode
     return pbReadFile("gamemode.txt").to_i if pbReadFile("gamemode.txt")
 end
 
+def pbAddToTrainerPartyAverageLv(lvl)
+    floor = pbGet(48) + 1
+    return POKEMON_FLOOR_START_LEVEL[floor-1]+lvl if !$Trainer
+    return POKEMON_FLOOR_START_LEVEL[floor-1]+lvl if !$Trainer.party
+    lv = 0
+    counter = 0
+    $Trainer.party.each do |pkmn|
+        lv += pkmn.level
+        counter += 1
+    end
+    counter = 6 - counter
+    while (counter > 0) do
+        lv += POKEMON_FLOOR_START_LEVEL[floor-1]
+        counter -= 1
+    end
+
+    lv = ((lv.to_f/6).round(half: :up)+lvl).to_i
+    lv = 100 if lv > 100
+    return lv
+end
+
 def pbGetLvTrainer
     difficulty = pbGetDifficulty
     floor = pbGet(48) + 1
     #hard
     if difficulty == 1
         if floor == 1
-            return POKEMON_FLOOR_START_LEVEL[floor-1] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return 12
+            return pbAddToTrainerPartyAverageLv(-3)
         elsif floor == 2
-            return POKEMON_FLOOR_START_LEVEL[floor-1] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return 28
+            return pbAddToTrainerPartyAverageLv(0)
         elsif floor == 3
-            return POKEMON_FLOOR_START_LEVEL[floor-1] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return 55
+            return pbAddToTrainerPartyAverageLv(0)
         else
-            return POKEMON_FLOOR_START_LEVEL[floor-1] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return 85
+            return pbAddToTrainerPartyAverageLv(0)
         end
     #normal
     elsif difficulty == 0
@@ -1139,17 +1156,13 @@ def pbGetLvElite
     #hard
     if difficulty == 1
         if floor == 1
-            return 17 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return 14
+            return pbAddToTrainerPartyAverageLv(0)
         elsif floor == 2
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+4 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return POKEMON_FLOOR_START_LEVEL[floor-1]
+            return pbAddToTrainerPartyAverageLv(0)
         elsif floor == 3
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+5 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return POKEMON_FLOOR_START_LEVEL[floor-1]
+            return pbAddToTrainerPartyAverageLv(0)
         else
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+5 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return POKEMON_FLOOR_START_LEVEL[floor-1]
+            return pbAddToTrainerPartyAverageLv(0)
         end
     #normal
     elsif difficulty == 0
@@ -1186,13 +1199,13 @@ def pbGetLvMiddle
     #hard
     if difficulty == 1
         if floor == 1
-            return POKEMON_FLOOR_START_LEVEL[floor-1]-1
+            return pbAddToTrainerPartyAverageLv(1)
         elsif floor == 2
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+2
+            return pbAddToTrainerPartyAverageLv(2)
         elsif floor == 3
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+2
+            return pbAddToTrainerPartyAverageLv(2)
         else
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+2
+            return pbAddToTrainerPartyAverageLv(2)
         end
     #normal
     elsif difficulty == 0
@@ -1225,17 +1238,13 @@ def pbGetLvGrunt
     #hard
     if difficulty == 1
         if floor == 1
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+1 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return 13
+            return pbAddToTrainerPartyAverageLv(-2)
         elsif floor == 2
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+2 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return 29
+            return pbAddToTrainerPartyAverageLv(1)
         elsif floor == 3
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+2 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return 57
+            return pbAddToTrainerPartyAverageLv(1)
         else
-            return POKEMON_FLOOR_START_LEVEL[floor-1]+2 if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
-            return 87
+            return pbAddToTrainerPartyAverageLv(1)
         end
     #normal
     elsif difficulty == 0
@@ -1271,23 +1280,7 @@ def pbGetBossLv
     floor = pbGet(48) + 1
     #hard
     if difficulty == 1
-        return 96 if !$Trainer
-        return 96 if !$Trainer.party
-        lv = 0
-        counter = 0
-        $Trainer.party.each do |pkmn|
-            lv += pkmn.level
-            counter += 1
-        end
-        counter = 6 - counter
-        while (counter > 0) do
-            lv += POKEMON_FLOOR_START_LEVEL[floor-1]
-            counter -= 1
-        end
-
-        lv = ((lv.to_f/6).round(half: :up)+5).to_i
-        lv = 100 if lv > 100
-        return lv
+        return pbAddToTrainerPartyAverageLv(5)
     #normal
     elsif difficulty == 0
         if floor == 1
