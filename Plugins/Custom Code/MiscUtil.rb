@@ -1589,6 +1589,17 @@ def pbRerollMoney?
     return false
 end
 
+def pbGetMoveQuality(move, pkmn)
+    move_data = GameData::Move.get(move)
+    attack = pkmn.baseStats[:ATTACK]
+    attack = pkmn.baseStats[:SPECIAL_ATTACK] if (move_data.category == 1)
+    stab = 1
+    stab = 1.5 if (pkmn.type1 == move_data.type || pkmn.type2 == move_data.type)
+    acc = move_data.accuracy
+    acc = 100 if move_data.accuracy == 0
+    return move_data.base_damage * acc * stab * attack
+end
+
 def pbScout
 pbMessage(pbRollTms.length.to_s)
 pbMessage(pbRollTms.to_s)

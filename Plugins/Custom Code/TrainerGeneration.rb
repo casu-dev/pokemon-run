@@ -209,6 +209,11 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
         # Generate Party
         newParty = []
         alreadyPicked = []
+        improvedTrainers = [:TEAMROCKET_M, :RIVAL1, :BEAUTY, :GAMBLER]
+        # Eliminates evasion moves from moveset, because they are buggy used by an NPC
+        pbSet(58,2)
+        # make it so the Pokémon get better movesets
+        pbSet(58,1) if improvedTrainers.include? template[:tType]
         while newParty.length < template[:numPkmn]
           pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }
           new_species = pkmnPool[rand(pkmnPool.length)]
@@ -231,6 +236,9 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
             megaPkmn.item = megaStones[rand(megaStones.length)]
             newParty[0] = megaPkmn if newParty[0]
         end
+
+        # Set 58 back to default
+        pbSet(58,0)
 
         trainer.party = newParty
         trainer.lose_text = TRAINER_LOOSE_TEXT.sample if trainer.lose_text == "..."

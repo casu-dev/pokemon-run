@@ -93,27 +93,19 @@ Pokemon = GOLDEEN,11
 #-------------------------------
 [RIVAL1,Gary]
 LoseText = "I will get you next time!"
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = BULBASAUR,18
+Pokemon = DITTO,1
 #-------------------------------
 [RIVAL1,Gary,1]
 LoseText = "You didn't have to win so convincingly!"
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = BULBASAUR,18
+Pokemon = DITTO,1
 #-------------------------------
 [RIVAL1,Gary,2]
 LoseText = "Aw man..."
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = BULBASAUR,18
+Pokemon = DITTO,1
 #-------------------------------
 [RIVAL1,Gary,3]
 LoseText = "I'm never lucky..."
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = BULBASAUR,18
+Pokemon = DITTO,1
 #-------------------------------
 [RIVAL1,Blue,1]
 LoseText = "Not too shabby."
