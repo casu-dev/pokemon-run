@@ -328,50 +328,55 @@ Pokemon = SHIFTRY,55
 #-------------------------------
 [GENTLEMAN,Elite Trainer]
 LoseText = "..."
-Pokemon = MUNNA,14
-    AbilityIndex = 1
-Pokemon = RUFFLET,14
-    AbilityIndex = 1
+Pokemon = DITTO,1
 #-------------------------------
 [TEAMROCKET_M,Grunt]
 LoseText = "gruntF1"
-Pokemon = MANKEY,12
-Pokemon = MAKUHITA,12
+Pokemon = DITTO,1
 #-------------------------------
 [TEAMROCKET_M,Grunt,1]
 LoseText = "gruntF2"
-Pokemon = MANKEY,12
-Pokemon = MAKUHITA,12
+Pokemon = DITTO,1
 #-------------------------------
 [TEAMROCKET_M,Grunt,2]
 LoseText = "gruntF3"
-Pokemon = MANKEY,12
-Pokemon = MAKUHITA,12
+Pokemon = DITTO,1
 #-------------------------------
 [TEAMROCKET_M,Grunt,3]
 LoseText = "gruntF4"
-Pokemon = MANKEY,12
-Pokemon = MAKUHITA,12
+Pokemon = DITTO,1
 #-------------------------------
 [TEAMROCKET_M,Grunt,4]
 LoseText = "gruntF1LW"
-Pokemon = MANKEY,12
-Pokemon = MAKUHITA,12
+Pokemon = DITTO,1
 #-------------------------------
 [TEAMROCKET_M,Grunt,5]
 LoseText = "gruntF2LW"
-Pokemon = MANKEY,12
-Pokemon = MAKUHITA,12
+Pokemon = DITTO,1
 #-------------------------------
 [TEAMROCKET_M,Grunt,6]
 LoseText = "gruntF3LW"
-Pokemon = MANKEY,12
-Pokemon = MAKUHITA,12
+Pokemon = DITTO,1
 #-------------------------------
 [TEAMROCKET_M,Grunt,7]
 LoseText = "gruntF4LW"
-Pokemon = MANKEY,12
-Pokemon = MAKUHITA,12
+Pokemon = DITTO,1
+#-------------------------------
+[TEAMROCKET_M,Grunt,8]
+LoseText = "gruntF1MT"
+Pokemon = DITTO,1
+#-------------------------------
+[TEAMROCKET_M,Grunt,9]
+LoseText = "gruntF2MT"
+Pokemon = DITTO,1
+#-------------------------------
+[TEAMROCKET_M,Grunt,10]
+LoseText = "gruntF3MT"
+Pokemon = DITTO,1
+#-------------------------------
+[TEAMROCKET_M,Grunt,11]
+LoseText = "gruntF4MT"
+Pokemon = DITTO,1
 #-------------------------------
 [ELITEFOUR_Bruno,Bruno]
 LoseText = "GG WP"

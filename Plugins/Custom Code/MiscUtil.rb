@@ -715,7 +715,7 @@ def pbPlaySaveSound
 end
 
 def pbGetGameModes
-    return ["Standard", "Stat-Swap", "Copy-Ability", "Lucky weakling", "Type Boost", "Mono Type"]
+    return ["Standard", "Stat-Swap", "Copy-Ability", "Lucky weakling", "Type Boost", "Monotype"]
 end
 
 def pbResetRoom
@@ -1107,6 +1107,17 @@ end
 
 def pbSetDifficulty(difficultyIndex)
     pbWriteIntoFile("difficulty.txt", difficultyIndex)
+end
+
+def pbGetMonoType
+    typeIds = []
+   GameData::Type.each do |t|
+       next unless t.id.to_s != "QMARKS"
+       typeIds.push(t.id)
+   end
+   type = pbGet(59)
+   type = typeIds.sample if !(typeIds.include? type)
+   return type
 end
 
 def pbGetGameMode

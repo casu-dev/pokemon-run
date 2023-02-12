@@ -145,6 +145,35 @@ def pbGetTRAINER_OVERRIDE
         pkmnPool: getOakPoolLW7,
         LoseText: "gruntF4LW"
       },
+  # ====== Rocket Grunt (Steal Trainer) Monotype mode =========
+      {
+        # Rocket Grunt F1
+        tType: :TEAMROCKET_M, tName: 'Grunt',
+        lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
+        pkmnPool: pbgetMonoTypePool(pbGetMonoType),
+        LoseText: "gruntF1MT"
+      },
+      {
+        # Rocket Grunt F2
+        tType: :TEAMROCKET_M, tName: 'Grunt',
+        lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
+        pkmnPool: pbgetMonoTypePool(pbGetMonoType),
+        LoseText: "gruntF2MT"
+      },
+      {
+        # Rocket Grunt F3
+        tType: :TEAMROCKET_M, tName: 'Grunt',
+        lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
+        pkmnPool: pbgetMonoTypePool(pbGetMonoType),
+        LoseText: "gruntF3MT"
+      },
+      {
+        # Rocket Grunt F4
+        tType: :TEAMROCKET_M, tName: 'Grunt',
+        lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
+        pkmnPool: pbgetMonoTypePool(pbGetMonoType),
+        LoseText: "gruntF4MT"
+      },
   # ====== Floor Bosses =========
       {
         # Boss F1
@@ -252,9 +281,12 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
   end
 }
 
+# Gets called by the Grunt
 def pbGetGruntID
  id =  pbGet(48)
  id += 4 if pbLW
+ # Monotype
+ id += 8 if pbGetGameMode == 5
  return id
 end
 

@@ -227,6 +227,85 @@ def pbRandomPkmnsAsArray(whiteList: nil, amount: 3)
     return output
 end
 
+def pbGenMonoTypeMegaPkmn
+    output = []
+    basePool = getOakMegas
+    typeIds = []
+    GameData::Type.each do |t|
+        next unless t.id.to_s != "QMARKS"
+        typeIds.push(t.id)
+    end
+    type = pbGet(59)
+    type = typeIds.sample if !(typeIds.include? type)
+    whiteList = [type]
+    megas = []
+    basePool.each do |pkmnID|
+            pkmn = GameData::Species.try_get(pkmnID)
+            megas.push(pkmnID) if (whiteList.include? pkmn.type1) || (whiteList.include? pkmn.type2)
+    end
+    n = [3, megas.length].min
+    (0...n).each do |i|
+        output.push(megas[i])
+    end
+    n = 3-n
+    if n>0
+        fillupTemp = pbgetMonoTypePool(type).sample(n)
+        fillup = []
+        if fillupTemp.is_a?(Array)
+           fillup = fillupTemp
+        else
+           fillup.push(fillupTemp)
+        end
+        output += fillup
+    end
+    output = output.shuffle
+    # do for every pokemon save slot
+    [26, 27, 28].each do |i|
+        pbSet(i, output.pop)
+    end
+end
+
+def pbGenMonoTypePokeChoice
+    amount = 3
+    typeIds = []
+    GameData::Type.each do |t|
+        next unless t.id.to_s != "QMARKS"
+        typeIds.push(t.id)
+    end
+    type = pbGet(59)
+    type = typeIds.sample if !(typeIds.include? type)
+    pool = pbgetMonoTypePool(type)
+    output = []
+    output = pbChooseRandomPokemon(whiteList: pool, amount: amount)
+    loopcounter = 0
+    while (!diverse_types?(output) && pbPkmnOwned?(output[0], output[1], output[2]) && loopcounter <10) do
+        output = pbChooseRandomPokemon(whiteList: pool, amount: amount)
+        loopcounter += 1
+    end
+    # Chance tripled, because only 1 slot can be shiny
+    if pbRollForChance(9)
+        basePool = getOakLegendOrMythic
+        whiteList = [type]
+        legis = []
+        basePool.each do |pkmnID|
+                pkmn = GameData::Species.try_get(pkmnID)
+                legis.push(pkmnID) if (whiteList.include? pkmn.type1) || (whiteList.include? pkmn.type2)
+        end
+        legi = legis.sample
+        loopcounter = 0
+        while (pbPkmnOwned?(legi, legi, legi) && loopcounter <10) do
+            legi = legis.sample
+            loopcounter += 1
+        end
+        output[2] = legi
+    end
+    output = output.shuffle
+    # do for every pokemon save slot
+    [26, 27, 28].each do |i|
+        pbSet(i, output.pop)
+    end
+end
+
 def pbGenPokeChoice
     amount = 3
     # Chance in % (integer)
@@ -390,21 +469,45 @@ def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
   return false
 end
 
+def pbOakOfferStarter
+    if pbGetGameMode == 5
+       type = pbGetMonoType
+       pbRandomPkmnGeneration
+       pbRandomPkmnSelection(false)
+    else
+        poke1 = pbGenStarterPkmn(:GRASS)
+        poke2 = pbGenStarterPkmn(:FIRE)
+        poke3 = pbGenStarterPkmn(:WATER)
+        DiegoWTsStarterSelection.new(poke1, poke2, poke3)
+    end
+end
+
 #Generates the Pokemon (usually used when entering Oaks room)
 def pbRandomPkmnGeneration(mega = false)
   mega = false if pbLW
-  if mega
-    pbGenMegaPkmn
+  monotype = false
+  monotype = true if (pbGet(59) != 0 && pbGet(59).to_s != "QMARKS")
+
+  if(monotype)
+    if mega
+        pbGenMonoTypeMegaPkmn
+    else
+        pbGenMonoTypePokeChoice
+    end
   else
-    pbGenPokeChoice
-  end
-  while (pbPkmnOwned?(pbGet(26), pbGet(27), pbGet(28)))
+    if mega
+        pbGenMegaPkmn
+    else
+        pbGenPokeChoice
+    end
+    while (pbPkmnOwned?(pbGet(26), pbGet(27), pbGet(28)))
     echoln "Pokemon owned. Rerolling..."
       if mega
         pbGenMegaPkmn
       else
         pbGenPokeChoice
       end
+    end
   end
 
   # Replace species names by real Pokémon and roll Pokémon forms like Galar or Alolan form

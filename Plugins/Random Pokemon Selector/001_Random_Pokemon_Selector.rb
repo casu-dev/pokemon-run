@@ -209,7 +209,8 @@ def pbGetSubPoolByType
     pbWriteIntoFile("f1mon.txt", "%i"+output.to_s.gsub(/[:\,]/, ''))
 end
 
-def pbgetMonoTypePool(type, floor)
+def pbgetMonoTypePool(type)
+    floor = pbGet(48)
     basePool = []
     if floor == 0
         basePool += getOakPool1
