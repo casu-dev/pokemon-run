@@ -612,8 +612,7 @@ def pbChooseMode
         end
 
           speech = nil
-          cmd2 = pbMessage(
-            speech || _INTL('\rWhich game mode do you want to play?'), shownmodes)
+          cmd2 = pbMessage(speech || _INTL('\rWhich game mode do you want to play?'), shownmodes)
 
             loop do
                 if cmd2 == 0
@@ -682,6 +681,26 @@ def pbChooseMode
                      pbPlaySaveSound
                      pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. Every moves damage gets boosted by 10% for each Pokémon in your party, that has the same type. Party Pokémon not having this type will reduce the damage by 10%."))
                      break
+                elsif cmd2 == 5
+                    types = []
+                    typeIds = []
+                    GameData::Type.each do |t|
+                        next unless t.id.to_s != "QMARKS"
+                        types.push(t.name.to_s)
+                        typeIds.push(t.id)
+                    end
+                    types.push("Cancel")
+                    typeIds.push(:QMARKS)
+
+                    cmd3 = pbMessage(speech || _INTL('\rWhich type?'), types)
+                    pbSet(59, typeIds[cmd3])
+                    if cmd3 < types.length-1
+                        pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+types[cmd3].to_s+"\\c[0] type."))
+                        pbWriteIntoFile("gamemode.txt", 5)
+                        pbWriteIntoFile("battlerinfo.txt", 0)
+                        pbPlaySaveSound
+                    end
+                    break
                 end
             end
     else
@@ -696,7 +715,7 @@ def pbPlaySaveSound
 end
 
 def pbGetGameModes
-    return ["Standard", "Stat-Swap", "Copy-Ability", "Lucky weakling", "Type Boost"]
+    return ["Standard", "Stat-Swap", "Copy-Ability", "Lucky weakling", "Type Boost", "Mono Type"]
 end
 
 def pbResetRoom
