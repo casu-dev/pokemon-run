@@ -258,6 +258,39 @@ def pbGenMonoTypeMegaPkmn
         end
         output += fillup
     end
+    if pbRollForChance(9)
+        megaLegis = %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE]
+        typeLegis = []
+        megaLegis.each do |pkmnID|
+                pkmn = GameData::Species.try_get(pkmnID)
+                typeLegis.push(pkmnID) if (whiteList.include? pkmn.type1) || (whiteList.include? pkmn.type2)
+        end
+        if typeLegis.length > 0
+            legi = typeLegis.sample
+
+            loopcounter = 0
+            while (pbPkmnOwned?(legi, legi, legi) && loopcounter <10) do
+                legi = typeLegis.sample
+                loopcounter += 1
+            end
+            output[2] = legi
+        else
+            possLegis = getOakLegendOrMythic
+            legis = []
+            possLegis.each do |pkmnID|
+                pkmn = GameData::Species.try_get(pkmnID)
+                legis.push(pkmnID) if (whiteList.include? pkmn.type1) || (whiteList.include? pkmn.type2)
+            end
+            legi = legis.sample
+
+            loopcounter = 0
+            while (pbPkmnOwned?(legi, legi, legi) && loopcounter <10) do
+                legi = legis.sample
+                loopcounter += 1
+            end
+            output[2] = legi
+        end
+    end
     output = output.shuffle
     # do for every pokemon save slot
     [26, 27, 28].each do |i|
@@ -283,7 +316,7 @@ def pbGenMonoTypePokeChoice
         loopcounter += 1
     end
     # Chance tripled, because only 1 slot can be shiny
-    if pbRollForChance(9)
+    if (pbRollForChance(9) && pbGet(48) > 1)
         basePool = getOakLegendOrMythic
         whiteList = [type]
         legis = []

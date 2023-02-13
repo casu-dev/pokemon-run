@@ -695,10 +695,30 @@ def pbChooseMode
                     cmd3 = pbMessage(speech || _INTL('\rWhich type?'), types)
                     pbSet(59, typeIds[cmd3])
                     if cmd3 < types.length-1
-                        pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+types[cmd3].to_s+"\\c[0] type."))
-                        pbWriteIntoFile("gamemode.txt", 5)
-                        pbWriteIntoFile("battlerinfo.txt", 0)
-                        pbPlaySaveSound
+                        hasFittingType = true
+                        $Trainer.party.each do |pkmn|
+                           if !pkmn.nil?
+                            pkmnData = GameData::Species.try_get(pkmn.species)
+                            hasFittingType = false if !(typeIds[cmd3] == pkmnData.type1) && !(typeIds[cmd3] == pkmnData.type2)
+                           end
+                       end
+
+                       $PokemonStorage.boxes.each do |box|
+                         box.each do |pkmn|
+                           if !pkmn.nil?
+                            pkmnData = GameData::Species.try_get(pkmn.species)
+                            hasFittingType = false if !(typeIds[cmd3] == pkmnData.type1) && !(typeIds[cmd3] == pkmnData.type2)
+                           end
+                         end
+                       end
+                        if hasFittingType
+                            pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+types[cmd3].to_s+"\\c[0] type."))
+                            pbWriteIntoFile("gamemode.txt", 5)
+                            pbWriteIntoFile("battlerinfo.txt", 0)
+                            pbPlaySaveSound
+                        else
+                            pbMessage(_INTL("Can't switch to \\c[10]"+ pbGetGameModes[cmd2] +" " + types[cmd3].to_s + "\\c[0], because you own a Pokémon from another type."))
+                        end
                     end
                     break
                 end
