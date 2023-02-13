@@ -885,6 +885,7 @@ end
 
 def pbkAddPokemon(pkmn, level = 1, see_form = true)
       return false if !pkmn
+      pbSet(60, 0)
       pbSet(40, 1)
       pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
       pkmn.heal
