@@ -248,7 +248,12 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
           new_species = pkmnPool[rand(pkmnPool.length)]
 
           alreadyPicked.push(new_species)
-          newParty.push(Pokemon.new(new_species, lvl))
+          # disable form moves to trigger until form is changed
+          pbSet(40, 1)
+          pk = Pokemon.new(new_species, lvl)
+          pk.form = pbRollForm(new_species)
+          newParty.push(pk)
+          pbSet(40, 0)
         end
 
         # Replace first Pokemon with a Mega Pokemon if on F4 Middle Floor Trainer or Elite Trainer map

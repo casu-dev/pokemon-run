@@ -867,20 +867,40 @@ def pbBattlerIsPkmn?(bttlr, pkmn)
     return true
 end
 
+def pbFormHelp(type, species, forms)
+    (0...forms).each do |i|
+        return i if (type == GameData::Species.get_species_form(species,i).type1) || (type == GameData::Species.get_species_form(species,i).type2)
+    end
+    return 0
+end
+
 def pbRollForm(pkmnID)
-     # (relevant) Pokémon with more than 2 forms %i[NECROZMA CALYREX DEOXYS ROTOM MEOWTH KYUREM ORICORIO GOURGEIST PUMPKABOO LYCANROC]
-     # Form count                                %i[   3        3        4      6     3     3       4         4         4        3]
-     if pkmnID == :NECROZMA || pkmnID == :CALYREX || pkmnID == :MEOWTH || pkmnID == :KYUREM || pkmnID == :LYCANROC
-        return rand(3)
-     elsif pkmnID == :DEOXYS || pkmnID == :ORICORIO || pkmnID == :GOURGEIST || pkmnID == :PUMPKABOO
-        return rand(4)
-     elsif pkmnID == :ROTOM
-        return rand(6)
-     elsif pbKeepBaseForm(pkmnID)
+    if pbGetGameMode == 5
+        return rand(3) if pkmnID == :LYCANROC
+        return rand(4) if (pkmnID == :GOURGEIST || pkmnID == :PUMPKABOO)
+        type = pbGetMonoType
+        return pbFormHelp(type, pkmnID,3) if pkmnID == :MEOWTH
+        return pbFormHelp(type, pkmnID,4) if pkmnID == :ORICORIO
+        return pbFormHelp(type, pkmnID,6) if pkmnID == :ROTOM
+        pkmn = GameData::Species.try_get(pkmnID)
+        return 0 if pbKeepBaseForm(pkmnID)
+        return 1 if (type != pkmn.type1) && (type != pkmn.type2)
         return 0
-     else
-        return rand(2)
-     end
+    else
+         # (relevant) Pokémon with more than 2 forms %i[NECROZMA CALYREX DEOXYS ROTOM MEOWTH KYUREM ORICORIO GOURGEIST PUMPKABOO LYCANROC]
+         # Form count                                %i[   3        3        4      6     3     3       4         4         4        3]
+         if pkmnID == :NECROZMA || pkmnID == :CALYREX || pkmnID == :MEOWTH || pkmnID == :KYUREM || pkmnID == :LYCANROC
+            return rand(3)
+         elsif pkmnID == :DEOXYS || pkmnID == :ORICORIO || pkmnID == :GOURGEIST || pkmnID == :PUMPKABOO
+            return rand(4)
+         elsif pkmnID == :ROTOM
+            return rand(6)
+         elsif pbKeepBaseForm(pkmnID)
+            return 0
+         else
+            return rand(2)
+         end
+    end
 end
 
 def pbkAddPokemon(pkmn, level = 1, see_form = true)
