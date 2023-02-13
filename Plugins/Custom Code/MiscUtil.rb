@@ -724,7 +724,7 @@ def pbChooseMode
                 end
             end
     else
-        pbMessage(_INTL("To play another game mode talk to me. You can unlock game modes by completing runs."))
+        pbMessage(_INTL('\rYou can unlock game modes by completing runs.'))
     end
 end
 

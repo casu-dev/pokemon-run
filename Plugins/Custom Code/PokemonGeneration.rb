@@ -560,15 +560,15 @@ def pbRandomPkmnGeneration(mega = false)
   pbGet(28).reset_moves
   # activate asking player for learning move on form change
   pbSet(40, 0)
+    # 25% chance for hidden ability, if not on starting map
+    if($game_map.map_id != 79 && rand(4)==1)
+        pbGet(26).setAbility(2)
+        pbGet(27).setAbility(2)
+        pbGet(28).setAbility(2)
+    end
 end
 
 def pbRandomPkmnSelection(hiddenAbility = true)
-  # 25% chance for hidden ability
-  if(hiddenAbility && rand(4)==1)
-      pbGet(26).setAbility(2)
-      pbGet(27).setAbility(2)
-      pbGet(28).setAbility(2)
-  end
   DiegoWTsStarterSelection.new(pbGet(26), pbGet(27), pbGet(28))
 end
 
