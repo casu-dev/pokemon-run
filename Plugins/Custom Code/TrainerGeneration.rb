@@ -251,7 +251,9 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
           # disable form moves to trigger until form is changed
           pbSet(40, 1)
           pk = Pokemon.new(new_species, lvl)
+          oldForm = pk.form.to_s
           pk.form = pbRollForm(new_species)
+          pk.reset_moves if oldForm != pk.form.to_s
           newParty.push(pk)
           pbSet(40, 0)
         end
