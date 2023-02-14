@@ -548,16 +548,19 @@ def pbRandomPkmnGeneration(mega = false)
   pbSet(40, 1)
   # First Poke
   pbSet(26, Pokemon.new(pbGet(26), pbGetPkmnTargetLvl))
+  oldForm1 = pbGet(26).form.to_s
   pbGet(26).form = pbRollForm(pbGet(26).species)
-  pbGet(26).reset_moves
+  pbGet(26).reset_moves if oldForm1 != pbGet(26).form.to_s
   # Second Poke
   pbSet(27, Pokemon.new(pbGet(27), pbGetPkmnTargetLvl))
+  oldForm2 = pbGet(27).form.to_s
   pbGet(27).form = pbRollForm(pbGet(27).species)
-  pbGet(27).reset_moves
+  pbGet(27).reset_moves if oldForm2 != pbGet(27).form.to_s
   # Third Poke
   pbSet(28, Pokemon.new(pbGet(28), pbGetPkmnTargetLvl))
+  oldForm3 = pbGet(28).form.to_s
   pbGet(28).form = pbRollForm(pbGet(28).species)
-  pbGet(28).reset_moves
+  pbGet(28).reset_moves if oldForm3 != pbGet(28).form.to_s
   # activate asking player for learning move on form change
   pbSet(40, 0)
     # 25% chance for hidden ability, if not on starting map
