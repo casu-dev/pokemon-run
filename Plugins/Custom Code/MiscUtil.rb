@@ -786,6 +786,22 @@ def pbHallOfFameEnd
    end
 end
 
+def pbResetRun
+    pbFadeOutIn do
+       $game_temp.player_new_map_id = 91
+       $scene.transfer_player
+       $game_map.autoplay
+       $game_map.refresh
+       $game_temp.player_new_map_id = 91
+       $game_temp.player_new_x         = 7
+       $game_temp.player_new_y         = 4
+       $game_temp.player_new_direction = 0
+       $scene.transfer_player
+       $game_map.autoplay
+       $game_map.refresh
+    end
+end
+
 def pbResetAssistant
 size = $Trainer.party.length()
     if size == 0
