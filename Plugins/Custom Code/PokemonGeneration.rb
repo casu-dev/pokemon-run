@@ -311,7 +311,7 @@ def pbGenMonoTypePokeChoice
     output = []
     output = pbChooseRandomPokemon(whiteList: pool, amount: amount)
     loopcounter = 0
-    while (!diverse_types?(output) && pbPkmnOwned?(output[0], output[1], output[2]) && loopcounter <10) do
+    while ((!diverse_types?(output) || pbPkmnOwned?(output[0], output[1], output[2])) && loopcounter <10) do
         output = pbChooseRandomPokemon(whiteList: pool, amount: amount)
         loopcounter += 1
     end
