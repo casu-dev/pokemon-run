@@ -1754,7 +1754,7 @@ def pbCheckMultiTalent(gamemode)
         gamemode = [gamemode.to_s]
         data -= gamemode
         data += gamemode
-        allModes = ["0","1","2","3","4"]
+        allModes = ["0","1","2","3","4","5","6"]
         allModes -= data
 
         newData = ""
