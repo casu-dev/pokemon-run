@@ -721,7 +721,6 @@ def pbChooseMode
                     typeIds.push(:QMARKS)
 
                     cmd3 = pbMessage(speech || _INTL('\rWhich type?'), types)
-                    pbSet(59, typeIds[cmd3])
                     if cmd3 < types.length-1
                         speech = nil
                         cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
@@ -742,9 +741,10 @@ def pbChooseMode
                                end
                              end
                            end
-                            if hasFittingType
+                            if (hasFittingType || oldMode == 6)
                                 pbWriteIntoFile("gamemode.txt", 5)
                                 pbWriteIntoFile("battlerinfo.txt", 0)
+                                pbSet(59, typeIds[cmd3])
                                 pbPlaySaveSound
                                 pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+types[cmd3].to_s+"\\c[0] type."))
                                 pbResetMay if oldMode == 6
@@ -1305,7 +1305,7 @@ def pbSetDifficulty(difficultyIndex)
 end
 
 def pbGetMonoType
-    typeIds = []
+   typeIds = []
    GameData::Type.each do |t|
        next unless t.id.to_s != "QMARKS"
        typeIds.push(t.id)
@@ -1823,6 +1823,33 @@ def pbGetMoveQuality(move, pkmn)
     acc = move_data.accuracy
     acc = 100 if move_data.accuracy == 0
     return move_data.base_damage * acc * stab * attack
+end
+
+def pbGetGamemodeDescr
+    modeIndex = pbGetGameMode
+    descr = pbGetGameModes[modeIndex]
+    if modeIndex == 1
+        index = pbReadFile("battlerinfo.txt").to_i
+        info = "Error"
+        info = "Atk, Def" if index == 1
+        info = "Atk, Sp. Atk" if index == 2
+        info = "Atk, Sp. Def" if index == 3
+        info = "Atk, Speed" if index == 4
+        info = "Def, Sp. Atk" if index == 5
+        info = "Def, Sp. Def" if index == 6
+        info = "Def, Speed" if index == 7
+        info = "Sp. Atk, Sp. Def" if index == 8
+        info = "Sp. Atk, Speed" if index == 9
+        info = "Sp. Def, Speed" if index == 10
+        descr += ": " + info
+    elsif modeIndex == 5
+        type = pbGetMonoType.to_s.downcase
+        type[0] = type[0].upcase if type[0]
+        descr += ": " + type
+    elsif modeIndex == 6
+        descr += ": " + pbGetTier(pbGet(62))
+    end
+    return descr
 end
 
 def pbScout
