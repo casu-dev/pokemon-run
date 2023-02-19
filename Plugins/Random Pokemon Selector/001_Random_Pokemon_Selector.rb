@@ -209,6 +209,41 @@ def pbGetSubPoolByType
     pbWriteIntoFile("f1mon.txt", "%i"+output.to_s.gsub(/[:\,]/, ''))
 end
 
+def pbGetTierPool(tier)
+    return getOakLegendOrMythic if tier == 3
+    floor = pbGet(48)
+    basePool = []
+    if floor == 0
+        if tier == 0
+            basePool += getOakPool1
+            basePool += getOakPool2
+        elsif tier == 1
+            basePool += getOakPool3
+        else
+            basePool += getOakPool4
+        end
+    elsif floor == 1
+        if tier == 0
+            basePool += getOakPool5
+        elsif tier == 1
+            basePool += getOakPool6
+        else
+            basePool += getOakPool7
+        end
+    else
+        if tier == 0
+            basePool += getOakPool8
+        elsif tier == 1
+            basePool += getOakPool9
+        else
+            basePool += getOakPool10
+            basePool += getOakPool11
+        end
+    end
+
+    return basePool
+end
+
 def pbgetMonoTypePool(type)
     floor = pbGet(48)
     basePool = []

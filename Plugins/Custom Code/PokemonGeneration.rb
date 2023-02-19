@@ -15,7 +15,7 @@ def pbGetPkmnTargetLvl
   return POKEMON_GET_LEVEL[pbGetStagesCleared]
 end
 
-def pbLvUpAllPkmn(targetLevel = nil)
+def pbLvUpAllPkmn(targetLevel = nil, partyOnly = false)
   targetLevel = POKEMON_FLOOR_START_LEVEL[pbGetStagesCleared] if targetLevel.nil?
 
   # Level up party
@@ -23,11 +23,13 @@ def pbLvUpAllPkmn(targetLevel = nil)
     pbChangeLevel(pkmn, targetLevel, nil) if !pkmn.nil? && (pkmn.level < targetLevel)
   end
 
-  # Level up box
-  $PokemonStorage.boxes.each do |box|
-    box.each do |pkmn|
-      pbChangeLevel(pkmn, targetLevel, nil) if !pkmn.nil? && (pkmn.level < targetLevel)
-    end
+  if !partyOnly
+      # Level up box
+      $PokemonStorage.boxes.each do |box|
+        box.each do |pkmn|
+          pbChangeLevel(pkmn, targetLevel, nil) if !pkmn.nil? && (pkmn.level < targetLevel)
+        end
+      end
   end
 end
 
@@ -79,6 +81,7 @@ def pbEvolveBabiesInParty
 end
 
 def pbGetCorrectOakPool(luckyWeakling = false)
+    return pbGetTierPool(pbGet(62)) if pbGetGameMode == 6
     floor = pbGet(48) + 1
     diceRoll = rand(1..100)
     if luckyWeakling
@@ -347,7 +350,7 @@ def pbGenPokeChoice
     amountLegis = 0
     luckyWeakling = pbLW
     # Checks if mode is not "Lucky Weakling" and if the floor is > 2
-    if pbGet(48) > 1 && !luckyWeakling
+    if pbGet(48) > 1 && !luckyWeakling && !(pbGetGameMode == 6)
         for i in 1 .. amount do
            amountLegis += 1 if pbRollForChance(legiChance)
         end
@@ -441,6 +444,22 @@ def pbGenStarterPkmn(type)
     return Pokemon.new(pbChooseRandomPokemon(whiteList: pickableWaterStarter), pbGetPkmnTargetLvl) if type == :WATER
 end
 
+def pbGenSetTierMegaPkmn
+    megaLegis = %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE]
+    output = pbChooseRandomPokemon(whiteList: megaLegis, amount: 3)
+    loopCounter = 0
+    echoln output.to_s
+    while ((!diverse_types?(output) || pbPkmnOwned?(output[0], output[1], output[2])) && loopCounter <10) do
+        output = pbChooseRandomPokemon(whiteList: megaLegis, amount: 3)
+        loopCounter += 1
+    end
+    output = output.shuffle
+    # do for every pokemon save slot
+    [26, 27, 28].each do |i|
+        pbSet(i, output.pop)
+    end
+end
+
 def pbGenMegaPkmn
     amount = 3
     # Chance in % (integer)
@@ -503,10 +522,10 @@ def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
 end
 
 def pbOakOfferStarter
-    if pbGetGameMode == 5
-       type = pbGetMonoType
-       pbRandomPkmnGeneration
-       pbRandomPkmnSelection(false)
+    gamemode = pbGetGameMode
+    if (gamemode == 5 || gamemode == 6)
+       pbRandomPkmnGeneration(false, false)
+       pbRandomPkmnSelection
     else
         poke1 = pbGenStarterPkmn(:GRASS)
         poke2 = pbGenStarterPkmn(:FIRE)
@@ -516,12 +535,18 @@ def pbOakOfferStarter
 end
 
 #Generates the Pokemon (usually used when entering Oaks room)
-def pbRandomPkmnGeneration(mega = false)
+def pbRandomPkmnGeneration(mega = false, hiddenAbility = true)
   mega = false if pbLW
   monotype = false
   monotype = true if (pbGet(59) != 0 && pbGet(59).to_s != "QMARKS")
 
-  if(monotype)
+  if pbGetGameMode == 6
+    if mega
+        pbGenSetTierMegaPkmn
+    else
+       pbGenPokeChoice
+    end
+  elsif(monotype)
     if mega
         pbGenMonoTypeMegaPkmn
     else
@@ -548,23 +573,27 @@ def pbRandomPkmnGeneration(mega = false)
   pbSet(40, 1)
   # First Poke
   pbSet(26, Pokemon.new(pbGet(26), pbGetPkmnTargetLvl))
-  oldForm1 = pbGet(26).form.to_s
-  pbGet(26).form = pbRollForm(pbGet(26).species)
-  pbGet(26).reset_moves if oldForm1 != pbGet(26).form.to_s
   # Second Poke
   pbSet(27, Pokemon.new(pbGet(27), pbGetPkmnTargetLvl))
-  oldForm2 = pbGet(27).form.to_s
-  pbGet(27).form = pbRollForm(pbGet(27).species)
-  pbGet(27).reset_moves if oldForm2 != pbGet(27).form.to_s
   # Third Poke
   pbSet(28, Pokemon.new(pbGet(28), pbGetPkmnTargetLvl))
-  oldForm3 = pbGet(28).form.to_s
-  pbGet(28).form = pbRollForm(pbGet(28).species)
-  pbGet(28).reset_moves if oldForm3 != pbGet(28).form.to_s
+
+  # Roll forms
+  (26..28).each do |i|
+    pk = pbGet(i)
+    oldForm = GameData::Species.get_species_form(pk.species,pk.form).real_form_name.to_s
+    newFormNumber = pbRollForm(pk.species)
+    newForm = GameData::Species.get_species_form(pk.species,newFormNumber).real_form_name.to_s
+    if oldForm != newForm
+        pbGet(i).form = newFormNumber
+        pbGet(i).reset_moves
+    end
+  end
+
   # activate asking player for learning move on form change
   pbSet(40, 0)
     # 25% chance for hidden ability, if not on starting map
-    if($game_map.map_id != 79 && rand(4)==1)
+    if($game_map.map_id != 79 && hiddenAbility && rand(4)==1)
         pbGet(26).setAbility(2)
         pbGet(27).setAbility(2)
         pbGet(28).setAbility(2)

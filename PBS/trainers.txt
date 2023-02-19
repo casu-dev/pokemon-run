@@ -2,24 +2,23 @@
 #-------------------------------
 [YOUNGSTER,Trainer]
 LoseText = "..."
-Pokemon = EEVEE,1
+Pokemon = DITTO,1
 #-------------------------------
 [LASS,Trainer]
 LoseText = "..."
-Pokemon = GLOOM,1
+Pokemon = DITTO,1
 #-------------------------------
 [COOLTRAINER_F,Trainer]
 LoseText = "..."
-Pokemon = MACHAMP,1
+Pokemon = DITTO,1
 #-------------------------------
 [BIKER,Trainer]
 LoseText = "..."
-Pokemon = BULBASAUR,1
+Pokemon = DITTO,1
 #-------------------------------
 [CAMPER,Liam]
 LoseText = "A very good battle, indeed!"
-Pokemon = DIGLETT,10
-Pokemon = BONSLY,11
+Pokemon = DITTO,1
 #-------------------------------
 [LEADER_Brock,Brock]
 Items = FULLRESTORE,FULLRESTORE
@@ -109,24 +108,15 @@ Pokemon = DITTO,1
 #-------------------------------
 [RIVAL1,Blue,1]
 LoseText = "Not too shabby."
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = CHARMANDER,18
+Pokemon = DITTO,1
 #-------------------------------
 [RIVAL1,Blue,2]
 LoseText = "Not too shabby."
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = SQUIRTLE,18
+Pokemon = DITTO,1
 #-------------------------------
 [CHAMPION,Blue]
 LoseText = "A good battle indeed!"
-Pokemon = VENUSAUR,63
-    Item = SITRUSBERRY
-Pokemon = CHARIZARD,63
-    Item = SITRUSBERRY
-Pokemon = BLASTOISE,63
-    Item = SITRUSBERRY
+Pokemon = DITTO,1
 #-------------------------------
 [LEADER_Erika,Erika]
 LoseText = "Nice Cock."
@@ -321,10 +311,7 @@ Item = CHOICESPECS
 #-------------------------------
 [ROCKETBOSS,Elite Trainerr]
 LoseText = "A good battle indeed!"
-Pokemon = BLISSEY,55
-    Item = SITRUSBERRY
-Pokemon = SHIFTRY,55
-    Item = SITRUSBERRY
+Pokemon = DITTO,1
 #-------------------------------
 [GENTLEMAN,Elite Trainer]
 LoseText = "..."
@@ -425,9 +412,7 @@ Pokemon = AXEW,16
 #-------------------------------
 [LADY,Elite Trainer]
 LoseText = "..."
-Pokemon = MAWILE,29
-Pokemon = CORSOLA,29
-Pokemon = CHIMECHO,29
+Pokemon = DITTO,1
 #-------------------------------
 [TEAMROCKET_F,Grunt]
 LoseText = "Wow! I'm impressed."
@@ -498,9 +483,7 @@ Pokemon = DITTO,32
 #-------------------------------
 [BEAUTY,Elite Trainer]
 LoseText = "..."
-Pokemon = TYRANITAR,58
-Pokemon = JELLICENT,58
-Pokemon = CROBAT,58
+Pokemon = DITTO,1
 #-------------------------------
 [ROCKETBOSS,Giovanni]
 LoseText = "Wow! You are way stronger than I thought."
@@ -595,14 +578,7 @@ Pokemon = FROSLASS,60
 #-------------------------------
 [GAMBLER,Elite Trainer]
 LoseText = "..."
-Pokemon = MANECTRIC,88
-    AbilityIndex = 0
-    Item = MANECTITE
-Pokemon = REUNICLUS,88
-    AbilityIndex = 1
-Pokemon = GLISCOR,88
-    AbilityIndex = 1
-Pokemon = VENUSAUR,88
+Pokemon = DITTO,1
 #-------------------------------
 [LEADER_Giovanni,Giovanni]
 LoseText = "Well played, I'm impressed. Take this as a gift."

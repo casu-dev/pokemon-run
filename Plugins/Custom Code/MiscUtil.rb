@@ -569,6 +569,14 @@ def pbGetDifficulties
     return %w[Easy Normal Hard]
 end
 
+def pbSetTier?
+    if pbGetGameMode == 6
+        return true
+    else
+        return false
+    end
+end
+
 def pbChooseDifficulty
     difficulties = pbGetDifficulties
     normalIndex = 0
@@ -613,38 +621,50 @@ def pbChooseMode
 
           speech = nil
           cmd2 = pbMessage(speech || _INTL('\rWhich game mode do you want to play?'), shownmodes)
-
+            oldMode = pbGetGameMode
             loop do
                 if cmd2 == 0
-                    pbWriteIntoFile("gamemode.txt", 0)
-                    pbWriteIntoFile("battlerinfo.txt", 0)
-                    pbPlaySaveSound
-                    pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]."))
+                    cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                    if (cmd5 == 0 || oldMode != 6)
+                        pbWriteIntoFile("gamemode.txt", 0)
+                        pbWriteIntoFile("battlerinfo.txt", 0)
+                        pbPlaySaveSound
+                        pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]."))
+                        pbResetMay if oldMode == 6
+                    end
                     break
                 elsif cmd2 == 1
-                     pbWriteIntoFile("gamemode.txt", 1)
-                     index = rand(1..10)
-                     info = "Error"
-                     info = "Atk and Def" if index == 1
-                     info = "Atk and Sp. Atk" if index == 2
-                     info = "Atk and Sp. Def" if index == 3
-                     info = "Atk and Speed" if index == 4
-                     info = "Def and Sp. Atk" if index == 5
-                     info = "Def and Sp. Def" if index == 6
-                     info = "Def and Speed" if index == 7
-                     info = "Sp. Atk and Sp. Def" if index == 8
-                     info = "Sp. Atk and Speed" if index == 9
-                     info = "Sp. Def and Speed" if index == 10
+                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                     if (cmd5 == 0 || oldMode != 6)
+                         pbWriteIntoFile("gamemode.txt", 1)
+                         index = rand(1..10)
+                         info = "Error"
+                         info = "Atk and Def" if index == 1
+                         info = "Atk and Sp. Atk" if index == 2
+                         info = "Atk and Sp. Def" if index == 3
+                         info = "Atk and Speed" if index == 4
+                         info = "Def and Sp. Atk" if index == 5
+                         info = "Def and Sp. Def" if index == 6
+                         info = "Def and Speed" if index == 7
+                         info = "Sp. Atk and Sp. Def" if index == 8
+                         info = "Sp. Atk and Speed" if index == 9
+                         info = "Sp. Def and Speed" if index == 10
 
-                     pbWriteIntoFile("battlerinfo.txt", index)
-                     pbPlaySaveSound
-                     pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. The " + info + " stat of YOUR Pokémon will be swapped in battle."))
+                         pbWriteIntoFile("battlerinfo.txt", index)
+                         pbPlaySaveSound
+                         pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. The " + info + " stat of YOUR Pokémon will be swapped in battle."))
+                         pbResetMay if oldMode == 6
+                     end
                      break
                 elsif cmd2 == 2
-                     pbWriteIntoFile("gamemode.txt", 2)
-                     pbWriteIntoFile("battlerinfo.txt", 11)
-                     pbPlaySaveSound
-                     pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. The first Pokémon in your party will have the ability of the last one in battle."))
+                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                     if (cmd5 == 0 || oldMode != 6)
+                         pbWriteIntoFile("gamemode.txt", 2)
+                         pbWriteIntoFile("battlerinfo.txt", 11)
+                         pbPlaySaveSound
+                         pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. The first Pokémon in your party will have the ability of the last one in battle."))
+                         pbResetMay if oldMode == 6
+                     end
                      break
                 elsif cmd2 == 3
                     hasFullyEvolved = false
@@ -666,20 +686,28 @@ def pbChooseMode
                      end
                    end
                    if (!hasFullyEvolved)
-                     pbWriteIntoFile("gamemode.txt", 3)
-                     pbWriteIntoFile("battlerinfo.txt", 0)
-                     pbPlaySaveSound
-                     pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
-                     break
+                    cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                    if (cmd5 == 0 || oldMode != 6)
+                         pbWriteIntoFile("gamemode.txt", 3)
+                         pbWriteIntoFile("battlerinfo.txt", 0)
+                         pbPlaySaveSound
+                         pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
+                         pbResetMay if oldMode == 6
+                    end
+                    break
                    else
                         pbMessage("You \\c[10]can't switch\\c[0] to this mode, while owning a fully evolved Pokémon.")
                         break
                    end
                 elsif cmd2 == 4
-                     pbWriteIntoFile("gamemode.txt", 4)
-                     pbWriteIntoFile("battlerinfo.txt", 0)
-                     pbPlaySaveSound
-                     pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. Every moves damage gets boosted by 10% for each Pokémon in your party, that has the same type. Party Pokémon not having this type will reduce the damage by 10%."))
+                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                     if (cmd5 == 0 || oldMode != 6)
+                         pbWriteIntoFile("gamemode.txt", 4)
+                         pbWriteIntoFile("battlerinfo.txt", 0)
+                         pbPlaySaveSound
+                         pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. Every moves damage gets boosted by 10% for each Pokémon in your party, that has the same type. Party Pokémon not having this type will reduce the damage by 10%."))
+                         pbResetMay if oldMode == 6
+                     end
                      break
                 elsif cmd2 == 5
                     types = []
@@ -695,29 +723,49 @@ def pbChooseMode
                     cmd3 = pbMessage(speech || _INTL('\rWhich type?'), types)
                     pbSet(59, typeIds[cmd3])
                     if cmd3 < types.length-1
-                        hasFittingType = true
-                        $Trainer.party.each do |pkmn|
-                           if !pkmn.nil?
-                            pkmnData = GameData::Species.try_get(pkmn.species)
-                            hasFittingType = false if !(typeIds[cmd3] == pkmnData.type1) && !(typeIds[cmd3] == pkmnData.type2)
+                        speech = nil
+                        cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                        if (cmd5 == 0 || oldMode != 6)
+                            hasFittingType = true
+                            $Trainer.party.each do |pkmn|
+                               if !pkmn.nil?
+                                pkmnData = GameData::Species.try_get(pkmn.species)
+                                hasFittingType = false if !(typeIds[cmd3] == pkmnData.type1) && !(typeIds[cmd3] == pkmnData.type2)
+                               end
                            end
-                       end
 
-                       $PokemonStorage.boxes.each do |box|
-                         box.each do |pkmn|
-                           if !pkmn.nil?
-                            pkmnData = GameData::Species.try_get(pkmn.species)
-                            hasFittingType = false if !(typeIds[cmd3] == pkmnData.type1) && !(typeIds[cmd3] == pkmnData.type2)
+                           $PokemonStorage.boxes.each do |box|
+                             box.each do |pkmn|
+                               if !pkmn.nil?
+                                pkmnData = GameData::Species.try_get(pkmn.species)
+                                hasFittingType = false if !(typeIds[cmd3] == pkmnData.type1) && !(typeIds[cmd3] == pkmnData.type2)
+                               end
+                             end
                            end
-                         end
-                       end
-                        if hasFittingType
-                            pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+types[cmd3].to_s+"\\c[0] type."))
-                            pbWriteIntoFile("gamemode.txt", 5)
+                            if hasFittingType
+                                pbWriteIntoFile("gamemode.txt", 5)
+                                pbWriteIntoFile("battlerinfo.txt", 0)
+                                pbPlaySaveSound
+                                pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+types[cmd3].to_s+"\\c[0] type."))
+                                pbResetMay if oldMode == 6
+                            else
+                                pbMessage(_INTL("Can't switch to \\c[10]"+ pbGetGameModes[cmd2] +" " + types[cmd3].to_s + "\\c[0], because you own a Pokémon from another type."))
+                            end
+                        end
+                    end
+                    break
+                elsif cmd2 == 6
+                    tierlist = ["Low BST", "Medium BST", "High BST", "Legendaries", "Cancel"]
+                    cmd4 = pbMessage(speech || _INTL('\rWhich category you want to play? BST means Base-Stat-Total.'), tierlist)
+                    if cmd4 < tierlist.length-1
+                        cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"])
+                        if cmd5 == 0
+                            pbWriteIntoFile("gamemode.txt", 6)
+                            pbSet(62, cmd4)
                             pbWriteIntoFile("battlerinfo.txt", 0)
                             pbPlaySaveSound
-                        else
-                            pbMessage(_INTL("Can't switch to \\c[10]"+ pbGetGameModes[cmd2] +" " + types[cmd3].to_s + "\\c[0], because you own a Pokémon from another type."))
+                            pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All Pokémon (incl. opponents) will be \\c[10]"+tierlist[cmd4].to_s+"\\c[0] tier."))
+                            pbResetMay
                         end
                     end
                     break
@@ -728,6 +776,11 @@ def pbChooseMode
     end
 end
 
+def pbGetTier(index)
+tierlist = ["Low BST", "Medium BST", "High BST", "Legendaries"]
+    return tierlist[index]
+end
+
 def pbPlaySaveSound
  if FileTest.audio_exist?("Audio/ME/GUI save game")
                     pbMEPlay("GUI save game",80)
@@ -735,7 +788,25 @@ def pbPlaySaveSound
 end
 
 def pbGetGameModes
-    return ["Standard", "Stat-Swap", "Copy-Ability", "Lucky weakling", "Type Boost", "Monotype"]
+    return ["Standard", "Stat-Swap", "Copy-Ability", "Lucky weakling", "Type Boost", "Monotype", "Set Tier"]
+end
+
+def pbResetMay
+    n = $Trainer.party.length
+      (0..n).each do |i|
+          if $Trainer.party[n - i]
+            $Trainer.mystery_gifts.push($Trainer.party[n - i])
+            $Trainer.party.delete_at(n - i)
+          end
+      end
+
+    pbClearAllBoxes
+    $Trainer.money = 0
+    $PokemonBag.clear
+    $Trainer.mystery_gifts = []
+    $game_switches[62] = true
+    pbOakOfferStarter
+    pbReceiveItem(:POTION)
 end
 
 def pbResetRoom
@@ -787,6 +858,17 @@ def pbHallOfFameEnd
 end
 
 def pbResetRun
+    if $game_switches[66] == true
+        pbSet(48, 0)
+        n = $Trainer.party.length
+          (0..n).each do |i|
+              if $Trainer.party[n - i]
+                $Trainer.party.delete_at(n - i)
+              end
+          end
+        pbClearAllBoxes
+        $Trainer.mystery_gifts = []
+    end
     pbFadeOutIn do
        $game_temp.player_new_map_id = 91
        $scene.transfer_player
@@ -802,15 +884,77 @@ def pbResetRun
     end
 end
 
+def pbShortCut?
+    if pbGet(48) > 1
+        speech = nil
+        yn = ["Yes", "No"]
+        cmd3 = pbMessage(speech || _INTL('\bI see you have \\c[10]reached floor 3\b or higher. Do you want to \\c[10]skip\b the majority of \\c[10]floor 1 and directly battle Bruno\b, after getting a few Pokémon?'), yn)
+        if cmd3 == 0
+            pbSet(37, rand(3))
+            pbMessage('\bHe will use his \\c[10]' + pbGetBossHint("\\bI will fight you at the end of this floor, with my $team team.",:ELITEFOUR_Bruno,"Bruno") + '\b team.') if (pbGetGameMode != 6 && !pbGet(53))
+
+            #init values
+            pbSet(48, 0)
+            pbSet(49, 12)
+            pbSet(33, 15)
+            pbSet(47, false)
+            pbSet(52, true)
+            pbSet(54, true)
+            pbSet(55, true)
+            pbSet(56, true)
+            pbSet(61, 0)
+            pbSet(51, false)
+            $game_switches[78] = false
+            $PokemonBag.pbStoreItem(:PREMIUMSOAP) if pbAllAchvs?
+            $Trainer.money = 2000
+
+            # Add Pokémon the players party until he has 3
+            size = $Trainer.party.length
+            pbLvUpAllPkmn(targetLevel = 18, true) if size == 1
+            (size..2).each do |i|
+                if i == 0
+                    $game_switches[62] = true
+                    pbOakOfferStarter
+                    pbReceiveItem(:POTION)
+                    pbLvUpAllPkmn(targetLevel = 18, true)
+                else
+                   pbRandomPkmnGeneration
+                   pbRandomPkmnSelection
+                   pbLvUpAllPkmn(targetLevel = 16, true)
+                end
+            end
+           pbMessage('\bAlright, i\'ll bring you to Bruno now. Good luck!')
+           pbFadeOutIn do
+               $game_temp.player_new_map_id = 86
+               $scene.transfer_player
+               $game_map.autoplay
+               $game_map.refresh
+               $game_temp.player_new_map_id = 86
+               $game_temp.player_new_x         = 10
+               $game_temp.player_new_y         = 11
+               $game_temp.player_new_direction = 0
+               $scene.transfer_player
+               $game_map.autoplay
+               $game_map.refresh
+           end
+           return true
+        else
+           return false
+        end
+    else
+        return false
+    end
+end
+
 def pbResetAssistant
-size = $Trainer.party.length()
+    size = $Trainer.party.length()
     if size == 0
         speech = nil
         yn = ["Yes", "No"]
-        cmd2 = pbMessage(speech || _INTL('You want to start the new run \\c[10]without\\c[0] one of your old Pokémon?'), yn)
-            loop do
-                if cmd2 == 0
-                   pbClearAllBoxes
+        cmd2 = pbMessage(speech || _INTL('\bYou want to start the new run \\c[10]without\b one of your old Pokémon?'), yn)
+            if cmd2 == 0
+               pbClearAllBoxes
+               if !pbShortCut?
                    pbFadeOutIn do
                        $game_temp.player_new_map_id = 79
                        $scene.transfer_player
@@ -823,52 +967,46 @@ size = $Trainer.party.length()
                        $scene.transfer_player
                        $game_map.autoplay
                        $game_map.refresh
-                     end
-                    break
-                elsif cmd2 == 1
-                     break
-                end
+                   end
+               end
             end
     elsif size == 1
         speech = nil
-                yn = ["Yes", "No"]
-                cmd2 = pbMessage(speech || _INTL("You want to start the new run with \\c[10]" + $Trainer.party[0].name + "\\c[0]?"), yn)
-                    loop do
-                        if cmd2 == 0
-                           pbReceiveItem(:POTION)
-                           pbClearAllBoxes
-                           $Trainer.party.each do |pkmn|
-                               if !pkmn.nil?
-                                   pbChangeLevel(pkmn, 15, nil)
-                                   pkmn.ev[:HP] = 0
-                                   pkmn.ev[:ATTACK] = 0
-                                   pkmn.ev[:DEFENSE] = 0
-                                   pkmn.ev[:SPECIAL_ATTACK] = 0
-                                   pkmn.ev[:SPECIAL_DEFENSE] = 0
-                                   pkmn.ev[:SPEED] = 0
-                                   pkmn.reset_moves
-                               end
-                           end
-                           pbFadeOutIn do
-                               $game_temp.player_new_map_id = 79
-                               $scene.transfer_player
-                               $game_map.autoplay
-                               $game_map.refresh
-                               $game_temp.player_new_map_id = 79
-                               $game_temp.player_new_x         = 9
-                               $game_temp.player_new_y         = 6
-                               $game_temp.player_new_direction = 0
-                               $scene.transfer_player
-                               $game_map.autoplay
-                               $game_map.refresh
-                             end
-                            break
-                        elsif cmd2 == 1
-                             break
-                        end
-                    end
+        yn = ["Yes", "No"]
+        cmd2 = pbMessage(speech || _INTL('\bYou want to start the new run with \\c[10]' + $Trainer.party[0].name + '\b?'), yn)
+        if cmd2 == 0
+           pbClearAllBoxes
+           pbReceiveItem(:POTION)
+           $Trainer.party.each do |pkmn|
+               if !pkmn.nil?
+                   pbChangeLevel(pkmn, 15, nil)
+                   pkmn.ev[:HP] = 0
+                   pkmn.ev[:ATTACK] = 0
+                   pkmn.ev[:DEFENSE] = 0
+                   pkmn.ev[:SPECIAL_ATTACK] = 0
+                   pkmn.ev[:SPECIAL_DEFENSE] = 0
+                   pkmn.ev[:SPEED] = 0
+                   pkmn.reset_moves
+               end
+           end
+           if !pbShortCut?
+               pbFadeOutIn do
+                   $game_temp.player_new_map_id = 79
+                   $scene.transfer_player
+                   $game_map.autoplay
+                   $game_map.refresh
+                   $game_temp.player_new_map_id = 79
+                   $game_temp.player_new_x         = 9
+                   $game_temp.player_new_y         = 6
+                   $game_temp.player_new_direction = 0
+                   $scene.transfer_player
+                   $game_map.autoplay
+                   $game_map.refresh
+               end
+           end
+        end
     else
-        pbMessage(_INTL("You can't take more than one Pokémon with you."))
+        pbMessage(_INTL('\bYou can\'t take more than one Pokémon with you.'))
     end
 end
 
@@ -1087,7 +1225,7 @@ end
 def pbKeepBaseForm(pkmnID)
     pkmnFullyEvolvedID = pbGetCorrectEvo(pkmnID)
     megaPool = getOakMegas.dup
-    megaPool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE AEGISLASH CASTFORM]
+    megaPool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE AEGISLASH CASTFORM GROUDON KYOGRE]
     megaPool -= %i[SLOWBRO]
     return true if megaPool.include? pkmnFullyEvolvedID
     return false

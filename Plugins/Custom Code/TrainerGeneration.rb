@@ -224,66 +224,85 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
   trainer_list.each do |trainer|
     template = pbGetTRAINER_OVERRIDE.find { |i| i[:tType] == trainer.trainer_type and i[:tName] == trainer.name and trainer.lose_text == i[:LoseText]}
     next unless template # Do nothing if no override was found
-
+    start = Time.now
     # Determin lvl
     lvl = template[:lvl1]
     lvl = template[:lvl2] if pbGet(49) * 2 > Settings::ROOMS_PER_STAGE + 1
     blacklist = %i[ELITEFOUR_Bruno ELITEFOUR_Agatha LEADER_Misty ELITEFOUR_Lance]
-
-    if blacklist.include?(template[:tType])
+    boss = blacklist.include?(template[:tType])
+    if boss
         trainer.party.each do |pkmn|
             pkmn.level = lvl
         end
-    else
-        # Generate Party
+    end
+    if (!boss || pbGetGameMode == 6)
         newParty = []
-        alreadyPicked = []
-        improvedTrainers = [:TEAMROCKET_M, :RIVAL1, :BEAUTY, :GAMBLER]
-        # Eliminates evasion moves from moveset, because they are buggy used by an NPC
-        pbSet(58,2)
-        # make it so the Pokémon get better movesets
-        pbSet(58,1) if improvedTrainers.include? template[:tType]
-        while newParty.length < template[:numPkmn]
-          pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }
-          new_species = pkmnPool[rand(pkmnPool.length)]
+        if (pbGet(63) == false)
+            # Generate Party
+            alreadyPicked = []
+            improvedTrainers = [:TEAMROCKET_M, :RIVAL1, :BEAUTY, :GAMBLER, :ELITEFOUR_Bruno, :ELITEFOUR_Agatha, :LEADER_Misty, :ELITEFOUR_Lance]
+            # Eliminates evasion moves from moveset, because they are buggy used by an NPC
+            pbSet(58,1)
+            # make it so the Pokémon get better movesets
+            pbSet(58,2) if improvedTrainers.include? template[:tType]
+            pbSet(58,3) if boss
+            while newParty.length < template[:numPkmn]
+              pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }
+              pkmnPool = pbGetTierPool(pbGet(62)) if pbGetGameMode == 6
+              new_species = pkmnPool[rand(pkmnPool.length)]
 
-          alreadyPicked.push(new_species)
-          # disable form moves to trigger until form is changed
-          pbSet(40, 1)
-          pk = Pokemon.new(new_species, lvl)
-          oldForm = pk.form.to_s
-          pk.form = pbRollForm(new_species)
-          pk.reset_moves if oldForm != pk.form.to_s
-          newParty.push(pk)
-          pbSet(40, 0)
-        end
-
-        # Replace first Pokemon with a Mega Pokemon if on F4 Middle Floor Trainer or Elite Trainer map
-        if (($game_map.map_id == 108) || ($game_map.map_id == 105))
-            newPartyIDs = []
-            newParty.each do |pkmn|
-                newPartyIDs.push(pkmn.species) if pkmn.species
+              alreadyPicked.push(new_species)
+              # disable form moves to trigger until form is changed
+              pbSet(40, 1)
+              pk = Pokemon.new(new_species, lvl)
+              oldForm = GameData::Species.get_species_form(pk.species,pk.form).real_form_name.to_s
+              newFormNumber = pbRollForm(pk.species)
+              newForm = GameData::Species.get_species_form(pk.species,newFormNumber).real_form_name.to_s
+              if oldForm != newForm
+                pk.form = newFormNumber
+                pk.reset_moves
+                echoln "other form applied"
+              end
+              newParty.push(pk)
+              pbSet(40, 0)
             end
-            pool = getOakMegas
-            pool -= newPartyIDs
-            megaPkmnID = pbChooseRandomPokemon(whiteList: pool)
-            megaPkmn = Pokemon.new(megaPkmnID, lvl)
-            megaStones = pbGetMegaStones(megaPkmn)
-            megaPkmn.item = megaStones[rand(megaStones.length)]
-            newParty[0] = megaPkmn if newParty[0]
+
+            # Replace first Pokemon with a Mega Pokemon if on F4 Middle Floor Trainer or Elite Trainer map or Final boss in "Set Tier" gamemode
+            if (($game_map.map_id == 108) || ($game_map.map_id == 105) || (($game_map.map_id == 106) && pbGetGameMode == 6))
+                newPartyIDs = []
+                newParty.each do |pkmn|
+                    newPartyIDs.push(pkmn.species) if pkmn.species
+                end
+                pool = getOakMegas.dup
+                pool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE]
+                if pbGetGameMode == 6
+                    pool = pool.intersection(pbGetTierPool(pbGet(62)))
+                    tempPool = pool.dup
+                    pool -= newPartyIDs
+                    pool = tempPool if pool.length < 2
+                else
+                    pool -= newPartyIDs
+                end
+                megaPkmnID = pbChooseRandomPokemon(whiteList: pool)
+                megaPkmn = Pokemon.new(megaPkmnID, lvl)
+                megaStones = pbGetMegaStones(megaPkmn)
+                megaPkmn.item = megaStones[rand(megaStones.length)]
+                newParty[0] = megaPkmn if newParty[0]
+            end
+
+            # Set 58 back to default
+            pbSet(58,0)
+        else
+            newParty = pbGet(44)
         end
-
-        # Set 58 back to default
-        pbSet(58,0)
-
         trainer.party = newParty
         trainer.lose_text = TRAINER_LOOSE_TEXT.sample if trainer.lose_text == "..."
         trainer.lose_text = "..." if trainer.trainer_type.to_s == "TEAMROCKET_M"
 
         # Preperation steal Pokémon
         pbSet(44, trainer.party.dup)
-
-        echoln 'Generated trainer party: ' + newParty.to_s
+        pbSet(63, true)
+        echoln (Time.now-start).to_s + 's Generated trainer party: ' + newParty.to_s
     end
   end
 }
@@ -303,49 +322,53 @@ def pbGenIntroText
   pbSet(34, intro_list[rand(intro_list.length)])
 end
 
+def pbGetBossHint(template, trainerID, trainerName)
+   trainer =pbLoadTrainer(trainerID, trainerName, pbGet(37))
+     pkmnList = ''
+     party = trainer.party.each do |pkmn|
+       spec = GameData::Species.try_get(pkmn.species)
+       pkmnList += spec.real_name.to_s + ' '
+     end
+
+     msg = ""
+     # F1 Boss
+     if pkmnList.include? "Mienfoo"
+        msg += "Fighting"
+     elsif pkmnList.include? "Axew"
+           msg += "Dragon"
+     elsif pkmnList.include? "Pansear"
+             msg += "Fire-Water-Grass"
+
+     # F2 Boss
+     elsif pkmnList.include? "Mismagius"
+             msg += "Ghost"
+     elsif pkmnList.include? "Gardevoir"
+             msg += "Fairy"
+     elsif pkmnList.include? "Simisear"
+             msg += "Fire-Water-Grass"
+
+     # F3 Boss
+     elsif pkmnList.include? "Pelipper"
+             msg += "Rain"
+     elsif pkmnList.include? "Ninetales"
+             msg += "Sun"
+     elsif pkmnList.include? "Abomasnow"
+             msg += "Hail"
+
+     # F4 Boss
+     elsif pkmnList.include? "Rayquaza"
+             msg += "Mega-Rayquaza"
+     elsif pkmnList.include? "Groudon"
+             msg += "Primal-Groudon"
+     elsif pkmnList.include? "Kyogre"
+             msg += "Primal-Kyogre"
+     end
+
+     return msg
+end
+
 def pbDisplayBossTeam(template, trainerID, trainerName)
-  trainer =pbLoadTrainer(trainerID, trainerName, pbGet(37))
-  pkmnList = ''
-  party = trainer.party.each do |pkmn|
-    spec = GameData::Species.try_get(pkmn.species)
-    pkmnList += spec.real_name.to_s + ' '
-  end
-
-  msg = ""
-  # F1 Boss
-  if pkmnList.include? "Mienfoo"
-     msg += "Fighting"
-  elsif pkmnList.include? "Axew"
-        msg += "Dragon"
-  elsif pkmnList.include? "Pansear"
-          msg += "Fire-Water-Grass"
-
-  # F2 Boss
-  elsif pkmnList.include? "Mismagius"
-          msg += "Ghost"
-  elsif pkmnList.include? "Gardevoir"
-          msg += "Fairy"
-  elsif pkmnList.include? "Simisear"
-          msg += "Fire-Water-Grass"
-
-  # F3 Boss
-  elsif pkmnList.include? "Pelipper"
-          msg += "Rain"
-  elsif pkmnList.include? "Ninetales"
-          msg += "Sun"
-  elsif pkmnList.include? "Abomasnow"
-          msg += "Hail"
-
-  # F4 Boss
-  elsif pkmnList.include? "Rayquaza"
-          msg += "Mega-Rayquaza"
-  elsif pkmnList.include? "Groudon"
-          msg += "Primal-Groudon"
-  elsif pkmnList.include? "Kyogre"
-          msg += "Primal-Kyogre"
-  end
-
+  msg = pbGetBossHint(template, trainerID, trainerName)
   msg = template.gsub("\n", "").gsub("$team", "\\c[10]" + msg + template[0..1])
-
   pbMessage(msg)
 end
