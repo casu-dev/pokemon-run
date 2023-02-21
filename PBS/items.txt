@@ -839,3 +839,41 @@
 815,TOPTHREE1,Top three,Unnamed,8,0,"Beat the final Boss, but start the battle with 3 or less Pokémon in party.",2,0,6
 816,PERFECTRUN1,Perfect run,Unnamed,8,0,"Complete a run without losing a Pokémon.",2,0,6
 817,PREMIUMSOAP,Premium Soap,Unnamed,1,0,"A soap so intense, cleaning with it makes the target shine. This item respawns at the start of each run.",1,0,0
+#-------MonoTypes uncompleted
+818,NORMAL0,Normal,Unnamed,8,0,"Beat Monotype Normal.",2,0,6
+819,FIGHTING0,Fighting,Unnamed,8,0,"Beat Monotype Fighting.",2,0,6
+820,FLYING0,Flying,Unnamed,8,0,"Beat Monotype Flying.",2,0,6
+821,POISON0,Poison,Unnamed,8,0,"Beat Monotype Poison.",2,0,6
+822,GROUND0,Ground,Unnamed,8,0,"Beat Monotype Ground.",2,0,6
+823,ROCK0,Rock,Unnamed,8,0,"Beat Monotype Rock.",2,0,6
+824,BUG0,Bug,Unnamed,8,0,"Beat Monotype Bug.",2,0,6
+825,GHOST0,Ghost,Unnamed,8,0,"Beat Monotype Ghost.",2,0,6
+826,STEEL0,Steel,Unnamed,8,0,"Beat Monotype Steel.",2,0,6
+827,FIRE0,Fire,Unnamed,8,0,"Beat Monotype Fire.",2,0,6
+828,WATER0,Water,Unnamed,8,0,"Beat Monotype Water.",2,0,6
+829,GRASS0,Grass,Unnamed,8,0,"Beat Monotype Grass.",2,0,6
+830,ELECTRIC0,Electric,Unnamed,8,0,"Beat Monotype Electric.",2,0,6
+831,PSYCHIC0,Psychic,Unnamed,8,0,"Beat Monotype Psychic.",2,0,6
+832,ICE0,Ice,Unnamed,8,0,"Beat Monotype Ice.",2,0,6
+833,DRAGON0,Dragon,Unnamed,8,0,"Beat Monotype Dragon.",2,0,6
+834,DARK0,Dark,Unnamed,8,0,"Beat Monotype Dark.",2,0,6
+835,FAIRY0,Fairy,Unnamed,8,0,"Beat Monotype Fairy.",2,0,6
+#-------MonoTypes completed
+836,NORMAL1,Normal,Unnamed,8,0,"Beat Monotype Normal.",2,0,6
+837,FIGHTING1,Fighting,Unnamed,8,0,"Beat Monotype Fighting.",2,0,6
+838,FLYING1,Flying,Unnamed,8,0,"Beat Monotype Flying.",2,0,6
+839,POISON1,Poison,Unnamed,8,0,"Beat Monotype Poison.",2,0,6
+840,GROUND1,Ground,Unnamed,8,0,"Beat Monotype Ground.",2,0,6
+841,ROCK1,Rock,Unnamed,8,0,"Beat Monotype Rock.",2,0,6
+842,BUG1,Bug,Unnamed,8,0,"Beat Monotype Bug.",2,0,6
+843,GHOST1,Ghost,Unnamed,8,0,"Beat Monotype Ghost.",2,0,6
+844,STEEL1,Steel,Unnamed,8,0,"Beat Monotype Steel.",2,0,6
+845,FIRE1,Fire,Unnamed,8,0,"Beat Monotype Fire.",2,0,6
+846,WATER1,Water,Unnamed,8,0,"Beat Monotype Water.",2,0,6
+847,GRASS1,Grass,Unnamed,8,0,"Beat Monotype Grass.",2,0,6
+848,ELECTRIC1,Electric,Unnamed,8,0,"Beat Monotype Electric.",2,0,6
+849,PSYCHIC1,Psychic,Unnamed,8,0,"Beat Monotype Psychic.",2,0,6
+850,ICE1,Ice,Unnamed,8,0,"Beat Monotype Ice.",2,0,6
+851,DRAGON1,Dragon,Unnamed,8,0,"Beat Monotype Dragon.",2,0,6
+852,DARK1,Dark,Unnamed,8,0,"Beat Monotype Dark.",2,0,6
+853,FAIRY1,Fairy,Unnamed,8,0,"Beat Monotype Fairy.",2,0,6

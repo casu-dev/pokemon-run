@@ -583,10 +583,11 @@ def pbChooseDifficulty
     (0...difficulties.length).each do |i|
         normalIndex = i if (difficulties[i] == "Normal")
     end
-    speech = nil
-    cmd2 = pbMessage(speech || _INTL('\rChoose the games difficulty.'), difficulties)
+    difficulties.push("Cancel")
+    cmd2 = pbMessage(_INTL('\rChoose the games difficulty.'), difficulties, difficulties.length)
 
     loop do
+        break if cmd2 == difficulties.length-1
         if cmd2 == 0
             pbWriteIntoFile("difficulty.txt", cmd2-normalIndex)
             pbPlaySaveSound
@@ -618,13 +619,14 @@ def pbChooseMode
         (0...modeCounter+1).each do |i|
             shownmodes.push(modes[i])
         end
-
+        shownmodes.push("Cancel")
           speech = nil
-          cmd2 = pbMessage(speech || _INTL('\rWhich game mode do you want to play?'), shownmodes)
+          cmd2 = pbMessage(speech || _INTL('\rWhich game mode do you want to play?'), shownmodes, shownmodes.length)
             oldMode = pbGetGameMode
             loop do
+                break if (cmd2 == shownmodes.length-1)
                 if cmd2 == 0
-                    cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                    cmd5 = pbMessage(_INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
                     if (cmd5 == 0 || oldMode != 6)
                         pbWriteIntoFile("gamemode.txt", 0)
                         pbWriteIntoFile("battlerinfo.txt", 0)
@@ -634,7 +636,7 @@ def pbChooseMode
                     end
                     break
                 elsif cmd2 == 1
-                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                     cmd5 = pbMessage(_INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
                      if (cmd5 == 0 || oldMode != 6)
                          pbWriteIntoFile("gamemode.txt", 1)
                          index = rand(1..10)
@@ -657,7 +659,7 @@ def pbChooseMode
                      end
                      break
                 elsif cmd2 == 2
-                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
                      if (cmd5 == 0 || oldMode != 6)
                          pbWriteIntoFile("gamemode.txt", 2)
                          pbWriteIntoFile("battlerinfo.txt", 11)
@@ -686,7 +688,7 @@ def pbChooseMode
                      end
                    end
                    if (!hasFullyEvolved)
-                    cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                    cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
                     if (cmd5 == 0 || oldMode != 6)
                          pbWriteIntoFile("gamemode.txt", 3)
                          pbWriteIntoFile("battlerinfo.txt", 0)
@@ -700,7 +702,7 @@ def pbChooseMode
                         break
                    end
                 elsif cmd2 == 4
-                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
                      if (cmd5 == 0 || oldMode != 6)
                          pbWriteIntoFile("gamemode.txt", 4)
                          pbWriteIntoFile("battlerinfo.txt", 0)
@@ -710,26 +712,34 @@ def pbChooseMode
                      end
                      break
                 elsif cmd2 == 5
-                    types = []
+                    typeNames = []
                     typeIds = []
                     GameData::Type.each do |t|
                         next unless t.id.to_s != "QMARKS"
-                        types.push(t.name.to_s)
                         typeIds.push(t.id)
+                        typeNames.push(t.name)
                     end
-                    types.push("Cancel")
-                    typeIds.push(:QMARKS)
 
-                    cmd3 = pbMessage(speech || _INTL('\rWhich type?'), types)
-                    if cmd3 < types.length-1
+                    pbSet(65, 1)
+                    pbShowMonoTypes
+                    newType = (pbGet(65).to_s.chop).to_sym
+                    typeIndex = -1
+                    validType = false
+                    (0...typeIds.length).each do |i|
+                        if typeIds[i] == newType
+                            typeIndex = i
+                            validType = true
+                        end
+                    end
+                    if validType
                         speech = nil
-                        cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"]) if oldMode == 6
+                        cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
                         if (cmd5 == 0 || oldMode != 6)
                             hasFittingType = true
                             $Trainer.party.each do |pkmn|
                                if !pkmn.nil?
                                 pkmnData = GameData::Species.try_get(pkmn.species)
-                                hasFittingType = false if !(typeIds[cmd3] == pkmnData.type1) && !(typeIds[cmd3] == pkmnData.type2)
+                                hasFittingType = false if !(newType == pkmnData.type1) && !(newType == pkmnData.type2)
                                end
                            end
 
@@ -737,28 +747,29 @@ def pbChooseMode
                              box.each do |pkmn|
                                if !pkmn.nil?
                                 pkmnData = GameData::Species.try_get(pkmn.species)
-                                hasFittingType = false if !(typeIds[cmd3] == pkmnData.type1) && !(typeIds[cmd3] == pkmnData.type2)
+                                hasFittingType = false if !(newType == pkmnData.type1) && !(newType == pkmnData.type2)
                                end
                              end
                            end
                             if (hasFittingType || oldMode == 6)
                                 pbWriteIntoFile("gamemode.txt", 5)
                                 pbWriteIntoFile("battlerinfo.txt", 0)
-                                pbSet(59, typeIds[cmd3])
+                                pbSet(59, newType)
+                                pbSet(64, typeIndex)
                                 pbPlaySaveSound
-                                pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+types[cmd3].to_s+"\\c[0] type."))
+                                pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+typeNames[typeIndex].to_s+"\\c[0] type."))
                                 pbResetMay if oldMode == 6
                             else
-                                pbMessage(_INTL("Can't switch to \\c[10]"+ pbGetGameModes[cmd2] +" " + types[cmd3].to_s + "\\c[0], because you own a Pokémon from another type."))
+                                pbMessage(_INTL("Can't switch to \\c[10]"+ pbGetGameModes[cmd2] +" " + typeNames[typeIndex].to_s + "\\c[0], because you own a Pokémon from another type."))
                             end
                         end
                     end
                     break
                 elsif cmd2 == 6
                     tierlist = ["Low BST", "Medium BST", "High BST", "Legendaries", "Cancel"]
-                    cmd4 = pbMessage(speech || _INTL('\rWhich category you want to play? BST means Base-Stat-Total.'), tierlist)
+                    cmd4 = pbMessage(_INTL('\rWhich category you want to play? BST means Base-Stat-Total.'), tierlist,5)
                     if cmd4 < tierlist.length-1
-                        cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"])
+                        cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2)
                         if cmd5 == 0
                             pbWriteIntoFile("gamemode.txt", 6)
                             pbSet(62, cmd4)
@@ -951,7 +962,7 @@ def pbResetAssistant
     if size == 0
         speech = nil
         yn = ["Yes", "No"]
-        cmd2 = pbMessage(speech || _INTL('\bYou want to start the new run \\c[10]without\b one of your old Pokémon?'), yn)
+        cmd2 = pbMessage(speech || _INTL('\bYou want to start the new run \\c[10]without\b one of your old Pokémon?'), yn, 2)
             if cmd2 == 0
                pbClearAllBoxes
                if !pbShortCut?
@@ -973,7 +984,7 @@ def pbResetAssistant
     elsif size == 1
         speech = nil
         yn = ["Yes", "No"]
-        cmd2 = pbMessage(speech || _INTL('\bYou want to start the new run with \\c[10]' + $Trainer.party[0].name + '\b?'), yn)
+        cmd2 = pbMessage(speech || _INTL('\bYou want to start the new run with \\c[10]' + $Trainer.party[0].name + '\b?'), yn, 2)
         if cmd2 == 0
            pbClearAllBoxes
            pbReceiveItem(:POTION)
@@ -1703,6 +1714,66 @@ def pbGetAchvsCompleted
     return %i[JUSTANORMALGUY1 EXPERT1 FIRSTTRY1 MULTITALENT1 DISCSAREOUTDATED1 NORISKNOFUN1 REJECTED1 TOPTHREE1 PERFECTRUN1]
 end
 
+def pbSetMonoTypesDone
+    index = pbGet(64)
+    if (index >= 0 && index <=17 && pbGetGameMode == 5)
+        filename = "monotypes.txt"
+        achvsStatus = pbReadFile(filename)
+        count = 18
+        if achvsStatus.length != count
+            status = ""
+            (0...count).each do |i|
+                status +="0"
+            end
+            pbWriteIntoFile(filename, status)
+            achvsStatus = pbReadFile(filename)
+        end
+        achvsStatus[index] = "1"
+        pbWriteIntoFile(filename, achvsStatus)
+    end
+end
+
+def pbShowMonoTypes
+    count = 18
+    filename = "monotypes.txt"
+    monoTypeStatus = pbReadFile(filename)
+    if monoTypeStatus.length != count
+        status = ""
+        (0...count).each do |i|
+            status +="0"
+        end
+        pbWriteIntoFile(filename, status)
+        monoTypeStatus = pbReadFile(filename)
+    end
+    typeIds = []
+    GameData::Type.each do |t|
+        next unless t.id.to_s != "QMARKS"
+        typeIds.push(t.id.to_s+"0")
+    end
+    if monoTypeStatus.length == count
+        completed = []
+        GameData::Type.each do |t|
+            next unless t.id.to_s != "QMARKS"
+            completed.push(t.id.to_s+"1")
+        end
+        (0...monoTypeStatus.length).each do |i|
+           typeIds[i] = completed[i] if monoTypeStatus[i] == '1'
+        end
+        pbPokemonMartEarn(typeIds, nil, false, 5)
+    else
+        pbPokemonMartEarn(typeIds, nil, false, 5)
+    end
+end
+
+def pbGetMonoTypesCompleted
+    completed = []
+    GameData::Type.each do |t|
+        next unless t.id.to_s != "QMARKS"
+        completed.push(t.id.to_s+"1")
+    end
+    return completed
+end
+
 def pbShowAchvs
     count = pbGetAchvs.length
     filename = "achievements.txt"
@@ -1723,12 +1794,12 @@ def pbCheckAchvsAfterRun
     if !pbAllAchvs?
         pbSetAchvDone(0) if pbGetDifficulty == 0
         pbSetAchvDone(1) if pbGetDifficulty == 1
-        pbSetAchvDone(2) if pbGet(51) == true # reset on restart
+        pbSetAchvDone(2) if pbGet(51) == true # resets on restart
         pbSetAchvDone(3) if pbCheckMultiTalent(pbGetGameMode)
-        pbSetAchvDone(4) if pbGet(52) == true # reset on restart
-        pbSetAchvDone(5) if pbGet(53) == true # reset on restart
-        pbSetAchvDone(6) if pbGet(54) == true # reset on restart
-        pbSetAchvDone(7) if pbGet(55) == true # reset on restart
+        pbSetAchvDone(4) if pbGet(52) == true # resets on restart
+        pbSetAchvDone(5) if (pbGet(53) == true && pbGetGameMode != 6)  # resets on restart
+        pbSetAchvDone(6) if pbGet(54) == true # resets on restart
+        pbSetAchvDone(7) if pbGet(55) == true # resets on restart
         pbSetAchvDone(8) if ($Trainer.mystery_gifts.length == 0) && (pbGet(56) == true)
         if pbAllAchvs?
             pbMessage("\\c[10]All achievements unlocked\\c[0].")
@@ -1852,7 +1923,18 @@ def pbGetGamemodeDescr
     return descr
 end
 
-def pbScout
-pbMessage(pbRollTms.length.to_s)
-pbMessage(pbRollTms.to_s)
+def pbScout1
+index = 818
+line = ""
+    GameData::Type.each do |type|
+        next unless type.id.to_s != "QMARKS"
+        line += index.to_s + "," +type.id.to_s+"0,"+type.name.to_s+",Unnamed,8,0,\"Beat Monotype " +type.name.to_s+".\",2,0,6\n"
+        index +=1
+    end
+        GameData::Type.each do |type|
+            next unless type.id.to_s != "QMARKS"
+            line += index.to_s + "," +type.id.to_s+"1,"+type.name.to_s+",Unnamed,8,0,\"Beat Monotype " +type.name.to_s+".\",2,0,6\n"
+            index +=1
+        end
+        pbWriteIntoFile("newitems.txt", line)
 end

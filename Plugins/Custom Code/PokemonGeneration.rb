@@ -445,12 +445,17 @@ def pbGenStarterPkmn(type)
 end
 
 def pbGenSetTierMegaPkmn
+    echoln("Gen mega set tier entered")
     megaLegis = %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE]
-    output = pbChooseRandomPokemon(whiteList: megaLegis, amount: 3)
+    pool = getOakMegas
+    pool += megaLegis
+    pool = pool.intersection(pbGetCorrectOakPool)
+    echoln pool.to_s
+    output = pbChooseRandomPokemon(whiteList: pool, amount: 3)
     loopCounter = 0
     echoln output.to_s
     while ((!diverse_types?(output) || pbPkmnOwned?(output[0], output[1], output[2])) && loopCounter <10) do
-        output = pbChooseRandomPokemon(whiteList: megaLegis, amount: 3)
+        output = pbChooseRandomPokemon(whiteList: pool, amount: 3)
         loopCounter += 1
     end
     output = output.shuffle
@@ -458,6 +463,7 @@ def pbGenSetTierMegaPkmn
     [26, 27, 28].each do |i|
         pbSet(i, output.pop)
     end
+    echoln("Gen mega set tier left")
 end
 
 def pbGenMegaPkmn
@@ -568,9 +574,7 @@ def pbRandomPkmnGeneration(mega = false, hiddenAbility = true)
     end
   end
 
-  # Replace species names by real Pokémon and roll Pokémon forms like Galar or Alolan form
-  # deactivate asking player for learning move on form change
-  pbSet(40, 1)
+  # Replace species names by real Pokémon
   # First Poke
   pbSet(26, Pokemon.new(pbGet(26), pbGetPkmnTargetLvl))
   # Second Poke
@@ -578,20 +582,23 @@ def pbRandomPkmnGeneration(mega = false, hiddenAbility = true)
   # Third Poke
   pbSet(28, Pokemon.new(pbGet(28), pbGetPkmnTargetLvl))
 
-  # Roll forms
-  (26..28).each do |i|
-    pk = pbGet(i)
-    oldForm = GameData::Species.get_species_form(pk.species,pk.form).real_form_name.to_s
-    newFormNumber = pbRollForm(pk.species)
-    newForm = GameData::Species.get_species_form(pk.species,newFormNumber).real_form_name.to_s
-    if oldForm != newForm
-        pbGet(i).form = newFormNumber
-        pbGet(i).reset_moves
+  if !mega
+    # deactivate asking player for learning move on form change
+    pbSet(40, 1)
+    # Roll forms
+    (26..28).each do |i|
+        pk = pbGet(i)
+        oldForm = GameData::Species.get_species_form(pk.species,pk.form).real_form_name.to_s
+        newFormNumber = pbRollForm(pk.species)
+        newForm = GameData::Species.get_species_form(pk.species,newFormNumber).real_form_name.to_s
+        if oldForm != newForm
+            pbGet(i).form = newFormNumber
+            pbGet(i).reset_moves
+        end
     end
+    # activate asking player for learning move on form change
+    pbSet(40, 0)
   end
-
-  # activate asking player for learning move on form change
-  pbSet(40, 0)
     # 25% chance for hidden ability, if not on starting map
     if($game_map.map_id != 79 && hiddenAbility && rand(4)==1)
         pbGet(26).setAbility(2)

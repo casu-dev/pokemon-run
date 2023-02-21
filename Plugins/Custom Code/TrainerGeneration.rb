@@ -185,21 +185,21 @@ def pbGetTRAINER_OVERRIDE
       {
         # Boss F2
         tType: :ELITEFOUR_Agatha, tName: 'Agatha',
-        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 3,
+        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 4,
         pkmnPool: getOakPoolLW5,
         LoseText: "GG WP"
       },
       {
         # Boss F3
         tType: :LEADER_Misty, tName: 'Misty',
-        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 3,
+        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 5,
         pkmnPool: getOakPoolLW6,
         LoseText: "GG WP"
       },
       {
         # Boss F4
         tType: :ELITEFOUR_Lance, tName: 'Lance',
-        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 3,
+        lvl1: pbGetBossLv, lvl2: pbGetBossLv, numPkmn: 6,
         pkmnPool: getOakPoolLW7,
         LoseText: "GG WP"
       },
@@ -247,8 +247,12 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
             pbSet(58,2) if improvedTrainers.include? template[:tType]
             pbSet(58,3) if boss
             while newParty.length < template[:numPkmn]
-              pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }
-              pkmnPool = pbGetTierPool(pbGet(62)) if pbGetGameMode == 6
+              pkmnPool = []
+              if pbGetGameMode == 6
+                pkmnPool = pbGetTierPool(pbGet(62))
+              else
+                pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }
+              end
               new_species = pkmnPool[rand(pkmnPool.length)]
 
               alreadyPicked.push(new_species)
