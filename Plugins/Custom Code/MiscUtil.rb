@@ -158,9 +158,9 @@ def pbForceEvo?(pkmn)
     evo_info.each do |i|
       evos << _INTL(i[0].to_s) unless evos.include? i[0].to_s
     end
-    evos << _INTL('Go back')
+    evos << _INTL('Cancel')
 
-    cmd = pbMessage(speech || _INTL('Choose an Evolution.'), evos)
+    cmd = pbMessage(speech || _INTL('Choose an Evolution.'), evos, evos.length)
     # pbMessage(cmd.to_s)
     if cmd != evos.length - 1
       evo = PokemonEvolutionScene.new
@@ -821,6 +821,11 @@ def pbResetMay
 end
 
 def pbResetRoom
+    # add day care pokemon to received pokemon array
+    pbSet(67, []) if !(pbGet(67).is_a?(Array))
+    $Trainer.mystery_gifts += pbGet(67)
+
+    # add party poke too
     n = $Trainer.party.length
       (0..n).each do |i|
           if $Trainer.party[n - i]
@@ -829,6 +834,7 @@ def pbResetRoom
           end
       end
 
+    # add box poke too
       $PokemonStorage.boxes.each do |box|
         box.each do |pkmn|
             $Trainer.mystery_gifts.push(pkmn)  if !pkmn.nil?
@@ -847,6 +853,7 @@ def pbResetRoom
     $Trainer.money = 0
     $PokemonBag.clear
     $Trainer.mystery_gifts = []
+    pbSet(67, [])
    #pbMessage(_INTL($Trainer.mystery_gifts.to_s))
 end
 
@@ -1923,18 +1930,149 @@ def pbGetGamemodeDescr
     return descr
 end
 
-def pbScout1
-index = 818
-line = ""
-    GameData::Type.each do |type|
-        next unless type.id.to_s != "QMARKS"
-        line += index.to_s + "," +type.id.to_s+"0,"+type.name.to_s+",Unnamed,8,0,\"Beat Monotype " +type.name.to_s+".\",2,0,6\n"
-        index +=1
+def pbRollPlayerTradePoke
+    ownedSpecies = []
+
+    # check party
+    n = $Trainer.party.length
+    (0..n).each do |i|
+      if $Trainer.party[n - i]
+        ownedSpecies.push($Trainer.party[n - i].species)
+      end
     end
-        GameData::Type.each do |type|
-            next unless type.id.to_s != "QMARKS"
-            line += index.to_s + "," +type.id.to_s+"1,"+type.name.to_s+",Unnamed,8,0,\"Beat Monotype " +type.name.to_s+".\",2,0,6\n"
-            index +=1
+    # check boxes
+    $PokemonStorage.boxes.each do |box|
+        box.each do |pkmn|
+           ownedSpecies.push(pkmn.species)  if !pkmn.nil?
         end
-        pbWriteIntoFile("newitems.txt", line)
+    end
+    ownedSpecies |= []
+    pbSet(28, ownedSpecies.sample)
+end
+
+def pbExplicitTrade?
+    obtainablePoke = pbGet(26)
+    obtainablePoke.shiny = true
+    myPoke = pbGet(28)
+    myPokeName = GameData::Species.try_get(myPoke).name
+    pbMessage('\rI\'m looking for a \\c[10]' + myPokeName + '\r, and offer my \\c[10]' + obtainablePoke.name + '\r.')
+    if pbRelearnMoveScreen(obtainablePoke, false, true)
+        pbChoosePokemon(1, 3, proc{|pkmn| pkmn.species == myPoke}, false)
+        if pbGet(1) == -1
+            pbMessage('\rYou don\'t want to trade? Aww...')
+        else
+            cmd3 = pbMessage(_INTL('\rDo you want to trade your \\c[10]'+myPokeName+'\r for my \\c[10]'+obtainablePoke.name+'\r?'), ["Yes", "No"], 2)
+            if cmd3 == 0
+                pbSetPkmnEv(obtainablePoke)
+                obtainablePoke.calc_stats
+                pbStartTrade(pbGet(1),obtainablePoke, _I("Andrea"), 1)
+                return true
+            else
+                pbMessage('\rYou don\'t want to trade? Aww...')
+            end
+        end
+    end
+    return false
+end
+
+def pbRandomTrade?
+    obtainablePoke = pbGet(27)
+    pbMessage('\bI\'m looking for \\c[10]any Pokémon\b, and offer a \\c[10]random perfect IV Pokémon\b.')
+    pbChoosePokemon(1, 3, proc{|pkmn| true}, false)
+    if pbGet(1) == -1
+        pbMessage('\bYou don\'t want to trade? Aww...')
+    else
+        cmd3 = pbMessage(_INTL('\bDo you want to trade your \\c[10]'+$Trainer.party[pbGet(1)].name+'\b?'), ["Yes", "No"], 2)
+        if cmd3 == 0
+            GameData::Stat.each_main do |s|
+                obtainablePoke.iv[s.id.to_sym] = 31
+            end
+            pbSetPkmnEv(obtainablePoke)
+            obtainablePoke.calc_stats
+            pbStartTrade(pbGet(1),obtainablePoke, _I("Joe"), 1)
+            return true
+        else
+            pbMessage('\bYou don\'t want to trade? Aww...')
+        end
+    end
+return false
+end
+
+def pbDayCare?
+    pbMessage('\bYou can give me a Pokémon to care for. At the \\c[10]beginning of the next floor\b, I\'ll deliver it to you with a \\c[10]higher lv\b.')
+    pbChoosePokemon(1, 3, proc{|pkmn| $Trainer.party.length > 1}, false)
+    if pbGet(1) == -1
+        pbMessage('\bCome back any time.')
+    else
+        cmd3 = pbMessage(_INTL('\bWanna deposit \\c[10]'+$Trainer.party[pbGet(1)].name+'\b?'), ["Yes", "No"], 2)
+        if cmd3 == 0
+            temp = $Trainer.party[pbGet(1)].dup
+            pbSet(67, []) if !(pbGet(67).is_a?(Array))
+            pbGet(67).push(temp)
+            $Trainer.party.delete_at(pbGet(1))
+            return true
+        else
+            pbMessage('\bCome back any time.')
+        end
+    end
+    return false
+end
+
+def pbDayCareHasPoke?
+    pbSet(67, []) if !(pbGet(67).is_a?(Array))
+    return true if (pbGet(67).length > 0)
+    return false
+end
+
+def pbDayCareDeliver
+    pbSet(67, []) if !(pbGet(67).is_a?(Array))
+    pbGet(67).each do |pkmn|
+        if pkmn
+            lv = POKEMON_FLOOR_START_LEVEL[pbGetStagesCleared]
+            lv = (lv + (lv.to_f/10).round(half: :up)).to_i
+            lv = 100 if (lv > 100)
+            pkmn.level = lv
+
+            pbSetPkmnEv(pkmn)
+            pkmn.calc_stats
+            pkmn.reset_moves
+            pbAddPokemon(pkmn)
+        end
+    end
+    pbSet(67, [])
+end
+
+def pbMaxIV?(pkmn)
+    GameData::Stat.each_main do |s|
+        return false if pkmn.iv[s.id.to_sym] != 31
+    end
+    return true
+end
+
+def pbCelebi?
+    pbChoosePokemon(1, 3, proc{|pkmn| !pbMaxIV?(pkmn)}, false)
+    if pbGet(1) != -1
+        cmd3 = pbMessage(_INTL('Wanna max the IVs of \\c[10]'+$Trainer.party[pbGet(1)].name+'\b?'), ["Yes", "No"], 2)
+        if cmd3 == 0
+            name = $Trainer.party[pbGet(1)].name.to_s
+            if name == "Mewtwo"
+                p = Pokemon.new(:MEW, $Trainer.party[pbGet(1)].level)
+                pbSetPkmnEv(p)
+                $Trainer.party[pbGet(1)] = p
+            end
+            GameData::Stat.each_main do |s|
+                $Trainer.party[pbGet(1)].iv[s.id.to_sym] = 31
+            end
+            $Trainer.party[pbGet(1)].calc_stats
+            return true
+        end
+    end
+    return false
+end
+
+def pbScout
+    GameData::Stat.each_main do |s|
+        $Trainer.party[0].iv[s.id.to_sym] = 31
+        $Trainer.party[0].calc_stats
+    end
 end

@@ -12,6 +12,9 @@ MAP_BERRYS = { id: 114, name: 'Berry Granny', posx: 9, posy: 10, value: 55, weig
 MAP_MONEY = { id: 115, name: 'Wishing Well', posx: 10, posy: 11, value: 60, weight: 10, sprite: "skull_2:2" }
 MAP_TM_SHOP = { id: 110, name: 'TM Shop', posx: 4, posy: 8, value: 65, weight: 20, sprite: "trainer_SAILOR" }
 MAP_STEAL_POKE = { id: 116, name: 'Rocket Hideout', posx: 6, posy: 9, value: 70, weight: 5, sprite: "trainer_TEAMROCKET_M" }
+MAP_TRADE_POKE = { id: 121, name: 'Trade Pokémon', posx: 3, posy: 8, value: 75, weight: 10, sprite: "trainer_POKEMONRANGER_F" }
+MAP_DAY_CARE = { id: 122, name: 'Day Care', posx: 4, posy: 7, value: 80, weight: 5, sprite: "NPC 10" }
+MAP_HIDDEN_TRAIL = { id: 123, name: 'Maximize IVs', posx: 16, posy: 6, value: 85, weight: 5, sprite: "Pokemon 10" }
 
 # Pool used for rolling random event
 MAP_EVENT_POOL = [
@@ -23,7 +26,10 @@ MAP_EVENT_POOL = [
   MAP_BERRYS,
   MAP_MONEY,
   MAP_TM_SHOP,
-  MAP_STEAL_POKE
+  MAP_STEAL_POKE,
+  MAP_TRADE_POKE,
+  MAP_DAY_CARE,
+  MAP_HIDDEN_TRAIL
 ]
 
 # Rooms that are different on each floor 
@@ -70,6 +76,10 @@ MAP_EVENT_AVOID_LAST = [
   MAP_MONEY
 ]
 
+MAP_EVENT_AVOID_F4 = [
+  MAP_DAY_CARE
+]
+
 def isEventRoom(room)
   return true if MAP_EVENT_POOL.include? room
   return true if MAP_FIGHT_ELITE_TRAINER_LIST.include? room
@@ -86,6 +96,7 @@ def pbGenDest()
   # special handling for first and last room
   avoidRooms += MAP_EVENT_AVOID_FIRST if rooms_cleared == 0 and stages_cleared == 0
   avoidRooms += MAP_EVENT_AVOID_LAST if rooms_cleared == 10 and stages_cleared == 3
+  avoidRooms += MAP_EVENT_AVOID_F4 if pbGet(48) == 3
 
   room1 = pbGetPossDest(0, avoidRooms)
   pbSet(29, room1)
