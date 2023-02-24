@@ -505,20 +505,28 @@ def pbGenMegaPkmn
 end
 
 def pbPkmnOwned?(pkmn1, pkmn2, pkmn3)
+    babySpeciesInput = []
+    babySpeciesInput.push(GameData::Species.try_get(pkmn1).get_baby_species)
+    babySpeciesInput.push(GameData::Species.try_get(pkmn2).get_baby_species)
+    babySpeciesInput.push(GameData::Species.try_get(pkmn3).get_baby_species)
+    #remove duplicates
+    babySpeciesInput |= []
+
+  # check boxes
   $PokemonStorage.boxes.each do |box|
       box.each do |pkmn|
           if pkmn != nil
-              if pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn1, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn2, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn3, 5).species_data.get_baby_species.to_s
-                echoln "Pokemon was found in a box"
+              if babySpeciesInput.include? pkmn.species_data.get_baby_species
                 return true
               end
           end
       end
   end
 
+  # check party
   $Trainer.party.each do |pkmn|
       if pkmn != nil
-          if pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn1, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn2, 5).species_data.get_baby_species.to_s || pkmn.species_data.get_baby_species.to_s == Pokemon.new(pkmn3, 5).species_data.get_baby_species.to_s
+          if babySpeciesInput.include? pkmn.species_data.get_baby_species
               return true
           end
       end

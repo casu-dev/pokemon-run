@@ -2071,8 +2071,6 @@ def pbCelebi?
 end
 
 def pbScout
-    GameData::Stat.each_main do |s|
-        $Trainer.party[0].iv[s.id.to_sym] = 31
-        $Trainer.party[0].calc_stats
-    end
+pbMessage("correct Lvl Evo" + pbGetCorrectLvlEvo(:EEVEE, 70).to_s)
+pbMessage("correct Evo" + pbGetCorrectEvo(:EEVEE).to_s)
 end
