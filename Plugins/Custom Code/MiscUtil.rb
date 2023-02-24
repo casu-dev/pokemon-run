@@ -152,20 +152,22 @@ def pbForceEvo?(pkmn)
   # To-do?: Exclude Eggs
   evo_info = pkmn.species_data.get_evolutions
   if pkmn.species_data.get_evolutions[0] && pbCanEvoInCurrentMode(pkmn)
-    speech = nil
     evos = []
+    evoNames = []
 
     evo_info.each do |i|
       evos << _INTL(i[0].to_s) unless evos.include? i[0].to_s
     end
-    evos << _INTL('Cancel')
 
-    cmd = pbMessage(speech || _INTL('Choose an Evolution.'), evos, evos.length)
-    # pbMessage(cmd.to_s)
-    if cmd != evos.length - 1
+    evos.each do |e|
+        evoNames.push(GameData::Species.try_get(e).name)
+    end
+    evoNames << _INTL('Cancel')
+
+    cmd = pbMessage(_INTL('Choose an Evolution.'), evoNames, evoNames.length)
+    if cmd != evoNames.length - 1
       evo = PokemonEvolutionScene.new
       evo.pbStartScreen(pkmn, evos[cmd])
-      # evo.pbStartScreen(pkmn,pkmn.species_data.get_evolutions[0][0])
       evo.pbEvolution
       evo.pbEndScreen
       true

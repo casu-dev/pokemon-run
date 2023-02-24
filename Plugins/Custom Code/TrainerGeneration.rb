@@ -246,7 +246,7 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
             # make it so the Pokémon get better movesets
             pbSet(58,2) if improvedTrainers.include? template[:tType]
             pbSet(58,3) if boss
-            pbMessage("This Trainers Pokémon have \\c[10]improved movesets\\c[0].") if ((pbGet(58) > 1 && pbGet(48)>1 && pbGetDifficulty == 1) || (pbGet(58) == 3 && pbGet(48)>1))
+            pbMessage("Opposing Pokémon have \\c[10]improved movesets\\c[0].") if ((pbGet(58) > 1 && pbGet(48)>1 && pbGetDifficulty == 1) || (pbGet(58) == 3 && pbGet(48)>1))
             while newParty.length < template[:numPkmn]
               pkmnPool = []
               if pbGetGameMode == 6
