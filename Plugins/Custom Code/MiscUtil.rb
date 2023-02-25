@@ -2012,7 +2012,7 @@ return false
 end
 
 def pbDayCare?
-    pbMessage('\bYou can give me a Pokémon to care for. At the \\c[10]beginning of the next floor\b, I\'ll deliver it to you with a \\c[10]higher lv\b.')
+    pbMessage('\bYou can give me a Pokémon to care for. At the \\c[10]beginning of the next floor\b, I\'ll deliver it to you with a \\c[10]higher Lv\b.')
     pbChoosePokemon(1, 3, proc{|pkmn| $Trainer.party.length > 1}, false)
     if pbGet(1) == -1
         pbMessage('\bCome back any time.')
@@ -2020,6 +2020,10 @@ def pbDayCare?
         cmd3 = pbMessage(_INTL('\bWanna deposit \\c[10]'+$Trainer.party[pbGet(1)].name+'\b?'), ["Yes", "No"], 2)
         if cmd3 == 0
             temp = $Trainer.party[pbGet(1)].dup
+            item = nil
+            item = temp.item.id if temp.item
+            temp.item = nil
+            pbReceiveItem(item) if item
             pbSet(67, []) if !(pbGet(67).is_a?(Array))
             pbGet(67).push(temp)
             $Trainer.party.delete_at(pbGet(1))
