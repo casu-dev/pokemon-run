@@ -924,6 +924,7 @@ def pbShortCut?
             pbSet(56, true)
             pbSet(61, 0)
             pbSet(51, false)
+            pbSet(68, [])
             $game_switches[78] = false
             $PokemonBag.pbStoreItem(:PREMIUMSOAP) if pbAllAchvs?
             $Trainer.money = 2000
@@ -1206,14 +1207,24 @@ def pbOfferWeakenBerries
 end
 
 def pbReceiveGems(amount)
+    pbSet(68, []) if pbGet(68) == 0
     gems = %i[FIREGEM WATERGEM ELECTRICGEM GRASSGEM ICEGEM FIGHTINGGEM POISONGEM GROUNDGEM FLYINGGEM PSYCHICGEM BUGGEM ROCKGEM GHOSTGEM DRAGONGEM DARKGEM STEELGEM NORMALGEM FAIRYGEM]
+    gemsNotOwned = gems.dup
+    gemsNotOwned -= pbGet(68)
+    gems = gemsNotOwned if gemsNotOwned.length >= 3
+
     if amount >= 1
         result = []
         (0...amount).each do |_i|
-          result.push(gems.delete_at(rand(gems.length)))
+          gem = gems.delete_at(rand(gems.length))
+          pbGet(68).push(gem)
+          result.push(gem)
           pbStoreItem(result[_i])
         end
     end
+    receivedGems = pbGet(68)
+    receivedGems |= []
+    pbSet(68, receivedGems)
     pbMEPlay("Item get")
     pbMessage("You found \\c[1]" + amount.to_s + " gems\\c[0].")
 end
