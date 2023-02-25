@@ -76,7 +76,7 @@ MAP_EVENT_AVOID_LAST = [
   MAP_MONEY
 ]
 
-MAP_EVENT_AVOID_F4 = [
+MAP_EVENT_AVOID_F1_FIRST_TWO_AND_F4 = [
   MAP_DAY_CARE
 ]
 
@@ -93,10 +93,10 @@ def pbGenDest()
   # load last event rooms as blacklist
   avoidRooms = [pbGet(38),  pbGet(39)]
 
-  # special handling for first and last room
+  # special handling for first and last room and Day Care
   avoidRooms += MAP_EVENT_AVOID_FIRST if rooms_cleared == 0 and stages_cleared == 0
   avoidRooms += MAP_EVENT_AVOID_LAST if rooms_cleared == 10 and stages_cleared == 3
-  avoidRooms += MAP_EVENT_AVOID_F4 if pbGet(48) == 3
+  avoidRooms += MAP_EVENT_AVOID_F1_FIRST_TWO_AND_F4 if ((pbGet(48) == 0 && rooms_cleared < 3) || pbGet(48) == 3)
 
   room1 = pbGetPossDest(0, avoidRooms)
   pbSet(29, room1)
