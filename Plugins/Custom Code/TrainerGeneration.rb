@@ -251,6 +251,7 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
               pkmnPool = []
               if pbGetGameMode == 6
                 pkmnPool = pbGetTierPool(pbGet(62))
+                pkmnPool -= alreadyPicked
               else
                 pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }
               end

@@ -559,6 +559,12 @@ def pbRandomPkmnGeneration(mega = false, hiddenAbility = true)
         pbGenSetTierMegaPkmn
     else
        pbGenPokeChoice
+       loopCounter = 0
+       while (pbPkmnOwned?(pbGet(26), pbGet(27), pbGet(28)) && loopCounter <10)
+           pbGenPokeChoice
+           loopCounter += 1
+           echoln "Pokemon owned BST. Rerolling..."
+       end
     end
   elsif(monotype)
     if mega
