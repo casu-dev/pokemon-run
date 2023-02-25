@@ -1588,7 +1588,7 @@ end
 def pbGetMints(saleMints)
     mints = %i[ADAMANTMINT BOLDMINT IMPISHMINT MODESTMINT CALMMINT CAREFULMINT TIMIDMINT JOLLYMINT NAIVEMINT]
     mints.each do |i|
-        setPrice(i, 1500, 0)
+        setPrice(i, 1200, 0)
     end
 
     reorderedMints = []
