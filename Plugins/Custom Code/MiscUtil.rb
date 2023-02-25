@@ -2072,6 +2072,16 @@ def pbCelebi?
     return false
 end
 
+def pbSpawnInfo
+    floor = pbGet(48) + 1
+    lv = POKEMON_FLOOR_START_LEVEL[floor-1]
+    targetEv = 0
+    targetEv = 46 if floor == 2
+    targetEv = 69 if floor == 3
+    targetEv = 84 if floor == 4
+    pbMessage("\\c[10]Floor "+floor.to_s+"\\c[0] entered. Your Pokémon will be set to \\c[10]Lv. "+lv.to_s+"\\c[0]. \\c[10]EVs increased\\c[0].")
+end
+
 def pbScout
 pbMessage("correct Lvl Evo" + pbGetCorrectLvlEvo(:EEVEE, 70).to_s)
 pbMessage("correct Evo" + pbGetCorrectEvo(:EEVEE).to_s)
