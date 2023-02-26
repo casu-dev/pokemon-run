@@ -483,8 +483,9 @@ def pbShowLvUpMoves(pkmnid)
 end
 
 def pbShowEggMoves(pkmnid)
-    if GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,0).egg_moves.to_s != '[]'
-              moveInfo = GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,0).egg_moves
+    form = $Trainer.party[pkmnid].form
+    if GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,form).egg_moves.to_s != '[]'
+              moveInfo = GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,form).egg_moves
               infoString = ""
               moveInfo.each do |m|
                 infoString += GameData::Move.get(m).name
