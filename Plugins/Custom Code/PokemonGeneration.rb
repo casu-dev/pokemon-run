@@ -602,7 +602,7 @@ def pbRandomPkmnGeneration(mega = false, hiddenAbility = true)
     # Roll forms
     (26..28).each do |i|
         pk = pbGet(i)
-        oldForm = GameData::Species.get_species_form(pk.species,pk.form).real_form_name.to_s
+        oldForm = pk.species_data.real_form_name.to_s
         newFormNumber = pbRollForm(pk.species)
         newForm = GameData::Species.get_species_form(pk.species,newFormNumber).real_form_name.to_s
         if oldForm != newForm
