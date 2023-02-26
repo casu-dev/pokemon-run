@@ -1248,7 +1248,7 @@ end
 def pbKeepBaseForm(pkmnID)
     pkmnFullyEvolvedID = pbGetCorrectEvo(pkmnID)
     megaPool = getOakMegas.dup
-    megaPool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE AEGISLASH CASTFORM GROUDON KYOGRE]
+    megaPool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE AEGISLASH CASTFORM GROUDON KYOGRE EISCUE]
     megaPool -= %i[SLOWBRO]
     return true if megaPool.include? pkmnFullyEvolvedID
     return false
@@ -1970,6 +1970,11 @@ def pbExplicitTrade?
             if cmd3 == 0
                 pbSetPkmnEv(obtainablePoke)
                 obtainablePoke.calc_stats
+                temp = $Trainer.party[pbGet(1)].dup
+                item = nil
+                item = temp.item.id if temp.item
+                temp.item = nil
+                pbReceiveItem(item) if item
                 pbStartTrade(pbGet(1),obtainablePoke, _I("Andrea"), 1)
                 return true
             else
@@ -1994,6 +1999,11 @@ def pbRandomTrade?
             end
             pbSetPkmnEv(obtainablePoke)
             obtainablePoke.calc_stats
+            temp = $Trainer.party[pbGet(1)].dup
+            item = nil
+            item = temp.item.id if temp.item
+            temp.item = nil
+            pbReceiveItem(item) if item
             pbStartTrade(pbGet(1),obtainablePoke, _I("Joe"), 1)
             return true
         else
