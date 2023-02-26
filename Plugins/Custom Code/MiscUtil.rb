@@ -763,8 +763,8 @@ def pbChooseMode
                     tierlist = ["Low BST", "Medium BST", "High BST", "Legendaries", "Cancel"]
                     cmd4 = pbMessage(_INTL('\rWhich category you want to play? BST means Base-Stat-Total.'), tierlist,5)
                     if cmd4 < tierlist.length-1
-                        cmd5 = pbMessage(_INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2)
-                        if cmd5 == 0
+                        cmd5 = pbMessage(_INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if $Trainer.party.length > 0
+                        if cmd5 != 1
                             pbWriteIntoFile("gamemode.txt", 6)
                             pbSet(62, cmd4)
                             pbWriteIntoFile("battlerinfo.txt", 0)
