@@ -139,51 +139,51 @@ Pokemon = VILEPLUME,50
 #-------------------------------
 [BLACKBELT,Bruce]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = DRIFLOON,16
+Pokemon = DRIFLOON,14
 #-------------------------------
 [BLACKBELT,Bruce,1]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = SLUGMA,16
+Pokemon = SLUGMA,14
 #-------------------------------
 [BLACKBELT,Bruce,2]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = SLOWPOKE,16
+Pokemon = SLOWPOKE,14
 #-------------------------------
 [BLACKBELT,Bruce,3]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = KOFFING,16
+Pokemon = KOFFING,14
 #-------------------------------
 [BLACKBELT,Bruce,4]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = RHYHORN,16
+Pokemon = RHYHORN,14
 #-------------------------------
 [BLACKBELT,Bruce,5]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = ODDISH,16
+Pokemon = ODDISH,14
 #-------------------------------
 [BLACKBELT,Bruce,6]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = PETILIL,16
+Pokemon = PETILIL,14
 #-------------------------------
 [BLACKBELT,Bruce,7]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = BALTOY,16
+Pokemon = BALTOY,14
 #-------------------------------
 [BLACKBELT,Bruce,8]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = UNOWN,16
+Pokemon = UNOWN,14
 #-------------------------------
 [BLACKBELT,Bruce,9]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = UNOWN,16
+Pokemon = UNOWN,14
 #-------------------------------
 [BLACKBELT,Bruce,10]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = DEINO,16
+Pokemon = DEINO,14
 #-------------------------------
 [BLACKBELT,Bruce,11]
 LoseText = "Wow! I'm impressed. Here, take your reward."
-Pokemon = WHISMUR,16
+Pokemon = WHISMUR,14
 #-------------------------------
 [BLACKBELT,Bruce,12]
 LoseText = "Wow! I'm impressed. Here, take your reward."

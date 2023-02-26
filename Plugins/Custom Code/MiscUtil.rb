@@ -1438,13 +1438,13 @@ def pbGetLvElite
     #easy
     elsif difficulty == -1
         if floor == 1
-                return 12
+                return 10
             elsif floor == 2
-                return 28
+                return 26
             elsif floor == 3
-                return 55
+                return 52
             else
-                return 85
+                return 80
             end
     end
 end
@@ -1477,13 +1477,13 @@ def pbGetLvMiddle
     #easy
     elsif difficulty == -1
         if floor == 1
-                return 11
+                return 10
             elsif floor == 2
-                return 28
+                return 26
             elsif floor == 3
-                return 55
+                return 53
             else
-                return 83
+                return 80
             end
     end
 end
@@ -1551,13 +1551,13 @@ def pbGetBossLv
     #easy
     elsif difficulty == -1
         if floor == 1
-                return 14
+                return 13
             elsif floor == 2
-                return 29
+                return 27
             elsif floor == 3
-                return 56
+                return 53
             else
-                return 85
+                return 80
             end
     end
 
