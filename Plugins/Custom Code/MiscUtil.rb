@@ -624,7 +624,7 @@ def pbChooseMode
         end
         shownmodes.push("Cancel")
           speech = nil
-          cmd2 = pbMessage(speech || _INTL('\rWhich game mode do you want to play?'), shownmodes, shownmodes.length)
+          cmd2 = pbMessage(_INTL('\rWhich game mode do you want to play?'), shownmodes, shownmodes.length)
             oldMode = pbGetGameMode
             loop do
                 break if (cmd2 == shownmodes.length-1)
@@ -662,7 +662,7 @@ def pbChooseMode
                      end
                      break
                 elsif cmd2 == 2
-                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
+                     cmd5 = pbMessage(_INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
                      if (cmd5 == 0 || oldMode != 6)
                          pbWriteIntoFile("gamemode.txt", 2)
                          pbWriteIntoFile("battlerinfo.txt", 11)
@@ -690,22 +690,17 @@ def pbChooseMode
                        end
                      end
                    end
-                   if (!hasFullyEvolved)
-                    cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
-                    if (cmd5 == 0 || oldMode != 6)
+                    cmd5 = pbMessage(_INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if (oldMode == 6 || hasFullyEvolved)
+                    if (cmd5 != 1)
                          pbWriteIntoFile("gamemode.txt", 3)
                          pbWriteIntoFile("battlerinfo.txt", 0)
                          pbPlaySaveSound
                          pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All your Pokémon will not be fully evolved, but their moves have their secondary effect chance tripled."))
-                         pbResetMay if oldMode == 6
+                         pbResetMay if (oldMode == 6 || hasFullyEvolved)
                     end
                     break
-                   else
-                        pbMessage("You \\c[10]can't switch\\c[0] to this mode, while owning a fully evolved Pokémon.")
-                        break
-                   end
                 elsif cmd2 == 4
-                     cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
+                     cmd5 = pbMessage(_INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
                      if (cmd5 == 0 || oldMode != 6)
                          pbWriteIntoFile("gamemode.txt", 4)
                          pbWriteIntoFile("battlerinfo.txt", 0)
@@ -735,36 +730,32 @@ def pbChooseMode
                         end
                     end
                     if validType
-                        speech = nil
-                        cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if oldMode == 6
-                        if (cmd5 == 0 || oldMode != 6)
-                            hasFittingType = true
-                            $Trainer.party.each do |pkmn|
-                               if !pkmn.nil?
-                                pkmnData = GameData::Species.try_get(pkmn.species)
-                                hasFittingType = false if !(newType == pkmnData.type1) && !(newType == pkmnData.type2)
-                               end
+                        hasFittingType = true
+                        $Trainer.party.each do |pkmn|
+                           if !pkmn.nil?
+                            pkmnData = GameData::Species.try_get(pkmn.species)
+                            hasFittingType = false if !(newType == pkmnData.type1) && !(newType == pkmnData.type2)
                            end
+                       end
 
-                           $PokemonStorage.boxes.each do |box|
-                             box.each do |pkmn|
-                               if !pkmn.nil?
-                                pkmnData = GameData::Species.try_get(pkmn.species)
-                                hasFittingType = false if !(newType == pkmnData.type1) && !(newType == pkmnData.type2)
-                               end
-                             end
+                       $PokemonStorage.boxes.each do |box|
+                         box.each do |pkmn|
+                           if !pkmn.nil?
+                            pkmnData = GameData::Species.try_get(pkmn.species)
+                            hasFittingType = false if !(newType == pkmnData.type1) && !(newType == pkmnData.type2)
                            end
-                            if (hasFittingType || oldMode == 6)
-                                pbWriteIntoFile("gamemode.txt", 5)
-                                pbWriteIntoFile("battlerinfo.txt", 0)
-                                pbSet(59, newType)
-                                pbSet(64, typeIndex)
-                                pbPlaySaveSound
-                                pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+typeNames[typeIndex].to_s+"\\c[0] type."))
-                                pbResetMay if oldMode == 6
-                            else
-                                pbMessage(_INTL("Can't switch to \\c[10]"+ pbGetGameModes[cmd2] +" " + typeNames[typeIndex].to_s + "\\c[0], because you own a Pokémon from another type."))
-                            end
+                         end
+                       end
+
+                        cmd5 = pbMessage(_INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2) if (oldMode == 6 || !hasFittingType)
+                        if (cmd5 != 1)
+                            pbWriteIntoFile("gamemode.txt", 5)
+                            pbWriteIntoFile("battlerinfo.txt", 0)
+                            pbSet(59, newType)
+                            pbSet(64, typeIndex)
+                            pbPlaySaveSound
+                            pbMessage(_INTL("Game mode set to \\c[10]"+ pbGetGameModes[cmd2] +"\\c[0]. All offered Pokémon will have the \\c[10]"+typeNames[typeIndex].to_s+"\\c[0] type."))
+                            pbResetMay if (oldMode == 6 || !hasFittingType)
                         end
                     end
                     break
@@ -772,7 +763,7 @@ def pbChooseMode
                     tierlist = ["Low BST", "Medium BST", "High BST", "Legendaries", "Cancel"]
                     cmd4 = pbMessage(_INTL('\rWhich category you want to play? BST means Base-Stat-Total.'), tierlist,5)
                     if cmd4 < tierlist.length-1
-                        cmd5 = pbMessage(speech || _INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2)
+                        cmd5 = pbMessage(_INTL('\rAre you sure, you will \\c[10]loose your current party\\c[0]?'), ["Yes", "No"],2)
                         if cmd5 == 0
                             pbWriteIntoFile("gamemode.txt", 6)
                             pbSet(62, cmd4)
@@ -909,7 +900,7 @@ def pbShortCut?
     if pbGet(48) > 1
         speech = nil
         yn = ["Yes", "No"]
-        cmd3 = pbMessage(speech || _INTL('\bI see you have \\c[10]reached floor 3\b or higher. Do you want to \\c[10]skip\b the majority of \\c[10]floor 1 and directly battle Bruno\b, after getting a few Pokémon?'), yn)
+        cmd3 = pbMessage(_INTL('\bI see you have \\c[10]reached floor 3\b or higher. Do you want to \\c[10]skip\b the majority of \\c[10]floor 1 and directly battle Bruno\b, after getting a few Pokémon?'), yn)
         if cmd3 == 0
             pbSet(37, rand(3))
             pbMessage('\bHe will use his \\c[10]' + pbGetBossHint("\\bI will fight you at the end of this floor, with my $team team.",:ELITEFOUR_Bruno,"Bruno") + '\b team.') if (pbGetGameMode != 6 && !pbGet(53))
@@ -973,7 +964,7 @@ def pbResetAssistant
     if size == 0
         speech = nil
         yn = ["Yes", "No"]
-        cmd2 = pbMessage(speech || _INTL('\bYou want to start the new run \\c[10]without\b one of your old Pokémon?'), yn, 2)
+        cmd2 = pbMessage(_INTL('\bYou want to start the new run \\c[10]without\b one of your old Pokémon?'), yn, 2)
             if cmd2 == 0
                pbClearAllBoxes
                if !pbShortCut?
