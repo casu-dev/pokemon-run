@@ -2099,6 +2099,29 @@ def pbSpawnInfo
     pbMessage("\\c[10]Floor "+floor.to_s+"\\c[0] entered. Your Pokémon will be set to \\c[10]Lv. "+lv.to_s+"\\c[0]. \\c[10]EVs increased\\c[0].")
 end
 
+def pbNamePokemon(pkmn)
+    pkmn.name = pbEnterPokemonName(_INTL("{1}'s nickname?", pkmn.speciesName),
+                                   0, Pokemon::MAX_NAME_SIZE, "", pkmn)
+end
+
+def pbGetOwnedPkmn
+    owned = []
+    #add party
+    $Trainer.party.each do |pkmn|
+        owned.push(pkmn.species) if pkmn
+    end
+    #add box
+    $PokemonStorage.boxes.each do |box|
+        box.each do |pkmn|
+            owned.push(pkmn.species)  if pkmn
+        end
+    end
+    #add day care
+    pbSet(67, []) if !(pbGet(67).is_a?(Array))
+    owned += pbGet(67)
+    return owned
+end
+
 def pbScout
 pbMessage("correct Lvl Evo" + pbGetCorrectLvlEvo(:EEVEE, 70).to_s)
 pbMessage("correct Evo" + pbGetCorrectEvo(:EEVEE).to_s)
