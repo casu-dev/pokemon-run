@@ -839,8 +839,10 @@ def pbResetRoom
 
     for i in 0...$PokemonStorage.maxBoxes
        for j in 0...$Trainer.mystery_gifts.length()
-         $Trainer.mystery_gifts[j].item=nil
-         $PokemonStorage[i, j] = $Trainer.mystery_gifts[j]
+         pkmn = $Trainer.mystery_gifts[j]
+         pkmn.item=nil
+         pkmn.heal
+         $PokemonStorage[i, j] = pkmn
        end
     end
 
@@ -2119,6 +2121,7 @@ def pbGetOwnedPkmn
     #add day care
     pbSet(67, []) if !(pbGet(67).is_a?(Array))
     owned += pbGet(67)
+    owned |= []
     return owned
 end
 
