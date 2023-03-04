@@ -150,28 +150,28 @@ def pbGetTRAINER_OVERRIDE
         # Rocket Grunt F1
         tType: :TEAMROCKET_M, tName: 'Grunt',
         lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
-        pkmnPool: pbgetMonoTypePool(pbGetMonoType),
+        pkmnPool: pbGetMonoGruntPool(pbGetMonoType),
         LoseText: "gruntF1MT"
       },
       {
         # Rocket Grunt F2
         tType: :TEAMROCKET_M, tName: 'Grunt',
         lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
-        pkmnPool: pbgetMonoTypePool(pbGetMonoType),
+        pkmnPool: pbGetMonoGruntPool(pbGetMonoType),
         LoseText: "gruntF2MT"
       },
       {
         # Rocket Grunt F3
         tType: :TEAMROCKET_M, tName: 'Grunt',
         lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
-        pkmnPool: pbgetMonoTypePool(pbGetMonoType),
+        pkmnPool: pbGetMonoGruntPool(pbGetMonoType),
         LoseText: "gruntF3MT"
       },
       {
         # Rocket Grunt F4
         tType: :TEAMROCKET_M, tName: 'Grunt',
         lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
-        pkmnPool: pbgetMonoTypePool(pbGetMonoType),
+        pkmnPool: pbGetMonoGruntPool(pbGetMonoType),
         LoseText: "gruntF4MT"
       },
   # ====== Floor Bosses =========

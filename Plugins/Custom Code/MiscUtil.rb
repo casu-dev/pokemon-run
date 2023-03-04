@@ -1954,6 +1954,9 @@ def pbRollPlayerTradePoke
         end
     end
     ownedSpecies |= []
+    explTradeSpecies = pbGet(26).species
+    #Switch 28 and 26 if Player owns species in slot 26 already
+    pbSet(26, pbGet(28)) if pbPkmnOwned?(explTradeSpecies, explTradeSpecies, explTradeSpecies)
     pbSet(28, ownedSpecies.sample)
 end
 
@@ -2108,19 +2111,48 @@ end
 
 def pbGetOwnedPkmn
     owned = []
+
     #add party
     $Trainer.party.each do |pkmn|
         owned.push(pkmn.species) if pkmn
     end
+
     #add box
     $PokemonStorage.boxes.each do |box|
         box.each do |pkmn|
             owned.push(pkmn.species)  if pkmn
         end
     end
+
     #add day care
     pbSet(67, []) if !(pbGet(67).is_a?(Array))
     owned += pbGet(67)
+
+    # Add all baby species of owned
+    babies = []
+    owned.each do |species|
+        babies.push(GameData::Species.try_get(species).get_baby_species)
+    end
+    owned += babies
+
+    middleStage = []
+    # Add all first stage evos of babies to owned, that have exact 1 first stage evo
+    babies.each do |baby_species|
+        evos = GameData::Species.try_get(baby_species).get_evolutions
+        middleStage.push(evos[0][0]) if evos.length == 1
+    end
+    owned += middleStage
+
+    lastStage = []
+
+    # Add all last stage evos of middle stage evos to owned, that have exact 1 last evo
+    middleStage.each do |species|
+        evos = GameData::Species.try_get(species).get_evolutions
+        lastStage.push(evos[0][0]) if evos.length == 1
+    end
+    owned += lastStage
+
+    # remove duplicates
     owned |= []
     return owned
 end

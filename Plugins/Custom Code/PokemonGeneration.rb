@@ -219,9 +219,9 @@ def pbRollForChance(chance)
     return false
 end
 
-def pbRandomPkmnsAsArray(whiteList: nil, amount: 3)
+def pbRandomPkmnsAsArray(whiteList: nil, blacklist: nil, amount: 3)
     output = []
-    result = pbChooseRandomPokemon(whiteList: whiteList, amount: amount)
+    result = pbChooseRandomPokemon(whiteList: whiteList, blacklist: blacklist, amount: amount)
     if result.is_a?(Array)
        output = result
     else
@@ -252,7 +252,17 @@ def pbGenMonoTypeMegaPkmn
     end
     n = 3-n
     if n>0
-        fillupTemp = pbgetMonoTypePool(type).sample(n)
+        fillupTemp = []
+        monoPool = pbgetMonoTypePool(type).dup
+        monoPool -= pbGetOwnedPkmn
+        monoPool -= megas
+        if monoPool.length < n
+            myTemp = pbgetMonoTypePool(type).dup
+            myTemp -= monoPool
+            monoPool += myTemp.sample(n-monoPool.length)
+        end
+
+        fillupTemp = monoPool.sample(n)
         fillup = []
         if fillupTemp.is_a?(Array)
            fillup = fillupTemp
@@ -269,14 +279,7 @@ def pbGenMonoTypeMegaPkmn
                 typeLegis.push(pkmnID) if (whiteList.include? pkmn.type1) || (whiteList.include? pkmn.type2)
         end
         if typeLegis.length > 0
-            legi = typeLegis.sample
-
-            loopcounter = 0
-            while (pbPkmnOwned?(legi, legi, legi) && loopcounter <10) do
-                legi = typeLegis.sample
-                loopcounter += 1
-            end
-            output[2] = legi
+            output[2] = pbChooseRandomPokemon(whiteList: typeLegis, blacklist: pbGetOwnedPkmn, amount: 1)
         else
             possLegis = getOakLegendOrMythic
             legis = []
@@ -284,14 +287,7 @@ def pbGenMonoTypeMegaPkmn
                 pkmn = GameData::Species.try_get(pkmnID)
                 legis.push(pkmnID) if (whiteList.include? pkmn.type1) || (whiteList.include? pkmn.type2)
             end
-            legi = legis.sample
-
-            loopcounter = 0
-            while (pbPkmnOwned?(legi, legi, legi) && loopcounter <10) do
-                legi = legis.sample
-                loopcounter += 1
-            end
-            output[2] = legi
+            output[2] = pbChooseRandomPokemon(whiteList: legis, blacklist: pbGetOwnedPkmn, amount: 1)
         end
     end
     output = output.shuffle
@@ -312,10 +308,10 @@ def pbGenMonoTypePokeChoice
     type = typeIds.sample if !(typeIds.include? type)
     pool = pbgetMonoTypePool(type)
     output = []
-    output = pbChooseRandomPokemon(whiteList: pool, amount: amount)
+    output = pbChooseRandomPokemon(whiteList: pool, blacklist: pbGetOwnedPkmn, amount: amount)
     loopcounter = 0
-    while ((!diverse_types?(output) || pbPkmnOwned?(output[0], output[1], output[2])) && loopcounter <10) do
-        output = pbChooseRandomPokemon(whiteList: pool, amount: amount)
+    while (!diverse_types?(output) && loopcounter <10) do
+        output = pbChooseRandomPokemon(whiteList: pool, blacklist: pbGetOwnedPkmn, amount: amount)
         loopcounter += 1
     end
     # Chance tripled, because only 1 slot can be shiny
@@ -327,13 +323,7 @@ def pbGenMonoTypePokeChoice
                 pkmn = GameData::Species.try_get(pkmnID)
                 legis.push(pkmnID) if (whiteList.include? pkmn.type1) || (whiteList.include? pkmn.type2)
         end
-        legi = legis.sample
-        loopcounter = 0
-        while (pbPkmnOwned?(legi, legi, legi) && loopcounter <10) do
-            legi = legis.sample
-            loopcounter += 1
-        end
-        output[2] = legi
+        output[2] = pbChooseRandomPokemon(whiteList: legis, blacklist: pbGetOwnedPkmn, amount: 1)
     end
     output = output.shuffle
     # do for every pokemon save slot
@@ -356,25 +346,31 @@ def pbGenPokeChoice
         end
     end
     if amountLegis > 0
-        legiPkmns = pbRandomPkmnsAsArray(whiteList: getOakLegendOrMythic, amount: amountLegis)
-        while !diverse_types?(legiPkmns) do
-          legiPkmns = pbRandomPkmnsAsArray(whiteList: getOakLegendOrMythic, amount: amountLegis)
+        legiPkmns = pbRandomPkmnsAsArray(whiteList: getOakLegendOrMythic, blacklist: pbGetOwnedPkmn, amount: amountLegis)
+        loopCounter = 0
+        while (!diverse_types?(legiPkmns) && loopCounter <10) do
+          legiPkmns = pbRandomPkmnsAsArray(whiteList: getOakLegendOrMythic, blacklist: pbGetOwnedPkmn, amount: amountLegis)
+          loopCounter += 1
         end
         output = legiPkmns
         amount -= amountLegis
         if amount > 0
             mergedPkmns = legiPkmns.dup
-            mergedPkmns += pbRandomPkmnsAsArray(whiteList: pbGetCorrectOakPool, amount: amount)
-            while !diverse_types?(mergedPkmns) do
+            mergedPkmns += pbRandomPkmnsAsArray(whiteList: pbGetCorrectOakPool, blacklist: pbGetOwnedPkmn, amount: amount)
+            loopCounter = 0
+            while (!diverse_types?(mergedPkmns) && loopCounter <10) do
                 mergedPkmns = legiPkmns.dup
-                mergedPkmns += pbRandomPkmnsAsArray(whiteList: pbGetCorrectOakPool, amount: amount)
+                mergedPkmns += pbRandomPkmnsAsArray(whiteList: pbGetCorrectOakPool, blacklist: pbGetOwnedPkmn, amount: amount)
+                loopCounter += 1
             end
             output = mergedPkmns
         end
     else
-        output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool(luckyWeakling), amount: amount)
-        while !diverse_types?(output) do
-            output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool(luckyWeakling), amount: amount)
+        output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool(luckyWeakling), blacklist: pbGetOwnedPkmn, amount: amount)
+        loopCounter = 0
+        while (!diverse_types?(output) && loopCounter <10) do
+            output = pbChooseRandomPokemon(whiteList: pbGetCorrectOakPool(luckyWeakling), blacklist: pbGetOwnedPkmn, amount: amount)
+            loopCounter += 1
         end
     end
     output = output.shuffle
@@ -445,17 +441,15 @@ def pbGenStarterPkmn(type)
 end
 
 def pbGenSetTierMegaPkmn
-    echoln("Gen mega set tier entered")
     megaLegis = %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE]
     pool = getOakMegas
     pool += megaLegis
     pool = pool.intersection(pbGetCorrectOakPool)
     echoln pool.to_s
-    output = pbChooseRandomPokemon(whiteList: pool, amount: 3)
+    output = pbChooseRandomPokemon(whiteList: pool, blacklist: pbGetOwnedPkmn, amount: 3)
     loopCounter = 0
-    echoln output.to_s
-    while ((!diverse_types?(output) || pbPkmnOwned?(output[0], output[1], output[2])) && loopCounter <10) do
-        output = pbChooseRandomPokemon(whiteList: pool, amount: 3)
+    while (!diverse_types?(output) && loopCounter <10) do
+        output = pbChooseRandomPokemon(whiteList: pool, blacklist: pbGetOwnedPkmn, amount: 3)
         loopCounter += 1
     end
     output = output.shuffle
@@ -463,7 +457,6 @@ def pbGenSetTierMegaPkmn
     [26, 27, 28].each do |i|
         pbSet(i, output.pop)
     end
-    echoln("Gen mega set tier left")
 end
 
 def pbGenMegaPkmn
@@ -476,25 +469,31 @@ def pbGenMegaPkmn
            amountLegis += 1 if pbRollForChance(legiChance)
         end
     if amountLegis > 0
-        legiPkmns = pbRandomPkmnsAsArray(whiteList: %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE], amount: amountLegis)
-        while !diverse_types?(legiPkmns) do
-          legiPkmns = pbRandomPkmnsAsArray(whiteList: %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE], amount: amountLegis)
+        legiPkmns = pbRandomPkmnsAsArray(whiteList: %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE], blacklist: pbGetOwnedPkmn, amount: amountLegis)
+        loopCounter = 0
+        while (!diverse_types?(legiPkmns) && loopCounter <10) do
+          legiPkmns = pbRandomPkmnsAsArray(whiteList: %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE], blacklist: pbGetOwnedPkmn, amount: amountLegis)
+          loopCounter += 1
         end
         output = legiPkmns
         amount -= amountLegis
         if amount > 0
             mergedPkmns = legiPkmns.dup
-            mergedPkmns += pbRandomPkmnsAsArray(whiteList: getOakMegas, amount: amount)
-            while !diverse_types?(mergedPkmns) do
+            mergedPkmns += pbRandomPkmnsAsArray(whiteList: getOakMegas, blacklist: pbGetOwnedPkmn, amount: amount)
+            loopCounter = 0
+            while (!diverse_types?(mergedPkmns) && loopCounter <10) do
                 mergedPkmns = legiPkmns.dup
-                mergedPkmns += pbRandomPkmnsAsArray(whiteList: getOakMegas, amount: amount)
+                mergedPkmns += pbRandomPkmnsAsArray(whiteList: getOakMegas, blacklist: pbGetOwnedPkmn, amount: amount)
+                loopCounter += 1
             end
             output = mergedPkmns
         end
     else
-        output = pbChooseRandomPokemon(whiteList: getOakMegas, amount: amount)
-        while !diverse_types?(output) do
-            output = pbChooseRandomPokemon(whiteList: getOakMegas, amount: amount)
+        output = pbChooseRandomPokemon(whiteList: getOakMegas, blacklist: pbGetOwnedPkmn, amount: amount)
+        loopCounter = 0
+        while (!diverse_types?(output) && loopCounter <10) do
+            output = pbChooseRandomPokemon(whiteList: getOakMegas, blacklist: pbGetOwnedPkmn, amount: amount)
+            loopCounter += 1
         end
     end
     output = output.shuffle
@@ -559,12 +558,6 @@ def pbRandomPkmnGeneration(mega = false, hiddenAbility = true)
         pbGenSetTierMegaPkmn
     else
        pbGenPokeChoice
-       loopCounter = 0
-       while (pbPkmnOwned?(pbGet(26), pbGet(27), pbGet(28)) && loopCounter <10)
-           pbGenPokeChoice
-           loopCounter += 1
-           echoln "Pokemon owned BST. Rerolling..."
-       end
     end
   elsif(monotype)
     if mega
@@ -577,14 +570,6 @@ def pbRandomPkmnGeneration(mega = false, hiddenAbility = true)
         pbGenMegaPkmn
     else
         pbGenPokeChoice
-    end
-    while (pbPkmnOwned?(pbGet(26), pbGet(27), pbGet(28)))
-    echoln "Pokemon owned. Rerolling..."
-      if mega
-        pbGenMegaPkmn
-      else
-        pbGenPokeChoice
-      end
     end
   end
 

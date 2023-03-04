@@ -7,9 +7,21 @@ def pbChooseRandomPokemon(
   addToPool: nil
 )
   pool = getGen5Babies
-  pool = whiteList if whiteList
+  pool = whiteList.dup if whiteList
   pool -= blacklist if blacklist
   pool += addToPool if addToPool
+
+  if pool.length < amount
+    whiteList -= pool
+    missingPoke = amount-pool.length
+    if missingPoke == 1
+        pool.push(whiteList.sample)
+    else
+        (0...missingPoke).each do |_i|
+          pool.push(whiteList.delete_at(rand(whiteList.length)))
+        end
+    end
+  end
 
   pool = pool.select do |p|
     filterFunc.call(p)
@@ -242,6 +254,27 @@ def pbGetTierPool(tier)
     end
 
     return basePool
+end
+
+def pbGetMonoGruntPool(type)
+    pool = pbgetMonoTypePool(type)
+    owned = pbGetOwnedPkmn
+    newPoke = pool.dup
+    newPoke -= owned
+
+    if newPoke.length < 3
+        pool -= newPoke
+        missingPoke = 3-newPoke.length
+        if missingPoke == 1
+            newPoke.push(rand(pool.length))
+        else
+            (0...missingPoke).each do |_i|
+              newPoke.push(pool.delete_at(rand(pool.length)))
+            end
+        end
+    end
+
+    return newPoke
 end
 
 def pbgetMonoTypePool(type)
