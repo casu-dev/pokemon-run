@@ -2095,6 +2095,7 @@ def pbCelebi?
                     p.ev = ev
                     p.nature = nature
                     p.name = name
+                    p.name = "Mew" if name == "Mewtwo"
                     $Trainer.party[pbGet(1)] = p
                 end
             end
