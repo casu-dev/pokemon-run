@@ -150,28 +150,28 @@ def pbGetTRAINER_OVERRIDE
         # Rocket Grunt F1
         tType: :TEAMROCKET_M, tName: 'Grunt',
         lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
-        pkmnPool: pbGetMonoGruntPool(pbGetMonoType),
+        pkmnPool: getF1StdTrainerPool,
         LoseText: "gruntF1MT"
       },
       {
         # Rocket Grunt F2
         tType: :TEAMROCKET_M, tName: 'Grunt',
         lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
-        pkmnPool: pbGetMonoGruntPool(pbGetMonoType),
+        pkmnPool: getF1StdTrainerPool,
         LoseText: "gruntF2MT"
       },
       {
         # Rocket Grunt F3
         tType: :TEAMROCKET_M, tName: 'Grunt',
         lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
-        pkmnPool: pbGetMonoGruntPool(pbGetMonoType),
+        pkmnPool: getF1StdTrainerPool,
         LoseText: "gruntF3MT"
       },
       {
         # Rocket Grunt F4
         tType: :TEAMROCKET_M, tName: 'Grunt',
         lvl1: pbGetLvGrunt, lvl2: pbGetLvGrunt, numPkmn: 3,
-        pkmnPool: pbGetMonoGruntPool(pbGetMonoType),
+        pkmnPool: getF1StdTrainerPool,
         LoseText: "gruntF4MT"
       },
   # ====== Floor Bosses =========
@@ -251,6 +251,10 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
               pkmnPool = []
               if pbGetGameMode == 6
                 pkmnPool = pbGetTierPool(pbGet(62))
+                pkmnPool -= alreadyPicked
+              elsif (pbGetGameMode == 5 && :TEAMROCKET_M == template[:tType])
+                echoln "Mono grunt trigger"
+                pkmnPool = pbGetMonoGruntPool(pbGetMonoType)
                 pkmnPool -= alreadyPicked
               else
                 pkmnPool = template[:pkmnPool].reject { |p| alreadyPicked.include? p }

@@ -2138,7 +2138,10 @@ def pbGetOwnedPkmn
 
     #add day care
     pbSet(67, []) if !(pbGet(67).is_a?(Array))
-    owned += pbGet(67)
+    dayCare = pbGet(67)
+    dayCare.each do |pkmn|
+        owned.push(pkmn.species)
+    end
 
     # Add all baby species of owned
     babies = []
