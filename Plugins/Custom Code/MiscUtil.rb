@@ -2076,16 +2076,27 @@ end
 def pbCelebi?
     pbChoosePokemon(1, 3, proc{|pkmn| !pbMaxIV?(pkmn)}, false)
     if pbGet(1) != -1
-        cmd3 = pbMessage(_INTL('Wanna max the IVs of \\c[10]'+$Trainer.party[pbGet(1)].name+'\b?'), ["Yes", "No"], 2)
+        cmd3 = pbMessage(_INTL('Wanna max the IVs of \\c[10]'+$Trainer.party[pbGet(1)].name+'\\c[0]?'), ["Yes", "No"], 2)
         if cmd3 == 0
-            name = $Trainer.party[pbGet(1)].name.to_s
-            if name == "Mewtwo"
-                p = Pokemon.new(:MEW, $Trainer.party[pbGet(1)].level)
-                pbSetPkmnEv(p)
-                $Trainer.party[pbGet(1)] = p
-            end
             GameData::Stat.each_main do |s|
                 $Trainer.party[pbGet(1)].iv[s.id.to_sym] = 31
+            end
+            speciesName = $Trainer.party[pbGet(1)].speciesName.to_s
+            if speciesName == "Mewtwo"
+                cmd4 = pbMessage(_INTL('Celebi wants to restore Mewtwos genes even further, it will \\c[10]turn into Mew\\c[0]. Wanna proceed?'), ["Yes", "No"], 2)
+                if cmd4 == 0
+                    oldp = $Trainer.party[pbGet(1)]
+                    iv = oldp.iv
+                    ev = oldp.ev
+                    nature = oldp.nature
+                    name = oldp.name
+                    p = Pokemon.new(:MEW, oldp.level)
+                    p.iv = iv
+                    p.ev = ev
+                    p.nature = nature
+                    p.name = name
+                    $Trainer.party[pbGet(1)] = p
+                end
             end
             $Trainer.party[pbGet(1)].calc_stats
             return true
