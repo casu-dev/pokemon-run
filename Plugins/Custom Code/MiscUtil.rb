@@ -1250,7 +1250,7 @@ end
 def pbKeepBaseForm(pkmnID)
     pkmnFullyEvolvedID = pbGetCorrectEvo(pkmnID)
     megaPool = getOakMegas.dup
-    megaPool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE AEGISLASH CASTFORM GROUDON KYOGRE EISCUE]
+    megaPool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE AEGISLASH CASTFORM GROUDON KYOGRE EISCUE MIMIKYU]
     megaPool -= %i[SLOWBRO]
     return true if megaPool.include? pkmnFullyEvolvedID
     return false
