@@ -1965,13 +1965,13 @@ def pbExplicitTrade?
     obtainablePoke.shiny = true
     myPoke = pbGet(28)
     myPokeName = GameData::Species.try_get(myPoke).name
-    pbMessage('\rI\'m looking for a \\c[10]' + myPokeName + '\r, and offer my \\c[10]' + obtainablePoke.name + '\r.')
+    pbMessage('\rI\'m looking for a \\c[10]' + myPokeName + '\r, and offer my \\c[10]' + obtainablePoke.speciesName + '\r.')
     if pbRelearnMoveScreen(obtainablePoke, false, true)
         pbChoosePokemon(1, 3, proc{|pkmn| pkmn.species == myPoke}, false)
         if pbGet(1) == -1
             pbMessage('\rYou don\'t want to trade? Aww...')
         else
-            cmd3 = pbMessage(_INTL('\rDo you want to trade your \\c[10]'+myPokeName+'\r for my \\c[10]'+obtainablePoke.name+'\r?'), ["Yes", "No"], 2)
+            cmd3 = pbMessage(_INTL('\rDo you want to trade your \\c[10]'+myPokeName+'\r for my \\c[10]'+obtainablePoke.speciesName+'\r?'), ["Yes", "No"], 2)
             if cmd3 == 0
                 pbSetPkmnEv(obtainablePoke)
                 obtainablePoke.calc_stats
