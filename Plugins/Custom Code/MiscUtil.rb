@@ -69,10 +69,7 @@ speech = nil
   commands2 = []
   commands2[cmdSell = commands2.length] = _INTL('Yes')
   commands2[cmdBuy = commands2.length]  = _INTL('No')
-  cmd2 = pbMessage(
-    speech || _INTL('Are you sure?'),
-    commands2
-  )
+  cmd2 = pbMessage(_INTL('Are you sure?'), commands2, 2)
   loop do
     if cmd2 == cmdBuy
       return true
@@ -97,10 +94,7 @@ def pbBossRewardFloor2Obsulete
   commands2 = []
   commands2[cmdBuy = commands2.length]  = _INTL('No')
   commands2[cmdSell = commands2.length] = _INTL('Yes')
-  cmd2 = pbMessage(
-    speech || _INTL('Are you sure?'),
-    commands2
-  )
+  cmd2 = pbMessage(_INTL('Are you sure?'), commands2, 2)
   loop do
     if cmd2 == cmdBuy
       pbBossRewardFloor2
@@ -212,10 +206,7 @@ def pbOfferUsableMegaStones
           commands = []
           commands[cmdSell = commands.length] = _INTL('Yes')
           commands[cmdBuy = commands.length]  = _INTL('No')
-          cmd2 = pbMessage(
-            speech || _INTL('\\bAre you sure?'),
-            commands
-          )
+          cmd2 = pbMessage(_INTL('\\bAre you sure?'), commands, 2)
           loop do
             if cmd2 == cmdBuy
               pbOfferUsableMegaStones
@@ -368,10 +359,7 @@ def pbFighterBattleDialog
   commands2 = []
   commands2[cmdBuy = commands2.length]  = _INTL('No')
   commands2[cmdSell = commands2.length] = _INTL('Yes')
-  cmd2 = pbMessage(
-    speech || _INTL('Are you sure, you have to fight for it?'),
-    commands2
-  )
+  cmd2 = pbMessage(_INTL('Are you sure, you have to fight for it?'), commands2, 2)
 
   loop do
     if cmd2 == cmdBuy
