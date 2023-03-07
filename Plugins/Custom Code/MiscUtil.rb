@@ -454,12 +454,16 @@ end
 
 def pbShowLvUpMoves(pkmnid)
     moveInfo = $Trainer.party[pkmnid].species_data.moves
+    newMoveInfo = []
     if moveInfo.to_s != '[]'
         lvMoves = []
         moveInfo.each do |m|
-          lvMoves.push(m[1]) if m[0] != 0
+            if m[0] != 0
+                lvMoves.push(m[1])
+                newMoveInfo.push(m)
+            end
         end
-        pbSet(69, ["lv", lvMoves, moveInfo])
+        pbSet(69, ["lv", lvMoves, newMoveInfo])
         pbRelearnMoveScreen($Trainer.party[pkmnid], false, true)
         pbSet(69, 0)
     else
