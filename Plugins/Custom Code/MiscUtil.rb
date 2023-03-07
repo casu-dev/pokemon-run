@@ -124,8 +124,10 @@ def pbBossRewardFloor2Obsulete
 end
 
 def pbGiveMoney(amount)
+  pbSet(66,1)
   $Trainer.money += amount
   pbMessage(_INTL('You got ${1} for winning!', amount.to_s_formatted))
+  pbSet(66,0)
 end
 
 def pbLootWell
