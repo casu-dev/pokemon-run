@@ -465,20 +465,15 @@ moveset = "[ "
 end
 
 def pbShowLvUpMoves(pkmnid)
-    if $Trainer.party[pkmnid].species_data.moves.to_s != '[]'
-              moveInfo = $Trainer.party[pkmnid].species_data.moves
-              infoString = ""
-              moveInfo.each do |m|
-                  if m[0] != 0
-                    infoString += GameData::Move.get(m[1]).name
-                    infoString += " "
-                    infoString += m[0].to_s
-                    infoString += ", "
-                  end
-              end
-              infoString += "."
-              infoString =  infoString.gsub(", .", ".")
-              pbMessage(infoString)
+    moveInfo = $Trainer.party[pkmnid].species_data.moves
+    if moveInfo.to_s != '[]'
+        lvMoves = []
+        moveInfo.each do |m|
+          lvMoves.push(m[1]) if m[0] != 0
+        end
+        pbSet(69, ["lv", lvMoves, moveInfo])
+        pbRelearnMoveScreen($Trainer.party[pkmnid], false, true)
+        pbSet(69, 0)
     else
      pbMessage(_INTL("This Pokémon can't learn any move by lv-up."))
     end
@@ -486,16 +481,11 @@ end
 
 def pbShowEggMoves(pkmnid)
     form = $Trainer.party[pkmnid].form
-    if GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,form).egg_moves.to_s != '[]'
-              moveInfo = GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,form).egg_moves
-              infoString = ""
-              moveInfo.each do |m|
-                infoString += GameData::Move.get(m).name
-                infoString += ", "
-              end
-              infoString += "."
-              infoString =  infoString.gsub(", .", ".")
-              pbMessage(infoString)
+    eggMoves = GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,form).egg_moves
+    if eggMoves.to_s != '[]'
+        pbSet(69, ["egg", eggMoves])
+        pbRelearnMoveScreen($Trainer.party[pkmnid], false, true)
+        pbSet(69, 0)
     else
      pbMessage(_INTL("This Pokémon has no egg moves."))
     end
