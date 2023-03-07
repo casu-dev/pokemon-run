@@ -126,7 +126,7 @@ end
 def pbGiveMoney(amount)
   pbSet(66,1)
   $Trainer.money += amount
-  pbMessage(_INTL('You got ${1} for winning!', amount.to_s_formatted))
+  pbMessage(_INTL('You got \\c[10]${1}\\c[0] for winning!', amount.to_s_formatted))
   pbSet(66,0)
 end
 
