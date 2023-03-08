@@ -1254,6 +1254,12 @@ def pbGiveSignatureItem(pkmnID)
         return "RUSTEDSHIELD"
     elsif pkmnID == :GROUDON
         return "REDORB"
+    elsif pkmnID == :PIKACHU
+        return "LIGHTBALL"
+    elsif pkmnID == :CUBONE
+        return "THICKCLUB"
+    elsif pkmnID == :MAROWAK
+        return "THICKCLUB"
     elsif pkmnID == :KYOGRE
         return "BLUEORB"
     elsif pkmnID == :SILVALLY
