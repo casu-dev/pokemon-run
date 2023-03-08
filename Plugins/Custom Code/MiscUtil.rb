@@ -834,6 +834,7 @@ def pbResetRoom
     $PokemonBag.clear
     $Trainer.mystery_gifts = []
     pbSet(67, [])
+    pbSet(45, 0)
    #pbMessage(_INTL($Trainer.mystery_gifts.to_s))
 end
 
@@ -1611,7 +1612,7 @@ def pbRollTmSale(tms = pbGetAllTms.clone, saleItemCount = 5)
 
     # Shuffle and take the first 5 indexes, then sort them
     itemSlots = itemSlots.shuffle
-    #saleItemCount = 5
+    saleItemCount = [saleItemCount, tms.length].min
     saleSlots = []
     (0...saleItemCount).each do |i|
         saleSlots.push(itemSlots[i])
