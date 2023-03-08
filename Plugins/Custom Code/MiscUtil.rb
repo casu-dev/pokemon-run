@@ -458,7 +458,7 @@ def pbShowLvUpMoves(pkmnid)
     if moveInfo.to_s != '[]'
         lvMoves = []
         moveInfo.each do |m|
-            if m[0] != 0
+            if m[0] != 0 && !(lvMoves.include? m[1])
                 lvMoves.push(m[1])
                 newMoveInfo.push(m)
             end
