@@ -1669,19 +1669,54 @@ def pbGetTms(tms = pbGetAllTms.clone, saleTms)
     return reorderedTms
 end
 
-def pbRollTms
+#All TMs minus last rolled and owned TMs
+def pbPossibleTms
+    tms = pbGetAllTms
+
+    # Remove last rolled TMs
+    oldTmInfo = pbGet(45)
+    tms -= oldTmInfo[0] if oldTmInfo.kind_of?(Array) && oldTmInfo[0].kind_of?(Array)
+
+    # Remove owned TMs
+    ownedTMs = []
+    # Slot 4 is the TM slot in the bag
+    $PokemonBag.pockets[4].each do |item|
+        ownedTMs.push(item[0])
+    end
+    tms -= ownedTMs
+
+    return tms
+end
+
+def pbRollTms(possibleTMs = pbPossibleTms)
     items_cheap = %i[TM03 TM04 TM05 TM10 TM17 TM18 TM25 TM48 TM65 TM70 TR01 TR37 TR38 TR48]
     items_normal = %i[TM06 TM22 TM39 TM43 TM92 TM95 TR02 TR04 TR05 TR08 TR10 TR11 TR15 TR16 TR19 TR22 TR28 TR32 TR33 TR39 TR47 TR49 TR53 TR57
-         TR58 TR59 TR60 TR61 TR62 TR63 TR64 TR65 TR66 TR67 TR70 TR73 TR74 TR75 TR81 TR86 TR89 TR90 TR92 TR97 TR98 TR99]
+                      TR58 TR59 TR60 TR61 TR62 TR63 TR64 TR65 TR66 TR67 TR70 TR73 TR74 TR75 TR81 TR86 TR89 TR90 TR92 TR97 TR98 TR99]
     items_expensive = %i[TM28 TM56 TM63 TM80 TR00 TR18 TR51 TR68 TR84]
 
-    items_cheap = pbRollTmSale(items_cheap.clone, saleItemCount = 5)[1]
-    items_normal = pbRollTmSale(items_normal.clone, saleItemCount = 15)[1]
-    items_expensive = pbRollTmSale(items_expensive.clone, items_expensive = 3)[1]
+    attractiveCheap = items_cheap.intersection(possibleTMs)
+    attractiveNormal = items_normal.intersection(possibleTMs)
+    attractiveExpensive = items_expensive.intersection(possibleTMs)
+
+    saleCountCheap = [5, attractiveCheap.length].min
+    saleCountNormal = [15, attractiveNormal.length].min
+    saleCountExpensive = [3, attractiveExpensive.length].min
+
+    #Roll TMs that will be offered
+    items_cheap = pbRollTmSale(attractiveCheap, saleCountCheap)[1]
+    items_normal = pbRollTmSale(attractiveNormal, saleCountNormal)[1]
+    items_expensive = pbRollTmSale(attractiveExpensive, saleCountExpensive)[1]
 
     output = items_cheap
     output += items_normal
     output += items_expensive
+
+    if output.length < 1
+        pbMessage("No other TMs found.")
+        oldTmInfo = pbGet(45)
+        output = pbRollTms(oldTmInfo[0]) if oldTmInfo.kind_of?(Array) && oldTmInfo[0].kind_of?(Array)
+        output = pbRollTms(pbGetAllTms) if output.length < 1
+    end
 
     return output
 end
