@@ -2052,6 +2052,7 @@ def pbDayCare?
     else
         cmd3 = pbMessage(_INTL('\bWanna deposit \\c[10]'+$Trainer.party[pbGet(1)].name+'\b?'), ["Yes", "No"], 2)
         if cmd3 == 0
+            $Trainer.party[pbGet(1)].heal
             temp = $Trainer.party[pbGet(1)].dup
             item = nil
             item = temp.item.id if temp.item
