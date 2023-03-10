@@ -284,8 +284,8 @@ Events.onTrainerPartyLoad += proc { |_sender, trainer_list|
                     newPartyIDs.push(pkmn.species) if pkmn.species
                 end
                 pool = getOakMegas.dup
-                pool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE]
                 if pbGetGameMode == 6
+                    pool += %i[MEWTWO LATIAS LATIOS RAYQUAZA DIANCIE]
                     pool = pool.intersection(pbGetTierPool(pbGet(62)))
                     tempPool = pool.dup
                     pool -= newPartyIDs
