@@ -2219,6 +2219,35 @@ def pbGetOwnedPkmn
     return owned
 end
 
+def pb3SameTypes?(attackMoveset, newMove)
+    oldType1 = nil
+    oldType1 = GameData::Move.get(attackMoveset[0]).type if attackMoveset && attackMoveset[0]
+    oldType2 = nil
+    oldType2 = GameData::Move.get(attackMoveset[1]).type if attackMoveset && attackMoveset[1]
+    newType = nil
+    newType = GameData::Move.get(newMove).type if newMove
+
+    return true if (oldType1 && oldType2 && newType) && (oldType1 == oldType2 && oldType2 == newType)
+    return false
+end
+
+def pbRemoveTriplicates(attackMoveset)
+    if attackMoveset && attackMoveset.length > 2
+        type1 = nil
+        type1 = GameData::Move.get(attackMoveset[0]).type if attackMoveset[0]
+        type2 = nil
+        type2 = GameData::Move.get(attackMoveset[1]).type if attackMoveset[1]
+        type3 = nil
+        type3 = GameData::Move.get(attackMoveset[2]).type if attackMoveset[2]
+        if (type1 && type2 && type3) && (type1 == type2 && type2 == type3)
+            output = attackMoveset.dup
+            output.delete_at(2)
+            return output
+        end
+    end
+    return attackMoveset
+end
+
 def pbScout
 pbMessage("correct Lvl Evo" + pbGetCorrectLvlEvo(:EEVEE, 70).to_s)
 pbMessage("correct Evo" + pbGetCorrectEvo(:EEVEE).to_s)
