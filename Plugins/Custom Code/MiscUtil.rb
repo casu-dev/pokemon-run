@@ -824,7 +824,13 @@ def pbResetRoom
     for i in 0...$PokemonStorage.maxBoxes
        for j in 0...$Trainer.mystery_gifts.length()
          pkmn = $Trainer.mystery_gifts[j]
-         pkmn.item=nil
+         oldItem = pkmn.item
+         oldItem = pkmn.item.id if oldItem
+         newItem = pbGiveSignatureItem(pkmn.species)
+         if newItem && (pbGetSignatureItemPool.include? oldItem)
+           newItem = oldItem
+         end
+         pkmn.item = newItem
          pkmn.heal
          $PokemonStorage[i, j] = pkmn
        end
@@ -1249,25 +1255,39 @@ def pbGiveSignatureItem(pkmnID)
         itemPool = %i[FLAMEPLATE SPLASHPLATE ZAPPLATE MEADOWPLATE ICICLEPLATE FISTPLATE TOXICPLATE EARTHPLATE SKYPLATE MINDPLATE INSECTPLATE STONEPLATE SPOOKYPLATE DRACOPLATE DREADPLATE IRONPLATE PIXIEPLATE]
         return itemPool[rand(17)]
     elsif pkmnID == :ZACIAN
-        return "RUSTEDSWORD"
+        return :RUSTEDSWORD
     elsif pkmnID == :ZAMAZENTA
-        return "RUSTEDSHIELD"
+        return :RUSTEDSHIELD
     elsif pkmnID == :GROUDON
-        return "REDORB"
+        return :REDORB
     elsif pkmnID == :PIKACHU
-        return "LIGHTBALL"
+        return :LIGHTBALL
     elsif pkmnID == :CUBONE
-        return "THICKCLUB"
+        return :THICKCLUB
     elsif pkmnID == :MAROWAK
-        return "THICKCLUB"
+        return :THICKCLUB
     elsif pkmnID == :KYOGRE
-        return "BLUEORB"
+        return :BLUEORB
     elsif pkmnID == :SILVALLY
         itemPool = %i[FIREMEMORY WATERMEMORY ELECTRICMEMORY GRASSMEMORY ICEMEMORY FIGHTINGMEMORY POISONMEMORY GROUNDMEMORY FLYINGMEMORY PSYCHICMEMORY BUGMEMORY ROCKMEMORY GHOSTMEMORY DRAGONMEMORY DARKMEMORY STEELMEMORY FAIRYMEMORY]
         return itemPool[rand(17)]
     end
     # Other Pokémon shouldn't hold an item
     return nil
+end
+
+def pbGetSignatureItemPool
+    return %i[
+              BURNDRIVE CHILLDRIVE DOUSEDRIVE SHOCKDRIVE
+              FLAMEPLATE SPLASHPLATE ZAPPLATE MEADOWPLATE ICICLEPLATE FISTPLATE TOXICPLATE EARTHPLATE SKYPLATE MINDPLATE INSECTPLATE STONEPLATE SPOOKYPLATE DRACOPLATE DREADPLATE IRONPLATE PIXIEPLATE
+              RUSTEDSWORD
+              RUSTEDSHIELD
+              REDORB
+              LIGHTBALL
+              THICKCLUB
+              BLUEORB
+              FIREMEMORY WATERMEMORY ELECTRICMEMORY GRASSMEMORY ICEMEMORY FIGHTINGMEMORY POISONMEMORY GROUNDMEMORY FLYINGMEMORY PSYCHICMEMORY BUGMEMORY ROCKMEMORY GHOSTMEMORY DRAGONMEMORY DARKMEMORY STEELMEMORY FAIRYMEMORY
+             ]
 end
 
 def pbStealPkmn
