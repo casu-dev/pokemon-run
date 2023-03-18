@@ -551,7 +551,7 @@ end
 def pbRandomPkmnGeneration(mega = false, hiddenAbility = true)
   mega = false if pbLW
   monotype = false
-  monotype = true if (pbGet(59) != 0 && pbGet(59).to_s != "QMARKS")
+  monotype = true if (pbGetGameMode == 5 && pbGet(59) != 0)
 
   if pbGetGameMode == 6
     if mega

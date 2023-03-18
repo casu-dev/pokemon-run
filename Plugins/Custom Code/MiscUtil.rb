@@ -1260,6 +1260,8 @@ def pbGiveSignatureItem(pkmnID)
         return :RUSTEDSHIELD
     elsif pkmnID == :GROUDON
         return :REDORB
+    elsif pkmnID == :PICHU
+        return :LIGHTBALL
     elsif pkmnID == :PIKACHU
         return :LIGHTBALL
     elsif pkmnID == :CUBONE
@@ -2246,6 +2248,103 @@ def pbRemoveTriplicates(attackMoveset)
         end
     end
     return attackMoveset
+end
+
+def pbGetHallOfFamePoke
+    output = []
+    $PokemonGlobal.hallOfFame.each do |team|
+        output += team.dup
+    end
+    return output
+end
+
+def pbRollHallOfFameChoice
+    pkmnPool = pbGetHallOfFamePoke
+    #echoln pkmnPool.to_s #
+    speciesPoolWithIndex = []
+    speciesPool = []
+    return false if pkmnPool.length < 1
+
+    (0...pkmnPool.length).each do |i|
+        species = pkmnPool[i].species
+
+        # if species exists add index to correlated array otherwise create new index array for the species
+        if speciesPool.include? species
+            speciesPoolWithIndex.each do |species_with_index|
+                if species_with_index[0] == species
+                    species_with_index[1].push(i)
+                    break
+                end
+            end
+        else
+            speciesPool.push(species)
+            speciesPoolWithIndex.push([species, [i]])
+        end
+    end
+    echoln speciesPoolWithIndex.to_s #
+    echoln speciesPool.to_s #
+    # Generate species pool to pick from
+    monotype = false
+    monotype = true if (pbGetGameMode == 5 && pbGet(59) != 0)
+    setTier = false
+    setTier = true if pbGetGameMode == 6
+    pool = []
+    if setTier
+    #echoln "set tier" #
+        pool += pbGetTierPool(pbGet(62))
+        pool = pool.intersection(speciesPool)
+    elsif monotype
+    #echoln "montype" #
+        typeIds = []
+        GameData::Type.each do |t|
+           next unless t.id.to_s != "QMARKS"
+           typeIds.push(t.id)
+        end
+        type = pbGet(59)
+        type = typeIds.sample if !(typeIds.include? type)
+        whiteList = [type]
+        speciesPool.each do |pkmnID|
+                pkmn = GameData::Species.try_get(pkmnID)
+                pool.push(pkmnID) if (whiteList.include? pkmn.type1) || (whiteList.include? pkmn.type2)
+        end
+    elsif pbLW
+    #echoln "lw" #
+        pool += getOakPoolLW5
+        pool += getOakPoolLW6
+        pool += getOakPoolLW7
+        pool += getOakPoolLW8
+        echoln pool.to_s #
+        pool = pool.intersection(speciesPool)
+        echoln pool.to_s #
+    else
+    #echoln "standard" #
+        pool += speciesPool
+    end
+    pool -= pbGetOwnedPkmn
+    #echoln pool.to_s #
+    if pool.length > 2
+        amount = 3
+        choice = []
+        choice = pbChooseRandomPokemon(whiteList: pool, amount: amount)
+        loopcounter = 0
+        echoln choice.to_s #
+        while (!diverse_types?(choice) && loopcounter <10) do
+            choice = pbChooseRandomPokemon(whiteList: pool, amount: amount)
+            echoln choice.to_s #
+            loopcounter += 1
+        end
+
+        (0...3).each do |i|
+            speciesPoolWithIndex.each do |species_with_index|
+                if species_with_index[0] == choice[i]
+                    pbSet(26+i, pkmnPool[species_with_index[1].sample])
+                    break
+                end
+            end
+        end
+        return true
+    end
+    return false
 end
 
 def pbScout

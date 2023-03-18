@@ -84,13 +84,13 @@ class DiegoWTsStarterSelection
     @data = {}
     @data["pkmn_1"] = pkmn1
     @data["pkmn_1"] = pbGet(44)[0] if steal
-    @data["pkmn_1"].item = pbGiveSignatureItem(pkmn1.species)
+    @data["pkmn_1"].item = pbGiveSignatureItem(pkmn1.species) if !@data["pkmn_1"].item
     @data["pkmn_2"] = pkmn2
     @data["pkmn_2"] = pbGet(44)[1] if steal
-    @data["pkmn_2"].item = pbGiveSignatureItem(pkmn2.species)
+    @data["pkmn_2"].item = pbGiveSignatureItem(pkmn2.species) if !@data["pkmn_2"].item
     @data["pkmn_3"] = pkmn3
     @data["pkmn_3"] = pbGet(44)[2] if steal
-    @data["pkmn_3"].item = pbGiveSignatureItem(pkmn3.species)
+    @data["pkmn_3"].item = pbGiveSignatureItem(pkmn3.species) if !@data["pkmn_3"].item
     for i in 1..3
       @sprites["pkmn_#{i}"] = PokemonSprite.new(@viewport)
       @sprites["pkmn_#{i}"].setOffset(PictureOrigin::Center)
