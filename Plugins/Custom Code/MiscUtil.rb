@@ -2109,7 +2109,9 @@ def pbDayCareDeliver
             pkmn.calc_stats
             pkmn.reset_moves
             pbAddPokemon(pkmn)
-            pbForceEvo?(pkmn) if pbCanEvoInCurrentMode(pkmn)
+            if pbCanEvoInCurrentMode(pkmn)
+                pbForceEvo?(pkmn)
+            end
         end
     end
     pbSet(67, [])
