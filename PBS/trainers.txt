@@ -404,15 +404,15 @@ LoseText = "GG WP"
 Pokemon = MIENFOO,16
     Moves = FAKEOUT,KNOCKOFF,LOWSWEEP,ROCKTOMB
     AbilityIndex = 1
-    IV = 15,15,15,15,15,15
+    IV = 8,8,8,8,8,8
 Pokemon = MAKUHITA,16
     Moves = ROCKTOMB,KNOCKOFF,FORCEPALM,BULKUP
     AbilityIndex = 2
-    IV = 20,20,20,20,20,20
+    IV = 10,10,10,10,10,10
 Pokemon = TIMBURR,16
     Moves = BULKUP,MACHPUNCH,THUNDERPUNCH,VITALTHROW
     AbilityIndex = 2
-    IV = 20,20,20,20,20,20
+    IV = 10,10,10,10,10,10
 #-------------------------------
 [ELITEFOUR_Bruno,Bruno,1]
 LoseText = "GG WP"
