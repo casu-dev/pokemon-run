@@ -2066,7 +2066,7 @@ return false
 end
 
 def pbDayCare?
-    pbMessage('\bYou can give me a Pokémon to care for. At the \\c[10]beginning of the next floor\b, I\'ll deliver it to you with a \\c[10]higher Lv\b.')
+    pbMessage('\bYou can give me a Pokémon to care for. At the \\c[10]beginning of the next floor\b, I\'ll deliver it to you with a \\c[10]higher Lv\b. As you get it back, it may \\c[10]evolve\b.')
     pbChoosePokemon(1, 3, proc{|pkmn| $Trainer.party.length > 1}, false)
     if pbGet(1) == -1
         pbMessage('\bCome back any time.')
@@ -2108,6 +2108,7 @@ def pbDayCareDeliver
             pbSetPkmnEv(pkmn)
             pkmn.calc_stats
             pkmn.reset_moves
+            pkmn.item = :MAXPOTION
             pbAddPokemon(pkmn)
             if pbCanEvoInCurrentMode(pkmn)
                 pbForceEvo?(pkmn)
