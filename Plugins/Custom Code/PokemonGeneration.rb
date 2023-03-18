@@ -549,6 +549,10 @@ end
 
 #Generates the Pokemon (usually used when entering Oaks room)
 def pbRandomPkmnGeneration(mega = false, hiddenAbility = true)
+  if pbGet(48) == 3 && $game_map.map_id == 88
+    return if pbRollHallOfFameChoice
+    echoln "hall of fame choice false"
+  end
   mega = false if pbLW
   monotype = false
   monotype = true if (pbGetGameMode == 5 && pbGet(59) != 0)
