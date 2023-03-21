@@ -168,20 +168,19 @@ def pbSetRoomSprites()
   end
 end
 
-# 	Clears	Option 1	Option 2
-#	0	Trainer	X
-#	1	Trainer	Move
-#	2	Trainer	Center
-#	3	Oak	X
-#	4	Trainer	Shop
-#	5	Trainer	Shop
-#	6	Grunt	X
-#	7	Trainer	Move ->  Elite Trainer
-#	8	Oak	X
-#	9	Trainer	Shop
-#	10	Trainer	Elite
-#	11	Trainer	Center
-#	12	Boss	X
+#   0   Empty
+#	1	Event
+#	2	Trainer
+#	3	Event
+#	4	Trainer
+#	5	Oak Center
+#	6	Gary
+#	7	Event
+#	8	Trainer
+#	9	Oak
+#	10	Trainer
+#	11	Event
+#	12	Boss
 def pbGetPossDest(exit_no, avoidRooms)
   stages_cleared = pbGet(48)
   rooms_cleared = pbGet(49)

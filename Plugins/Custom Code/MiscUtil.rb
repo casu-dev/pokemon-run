@@ -2434,6 +2434,11 @@ def pbDest2Dialog?
     end
 end
 
+def pbFirstRoom?
+    return true if pbGet(49) == 1
+    return false
+end
+
 def pbScout
 pbMessage("correct Lvl Evo" + pbGetCorrectLvlEvo(:EEVEE, 70).to_s)
 pbMessage("correct Evo" + pbGetCorrectEvo(:EEVEE).to_s)
