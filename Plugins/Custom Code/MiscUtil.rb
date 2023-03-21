@@ -483,6 +483,7 @@ end
 def pbShowEggMoves(pkmnid)
     form = $Trainer.party[pkmnid].form
     eggMoves = GameData::Species.get_species_form($Trainer.party[pkmnid].species_data.get_baby_species,form).egg_moves
+    eggMoves |= []
     if eggMoves.to_s != '[]'
         pbSet(69, ["egg", eggMoves])
         pbRelearnMoveScreen($Trainer.party[pkmnid], false, true)
