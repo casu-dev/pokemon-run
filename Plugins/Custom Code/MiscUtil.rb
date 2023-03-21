@@ -1101,10 +1101,10 @@ def pbOakSpawn4
     if  !pbLW
         pbMessage(_INTL("\\bGratulations to your victory! This is the last Floor. It's gonna be tough. I think you're ready for Mega-Evolutions. Take one of these Pokémon."))
         pbRandomPkmnSelection
-        pbReceiveItem(:MEGARING)
+        $PokemonBag.pbStoreItem(:MEGARING)
         pbMessage(_INTL("\\bOkay, now take one of my Mega-Stones."))
         pbOfferUsableMegaStones
-        pbMessage(_INTL("\\bExcellent choice! Equip the Mega-Stone and press \\c[10]Y\\b in Battle to mega evolve. I'm continuing my research now, have a good one!"))
+        pbMessage(_INTL("\\bExcellent choice! Equip the Mega-Stone and press \\c[10]Y\\b or \\c[10]Z\\b in Battle to mega evolve. I'm continuing my research now, have a good one!"))
     else
         pbMessage(_INTL("\\bGratulations to your victory! This is the last Floor. It's gonna be tough. Take one of these Pokémon."))
         pbRandomPkmnSelection
