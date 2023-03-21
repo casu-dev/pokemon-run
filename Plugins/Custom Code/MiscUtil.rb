@@ -2364,6 +2364,44 @@ def pbMayOfferMegaStone
     $game_switches[95] = false if ($game_switches[95] && pbGet(48) == 3 && pbOfferUsableMegaStones)
 end
 
+def pbDest1Dialog?
+    index = 1
+    $game_switches[96] = true
+    speech = "Error"
+    if index == 1
+        speech = '\bRoom \v[49]\n\c[5]\v[30]'
+    elsif index == 2
+        speech = '\bRoom \v[49]\n\c[5]\v[32]'
+    end
+
+    cmd = pbMessage(speech, ["Yes"])
+    $game_switches[96] = false
+    if cmd == 0
+        return true
+    else
+        return false
+    end
+end
+
+def pbDest2Dialog?
+    index = 2
+    $game_switches[96] = true
+    speech = "Error"
+    if index == 1
+        speech = '\bRoom \v[49]\n\c[5]\v[30]'
+    elsif index == 2
+        speech = '\bRoom \v[49]\n\c[5]\v[32]'
+    end
+
+    cmd = pbMessage(speech, ["Yes"])
+    $game_switches[96] = false
+    if cmd == 0
+        return true
+    else
+        return false
+    end
+end
+
 def pbScout
 pbMessage("correct Lvl Evo" + pbGetCorrectLvlEvo(:EEVEE, 70).to_s)
 pbMessage("correct Evo" + pbGetCorrectEvo(:EEVEE).to_s)
