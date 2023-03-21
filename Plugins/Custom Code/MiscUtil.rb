@@ -2012,18 +2012,19 @@ def pbRollPlayerTradePoke
         end
     end
     ownedSpecies |= []
-    explTradeSpecies = pbGet(26).species
-    #Switch 28 and 26 if Player owns species in slot 26 already
-    pbSet(26, pbGet(28)) if pbPkmnOwned?(explTradeSpecies, explTradeSpecies, explTradeSpecies)
-    pbSet(28, ownedSpecies.sample)
+    pokeTop = ownedSpecies.sample
+    pbSet(70, pokeTop)
+    ownedSpecies -= [pokeTop] if (ownedSpecies.length > 1)
+    pokeRight = ownedSpecies.sample
+    pbSet(71, pokeRight)
 end
 
-def pbExplicitTrade?
+def pbExplicitTrade1?
     obtainablePoke = pbGet(26)
     obtainablePoke.shiny = true
-    myPoke = pbGet(28)
+    myPoke = pbGet(70)
     myPokeName = GameData::Species.try_get(myPoke).name
-    pbMessage('\rI\'m looking for a \\c[10]' + myPokeName + '\r, and offer my \\c[10]' + obtainablePoke.speciesName + '\r.')
+    pbMessage('\rI offer my \\c[10]' + obtainablePoke.speciesName + '\r and look for a \\c[10]'+ myPokeName + '\r.')
     if pbRelearnMoveScreen(obtainablePoke, false, true)
         pbChoosePokemon(1, 3, proc{|pkmn| pkmn.species == myPoke}, false)
         if pbGet(1) == -1
@@ -2048,9 +2049,39 @@ def pbExplicitTrade?
     return false
 end
 
-def pbRandomTrade?
+def pbExplicitTrade2?
     obtainablePoke = pbGet(27)
-    pbMessage('\bI\'m looking for \\c[10]any Pokémon\b, and offer a \\c[10]random perfect IV Pokémon\b.')
+    obtainablePoke.shiny = true
+    myPoke = pbGet(71)
+    myPokeName = GameData::Species.try_get(myPoke).name
+    pbMessage('\rI offer my \\c[10]' + obtainablePoke.speciesName + '\r and look for a \\c[10]'+ myPokeName + '\r.')
+    if pbRelearnMoveScreen(obtainablePoke, false, true)
+        pbChoosePokemon(1, 3, proc{|pkmn| pkmn.species == myPoke}, false)
+        if pbGet(1) == -1
+            pbMessage('\rYou don\'t want to trade? Aww...')
+        else
+            cmd3 = pbMessage(_INTL('\rDo you want to trade your \\c[10]'+myPokeName+'\r for my \\c[10]'+obtainablePoke.speciesName+'\r?'), ["Yes", "No"], 2)
+            if cmd3 == 0
+                pbSetPkmnEv(obtainablePoke)
+                obtainablePoke.calc_stats
+                temp = $Trainer.party[pbGet(1)].dup
+                item = nil
+                item = temp.item.id if temp.item
+                temp.item = nil
+                pbReceiveItem(item) if item
+                pbStartTrade(pbGet(1),obtainablePoke, _I("Mary"), 1)
+                return true
+            else
+                pbMessage('\rYou don\'t want to trade? Aww...')
+            end
+        end
+    end
+    return false
+end
+
+def pbRandomTrade?
+    obtainablePoke = pbGet(28)
+    pbMessage('\bI offer a \\c[10]random perfect IV Pokémon\b and \blook for \\c[10]any Pokémon\b.')
     pbChoosePokemon(1, 3, proc{|pkmn| true}, false)
     if pbGet(1) == -1
         pbMessage('\bYou don\'t want to trade? Aww...')
