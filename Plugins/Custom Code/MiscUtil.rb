@@ -5,12 +5,18 @@ def pbDeleteFainted
   n = $Trainer.party.length
   (0..n).each do |i|
     if $Trainer.party[n - i] && !$Trainer.party[n - i].able?
-      pbReceiveItem($Trainer.party[n - i].item.id) if $Trainer.party[n - i].item
+      item = $Trainer.party[n - i].item
+      if item
+        $game_switches[95] = true if pbIsMegaStone?(item)
+        pbReceiveItem(item.id)
+      end
       $Trainer.party[n - i].heal
       $Trainer.mystery_gifts.push($Trainer.party[n - i]) #Collecting fainted Pokemon for offering later if player blacksout
       $Trainer.party.delete_at(n - i)
     end
   end
+
+  # Refill party with box Pokemon
   n = 6 - $Trainer.party.length
   if (n > 0)
       $PokemonStorage.boxes.each do |box|
@@ -177,46 +183,49 @@ def pbForceEvo?(pkmn)
 end
 
 def pbOfferUsableMegaStones
-  stones = []
-  $PokemonStorage.boxes.each do |box|
-    (0...box.length).each do |i|
-      next unless box[i]
-      newStones = pbGetMegaStones(box[i])
-      next unless newStones
+    stones = []
+    $PokemonStorage.boxes.each do |box|
+        (0...box.length).each do |i|
+          next unless box[i]
+          newStones = pbGetMegaStones(box[i])
+          next unless newStones
 
-      newStones.each do |stone|
-        stones << _INTL(stone.to_s) unless stones.include? _INTL(stone.to_s)
-      end
-    end
-  end
-
-  n = $Trainer.party.length
-  (0..n).each do |i|
-    next unless $Trainer.party[n - i]
-    newStones = pbGetMegaStones($Trainer.party[n - i])
-    next unless newStones
-
-    newStones.each do |stone|
-      stones << _INTL(stone.to_s) unless stones.include? _INTL(stone.to_s)
-    end
-  end
-    if stones != []
-          speech = nil
-          cmd = pbMessage(speech || _INTL('\\bChoose a Mega Stone.'), stones)
-          commands = []
-          commands[cmdSell = commands.length] = _INTL('Yes')
-          commands[cmdBuy = commands.length]  = _INTL('No')
-          cmd2 = pbMessage(_INTL('\\bAre you sure?'), commands, 2)
-          loop do
-            if cmd2 == cmdBuy
-              pbOfferUsableMegaStones
-              break
-            elsif cmd2 == cmdSell
-              pbReceiveItem(stones[cmd])
-              break
-            end
+          newStones.each do |stone|
+            stones << _INTL(stone.to_s) unless stones.include? _INTL(stone.to_s)
           end
+        end
     end
+
+    n = $Trainer.party.length
+    (0..n).each do |i|
+        next unless $Trainer.party[n - i]
+        newStones = pbGetMegaStones($Trainer.party[n - i])
+        next unless newStones
+
+        newStones.each do |stone|
+          stones << _INTL(stone.to_s) unless stones.include? _INTL(stone.to_s)
+        end
+    end
+
+    if stones != []
+        speech = nil
+        cmd = pbMessage(speech || _INTL('\\bChoose a Mega Stone.'), stones)
+        commands = []
+        commands[cmdSell = commands.length] = _INTL('Yes')
+        commands[cmdBuy = commands.length]  = _INTL('No')
+        cmd2 = pbMessage(_INTL('\\bAre you sure?'), commands, 2)
+        loop do
+        if cmd2 == cmdBuy
+          pbOfferUsableMegaStones
+          break
+        elsif cmd2 == cmdSell
+          pbReceiveItem(stones[cmd])
+          break
+        end
+        end
+        return true
+    end
+    return false
 end
 
 def pbGetMegaStones(pkmn)
@@ -841,6 +850,7 @@ def pbResetRoom
     $Trainer.mystery_gifts = []
     pbSet(67, [])
     pbSet(45, 0)
+    $game_switches[95] = false
    #pbMessage(_INTL($Trainer.mystery_gifts.to_s))
 end
 
@@ -2348,6 +2358,10 @@ def pbRollHallOfFameChoice
         return true
     end
     return false
+end
+
+def pbMayOfferMegaStone
+    $game_switches[95] = false if ($game_switches[95] && pbGet(48) == 3 && pbOfferUsableMegaStones)
 end
 
 def pbScout
