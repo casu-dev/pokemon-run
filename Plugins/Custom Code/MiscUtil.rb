@@ -1,5 +1,21 @@
 # User.methods - Object.methods
 #pbMessage(GameData::Species.get_species_form(pkmn.species,0).egg_moves.to_s)
+def pbRefillPartyWithBox
+    n = 6 - $Trainer.party.length
+    if (n > 0)
+      $PokemonStorage.boxes.each do |box|
+        (0...box.length).each do |i|
+            if box[i]
+                 pkmn = box[i].clone
+                 $Trainer.party.push(pkmn)
+                 box[i] = nil
+                 n -= 1
+                 return if n <= 0
+            end
+        end
+      end
+    end
+end
 
 def pbDeleteFainted
   n = $Trainer.party.length
@@ -16,21 +32,7 @@ def pbDeleteFainted
     end
   end
 
-  # Refill party with box Pokemon
-  n = 6 - $Trainer.party.length
-  if (n > 0)
-      $PokemonStorage.boxes.each do |box|
-        (0...box.length).each do |i|
-            if box[i]
-                 pkmn = box[i].clone
-                 $Trainer.party.push(pkmn)
-                 box[i] = nil
-                 n -= 1
-                 return if n <= 0
-            end
-        end
-      end
-  end
+ pbRefillPartyWithBox
 end
 
 # Not used
@@ -2124,6 +2126,7 @@ def pbDayCare?
             pbSet(67, []) if !(pbGet(67).is_a?(Array))
             pbGet(67).push(temp)
             $Trainer.party.delete_at(pbGet(1))
+            pbRefillPartyWithBox
             return true
         else
             pbMessage('\bCome back any time.')
