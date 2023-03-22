@@ -65,7 +65,7 @@ MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST = [
 ]
 
 #  First and last event shouldn't be "useless" events. This means the first event of f1 mustn't be Egg-move Tutor or Tm shop (maybe also ban the mart?). And the last event on F4 mustn't be the wishing well event.
-MAP_EVENT_AVOID_FIRST = [
+MAP_EVENT_AVOID_FIRST_TWO = [
   MAP_EGG_MOVE_RELEARNER,
   MAP_TM_SHOP,
   MAP_MART,
@@ -94,9 +94,9 @@ def pbGenDest()
   avoidRooms = [pbGet(38),  pbGet(39)]
 
   # special handling for first and last room and Day Care
-  avoidRooms += MAP_EVENT_AVOID_FIRST if rooms_cleared == 0 and stages_cleared == 0
+  avoidRooms += MAP_EVENT_AVOID_FIRST_TWO if ((rooms_cleared == 0 || rooms_cleared == 2) && stages_cleared == 0)
   avoidRooms += MAP_EVENT_AVOID_LAST if rooms_cleared == 10 and stages_cleared == 3
-  avoidRooms += MAP_EVENT_AVOID_F1_FIRST_TWO_AND_F4 if ((pbGet(48) == 0 && rooms_cleared < 3) || pbGet(48) == 3)
+  avoidRooms += MAP_EVENT_AVOID_F1_FIRST_TWO_AND_F4 if ((pbGet(48) == 0 && rooms_cleared < 5) || pbGet(48) == 3)
 
   room1 = pbGetPossDest(0, avoidRooms)
   pbSet(29, room1)
@@ -186,9 +186,9 @@ def pbGetPossDest(exit_no, avoidRooms)
   rooms_cleared = pbGet(49)
 
   nextMap = MAP_FIGHT_TRAINER_LIST[stages_cleared]
-  nextMap = MAP_FIGHT_TRAINER_SINGLE_OPTION_LIST[stages_cleared] if rooms_cleared == 10 || rooms_cleared == 7 || rooms_cleared == 4 || rooms_cleared == 1
+  nextMap = MAP_FIGHT_TRAINER_SINGLE_OPTION_LIST[stages_cleared] if rooms_cleared == 10 || rooms_cleared == 7 || rooms_cleared == 4 || rooms_cleared == 3
   nextMap = rollEventRoom(avoidRooms) if rooms_cleared % 2 == 0
-  nextMap = MAP_CENTER_WITH_OAK if rooms_cleared == 2
+  nextMap = MAP_CENTER_WITH_OAK if rooms_cleared == 4
   nextMap = MAP_FIGHT_MIDDLE_STAGE_TRAINER_LIST[stages_cleared] if rooms_cleared == 5
   nextMap = MAP_PICK_POKEMON if rooms_cleared == 8
   nextMap = MAP_BOSS_LIST[stages_cleared] if rooms_cleared >= 11

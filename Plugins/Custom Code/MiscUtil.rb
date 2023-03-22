@@ -2439,6 +2439,21 @@ def pbFirstRoom?
     return false
 end
 
+def pbGetStdTrainerMoney
+     floor = pbGet(48) + 1
+     money = 750
+     if floor == 1
+        money = 325
+     elsif floor == 2
+        money = 500
+     elsif floor == 3
+        money = 1000
+     elsif floor == 4
+        money = 1250
+     end
+     return money
+end
+
 def pbScout
 pbMessage("correct Lvl Evo" + pbGetCorrectLvlEvo(:EEVEE, 70).to_s)
 pbMessage("correct Evo" + pbGetCorrectEvo(:EEVEE).to_s)
