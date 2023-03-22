@@ -2153,8 +2153,9 @@ def pbDayCareDeliver
             pbSetPkmnEv(pkmn)
             pkmn.calc_stats
             pkmn.reset_moves
-            pkmn.item = :MAXPOTION
             pbAddPokemon(pkmn)
+            pbMessage(pkmn.name + ' held an item.')
+            pbReceiveItem(:FULLRESTORE)
             if pbCanEvoInCurrentMode(pkmn)
                 pbForceEvo?(pkmn)
             end
